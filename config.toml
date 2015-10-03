@@ -9,8 +9,11 @@ title = "Redox - Your Next(Gen) OS"
 #   name = "Forum"
 #   url = "https://forum.redox-os.org/"
 [[menu.main]]
+  name = "Manifesto"
+  url = "/manifesto.html"
+[[menu.main]]
   name = "GitHub"
   url = "https://github.com/redox-os"
-[[menu.main]]
-  name = "Docs"
-  url = "http://redox-os.org/redox"
+# [[menu.main]]
+#   name = "Docs"
+#   url = "http://redox-os.org/redox"
