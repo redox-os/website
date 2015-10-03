@@ -1,0 +1,16 @@
+baseurl = "http://redox-os.org/"
+languageCode = "en-us"
+title = "Redox - Your Next(Gen) OS"
+
+[[menu.main]]
+  name = "Blog"
+  url = "/blog/"
+# [[menu.main]]
+#   name = "Forum"
+#   url = "https://forum.redox-os.org/"
+[[menu.main]]
+  name = "GitHub"
+  url = "https://github.com/redox-os"
+[[menu.main]]
+  name = "Docs"
+  url = "http://redox-os.org/redox"
