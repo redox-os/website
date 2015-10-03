@@ -1,4 +1,4 @@
-baseurl = "http://redox-os.org/"
+baseurl = "http://redox-os.github.io/"
 languageCode = "en-us"
 title = "Redox - Your Next(Gen) OS"
 
