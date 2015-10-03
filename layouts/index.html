@@ -10,19 +10,21 @@
   <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      {{ range .Site.Menus.main }}
-        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-      {{ end }}
-    </ul>
-  </nav>
+  <div class="topbar">
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
   <header class="hero">
     <img src="/img/icon.svg" alt="Redox Logo">
     <h1>Redox</h1>
     <div class="description">
-      NextGen operating system written in <a href="https://rust-lang.org/">Rust</a>.
+      NextGen operating system written in <a href="https://www.rust-lang.org/">Rust</a>.
     </div>
   </header>
   <div class="content">

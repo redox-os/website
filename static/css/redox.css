@@ -2,18 +2,20 @@ head, body {
   font-family: 'Lato', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
 }
 
+body {
+  margin-top: 5em;
+}
+
 a {
   color: #000;
   text-decoration: underline;
 }
 
 nav {
-  width: 100%;
   display: block;
-  position: fixed;
   top: 0;
   left: 0;
-  text-align: right;
+  float: right;
 }
 
 nav > ul {
@@ -26,7 +28,7 @@ nav > ul {
 nav > ul li {
   width: auto;
   display: inline-block;
-  height: 3em;
+  height: 100%;
   padding: 0 1em;
   margin: 0;
 }
@@ -36,16 +38,45 @@ nav li a {
   padding: 1em 0;
 }
 
+.topbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2.5em;
+  padding: .25em;
+  background-color: #fff;
+}
+.topbar:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.topbar img {
+  height: 2.5em;
+}
+
 header {
   text-align: center;
-  height: 100%;
+}
+
+.topbar header {
+  float: left;
+}
+
+header.hero {
   width: 100%;
+}
+
+header img {
+  height: 100%;
 }
 
 .content {
   max-width: 1200px;
   width: 80%;
-  margin: 0 auto;
+  margin: 4em auto 0 auto;
 }
 
 footer {

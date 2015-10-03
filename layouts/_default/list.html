@@ -10,18 +10,21 @@
   <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      {{ range .Site.Menus.main }}
-        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-      {{ end }}
-    </ul>
-  </nav>
-  <header class="hero">
-    <img src="/img/logo.svg" alt="Redox Logo">
-    <h1>Redox</h1>
-  </header>
+  <div class="topbar">
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+    <a href="/">
+      <header class="top">
+        <img src="/img/logo.svg" alt="Redox Logo">
+      </header>
+    </a>
+  </div>
   <div class="content">
     <ul>
       {{ range .Data.Pages }}
