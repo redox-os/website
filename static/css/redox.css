@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 head, body {
   font-family: 'Lato', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
 }
@@ -13,15 +17,15 @@ a {
 
 nav {
   display: block;
-  top: 0;
-  left: 0;
+  height: 100%;
   float: right;
 }
 
 nav > ul {
   list-style: none;
+  height: 100%;
   display: inline-block;
-  margin: 0;
+  margin: 0 1em;
   padding: 0;
 }
 
@@ -29,13 +33,13 @@ nav > ul li {
   width: auto;
   display: inline-block;
   height: 100%;
-  padding: 0 1em;
+  padding: 0 .5em;
   margin: 0;
 }
 
 nav li a {
   display: block;
-  padding: 1em 0;
+  padding: 2em 0 1em 0;
 }
 
 .topbar {
@@ -43,8 +47,7 @@ nav li a {
   position: fixed;
   top: 0;
   left: 0;
-  height: 2.5em;
-  padding: .25em;
+  height: 4em;
   background-color: #fff;
 }
 .topbar:after {
@@ -54,7 +57,8 @@ nav li a {
 }
 
 .topbar img {
-  height: 2.5em;
+  height: 3em;
+  margin: .5em;
 }
 
 header {
