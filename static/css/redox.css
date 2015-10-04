@@ -50,7 +50,7 @@ nav li a {
 .topbar {
   width: 92%;
   position: fixed;
-  top: 0px;
+  top: 0;
   left: 4%;
   height: 4.8em;
   background-color: #fff;
