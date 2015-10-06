@@ -2,6 +2,7 @@
 date = "2015-09-12T18:11:35+02:00"
 title = "And So It Begins…"
 
+author = "Jeremy Soller"
 +++
 
 Redox development has been a long and arduous process, spanning several months

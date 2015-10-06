@@ -1,0 +1,12 @@
+language: bash
+sudo: false
+env:
+  HUGO_VERSION: '0.14_linux_amd64'
+  PATH: "$PATH:."
+before_script:
+  - wget -Ohugo.tgz https://github.com/spf13/hugo/releases/download/v0.14/hugo_$HUGO_VERSION.tar.gz
+  - tar xzf hugo.tgz
+  - mv hugo_$HUGO_VERSION/hugo_$HUGO_VERSION ./hugo
+script:
+  - |
+      [ "$TRAVIS_BRANCH" = "master" ] && bash ./build.sh
