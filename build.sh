@@ -13,7 +13,6 @@ then
   URL="$(echo "$URL" | sed "s,https://,https://$GH_TOKEN@,")"
 fi
 
-git checkout -f master
 git add -A
 git commit -m "${1:-"Update $(env LANG=en_US date)"}"
 git push -qf "$URL" master
