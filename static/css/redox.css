@@ -3,21 +3,16 @@
 }
 
 a {
-  font-weight: bold;
-  box-sizing: border-box;
-  color: #4078C0;
+  color: #000;
   word-wrap: break-word;
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, "Segoe UI",Arial, freesans, sans-serif;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;
   line-height: 1.5;
   word-wrap: break-word;
-  margin-top: 6em;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 6em 0 0 0;
 }
-
 
 nav {
   display: block;

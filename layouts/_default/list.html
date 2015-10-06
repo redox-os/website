@@ -28,7 +28,7 @@
   <div class="content">
     <ul>
       {{ range .Data.Pages }}
-        <li><a href="{{ .Permalink }}">{{ .Title }}</a> <span class="date">{{ .Date.Format "Mon, 2 Jan 2006" }}</div></li>
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a> by {{ .Params.author }} <time datetime="{{ .Date }}" class="date">{{ .Date.Format "Mon, 2 Jan 2006" }}</time></li>
       {{ end }}
     </ul>
   </div>
