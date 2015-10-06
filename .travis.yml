@@ -10,5 +10,6 @@ before_script:
   - git config --global user.name "Redox Developers"
   - git config --global user.email "info@redox-os.org"
 script:
-- |
-  [ "$TRAVIS_BRANCH" = "master" ] && env PATH="$PATH:." bash ./build.sh
+  - echo "$TRAVIS_BRANCH"
+  - |
+    [ "$TRAVIS_BRANCH" = "master" ] && env PATH="$PATH:." bash ./build.sh
