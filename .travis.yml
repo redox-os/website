@@ -9,4 +9,4 @@ before_script:
   - mv hugo_0.14_linux_amd64/hugo_0.14_linux_amd64 ./hugo
 script:
 - |
-  [ "$TRAVIS_BRANCH" = "master" ] && bash ./build.sh
+  [ "$TRAVIS_BRANCH" = "master" ] && env PATH="$PATH:." bash ./build.sh
