@@ -16,6 +16,6 @@ fi
 git checkout master
 git add -A
 git commit -m "${1:-"Update $(env LANG=en_US date)"}"
-git push -f "$URL" master
+git push -qf "$URL" master
 
 popd
