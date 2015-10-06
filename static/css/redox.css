@@ -2,18 +2,22 @@
   box-sizing: border-box;
 }
 
-head, body {
-  font-family: 'Lato', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+a {
+  font-weight: bold;
+  box-sizing: border-box;
+  color: #4078C0;
+  word-wrap: break-word;
 }
 
 body {
-  margin-top: 5em;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI",Arial, freesans, sans-serif;
+  line-height: 1.5;
+  word-wrap: break-word;
+  margin-top: 6em;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
-a {
-  color: #000;
-  text-decoration: underline;
-}
 
 nav {
   display: block;
@@ -43,11 +47,11 @@ nav li a {
 }
 
 .topbar {
-  width: 100%;
+  width: 92%;
   position: fixed;
   top: 0;
-  left: 0;
-  height: 4em;
+  left: 4%;
+  height: 4.8em;
   background-color: #fff;
 }
 .topbar:after {
@@ -57,8 +61,8 @@ nav li a {
 }
 
 .topbar img {
-  height: 3em;
-  margin: .5em;
+  height: 2.7em;
+  margin-top: 1.4em;
 }
 
 header {
