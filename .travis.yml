@@ -7,6 +7,8 @@ before_script:
   - wget -Ohugo.tgz https://github.com/spf13/hugo/releases/download/v0.14/hugo_0.14_linux_amd64.tar.gz
   - tar xzf hugo.tgz
   - mv hugo_0.14_linux_amd64/hugo_0.14_linux_amd64 ./hugo
+  - git config --global user.name "Redox Developers"
+  - git config --global user.email "info@redox-os.org"
 script:
 - |
   [ "$TRAVIS_BRANCH" = "master" ] && env PATH="$PATH:." bash ./build.sh
