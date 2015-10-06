@@ -88,7 +88,7 @@ header img {
   margin: 4em auto 0 auto;
 }
 
-.date {
+.meta, .date, footer {
   font-size: .7rem;
   color: #666;
 }

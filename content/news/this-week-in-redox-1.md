@@ -1,6 +1,7 @@
 +++
 title = "This Week in Redox 1"
 author = "Ticki"
+date = "2015-10-06T16:42:56+02:00"
 +++
 
 This is the first post in a blog serie tracking the development and progress of Redox, the modular and secure OS, written in Rust. So welcome!

@@ -1,5 +1,6 @@
 +++
 title = "Redox way"
+author = "Redox Developers"
 +++
 
 Idealism, ego, and narcissism are often ingredients constructing
