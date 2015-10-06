@@ -1,4 +1,6 @@
 +++
+title = "This Week in Redox 1"
+author = "Ticki"
 +++
 
 This is the first post in a blog serie tracking the development and progress of Redox, the modular and secure OS, written in Rust. So welcome!
