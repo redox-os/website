@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+
+    {{ partial "head.html" . }}
+
+    <title>{{ .Site.Title }}</title>
+    <link rel="canonical" href="{{ .Permalink }}">
+    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
+  </head>
+  <body>
+    <div class="topbar">
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </nav>
+      <a href="/">
+        <header class="top">
+          <img src="/img/logo.svg" alt="Redox Logo">
+        </header>
+      </a>
+    </div>
+    <div class="content">
+      <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <div class="meta">Author: {{ .Params.author }}, Reading time: {{ .ReadingTime }} minutes</div>
+      {{ .Content }}
+    </div>
+    <footer>
+      {{ partial "footer.html" . }}
+    </footer>
+  </body>
+</html>

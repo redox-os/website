@@ -83,9 +83,14 @@ header img {
   margin: 4em auto 0 auto;
 }
 
+.date {
+  font-size: .7rem;
+  color: #666;
+}
+
 footer {
-  font-size: x-small;
-  color: #444;
+  font-size: .7rem;
+  color: #666;
   text-align: center;
   margin-top: 100px;
 }
