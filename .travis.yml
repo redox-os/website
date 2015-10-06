@@ -1,14 +1,14 @@
 language: bash
 sudo: false
 env:
+  - HUGO_VERSION: 0.14_linux_amd64
+  - PATH: "$PATH:."
   global:
-    HUGO_VERSION: 0.14_linux_amd64
-    PATH: "$PATH:."
     secure: iKNs61ws9LX8/Mw1ivbSyDukJKkS0BVF11gJejaMwVxFiUb8CPFX7zFEjTIU29XzbEn8WG4lEAEozwN4klvB3+MorwFUn8alkA278vO3R8pYhTXB8MwSZ1kqZCzazaq+WLz4yYapZqy/nac3+oTuoXZ2DltHrDdLoEEm0x3wk9i5aQm1wu6NlYIfMHT6GJe2kbS6qdaMJgvN11IpR6hUtjH/4RX8NcwbX6Ci5I3ihUBQ/yIQ1ZmclmKwmHHI9T3kxkIAtxeVYUuBX7e5mC+xJHTjR/xWPu6viGrbEN637xVOlgHTpEGfUfzR4+UJQYzpaQbwoePrA25hjSP88Bm1IQ9U9ck5JEW6U8gTwy+L2TJQh+LCTnkqfr3kdYeVi8IUATUC3LQtACb3SyWwRxig/qpD9HI9UPhqA7w4J+PKXBqjBG8QOvWM2vqIDIg/BFBsJZFxDJg7i5MML6CNwArSZ11vgtPUGsuv8CV7tfRigO2nL09wI9Wxtd3c8unPL4N7AMWWJiiBodosBp0U9qu3P1SmS3D4QHKwIdgmiFPovfgRkilMpFRBxWVfVd55OHRAxoFH4GpwsXW4mYgAUJP8AjVaUBqpMaGfNws0UBd3EMoI3aYlyCnTqrPBtbdYKnJGGya5n81vsYQBw5BM/vEvAuNFz5jCilAIRmJtynm8TQw=
 before_script:
-  - wget -Ohugo.tgz https://github.com/spf13/hugo/releases/download/v0.14/hugo_$HUGO_VERSION.tar.gz
-  - tar xzf hugo.tgz
-  - mv hugo_$HUGO_VERSION/hugo_$HUGO_VERSION ./hugo
+- wget -Ohugo.tgz https://github.com/spf13/hugo/releases/download/v0.14/hugo_$HUGO_VERSION.tar.gz
+- tar xzf hugo.tgz
+- mv hugo_$HUGO_VERSION/hugo_$HUGO_VERSION ./hugo
 script:
-  - |
-      [ "$TRAVIS_BRANCH" = "master" ] && bash ./build.sh
+- |
+  [ "$TRAVIS_BRANCH" = "master" ] && bash ./build.sh
