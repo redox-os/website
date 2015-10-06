@@ -1,10 +1,10 @@
 +++
 +++
 
-# Whats new?
+# Whats new in Redox?
 
 
-# How it looks now?
+# What does it look like?
 
 
 # What next?
