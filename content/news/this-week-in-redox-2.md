@@ -7,8 +7,6 @@ title = "This Week in Redox 2"
 
 # Whats new in Redox?
 
-# redox-os/redox closed issues
-
 - &str == redox String cleanup
 - Add Bresenham's line drawing algorithm
 - Add `box_write` command in `filesystem/apps/test/test.rs`
