@@ -77,7 +77,7 @@ The boot screen.
 - Jeremy Soller <jackpot51@gmail.com>
 - Liam Wigney <ShadowCreator@users.noreply.github.com>
 - Remi Rampin <remirampin@gmail.com>
-- stratact <gurunix57@gmail.com>
+- stratact <stratact1@gmail.com>
 - Theodore DeRego <tderego94@gmail.com>
 - Ticki <Ticki@users.noreply.github.com>
 - Titouan Vervack <tivervac@gmail.com>
