@@ -66,7 +66,7 @@ The boot screen.
 - Discuss development infrastructure
 - Move things out of the kernel
 - Link a userspace allocator to libredox
-- Get kernel strings to support UTF-8 with `Vec<u8>` instead of `Vec<char>`
+- Get kernel strings to support UTF-8 with `Vec<u8>` instead of UTF-32 with `Vec<char>`
 
 # Contributors
 
