@@ -14,39 +14,40 @@ title = "this week in redox 2"
 - Add `box_write` command in `filesystem/apps/test/test.rs`
 - Add `wget` command
 - Add `write` trait
-- Add leak test for test.rs
+- Add leak test for `test.rs`
 - Add second wallpaper/bootscreen image
 - Add temporary rsa implementation
 - Add user scheme example
 - Added Fedora build instructions.
-- Added dnode, object set, and zil header
-- Changed Fedora setup instructions to use dnf instead of yum
+- Added `dnode,` object set, and `zil` header
+- Changed Fedora setup instructions to use `dnf` instead of `yum`
 - Document the rest of `libredox`
 - Documentation of the schemes module
 - Dup fork clone exec
 - Formatize more `&str.to_string` concats
-- Got NvPairs XDR decoding working
+- Got `NvPairs` XDR decoding working
 - Hacky way to read ZFS files
-- Indexize Memory and use Memory in uhci and Cleanup
-- Initial ion commit
+- Indexize `Memory` and use `Memory` in `uhci`
+- Initial `ion` commit
 - LZJB compression for ZFS
 - Manual `Debug` workaround for `NvList` and `NvValue`
 - More `Memory`ifying and import cleanup
 - More progress toward reading a file
 - Move kvec.rs to vec.rs and use `Memory` where possible
-- NvList Serialization
+- `NvList` Serialization
 - Opening Programs from the UI Bar Change
 - Playing with the test app
 - Progress on nvpairs and XDR
 - Remove `Option::` namespacing and remove some leftover whitespace
-- Removed debug prints in NvPairs decoding in ZFS
+- Removed debug prints in `NvPairs` decoding in ZFS
 - Rename `BMP` to `BMPFile`
 - Start Neon, a permission model.
 - Starting to read ZAP objects
-- Undo `format!`ing and borrow slices instead of Vecs
-- Use lzjb compression to read the MOS meta_dnode
+- Undo `format!`ing and borrow slices instead of `Vec`s
+- Use LZJB compression to read the MOS `meta_dnode`
 - Userspace networking
-- ls command for ZFS
+- ZFS read support
+- `ls` command for ZFS
 
 # What does it look like?
 
