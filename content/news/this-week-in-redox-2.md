@@ -1,7 +1,7 @@
 +++
 author = "Redox Developers"
 date = "2015-10-14T19:30:51+02:00"
-title = "this week in redox 2"
+title = "This Week in Redox 2"
 
 +++
 
