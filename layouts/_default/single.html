@@ -27,6 +27,7 @@
     </div>
     <div class="content">
       <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <div class="meta">Author: {{ .Params.author }}, Reading time: {{ .ReadingTime }} minutes</div>
       {{ .Content }}
     </div>
     <footer>

@@ -3,21 +3,21 @@
 }
 
 a {
-  font-weight: bold;
-  box-sizing: border-box;
-  color: #4078C0;
+  color: #000;
   word-wrap: break-word;
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, "Segoe UI",Arial, freesans, sans-serif;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif;
   line-height: 1.5;
   word-wrap: break-word;
-  margin-top: 6em;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 6em 0 0 0;
 }
 
+pre, code {
+  font-family: 'Fira Mono', 'Lucida Console', Monaco, monospace;
+  font-size: .9em;
+}
 
 nav {
   display: block;
@@ -47,10 +47,11 @@ nav li a {
 }
 
 .topbar {
-  width: 92%;
+  width: 100%;
   position: fixed;
   top: 0;
-  left: 4%;
+  left: 0;
+  padding: 0 4%;
   height: 4.8em;
   background-color: #fff;
 }
@@ -87,9 +88,13 @@ header img {
   margin: 4em auto 0 auto;
 }
 
-.date {
+.meta, .date, footer {
   font-size: .7rem;
   color: #666;
+}
+
+.content img {
+  width: 100%;
 }
 
 footer {

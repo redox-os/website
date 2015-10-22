@@ -1,4 +1,5 @@
 +++
+author = "Redox Developers"
 +++
 
 # Whats new in Redox?
