@@ -11,7 +11,7 @@ This is the third post of a serie of blog posts tracking the development and pro
 
 - [@stratact](https://github.com/stratact) have upgraded the file manager to include more info about files. This includes file sizes and number of entries in folder.
 
-- [@ticki](https://github.com/ticki) with the help of [@stratact](https://github.com/stratact, and [@tennix](https://github.com/tennix) has started the development of Redox's own advanced, Vi-like text editor, Sodium (`na` for short). The recent enchancement of the basic text editor (named `Editor`) were rolled back in favor of Sodium. These features will then gradually be added to Sodium.
+- [@ticki](https://github.com/ticki) with the help of [@stratact](https://github.com/stratact), and [@tennix](https://github.com/tennix) has started the development of Redox's own advanced, Vi-like text editor, Sodium (`na` for short). The recent enchancement of the basic text editor (named `Editor`) were rolled back in favor of Sodium. These features will then gradually be added to Sodium.
 
 - [@tedsta](https://github.com/jackpot51) is working hard on completing the support for ZFS. Check out the ZFS application for trying it out!
 
