@@ -1,4 +1,5 @@
 +++
+author = "Ticki"
 +++
 
 This is the third post of a serie of blog posts tracking the development and progress of Redox, the Rust operating system. If you want to know more about Redox in general, then visit our [Github page](https://github.com/redox-os/redox).
