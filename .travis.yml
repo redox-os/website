@@ -9,8 +9,7 @@ before_script:
   - git submodule foreach git checkout master
 script:
 - echo "$TRAVIS_BRANCH"
-- |
-  [ "$TRAVIS_BRANCH" = "master" ] && env PATH="$PATH:." bash ./build.sh || exit 0
+- env PATH="$PATH:." bash ./build.sh
 env:
   global:
     secure: qjKMXPmLryi3cBz0BOLApngijDI8O4Mo1pBuN4vddTVhPM14NS3eNiKy7uPmn7lDQFXNsT8qQWAFGdvXH3nXkw2C++ViQBh6estKbZv9zD9mnS6iiuKZjvW+vkjLS3mQEMO3BVPbsG+RPEtgblael7k3198QW2k+cqlUlCj8dbXy1f2QxAXB93LjQ/qFVavl44xJR7ax7sfJYaz78m1StEyUfITY+GmfnmVdTiau+21gEPzx/eUSPeoZyHm9hwn3A0khn7IiRO+tDbhZSkum9UJjAyzV5EgWsWyFvSX7dcarhmvU11tALXGEuG0PwtLqaaNaxOiYVzDEzgLJ52heFhyMBnbVNs7dlWs68AzomAHtqMv0UDm8coTeaq9pxyxV8JUPBroiKrmRAmzl4mXfGEC+uAKRdZianpcAAYRWuEMXz/rO6P8DrNzWf6WObYmFnibKU+lcI2r3mnr8m3V9f05Yrc6bm5qMcGbqx1kIWbrm57dMeg01moLQfiW9fO3ucf7ckrUpVD96P+EJpN+bhkUpfsPRIjpmzzNXsadyQbnyhqC/DWpBfECnpTAq65X5vj0e3bKOmV2+m2idoRZuGq9cergyg9Y8kywSH/qEyJHSQsW09/cHJILvIcD8YfXLzZ9PvaKVAI3JGvy7qteVnOuVLE5GVZc3K1aFEnh7+3Y=

@@ -8,13 +8,16 @@ pushd ./public
 
 URL="$(git config remote.origin.url)"
 
-if [ ! -z "$GH_TOKEN" ];
-then
+if [ ! -z "$GH_TOKEN" ]; then
   URL="$(echo "$URL" | sed "s,https://,https://$GH_TOKEN@,")"
 fi
 
-git add -A
-git commit -m "${1:-"Update $(env LANG=en_US date)"}"
-git push -qf "$URL" master
+if [ "$TRAVIS_BRANCH" = "master" ]; then
+  git add -A
+  git commit -m "${1:-"Update $(env LANG=en_US date)"}"
+  git push -qf "$URL" master
+else
+  echo "Skip publishing"
+fi
 
 popd
