@@ -10,7 +10,7 @@ This is the third post of a series of blog posts tracking the development and pr
 
 # What's new in Redox?
 
-- Thanks to [@jackpot51](https://github.com/jackpot51) et al. x86 is almost supported, despite the lack of a naked function attribute in Rust. See the recent PR to Rust and RFC discussions for more information.
+- Thanks to [@jackpot51](https://github.com/jackpot51) et al. x86_64 is almost supported, despite the lack of a naked function attribute in Rust. See the recent PR to Rust and RFC discussions for more information.
 
 - [@stratact](https://github.com/stratact) have upgraded the file manager to include more info about files. This includes file sizes and number of entries in folder.
 
@@ -18,7 +18,7 @@ This is the third post of a series of blog posts tracking the development and pr
 
 - [@tedsta](https://github.com/tedsta) is working hard on completing the support for ZFS. Check out the ZFS application for trying it out!
 
-- The graphics module now support Bresenham line drawing natively.
+/- The graphics module now support Bresenham line drawing natively.
 
 - [@ticki](https://github.com/ticki) has ported `libnum`. This makes us able to port `liboctavo` in the near future, meaning that we can move on with the development of `Oxide`.
 
@@ -52,7 +52,7 @@ Awesome file manager!
 
 # What's next?
 
-- Finish x86 support.
+- Finish x86_64 support.
 - Greatly extend Sodium.
 - Do more work on Bohr (the display manager).
 - Create an RFC-like system.
