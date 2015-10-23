@@ -39,7 +39,7 @@ The start screen:
 
 Sodium is working:
 
-![Sodium](https://github.com/Ticki/redox/blob/master/img/screenshots/Sodium.png)
+![Sodium](https://raw.githubusercontent.com/Ticki/redox/4d026acf5e7981cd3a3d12a55206dfd20853fcde/img/screenshots/Sodium.png)
 
 WIP on ZFS:
 
