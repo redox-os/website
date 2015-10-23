@@ -18,7 +18,7 @@ This is the third post of a series of blog posts tracking the development and pr
 
 - [@tedsta](https://github.com/tedsta) is working hard on completing the support for ZFS. Check out the ZFS application for trying it out!
 
-/- The graphics module now support Bresenham line drawing natively.
+- The graphics module now support Bresenham line drawing natively.
 
 - [@ticki](https://github.com/ticki) has ported `libnum`. This makes us able to port `liboctavo` in the near future, meaning that we can move on with the development of `Oxide`.
 
@@ -47,7 +47,7 @@ WIP on ZFS:
 
 Awesome file manager!
 
-![File manager](https://raw.githubusercontent.com/Ticki/redox/master/img/screenshots/File_manager_v2.png)
+![File manager](https://files.slack.com/files-pri/T0BQKQ8G1-F0CNRLP51/fm.jpg)
 
 
 # What's next?
