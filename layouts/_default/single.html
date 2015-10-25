@@ -7,17 +7,11 @@
 
     <title>{{ .Site.Title }}</title>
     <link rel="canonical" href="{{ .Permalink }}">
+    <link href="/index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
   </head>
   <body>
     <div class="topbar">
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          {{ range .Site.Menus.main }}
-          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-          {{ end }}
-        </ul>
-      </nav>
+      {{ partial "menu.html" . }}
       <a href="/">
         <header class="top">
           <img src="/img/logo.svg" alt="Redox Logo">

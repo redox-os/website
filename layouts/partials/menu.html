@@ -1,0 +1,9 @@
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    {{ range .Site.Menus.main }}
+    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+    {{ end }}
+    <li><a href="/index.xml">Feed</a></li>
+  </ul>
+</nav>

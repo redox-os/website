@@ -11,14 +11,7 @@
 </head>
 <body>
   <div class="topbar">
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        {{ range .Site.Menus.main }}
-          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-        {{ end }}
-      </ul>
-    </nav>
+  {{ partial "menu.html" . }}
   </div>
   <header class="hero">
     <img src="/img/icon.svg" alt="Redox Logo">
