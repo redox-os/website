@@ -16,6 +16,8 @@ This is the fourth post of a series of blog posts tracking the development and p
 
 - [@nounoursheureux](https://github.com/nounoursheureux) have added a event triggered on quits of programs.
 
+- [@stratact](https://github.com/stratact) greatly improved the file manager. Now the file type is described in a new column, and the way of loading relevant icons based on the filetype is rewritten.
+
 - [@ticki](https://github.com/ticki) has maked the URLs syntax agnostic, so now everything after the `:` is left to the provider.
 
 - [@nobbz](https://github.com/nobbz) have been asked by his professor to give a ten minute talk about Redox.
