@@ -47,7 +47,7 @@ WIP on ZFS:
 
 Awesome file manager!
 
-![File manager](https://files.slack.com/files-pri/T0BQKQ8G1-F0CNRLP51/fm.jpg)
+![File manager](https://raw.githubusercontent.com/Ticki/redox/master/img/screenshots/File_manager_v2.png)
 
 
 # What's next?
