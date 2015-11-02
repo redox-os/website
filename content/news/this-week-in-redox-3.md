@@ -12,7 +12,7 @@ This is the third post of a series of blog posts tracking the development and pr
 
 - Thanks to [@jackpot51](https://github.com/jackpot51) et al. x86_64 is almost supported, despite the lack of a naked function attribute in Rust. See the recent PR to Rust and RFC discussions for more information.
 
-- [@stratact](https://github.com/stratact) have upgraded the file manager to include more info about files. This includes file sizes and number of entries in folder.
+- [@stratact](https://github.com/stratact) have upgraded the file manager to include more info about files. This includes file size and number of entries in folder.
 
 - [@ticki](https://github.com/ticki) with the help of [@stratact](https://github.com/stratact), and [@tennix](https://github.com/tennix) has started the development of Redox's own advanced, Vi-like text editor, Sodium (`na` for short). The recent enchancement of the basic text editor (named `Editor`) were rolled back in favor of Sodium. These features will then gradually be added to Sodium.
 
@@ -20,11 +20,11 @@ This is the third post of a series of blog posts tracking the development and pr
 
 - The graphics module now support Bresenham line drawing natively.
 
-- [@ticki](https://github.com/ticki) has ported `libnum`. This makes us able to port `liboctavo` in the near future, meaning that we can move on with the development of `Oxide`.
+- [@ticki](https://github.com/ticki) has ported `libnum`. This will allow us to port `liboctavo` in the near future, meaning that we can move on with the development of `Oxide`.
 
-- [@jackpot51](https://github.com/jackpot51) has moved different crates out of kernel space and into user space. Futhermore the folder containing the kernel code is now called `kernel` instead of `src`.
+- [@jackpot51](https://github.com/jackpot51) moved different crates out of kernel space and into user space. Futhermore the folder containing the kernel code is now called `kernel` instead of `src`.
 
-- Thanks to [@nobbz](https://github.com/nobbz) Redox is now building on Windows.
+- Thanks to [@nobbz](https://github.com/nobbz), Redox now builds on Windows.
 
 
 # What does it look like?

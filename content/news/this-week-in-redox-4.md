@@ -10,25 +10,23 @@ This is the fourth post of a series of blog posts tracking the development and p
 
 # What's new in Redox?
 
-- Thanks to [@jackpot51](https://github.com/jackpot51) with the help of others SDL, dosbox, zlib, libpng, libiconv and freeciv is ported. Following are either almost ported or partially ported: gcc, newlib and binutils.
+- Thanks to [@jackpot51](https://github.com/jackpot51) with the help of others, SDL, dosbox, zlib, libpng, libiconv and freeciv have been ported. Following are either almost ported or partially ported: gcc, newlib and binutils.
 
-- Thanks to [@ticki](https://github.com/ticki) Redox boots 10-20% faster, due to rewriting of parts in the kernel. This speedup mainly comes from rewriting the path parser and the URL parser.
+- Thanks to [@ticki](https://github.com/ticki) Redox boots 10-20% faster, due to rewriting some parts of the kernel. This speedup mainly comes from rewriting the path parser and the URL parser.
 
-- [@nounoursheureux](https://github.com/nounoursheureux) have added a event triggered on quits of programs.
+- [@nounoursheureux](https://github.com/nounoursheureux) added an event triggered on programs exiting.
 
-- [@stratact](https://github.com/stratact) greatly improved the file manager. Now the file type is described in a new column, and the way of loading relevant icons based on the filetype is rewritten.
+- [@stratact](https://github.com/stratact) greatly improved the file manager. Now the file type is described in a new column, and the way the correct icons are loaded based on the file type was rewritten.
 
-- [@ticki](https://github.com/ticki) has maked the URLs syntax agnostic, so now everything after the `:` is left to the provider.
+- [@ticki](https://github.com/ticki) made the URL syntax agnostic, so now everything after the `:` is left to the provider.
 
-- [@nobbz](https://github.com/nobbz) have been asked by his professor to give a ten minute talk about Redox.
+- [@nobbz](https://github.com/nobbz) has been asked by his professor to give a ten minute talk about Redox.
 
 - Sodium (text editor) has lots of new features. Thanks, [@stratact](https://github.com/stratact), for helping out with the bug fixes.
 
-- [@achanda](https://github.com/achanda), [@stratact](https://github.com/stratact), and [@ticki](https://github.com/ticki) have cleaned up the warnings, codestyle and done some refactoring in the kernel.
+- [@achanda](https://github.com/achanda), [@stratact](https://github.com/stratact), and [@ticki](https://github.com/ticki) cleaned up the warnings, code style and did some refactoring in the kernel.
 
-- [@lazyoxen](https://github.com/lazyoxen) has switched from using a four byte array to represent colors to a Color struct in `libredox`.
-
-
+- [@lazyoxen](https://github.com/lazyoxen) switched from a four byte array to a Color struct to represent colors in `libredox`.
 
 # What does it look like?
 

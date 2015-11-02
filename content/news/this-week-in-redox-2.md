@@ -7,14 +7,14 @@ title = "This Week in Redox 2"
 
 # Whats new in Redox?
 
-- &str == redox String cleanup
+- `&str` == `redox` String cleanup
 - Add Bresenham's line drawing algorithm
 - Add `box_write` command in `filesystem/apps/test/test.rs`
 - Add `wget` command
-- Add `write` trait
+- Add `Write` trait
 - Add leak test for `test.rs`
 - Add second wallpaper/bootscreen image
-- Add temporary rsa implementation
+- Add temporary RSA implementation
 - Add user scheme example
 - Added Fedora build instructions.
 - Added `dnode,` object set, and `zil` header
@@ -58,7 +58,7 @@ We have a file manager!
 The boot screen.
 ![Redox](https://raw.githubusercontent.com/redox-os/redox/e3a2abf42dfad8875642156fee476351153e7ce8/img/screenshots/Boot.png)
 
-# What next?
+# What's next?
 
 - Continue on `x86_64` support
 - Create design documents for Ion
