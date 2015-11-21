@@ -33,7 +33,7 @@ This is the sixth post of a series of blog posts tracking the development and pr
 
 ![phone](https://raw.githubusercontent.com/redox-os/redox/master/img/fun/mobile.jpg)
 
-![start](https://github.com/redox-os/redox/blob/master/img/screenshots/File_manager.png)
+![start](https://raw.githubusercontent.com/redox-os/redox/master/img/screenshots/File_manager.png)
 
 
 # What's next?
