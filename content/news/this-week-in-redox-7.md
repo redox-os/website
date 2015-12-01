@@ -30,7 +30,7 @@ This is the seventh post of a series of blog posts tracking the development and 
 
 Most of changes are internal:
 
-![start](https://github.com/redox-os/redox/blob/master/img/screenshots/screen.png)
+![start](https://raw.githubusercontent.com/redox-os/redox/master/img/screenshots/screen.png)
 
 
 # What's next?
