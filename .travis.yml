@@ -1,9 +1,9 @@
 language: bash
 sudo: false
 before_script:
-  - wget -Ohugo.tgz https://github.com/spf13/hugo/releases/download/v0.14/hugo_0.14_linux_amd64.tar.gz
+  - wget -Ohugo.tgz https://github.com/spf13/hugo/releases/download/v0.15/hugo_0.15_linux_amd64.tar.gz
   - tar xzf hugo.tgz
-  - mv hugo_0.14_linux_amd64/hugo_0.14_linux_amd64 ./hugo
+  - mv hugo_0.15_linux_amd64/hugo_0.15_linux_amd64 ./hugo
   - git config --global user.name "Łukasz Niemier"
   - git config --global user.email "lukasz@niemier.pl"
   - git submodule foreach git checkout master
