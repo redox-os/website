@@ -15,7 +15,7 @@ You might have been wondered why no update on the progress of Redox OS have appe
 
 - We got lots of new concurrent data structures! `mpsc` and `sync_mpsc` ([@ticki](https://github.com/ticki)), `RwLock` and `Mutex` ([@jackpot51](https://github.com/jackpot51))
 
-- [@ticki](https://github.com/ticki) has set up a Mattermost server (alternative to Slack chat), which we are now using instead of Slack. Contact Ticki for invites.
+- [@ticki](https://github.com/ticki) have set up a Mattermost server (alternative to Slack chat), which we are now using instead of Slack. Contact Ticki for invites.
 
 - [@imp](https://github.com/imp) have been working a lot on PCI and PIO.
 
