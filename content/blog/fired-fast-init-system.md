@@ -31,7 +31,7 @@ if there is someone who will help us creating that possible.
 
 ## Why not existing one?
 
-- We are writing Redox kernel in Rust, so why we should use C in user space? We
+- We are writing Redox kernel in Rust, so why would we use C in user space? We
   want all system tooling to be as safe as possible in Rust.
 - All existing init systems are write for systems with other design principles.
   In Redox everything is URL so we should use that. Instead of sockets/pipes
