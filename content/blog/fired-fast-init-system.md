@@ -35,7 +35,7 @@ if there is someone who will help us creating that possible.
   want all system tooling to be as safe as possible in Rust.
 - All existing init systems are written for systems with other design principles.
   In Redox everything is URL so we should use that. Instead of sockets/pipes
-  magic we have built in tool that will solve all problems with IPC.
+  magic we have a built-in tool that will solve all problems with IPC.
 - Nothing what we found is simple enough or modern enough to fit into our needs.
 
 [toml]: https://github.com/toml-lang/toml
