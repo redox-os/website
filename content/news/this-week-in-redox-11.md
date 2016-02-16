@@ -15,7 +15,8 @@ If you have  questions, ideas, or are curious about Redox, you are recommended t
 
 # What's new in Redox?
 
-- [@jackpot51](https://github.com/jackpot51) has completely rewritten Orbital. Orbital now runs entirely in userspace, and can be started via a normal executable file, without any assistance from kernel space.
+
+- [@jackpot51](https://github.com/jackpot51) has added **full blown x86_64 support**. Yay!
 
 - [@eghiorzi](https://github.com/EGhiorzi) has ported his program, 'RUSThello', to Redox. 'RUSThello' is an highly concurrent AI for Reversi (also known as Othello). This demonstrates Redox's multithreading abilities.
 
@@ -34,6 +35,8 @@ If you have  questions, ideas, or are curious about Redox, you are recommended t
 - [Sodium](https://github.com/redox-os/sodium) (text editor) and the Redox launcher (`launcher.bin`), [Orbclient](https://github.com/redox-os/orbclient) (display client) now runs on Linux! Thanks to the awesomness of [@jackpot51](https://github.com/jackpot51) and [@stratact](https://github.com/stratact). `orbclient` uses SDL2 as backend on Linux.
 
 - [@skylerberg](https://github.com/skylerberg) has done several changes to Ion (the shell). These includes: a PEG-based parser, directory stacks (popd, pushd, dirs), fork and job control, glob expansion, `cd -`, and much more!
+
+- [@jackpot51](https://github.com/jackpot51) has completely rewritten Orbital. Orbital now runs entirely in userspace, and can be started via a normal executable file, without any assistance from kernel space.
 
 - Thanks to [@jackpot51](https://github.com/jackpot51), we now got proper schemes in userspace!
 
@@ -63,7 +66,7 @@ OrbTK is a widget toolkit for Orbital, ala GTK.
 
 - Port SDL2
 - Games on Redox
-- x86_64
+- ~~x86_64~~
 
 # New contributors
 
