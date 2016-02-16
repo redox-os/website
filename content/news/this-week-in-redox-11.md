@@ -14,9 +14,8 @@ You might wonder why no update on the progress of Redox OS has appeared over the
 If you have  questions, ideas, or are curious about Redox, you are recommended to join `#redox` on `irc.mozilla.org`, and chat with us!
 
 # What's new in Redox?
-- [@jackpot51](https://github.com/jackpot51) has written a very minimal init system.
 
-- Orbital now runs entirely in userspace, and can be started via a normal executable file, without any assistance from kernel space.
+- [@jackpot51](https://github.com/jackpot51) has completely rewritten Orbital. Orbital now runs entirely in userspace, and can be started via a normal executable file, without any assistance from kernel space.
 
 - [@eghiorzi](https://github.com/EGhiorzi) has ported his program, 'RUSThello', to Redox. 'RUSThello' is an highly concurrent AI for Reversi (also known as Othello). This demonstrates Redox's multithreading abilities.
 
@@ -40,6 +39,8 @@ If you have  questions, ideas, or are curious about Redox, you are recommended t
 
 - [@gmorenz](https://github.com/gmorenz) has improved the multi-cursor feature of Sodium.
 
+- [@jackpot51](https://github.com/jackpot51) has written a very minimal init system.
+
 - And lots of small changes.
 
 
@@ -52,6 +53,10 @@ Someone from the future send it to me. For anyone wondering this is definitely ~
 ![Debugging is an art.](https://chat.redox-os.org/api/v1/files/get/bxx4kh6hui8oxrkks5tb8uupcr/moin5cozg3ngicr3ogtjkm5auc/bsfh85nppbd58d6cscrehemfmh/redox-on-acid.png?d={%22filename%22%3A%22bsfh85nppbd58d6cscrehemfmh%2Fredox-on-acid.png%22%2C%22time%22%3A%221455645597957%22}&h=%242a%2410%24Gz05tGmkg9bTc6LsECAHYe4UXPei.l8AzQj.Alne.DdAn4RHuEnA2&t=zoa4meoqjbbcdju9ghd7745phe)
 
 This actually happened (believe it or not), while I was hacking on the interrupt handler for x86_64.
+
+![OrbTK on Redox](https://chat.redox-os.org/api/v1/files/get/yse6yo5p17n83e735dgumsoese/6izutbttt3fhmqxrbihouu6i1c/bkr6ywkykin38nqtqxm8c38i3r/orbtk.png?d={%22filename%22%3A%22bkr6ywkykin38nqtqxm8c38i3r%2Forbtk.png%22%2C%22time%22%3A%221455654612603%22}&h=%242a%2410%24lsMQ.WYUABV07y2PzEH7Nu%2FNpTPjeuIEdQXRbw4TGcnkmDwIb4W5.&t=zoa4meoqjbbcdju9ghd7745phe)
+
+OrbTK is a widget toolkit for Orbital, ala GTK.
 
 
 # What's next?
