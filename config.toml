@@ -3,9 +3,6 @@ languageCode = "en-us"
 title = "Redox - Your Next(Gen) OS"
 
 [[menu.main]]
-  name = "GitHub"
-  url = "https://github.com/redox-os"
-[[menu.main]]
   name = "Book"
   url = "/book/book/"
 [[menu.main]]
@@ -15,8 +12,8 @@ title = "Redox - Your Next(Gen) OS"
   name = "Forum"
   url = "https://discourse.redox-os.org/"
 [[menu.main]]
-  name = "Blog"
-  url = "/blog/"
+  name = "GitHub"
+  url = "https://github.com/redox-os"
 [[menu.main]]
   name = "News"
   url = "/news/"
