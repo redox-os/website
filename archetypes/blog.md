@@ -1,3 +1,0 @@
-+++
-author = "Redox Developers"
-+++
