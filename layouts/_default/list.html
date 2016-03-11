@@ -9,19 +9,14 @@
   <link rel="canonical" href="{{ .Permalink }}">
   <link href="/index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
 </head>
-<body>
-  <div class="topbar">
+<body class="container">
+  <header>
     {{ partial "menu.html" . }}
-    <a href="/">
-      <header class="top">
-        <img src="/img/logo.svg" alt="Redox Logo">
-      </header>
-    </a>
-  </div>
+  </header>
   <div class="content">
-    <ul>
+    <ul class="laundry-list">
       {{ range .Data.Pages }}
-      <li><a href="{{ .Permalink }}">{{ .Title }}</a> by {{ .Params.author }} <time datetime="{{ .Date }}" class="date">{{ .Date.Format "Mon, 2 Jan 2006" }}</time></li>
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a> by {{ .Params.author }} on <time datetime="{{ .Date }}" class="date">{{ .Date.Format "Mon, 2 Jan 2006" }}</time></li>
       {{ end }}
     </ul>
   </div>
