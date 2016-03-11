@@ -19,7 +19,7 @@ If you have  questions, ideas, or are curious about Redox, you are recommended t
 
 - [@jackpot51](https://github.com/jackpot51) has added a brand-new [Discourse forum](https://discourse.redox-os.org). He also did a full redesign of the website (as you might notice on this very page).
 
-- [@ticki](https://github.com/ticki) has [completely rewritten](https://github.com/redox-os/redox/pull/552) `libredox`'s IO, making `libredox` almost 100% compatible with `libstd`. Now you can easily port your Rust program to Redox!
+- [@ticki](https://github.com/ticki) has [completely rewritten](https://github.com/redox-os/redox/pull/552) `libredox`'s IO and process, making `libredox` almost 100% compatible with `libstd`. [@jackpot51](https://github.com/jackpot51) have also done some extensive changes, to `path` and `fs`. Now you can easily port your Rust program to Redox!
 
 - [@ticki](https://github.com/ticki) made [URLs have three different internal representations](https://github.com/redox-os/redox/pull/522), yielding a modest improvement in performance.
 
