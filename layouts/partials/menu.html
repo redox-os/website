@@ -7,9 +7,9 @@
     </li>
     <li class="col-xs-12 col-md-10 menu">
       {{ range .Site.Menus.main }}
-        <h2><a href="{{ .URL }}">{{ .Name }}</a></h2>
+        <h2><a style="color: inherit" href="{{ .URL }}">{{ .Name }}</a></h2>
       {{ end }}
-      <h2><a href="/index.xml">Feed</a></h2>
+      <h2><a style="color: inherit" href="/index.xml">Feed</a></h2>
     </li>
   </ul>
 </nav>

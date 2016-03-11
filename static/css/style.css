@@ -225,10 +225,10 @@ hr {
 }
 
 ul.laundry-list {
-	column-count: 2;
-	-moz-column-count: 2;
-	-webkit-column-count: 2;
-	margin-bottom: 20px;
+        margin-bottom: 20px;
+        column-count: auto;
+        -moz-column-count: auto;
+	-webkit-column-count: auto;
 }
 
 .resp-block {
@@ -239,11 +239,6 @@ ul.laundry-list {
 	.install-box a.btn {
 		font-size: 18px;
 		padding: 10px 15px;
-	}
-	ul.laundry-list {
-	  column-count: auto;
-	  -moz-column-count: auto;
-	  -webkit-column-count: auto;
 	}
 	img.ribbon {
 		display: inline !important;
