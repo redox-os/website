@@ -27,6 +27,8 @@ If you have  questions, ideas, or are curious about Redox, you are recommended t
 
 - [@ticki](https://github.com/ticki) has improved ZFS's error handling and the handling of SPA.
 
+- [@mmstick](https://github.com/mmstick) has added basename, test, and floating point sleep to [coreutils](https://github.com/redox-os/coreutils)
+
 - [@nounoursheureux](https://github.com/nounoursheureux) [has added](https://github.com/redox-os/extrautils/pull/3) `grep` (currently not supporting regular expressions) to [extrautils](https://github.com/redox-os/extrautils).
 
 - [@jackpot51](https://github.com/jackpot51) has added hash bang (`#!`) support.
