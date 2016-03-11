@@ -1,9 +1,15 @@
 <nav>
-  <ul>
-    <li><a href="/">Home</a></li>
-    {{ range .Site.Menus.main }}
-    <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-    {{ end }}
-    <li><a href="/index.xml">Feed</a></li>
+  <ul class="row menu">
+    <li class="col-xs-12 col-md-2">
+      <a href="/index.html">
+        <img class="img-responsive" src="/img/icon.svg" width="128" height="128" alt="Redox Logo"/>
+      </a>
+    </li>
+    <li class="col-xs-12 col-md-10 menu">
+      {{ range .Site.Menus.main }}
+        <h2><a href="{{ .URL }}">{{ .Name }}</a></h2>
+      {{ end }}
+      <h2><a href="/index.xml">Feed</a></h2>
+    </li>
   </ul>
 </nav>
