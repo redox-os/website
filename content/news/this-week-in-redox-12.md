@@ -41,6 +41,8 @@ If you have  questions, ideas, or are curious about Redox, you are recommended t
 
 - [@nounoursheureux](https://github.com/nounoursheureux) has improved the `let` command, and added the initial implementation of shell functions.
 
+- [@stratact](https://github.com/stratact) have improved `wc` by better tracking of the various counts.
+
 - [@jackpot51](https://github.com/jackpot51) has redesign our temporary file system, `redoxfs`.
 
 - [@ticki](https://github.com/ticki) has made all the coreutils performing much better.
@@ -57,7 +59,7 @@ If you have  questions, ideas, or are curious about Redox, you are recommended t
 
 - [@jackpot51](https://github.com/jackpot51) has added an "application selector" for the launcher.
 
-- [@stratact](https://github.com/stratact) has done some clean-up/refactoring in the kernel related to slicing.
+- [@stratact](https://github.com/stratact) refactored scheme's path, by migrating away from manual index-tracking of slices by using iterators/combinators which resulted in cleaner/easier to read code.
 
 - [@ticki](https://github.com/ticki) has written a tool for rendering man pages.
 
