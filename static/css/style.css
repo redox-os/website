@@ -186,7 +186,6 @@ p.pitch {
 	color: #777;
 	text-align: right;
 	font-size: 130%;
-	margin-top: 0.8em;
 }
 
 .version-rec-box-inner {
@@ -222,6 +221,14 @@ hr {
 	display: block;
 	margin:1em auto;
 	max-width: 250px;
+}
+
+.row.features {
+  margin-top: 2.0em;
+}
+
+.copyright {
+  margin-top: 2.0em;
 }
 
 ul.laundry-list {
@@ -497,4 +504,3 @@ ul.laundry-list {
     margin: 0 0 0 2rem;
     padding: 0;
 }
-
