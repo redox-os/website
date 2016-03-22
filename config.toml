@@ -15,5 +15,8 @@ title = "Redox - Your Next(Gen) OS"
   name = "GitHub"
   url = "https://github.com/redox-os"
 [[menu.main]]
+  name = "CoC"
+  url = "/coc.html"
+[[menu.main]]
   name = "News"
   url = "/news/"
