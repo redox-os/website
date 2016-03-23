@@ -4,19 +4,19 @@ title = "Redox - Your Next(Gen) OS"
 
 [[menu.main]]
   name = "Book"
-  url = "/book/book/"
+  url = "https://doc.redox-os.org/book/"
+[[menu.main]]
+  name = "CoC"
+  url = "/coc.html"
 [[menu.main]]
   name = "Docs"
-  url = "https://doc.redox-os.org/"
+  url = "https://doc.redox-os.org/doc/std/"
 [[menu.main]]
   name = "Forum"
   url = "https://discourse.redox-os.org/"
 [[menu.main]]
   name = "GitHub"
   url = "https://github.com/redox-os"
-[[menu.main]]
-  name = "CoC"
-  url = "/coc.html"
 [[menu.main]]
   name = "News"
   url = "/news/"
