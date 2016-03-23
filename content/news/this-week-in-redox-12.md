@@ -15,7 +15,7 @@ If you have  questions, ideas, or are curious about Redox, you are recommended t
 
 # What's new in Redox?
 
-- [@ticki](https://github.com/ticki) is working on a Rust-style book, [The Redox Operating-System](http://www.redox-os.org/book/book/). **This is currently the single, most complete source of information about Redox**. If you're interested in Redox, you should definitely go check it out.
+- [@ticki](https://github.com/ticki) is working on a Rust-style book, [The Redox Operating-System](https://doc.redox-os.org/book/). **This is currently the single, most complete source of information about Redox**. If you're interested in Redox, you should definitely go check it out.
 
 - [@jackpot51](https://github.com/jackpot51) has added a brand-new [Discourse forum](https://discourse.redox-os.org). He also did a full redesign of the website (as you might notice on this very page).
 
