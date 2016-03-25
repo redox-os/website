@@ -50,13 +50,13 @@ title = "This Week in Redox 2"
 # What does it look like?
 
 The desktop.
-![Redox](https://raw.githubusercontent.com/redox-os/redox/e3a2abf42dfad8875642156fee476351153e7ce8/img/screenshots/Desktop.png)
+<img class="img-responsive" src="https://raw.githubusercontent.com/redox-os/redox/e3a2abf42dfad8875642156fee476351153e7ce8/img/screenshots/Desktop.png"/>
 Yay! Fancy opacity.
-![Redox](https://raw.githubusercontent.com/redox-os/redox/e3a2abf42dfad8875642156fee476351153e7ce8/img/screenshots/Fancy_opacity.png)
+<img class="img-responsive" src="https://raw.githubusercontent.com/redox-os/redox/e3a2abf42dfad8875642156fee476351153e7ce8/img/screenshots/Fancy_opacity.png"/>
 We have a file manager!
-![Redox](https://raw.githubusercontent.com/redox-os/redox/e3a2abf42dfad8875642156fee476351153e7ce8/img/screenshots/File_manager.png)
+<img class="img-responsive" src="https://raw.githubusercontent.com/redox-os/redox/e3a2abf42dfad8875642156fee476351153e7ce8/img/screenshots/File_manager.png"/>
 The boot screen.
-![Redox](https://raw.githubusercontent.com/redox-os/redox/e3a2abf42dfad8875642156fee476351153e7ce8/img/screenshots/Boot.png)
+<img class="img-responsive" src="https://raw.githubusercontent.com/redox-os/redox/e3a2abf42dfad8875642156fee476351153e7ce8/img/screenshots/Boot.png"/>
 
 # What's next?
 

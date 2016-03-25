@@ -31,23 +31,23 @@ This is the third post of a series of blog posts tracking the development and pr
 
 ;)
 
-![Old computer](https://raw.githubusercontent.com/redox-os/redox/master/img/fun/Old.jpg)
+<img class="img-responsive" src="https://raw.githubusercontent.com/redox-os/redox/master/img/fun/Old.jpg"/>
 
 The start screen:
 
-![Startscreen](https://raw.githubusercontent.com/Ticki/redox/master/img/screenshots/start.png)
+<img class="img-responsive" src="https://raw.githubusercontent.com/Ticki/redox/master/img/screenshots/start.png"/>
 
 Sodium is working:
 
-![Sodium](https://raw.githubusercontent.com/Ticki/redox/4d026acf5e7981cd3a3d12a55206dfd20853fcde/img/screenshots/Sodium.png)
+<img class="img-responsive" src="https://raw.githubusercontent.com/Ticki/redox/4d026acf5e7981cd3a3d12a55206dfd20853fcde/img/screenshots/Sodium.png"/>
 
 WIP on ZFS:
 
-![ZFS](https://raw.githubusercontent.com/Ticki/redox/master/img/screenshots/zfs.png)
+<img class="img-responsive" src="https://raw.githubusercontent.com/Ticki/redox/master/img/screenshots/zfs.png"/>
 
 Awesome file manager!
 
-![File manager](https://raw.githubusercontent.com/Ticki/redox/master/img/screenshots/File_manager_v2.png)
+<img class="img-responsive" src="https://raw.githubusercontent.com/Ticki/redox/master/img/screenshots/File_manager_v2.png"/>
 
 
 # What's next?

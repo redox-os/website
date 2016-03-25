@@ -52,7 +52,7 @@ You might have been wondered why no update on the progress of Redox OS have appe
 
 Changes have not affected the appereance a lot:
 
-![start](https://raw.githubusercontent.com/redox-os/redox/bbe19afced47cd4d84088deb4aa40c64b93f0e73/img/screenshots/start.png)
+<img class="img-responsive" src="https://raw.githubusercontent.com/redox-os/redox/bbe19afced47cd4d84088deb4aa40c64b93f0e73/img/screenshots/start.png"/>
 
 
 # What's next?

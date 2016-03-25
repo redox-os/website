@@ -49,15 +49,15 @@ If you have  questions, ideas, or are curious about Redox, you are recommended t
 
 # What does it look like?
 
-![For anyone wondering this is definitely ~~not~~ fake.](https://raw.githubusercontent.com/redox-os/redox/a898dc852020b0ab3c242e72434a1cffaca41a44/img/fun/tablet.jpg)
+<img class="img-responsive" src="https://raw.githubusercontent.com/redox-os/redox/a898dc852020b0ab3c242e72434a1cffaca41a44/img/fun/tablet.jpg"/>
 
 Someone from the future send it to me. For anyone wondering this is definitely ~~not~~ fake.
 
-![Debugging is an art.](https://chat.redox-os.org/api/v1/files/get/bxx4kh6hui8oxrkks5tb8uupcr/moin5cozg3ngicr3ogtjkm5auc/bsfh85nppbd58d6cscrehemfmh/redox-on-acid.png?d={%22filename%22%3A%22bsfh85nppbd58d6cscrehemfmh%2Fredox-on-acid.png%22%2C%22time%22%3A%221455645597957%22}&h=%242a%2410%24Gz05tGmkg9bTc6LsECAHYe4UXPei.l8AzQj.Alne.DdAn4RHuEnA2&t=zoa4meoqjbbcdju9ghd7745phe)
+<img class="img-responsive" src="https://chat.redox-os.org/api/v1/files/get/bxx4kh6hui8oxrkks5tb8uupcr/moin5cozg3ngicr3ogtjkm5auc/bsfh85nppbd58d6cscrehemfmh/redox-on-acid.png?d={%22filename%22%3A%22bsfh85nppbd58d6cscrehemfmh%2Fredox-on-acid.png%22%2C%22time%22%3A%221455645597957%22}&h=%242a%2410%24Gz05tGmkg9bTc6LsECAHYe4UXPei.l8AzQj.Alne.DdAn4RHuEnA2&t=zoa4meoqjbbcdju9ghd7745phe"/>
 
 This actually happened (believe it or not), while I was hacking on the interrupt handler for x86_64.
 
-![OrbTK on Redox](https://chat.redox-os.org/api/v1/files/get/yse6yo5p17n83e735dgumsoese/6izutbttt3fhmqxrbihouu6i1c/bkr6ywkykin38nqtqxm8c38i3r/orbtk.png?d={%22filename%22%3A%22bkr6ywkykin38nqtqxm8c38i3r%2Forbtk.png%22%2C%22time%22%3A%221455654612603%22}&h=%242a%2410%24lsMQ.WYUABV07y2PzEH7Nu%2FNpTPjeuIEdQXRbw4TGcnkmDwIb4W5.&t=zoa4meoqjbbcdju9ghd7745phe)
+<img class="img-responsive" src="https://chat.redox-os.org/api/v1/files/get/yse6yo5p17n83e735dgumsoese/6izutbttt3fhmqxrbihouu6i1c/bkr6ywkykin38nqtqxm8c38i3r/orbtk.png?d={%22filename%22%3A%22bkr6ywkykin38nqtqxm8c38i3r%2Forbtk.png%22%2C%22time%22%3A%221455654612603%22}&h=%242a%2410%24lsMQ.WYUABV07y2PzEH7Nu%2FNpTPjeuIEdQXRbw4TGcnkmDwIb4W5.&t=zoa4meoqjbbcdju9ghd7745phe"/>
 
 OrbTK is a widget toolkit for Orbital, ala GTK.
 

@@ -32,11 +32,11 @@ This is the fourth post of a series of blog posts tracking the development and p
 
 ;)
 
-![Cellphone](https://raw.githubusercontent.com/redox-os/redox/master/img/fun/cellphone.jpg)
+<img class="img-responsive" src="https://raw.githubusercontent.com/redox-os/redox/master/img/fun/cellphone.jpg"/>
 
 The start screen:
 
-![Startscreen](https://raw.githubusercontent.com/Ticki/redox/master/img/screenshots/start.png)
+<img class="img-responsive" src="https://raw.githubusercontent.com/Ticki/redox/master/img/screenshots/start.png"/>
 
 # What's next?
 

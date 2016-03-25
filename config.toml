@@ -3,20 +3,17 @@ languageCode = "en-us"
 title = "Redox - Your Next(Gen) OS"
 
 [[menu.main]]
-  name = "Book"
-  url = "https://doc.redox-os.org/book/"
-[[menu.main]]
-  name = "CoC"
-  url = "/coc.html"
-[[menu.main]]
   name = "Docs"
-  url = "https://doc.redox-os.org/doc/std/"
+  url = "/docs.html"
 [[menu.main]]
   name = "Forum"
   url = "https://discourse.redox-os.org/"
 [[menu.main]]
   name = "GitHub"
-  url = "https://github.com/redox-os"
+  url = "https://github.com/redox-os/redox"
 [[menu.main]]
   name = "News"
   url = "/news/"
+[[menu.main]]
+  name = "Screenshots"
+  url = "/screens.html"
