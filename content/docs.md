@@ -18,4 +18,4 @@ We highly recommend that you start with the [Book](https://doc.redox-os.org/book
 
 ## Policies
 
-[Code of Conduct](/coc.html). Guidelines for participating in the Redox forums, github issues, and chat.
+[Code of Conduct](/coc/). Guidelines for participating in the Redox forums, github issues, and chat.
