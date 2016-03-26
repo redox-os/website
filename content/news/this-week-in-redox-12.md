@@ -4,24 +4,26 @@ author = "Ticki"
 date = "2016-03-11T21:24:55+01:00"
 +++
 
-This is the 12th post of a series of blog posts tracking the development and progress of Redox, the Rust operating system. If you want to know more about Redox in general, then visit our [Github page](https://github.com/redox-os/redox).
+This is the 12th post of a series of blog posts tracking the development and progress of Redox, the Rust operating system. If you want to know more about Redox in general, visit our [Github page](https://github.com/redox-os/redox).
 
-This week have been dedicated to documentation, for the great points [/u/rozaliev brought up](https://www.reddit.com/r/rust/comments/481e09/redox_vs_linux_in_10_years/d0gz5v3). This means we have a lot new documentation initiatives...
+This week has been dedicated to documentation, for the great points [/u/rozaliev brought up](https://www.reddit.com/r/rust/comments/481e09/redox_vs_linux_in_10_years/d0gz5v3). This means we have a lot new documentation initiatives.
 
 *(edited by Ticki)*
 
 # PSA
-If you have  questions, ideas, or are curious about Redox, you are recommended to join `#redox` on `irc.mozilla.org`, and chat with us!
+If you have any questions, ideas, or are curious about Redox, we recommend joining `#redox` on `irc.mozilla.org`, and chat with us!
 
 # What's new in Redox?
 
-- [@ticki](https://github.com/ticki) is working on a Rust-style book, [The Redox Operating-System](https://doc.redox-os.org/book/). **This is currently the single, most complete source of information about Redox**. If you're interested in Redox, you should definitely go check it out.
+- [@ticki](https://github.com/ticki) is working on a Rust-style documentation book, [The Redox Operating System](https://doc.redox-os.org/book/). **This is currently the single, most complete source of information about Redox**. If you're interested in Redox, you should definitely go check it out.
 
-- [@jackpot51](https://github.com/jackpot51) has added a brand-new [Discourse forum](https://discourse.redox-os.org). He also did a full redesign of the website (as you might notice on this very page).
+- [@jackpot51](https://github.com/jackpot51) has added a brand-new [Discourse forum](https://discourse.redox-os.org). He has also done a full redesign of the website, as you may have noticed.
 
-- [@ticki](https://github.com/ticki) has [completely rewritten](https://github.com/redox-os/redox/pull/552) `libredox`'s IO and process, making `libredox` almost 100% compatible with `libstd`. [@jackpot51](https://github.com/jackpot51) have also done some extensive changes, to `path` and `fs`. Now you can easily port your Rust program to Redox!
+- [@ticki](https://github.com/ticki) has [completely rewritten](https://github.com/redox-os/redox/pull/552) `libredox`'s IO and process, making the Redox port of Rust's `libstd`, `libredox`, nearly 100% compatible with the official library.
 
-- [@ticki](https://github.com/ticki) made [URLs have three different internal representations](https://github.com/redox-os/redox/pull/522), yielding a modest improvement in performance.
+- [@jackpot51](https://github.com/jackpot51) has also made some extensive changes to `path` and `fs`. Now you can easily port your Rust program to Redox!
+
+- [@ticki](https://github.com/ticki) has made [URLs have three different internal representations](https://github.com/redox-os/redox/pull/522), yielding a modest improvement in performance.
 
 - [@jackpot51](https://github.com/jackpot51) has ported `ed` to Redox.
 
@@ -31,7 +33,7 @@ If you have  questions, ideas, or are curious about Redox, you are recommended t
 
 - [@nounoursheureux](https://github.com/nounoursheureux) [has added](https://github.com/redox-os/extrautils/pull/3) `grep` (currently not supporting regular expressions) to [extrautils](https://github.com/redox-os/extrautils).
 
-- [@jackpot51](https://github.com/jackpot51) has added hash bang (`#!`) support.
+- [@jackpot51](https://github.com/jackpot51) has added Shebang (`#!`) support.
 
 - [@ticki](https://github.com/ticki) has added `cksum` (DJB2 checksums), `cur` (simple pager), `rem` (reminders and countdowns), `mtxt` (stream editor) to [extrautils](https://github.com/redox-os/extrautils).
 
@@ -43,7 +45,7 @@ If you have  questions, ideas, or are curious about Redox, you are recommended t
 
 - [@nounoursheureux](https://github.com/nounoursheureux) has improved the `let` command, and added the initial implementation of shell functions.
 
-- [@stratact](https://github.com/stratact) have improved `wc` by better tracking of the various counts.
+- [@stratact](https://github.com/stratact) has improved `wc` by better tracking of the various counts.
 
 - [@jackpot51](https://github.com/jackpot51) has redesign our temporary file system, `redoxfs`.
 
@@ -72,7 +74,6 @@ If you have  questions, ideas, or are curious about Redox, you are recommended t
 - [@ticki](https://github.com/ticki) is working on a port of SDL2 to Redox.
 
 - We now got [ISOs](https://static.redox-os.org/) ready to download and install!
-
 
 # Handy links
 
