@@ -125,13 +125,13 @@ The above pictures are all real.
 
 # Handy links
 
-1. [The Glorious Book](http://www.redox-os.org/book/book/)
+1. [The Glorious Book](https://doc.redox-os.org/book/)
 2. [The Holiest Forum](https://discourse.redox-os.org/)
 3. [The Shiny ISOs](https://static.redox-os.org/)
-4. [Redocs](https://doc.redox-os.org/kernel/)
+4. [Redocs](http://www.redox-os.org/docs/)
 5. [Fancy GitHub organization](https://github.com/redox-os)
 6. [Our Holy Grail of a Website](http://www.redox-os.org/)
-7. [Our Nice Code of Conduct](https://redox-os.org/coc)
+7. [Our Nice Code of Conduct](http://www.redox-os.org/coc/)
 8. [The Extreme Screenshots](http://www.redox-os.org/screens/)
 
 # What's next?
