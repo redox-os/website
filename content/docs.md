@@ -16,6 +16,20 @@ We highly recommend that you start with the [Book](https://doc.redox-os.org/book
 
 [Kernel](https://doc.redox-os.org/doc/kernel/). Documentation for the Redox kernel.
 
+[libextra](https://doc.redox-os.org/doc/extra/). Documentation for libextra, a library with everything libstd lacks of.
+
+[libmalloc](https://doc.redox-os.org/doc/malloc/). Documentation for the userspace allocator.
+
+[binutils](https://doc.redox-os.org/doc/binutils/). Documentation for the Redox binary utilities.
+
+[zfs](https://doc.redox-os.org/doc/zfs/). Documentation for our ZFS implementation.
+
+[sodium](https://doc.redox-os.org/doc/sodium/). Documentation for Sodium, the text editor.
+
+[orbtk](https://doc.redox-os.org/doc/orbtk/). Documentation for OrbTK, the Orbital widget toolkit.
+
+[orbclient](https://doc.redox-os.org/doc/orbclient/). Documentation for Orbclient, the Orbital client.
+
 ## Policies
 
 [Code of Conduct](/coc/). Guidelines for participating in the Redox forums, github issues, and chat.
