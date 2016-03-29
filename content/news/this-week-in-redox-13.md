@@ -29,7 +29,7 @@ If you have any questions, ideas, or are curious about Redox, we recommend joini
   - [@jhod0](https://github.com/jhod0) added flappy bird.
   - [@ticki](https://github.com/ticki) added h4xx3r, for hacking like 4chan.
 
-- [@ticki](https://github.com/ticki) has started [@magnet](https://github.com/redox-os/magnet), the package manager of Redox. It is still very much work-in-progress.
+- [@ticki](https://github.com/ticki) has started [magnet](https://github.com/redox-os/magnet), the package manager of Redox. It is still very much work-in-progress.
 
 - [@jackpot51](https://github.com/jackpot51) made a GUI version of [@lazyoxen's](https://github.com/lazyoxen) `calc`.
 
@@ -90,6 +90,10 @@ If you have any questions, ideas, or are curious about Redox, we recommend joini
 Pythoneer's Pixelcannon in action:
 
 ![pixelcannon in action](https://camo.githubusercontent.com/5e0deef97dbe9f0087b3c911d2b66707bccf474c/687474703a2f2f692e696d6775722e636f6d2f683248626658532e676966)
+
+Hello world from Java:
+
+![](https://framapic.org/Nx8XrADJwCME/DEoNwtGehATG.png)
 
 Redox running on Thinkpad T-420:
 
