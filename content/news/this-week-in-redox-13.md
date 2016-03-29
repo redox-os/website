@@ -153,16 +153,16 @@ Since the list of contributors are growing too fast, we'll now only list the new
 
 Sorted in alphabetical order.
 
-- genodeftest 🎂
-- tnias 🎂
-- ca1ek 🎂
-- movingtomars 🎂
 - bon-chi 🎂
-- samanthadoran 🎂
-- zdeljkic 🎂
-- paezao 🎂
-- ogryzek 🎂
-- nop0x0f 🎂
+- ca1ek 🎂
+- genodeftest 🎂
 - lukeyeager 🎂
+- movingtomars 🎂
+- nop0x0f 🎂
+- ogryzek 🎂
+- paezao 🎂
+- samanthadoran 🎂
+- tnias 🎂
+- zdeljkic 🎂
 
 If I missed something, feel free to contact me (Ticki) or send a PR to [Redox website](https://github.com/redox-os/website).
