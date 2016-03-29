@@ -83,6 +83,8 @@ If you have any questions, ideas, or are curious about Redox, we recommend joini
 
 - [@jackpot51](https://github.com/jackpot51) has added message of the day.
 
+- [@stratact](https://github.com/stratact) has refactored the `Place` trait in orbtk, and is working on menus for OrbTK.
+
 # Pictures
 
 Pythoneer's Pixelcannon in action:
