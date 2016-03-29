@@ -22,8 +22,6 @@ We highly recommend that you start with the [Book](https://doc.redox-os.org/book
 
 [Binutils](https://doc.redox-os.org/doc/binutils/). Documentation for the Redox binary utilities.
 
-[ZFS](https://doc.redox-os.org/doc/zfs/). Documentation for our ZFS implementation.
-
 [Sodium](https://doc.redox-os.org/doc/sodium/). Documentation for Sodium, the text editor.
 
 [OrbTK](https://doc.redox-os.org/doc/orbtk/). Documentation for OrbTK, the Orbital widget toolkit.
