@@ -4,7 +4,7 @@ author = "Ticki"
 date = "2016-03-29T13:43:11+01:00"
 +++
 
-This is the 12th post of a series of blog posts tracking the development and progress of Redox, the Rust operating system. If you want to know more about Redox in general, visit our [Github page](https://github.com/redox-os/redox).
+This is the 13th post of a series of blog posts tracking the development and progress of Redox, the Rust operating system. If you want to know more about Redox in general, visit our [Github page](https://github.com/redox-os/redox).
 
 *(edited by Ticki)*
 
@@ -89,7 +89,7 @@ If you have any questions, ideas, or are curious about Redox, we recommend joini
 
 Pythoneer's Pixelcannon in action:
 
-![pixelcannon in action](https://camo.githubusercontent.com/5e0deef97dbe9f0087b3c911d2b66707bccf474c/687474703a2f2f692e696d6775722e636f6d2f683248626658532e676966)
+<img class="img-responsive" src="https://camo.githubusercontent.com/5e0deef97dbe9f0087b3c911d2b66707bccf474c/687474703a2f2f692e696d6775722e636f6d2f683248626658532e676966"/>
 
 Hello world from Java:
 
@@ -97,35 +97,35 @@ Hello world from Java:
 
 Redox running on Thinkpad T-420:
 
-![](http://www.redox-os.org/img/hardware/thinkpad-t420.png)
+<img class="img-responsive" src="http://www.redox-os.org/img/hardware/thinkpad-t420.png"/>
 
 Redox running on ASUS eeePC 900:
 
-![](http://www.redox-os.org/img/hardware/asus-eepc-900.png)
+<img class="img-responsive" src="http://www.redox-os.org/img/hardware/asus-eepc-900.png"/>
 
 Redox running on Panasonic Toughbook CF-18:
 
-![](http://www.redox-os.org/img/hardware/panasonic-toughbook-cf18.png)
+<img class="img-responsive" src="http://www.redox-os.org/img/hardware/panasonic-toughbook-cf18.png"/>
 
 RustType running on Redox:
 
-![](https://chat.redox-os.org/api/v1/files/get/aduzjsjphirwtj6togzspotzko/6izutbttt3fhmqxrbihouu6i1c/kh7nscwy7idfprqii5pts55gcr/droid_sans.png?d={%22filename%22%3A%22kh7nscwy7idfprqii5pts55gcr%2Fdroid_sans.png%22}&h=%242a%2410%24d84ouSdW.p3TIyH4oIaN3uufpHOVKz5UA.bfMTQnyHR%2F9TA%2Fsg9pK&t=zoa4meoqjbbcdju9ghd7745phe)
+<img class="img-responsive" src="https://chat.redox-os.org/api/v1/files/get/aduzjsjphirwtj6togzspotzko/6izutbttt3fhmqxrbihouu6i1c/kh7nscwy7idfprqii5pts55gcr/droid_sans.png?d={%22filename%22%3A%22kh7nscwy7idfprqii5pts55gcr%2Fdroid_sans.png%22}&h=%242a%2410%24d84ouSdW.p3TIyH4oIaN3uufpHOVKz5UA.bfMTQnyHR%2F9TA%2Fsg9pK&t=zoa4meoqjbbcdju9ghd7745phe"/>
 
 ca1ek's tetrahedrane on Redox:
 
-![](https://i.imgur.com/vB9LZH2.png)
+<img class="img-responsive" src="https://i.imgur.com/vB9LZH2.png"/>
 
 Redox once, Redox forever:
 
-![](https://chat.redox-os.org/api/v1/files/get/aduzjsjphirwtj6togzspotzko/x8qa6a4zsjfrjykim4xs6q798r/q43xsnsxyfypimqohr5shdr66c/redox_on_everything.JPG?d={%22filename%22%3A%22q43xsnsxyfypimqohr5shdr66c%2Fredox_on_everything.JPG%22}&h=%242a%2410%24gVmZOSmbPAP.aR2ROkOlf.GwlEFD13q5cqM72ZqVDhYseA4Q0Bb2u&t=zoa4meoqjbbcdju9ghd7745phe)
+<img class="img-responsive" src="https://chat.redox-os.org/api/v1/files/get/aduzjsjphirwtj6togzspotzko/x8qa6a4zsjfrjykim4xs6q798r/q43xsnsxyfypimqohr5shdr66c/redox_on_everything.JPG?d={%22filename%22%3A%22q43xsnsxyfypimqohr5shdr66c%2Fredox_on_everything.JPG%22}&h=%242a%2410%24gVmZOSmbPAP.aR2ROkOlf.GwlEFD13q5cqM72ZqVDhYseA4Q0Bb2u&t=zoa4meoqjbbcdju9ghd7745phe"/>
 
 Hacking in progress:
 
-![](/img/screenshot/hacking.png)
+<img class="img-responsive" src="/img/screenshot/hacking.png"/>
 
 Minesweeper
 
-![](https://raw.githubusercontent.com/Ticki/termion/master/image.png)
+<img class="img-responsive" src="https://raw.githubusercontent.com/Ticki/termion/master/image.png"/>
 
 The above pictures are all real.
 
