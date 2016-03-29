@@ -29,7 +29,7 @@ If you have any questions, ideas, or are curious about Redox, we recommend joini
   - [@jhod0](https://github.com/jhod0) added flappy bird.
   - [@ticki](https://github.com/ticki) added h4xx3r, for hacking like 4chan.
 
-- [@ticki](https://github.com/ticki) has started [@magnet](https://github.com/redox-os/magnet), the package manager of Redox. It is still very much work-in-progress.
+- [@ticki](https://github.com/ticki) has started [magnet](https://github.com/redox-os/magnet), the package manager of Redox. It is still very much work-in-progress.
 
 - [@jackpot51](https://github.com/jackpot51) made a GUI version of [@lazyoxen's](https://github.com/lazyoxen) `calc`.
 
