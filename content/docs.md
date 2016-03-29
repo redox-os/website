@@ -20,15 +20,15 @@ We highly recommend that you start with the [Book](https://doc.redox-os.org/book
 
 [libmalloc](https://doc.redox-os.org/doc/malloc/). Documentation for the userspace allocator.
 
-[binutils](https://doc.redox-os.org/doc/binutils/). Documentation for the Redox binary utilities.
+[Binutils](https://doc.redox-os.org/doc/binutils/). Documentation for the Redox binary utilities.
 
-[zfs](https://doc.redox-os.org/doc/zfs/). Documentation for our ZFS implementation.
+[ZFS](https://doc.redox-os.org/doc/zfs/). Documentation for our ZFS implementation.
 
-[sodium](https://doc.redox-os.org/doc/sodium/). Documentation for Sodium, the text editor.
+[Sodium](https://doc.redox-os.org/doc/sodium/). Documentation for Sodium, the text editor.
 
-[orbtk](https://doc.redox-os.org/doc/orbtk/). Documentation for OrbTK, the Orbital widget toolkit.
+[OrbTK](https://doc.redox-os.org/doc/orbtk/). Documentation for OrbTK, the Orbital widget toolkit.
 
-[orbclient](https://doc.redox-os.org/doc/orbclient/). Documentation for Orbclient, the Orbital client.
+[Orbclient](https://doc.redox-os.org/doc/orbclient/). Documentation for Orbclient, the Orbital client.
 
 ## Policies
 
