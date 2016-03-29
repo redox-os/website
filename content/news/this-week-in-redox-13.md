@@ -93,7 +93,7 @@ Pythoneer's Pixelcannon in action:
 
 Hello world from Java:
 
-![](https://framapic.org/Nx8XrADJwCME/DEoNwtGehATG.png)
+<img class="img-responsive" src="https://framapic.org/Nx8XrADJwCME/DEoNwtGehATG.png"/>
 
 Redox running on Thinkpad T-420:
 
