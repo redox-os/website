@@ -30,4 +30,4 @@ We highly recommend that you start with the [Book](https://doc.redox-os.org/book
 
 ## Policies
 
-[Code of Conduct](/coc/). Guidelines for participating in the Redox forums, github issues, and chat.
+If you obstruct the development of Redox, you may be removed from the chat and the forum.
