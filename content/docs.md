@@ -28,6 +28,6 @@ We highly recommend that you start with the [Book](https://doc.redox-os.org/book
 
 [Orbclient](https://doc.redox-os.org/doc/orbclient/). Documentation for Orbclient, the Orbital client.
 
-## Policies
+## Conduct
 
-If you obstruct the development of Redox, you may be removed from the chat and the forum.
+We follow the [Rust Code of Conduct](http://www.rust-lang.org/conduct.html)
