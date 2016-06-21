@@ -18,7 +18,7 @@ We highly recommend that you start with the [Book](https://doc.redox-os.org/book
 
 [libextra](https://doc.redox-os.org/doc/extra/). Documentation for libextra, a library with everything libstd lacks of.
 
-[libmalloc](https://doc.redox-os.org/doc/malloc/). Documentation for the userspace allocator.
+[Ralloc](https://doc.redox-os.org/doc/ralloc/). Documentation for the userspace allocator.
 
 [Binutils](https://doc.redox-os.org/doc/binutils/). Documentation for the Redox binary utilities.
 
