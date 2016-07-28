@@ -1,100 +1,106 @@
-+++
-title = "This Week in Redox 14"
-author = "Ticki"
-date = "2016-04-30T19:47:46+01:00"
-+++
+# The Internet on Redox
 
-This is the 14th post of a series of blog posts tracking the development and progress of Redox, the Rust operating system. If you want to know more about Redox in general, visit our [Github page](https://github.com/redox-os/redox).
+Recently there have been questions about Redox on [Github](https://github.com/redox-os/redox/issues/675) and [Reddit](https://www.reddit.com/r/Redox/comments/4t93qg/is_redox_oficially_dead/) about the state of the project. Commenters have stated that git commits are regular, but the project has not released any news. The truth is that we have been working very diligently to bring a huge update, and near a possible release milestone (even though we had no plans on doing so).
 
-Whew, what a long week... ;P
+Working autonomously, with no direction, we stumbled on a massive list of changes that make Redox much, much more interesting.
 
-*(edited by Ticki)*
+## 1. Internet support
+Major changes to the Redox network stack allow for routing to the internet and back:
+- DHCP using `dhcpd`
+- DNS integrated into `std::net::lookup_host`
+- HTTP using `wget [path]`
+- IRC using `irc [nickname]`
+ - This means we can kinda code in rust from redox via #rust's playbot ;-)
+- added basic netcat command, `nc`
 
-# PSA
-If you have any questions, ideas, or are curious about Redox, we recommend joining `#redox` on `irc.mozilla.org` or [our Discourse forum](https://discourse.redox-os.org/)!
+Images downloaded from [here](http://static.redox-os.org) using `wget`
+<img class="img-responsive" src="https://chat.redox-os.org/api/v3/public/files/get/zoa4meoqjbbcdju9ghd7745phe/aduzjsjphirwtj6togzspotzko/6izutbttt3fhmqxrbihouu6i1c/umrx67rhwifrirabmjznweozaa/works.png?d=%7B%22filename%22%3A%22umrx67rhwifrirabmjznweozaa%2Fworks.png%22%7D&h=%242a%2410%24Qo9E5tp5RaJFUrLdB3jweedFDlroJTjs4KoK16DdkKRL1unXEX0Ke"/>
 
-# What's new in Redox?
+IRC client
+<img class="img-responsive" src="http://i.imgur.com/98vCnlu.png"/>
 
-- [@jackpot51](https://github.com/jackpot51) has replaced the old filesystem with a much faster and better one, supporting memory caching, complete write support, persistent (on-disk) file creation, and efficient (O(1)) renaming. This will act as a temporary replacement for the WIP ZFS support.
+## 2. TTF and PNG support
+Using [rusttype](https://github.com/dylanede/rusttype), we are able to display TTF fonts in pure Rust without using FreeType!
+- orbfont, a TTF renderer for orbital
+- character map for viewing TTF fonts
+- ttf in terminal
+- add start menu
+- PNG and BMP backgrounds and cursors are now supported, use the /etc/orbital.conf file to configure the background path
+- Viewer can display PNGs
+- Viewer will show alpha as a grid like the other image viewers
 
-- [@ticki](https://github.com/ticki) has added [a new syscall](https://github.com/redox-os/redox/pull/608), `SYS_SUPERVISE` with the purpose of allowing processes to control, sandbox, and supervise their child processes. This acts as a simpler, and yet more expressive, replacement for ptrace. In addition to this new syscall, a new flag to `SYS_CLONE` was added, together with a `spawn_supervised` method on `Command`.
+Start menu and character map
+<img class="img-responsive" src="http://i.imgur.com/E28ATd4.png"/>
 
-- [@jackpot51](https://github.com/jackpot51) has made `std:net` (almost) on par with the upstream libstd.
+## 3. Games
+- added reblox
+- pythoneer added texture mapping
 
-- [@ticki](https://github.com/ticki) has completed [ralloc](https://github.com/redox-os/ralloc), the efficient memory allocator of Redox. While it is complete, not all bugs are fixed yet. Supports metacircular reallocation, block queue, efficient inplace reallocation, cache efficient lookups, and memory management debugging.
+pixelcannon running on Redox (at 150 FPS)
+<img class="img-responsive" src="https://camo.githubusercontent.com/50f9b4f7be76c453538b0e03fa89220a853bafe0/687474703a2f2f692e696d6775722e636f6d2f734d776b6f6d632e676966"/>
 
-- [@ticki](https://github.com/ticki) has improved the infrastructure slightly, by creating a new handy [a library](https://github.com/ticki/mars) for making Mattermost/Slack bots, along with [a Rust Playground bot built on it](https://github.com/redox-os/playbot) (à la #rust's `playbot`) and [a few other bots](https://github.com/redox-os/bots).
+reblox
+<img class="img-responsive" src="https://chat.redox-os.org/api/v3/public/files/get/zoa4meoqjbbcdju9ghd7745phe/aduzjsjphirwtj6togzspotzko/6izutbttt3fhmqxrbihouu6i1c/3rj6xzmmeidpfe51r3hmubyjey/reblox.png?d=%7B%22filename%22%3A%223rj6xzmmeidpfe51r3hmubyjey%2Freblox.png%22%7D&h=%242a%2410%24YAFV%2FpZ.rQ0355RxnHVKhu3DjK7bBjQBVao3m1Bedxy847PeR4aX2"/>
 
-- [@jackpot51](https://github.com/jackpot51) has moved the filesystem into userspace!
+## 4. Terminal ANSI
+Lots of changes have been happening beneath the hood to ensure feature completeness and correctness in the Redox terminal
+- [Ransid](https://github.com/redox-os/ransid) unifies the ANSI handling in both the kernel terminal and terminal emulator. It brings a lot of new features, color support, raw mode, bold, underlined, and inverted text.
+- [Termion](https://github.com/ticki/termion) has been overhauled, and released. It supports many new features, and is the client counterpart to the ransid server. They are developed together, in addition with testing termion on Linux, to ensure feature completeness.
+- [Liner](https://github.com/movingtomars/liner) is a new crate similar to readline that provides line editing on top of termion. It has history and auto-completion features.
+- [Ion](https://github.com/redox-os/ion), our shell, has been updated to allow complete use of these crates, including auto completion and pretty colors.
+- terminal bold support
+- colorized default prompt for ion
+- created `ransid`, a rust ansi driver. Support for all termion ansi codes has been added and both the kernel console and the terminal emulator use it for consistent ansi handling
+- Underline and color invert support in ransid
+- integrated liner with ion, allowing for line editing.  ransid was a critical piece in making the two terminals work with liner
 
-- [@ticki](https://github.com/ticki) has created a new Rust-based build system, [cake](https://github.com/ticki/cake), which will replace Make for building Redox in the near future.
+Terminal with TTF fonts, obligatory `screendump`
+<img class="img-responsive" src="http://i.imgur.com/YDCSuiz.png"/>
 
-- [@nounoursheureux](https://github.com/nounoursheureux) has added [a better kernel logging system](https://github.com/redox-os/redox/pull/627). This will soon be generalized to userspace logs as well.
+## 5. Handbook
+We have started a handbook, which can be viewed [here](https://github.com/redox-os/handbook/blob/master/index.md), and made a terminal viewer for MD files
 
-- [@wesleywiser](https://github.com/wesleywiser) has added [multiple buffers](https://github.com/redox-os/sodium/pull/40) for Sodium.
+- MD terminal renderer `mdless`
+- less and mdless can read from a pipe by reconnecting to the terminal (only works in kernel terminal until PTTY system)
 
-- [@jackpot51](https://github.com/jackpot51) is working on DHCP/DNS support.
+`info` displaying the Redox handbook, using `mdless`
+<img class="img-responsive" src="http://i.imgur.com/beTS2Dz.png"/>
 
-- [@nounoursheureux](https://github.com/nounoursheureux) has added process-local environment variables.
+## 6. Ralloc.
+Thanks to [ralloc](https://github.com/redox-os/ralloc), we have been able to remove links to the C library (newlib) from our Rust standard library. Ralloc has been much more performant, as it minimizes expensive syscalls.
+ - Fix deadlock in ralloc.
+ - Make it a lot faster by metacircular allocations.
+ - ralloc has microcaches.
+ - lock reuse and more in ralloc.
+ - debug mode for ralloc: double frees, memory leaks and more
+ - security mode for ralloc: enhanced security, useful for security critical programs.
+ - New static and debug utilities for ralloc
+ - Thread local allocators and partial deallocation
+ - ralloc has better logging, better perf, better debug checking, global OOM handler, and is the default.
+ - ralloc TLS'n'stuff
+ - Ralloc local/global pattern
 
-- [@stratact](https://github.com/stratact) has added menu support to OrbTK.
+## 7. RedoxFS
+Our filesystem, [RedoxFS](https://github.com/redox-os/redoxfs), can be used on Linux using FUSE and has been tested thoroughly, builds are done by mounting a new filesystem using the FUSE driver.
+- improve redoxfs performance
+- fixed write support in redoxfs
 
-- [@jackpot51](https://github.com/jackpot51) added a simple initial implementation of `wget`.
+## 8. Kernel
+- Kernel security - check all pointers - https://github.com/redox-os/redox/commit/3f53e5f3cdb94354061576e9509e38cd2021b3e7
+- removed allocation from syslog, it is now a ring buffer like in Linux and BSD
+- many debugs go into syslog, so they can be reviewed using less syslog:
+- magical ansi terminal size detection when using vga=no `\x1B[s\x1B[9999;9999f\x1B[6n\x1B[u`
+- add simple `reboot` command
+- fixed udp scheme
+- huge networking fixes
+- ability to configure ip, subnet, router, and dns netcfg:
+- ability to use router to get to the big internet
 
-- [@ticki](https://github.com/ticki) has added `dem`, a small commandline-based Democracy clone, to `games-for-redox` for fun.
+## 9. Ports and Libc
+- Nasm and ndisasm ported to Redox
+- Can compile binutils now. In comes as, ar, ld, objdump, readelf, etc.
+- Convert ports to use a patch system
+- Removing libc from our libstd
 
-- The kernel now supports basic UDP networking.
-
-- [@nounoursheureux](https://github.com/nounoursheureux) has added `export` to Ion.
-
-- [@mmstick](https://github.com/mmstick) has improved the [implementation of `cat`](https://github.com/redox-os/coreutils/pull/54).
-
-- [@jackpot51](https://github.com/jackpot51) and [@ticki](https://github.com/ticki) have written manpages for most of the tools. The simple [docgen tool](https://github.com/redox-os/redox/commit/4857985d3c4c70421f384624655145ee15980095) is used for the generation of documentation, which is placed in `/refs`.
-
-- ... and many small things.
-
-# Pictures
-
-Redox running on Thinkpad T-420:
-
-<img class="img-responsive" src="http://www.redox-os.org/img/hardware/thinkpad-t420.png"/>
-
-Redox running on ASUS eeePC 900:
-
-<img class="img-responsive" src="http://www.redox-os.org/img/hardware/asus-eepc-900.png"/>
-
-Redox running on Panasonic Toughbook CF-18:
-
-<img class="img-responsive" src="http://www.redox-os.org/img/hardware/panasonic-toughbook-cf18.png"/>
-
-# Handy links
-
-1. [The Glorious Book](https://doc.redox-os.org/book/)
-2. [The Holiest Forum](https://discourse.redox-os.org/)
-3. [The Shiny ISOs](https://static.redox-os.org/)
-4. [Redocs](http://www.redox-os.org/docs/)
-5. [Fancy GitHub organization](https://github.com/redox-os)
-6. [Our Holy Grail of a Website](http://www.redox-os.org/)
-7. [Our Nice Code of Conduct](http://www.redox-os.org/coc/)
-8. [The Extreme Screenshots](http://www.redox-os.org/screens/)
-
-# What's next?
-
-- Use ralloc by default.
-- Switch to Cake.
-- Writable ZFS.
-- Extend the book.
-
-# New contributors
-
-Since the list of contributors are growing too fast, we'll now only list the new contributors. This might change in the future.
-
-Sorted in alphabetical order.
-
-- craftytrickster 🎂
-- dalance  🎂
-- nilset 🎂
-- tpitale 🎂
-- wesleywiser 🎂
-
-If I missed something, feel free to contact me (Ticki) or send a PR to [Redox website](https://github.com/redox-os/website).
+## 10. There was probably more
+Due to the amount of time since the last update, and the hundreds of commits since, it was hard to create a list about what had changed. My recommendation: [go to our github, star, watch, fork, pull, and build](https://github.com/redox-os/redox). Don't forget to checkout out [our organization page](https://github.com/redox-os), it contains most of our repositories.
