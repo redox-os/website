@@ -1,7 +1,7 @@
 +++
 title = "The Internet on Redox"
 author = "Jackpot51"
-date = "2016-07-28-17:51:00-07:00"
+date = "2016-07-28T17:51:00-07:00"
 +++
 
 # The Internet on Redox
