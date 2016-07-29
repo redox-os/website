@@ -14,6 +14,7 @@ If you would like, [go to our github and star, watch, fork, pull, and/or build](
 
 ## 1. Internet support
 Major changes to the Redox network stack allow for routing to the internet and back:
+
 - DHCP using `dhcpd`
 - DNS integrated into `std::net::lookup_host`
 - HTTP using `wget [path]`
@@ -29,6 +30,7 @@ Major changes to the Redox network stack allow for routing to the internet and b
 
 ## 2. TTF and PNG support
 Using [rusttype](https://github.com/dylanede/rusttype), we are able to display TTF fonts in pure Rust without using FreeType!
+
 - orbfont, a TTF renderer for orbital
 - character map for viewing TTF fonts
 - ttf in terminal
@@ -53,6 +55,7 @@ Using [rusttype](https://github.com/dylanede/rusttype), we are able to display T
 
 ## 4. Terminal ANSI
 Lots of changes have been happening beneath the hood to ensure feature completeness and correctness in the Redox terminal
+
 - [Ransid](https://github.com/redox-os/ransid) unifies the ANSI handling in both the kernel terminal and terminal emulator. It brings a lot of new features, color support, raw mode, bold, underlined, and inverted text.
 - [Termion](https://github.com/ticki/termion) has been overhauled, and released. It supports many new features, and is the client counterpart to the ransid server. They are developed together, in addition with testing termion on Linux, to ensure feature completeness.
 - [Liner](https://github.com/movingtomars/liner) is a new crate similar to readline that provides line editing on top of termion. It has history and auto-completion features.
@@ -74,6 +77,7 @@ We have started a handbook, which can be viewed [here](https://github.com/redox-
 
 ## 6. Ralloc.
 Thanks to [ralloc](https://github.com/redox-os/ralloc), we have been able to remove links to the C library (newlib) from our Rust standard library. Ralloc has been much more performant, as it minimizes expensive syscalls.
+
  - Fix deadlock in ralloc.
  - Make it a lot faster by metacircular allocations.
  - ralloc has microcaches.
@@ -88,6 +92,7 @@ Thanks to [ralloc](https://github.com/redox-os/ralloc), we have been able to rem
 
 ## 7. RedoxFS
 Our filesystem, [RedoxFS](https://github.com/redox-os/redoxfs), can be used on Linux using FUSE and has been tested thoroughly, builds are done by mounting a new filesystem using the FUSE driver.
+
 - improve redoxfs performance
 - fixed write support in redoxfs
 
