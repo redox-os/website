@@ -1,4 +1,0 @@
-[submodule "public"]
-	path = public
-	url = https://github.com/redox-os/redox-os.github.io.git
-	ignore = dirty
