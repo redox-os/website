@@ -59,11 +59,8 @@ Lots of changes have been happening beneath the hood to ensure feature completen
 - [Ion](https://github.com/redox-os/ion), our shell, has been updated to allow complete use of these crates, including auto completion and pretty colors.
 - terminal bold support
 - colorized default prompt for ion
-- created `ransid`, a rust ansi driver. Support for all termion ansi codes has been added and both the kernel console and the terminal emulator use it for consistent ansi handling
-- Underline and color invert support in ransid
-- integrated liner with ion, allowing for line editing.  ransid was a critical piece in making the two terminals work with liner
 
-#### Terminal with TTF fonts, obligatory `screendump`
+#### Terminal with TTF fonts, obligatory `screenfetch`
 <img class="img-responsive" src="http://i.imgur.com/YDCSuiz.png"/>
 
 ## 5. Handbook
