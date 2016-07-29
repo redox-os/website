@@ -1,16 +1,19 @@
 +++
 title = "The Internet on Redox"
-author = "Jackpot51"
+author = "Jackpot51 & Ticki"
 date = "2016-07-28T17:51:00-07:00"
 +++
 
 Recently there have been questions about Redox on [Github](https://github.com/redox-os/redox/issues/675) and [Reddit](https://www.reddit.com/r/Redox/comments/4t93qg/is_redox_oficially_dead/) about the state of the project. Commenters have stated that git commits are regular, but the project has not released any news. The truth is that we have been working very diligently to bring a huge update, and near a possible release milestone (even though we had no plans on doing so).
+
+So, instead of the regular "This Week in Redox", we bring you a summer edition, featuring internet support, a memory allocator, and loads of loads of more.
 
 Working autonomously, with no direction, we stumbled on a massive list of changes that make Redox much, much more interesting.
 
 If you would like, [go to our github and star, watch, fork, pull, and/or build](https://github.com/redox-os/redox). Don't forget to checkout out [our organization page](https://github.com/redox-os), it contains most of our repositories.
 
 ## 1. Internet support
+
 Major changes to the Redox network stack allow for routing to the internet and back:
 
 - DHCP using `dhcpd`
@@ -25,6 +28,60 @@ Major changes to the Redox network stack allow for routing to the internet and b
 
 #### IRC client
 <img class="img-responsive" src="http://i.imgur.com/98vCnlu.png"/>
+
+## 6. Ralloc.
+
+[Ralloc](https://github.com/redox-os/ralloc) is a brand-new memory allocator,
+which is now the default in Redox. Ralloc features high security and many
+debugging utilities, along with a good performance (although, it is to be
+improved).
+
+We have been able to remove links to the C library (newlib) from our Rust
+standard library. Ralloc has been much more performant, as it minimizes
+expensive syscalls.
+
+Ralloc is quite memory efficient, due to using arbitrarily sized blocks in the
+bookkeeping.
+
+- Custom out-of-memory handlers
+
+- Thread-specific OOM handlers.
+
+- Debug check: double free
+
+- Debug check: memory leaks.
+
+- Partial deallocation.
+
+- Separate deallocation
+
+- Static checking
+
+- Lock reuse
+
+- Platform agnostic
+
+- Local allocators
+
+- Safe SBRK
+
+- Advanced logging
+
+- Arbitrary alignments
+
+Here's an example log of the inner workings of ralloc:
+
+```
+|   : BRK'ing a block of size, 80, and alignment 8.            (at bookkeeper.rs:458)
+|   : Pushing 0x5578dacb2000[0x0] and 0x5578dacb2050[0xffb8].  (at bookkeeper.rs:490)
+|x  : Freeing 0x1[0x0].                                        (at bookkeeper.rs:409)
+x|  : BRK'ing a block of size, 4, and alignment 1.             (at bookkeeper.rs:458)
+x|  : Pushing 0x5578dacc2008[0x0] and 0x5578dacc200c[0xfffd].  (at bookkeeper.rs:490)
+x|x : Reallocating 0x5578dacc2008[0x4] to size 8 with align 1. (at bookkeeper.rs:272)
+x|x : Inplace reallocating 0x5578dacc2008[0x4] to size 8.      (at bookkeeper.rs:354)
+_|x : Freeing 0x5578dacb2058[0xffb0].                          (at bookkeeper.rs:409)
+_|x : Inserting block 0x5578dacb2058[0xffb0].                  (at bookkeeper.rs:635)
+```
 
 ## 2. TTF and PNG support
 Using [rusttype](https://github.com/dylanede/rusttype), we are able to display TTF fonts in pure Rust without using FreeType!
@@ -73,21 +130,6 @@ We have started a handbook, which can be viewed [here](https://github.com/redox-
 #### `info` displaying the Redox handbook, using `mdless`
 <img class="img-responsive" src="http://i.imgur.com/beTS2Dz.png"/>
 
-## 6. Ralloc.
-Thanks to [ralloc](https://github.com/redox-os/ralloc), we have been able to remove links to the C library (newlib) from our Rust standard library. Ralloc has been much more performant, as it minimizes expensive syscalls.
-
- - Fix deadlock in ralloc.
- - Make it a lot faster by metacircular allocations.
- - ralloc has microcaches.
- - lock reuse and more in ralloc.
- - debug mode for ralloc: double frees, memory leaks and more
- - security mode for ralloc: enhanced security, useful for security critical programs.
- - New static and debug utilities for ralloc
- - Thread local allocators and partial deallocation
- - ralloc has better logging, better perf, better debug checking, global OOM handler, and is the default.
- - ralloc TLS'n'stuff
- - Ralloc local/global pattern
-
 ## 7. RedoxFS
 Our filesystem, [RedoxFS](https://github.com/redox-os/redoxfs), can be used on Linux using FUSE and has been tested thoroughly, builds are done by mounting a new filesystem using the FUSE driver.
 
@@ -104,6 +146,7 @@ Our filesystem, [RedoxFS](https://github.com/redox-os/redoxfs), can be used on L
 - huge networking fixes
 - ability to configure ip, subnet, router, and dns netcfg:
 - ability to use router to get to the big internet
+- Removing some allocations.
 
 ## 9. Ports and Libc
 - Nasm and ndisasm ported to Redox
@@ -111,5 +154,28 @@ Our filesystem, [RedoxFS](https://github.com/redox-os/redoxfs), can be used on L
 - Convert ports to use a patch system
 - Removing libc from our libstd
 
+## What's next?
+
+- ANSI Sodium (text editor) through Termion.
+- Major overhaul to ralloc, with the focus on performance.
+- More networking utilities (including a text-based web "browser")
+- Improvements to `mdless`.
+- Improvements to RANSI.
+- Magnet — the package manager.
+
+## Thanks to
+
+This list is likely incomplete, please contact Jackpot or Ticki for updating it.
+
+- Jackpot51
+- Ticki
+- nilset
+- mmstick
+- stratact
+- ca1ek
+
+and many more...
+
 ## 10. There was probably more
+
 Due to the amount of time since the last update, and the hundreds of commits since, it was hard to create a list about what had changed. My recommendation: [go to our github and star, watch, fork, pull, and/or build](https://github.com/redox-os/redox). Don't forget to checkout out [our organization page](https://github.com/redox-os), it contains most of our repositories.
