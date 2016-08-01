@@ -6,7 +6,7 @@ date = "2016-03-25T10:42:20-07:00"
 
 ## Getting Started
 
-We highly recommend that you start with the [Book](https://doc.redox-os.org/book/), as it describes how to setup and use Redox.
+We highly recommend that you start with the [Book](https://doc.redox-os.org/book/), as it describes how to set up and use Redox.
 
 ## References
 
