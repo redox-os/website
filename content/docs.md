@@ -12,7 +12,7 @@ We highly recommend that you start with the [Book](https://doc.redox-os.org/book
 
 [Book](https://doc.redox-os.org/book/). A Book describing Redox's design.
 
-[Standard Libary](https://doc.redox-os.org/doc/std/). Documentation for the Redox standard library.
+[Standard Library](https://doc.redox-os.org/doc/std/). Documentation for the Redox standard library.
 
 [Kernel](https://doc.redox-os.org/doc/kernel/). Documentation for the Redox kernel.
 
