@@ -31,9 +31,9 @@ This is the sixth post of a series of blog posts tracking the development and pr
 
 ;)
 
-<img class="img-responsive" src="https://raw.githubusercontent.com/redox-os/redox/master/img/fun/mobile.jpg"/>
+<img class="img-responsive" src="https://github.com/redox-os/assets/raw/master/fun/mobile.jpg"/>
 
-<img class="img-responsive" src="https://raw.githubusercontent.com/redox-os/redox/master/img/screenshots/File_manager.png"/>
+<img class="img-responsive" src="https://github.com/redox-os/assets/raw/master/screenshots/File_manager.png"/>
 
 
 # What's next?
