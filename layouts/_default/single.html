@@ -15,7 +15,7 @@
     </header>
     <div class="content">
       <h1><a class="post-title" href="{{ .Permalink }}">{{ .Title }}</a></h1>
-      <div class="meta">By {{ .Params.author }} on {{ .Date.Format "Monday, January 2, 2006" }}</time></div>
+      <h5>By {{ .Params.author }} on {{ .Date.Format "Monday, January 2, 2006" }}</time></h5>
       {{ .Content }}
     </div>
     <footer>
