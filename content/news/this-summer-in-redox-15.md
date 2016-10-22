@@ -109,7 +109,7 @@ A major step towards formalizing and verifying the kernel has been made. In part
 
 You can read more about this [here](http://ticki.github.io/blog/a-hoare-logic-for-rust/).
 
-# An important update on the ZFS implementation (([@ticki](http://github.com/ticki)))
+# An important update on the ZFS implementation ([@ticki](http://github.com/ticki))
 
 The work on the ZFS implementation has been limited in the past few months. This can be attributed to mainly the fact that following the specification word-by-word is a big limitation without significant benefits.
 
