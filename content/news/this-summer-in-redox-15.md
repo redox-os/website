@@ -129,6 +129,9 @@ The ongoing work on the specification, design, and implementation can be found [
 
 A lot of things in Redox's [coreutils](https://github.com/redox-os/coreutils) has been changed. [@stratact](http://github.com/stratact) has implemented a command-line flag parser and added multiple new features to various utilities, as well as fixing bugs and cleaning up code.
 
+[@stratact](http://github.com/stratact) also removed a hack in `libextra`'s `GetSlice` implementation since the `std` crate introduce `Option<T>` conversion since Rust 1.12. He improve `Orbtk`'s API to be more user friendly.
+
+
 # Porting stuff
 
 Multiple new applications has been ported (including the [Smith text editor](https://github.com/IGI-111/Smith) by IGI-111).
