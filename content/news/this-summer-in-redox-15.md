@@ -19,7 +19,7 @@ Thanks to [@jackpot51](http://github.com/jackpot51) for the great [implementatio
 
 ### Memory Management
 
-The major reason for the rewrite was incorrect and inefficient memory management in the old kernel. This causes crashes in userspace where the kernel has not mapped pages correctly. Eventually, it was evident that in order to permanently solve these issues, we had to throw away the old code entirely and start from scratch, which is what we did.j
+The major reason for the rewrite was incorrect and inefficient memory management in the old kernel. This causes crashes in userspace where the kernel has not mapped pages correctly. Eventually, it was evident that in order to permanently solve these issues, we had to throw away the old code entirely and start from scratch, which is what we did.
 
 In the new kernel, there are no similar crashes in memory management, mainly due to not sharing page tables among processes.
 
@@ -29,7 +29,7 @@ Another reason for the rewrite was the lack of concurrent design, meaning that t
 
 ### SMP Support
 
-The concurrent design allowed immediate usage of SMP, although inter-processor interrupts are not yet used to control scheduling accross processors.
+The concurrent design allowed immediate usage of SMP, although inter-processor interrupts are not yet used to control scheduling across processors.
 
 ### 64-bit by Default
 
@@ -175,7 +175,7 @@ A WIP paper on the design and implementation of ralloc can be found [here](https
 
 # Formal verification ([@ticki](http://github.com/ticki))
 
-A major step towards formalizing and verifying the kernel has been made. In particular, I've constructed a model of the Rust MIR's semantics in terms of Hoare logic and seperation logic.
+A major step towards formalizing and verifying the kernel has been made. In particular, I've constructed a model of the Rust MIR's semantics in terms of Hoare logic and separation logic.
 
 You can read more about this [here](http://ticki.github.io/blog/a-hoare-logic-for-rust/).
 
@@ -187,11 +187,11 @@ In order to continue the development in a reasonable speed, we stop conforming t
 
 In fact, we have redesigned a lot, while preserving the spirit and ideas behind ZFS. The new file system is named **TFS**.
 
-The outline is the same: it is an extent-based COW file system with 128-bit address space and checksums stored in the pointers. However, there are many changed things and it is only loosly based on ZFS.
+The outline is the same: it is an extent-based COW file system with 128-bit address space and checksums stored in the pointers. However, there are many changed things and it is only loosely based on ZFS.
 
 TFS has more focus on disk drivers and a lot of things ZFS implements as integrated into the file system is implemented in TFS as disk drivers. This makes TFS a lot more modular and hence more compatible with the Redox way.
 
-TFS presents many other cool features like random-access LZ4 compression, better memory caching, non-hacky file monitoring, better redundancy and error correction, constant-time snapshts and more.
+TFS presents many other cool features like random-access LZ4 compression, better memory caching, non-hacky file monitoring, better redundancy and error correction, constant-time snapshots and more.
 
 The ongoing work on the specification, design, and implementation can be found [here](https://github.com/ticki/tfs).
 
@@ -203,11 +203,11 @@ Today, most computers has more than one core. Naturally, this should be taken ad
 
 ## Boilerplate
 
-TFS requires a lot of boilerplate. These components will be published seperately, so other crates can take advantage of them.
+TFS requires a lot of boilerplate. These components will be published separately, so other crates can take advantage of them.
 
 ### Caching
 
-PLRU caching will be the initial cache replacement strategy. This is partially because it has a good cache-behavior/bookkeeping-overhead copromise, but more importantly it can be implemented concurrently entirely without locks.
+PLRU caching will be the initial cache replacement strategy. This is partially because it has a good cache-behavior/bookkeeping-overhead compromise, but more importantly it can be implemented concurrently entirely without locks.
 
 The implementation can be found [here](https://docs.rs/crate/plru/), and can be used in your own projects as well.
 
