@@ -32,7 +32,7 @@ This is the fourth post of a series of blog posts tracking the development and p
 
 ;)
 
-<img class="img-responsive" src="https://raw.githubusercontent.com/redox-os/redox/master/img/fun/cellphone.jpg"/>
+<img class="img-responsive" src="https://github.com/redox-os/assets/raw/master/fun/cellphone.jpg"/>
 
 The start screen:
 

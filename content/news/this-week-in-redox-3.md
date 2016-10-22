@@ -31,7 +31,7 @@ This is the third post of a series of blog posts tracking the development and pr
 
 ;)
 
-<img class="img-responsive" src="https://raw.githubusercontent.com/redox-os/redox/master/img/fun/Old.jpg"/>
+<img class="img-responsive" src="https://github.com/redox-os/assets/raw/master/fun/Old.jpg"/>
 
 The start screen:
 
