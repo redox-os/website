@@ -161,6 +161,14 @@ If we did not care about performance this code could be a lot simpler, but it's 
 
 Dynamic programming is used a lot in order to avoid recalculating the same value repeatedly. Instead of calculating the "fat value" (the maximum of the descendant blocks' size), we use the algorithm in such a way that we reuse this value as much as possible.
 
+## Now arena backed
+
+Ralloc's memory bookkeeper will now avoid most allocations by using SLOBs/arenas. This allows efficient internal memory management without excessive memcpys.
+
+## Better testing
+
+The test suite of ralloc has been expanded significantly.
+
 ## Paper
 
 A WIP paper on the design and implementation of ralloc can be found [here](https://github.com/redox-os/ralloc/tree/skiplist/paper). Eventually, ralloc will be formally verified as well.
@@ -187,16 +195,59 @@ TFS presents many other cool features like random-access LZ4 compression, better
 
 The ongoing work on the specification, design, and implementation can be found [here](https://github.com/ticki/tfs).
 
+## Concurrent
+
+The implementation puts a lot of effort into doing things concurrently, preferably without locks. This is by observing the failure of especially older file systems.
+
+Today, most computers has more than one core. Naturally, this should be taken advantage of.
+
+## Boilerplate
+
+TFS requires a lot of boilerplate. These components will be published seperately, so other crates can take advantage of them.
+
+### Caching
+
+PLRU caching will be the initial cache replacement strategy. This is partially because it has a good cache-behavior/bookkeeping-overhead copromise, but more importantly it can be implemented concurrently entirely without locks.
+
+The implementation can be found [here](https://docs.rs/crate/plru/), and can be used in your own projects as well.
+
+### LZ4 compression
+
+LZ4 is a high-performance dedup-class (Lempel-Ziv to be exact) compression algorithm. This will be used throughout TFS.
+
+Implementation is in progress.
+
+### Rabin-Karp rolling hash
+
+Rabin-Karp hashing is used for checksums.
+
+## Snapshots
+
+TFS will allow the user to snapshot so called "zones", which is the file system or a subset thereof. Due to the copy-on-write nature of TFS, it is cheap (in fact, it is constant time).
+
+These snapshot can easily be reverted.
+
+## Disk drivers
+
+TFS implements a significant part of the stack as disk drivers, transforming the disk into a virtual device translating virtual reads and writes into actual disk I/O.
+
+This is a major improvement over the approach taken by most other file systems, not because of any semantic changes, but simply because it simplifies the implementation a great deal.
+
 # Major refactoring in coreutils ([@stratact](http://github.com/stratact))
 
 A lot of things in Redox's [coreutils](https://github.com/redox-os/coreutils) has been changed. [@stratact](http://github.com/stratact) has implemented a command-line flag parser and added multiple new features to various utilities, as well as fixing bugs and cleaning up code.
 
 [@stratact](http://github.com/stratact) also removed a hack in `libextra`'s `GetSlice` implementation since the `std` crate introduce `Option<T>` conversion since Rust 1.12. He improve `Orbtk`'s API to be more user friendly.
 
-
 # Porting stuff
 
 Multiple new applications has been ported (including the [Smith text editor](https://github.com/IGI-111/Smith) by IGI-111).
+
+# And probably a lot more...
+
+meh, I can't remember.
+
+Please contact me (ticki) on IRC to add things we forgot.
 
 # What's next?
 
