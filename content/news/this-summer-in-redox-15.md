@@ -98,7 +98,7 @@ This can greatly reduce the number of syscalls made through one observation: pro
 let buf = sbrk(200);
 // Then we open some file.
 let file = fopen("/dev/random");
-// Then we read the fiel into the buffer.
+// Then we read the file into the buffer.
 file.read(&mut buf);
 ```
 
