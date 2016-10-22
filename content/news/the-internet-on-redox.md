@@ -29,7 +29,7 @@ Major changes to the Redox network stack allow for routing to the internet and b
 #### IRC client
 <img class="img-responsive" src="http://i.imgur.com/98vCnlu.png"/>
 
-## 6. Ralloc.
+## 2. Ralloc.
 
 [Ralloc](https://github.com/redox-os/ralloc) is a brand-new memory allocator,
 which is now the default in Redox. Ralloc features high security and many
@@ -83,7 +83,7 @@ _|x : Freeing 0x5578dacb2058[0xffb0].                          (at bookkeeper.rs
 _|x : Inserting block 0x5578dacb2058[0xffb0].                  (at bookkeeper.rs:635)
 ```
 
-## 2. TTF and PNG support
+## 3. TTF and PNG support
 Using [rusttype](https://github.com/dylanede/rusttype), we are able to display TTF fonts in pure Rust without using FreeType!
 
 - orbfont, a TTF renderer for orbital
@@ -97,7 +97,7 @@ Using [rusttype](https://github.com/dylanede/rusttype), we are able to display T
 #### Start menu and character map
 <img class="img-responsive" src="http://i.imgur.com/E28ATd4.png"/>
 
-## 3. Games
+## 4. Games
 - added reblox
 - pythoneer added texture mapping
 
@@ -108,7 +108,7 @@ Using [rusttype](https://github.com/dylanede/rusttype), we are able to display T
 #### reblox
 <img class="img-responsive" src="https://chat.redox-os.org/api/v3/public/files/get/zoa4meoqjbbcdju9ghd7745phe/aduzjsjphirwtj6togzspotzko/6izutbttt3fhmqxrbihouu6i1c/3rj6xzmmeidpfe51r3hmubyjey/reblox.png?d=%7B%22filename%22%3A%223rj6xzmmeidpfe51r3hmubyjey%2Freblox.png%22%7D&h=%242a%2410%24YAFV%2FpZ.rQ0355RxnHVKhu3DjK7bBjQBVao3m1Bedxy847PeR4aX2"/>
 
-## 4. Terminal ANSI
+## 5. Terminal ANSI
 Lots of changes have been happening beneath the hood to ensure feature completeness and correctness in the Redox terminal
 
 - [Ransid](https://github.com/redox-os/ransid) unifies the ANSI handling in both the kernel terminal and terminal emulator. It brings a lot of new features, color support, raw mode, bold, underlined, and inverted text.
@@ -121,7 +121,7 @@ Lots of changes have been happening beneath the hood to ensure feature completen
 #### Terminal with TTF fonts, obligatory `screenfetch`
 <img class="img-responsive" src="http://i.imgur.com/YDCSuiz.png"/>
 
-## 5. Handbook
+## 6. Handbook
 We have started a handbook, which can be viewed [here](https://github.com/redox-os/handbook/blob/master/index.md), and made a terminal viewer for MD files
 
 - MD terminal renderer `mdless`

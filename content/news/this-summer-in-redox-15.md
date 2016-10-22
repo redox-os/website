@@ -1,5 +1,5 @@
 +++
-author = "Ticki"
+author = "Ticki & Jackpot51"
 date = "2016-09-26T13:54:15+02:00"
 title = "This Summer in Redox"
 
@@ -7,21 +7,83 @@ title = "This Summer in Redox"
 
 Lately, we've been kind of silent, because we've focused on the coding, and we have a lot of exciting news for everyone.
 
-# A complete rewrite of the kernel ([@jackpot51](http://github.com/jackpot51))
+# A Complete Rewrite of the Kernel ([@jackpot51](http://github.com/jackpot51))
 
-The kernel is going through a complete rewrite, which makes the kernel space ultra-small (about the size of [L4](https://en.wikipedia.org/wiki/L4_microkernel_family)). Everything which can run outside the kernel in practice, will do so.
+Since August 13, the kernel is going through a complete rewrite, which makes the kernel space ultra-small (about the size of [L4](https://en.wikipedia.org/wiki/L4_microkernel_family)). Everything which can run outside the kernel in practice, will do so.
 
-It is almost complete and will likely be merged in the coming week.
+It is almost complete and will likely be merged in the coming week. [You can find it on GitHub here.](https://github.com/redox-os/kernel/)
 
-Thanks to [@jackpot51](http://github.com/jackpot51) for the great implementation work.
+Thanks to [@jackpot51](http://github.com/jackpot51) for the great [implementation work](https://github.com/redox-os/kernel/commits/master).
 
-## A new syscall interface
+## Reasons for the Rewrite
+
+### Memory Management
+
+The major reason for the rewrite was incorrect and inefficient memory management in the old kernel. This causes crashes in userspace where the kernel has not mapped pages correctly. Eventually, it was evident that in order to permanently solve these issues, we had to throw away the old code entirely and start from scratch, which is what we did.j
+
+In the new kernel, there are no similar crashes in memory management, mainly due to not sharing page tables among processes.
+
+### Concurrent Design
+
+Another reason for the rewrite was the lack of concurrent design, meaning that the old kernel could not be entered by multiple processors. This has been fixed by using Mutex, Once, and RwLock from the `spin` crate, instead of UnsafeCell like the old kernel does.
+
+### SMP Support
+
+The concurrent design allowed immediate usage of SMP, although inter-processor interrupts are not yet used to control scheduling accross processors.
+
+### 64-bit by Default
+
+Finally, we are able to use x86_64 by default, giving us access to more processor features as well as a large virtual memory space.
+
+## What happens to the old kernel?
+
+For historic reasons, the old kernel will be kept around in a branch of the [Redox repository](https://github.com/redox-os/redox/) even after the new kernel is merged.
+
+At the moment, the new kernel has reimplemented everything from the old kernel, and added additional features as well.
+
+## New Features
+
+### Init
+
+The startup of the system is controlled by `init`, which loads [an init.rc file](https://github.com/redox-os/kernel/blob/master/initfs/etc/init.rc). This starts with initfs initialization (to load the filesystem), and then transfers to the [filesystem init.rc](https://github.com/redox-os/kernel/blob/master/filesystem/etc/init.rc) to load the rest.
+
+### Permissions Model
+
+The Redox kernel now tracks the user ID of each process. RedoxFS uses this ID to provide Unix permissions support for the filesystem. We have added a login manager for both the terminal and Orbital, as well as password authentication using Octavo (which we hope will have bcrypt soon!).
+
+The user accounts are stored, with passwords hashed, in [/etc/passwd](https://github.com/redox-os/kernel/blob/master/filesystem/etc/passwd). There is also support for groups in [/etc/group](https://github.com/redox-os/kernel/blob/master/filesystem/etc/group), as well as support for `sudo` and `su` using `setuid`.
+
+### I/O multiplexing with fevent
+
+A new system call has been added, `fevent`, which allows a process to handle a large number of file descriptors (anything that can be opened with `open`, including IRQs, sockets, and files) without spawning one thread for each descriptor. [You can see the abstraction in the `event` crate here](https://github.com/redox-os/kernel/blob/master/crates/event/src/lib.rs)
+
+### Drivers in userspace
+
+There are very few drivers in kernel space now. Those include the PIT and RTC drivers, for clock functions, and a small ACPI driver that handles just the MADT table to bring up other processors.
+
+#### Physical memory
+
+The display driver, PS/2 driver, PCI driver, network stack, network drivers, and disk drivers have all been moved into userspace with the use of a new syscall for giving a process access to physical memory (if it is privileged).
+
+#### IRQ handling
+
+There is an irq scheme that allows a driver to handle IRQs without putting the system into an infinite loop. In Linux, userspace drivers have no such facility and cannot handle interrupts.
+
+#### PCI Driver Manager
+
+You can see in the init.rc that pcid (the PCI driver) has a [configuration file](https://github.com/redox-os/kernel/blob/master/filesystem/etc/pcid.toml) which gives the paths of drivers and information about how to identify which driver runs for which devices.
+
+### Multiple screen support in `vesad`
+
+We now have virtual screens, defined in the init.rc file with the line `vesad T T T G`. You can add a text screen with T, and a graphic screen with G. At the moment, F1 - F12 switch between the screens, and they can be accessed as files with `display:1` through `display:12`.
+
+### A new syscall interface
 
 The new system call interface resembles [SeL4's](https://wiki.sel4.systems/FrequentlyAskedQuestions), it has only a tiny set of system calls allowing for message passing, registering schemes, registering interrupts, etc.
 
 There will no longer be any file-specific system calls. These will be replaced by more general resource management system calls.
 
-## Bulk syscalls
+### Bulk syscalls
 
 One problem of microkernels is the many context switches, so you have to apply various techniques to limit the number of context switches. Bulk syscalls are one of these.
 
@@ -51,25 +113,25 @@ So we successfully reduced three syscalls to two.
 
 (note that these are Linux system calls not Redox syscalls)
 
-## Userspace emulation
+### Userspace emulation
 
 One thing we envision is being able to emulate other kernels in userspace, with a reasonable performance. We believe this is necessary to make Redox easier to adopt to your own computer without giving up certain platform-dependent software.
 
 The way we will achieve this is providing system calls for registering interrupts and system calls, such that the userspace can set up a fake kernel environment where the kernel binary can be mapped.
 
-## Typed URLs
+### Typed URLs
 
 Instead of being stringly typed, URLs (resource descriptors) are now described by two buffers, neither of which has any constraints. As such, the kernel is path agnostic and doesn't assume any particular syntax.
 
-## Better documentation and codestyle
+### Better documentation and codestyle
 
 Overall, the code quality of the new kernel is much better.
 
-# Work-in-progress: Capabilities ([@ticki](http://github.com/ticki))
+### Work-in-progress: Capabilities ([@ticki](http://github.com/ticki))
 
 Capabilities are an interesting way of managing privileges and permissions in many modern kernels. Redox is planning to adopting this. [Scheme-centric capabilities](https://github.com/ticki/kernel) are being designed and implemented.
 
-Capabilities themself are simply a byte buffer and some restrictions on how they can be cloned and sent between processes. The idea of scheme-centric capabilities is that each scheme has a set of capabilities to work with.
+Capabilities themselves are simply a byte buffer and some restrictions on how they can be cloned and sent between processes. The idea of scheme-centric capabilities is that each scheme has a set of capabilities to work with.
 
 The scheme can then check if the user of the scheme has the correct capabilities to do a particular action.
 

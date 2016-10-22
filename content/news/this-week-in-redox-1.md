@@ -22,13 +22,13 @@ This is the first post in a blog series tracking the development and progress of
 # What does it look like?
 
 The desktop.
-<img class="img-responsive" src="https://raw.githubusercontent.com/redox-os/redox/master/img/screenshots/Desktop.png"/>
+<img class="img-responsive" src="https://github.com/redox-os/assets/raw/master/screenshots/Desktop.png"/>
 Yay! Fancy opacity.
-<img class="img-responsive" src="https://raw.githubusercontent.com/redox-os/redox/master/img/screenshots/Fancy_opacity.png"/>
+<img class="img-responsive" src="https://github.com/redox-os/assets/raw/master/screenshots/Fancy_opacity.png"/>
 We have a file manager!
-<img class="img-responsive" src="https://raw.githubusercontent.com/redox-os/redox/master/img/screenshots/File_manager.png"/>
+<img class="img-responsive" src="https://github.com/redox-os/assets/raw/master/screenshots/File_manager.png"/>
 The boot screen.
-<img class="img-responsive" src="https://raw.githubusercontent.com/redox-os/redox/master/img/screenshots/Boot.png"/>
+<img class="img-responsive" src="https://github.com/redox-os/assets/raw/master/screenshots/Boot.png"/>
 
 # What's next?
 

@@ -37,13 +37,13 @@ This is the fifth post of a series of blog posts tracking the development and pr
 
 ;)
 
-<img class="img-responsive" src="https://raw.githubusercontent.com/redox-os/redox/master/img/fun/fancy.png"/>
+<img class="img-responsive" src="https://github.com/redox-os/assets/raw/master/fun/fancy.png"/>
 
 Since the changes are mostly internal, we don't got a lot of new fancy screenshots except for Sodium:
 
 Sodium has syntax highlighting and a lot of new features:
 
-<img class="img-responsive" src="https://raw.githubusercontent.com/redox-os/redox/master/img/screenshots/Sodium_v1.png"/>
+<img class="img-responsive" src="https://github.com/redox-os/assets/raw/master/screenshots/Sodium_v1.png"/>
 
 
 # What's next?
