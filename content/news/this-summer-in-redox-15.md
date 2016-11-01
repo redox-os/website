@@ -11,9 +11,9 @@ Lately, we've been kind of silent, because we've focused on the coding, and we h
 
 Since August 13, the kernel is going through a complete rewrite, which makes the kernel space ultra-small (about the size of [L4](https://en.wikipedia.org/wiki/L4_microkernel_family)). Everything which can run outside the kernel in practice, will do so.
 
-It is almost complete and will likely be merged in the coming week. [You can find it on GitHub here.](https://github.com/redox-os/kernel/)
+It is almost complete and will likely be merged in the coming week. [You can find it on GitHub here.](https://github.com/redox-os/redox/)
 
-Thanks to [@jackpot51](http://github.com/jackpot51) for the great [implementation work](https://github.com/redox-os/kernel/commits/master).
+Thanks to [@jackpot51](http://github.com/jackpot51) for the great [implementation work](https://github.com/redox-os/redox/commits/master).
 
 ## Reasons for the Rewrite
 
@@ -45,17 +45,17 @@ At the moment, the new kernel has reimplemented everything from the old kernel, 
 
 ### Init
 
-The startup of the system is controlled by `init`, which loads [an init.rc file](https://github.com/redox-os/kernel/blob/master/initfs/etc/init.rc). This starts with initfs initialization (to load the filesystem), and then transfers to the [filesystem init.rc](https://github.com/redox-os/kernel/blob/master/filesystem/etc/init.rc) to load the rest.
+The startup of the system is controlled by `init`, which loads [an init.rc file](https://github.com/redox-os/redox/blob/master/initfs/etc/init.rc). This starts with initfs initialization (to load the filesystem), and then transfers to the [filesystem init.rc](https://github.com/redox-os/redox/blob/master/filesystem/etc/init.rc) to load the rest.
 
 ### Permissions Model
 
 The Redox kernel now tracks the user ID of each process. RedoxFS uses this ID to provide Unix permissions support for the filesystem. We have added a login manager for both the terminal and Orbital, as well as password authentication using Octavo (which we hope will have bcrypt soon!).
 
-The user accounts are stored, with passwords hashed, in [/etc/passwd](https://github.com/redox-os/kernel/blob/master/filesystem/etc/passwd). There is also support for groups in [/etc/group](https://github.com/redox-os/kernel/blob/master/filesystem/etc/group), as well as support for `sudo` and `su` using `setuid`.
+The user accounts are stored, with passwords hashed, in [/etc/passwd](https://github.com/redox-os/redox/blob/master/filesystem/etc/passwd). There is also support for groups in [/etc/group](https://github.com/redox-os/redox/blob/master/filesystem/etc/group), as well as support for `sudo` and `su` using `setuid`.
 
 ### I/O multiplexing with fevent
 
-A new system call has been added, `fevent`, which allows a process to handle a large number of file descriptors (anything that can be opened with `open`, including IRQs, sockets, and files) without spawning one thread for each descriptor. [You can see the abstraction in the `event` crate here](https://github.com/redox-os/kernel/blob/master/crates/event/src/lib.rs)
+A new system call has been added, `fevent`, which allows a process to handle a large number of file descriptors (anything that can be opened with `open`, including IRQs, sockets, and files) without spawning one thread for each descriptor. [You can see the abstraction in the `event` crate here](https://github.com/redox-os/redox/blob/master/crates/event/src/lib.rs)
 
 ### Drivers in userspace
 
@@ -71,7 +71,7 @@ There is an irq scheme that allows a driver to handle IRQs without putting the s
 
 #### PCI Driver Manager
 
-You can see in the init.rc that pcid (the PCI driver) has a [configuration file](https://github.com/redox-os/kernel/blob/master/filesystem/etc/pcid.toml) which gives the paths of drivers and information about how to identify which driver runs for which devices.
+You can see in the init.rc that pcid (the PCI driver) has a [configuration file](https://github.com/redox-os/redox/blob/master/filesystem/etc/pcid.toml) which gives the paths of drivers and information about how to identify which driver runs for which devices.
 
 ### Multiple screen support in `vesad`
 
