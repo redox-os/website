@@ -2,7 +2,6 @@
 title = "This Week in Redox 8"
 author = "Ticki"
 date = "2015-12-12T12:01:00+02:00"
-groups = ["news"]
 +++
 
 This is the 8th post of a series of blog posts tracking the development and progress of Redox, the Rust operating system. If you want to know more about Redox in general, then visit our [Github page](https://github.com/redox-os/redox).

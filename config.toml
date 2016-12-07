@@ -2,9 +2,6 @@ baseurl = "http://www.redox-os.org/"
 title = "Redox - Your Next(Gen) OS"
 DefaultContentLanguage = "en"
 
-[taxonomies]
-group = "groups"
-
 [languages.en]
   weight = 0
   languageName = "English"
@@ -49,7 +46,7 @@ group = "groups"
 [[languages.zh.menu.main]]
   weight = 3
   name = "新闻"
-  url = "/news/"
+  url = "../news/"
 [[languages.zh.menu.main]]
   weight = 4
   name = "截图"

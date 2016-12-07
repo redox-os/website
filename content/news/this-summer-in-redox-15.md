@@ -2,7 +2,6 @@
 author = "Ticki & Jackpot51"
 date = "2016-09-26T13:54:15+02:00"
 title = "This Summer in Redox"
-groups = ["news"]
 +++
 
 Lately, we've been kind of silent, because we've focused on the coding, and we have a lot of exciting news for everyone.
