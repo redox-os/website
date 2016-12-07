@@ -8,7 +8,7 @@ date = "2016-03-25T10:42:20-07:00"
 
 We highly recommend that you start with the [Book](https://doc.redox-os.org/book/), as it describes how to set up and use Redox.
 
-## 引用
+## 参考文献
 
 [Book](https://doc.redox-os.org/book/). A Book describing Redox's design.
 
@@ -16,7 +16,7 @@ We highly recommend that you start with the [Book](https://doc.redox-os.org/book
 
 [Standard Library](https://doc.redox-os.org/std/std/). Documentation for the Redox standard library.
 
-## 有助于Redox
+## 为Redox语言做贡献
 
 Thank you for your interest in contributing to Redox!
 There are many ways to help us out and we appreciate all of them.
