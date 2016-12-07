@@ -1,30 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-
-  {{ partial "head.html" . }}
-
-  <title>{{ .Site.Title }}</title>
-  <link rel="canonical" href="{{ .Permalink }}">
-  <link href="/index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
-</head>
-<body class="container">
-  <header>
-    {{ partial "menu.html" . }}
-  </header>
-  <div class="content">
-    <ul class="laundry-list">
-      {{ range .Data.Pages }}
-      <li>
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
-          <div class="meta">By {{ .Params.author }} on <time datetime="{{ .Date }}" class="date">{{ .Date.Format "Monday, January 2, 2006" }}</time></div>
-      </li>
-      {{ end }}
-    </ul>
-  </div>
-  <footer>
-    {{ partial "footer.html" . }}
-  </footer>
-</body>
-</html>
+{{ partial "head.html" . }}
+{{ partial "menu.html" . }}
+<div class="content">
+  <ul class="laundry-list">
+    {{ range .Data.Pages }}
+    <li>
+        <a href="{{ .URL }}">{{ .Title }}</a>
+        <div class="meta">By {{ .Params.author }} on <time datetime="{{ .Date }}" class="date">{{ .Date.Format "Monday, January 2, 2006" }}</time></div>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ partial "footer.html" . }}

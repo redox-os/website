@@ -1,14 +1,24 @@
-<nav>
-  <ul class="row menu">
-    <li class="col-xs-12 col-md-2">
-      <a href="/index.html">
-        <img class="img-responsive" src="/img/icon.svg" width="128" height="128" alt="Redox Logo"/>
-      </a>
-    </li>
-    <li class="col-xs-12 col-md-10 menu">
-      {{ range .Site.Menus.main }}
-        <h2><a style="color: inherit" href="{{ .URL }}">{{ .Name }}</a></h2>
-      {{ end }}
-    </li>
-  </ul>
-</nav>
+<header>
+  <nav>
+    <ul class="row menu">
+      <li class="col-xs-12 col-md-2">
+        <a href="/index.html">
+          <img class="img-responsive" src="/img/icon.svg" width="128" height="128" alt="Redox Logo"/>
+        </a>
+      </li>
+      <li class="col-xs-12 col-md-10 menu">
+        {{ range .Site.Menus.main }}
+          <h2><a style="color: inherit;" href="{{ .URL | relLangURL }}">{{ .Name }}</a></h2>
+        {{ end }}
+        <br/><br/>
+
+        <h2><a style="color: inherit;" href="{{ .URL }}">{{ .Language.LanguageName }}{{ if .IsHome }}{{ else }}: {{ .Title }}{{ end }}</a></h2>
+        {{ if .IsTranslated }}
+          {{ range .Translations }}
+            <h2><a style="color: inherit;" href="{{ .URL }}">{{ .Language.LanguageName }}{{ if .IsHome }}{{ else }}: {{ .Title }}{{ end }}</a></h2>
+          {{ end}}
+        {{ end }}
+      </li>
+    </ul>
+  </nav>
+</header>
