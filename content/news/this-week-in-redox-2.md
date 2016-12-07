@@ -2,7 +2,6 @@
 author = "Redox Developers"
 date = "2015-10-14T19:30:51+02:00"
 title = "This Week in Redox 2"
-groups = ["news"]
 +++
 
 # Whats new in Redox?
