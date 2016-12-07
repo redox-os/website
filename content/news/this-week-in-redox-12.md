@@ -2,6 +2,7 @@
 title = "This Week in Redox 12"
 author = "Ticki"
 date = "2016-03-11T21:24:55+01:00"
+groups = ["news"]
 +++
 
 This is the 12th post of a series of blog posts tracking the development and progress of Redox, the Rust operating system. If you want to know more about Redox in general, visit our [Github page](https://github.com/redox-os/redox).

@@ -2,6 +2,9 @@ baseurl = "http://www.redox-os.org/"
 title = "Redox - Your Next(Gen) OS"
 DefaultContentLanguage = "en"
 
+[taxonomies]
+group = "groups"
+
 [languages.en]
   weight = 0
   languageName = "English"
