@@ -1,19 +1,56 @@
 baseurl = "http://www.redox-os.org/"
-languageCode = "en-us"
 title = "Redox - Your Next(Gen) OS"
+DefaultContentLanguage = "en"
 
-[[menu.main]]
+[taxonomies]
+group = "groups"
+
+[languages.en]
+  weight = 0
+  languageName = "English"
+  languageCode = "en-us"
+[[languages.en.menu.main]]
+  weight = 0
   name = "Docs"
   url = "/docs/"
-[[menu.main]]
+[[languages.en.menu.main]]
+  weight = 1
   name = "Forum"
   url = "https://discourse.redox-os.org/"
-[[menu.main]]
+[[languages.en.menu.main]]
+  weight = 2
   name = "GitHub"
   url = "https://github.com/redox-os/redox"
-[[menu.main]]
+[[languages.en.menu.main]]
+  weight = 3
   name = "News"
   url = "/news/"
-[[menu.main]]
+[[languages.en.menu.main]]
+  weight = 4
   name = "Screenshots"
+  url = "/screens/"
+
+[languages.zh]
+  weight = 1
+  languageName = "中文"
+  languageCode = "zh-cn"
+[[languages.zh.menu.main]]
+  weight = 0
+  name = "文档"
+  url = "/docs/"
+[[languages.zh.menu.main]]
+  weight = 1
+  name = "论坛"
+  url = "https://discourse.redox-os.org/"
+[[languages.zh.menu.main]]
+  weight = 2
+  name = "版本控制"
+  url = "https://github.com/redox-os/redox"
+[[languages.zh.menu.main]]
+  weight = 3
+  name = "新闻"
+  url = "/news/"
+[[languages.zh.menu.main]]
+  weight = 4
+  name = "截图"
   url = "/screens/"

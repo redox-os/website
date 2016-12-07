@@ -2,6 +2,7 @@
 title = "The Internet on Redox"
 author = "Jackpot51 & Ticki"
 date = "2016-07-28T17:51:00-07:00"
+groups = ["news"]
 +++
 
 Recently there have been questions about Redox on [Github](https://github.com/redox-os/redox/issues/675) and [Reddit](https://www.reddit.com/r/Redox/comments/4t93qg/is_redox_oficially_dead/) about the state of the project. Commenters have stated that git commits are regular, but the project has not released any news. The truth is that we have been working very diligently to bring a huge update, and near a possible release milestone (even though we had no plans on doing so).

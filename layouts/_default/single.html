@@ -1,25 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-
-    {{ partial "head.html" . }}
-
-    <title>{{ .Site.Title }}</title>
-    <link rel="canonical" href="{{ .Permalink }}">
-    <link href="/index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
-  </head>
-  <body class="container">
-    <header>
-      {{ partial "menu.html" . }}
-    </header>
-    <div class="content">
-      <h1><a class="post-title" href="{{ .Permalink }}">{{ .Title }}</a></h1>
-      <h5>By {{ .Params.author }} on {{ .Date.Format "Monday, January 2, 2006" }}</time></h5>
-      {{ .Content }}
-    </div>
-    <footer>
-      {{ partial "footer.html" . }}
-    </footer>
-  </body>
-</html>
+{{ partial "head.html" . }}
+{{ partial "menu.html" . }}
+<div class="content">
+  <h1><a class="post-title" href="{{ .Permalink }}">{{ .Title }}</a></h1>
+  <h5>By {{ .Params.author }} on {{ .Date.Format "Monday, January 2, 2006" }}</time></h5>
+  {{ .Content }}
+</div>
+{{ partial "footer.html" . }}
