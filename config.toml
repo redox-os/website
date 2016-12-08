@@ -76,9 +76,9 @@ DefaultContentLanguage = "en"
   weight = 4
   name = "Repositorio"
   url = "https://github.com/redox-os/redox"
-  
+
 [languages.fr]
-  weight = 2
+  weight = 3
   languageName = "Français"
   languageCode = "fr-fr"
 [[languages.fr.menu.main]]
