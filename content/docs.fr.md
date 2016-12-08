@@ -28,11 +28,11 @@ est un bon départ!
 
 ## Communication et partage
 
-The quickest and most open way to communicate with the Redox team is on our chat
-server. Currently, the only way to join it is by sending an email to
-[info@redox-os.org](mailto:info@redox-os.org), which might take a little while,
-since it&rsquo;s not automated. We&rsquo;re currently working on an
-easier way to do this, but this is the most convenient way right now.
+Les messages instannés sur notre serveur de chat sont la méthode la plus rapide de 
+communiquer avec l'équipe. Pour l'instant, il est seulement possible de s'enregistrer 
+par l'entremise d'un courriel à [info@redox-os.org](mailto:info@redox-os.org). Noter
+bien, le système n'est pas autonomisé. Nous planifions une méthode plus simple de 
+s'enregistrer, pour le moment nous se servons de la méthode précédente.
 
 Nous avons également une présence sur Reddit à 
 [/r/rust/](https://www.reddit.com/r/rust) et à
