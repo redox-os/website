@@ -66,7 +66,7 @@ DefaultContentLanguage = "en"
   url = "../news/"
 [[languages.es.menu.main]]
   weight = 2
-  name = "Capturas de pantalla"
+  name = "Capturas"
   url = "/screens/"
 [[languages.es.menu.main]]
   weight = 3
