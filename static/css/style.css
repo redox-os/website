@@ -67,6 +67,13 @@ ul.menu h2 {
 	display: inline;
 	line-height: 1.5em;
 }
+ul.menu h3 {
+	font-size: 14px;
+	font-weight: 500;
+	margin: 1em;
+	display: inline;
+	line-height: 1.5em;
+}
 ul.menu li>ul {
 	margin-top: .5em;
 	padding-left: 0em;
