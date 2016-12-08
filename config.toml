@@ -76,3 +76,28 @@ DefaultContentLanguage = "en"
   weight = 4
   name = "Repositorio"
   url = "https://github.com/redox-os/redox"
+  
+[languages.fr]
+  weight = 2
+  languageName = "Français"
+  languageCode = "fr-fr"
+[[languages.fr.menu.main]]
+  weight = 0
+  name = "Documentation"
+  url = "/docs/"
+[[languages.fr.menu.main]]
+  weight = 1
+  name = "Nouvelles"
+  url = "../news/"
+[[languages.fr.menu.main]]
+  weight = 2
+  name = "Captures d'écran"
+  url = "/screens/"
+[[languages.fr.menu.main]]
+  weight = 3
+  name = "Forum"
+  url = "https://discourse.redox-os.org/"
+[[languages.fr.menu.main]]
+  weight = 4
+  name = "Répertoire"
+  url = "https://github.com/redox-os/redox"

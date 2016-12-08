@@ -22,7 +22,7 @@ date = "2016-12-07T08:26:00-07:00"
     <ul class="laundry-list" style="margin-bottom: 0px;">
       <li>Réaliser en Rust</li>
       <li>Concept Micronoyau</li>
-      <li>Interface optionnel incluse - Orbital</li>
+      <li>Interface optionnelle incluse - Orbital</li>
       <li>Inclus la bibliothèque standard de Rust</li>
     </ul>
   </div>
