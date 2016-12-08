@@ -53,7 +53,7 @@ DefaultContentLanguage = "en"
   url = "/screens/"
 
 [languages.es]
-  weight = 0
+  weight = 2
   languageName = "Español"
   languageCode = "es-es"
 [[languages.es.menu.main]]
