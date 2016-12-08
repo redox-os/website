@@ -113,7 +113,7 @@ DefaultContentLanguage = "en"
 [[languages.de.menu.main]]
   weight = 1
   name = "Neuigkeiten"
-  url = "/news/"
+  url = "../news/"
 [[languages.de.menu.main]]
   weight = 2
   name = "Bildschirmfotos"
