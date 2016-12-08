@@ -38,7 +38,7 @@ date = "2016-12-07T08:26:00-07:00"
 <div class="row features">
   <div class="col-sm-12">
     <div style="font-size: 16px; text-align: center;">
-      Redox执行Orbital (June 20, 2016)
+      Redox执行Orbital (2016年6月20号)
     </div>
     <a href="/img/screenshot.jpg">
       <img class="img-responsive" src="/img/screenshot.jpg"/>
