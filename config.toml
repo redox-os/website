@@ -103,7 +103,7 @@ DefaultContentLanguage = "en"
   url = "https://github.com/redox-os/redox"
 
 [languages.de]
-  weight = 0
+  weight = 4
   languageName = "Deutsch"
   languageCode = "de-de"
 [[languages.de.menu.main]]
