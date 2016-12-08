@@ -8,24 +8,24 @@ DefaultContentLanguage = "en"
   languageCode = "en-us"
 [[languages.en.menu.main]]
   weight = 0
-  name = "Docs"
+  name = "Documentation"
   url = "/docs/"
 [[languages.en.menu.main]]
   weight = 1
-  name = "Forum"
-  url = "https://discourse.redox-os.org/"
-[[languages.en.menu.main]]
-  weight = 2
-  name = "GitHub"
-  url = "https://github.com/redox-os/redox"
-[[languages.en.menu.main]]
-  weight = 3
   name = "News"
   url = "/news/"
 [[languages.en.menu.main]]
-  weight = 4
+  weight = 2
   name = "Screenshots"
   url = "/screens/"
+[[languages.en.menu.main]]
+  weight = 3
+  name = "Forum"
+  url = "https://discourse.redox-os.org/"
+[[languages.en.menu.main]]
+  weight = 4
+  name = "GitHub"
+  url = "https://github.com/redox-os/redox"
 
 [languages.zh]
   weight = 1
@@ -37,20 +37,20 @@ DefaultContentLanguage = "en"
   url = "/docs/"
 [[languages.zh.menu.main]]
   weight = 1
-  name = "论坛"
-  url = "https://discourse.redox-os.org/"
-[[languages.zh.menu.main]]
-  weight = 2
-  name = "版本控制"
-  url = "https://github.com/redox-os/redox"
-[[languages.zh.menu.main]]
-  weight = 3
   name = "新闻"
   url = "../news/"
 [[languages.zh.menu.main]]
-  weight = 4
+  weight = 2
   name = "截图"
   url = "/screens/"
+[[languages.zh.menu.main]]
+  weight = 3
+  name = "论坛"
+  url = "https://discourse.redox-os.org/"
+[[languages.zh.menu.main]]
+  weight = 4
+  name = "版本控制"
+  url = "https://github.com/redox-os/redox"
 
 [languages.es]
   weight = 2
@@ -62,18 +62,17 @@ DefaultContentLanguage = "en"
   url = "/docs/"
 [[languages.es.menu.main]]
   weight = 1
+  name = "Novedades"
+  url = "../news/"
+[[languages.es.menu.main]]
+  weight = 2
+  name = "Capturas de pantalla"
+  url = "/screens/"
+[[languages.es.menu.main]]
+  weight = 3
   name = "Foro"
   url = "https://discourse.redox-os.org/"
 [[languages.es.menu.main]]
-  weight = 2
+  weight = 4
   name = "Repositorio"
   url = "https://github.com/redox-os/redox"
-[[languages.es.menu.main]]
-  weight = 3
-  name = "Novedades"
-  url = "/news/"
-[[languages.es.menu.main]]
-  weight = 4
-  name = "Capturas de pantalla"
-  url = "/screens/"
-  
