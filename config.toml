@@ -51,3 +51,29 @@ DefaultContentLanguage = "en"
   weight = 4
   name = "截图"
   url = "/screens/"
+
+[languages.es]
+  weight = 0
+  languageName = "Espa&nacute;ol"
+  languageCode = "es-es"
+[[languages.es.menu.main]]
+  weight = 0
+  name = "Documentaci&oacute;n"
+  url = "/docs/"
+[[languages.es.menu.main]]
+  weight = 1
+  name = "Foro"
+  url = "https://discourse.redox-os.org/"
+[[languages.es.menu.main]]
+  weight = 2
+  name = "Repositorio"
+  url = "https://github.com/redox-os/redox"
+[[languages.es.menu.main]]
+  weight = 3
+  name = "Novedades"
+  url = "/news/"
+[[languages.es.menu.main]]
+  weight = 4
+  name = "Capturas de pantalla"
+  url = "/screens/"
+  
