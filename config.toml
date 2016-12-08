@@ -54,11 +54,11 @@ DefaultContentLanguage = "en"
 
 [languages.es]
   weight = 0
-  languageName = "Espa&nacute;ol"
+  languageName = "Español"
   languageCode = "es-es"
 [[languages.es.menu.main]]
   weight = 0
-  name = "Documentaci&oacute;n"
+  name = "Documentación"
   url = "/docs/"
 [[languages.es.menu.main]]
   weight = 1
