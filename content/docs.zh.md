@@ -6,39 +6,34 @@ date = "2016-03-25T10:42:20-07:00"
 
 ## 入门
 
-We highly recommend that you start with the [Book](https://doc.redox-os.org/book/), as it describes how to set up and use Redox.
+我们极力推荐您阅读[这本书](https://doc.redox-os.org/book/), 它描述了如何设置和使用Redox。
 
 ## 参考文献
 
-[Book](https://doc.redox-os.org/book/). A Book describing Redox's design.
+[Redox](https://doc.redox-os.org/book/). 描述了Redox的设计理念。
 
-[Kernel](https://doc.redox-os.org/kernel/kernel/). Documentation for the Redox kernel.
+[内核](https://doc.redox-os.org/kernel/kernel/). Redox的内核文档。
 
-[Standard Library](https://doc.redox-os.org/std/std/). Documentation for the Redox standard library.
+[标准库](https://doc.redox-os.org/std/std/). Redox的标准库。
 
-## 为Redox语言做贡献
+## 为Redox做贡献
 
-Thank you for your interest in contributing to Redox!
-There are many ways to help us out and we appreciate all of them.
+非常感谢您有兴趣为Redox做贡献！
+有很多可以帮助我们的方式，我们喜欢任何形式的帮助。
 
-Redox is a large project spread out across many repos which can be found in the
-[Redox organization on Github](https://github.com/redox-os). This document,
-[CONTRIBUTING.md](https://github.com/redox-os/redox/blob/master/CONTRIBUTING.md)
-is a guide to help newcomers contribute!
+Redox是一个非常大的工程， 分散在[Github的Redox](https://github.com/redox-os)里的很多代码库里面。
+. 这个[文档](https://github.com/redox-os/redox/blob/master/CONTRIBUTING.md)可以帮助新人了解如何为Redox做贡献!
 
 ## 聊天室
 
-The quickest and most open way to communicate with the Redox team is on our chat
-server. Currently, the only way to join it is by sending an email to
-[info@redox-os.org](mailto:info@redox-os.org), which might take a little while,
-since it&rsquo;s not automated. We&rsquo;re currently working on an
-easier way to do this, but this is the most convenient way right now.
+与Redox团队沟通的最快速和最开放的方式是通过[聊天](https://chat.redox-os.org/)交流。当前加入聊天的方法是发送邮件到
+[info@redox-os.org](mailto:info@redox-os.org), 邮件发送后，通过不是自动完成的，需要一段时间生效。
+我们正在寻找更简单的方式, 但是这是迄今为止最方便的方式。
 
-You can also find Redox on Reddit in
-[/r/rust/](https://www.reddit.com/r/rust) and
-[/r/redox/](https://www.reddit.com/r/redox). The weekly update news is posted on
-the former.
+你也可以在Reddit上发现Redox
+[/r/rust/](https://www.reddit.com/r/rust) 和
+[/r/redox/](https://www.reddit.com/r/redox). 每周更新的新闻发布在[/r/rust/](https://www.reddit.com/r/rust) 上面。
 
 ## 行为守则
 
-We follow the [Rust Code of Conduct](http://www.rust-lang.org/conduct.html)
+我们遵守 [Rust代码规范](http://www.rust-lang.org/conduct.html)

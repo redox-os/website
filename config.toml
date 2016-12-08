@@ -49,7 +49,7 @@ DefaultContentLanguage = "en"
   url = "https://discourse.redox-os.org/"
 [[languages.zh.menu.main]]
   weight = 4
-  name = "版本控制"
+  name = "代码库"
   url = "https://github.com/redox-os/redox"
 
 [languages.es]
