@@ -10,9 +10,9 @@ Vi rekommenderar starkt att du börjar med [boken](https://doc.redox-os.org/book
 
 ## Hänvisningar
 
-[Book](https://doc.redox-os.org/book/). En bok som beskriver Redoxs design.
+[Boken](https://doc.redox-os.org/book/). En bok som beskriver Redoxs design.
 
-[Kernel](https://doc.redox-os.org/kernel/kernel/). Dokumentation för Redox-kärnan.
+[Kärnan](https://doc.redox-os.org/kernel/kernel/). Dokumentation för Redox-kärnan.
 
 [Standard Library](https://doc.redox-os.org/std/std/). Dokumentation för Redoxs standard library.
 
