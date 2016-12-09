@@ -1,5 +1,5 @@
 +++
-title = "Documentation"
+title = "Dokumentado"
 author = "Ticki"
 date = "2016-03-25T10:42:20-07:00"
 +++
@@ -12,9 +12,9 @@ Ni forte rekomendas ke vi komencu per [la libro](https://doc.redox-os.org/book/)
 
 [Libro](https://doc.redox-os.org/book/). Libro priskribanta Redox dezajno.
 
-[Kerno](https://doc.redox-os.org/kernel/kernel/). Dokumentoj por la Redox kerno.
+[Kerno](https://doc.redox-os.org/kernel/kernel/). Dokumentado por la Redox kerno.
 
-[Standard Library](https://doc.redox-os.org/std/std/). Dokumentoj por la Redox Standard Library.
+[Standard Library](https://doc.redox-os.org/std/std/). Dokumentado por la Redox Standard Library.
 
 ## Kontribui al Redox
 

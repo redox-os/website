@@ -1,5 +1,5 @@
 +++
-title = "Home"
+title = "Hjem"
 url = "/home"
 author = "Ticki"
 date = "2016-12-07T08:26:00-07:00"
