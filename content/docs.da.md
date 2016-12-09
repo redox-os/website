@@ -10,7 +10,7 @@ Vi anbefaler at du starter med [Redoxbogen](https://doc.redox-os.org/book/), da 
 
 ## Referenser
 
-[Boken](https://doc.redox-os.org/book/). En bog som beskriver Redox's design.
+[Bogen](https://doc.redox-os.org/book/). En bog som beskriver Redox's design.
 
 [Kernen](https://doc.redox-os.org/kernel/kernel/). Dokumentation for Redoxkernen.
 
