@@ -8,7 +8,7 @@ date = "2016-12-07T08:26:00-07:00"
   <div class="col-md-8">
     <p class="pitch">
       <b>Redox</b> er et Unix-lignende operativsystem som er skrevet i programmeringsspråket <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>,
-      til å bringe innovasjoner fra Rust til en moderne mikrokjerne med et komplett sett av programmer.
+      for å bringe innovasjoner fra Rust til en moderne mikrokjerne med et komplett sett av programmer.
     </p>
   </div>
   <div class="col-md-4 install-box">
@@ -31,7 +31,7 @@ date = "2016-12-07T08:26:00-07:00"
       <li>MIT-lisens</li>
       <li>Drivere kjøre i userspace</li>
       <li>Inkluderer vanlige Unix-kommandoer</li>
-      <li>Newlib port til C-programmer</li>
+      <li>Newlib-port til C-programmer</li>
     </ul>
   </div>
 </div>

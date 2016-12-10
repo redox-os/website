@@ -20,7 +20,7 @@ date = "2016-12-07T08:26:00-07:00"
 <div class="row features">
   <div class="col-md-6">
     <ul class="laundry-list" style="margin-bottom: 0px;">
-      <li>Skriven in Rust</li>
+      <li>Skriven i Rust</li>
       <li>Mikrokärna</li>
       <li>Inkluderar valfritt GUI - Orbital</li>
       <li>Understödja Rusts Standard Library</li>
@@ -31,7 +31,7 @@ date = "2016-12-07T08:26:00-07:00"
       <li>MIT licensierad</li>
       <li>Drivers körs i Användarrymds</li>
       <li>Inkluderar vanliga Unix-kommandon</li>
-      <li>Newlib port för C programs</li>
+      <li>Newlib port för C program</li>
     </ul>
   </div>
 </div>
