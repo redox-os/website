@@ -10,5 +10,5 @@ date = "2016-03-25T10:42:20-07:00"
 ## ASUS eeePC 900
 <img class="img-responsive" src="/img/hardware/asus-eepc-900.png"/>
 
-## Thinkpad T-420
+## ThinkPad T420
 <img class="img-responsive" src="/img/hardware/thinkpad-t420.png"/>
