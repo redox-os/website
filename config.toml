@@ -251,3 +251,28 @@ DefaultContentLanguage = "en"
   weight = 4
   name = "GitHub"
   url = "https://github.com/redox-os/redox"
+
+[languages.cz]
+  weight = 8
+  languageName = "Čeština"
+  languageCode = "cz"
+[[languages.cz.menu.main]]
+  weight = 0
+  name = "Dokumentace"
+  url = "/docs/"
+[[languages.cz.menu.main]]
+  weight = 1
+  name = "Novinky"
+  url = "../news/"
+[[languages.cz.menu.main]]
+  weight = 2
+  name = "Jak vypadá?"
+  url = "/screens/"
+[[languages.cz.menu.main]]
+  weight = 3
+  name = "Fórum"
+  url = "https://discourse.redox-os.org/"
+[[languages.cz.menu.main]]
+  weight = 4
+  name = "GitHub"
+  url = "https://github.com/redox-os/redox"
