@@ -38,7 +38,7 @@ DefaultContentLanguage = "en"
 [[languages.zh.menu.main]]
   weight = 1
   name = "新闻"
-  url = "../news/"
+  url = "/news/"
 [[languages.zh.menu.main]]
   weight = 2
   name = "截图"
@@ -63,7 +63,7 @@ DefaultContentLanguage = "en"
 [[languages.es.menu.main]]
   weight = 1
   name = "Novedades"
-  url = "../news/"
+  url = "/news/"
 [[languages.es.menu.main]]
   weight = 2
   name = "Capturas"
@@ -88,7 +88,7 @@ DefaultContentLanguage = "en"
 [[languages.fr.menu.main]]
   weight = 1
   name = "Nouvelles"
-  url = "../news/"
+  url = "/news/"
 [[languages.fr.menu.main]]
   weight = 2
   name = "Captures d'écran"
@@ -113,7 +113,7 @@ DefaultContentLanguage = "en"
 [[languages.de.menu.main]]
   weight = 1
   name = "Neuigkeiten"
-  url = "../news/"
+  url = "/news/"
 [[languages.de.menu.main]]
   weight = 2
   name = "Bildschirmfotos"
@@ -138,7 +138,7 @@ DefaultContentLanguage = "en"
 [[languages.tr.menu.main]]
   weight = 1
   name = "Haberler"
-  url = "../news/"
+  url = "/news/"
 [[languages.tr.menu.main]]
   weight = 2
   name = "Ekran Görüntüleri"
@@ -163,7 +163,7 @@ DefaultContentLanguage = "en"
 [[languages.sv.menu.main]]
   weight = 1
   name = "Nyheter"
-  url = "../news/"
+  url = "/news/"
 [[languages.sv.menu.main]]
   weight = 2
   name = "Skärmbilder"
@@ -188,7 +188,7 @@ DefaultContentLanguage = "en"
 [[languages.da.menu.main]]
   weight = 1
   name = "Nyheder"
-  url = "../news/"
+  url = "/news/"
 [[languages.da.menu.main]]
   weight = 2
   name = "Skærmbilleder"
@@ -213,7 +213,7 @@ DefaultContentLanguage = "en"
 [[languages.no.menu.main]]
   weight = 1
   name = "Nyheter"
-  url = "../news/"
+  url = "/news/"
 [[languages.no.menu.main]]
   weight = 2
   name = "Skjermbilder"
@@ -238,7 +238,7 @@ DefaultContentLanguage = "en"
 [[languages.eo.menu.main]]
   weight = 1
   name = "Novaĵoj"
-  url = "../news/"
+  url = "/news/"
 [[languages.eo.menu.main]]
   weight = 2
   name = "Ekrankopioj"
