@@ -14,7 +14,7 @@ date = "2016-12-07T08:26:00-07:00"
   <div class="col-md-4 install-box">
     <br/>
     <a class="btn btn-primary" href="https://github.com/redox-os/redox/releases">Vido ĵetoj</a>
-    <a class="btn btn-success" href="https://github.com/redox-os/redox/">Pull de GitHub</a>
+    <a class="btn btn-default" href="https://github.com/redox-os/redox/">Pull de GitHub</a>
   </div>
 </div>
 <div class="row features">
