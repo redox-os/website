@@ -569,21 +569,6 @@ pre {
 .btn-primary:active {
   background-image: none;
 }
-.btn-success {
-  color: #fff;
-  background-color: #42ca8b;
-  border-color: #35bd7e;
-}
-.btn-success:hover,
-.btn-success:focus,
-.btn-success:active {
-  color: #fff;
-  background-color: #32b176;
-  border-color: #288e5e;
-}
-.btn-success:active {
-  background-image: none;
-}
 @-webkit-keyframes progress-bar-stripes {
   from {
     background-position: 40px 0;

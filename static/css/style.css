@@ -67,13 +67,6 @@ ul.menu h2 {
 	display: inline;
 	line-height: 1.5em;
 }
-ul.menu h3 {
-	font-size: 14px;
-	font-weight: 500;
-	margin: 1em;
-	display: inline;
-	line-height: 1.5em;
-}
 ul.menu li>ul {
 	margin-top: .5em;
 	padding-left: 0em;
@@ -101,22 +94,6 @@ h2 {
 }
 h3 {
 	font-weight: 500;
-}
-
-.side-header h2 {
-	font-weight: 500;
-	font-size: 18.5px;
-	line-height: 24px;
-	margin-top: 7px;
-}
-
-.side-header h3 {
-	font-size: 1em;
-	margin-top: 0px;
-}
-
-.side-header p {
-	color:  #777;
 }
 
 .table-features {
@@ -189,10 +166,15 @@ p.pitch {
 	}
 }
 
+p.pitch a {
+	font-size: 80%;
+}
+
 .install-box {
 	color: #777;
 	text-align: right;
 	font-size: 130%;
+	margin-top: 0.8em;
 }
 
 .version-rec-box-inner {
@@ -230,19 +212,11 @@ hr {
 	max-width: 250px;
 }
 
-.row.features {
-  margin-top: 2.0em;
-}
-
-.copyright {
-  margin-top: 2.0em;
-}
-
 ul.laundry-list {
-        margin-bottom: 20px;
-        column-count: auto;
-        -moz-column-count: auto;
-	-webkit-column-count: auto;
+	column-count: 2;
+	-moz-column-count: 2;
+	-webkit-column-count: 2;
+	margin-bottom: 20px;
 }
 
 .resp-block {
@@ -253,6 +227,11 @@ ul.laundry-list {
 	.install-box a.btn {
 		font-size: 18px;
 		padding: 10px 15px;
+	}
+	ul.laundry-list {
+	  column-count: auto;
+	  -moz-column-count: auto;
+	  -webkit-column-count: auto;
 	}
 	img.ribbon {
 		display: inline !important;
@@ -335,6 +314,8 @@ ul.laundry-list {
   padding: 10px;
   display: none;
   border-radius: 4px;
+  font-family: monospace;
+  font-size: 12px;
 }
 
 .ace-error-text, .ace-error-line, .ace-warning-text, .ace-warning-line {
@@ -393,7 +374,7 @@ ul.laundry-list {
 .content {
     border-top: 2px solid #dedede;
     margin-top: 2em;
-    margin-bottom: 8em;
+    margin-bottom: 2em;
     padding-top: 2em;
 }
 
@@ -419,20 +400,33 @@ ul.laundry-list {
     line-height: 1.5em;
     margin: 3rem 0 1rem;
     font-weight: 400;
-    border-top: 2px solid #dedede;
-    padding-top: 1rem;
+		border-top: 2px solid #dedede;
+		padding-top: 1rem;
 }
 
 .content h3 {
     font-size: 1em;
     line-height: 1.5em;
     font-weight: 500;
-    margin: 2rem 0 .5rem;
+    margin: .5rem 0;
 }
 
-.post-title {
-    color: inherit;
-    text-decoration: underline;
+.side-header h2 {
+	font-weight: 500;
+	font-size: 18.5px;
+	line-height: 24px;
+	margin-top: 7px;
+	border-top: none;
+	padding-top: 0;
+}
+
+.side-header h3 {
+	font-size: 1em;
+	margin-top: 0px;
+}
+
+.side-header p {
+	color:  #777;
 }
 
 @media screen and (min-width: 820px) {
@@ -510,4 +504,115 @@ ul.laundry-list {
 #toc ol {
     margin: 0 0 0 2rem;
     padding: 0;
+}
+
+#users > h1 {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 2.5em;
+    font-weight: 400;
+    margin: 0px;
+    padding-top: 50px;
+}
+
+#users > h2 {
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    font-weight: 400;
+    margin: 0px;
+    padding-bottom: 60px;
+}
+
+#users > div > div {
+    text-align: center;
+}
+
+#users .user-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 100px;
+}
+
+#users .user-container a {
+    line-height: 100px;
+}
+
+#users img {
+    max-width: 200px;
+    max-height: 100px;
+    vertical-align: middle;
+}
+
+#users .details {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+#users .fade-in {
+    transition: opacity 0.5s linear;
+}
+
+#users .fade-out {
+    transition: opacity 0.1s ease-in-out;
+}
+
+#users .fade-in * {
+    z-index: 1;
+}
+
+#users .fade-out * {
+    z-index: -1;
+}
+
+@media (min-width: 992px) {
+
+    #users .fade-in {
+        opacity: 1;
+    }
+
+    #users .fade-out {
+        opacity: 0;
+    }
+
+}
+
+#users .user-details-row-1 div {
+    height: 2em;
+    margin-top: 0em;
+}
+
+#users .user-details-row-2 div {
+    height: 2em;
+    margin-top: -2em;
+}
+
+#users .user-details-row-3 div {
+    height: 2em;
+    margin-top: -2em;
+}
+
+#users .details p {
+    margin: 0px;
+}
+
+#users em {
+    font-weight: bold;
+}
+
+#users #user-add-info {
+    text-align: center;
+    padding-top: 50px;
+}
+
+footer {
+  border-top: 2px solid #dedede;
+  margin: 1.2em auto 0 auto;
+  padding-top: 0.6em; /* half to accomodate p tag margin */
+}
+
+footer a {
+  display: inline-block;
+  font-weight: bold;
 }

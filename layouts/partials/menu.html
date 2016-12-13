@@ -10,14 +10,6 @@
         {{ range .Site.Menus.main }}
           <h2><a style="color: inherit;" href="{{ .URL | relLangURL }}">{{ .Name }}</a></h2>
         {{ end }}
-        <br/><br/>
-
-        <h3><a style="color: inherit;" href="{{ .URL }}">{{ .Language.LanguageName }}{{ if .IsHome }}{{ else }}:&nbsp;{{ .Title }}{{ end }}</a></h3>
-        {{ if .IsTranslated }}
-          {{ range .Translations }}
-            <h3><a style="color: inherit;" href="{{ .URL }}">{{ .Language.LanguageName }}{{ if .IsHome }}{{ else }}:&nbsp;{{ .Title }}{{ end }}</a></h3>
-          {{ end}}
-        {{ end }}
       </li>
     </ul>
   </nav>
