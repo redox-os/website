@@ -11,4 +11,4 @@ do
         cp -v "$file" "build/${file%.md}.$language.md"
     done
 done
-hugo -c build/content -d build/public --cleanDestinationDir $*
+hugo -c build/content -d build/public --cleanDestinationDir "$@"
