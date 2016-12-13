@@ -127,8 +127,33 @@ DefaultContentLanguage = "en"
   name = "GitHub"
   url = "https://github.com/redox-os/redox"
 
-[languages.sv]
+[languages.tr]
   weight = 5
+  languageName = "Türkçe"
+  languageCode = "tr-tr"
+[[languages.tr.menu.main]]
+  weight = 0
+  name = "Belgeler"
+  url = "/docs/"
+[[languages.tr.menu.main]]
+  weight = 1
+  name = "Haberler"
+  url = "/news/"
+[[languages.tr.menu.main]]
+  weight = 2
+  name = "Ekran Görüntüleri"
+  url = "/screens/"
+[[languages.tr.menu.main]]
+  weight = 3
+  name = "Forum"
+  url = "https://discourse.redox-os.org/"
+[[languages.tr.menu.main]]
+  weight = 4
+  name = "GitHub"
+  url = "https://github.com/redox-os/redox"
+
+[languages.sv]
+  weight = 6
   languageName = "Svenska"
   languageCode = "sv-se"
 [[languages.sv.menu.main]]
@@ -153,7 +178,7 @@ DefaultContentLanguage = "en"
   url = "https://github.com/redox-os/redox"
 
 [languages.da]
-  weight = 6
+  weight = 7
   languageName = "Dansk"
   languageCode = "da-dk"
 [[languages.da.menu.main]]
@@ -178,7 +203,7 @@ DefaultContentLanguage = "en"
   url = "https://github.com/redox-os/redox"
 
 [languages.no]
-  weight = 7
+  weight = 8
   languageName = "Norsk"
   languageCode = "nb-no"
 [[languages.no.menu.main]]
@@ -203,7 +228,7 @@ DefaultContentLanguage = "en"
   url = "https://github.com/redox-os/redox"
 
 [languages.eo]
-  weight = 8
+  weight = 9
   languageName = "Esperanto"
   languageCode = "eo"
 [[languages.eo.menu.main]]
