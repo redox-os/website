@@ -22,7 +22,7 @@ Merci pour votre intérêt dans Redox!
 Il y a de nombreuses façons de contribuer au projet, nous apprécions votre l'aide.
 
 Le projet Redox est distribué parmi plusieurs répertoires disponibles
-[sur Github dans l'organisation Redox](https://github.com/redox-os). Le document
+[sur GitHub dans l'organisation Redox](https://github.com/redox-os). Le document
 [CONTRIBUTING.md](https://github.com/redox-os/redox/blob/master/CONTRIBUTING.md)
 est un bon départ!
 

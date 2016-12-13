@@ -101,3 +101,128 @@ DefaultContentLanguage = "en"
   weight = 4
   name = "Répertoire"
   url = "https://github.com/redox-os/redox"
+
+[languages.de]
+  weight = 4
+  languageName = "Deutsch"
+  languageCode = "de-de"
+[[languages.de.menu.main]]
+  weight = 0
+  name = "Dokumentation"
+  url = "/docs/"
+[[languages.de.menu.main]]
+  weight = 1
+  name = "Neuigkeiten"
+  url = "../news/"
+[[languages.de.menu.main]]
+  weight = 2
+  name = "Bildschirmfotos"
+  url = "/screens/"
+[[languages.de.menu.main]]
+  weight = 3
+  name = "Forum"
+  url = "https://discourse.redox-os.org/"
+[[languages.de.menu.main]]
+  weight = 4
+  name = "GitHub"
+  url = "https://github.com/redox-os/redox"
+
+[languages.sv]
+  weight = 5
+  languageName = "Svenska"
+  languageCode = "sv-se"
+[[languages.sv.menu.main]]
+  weight = 0
+  name = "Dokumentation"
+  url = "/docs/"
+[[languages.sv.menu.main]]
+  weight = 1
+  name = "Nyheter"
+  url = "/news/"
+[[languages.sv.menu.main]]
+  weight = 2
+  name = "Skärmbilder"
+  url = "/screens/"
+[[languages.sv.menu.main]]
+  weight = 3
+  name = "Forum"
+  url = "https://discourse.redox-os.org/"
+[[languages.sv.menu.main]]
+  weight = 4
+  name = "GitHub"
+  url = "https://github.com/redox-os/redox"
+
+[languages.da]
+  weight = 6
+  languageName = "Dansk"
+  languageCode = "da-dk"
+[[languages.da.menu.main]]
+  weight = 0
+  name = "Dokumentation"
+  url = "/docs/"
+[[languages.da.menu.main]]
+  weight = 1
+  name = "Nyheder"
+  url = "/news/"
+[[languages.da.menu.main]]
+  weight = 2
+  name = "Skærmbilleder"
+  url = "/screens/"
+[[languages.da.menu.main]]
+  weight = 3
+  name = "Forum"
+  url = "https://discourse.redox-os.org/"
+[[languages.da.menu.main]]
+  weight = 4
+  name = "GitHub"
+  url = "https://github.com/redox-os/redox"
+
+[languages.no]
+  weight = 7
+  languageName = "Norsk"
+  languageCode = "nb-no"
+[[languages.no.menu.main]]
+  weight = 0
+  name = "Dokumentasjon"
+  url = "/docs/"
+[[languages.no.menu.main]]
+  weight = 1
+  name = "Nyheter"
+  url = "/news/"
+[[languages.no.menu.main]]
+  weight = 2
+  name = "Skjermbilder"
+  url = "/screens/"
+[[languages.no.menu.main]]
+  weight = 3
+  name = "Forum"
+  url = "https://discourse.redox-os.org/"
+[[languages.no.menu.main]]
+  weight = 4
+  name = "GitHub"
+  url = "https://github.com/redox-os/redox"
+
+[languages.eo]
+  weight = 8
+  languageName = "Esperanto"
+  languageCode = "eo"
+[[languages.eo.menu.main]]
+  weight = 0
+  name = "Dokumentado"
+  url = "/docs/"
+[[languages.eo.menu.main]]
+  weight = 1
+  name = "Novaĵoj"
+  url = "/news/"
+[[languages.eo.menu.main]]
+  weight = 2
+  name = "Ekrankopioj"
+  url = "/screens/"
+[[languages.eo.menu.main]]
+  weight = 3
+  name = "Forumo"
+  url = "https://discourse.redox-os.org/"
+[[languages.eo.menu.main]]
+  weight = 4
+  name = "GitHub"
+  url = "https://github.com/redox-os/redox"

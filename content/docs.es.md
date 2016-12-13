@@ -22,7 +22,7 @@ Recomendamos encarecidamente empezar con el [Libro](https://doc.redox-os.org/boo
 Hay muchas formas de ayudarnos y apreciamos cada una de ellas.
 
 Redox es un gran proyecto separado en muchos repositorios que se pueden encontrar en la
-[Organización de Redox en Github](https://github.com/redox-os). Este documento,
+[Organización de Redox en GitHub](https://github.com/redox-os). Este documento,
 [CONTRIBUYENDO.md](https://github.com/redox-os/redox/blob/master/CONTRIBUTING.md),
  ¡es una guía para ayudar a los recién llegados a contribuir!
 
@@ -30,7 +30,7 @@ Redox es un gran proyecto separado en muchos repositorios que se pueden encontra
 
 La forma mas rápida y abierta de comunicarse con el equipo de Redox es en 
 nuestro servidor de chat. Actualmente, la única forma de acceder es enviando 
-un correo electrónico a [info@redox-os.org](mailto:info@redox-os.org, 
+un correo electrónico a [info@redox-os.org](mailto:info@redox-os.org), 
 lo cual puede llevar un tiempo, ya que no es automático. Actualmente estamos 
 trabajando en una forma más rápida de hacerlo, pero esta es la más 
 conveniente actualmente.
