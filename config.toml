@@ -227,33 +227,8 @@ DefaultContentLanguage = "en"
   name = "GitHub"
   url = "https://github.com/redox-os/redox"
 
-[languages.eo]
-  weight = 9
-  languageName = "Esperanto"
-  languageCode = "eo"
-[[languages.eo.menu.main]]
-  weight = 0
-  name = "Dokumentado"
-  url = "/docs/"
-[[languages.eo.menu.main]]
-  weight = 1
-  name = "Novaĵoj"
-  url = "/news/"
-[[languages.eo.menu.main]]
-  weight = 2
-  name = "Ekrankopioj"
-  url = "/screens/"
-[[languages.eo.menu.main]]
-  weight = 3
-  name = "Forumo"
-  url = "https://discourse.redox-os.org/"
-[[languages.eo.menu.main]]
-  weight = 4
-  name = "GitHub"
-  url = "https://github.com/redox-os/redox"
-
 [languages.cz]
-  weight = 8
+  weight = 9
   languageName = "Čeština"
   languageCode = "cz"
 [[languages.cz.menu.main]]
@@ -273,6 +248,31 @@ DefaultContentLanguage = "en"
   name = "Fórum"
   url = "https://discourse.redox-os.org/"
 [[languages.cz.menu.main]]
+  weight = 4
+  name = "GitHub"
+  url = "https://github.com/redox-os/redox"
+
+[languages.eo]
+  weight = 10
+  languageName = "Esperanto"
+  languageCode = "eo"
+[[languages.eo.menu.main]]
+  weight = 0
+  name = "Dokumentado"
+  url = "/docs/"
+[[languages.eo.menu.main]]
+  weight = 1
+  name = "Novaĵoj"
+  url = "/news/"
+[[languages.eo.menu.main]]
+  weight = 2
+  name = "Ekrankopioj"
+  url = "/screens/"
+[[languages.eo.menu.main]]
+  weight = 3
+  name = "Forumo"
+  url = "https://discourse.redox-os.org/"
+[[languages.eo.menu.main]]
   weight = 4
   name = "GitHub"
   url = "https://github.com/redox-os/redox"
