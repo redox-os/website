@@ -7,7 +7,7 @@ date = "2016-12-07T08:26:00-07:00"
 <div class="row install-row">
   <div class="col-md-8">
     <p class="pitch">
-      <b>Redox</b>  <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>,
+      <b>Redox</b>,  <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>
       ile yazılan ve Rust dilinin yeniliklerini modern mikrokernel ve tam bir uygulama setine getirmeyi amaçlayan Unix benzeri bir işletim sistemidir.
     </p>
   </div>
