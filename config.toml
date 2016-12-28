@@ -20,10 +20,14 @@ DefaultContentLanguage = "en"
   url = "/screens/"
 [[languages.en.menu.main]]
   weight = 3
+  name = "Donate"
+  url = "/donate/"
+[[languages.en.menu.main]]
+  weight = 4
   name = "Forum"
   url = "https://discourse.redox-os.org/"
 [[languages.en.menu.main]]
-  weight = 4
+  weight = 5
   name = "GitHub"
   url = "https://github.com/redox-os/redox"
 
@@ -45,10 +49,14 @@ DefaultContentLanguage = "en"
   url = "/screens/"
 [[languages.zh.menu.main]]
   weight = 3
+  name = "捐赠"
+  url = "/donate/"
+[[languages.zh.menu.main]]
+  weight = 4
   name = "论坛"
   url = "https://discourse.redox-os.org/"
 [[languages.zh.menu.main]]
-  weight = 4
+  weight = 5
   name = "代码库"
   url = "https://github.com/redox-os/redox"
 
@@ -70,10 +78,14 @@ DefaultContentLanguage = "en"
   url = "/screens/"
 [[languages.es.menu.main]]
   weight = 3
+  name = "Donar"
+  url = "/donate/"
+[[languages.es.menu.main]]
+  weight = 4
   name = "Foro"
   url = "https://discourse.redox-os.org/"
 [[languages.es.menu.main]]
-  weight = 4
+  weight = 5
   name = "Repositorio"
   url = "https://github.com/redox-os/redox"
 
@@ -95,10 +107,14 @@ DefaultContentLanguage = "en"
   url = "/screens/"
 [[languages.fr.menu.main]]
   weight = 3
+  name = "Donner"
+  url = "/donate/"
+[[languages.fr.menu.main]]
+  weight = 4
   name = "Forum"
   url = "https://discourse.redox-os.org/"
 [[languages.fr.menu.main]]
-  weight = 4
+  weight = 5
   name = "Répertoire"
   url = "https://github.com/redox-os/redox"
 
@@ -120,10 +136,14 @@ DefaultContentLanguage = "en"
   url = "/screens/"
 [[languages.de.menu.main]]
   weight = 3
+  name = "Spenden"
+  url = "/donate/"
+[[languages.de.menu.main]]
+  weight = 4
   name = "Forum"
   url = "https://discourse.redox-os.org/"
 [[languages.de.menu.main]]
-  weight = 4
+  weight = 5
   name = "GitHub"
   url = "https://github.com/redox-os/redox"
 
@@ -145,10 +165,14 @@ DefaultContentLanguage = "en"
   url = "/screens/"
 [[languages.tr.menu.main]]
   weight = 3
+  name = "Bağışta Bulunmak"
+  url = "/donate/"
+[[languages.tr.menu.main]]
+  weight = 4
   name = "Forum"
   url = "https://discourse.redox-os.org/"
 [[languages.tr.menu.main]]
-  weight = 4
+  weight = 5
   name = "GitHub"
   url = "https://github.com/redox-os/redox"
 
@@ -170,10 +194,14 @@ DefaultContentLanguage = "en"
   url = "/screens/"
 [[languages.sv.menu.main]]
   weight = 3
+  name = "Donera"
+  url = "/donate/"
+[[languages.sv.menu.main]]
+  weight = 4
   name = "Forum"
   url = "https://discourse.redox-os.org/"
 [[languages.sv.menu.main]]
-  weight = 4
+  weight = 5
   name = "GitHub"
   url = "https://github.com/redox-os/redox"
 
@@ -195,10 +223,14 @@ DefaultContentLanguage = "en"
   url = "/screens/"
 [[languages.da.menu.main]]
   weight = 3
+  name = "Doner"
+  url = "/donate/"
+[[languages.da.menu.main]]
+  weight = 4
   name = "Forum"
   url = "https://discourse.redox-os.org/"
 [[languages.da.menu.main]]
-  weight = 4
+  weight = 5
   name = "GitHub"
   url = "https://github.com/redox-os/redox"
 
@@ -220,10 +252,14 @@ DefaultContentLanguage = "en"
   url = "/screens/"
 [[languages.no.menu.main]]
   weight = 3
+  name = "Donere"
+  url = "/donate/"
+[[languages.no.menu.main]]
+  weight = 4
   name = "Forum"
   url = "https://discourse.redox-os.org/"
 [[languages.no.menu.main]]
-  weight = 4
+  weight = 5
   name = "GitHub"
   url = "https://github.com/redox-os/redox"
 
@@ -245,10 +281,14 @@ DefaultContentLanguage = "en"
   url = "/screens/"
 [[languages.cz.menu.main]]
   weight = 3
+  name = "Darovat"
+  url = "/donate/"
+[[languages.cz.menu.main]]
+  weight = 4
   name = "Fórum"
   url = "https://discourse.redox-os.org/"
 [[languages.cz.menu.main]]
-  weight = 4
+  weight = 5
   name = "GitHub"
   url = "https://github.com/redox-os/redox"
 
@@ -270,9 +310,13 @@ DefaultContentLanguage = "en"
   url = "/screens/"
 [[languages.eo.menu.main]]
   weight = 3
+  name = "Donaci"
+  url = "/donate/"
+[[languages.eo.menu.main]]
+  weight = 4
   name = "Forumo"
   url = "https://discourse.redox-os.org/"
 [[languages.eo.menu.main]]
-  weight = 4
+  weight = 5
   name = "GitHub"
   url = "https://github.com/redox-os/redox"

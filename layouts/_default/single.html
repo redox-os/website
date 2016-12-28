@@ -1,8 +1,10 @@
 {{ partial "head.html" . }}
 {{ partial "menu.html" . }}
 <div class="content">
+  {{ if .Title }}
   <h1><a class="post-title" href="{{ .Permalink }}">{{ .Title }}</a></h1>
-  <h5>By {{ .Params.author }} on {{ .Date.Format "Monday, January 2, 2006" }}</time></h5>
+  <h5>By {{ .Params.author }} on <time datetime="{{ .Date }}" class="date">{{ .Date.Format "Monday, January 2, 2006" }}</time></h5>
+  {{ end }}
   {{ .Content }}
 </div>
 {{ partial "footer.html" . }}
