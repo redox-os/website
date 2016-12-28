@@ -165,7 +165,7 @@ DefaultContentLanguage = "en"
   url = "/screens/"
 [[languages.tr.menu.main]]
   weight = 3
-  name = "Bağışta Bulunmak"
+  name = "Bağış"
   url = "/donate/"
 [[languages.tr.menu.main]]
   weight = 4
