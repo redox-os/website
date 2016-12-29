@@ -30,6 +30,10 @@ DefaultContentLanguage = "en"
   weight = 5
   name = "GitHub"
   url = "https://github.com/redox-os/redox"
+[[languages.en.menu.main]]
+  weight = 6
+  name = "Twitter"
+  url = "https://twitter.com/redox_os"
 
 [languages.zh]
   weight = 1
@@ -59,6 +63,10 @@ DefaultContentLanguage = "en"
   weight = 5
   name = "代码库"
   url = "https://github.com/redox-os/redox"
+[[languages.zh.menu.main]]
+  weight = 6
+  name = "推特"
+  url = "https://twitter.com/redox_os"
 
 [languages.es]
   weight = 2
@@ -88,6 +96,10 @@ DefaultContentLanguage = "en"
   weight = 5
   name = "Repositorio"
   url = "https://github.com/redox-os/redox"
+[[languages.es.menu.main]]
+  weight = 6
+  name = "Twitter"
+  url = "https://twitter.com/redox_os"
 
 [languages.fr]
   weight = 3
@@ -117,6 +129,10 @@ DefaultContentLanguage = "en"
   weight = 5
   name = "Répertoire"
   url = "https://github.com/redox-os/redox"
+[[languages.fr.menu.main]]
+  weight = 6
+  name = "Twitter"
+  url = "https://twitter.com/redox_os"
 
 [languages.de]
   weight = 4
@@ -146,6 +162,10 @@ DefaultContentLanguage = "en"
   weight = 5
   name = "GitHub"
   url = "https://github.com/redox-os/redox"
+[[languages.de.menu.main]]
+  weight = 6
+  name = "Twitter"
+  url = "https://twitter.com/redox_os"
 
 [languages.tr]
   weight = 5
@@ -175,6 +195,10 @@ DefaultContentLanguage = "en"
   weight = 5
   name = "GitHub"
   url = "https://github.com/redox-os/redox"
+[[languages.tr.menu.main]]
+  weight = 6
+  name = "Twitter"
+  url = "https://twitter.com/redox_os"
 
 [languages.sv]
   weight = 6
@@ -204,6 +228,10 @@ DefaultContentLanguage = "en"
   weight = 5
   name = "GitHub"
   url = "https://github.com/redox-os/redox"
+[[languages.sv.menu.main]]
+  weight = 6
+  name = "Twitter"
+  url = "https://twitter.com/redox_os"
 
 [languages.da]
   weight = 7
@@ -233,6 +261,10 @@ DefaultContentLanguage = "en"
   weight = 5
   name = "GitHub"
   url = "https://github.com/redox-os/redox"
+[[languages.da.menu.main]]
+  weight = 6
+  name = "Twitter"
+  url = "https://twitter.com/redox_os"
 
 [languages.no]
   weight = 8
@@ -262,6 +294,10 @@ DefaultContentLanguage = "en"
   weight = 5
   name = "GitHub"
   url = "https://github.com/redox-os/redox"
+[[languages.no.menu.main]]
+  weight = 6
+  name = "Twitter"
+  url = "https://twitter.com/redox_os"
 
 [languages.cz]
   weight = 9
@@ -291,6 +327,10 @@ DefaultContentLanguage = "en"
   weight = 5
   name = "GitHub"
   url = "https://github.com/redox-os/redox"
+[[languages.cz.menu.main]]
+  weight = 6
+  name = "Twitter"
+  url = "https://twitter.com/redox_os"
 
 [languages.eo]
   weight = 10
@@ -320,3 +360,7 @@ DefaultContentLanguage = "en"
   weight = 5
   name = "GitHub"
   url = "https://github.com/redox-os/redox"
+[[languages.eo.menu.main]]
+  weight = 6
+  name = "Twitter"
+  url = "https://twitter.com/redox_os"
