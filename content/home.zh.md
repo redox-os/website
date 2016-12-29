@@ -40,8 +40,8 @@ date = "2016-12-07T08:26:00-07:00"
     <div style="font-size: 16px; text-align: center;">
       Redox执行Orbital (2016年6月20号)
     </div>
-    <a href="/img/screenshot.jpg">
-      <img class="img-responsive" src="/img/screenshot.jpg"/>
+    <a href="/img/screenshot.png">
+      <img class="img-responsive" src="/img/screenshot.png"/>
     </a>
   </div>
 </div>
