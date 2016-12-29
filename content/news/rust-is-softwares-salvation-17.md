@@ -10,12 +10,12 @@ After the post by Steve Klabnik, ["Rust is more than safety"](http://words.steve
 
 First, I would like to clarify my experience with Rust. I first discovered Rust through reddit, in late 2014, version 0.11. What stood out to me immediately was a different focus on software - a focus on being the best language possible.
 
-What I found in Rust was a language that was:
+What I found in Rust was a language that had:
 
  - Better safety than Ada
- - Better for concurrency than C++
+ - Better concurrency than C++
  - Better performance than C
- - Better documented than Python
+ - Better documentation than Python
 
 In other words, it was already best at nearly every point of comparison than other languages. Yet, still, it had not caught on. In those days, there was no rustup. Cargo was not used for hardly anything - many crates had to be compiled from the Rust source. Much of what you would find written in Rust were simple FFI wrappers for C libraries. Although the language was as perfect as any I had ever discovered, it had a problem:
 
