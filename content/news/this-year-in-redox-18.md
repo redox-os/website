@@ -53,7 +53,7 @@ Since the last news blog post, some other things have happened as well:
 
 ## TFS
 
-![Logo](https://raw.githubusercontent.com/ticki/tfs/master/icon.svg)
+<embed type="image/svg+xml" src="https://raw.githubusercontent.com/ticki/tfs/master/icon.svg"/>
 
 So I've been working on TFS. Several new things have been developed since last post.
 
