@@ -107,6 +107,7 @@ Finally, Redox has been covered in a number of news articles:
 - [2016-06-28 - Websetnet - Redox OS: an Operating System Written in Rust](https://websetnet.com/redox-os-operating-system-written-rust/)
 - [2016-11-01 - OSNews - A complete rewrite of the Redox kernel](http://www.osnews.com/story/29463/A_complete_rewrite_of_the_Redox_kernel)
 - [2016-12-09 - Golem.de - REDOX OS: Wer nicht rustet, rostet](http://www.golem.de/news/redox-os-wer-nicht-rustet-rostet-1612-124867.html)
+- [2016-12-31 - Phoronix - Rust-Based Redox OS Had A Busy Year With Rewriting Its Kernel, Writing A File-System](http://phoronix.com/scan.php?page=news_item&px=Redox-OS-2016-State)
 
 If you know of others, please create an issue at [our website repo](https://github.com/redox-os/website).
 
