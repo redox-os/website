@@ -8,7 +8,7 @@ date = "2016-12-07T08:26:00-07:00"
   <div class="col-md-8">
     <p class="pitch">
       <b>Redox</b> est un système d'exploitation dans
-      le style Unix écrit en <a style="color: inherit;"
+      le style Unix, écrit en <a style="color: inherit;"
       href="https://www.rust-lang.org/fr/"><b>Rust</b></a>, visant
       à exploiter les innovations de ce langage dans un micro-noyau
       moderne et une suite logicielle complète.

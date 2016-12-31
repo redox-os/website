@@ -119,7 +119,7 @@ DefaultContentLanguage = "en"
   url = "/screens/"
 [[languages.fr.menu.main]]
   weight = 3
-  name = "Donner"
+  name = "Donation"
   url = "/donate/"
 [[languages.fr.menu.main]]
   weight = 4
@@ -127,7 +127,7 @@ DefaultContentLanguage = "en"
   url = "https://discourse.redox-os.org/"
 [[languages.fr.menu.main]]
   weight = 5
-  name = "Répertoire"
+  name = "Code source"
   url = "https://github.com/redox-os/redox"
 [[languages.fr.menu.main]]
   weight = 6
