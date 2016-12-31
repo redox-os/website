@@ -20,7 +20,7 @@ Only two days after, the project had gained several hundreds of stars and it rea
 
 Quite a few people were interested in contributing, including myself. So we created an IRC channel.
 
-There was quickly several contributors, such as stratact (who is still with us today), tedsta, ambaxter, and many more.
+There were quickly several contributors, such as stratact (who is still with us today), tedsta, ambaxter, and many more.
 
 # State of the project
 
@@ -45,15 +45,15 @@ The last few months contains several additions:
 
 Since the last news blog post, some other things have happened as well:
 
-- [TFS](https://github.com/ticki/tfs) the upcomming default filesystem of Redox is specified and paritally implemented.
-- We got a rustc support.
+- [TFS](https://github.com/ticki/tfs) the upcomming default filesystem of Redox is specified and partially implemented.
+- We got rustc support.
 - Jeremy quit his job to work full time on Redox.
 
 ## TFS
 
 ![Logo](https://rawgit.com/ticki/tfs/master/icon.svg)
 
-So I've been working on TFS. Several new things have been developed since last post.
+So I've been working on TFS. Several new things have been developed since the last post.
 
 I created [SeaHash](https://github.com/ticki/tfs/tree/master/seahash), a new non-cryptographic hash function with excellent performance.
 
@@ -63,7 +63,7 @@ Futhermore, I implemented ADG dependency write caching.
 
 ## Kernel
 
-Jeremy rewrote the kernel with emphasis on correctness. This makes us much better of than previously, where the kernel had major flaws.
+Jeremy rewrote the kernel with emphasis on correctness. This makes us much better off than previously, where the kernel had major flaws.
 
 The kernel, while not perfect, is looking more complete and robust.
 
