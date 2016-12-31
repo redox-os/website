@@ -88,3 +88,27 @@ As said above, Jeremy quit his job to work full-time on Redox. Therefore, fundin
 Even small amounts of money can do a big difference. Please consider supporting us [on Patreon](https://www.patreon.com/redox_os).
 
 We are also looking into a more long-term solution such as funding from an university or something like Mozilla Research.
+
+# News Coverage
+
+Finally, Redox has been covered in a number of news articles:
+
+- [Phoronix](https://www.phoronix.com/scan.php?page=news_item&px=Redos-OS-Intro)
+- [It's F.O.S.S.](https://itsfoss.com/redox-os-an-operating-system-written-in-rust/)
+- [OSNews](http://www.osnews.com/story/29131/The_Redox_operating_system)
+- [InfoWorld](http://www.infoworld.com/article/3046100/open-source-tools/rusts-redox-os-could-show-linux-a-few-new-tricks.html)
+- [LWN.net](https://lwn.net/Articles/682591/)
+- [Linux.com](https://www.linux.com/news/rusts-redox-os-could-show-linux-few-new-tricks)
+- [Golem.de](http://www.golem.de/news/redox-os-wer-nicht-rustet-rostet-1612-124867.html)
+- [Pro-Linux](http://www.pro-linux.de/news/1/23383/betriebssystem-redox-in-rust-geschrieben.html)
+- [Ubuntu Next](http://ubuntunext.com/2016/06/23/redox-os-your-next-generation-operating-system)
+- [OpenNet](https://www.opennet.ru/opennews/art.shtml?num=43105)
+- [SoylentNews](https://soylentnews.org/article.pl?sid=16/03/22/0116231)
+- [Websetnet](https://websetnet.com/redox-os-operating-system-written-rust/)
+- [Laboratorio Linux](http://laboratoriolinux.es/index.php/-noticias-mundo-linux-/distribuciones/16043-redox-os-el-sistema-operativo-de-codigo-abierto-alternativo-a-linux.html)
+- [TuxNews.it](http://tuxnews.it/redox-nasce-il-sistema-operativo-da-26-mb-unix-like-scritto-in-rust/)
+- [formtek](http://formtek.com/blog/operating-systems-rust-redox-an-next-generation-attempt-to-plug-linux-os-gaps/)
+
+If you know of others, please create an issue at [our website repo](https://github.com/redox-os/website).
+
+![Composite Image](http://i.imgur.com/dwNevsk.jpg)
