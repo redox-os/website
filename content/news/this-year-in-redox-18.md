@@ -32,7 +32,7 @@ The kernel was rewritten, a memory allocator was added, rendering libc out of th
 
 Today, Redox looks like this:
 
-![A screenshot](https://redox-os.org/img/screenshot.png)
+<a href="https://redox-os.org/img/screenshot.png"><img class="img-responsive" src="https://redox-os.org/img/screenshot.png"/></a>
 
 Basically every component is written in Rust in order to ensure correctness and memory safety of the program (and of course so it's 10x Turing hipster webscale).
 
@@ -111,4 +111,5 @@ Finally, Redox has been covered in a number of news articles:
 
 If you know of others, please create an issue at [our website repo](https://github.com/redox-os/website).
 
-![Composite Image](http://i.imgur.com/dwNevsk.jpg)
+Here is a composite image:
+<a href="http://i.imgur.com/dwNevsk.jpg"><img class="img-responsive" src="http://i.imgur.com/dwNevsk.jpg"/></a>
