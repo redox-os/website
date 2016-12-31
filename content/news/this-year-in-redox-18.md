@@ -93,21 +93,22 @@ We are also looking into a more long-term solution such as funding from an unive
 
 Finally, Redox has been covered in a number of news articles:
 
-- [Phoronix](https://www.phoronix.com/scan.php?page=news_item&px=Redos-OS-Intro)
-- [It's F.O.S.S.](https://itsfoss.com/redox-os-an-operating-system-written-in-rust/)
-- [OSNews](http://www.osnews.com/story/29131/The_Redox_operating_system)
-- [InfoWorld](http://www.infoworld.com/article/3046100/open-source-tools/rusts-redox-os-could-show-linux-a-few-new-tricks.html)
-- [LWN.net](https://lwn.net/Articles/682591/)
-- [Linux.com](https://www.linux.com/news/rusts-redox-os-could-show-linux-few-new-tricks)
-- [Golem.de](http://www.golem.de/news/redox-os-wer-nicht-rustet-rostet-1612-124867.html)
-- [Pro-Linux](http://www.pro-linux.de/news/1/23383/betriebssystem-redox-in-rust-geschrieben.html)
-- [Ubuntu Next](http://ubuntunext.com/2016/06/23/redox-os-your-next-generation-operating-system)
-- [OpenNet](https://www.opennet.ru/opennews/art.shtml?num=43105)
-- [SoylentNews](https://soylentnews.org/article.pl?sid=16/03/22/0116231)
-- [Websetnet](https://websetnet.com/redox-os-operating-system-written-rust/)
-- [Laboratorio Linux](http://laboratoriolinux.es/index.php/-noticias-mundo-linux-/distribuciones/16043-redox-os-el-sistema-operativo-de-codigo-abierto-alternativo-a-linux.html)
-- [TuxNews.it](http://tuxnews.it/redox-nasce-il-sistema-operativo-da-26-mb-unix-like-scritto-in-rust/)
-- [formtek](http://formtek.com/blog/operating-systems-rust-redox-an-next-generation-attempt-to-plug-linux-os-gaps/)
+- [Phoronix - Redox: A Rust-Written, Microkernel Open-Source OS](https://www.phoronix.com/scan.php?page=news_item&px=Redos-OS-Intro)
+- [It's F.O.S.S. - REDOX OS: AN OPERATING SYSTEM WRITTEN IN RUST](https://itsfoss.com/redox-os-an-operating-system-written-in-rust/)
+- [LWN.net - Redox: a Rust-based microkernel](https://lwn.net/Articles/682591/)
+- [InfoWorld - Rust's Redox OS could show Linux a few new tricks](http://www.infoworld.com/article/3046100/open-source-tools/rusts-redox-os-could-show-linux-a-few-new-tricks.html)
+- [Linux.com - Rust's Redox OS Could Show Linux a Few New Tricks](https://www.linux.com/news/rusts-redox-os-could-show-linux-few-new-tricks)
+- [Websetnet - Redox OS: an Operating System Written in Rust](https://websetnet.com/redox-os-operating-system-written-rust/)
+- [Ubuntu Next - REDOX OS: YOUR NEXT GENERATION OPERATING SYSTEM](http://ubuntunext.com/2016/06/23/redox-os-your-next-generation-operating-system)
+- [formtek - Rust Redox – An Next-Generation Attempt to Plug Linux OS Gaps](http://formtek.com/blog/operating-systems-rust-redox-an-next-generation-attempt-to-plug-linux-os-gaps/)
+- [OSNews - The Redox operating system](http://www.osnews.com/story/29131/The_Redox_operating_system)
+- [OSNews - A complete rewrite of the Redox kernel](http://www.osnews.com/story/29463/A_complete_rewrite_of_the_Redox_kernel)
+- [Golem.de - REDOX OS: Wer nicht rustet, rostet](http://www.golem.de/news/redox-os-wer-nicht-rustet-rostet-1612-124867.html)
+- [Pro-Linux - Betriebssystem Redox in Rust geschrieben](http://www.pro-linux.de/news/1/23383/betriebssystem-redox-in-rust-geschrieben.html)
+- [OpenNet - Представлена операционная система Redox, написанная на языке Rust](https://www.opennet.ru/opennews/art.shtml?num=43105)
+- [SoylentNews - Microkernel, Rust-Programmed Redox OS's Devs Slam Linux, Unix, GPL](https://soylentnews.org/article.pl?sid=16/03/22/0116231) (The title is their choice - we didn't exactly do that)
+- [Laboratorio Linux - Redox OS el Sistema Operativo de Código Abierto alternativo a Linux](http://laboratoriolinux.es/index.php/-noticias-mundo-linux-/distribuciones/16043-redox-os-el-sistema-operativo-de-codigo-abierto-alternativo-a-linux.html)
+- [TuxNews.it - Redox: nasce il sistema operativo (da 26 MB) Unix-like scritto in Rust!](http://tuxnews.it/redox-nasce-il-sistema-operativo-da-26-mb-unix-like-scritto-in-rust/)
 
 If you know of others, please create an issue at [our website repo](https://github.com/redox-os/website).
 
