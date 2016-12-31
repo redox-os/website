@@ -4,8 +4,6 @@ author = "Ticki"
 date = "2016-12-31T14:49:00-07:00"
 +++
 
-# This year in Redox
-
 # History
 
 Back in 2009, Jackpot51 wrote SollerOS, which was a tiny operating system which was simply a hobby project of his to learn OS development. It was a tiny kernel written in Assembly, which could print text to the screen.
