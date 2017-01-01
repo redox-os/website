@@ -399,7 +399,7 @@ DefaultContentLanguage = "en"
   url = "https://twitter.com/redox_os"
 
 [languages.it]
-  weight = 0
+  weight = 12
   languageName = "Italian"
   languageCode = "it-it"
 [[languages.it.menu.main]]
