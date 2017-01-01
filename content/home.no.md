@@ -13,7 +13,7 @@ date = "2016-12-07T08:26:00-07:00"
   </div>
   <div class="col-md-4 install-box">
     <br/>
-    <a class="btn btn-primary" href="https://github.com/redox-os/redox/releases">View utgivelser</a>
+    <a class="btn btn-primary" href="https://github.com/redox-os/redox/releases">Vis utgivelser</a>
     <a class="btn btn-default" href="https://github.com/redox-os/redox/">Pull fra GitHub</a>
   </div>
 </div>
@@ -29,7 +29,7 @@ date = "2016-12-07T08:26:00-07:00"
   <div class="col-md-6">
     <ul class="laundry-list">
       <li>MIT-lisens</li>
-      <li>Drivere kjøre i userspace</li>
+      <li>Drivere kjøres i userspace</li>
       <li>Inkluderer vanlige Unix-kommandoer</li>
       <li>Newlib-port til C-programmer</li>
     </ul>

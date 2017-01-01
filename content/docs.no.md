@@ -6,11 +6,11 @@ date = "2016-03-25T10:42:20-07:00"
 
 ## Kom i gang!
 
-Vi anbefaler at du starter med [Redoxboken](https://doc.redox-os.org/book/), da den beskriver Hvordan du setter Redox opp og bruke det.
+Vi anbefaler at du starter med [Redoxboken](https://doc.redox-os.org/book/), da den beskriver hvordan du setter opp Redox og bruker det.
 
 ## Referanser
 
-[Boken](https://doc.redox-os.org/book/). En bok som beskriver Redox's design.
+[Boken](https://doc.redox-os.org/book/). En bok som beskriver Redoxs design.
 
 [Kjernen](https://doc.redox-os.org/kernel/kernel/). Dokumentasjon for Redoxkjernen.
 
@@ -29,14 +29,14 @@ er en guide for å hjelpe nybegynnere til å bidra.
 ## Kommunikasjon og chat
 
 Den raskeste og mest åpne måte å kommunisere med Redox-teamet er på vår
-chatserver. Foreløpig er den eneste måten å bli det ved å sende en e-mail til
+chatserver. Foreløpig er den eneste måten å bli med ved å sende en e-mail til
 [info@redox-os.org](mailto:info@redox-os.org), som kan ta litt tid
 siden det ikke er automatisert. Vi jobber med en enklere måte å gjøre dette,
-men dette er den mest praktiske måten nå.
+men dette er den mest praktiske måten akkurat nå.
 
 Du kan også finne Redox på Reddit:
 [/r/rust/](https://www.reddit.com/r/rust) og
-[/r/redox/](https://www.reddit.com/r/redox). Den ukentlige oppdateringen er lagt ut på den første.
+[/r/redox/](https://www.reddit.com/r/redox). Den ukentlige oppdateringen legges ut på den første.
 
 ## Opførsel
 Vi følger Rusts [regler for god oppførsel](http://www.rust-lang.org/conduct.html).
