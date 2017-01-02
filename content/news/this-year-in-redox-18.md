@@ -45,7 +45,7 @@ The last few months contains several additions:
 
 Since the last news blog post, some other things have happened as well:
 
-- [TFS](https://github.com/ticki/tfs) the upcomming default filesystem of Redox is specified and partially implemented.
+- [TFS](https://github.com/ticki/tfs) the upcoming default filesystem of Redox is specified and partially implemented.
 - We got rustc support.
 - Jeremy quit his job to work full time on Redox.
 
@@ -59,7 +59,7 @@ I created [SeaHash](https://github.com/ticki/tfs/tree/master/seahash), a new non
 
 I created [MLCR](https://github.com/ticki/tfs/tree/master/mlcr), machine learning based caching.
 
-Futhermore, I implemented ADG dependency write caching.
+Furthermore, I implemented ADG dependency write caching.
 
 ## Kernel
 
@@ -77,7 +77,7 @@ These efforts are still incomplete and they're not enabled by default yet.
 
 ## Other fun
 
-Lots of small things have happened as well. These includes full translation of the website, refactoring a lot of things, designing logos etc.
+Lots of small things have happened as well, including a full translation of the website, refactoring a lot of things, designing logos, etc.
 
 # Funding
 
@@ -85,7 +85,7 @@ As said above, Jeremy quit his job to work full-time on Redox. Therefore, fundin
 
 Even small amounts of money can do a big difference. Please consider supporting us [on Patreon](https://www.patreon.com/redox_os).
 
-We are also looking into a more long-term solution such as funding from an university or something like Mozilla Research.
+We are also looking into a more long-term solution such as funding from a university or something like Mozilla Research.
 
 # News Coverage
 
