@@ -7,7 +7,7 @@ date = "2016-12-07T08:26:00-07:00"
 <div class="row install-row">
   <div class="col-md-8">
     <p class="pitch">
-      <b>Redox</b> is een Unix-achtig bestuuringssysteem geschreven in <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>,
+      <b>Redox</b> is een Unix-achtig besturingssysteem geschreven in <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>,
       met als doel om de innovaties van Rust naar een moderne microkernel en een volledige set van applicaties te brengen.
     </p>
   </div>
@@ -21,14 +21,14 @@ date = "2016-12-07T08:26:00-07:00"
   <div class="col-md-6">
     <ul class="laundry-list" style="margin-bottom: 0px;">
       <li>Geïmplementeerd in Rust</li>
-      <li>Microkernel Ontwerk</li>
+      <li>Microkernel Ontwerp</li>
       <li>Bevat een optionele GUI - Orbital</li>
-      <li>Ondersteund de Rust Standard Library</li>
+      <li>Ondersteunt de Rust Standard Library</li>
     </ul>
   </div>
   <div class="col-md-6">
     <ul class="laundry-list">
-      <li>MIT gelicentieerd</li>
+      <li>vrij te gebruiken onder MIT licentie</li>
       <li>Drivers draaien in de Userspace</li>
       <li>Heeft de meest gebruikte Unix commando's</li>
       <li>Newlib port voor C programma's</li>
