@@ -28,7 +28,7 @@ date = "2016-12-07T08:26:00-07:00"
   </div>
   <div class="col-md-6">
     <ul class="laundry-list">
-      <li>MIT gelicentieerd</li>
+      <li>vrij te gebruiken onder MIT licentie</li>
       <li>Drivers draaien in de Userspace</li>
       <li>Heeft de meest gebruikte Unix commando's</li>
       <li>Newlib port voor C programma's</li>
