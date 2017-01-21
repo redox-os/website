@@ -4,7 +4,7 @@ Les ressources du serveur ont été donnés par [DMC Networks](http://dmcnet.net
 
 # Jackpot51
 
-Jackpot51, ou Jeremy Soller, est le créateur, mainteneur, et développeur principal de Redox OS. Comme [décrit ici](https://www.reddit.com/r/rust/comments/5klu34/funding_redox_os_development/), il travaille à temps plein sur Redox.
+Jackpot51, ou Jeremy Soller, est le créateur, mainteneur, et développeur principal de Redox OS.
 
 Vous pouvez faire des donations à Jackpot51 via les solutions suivantes:
 
