@@ -8,7 +8,7 @@ date = "2016-12-07T08:26:00-07:00"
   <div class="col-md-8">
     <p class="pitch">
     <b>Redox</b> ist ein unixartiges Betriebssystem das in <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>
-      geschrieben ist und sich zum Ziel gesetzt hat die Innovationen von Rust in einem modernen Microkernel und einer Fülle von Anwendunge zu vereinen. 
+      geschrieben ist und sich zum Ziel gesetzt hat die Innovationen von Rust in einem modernen Microkernel und einer Fülle von Anwendunge zu vereinen.
     </p>
   </div>
   <div class="col-md-4 install-box">
@@ -38,10 +38,10 @@ date = "2016-12-07T08:26:00-07:00"
 <div class="row features">
   <div class="col-sm-12">
     <div style="font-size: 16px; text-align: center;">
-      Redox unter Orbital (Juni 20, 2016)
+      Redox unter Orbital
     </div>
-    <a href="/img/screenshot.png">
-      <img class="img-responsive" src="/img/screenshot.png"/>
+    <a href="https://i.imgur.com/MJqsqYo.png">
+      <img class="img-responsive" src="https://i.imgur.com/MJqsqYo.png"/>
     </a>
   </div>
 </div>

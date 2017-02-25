@@ -41,10 +41,10 @@ date = "2016-12-07T08:26:00-07:00"
 <div class="row features">
   <div class="col-sm-12">
     <div style="font-size: 16px; text-align: center;">
-      Redox avec Orbital (20 juin 2016)
+      Redox avec Orbital
     </div>
-    <a href="/img/screenshot.png">
-      <img class="img-responsive" src="/img/screenshot.png"/>
+    <a href="https://i.imgur.com/MJqsqYo.png">
+      <img class="img-responsive" src="https://i.imgur.com/MJqsqYo.png"/>
     </a>
   </div>
 </div>
