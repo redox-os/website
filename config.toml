@@ -430,3 +430,36 @@ DefaultContentLanguage = "en"
   weight = 6
   name = "Twitter"
   url = "https://twitter.com/redox_os"
+
+[languages.ru]
+  weight = 13
+  languageName = "Русский"
+  languageCode = "ru-ru"
+[[languages.ru.menu.main]]
+  weight = 0
+  name = "Документация"
+  url = "/docs/"
+[[languages.ru.menu.main]]
+  weight = 1
+  name = "Новости"
+  url = "/news/"
+[[languages.ru.menu.main]]
+  weight = 2
+  name = "Скриншоты"
+  url = "/screens/"
+[[languages.ru.menu.main]]
+  weight = 3
+  name = "Пожертвования"
+  url = "/donate/"
+[[languages.ru.menu.main]]
+  weight = 4
+  name = "Форум"
+  url = "https://discourse.redox-os.org/"
+[[languages.ru.menu.main]]
+  weight = 5
+  name = "GitHub"
+  url = "https://github.com/redox-os/redox"
+[[languages.ru.menu.main]]
+  weight = 6
+  name = "Твиттер"
+  url = "https://twitter.com/redox_os"
