@@ -169,7 +169,7 @@ DefaultContentLanguage = "en"
 
 [languages.it]
   weight = 5
-  languageName = "Italian"
+  languageName = "Italiano"
   languageCode = "it-it"
 [[languages.it.menu.main]]
   weight = 0
@@ -430,3 +430,36 @@ DefaultContentLanguage = "en"
   weight = 6
   name = "Twitter"
   url = "https://twitter.com/redox_os"
+
+[languages.pt]
+    weight = 0
+    languageName = "Português"
+    languageCode = "pt-br"
+[[languages.pt.menu.main]]
+    weight = 0
+    name = "Documentação"
+    url = "/docs/"
+[[languages.pt.menu.main]]
+    weight = 1
+    name = "Notícias"
+    url = "/news/"
+[[languages.pt.menu.main]]
+    weight = 2
+    name = "Capturas de Tela"
+    url = "/screens/"
+[[languages.pt.menu.main]]
+    weight = 3
+    name = "Doações"
+    url = "/donate/"
+[[languages.pt.menu.main]]
+    weight = 4
+    name = "Fórum"
+    url = "https://discourse.redox-os.org/"
+[[languages.pt.menu.main]]
+    weight = 5
+    name = "GitHub"
+    url = "https://github.com/redox-os/redox"
+[[languages.pt.menu.main]]
+    weight = 6
+    name = "Twitter"
+    url = "https://twitter.com/redox_os"
