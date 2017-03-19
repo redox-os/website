@@ -432,7 +432,7 @@ DefaultContentLanguage = "en"
   url = "https://twitter.com/redox_os"
 
 [languages.pt]
-    weight = 0
+    weight = 13
     languageName = "Português"
     languageCode = "pt-br"
 [[languages.pt.menu.main]]
