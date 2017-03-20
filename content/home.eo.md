@@ -29,7 +29,7 @@ date = "2016-12-07T08:26:00-07:00"
   <div class="col-md-6">
     <ul class="laundry-list">
       <li>MIT licenco</li>
-      <li>Ŝoforoj kuri en Userspace</li>
+      <li>Peliloj kuri en Userspace</li>
       <li>Inkluzivas komunaj Unikso komandojn</li>
       <li>Newlib port por C programs</li>
     </ul>
