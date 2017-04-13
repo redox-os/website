@@ -6,11 +6,11 @@ date = "2016-03-25T10:42:20-07:00"
 
 ## Iniziamo
 
-Noi ti consigliamo di iniziare con il libro [Libro](https://doc.redox-os.org/book/), che descrive come installare Redox e come usarlo.
+Noi ti consigliamo di iniziare con il libro [Book](https://doc.redox-os.org/book/), che descrive come installare Redox e come usarlo.
 
 ## Riferimenti
 
-[Libro](https://doc.redox-os.org/book/). Un Libro che descrive il design di Redox.
+[Book](https://doc.redox-os.org/book/). Un Libro che descrive il design di Redox.
 
 [Kernel](https://doc.redox-os.org/kernel/kernel/). Documentazione per il kernel Redox.
 
@@ -21,7 +21,7 @@ Noi ti consigliamo di iniziare con il libro [Libro](https://doc.redox-os.org/boo
 Grazie per il tuo interesse a contriuire a Redox!
 Ci sono molti modi per contribuire e noi li apprezzeremo tutti.
 
-Redox è un rande progetto splamato su molte repo che possoo essere trovate su
+Redox è un grande progetto splamato su molte repo che possoo essere trovate su
 [Organizzazione Redox su GitHub](https://github.com/redox-os). Questo documento,
 [CONTRIBUTING.md](https://github.com/redox-os/redox/blob/master/CONTRIBUTING.md)
 è una guida per i nuovi per aiutarli a contribuire!
@@ -41,4 +41,4 @@ sulla prima pagina.
 
 ## Condotta
 
-Noi seguiamo [Codice di Condotta di Rust](http://www.rust-lang.org/conduct.html)
+Noi seguiamo il [Codice di Condotta di Rust](http://www.rust-lang.org/conduct.html)
