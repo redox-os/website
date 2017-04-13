@@ -8,7 +8,7 @@ date = "2016-12-07T08:26:00-07:00"
   <div class="col-md-8">
     <p class="pitch">
       <b>Redox</b> è un Sistema Operativo Unix-like scritto in <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>,
-      che vorrebbe portare le innovazioni di Rust in un microkernel moderno ed in un pacchetto di applicazioni.
+      con l'obbiettivo di portare le innovazioni di Rust in un microkernel moderno ed in un pacchetto di applicazioni.
     </p>
   </div>
   <div class="col-md-4 install-box">
