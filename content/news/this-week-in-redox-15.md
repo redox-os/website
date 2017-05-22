@@ -6,7 +6,7 @@ date = "2017-05-19T13:16:00+00:00"
 
 This is the 15th post of a series of blog posts tracking the development and progress of Redox, the Rust operating system. If you want to know more about Redox in general, visit our [Github page](https://github.com/redox-os/redox).
 
-With this post we restart the tradition of the weekly report and this one in particular is a catchupand it's a big one! So bear with us please! ;)
+With this post we restart the tradition of the weekly report and this one in particular is a catchup and it's a big one! So bear with us please! ;)
 
 *(edited by goyox86)*
 
@@ -80,7 +80,7 @@ There has been so much work [ion shell](https://github.com/redox-os/ion) that we
 - [@jackpot51](https://github.com/jackpot51) implemented `path` for the e1000d and ahcid drivers.
 - [@kaedroho](https://github.com/kaedroho) migrated pcid from rustc-serialize to serde. He also added a few new keymaps to ps2d.
 
-## Core Utils
+## Coreutils
 
 - [@Mojo4242](https://github.com/Mojo4242) added  support for stdin and stdout to `dd`. Details [here](https://github.com/redox-os/coreutils/pull/134)
 - [@DaanHoogland](https://github.com/DaanHoogland) added recursion support to `mv`. Details [here](https://github.com/redox-os/coreutils/pull/135)
@@ -101,7 +101,7 @@ There has been so much work [ion shell](https://github.com/redox-os/ion) that we
 
 There has been enough work done in TFS that we added this section in this edition so you can have an idea about how the progress is going there.
 
-First of all: Great news! [@ticky](https://github.com/ticki) has been working on many aspects of TFS and he considers that it is pretty near to functional. One of the great things is that as a product of this work several crates with interesting data structures and algorithms were created:
+First of all: Great news! [@ticki](https://github.com/ticki) has been working on many aspects of TFS and he considers that it is pretty near to functional. One of the great things is that as a product of this work several crates with interesting data structures and algorithms were created:
 
 - [chashmap](https://github.com/redox-os/tfs/tree/master/chashmap) - Concurrent hashmaps.
 - [cbloom](https://github.com/redox-os/tfs/tree/master/cbloom) - Concurrent bloom filters.
@@ -116,7 +116,7 @@ First of all: Great news! [@ticky](https://github.com/ticki) has been working on
 - There is a specification document.
 - A bunch of blog posts on design: https://github.com/redox-os/tfs#resources-on-design.
 
-And according [@ticky](https://github.com/ticki) there's a ton of interesting things to write about, and eventually he will be doing an in-depth blog post about them.
+And according [@ticki](https://github.com/ticki) there's a ton of interesting things to write about, and eventually he will be doing an in-depth blog post about them.
 
 ## Package Management
 
