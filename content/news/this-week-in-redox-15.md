@@ -156,10 +156,18 @@ Since the list of contributors are growing too fast, we'll now only list the new
 
 Sorted in alphabetical order.
 
-- craftytrickster 🎂
-- dalance  🎂
-- nilset 🎂
-- tpitale 🎂
-- wesleywiser 🎂
+- Abdel-Rahman 🎂
+- Adrian Neumann 🎂
+- Aurélien DESBRIÈRES 🎂
+- Clint Byrum 🎂
+- Ian Douglas Scott 🎂
+- Konrad Lipner 🎂
+- Michael Köppl 🎂
+- Niklas Claesson 🎂
+- Petr 🎂
+- Richard Dodd 🎂
+- bjorn3 🎂
+- equal-l2 🎂
+- n0npax 🎂
 
 If I missed something, feel free to contact me (Ticki) or send a PR to [Redox website](https://github.com/redox-os/website).
