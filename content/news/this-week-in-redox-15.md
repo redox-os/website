@@ -26,7 +26,7 @@ If you have any questions, ideas, or are curious about Redox, we recommend joini
 
 - [@pi-pi3](https://github.com/pi-pi3) has improved the performance of `memcpy()` family of functions.
 
-- [@CWood1](https://github.com/CWood1) has been working improving ACPI support.
+- [@CWood1](https://github.com/CWood1) has been working on adding AML support for the ACPI subsystem.
  
 - [@InsidiousMind](https://github.com/InsidiousMind) did some work on the PIT (Programmable interval timer). Now the PIT interrupt properly context switches fixing crashes in the kernel.
 
