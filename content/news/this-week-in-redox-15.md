@@ -105,7 +105,7 @@ First of all: Great news! [@ticki](https://github.com/ticki) has been working on
 
 - [chashmap](https://github.com/redox-os/tfs/tree/master/chashmap) - Concurrent hashmaps.
 - [cbloom](https://github.com/redox-os/tfs/tree/master/cbloom) - Concurrent bloom filters.
-[lz4](https://github.com/redox-os/tfs/tree/master/lz4) - An implementation of lz4
+- [lz4](https://github.com/redox-os/tfs/tree/master/lz4) - An implementation of lz4.
 - [speck](https://github.com/redox-os/tfs/tree/master/speck) - An implementation of SPECK cipher.
 - [tm](https://github.com/redox-os/tfs/tree/master/tm) - transactional memory.
 - [atomic-hashmap](https://github.com/redox-os/tfs/tree/master/atomic-hashmap) - Atomic hashmaps (you can read the [blog post](http://ticki.github.io/blog/an-atomic-hash-table/)).
@@ -120,7 +120,7 @@ And according [@ticki](https://github.com/ticki) there's a ton of interesting th
 
 ## Package Management
 
-There has been a ton of work on this topic specially on the (pkgutils)[https://github.com/redox-os/pkgutils]. RedoxOS packaging utilities and in the [cookbook](https://github.com/redox-os/cookbook) the collection of package recipes.
+There has been a ton of work on this topic specially on the (pkgutils)[https://github.com/redox-os/pkgutils]. Redox OS packaging utilities and in the [cookbook](https://github.com/redox-os/cookbook) the collection of package recipes.
 
 - [@ids1024](https://github.com/ids1024) migrated `pkg` to Hyper. Details [here](https://github.com/redox-os/pkgutils/pull/1).
 - [@ids1024](https://github.com/ids1024) made `pkg` able to install packages from a given path. Details [here](https://github.com/redox-os/pkgutils/pull/3).
