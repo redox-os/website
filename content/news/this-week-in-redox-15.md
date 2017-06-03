@@ -1,10 +1,10 @@
 +++
-title = "This Week in Redox 15"
+title = "This Week in Redox 20"
 author = "goyox86"
 date = "2017-05-19T13:16:00+00:00"
 +++
 
-This is the 15th post of a series of blog posts tracking the development and progress of Redox, the Rust operating system. If you want to know more about Redox in general, visit our [Github page](https://github.com/redox-os/redox).
+This is the 20th post of a series of blog posts tracking the development and progress of Redox, the Rust operating system. If you want to know more about Redox in general, visit our [Github page](https://github.com/redox-os/redox).
 
 With this post we restart the tradition of the weekly report and this one in particular is a catchup and it's a big one! So bear with us please! ;)
 
@@ -136,12 +136,11 @@ There has been a ton of work on this topic specially on the (pkgutils)[https://g
 
 1. [The Glorious Book](https://doc.redox-os.org/book/)
 2. [The Holiest Forum](https://discourse.redox-os.org/)
-3. [The Shiny ISOs](https://static.redox-os.org/)
+3. [The Shiny ISOs](https://github.com/redox-os/redox/releases)
 4. [Redocs](http://www.redox-os.org/docs/)
 5. [Fancy GitHub organization](https://github.com/redox-os)
 6. [Our Holy Grail of a Website](http://www.redox-os.org/)
-7. [Our Nice Code of Conduct](http://www.redox-os.org/coc/)
-8. [The Extreme Screenshots](http://www.redox-os.org/screens/)
+7. [The Extreme Screenshots](http://www.redox-os.org/screens/)
 
 # New contributors
 
