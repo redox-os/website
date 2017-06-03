@@ -143,13 +143,6 @@ There has been a ton of work on this topic specially on the (pkgutils)[https://g
 7. [Our Nice Code of Conduct](http://www.redox-os.org/coc/)
 8. [The Extreme Screenshots](http://www.redox-os.org/screens/)
 
-# What's next?
-
-- Use ralloc by default.
-- Switch to Cake.
-- Writable ZFS.
-- Extend the book.
-
 # New contributors
 
 Since the list of contributors are growing too fast, we'll now only list the new contributors. This might change in the future.
