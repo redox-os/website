@@ -120,7 +120,7 @@ And according [@ticki](https://github.com/ticki) there's a ton of interesting th
 
 ## Package Management
 
-There has been a ton of work on this topic specially on the (pkgutils)[https://github.com/redox-os/pkgutils]. Redox OS packaging utilities and in the [cookbook](https://github.com/redox-os/cookbook) the collection of package recipes.
+There has been a ton of work on this topic specially on the [pkgutils](https://github.com/redox-os/pkgutils). Redox OS packaging utilities and in the [cookbook](https://github.com/redox-os/cookbook) the collection of package recipes.
 
 - [@ids1024](https://github.com/ids1024) migrated `pkg` to Hyper. Details [here](https://github.com/redox-os/pkgutils/pull/1).
 - [@ids1024](https://github.com/ids1024) made `pkg` able to install packages from a given path. Details [here](https://github.com/redox-os/pkgutils/pull/3).
