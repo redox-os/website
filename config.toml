@@ -496,3 +496,36 @@ DefaultContentLanguage = "en"
     weight = 6
     name = "Twitter"
     url = "https://twitter.com/redox_os"
+
+[languages.jp]
+  weight = 15
+  languageName = "日本語"
+  languageCode = "jp-JP"
+[[languages.jp.menu.main]]
+  weight = 0
+  name = "ドキュメント"
+  url = "/docs/"
+[[languages.jp.menu.main]]
+  weight = 1
+  name = "最新情報"
+  url = "/news/"
+[[languages.jp.menu.main]]
+  weight = 2
+  name = "スクリーンショット"
+  url = "/screens/"
+[[languages.jp.menu.main]]
+  weight = 3
+  name = "寄付"
+  url = "/donate/"
+[[languages.jp.menu.main]]
+  weight = 4
+  name = "フォーラム"
+  url = "https://discourse.redox-os.org/"
+[[languages.jp.menu.main]]
+  weight = 5
+  name = "GitHub"
+  url = "https://github.com/redox-os/redox"
+[[languages.jp.menu.main]]
+  weight = 6
+  name = "Twitter"
+  url = "https://twitter.com/redox_os"
