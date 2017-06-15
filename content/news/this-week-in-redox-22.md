@@ -13,13 +13,13 @@ If you have any questions, ideas, or are curious about Redox, we recommend joini
 
 # TL;DR
 
-We are adding this section just in case you want to have quick overview of what happened during the week without going into the glorious details. 
+We are adding this section just in case you want to have quick overview of what happened during the week without going into the glorious details.
 
-So let's get started! 
+So let's get started!
 
 In **kernel** land initial support for symbol lookup and symbol name demangling were added both of which should make the traces more readable and kernel debugging a bit easier. **Ion** got a better implementation of globs parsing. Also in **Ion** indexing arrays with negative indices is now supported. **TFS** has added support for ATA trimming! But without a doubt the star of this week is the addition of a **Rust** package into the cookbook. Yes you can do a `pkg install rust` from the console within Redox! The new rust package aims to simplify the development experience and also paves the way for make Redox self-hosting!
 
-# What's new in Redox? 
+# What's new in Redox?
 
 ## Kernel
 
@@ -50,6 +50,11 @@ In **kernel** land initial support for symbol lookup and symbol name demangling 
 - [@ticki](https://github.com/ticki) Added more tests to  the destructors in `conc::sync::Treiber`. See [here](https://github.com/redox-os/tfs/commit/75466b3722f5442e26f73b597c2c037d897216be), [here](https://github.com/redox-os/tfs/commit/c7c79f8ff635211e4d3b2eac6a9d08a6e3604752) and [here](https://github.com/redox-os/tfs/commit/51bab5cf9bc6ac200c64ef6c9cbe871d405a32a8) for details.
 - [@ticki](https://github.com/ticki) Extended the `conc::sync::Treiber` docs. See [here](https://github.com/redox-os/tfs/commit/6fdacfdc8908f37376039c32558e3a02cbf0c147) and [here](https://github.com/redox-os/tfs/commit/1bef4d3cb365f98f188a3c1ae50b4266b99e0d87).
 
+## Netutils & Netstack
+
+- [@batonius](https://github.com/batonius) Added support for ICMP to the network stack. Details [here](https://github.com/redox-os/netstack/pull/1).
+- [@batonius](https://github.com/batonius) Added the `ping` utility. See [here](https://github.com/redox-os/netutils/pull/21).
+
 ## Package Management
 
 Work on this topic continues specially on the [cookbook](https://github.com/redox-os/cookbook) the collection of package recipes of Redox. With special highlight that thanks to the hard work of [@ids1024](https://github.com/ids1024) We have a `rustc` and now you can do `pkg install rust`! This will simplify the development experience significantly and also paves the way for make Redox self-hosting!
@@ -75,5 +80,6 @@ Sorted in alphabetical order.
 
 - Egor Karavaev 🎂
 - mgmoens 🎂
+- baton 🎂
 
 If I missed something, feel free to contact me (goyox86) or send a PR to [Redox website](https://github.com/redox-os/website).
