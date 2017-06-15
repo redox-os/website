@@ -17,7 +17,7 @@ We are adding this section just in case you want to have quick overview of what 
 
 So let's get started!
 
-In **kernel** land initial support for symbol lookup and symbol name demangling were added both of which should make the traces more readable and kernel debugging a bit easier. **Ion** got a better implementation of globs parsing. Also in **Ion** indexing arrays with negative indices is now supported. **TFS** has added support for ATA trimming! But without a doubt the star of this week is the addition of a **Rust** package into the cookbook. Yes you can do a `pkg install rust` from the console within Redox! The new rust package aims to simplify the development experience and also paves the way for make Redox self-hosting!
+In **kernel** land initial support for symbol lookup and symbol name demangling were added both of which should make the traces more readable and kernel debugging a bit easier. **Ion** got a better implementation of globs parsing. Also in **Ion** indexing arrays with negative indices is now supported. The `ping` utility was added to netutils and the network stack supports ICMP. Work on **TFS** continues and support for ATA trimming was recently added! But without a doubt the star of this week is the addition of a **Rust** package into the cookbook. Yes! you can do a `pkg install rust` from the console within Redox! The new rust package aims to simplify the development experience and also paves the way for make Redox self-hosting!
 
 # What's new in Redox?
 
