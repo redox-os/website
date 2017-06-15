@@ -16,7 +16,7 @@ If you have any questions, ideas, or are curious about Redox, we recommend joini
 ## Kernel
 
 - [@ids1024](https://github.com/ids1024) Updated to the new std::ptr API.  Details [here](https://github.com/redox-os/kernel/pull/21).
-- [@jackpot51](https://github.com/jackpot51) Added some fixes on process syscalls to avoid substract overflows. Details [here](https://github.com/redox-os/kernel/commit/8d899258424f121df196ef38f2d3988e59339828).
+- [@jackpot51](https://github.com/jackpot51) Added some fixes on process syscalls to avoid subtract overflows. Details [here](https://github.com/redox-os/kernel/commit/8d899258424f121df196ef38f2d3988e59339828).
 
 ## Ion
 
