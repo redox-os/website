@@ -529,3 +529,36 @@ DefaultContentLanguage = "en"
   weight = 6
   name = "Twitter"
   url = "https://twitter.com/redox_os"
+
+[languages.ko]
+  weight = 16
+  languageName = "한국어"
+  languageCode = "ko"
+[[languages.ko.menu.main]]
+  weight = 0
+  name = "문서"
+  url = "/docs/"
+[[languages.ko.menu.main]]
+  weight = 1
+  name = "공지사항"
+  url = "/news/"
+[[languages.ko.menu.main]]
+  weight = 2
+  name = "스크린샷"
+  url = "/screens/"
+[[languages.ko.menu.main]]
+  weight = 3
+  name = "후원하기"
+  url = "/donate/"
+[[languages.ko.menu.main]]
+  weight = 4
+  name = "포럼"
+  url = "https://discourse.redox-os.org/"
+[[languages.ko.menu.main]]
+  weight = 5
+  name = "GitHub"
+  url = "https://github.com/redox-os/redox"
+[[languages.ko.menu.main]]
+  weight = 6
+  name = "트위터"
+  url = "https://twitter.com/redox_os"
