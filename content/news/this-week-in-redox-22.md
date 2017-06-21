@@ -39,7 +39,7 @@ In **kernel** land initial support for symbol lookup and symbol name demangling 
 
 ## TFS
 
-[TFS](github.com/redox-os/tfs) is a modular, fast, and feature rich next-gen file system, employing modern techniques for high performance, high space efficiency, and high scalability.
+[TFS](https://github.com/redox-os/tfs) is a modular, fast, and feature rich next-gen file system, employing modern techniques for high performance, high space efficiency, and high scalability.
 
 - [@ticki](https://github.com/ticki) Added ATA trim support. Details [here](https://github.com/redox-os/tfs/commit/bce6ea1e608094197ee8a41004d358d26bf92004).
 - [@ticki](https://github.com/ticki) Add destructor to `conc::sync::Treiber` that runs dtor on every item. Details [here](https://github.com/redox-os/tfs/commit/943aa06463dc81294f33d807cc1eb5c2bac5ca88).
