@@ -27,7 +27,7 @@ As a result, it is possible to compile some C software from inside Redox; I have
 
 # Limitations
 
-I had to disable procedural macros to get Rustc to compile, since those rely on `dlopen()` which Redox does not yet provide. I don't think that is an issue from libstd itself, but it will be an issue later on. For instance, Redox uses serde in at least one place.
+I had to disable procedural macros to get Rustc to compile, since those rely on `dlopen()` which Redox does not yet provide. I don't think that is an issue for libstd itself, but it will be an issue later on. For instance, Redox uses serde in at least one place.
 
 Porting has required various hacks around functionality or C library functions not (yet) provided by Redox, some of which may cause issues. For instance, I've had to comment out a lot of code involving signals. That should be implemented in Redox at some point though.
 
