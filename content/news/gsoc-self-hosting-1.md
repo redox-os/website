@@ -57,4 +57,4 @@ And if I manage to finish this all before the end of the Google Summer of Code, 
 
 # When Can I Try This Out?
 
-It should be possible to install and run Rustc and GCC in the next release of Redox; which should be soon, although there is still an issue of two blocking release.
+It should be possible to install and run Rustc and GCC in the next release of Redox; which should happen soon, although there is still an issue or two blocking release.
