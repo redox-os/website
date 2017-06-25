@@ -17,6 +17,8 @@ The way Redox is built has changed, mainly by two things. First, a new Docker ba
 
 [@ids1024](https://github.com/ids1024) wrote the first GSoC [status report](https://redox-os.org/news/gsoc-self-hosting-1/) on the self-hosting effort. Feel free to take a look, exciting stuff!
 
+We have a new [Mastodon account](https://icosahedron.website/@redox_os)!
+
 This week we start the code by going trough the **bootloader** which can now read RedoxFS partitions meaning that the kernel can be now in the filesystem. In the **kernel** the big news is the addition of an AML tables parser and the re-enabling of preemption. **Drivers** land got more work from [@TheSchemm](https://github.com/TheSchemm) and the Intel HDA audio driver was refactored and now supports QEMU. The **Ion** folks were pretty busy too! They added support to *emacs* and *vi* key bindings, optionally-typed function parameters, implicit `cd`, multiple assigments, `length` methods for strings. Also **Ion's** `calc` command now supports a bunch more bitwise operations. All of that without mentioning a ton of fixes and refactoring! On the **TFS** side of things [@ticki](https://github.com/ticki) had a fun week sponsored by silent type coercions and deadlocks in jemalloc, but despite those bugs (which are now fixed), work in garbage collection was done. The **Netstack**'s TCP daemon got few fixes that were affecting HTTPS in cURL. The **cookbook** saw the addition of a `ca-certificates` recipe and `tar.gz` is now used in all packages in both the **cookbook** and **pkgutils**. Something that is super exciting is the progress made by [@ids1024](https://github.com/ids1024) on the `cargo` recipe <3. Last but not least we have a new login screen background!
 
 # What's new in Redox?
