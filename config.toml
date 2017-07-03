@@ -562,3 +562,36 @@ DefaultContentLanguage = "en"
   weight = 6
   name = "트위터"
   url = "https://twitter.com/redox_os"
+
+[languages.hu]
+  weight = 17
+  languageName = "Magyar"
+  languageCode = "hu-hu"
+[[languages.hu.menu.main]]
+  weight = 0
+  name = "Dokumentáció"
+  url = "/docs/"
+[[languages.hu.menu.main]]
+  weight = 1
+  name = "Hírek"
+  url = "/news/"
+[[languages.hu.menu.main]]
+  weight = 2
+  name = "Képernyőképek"
+  url = "/screens/"
+[[languages.hu.menu.main]]
+  weight = 3
+  name = "Adakozás"
+  url = "/donate/"
+[[languages.hu.menu.main]]
+  weight = 4
+  name = "Fórum"
+  url = "https://discourse.redox-os.org/"
+[[languages.hu.menu.main]]
+  weight = 5
+  name = "GitHub"
+  url = "https://github.com/redox-os/redox"
+[[languages.hu.menu.main]]
+  weight = 6
+  name = "Twitter"
+  url = "https://twitter.com/redox_os"
