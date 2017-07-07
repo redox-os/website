@@ -17,11 +17,11 @@ Welcome to another edition of "This Week in Rust"! Without no further preamble l
 
 Starting with the **kernel** land [@jackpot51](https://github.com/jackpot51) started work on signals as this is needed for one of `cargo`'s dependencies. Also  [@ids1024](https://github.com/ids1024) Implemented the `getppid` system call. There was not much activity on the **drivers** side of things, only a fix for seek flags handling on the Intel HDA audio driver by [@xTibor](https://github.com/xTibor).
 
-The folks of **Ion** specially [@huntergoldstein](https://github.com/huntergoldstein) have been on fire! Shipping a ton of stuff: adding sub-expressions,  convenience methods `@graphemes(..)`, `@bytes(..)` and `@chars(..)` supporting different ways of iterating strings. Also, the addition of a really nice match-case construct to the grammar. [@mmstick](https://github.com/mmstick) along with [@myfreeweb](https://github.com/myfreeweb) have been working on **Ion**'s job control facility on things like adding support for `SIGTERM` and `SIGTSTP`, the addition of a `fg` builtin and more.
+The folks of **Ion** specially [@huntergoldstein](https://github.com/huntergoldstein) have been on fire! Shipping a ton of stuff: adding sub-expressions, convenience methods `@graphemes(..)`, `@bytes(..)` and `@chars(..)` supporting different ways of iterating strings. Also, the addition of a really nice match-case construct to the grammar. [@mmstick](https://github.com/mmstick) along with [@myfreeweb](https://github.com/myfreeweb) have been working on **Ion**'s job control facility on things like adding support for process groups, handling of `SIGTERM` and `SIGTSTP` and the addition of `bg`, `wait` and `jobs` builtin commands.
 
-On **TFS**  [@ticki](https://github.com/ticki) reenabled jemalloc as it was not the cause of this [bug](https://github.com/redox-os/tfs/issues/53). Something worth to mention is  that we are currently having a sneaky  segfault in one of the `conc::sync::treiber` tests, maybe *you* reading this have the fix and we don't now it!? ;) Jump in!
+On **TFS**  [@ticki](https://github.com/ticki) reenabled jemalloc as it was not the cause of this [bug](https://github.com/redox-os/tfs/issues/53). Something worth to mention is that we are currently having a sneaky segfault in one of the `conc::sync::treiber` tests, maybe *you* reading this have the fix and we don't now it!? ;) Jump in!
 
-What about **coreutils**? Well, the `uptime` and `readlink` commands were added as well as a bunch of fixes and improvements for `stat`. **netutils**'s `httpd` was switched to the [Hyper](https://github.com/hyperium/hyper) crate and the **cookbook** has seen the birth of a Python language recipe! And in **pkgutils** the `pkg` continues to evolve steadily. Where you wondering what [@jackpot51](https://github.com/jackpot51) has been doing? The answer is: starting the work on UEFI support! You can take a look [here](https://github.com/redox-os/uefi) and [https://github.com/redox-os/uefi_alloc](here). Rust `libstd` support for UEFI? Well [here](https://github.com/system76/rust/tree/efi) (WIP though). And last but not least  [@ids1024](https://github.com/ids1024) continues his work on GSoC trying to make Redox self-hosting!
+What about **coreutils**? Well, the `uptime` and `readlink` commands were added as well as a bunch of fixes and improvements for `stat`. **netutils**'s `httpd` was switched to the [Hyper](https://github.com/hyperium/hyper) crate and the **cookbook** has seen the birth of a Python language recipe by [@ids1024](https://github.com/ids1024). In **pkgutils** the `pkg` continues to evolve steadily. Where you wondering what [@jackpot51](https://github.com/jackpot51) has been doing? The answer is: starting the work on UEFI support! You can take a look [here](https://github.com/redox-os/uefi) and [here](https://github.com/redox-os/uefi_alloc). Rust `libstd` support for UEFI? Yes [that too!](https://github.com/system76/rust/tree/efi) (WIP though). And last but not least [@ids1024](https://github.com/ids1024) continues his work on GSoC trying to make Redox self-hosting! Notably his work on adding symlinks support to **redoxfs**.
 
 # What's new in Redox?
 
@@ -56,7 +56,7 @@ What about **coreutils**? Well, the `uptime` and `readlink` commands were added 
 - [@huntergoldstein](https://github.com/huntergoldstein) Forced `run_examples.sh` to use project root as working directory. Details [here](https://github.com/redox-os/ion/pull/357).
 - [@jwbowen](https://github.com/jwbowen) Updated the minimum `rustc` version requirement. Details [here](https://github.com/redox-os/ion/pull/360).
 - [@mmstick](https://github.com/mmstick) Implemented SIGTSTP (Ctrl+Z) handling and wait/jobs/bg builtins. Details [here](https://github.com/redox-os/ion/commit/d9506aa6c8a7851981547736161a168ccf0ad69b).
-- [@mmstick](https://github.com/mmstick) Implemented `fg`. Details [here](https://github.com/redox-os/ion/commit/c38bf3598e8037e8268024d36c049433ce47886a).
+- [@mmstick](https://github.com/mmstick) Started the work on `fg`. Details [here](https://github.com/redox-os/ion/commit/c38bf3598e8037e8268024d36c049433ce47886a).
 - [@myfreeweb](https://github.com/myfreeweb) Added more work on job control and fixed a pid bug. Details [here](https://github.com/redox-os/ion/pull/362).
 - [@mmstick](https://github.com/mmstick) Added support for monitoring child with `waitpid` and forking shell with with background jobs. Details [here](https://github.com/redox-os/ion/commit/4bae77d2df58dbf58cbedc9b33f5197851635bcb).
 - [@mmstick](https://github.com/mmstick) Did some work on storing configurations in the correct XDG app dir. Details [here](https://github.com/redox-os/ion/pull/362).
@@ -66,6 +66,10 @@ What about **coreutils**? Well, the `uptime` and `readlink` commands were added 
 ## Drivers
 
 - [@xTibor](https://github.com/xTibor) Fixed seek flags in the Intel HDA Audio driver. Details [here](https://github.com/redox-os/drivers/pull/17).
+
+## Redoxfs
+
+- [@ids1024](https://github.com/ids1024) Implemented symbolic links. Details [here](https://github.com/redox-os/redoxfs/pull/18), [here](https://github.com/redox-os/redoxfs/pull/19), [here](https://github.com/redox-os/redoxfs/pull/20), [here](https://github.com/redox-os/redoxfs/pull/21) and [here](https://github.com/redox-os/redoxfs/pull/22).
 
 ## TFS
 
