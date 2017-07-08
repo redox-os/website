@@ -13,7 +13,7 @@ If you have any questions, ideas, or are curious about Redox, we recommend joini
 
 # TL;DR
 
-Welcome to another edition of "This Week in Rust"! Without no further preamble let's dive in!
+Welcome to another edition of "This Week in Redox"! Without further preamble let's dive in!
 
 Starting with the **kernel** land [@jackpot51](https://github.com/jackpot51) started work on signals as this is needed for one of `cargo`'s dependencies. Also  [@ids1024](https://github.com/ids1024) Implemented the `getppid` system call. There was not much activity on the **drivers** side of things, only a fix for seek flags handling on the Intel HDA audio driver by [@xTibor](https://github.com/xTibor).
 
