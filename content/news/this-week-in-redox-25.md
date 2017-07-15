@@ -16,7 +16,9 @@ If you have any questions, ideas, or are curious about Redox, we recommend joini
 
 ## TL;DR
 
-Big news this week: We released **0.3.0**! Go read the [announcement](link here..)! Now to this weeks summary: We shipped a couple of changes to the bootstrap script and the cookbook that should make the on-boarding on macOS smooth again. Go ahead try and give us feedback <3.
+Big news this week: We released **0.3.0**.It is a big release including many improvements notably the Cookbook based build system and a new ACPI stack. Go read the [announcement](https://github.com/redox-os/redox/releases/tag/0.3.0)!
+
+Now to this weeks summary: We shipped a couple of changes to the bootstrap script and the cookbook that should make the on-boarding on macOS smooth again. Go ahead try and give us feedback <3.
 
 The **kernel** was very active this week, particularly with the landing of the initial support for signals by [@jackpot51](https://github.com/jackpot51)! Also, a new API for specifying custom memory allocators and changes in the `alloc` crate API landed in nightly so the kernel had to be updated. Mr [@CWood1](https://github.com/CWood1) added an HPET (High Precision Event Time) driver to the kernel and also moved the PIT (Programmable Interval Timer) driver from the bootloader to the kernel as part of his ongoing work on ACPI. [@ids1024](https://github.com/ids1024) shipped some fixes to kernel's `dup2()` and `exec()` too. 
 
