@@ -1,5 +1,5 @@
 +++
-title = "Home"
+title = "Strona Główna"
 url = "/home"
 author = "Jackpot51"
 date = "2016-12-07T08:26:00-07:00"
@@ -7,7 +7,7 @@ date = "2016-12-07T08:26:00-07:00"
 <div class="row install-row">
   <div class="col-md-8">
     <p class="pitch">
-      <b>Redox</b> jest uniksopodobmym systemem operacyjnym napisanym w języku <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>, którego założeniem jest połączenie innowacji tego języka z architekturą mikrojądra i pełnym zestawem aplikacji..
+      <b>Redox</b> jest uniksopodobmym systemem operacyjnym napisanym w języku <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>, którego założeniem jest połączenie innowacji tego języka z architekturą mikrojądra i pełnym zestawem aplikacji.
     </p>
   </div>
   <div class="col-md-4 install-box">
