@@ -16,28 +16,34 @@ If you have any questions, ideas, or are curious about Redox, we recommend joini
 
 ## TL;DR
 
-Hello again! Buckle up because this is gonna be a long one.  That said, we better go start!
+Welcome back to a new edition of TWiR! We have a lot to share this time so let's get started!
 
-On the **kernel** a reset facility has been added by [@jackpot51](https://github.com/jackpot51), along with the addition of `uname` support by  [@ids1024](https://github.com/ids1024). There were also some fixes for pipes and the addition of `iopl`.  
+A new reset facility and `iopl` support were added by [@jackpot51](https://github.com/jackpot51) to the **kernel**  along the `uname` infrastructure done by  [@ids1024](https://github.com/ids1024) who also shipped a couple of fixes for pipes.
 
-**Ion** continues it's steady progress, I mean it continues of fire! This week we have a new contributor [@drosseau](https://github.com/drosseau) who shipped a ton of fixes, features and refactoring, fixing `echo`, some bugs on `||` and `&&` and some bugs in ranges syntax. [@drosseau](https://github.com/drosseau). All of that along with new features such as the `not` builtin and some general refactoring. Impressive right? As usual [@mmstick](https://github.com/mmstick) has been very busy, one of the highlights being the landing of the initial work on the new user manual based on *mdBook* How cool is that? He also continued his work on job control and did many bug fixes and refactoring. [@huntergoldstein](https://github.com/huntergoldstein) working hard too! Adding support for inline expressions in methods,  making case statements implicitly ended and some other goodies!
+**Ion** continues on fire! Gaining a new contributor this week: [@drosseau](https://github.com/drosseau) who shipped a ton of stuff including fixes for `echo`, comparison operators and the range syntax. All of that with new features like the `not` builtin as well as some general refactoring. Well done!
 
-On the **drivers** side of the world there was not much activity besides some improvements to the network drivers configuration and the splitting of  `pcid` config into `initfs` and `fs` by [@jackpot51](https://github.com/jackpot51). 
+[@mmstick](https://github.com/mmstick) has been also very busy this week with the starting the new **Ion**'s user manual. He also improved the recently added job control in conjunction with many bug fixes and refactorings.
 
-As part of his GSoC  [@ids1024](https://github.com/ids1024)  did some work on **Redoxfs** notably preventing the failure due to file permissions on creation and a fix to require the same `uid` as owner to `unlink` and  not write permissions.
+**Ion** also received love from [@huntergoldstein](https://github.com/huntergoldstein) who added support for inline expressions in methods and  made case statements implicitly ended.
 
-What about **TFS** ? Well [@ticki](https://github.com/ticki) was on fire this week! Mostly hardening and extending the test suite for the various concurrent data structure libraries he is creating as the base for **TFS**, AKA `conc`. He even found a segfault in safe code in `conc::hazard::Hazard`. See [here](https://github.com/redox-os/tfs/commit/b7e7983542bd7e830d46ee3535c4324b056c4270) for details. But to be honest I don't think I'm honouring all the work I saw while looking at the commit history. So go there yourself ;)
+On the land of the **drivers** there was not much activity. Some improvements to the network drivers configuration and the splitting of `pcid`s configuration into `initfs`/`fs` by [@jackpot51](https://github.com/jackpot51).
 
-**Coreutils** progressed too with the addition of a reset flag to `shutdown` by [@jackpot51](https://github.com/jackpot51) exposing the rest work done in the **kernel**.  [@goyox86](https://github.com/goyox86) extracted the `ArgParser` to it's own library and migrated `coreutils` to it. [@ids1024](https://github.com/ids1024) Added the `uname` utility and fixed `rm` and `which`. Related to this is the work done in **userutils** where [@goyox86](https://github.com/goyox86) reimplemented `whoami` and `id` again on top of system calls, adding docs for all of the utilities and applied all `coreutils` conventions there too.
+As part of his GSoC  [@ids1024](https://github.com/ids1024)  did some work on **Redoxfs** such as preventing permission related failures on file creation as well as a fix to `unlink` (also related to permission handling).
 
-On the **netstack** - [@jackpot51](https://github.com/jackpot51) trimmed the network configuration while [@ids1024](https://github.com/ids1024) corrected `fpath()` for `tcpd`and fixed a bug in `tcpd`s partial reads that was breaking https in `curl`.
+What about **TFS** ? Well, [@ticki](https://github.com/ticki) was on fire this week! Mostly hardening the test suite of the various concurrent data structure libraries that are the base of **TFS**. He even found a segfault in `conc::hazard::Hazard`'s safe code. But to be honest, I don't think I'm honouring all the work I saw while looking at the commit history. So, go ahead and check yourself ;)
 
-The **cookbook** was not as active in past weeks with some fixes to `pastel` by  [@jackpot51](https://github.com/jackpot51) and the hard work of [@ids1024](https://github.com/ids1024) on the `git` support.
+**Coreutils** also progressed with the addition of a `--reset` flag to `shutdown` by [@jackpot51](https://github.com/jackpot51).  [@goyox86](https://github.com/goyox86) extracted the `ArgParser` to it's own library and migrated `coreutils` and `userutils` to it. [@ids1024](https://github.com/ids1024) added the `uname` utility and shipped fixes for both `rm` and `which`.
 
-Last but not least **Orbital** the composition and windowing manager received some love from [@jackpot51](https://github.com/jackpot51) highlighting the addition of left side and bottom left corner resizing and the landing of the initial work on a new event based method. 
+[@goyox86](https://github.com/goyox86) tried to improve overall quality of by reimplementing `whoami` and `id` from scratch using system calls (previous implementations relied on environment vars). He also added docs for all of the user utilities and applied most of the recent `coreutils` code conventions there.
 
-Phew, that was a lot, and is just the "summary" xD Sorry by that! <3
- 
+On the **netstack** [@jackpot51](https://github.com/jackpot51) trimmed the network configuration while [@ids1024](https://github.com/ids1024) corrected `fpath()` implementation on `tcpd` and fixed a bug in `tcpd` responsible of the breakage HTTPS in `curl`.
+
+The **cookbook** was not as active as in past weeks only with some fixes to the `pastel` recipe and all the hard work from [@ids1024](https://github.com/ids1024) on the `git`.
+
+Last but not least **Orbital** Redox's composition and windowing manager received some attention from [@jackpot51](https://github.com/jackpot51) resulting on the addition of left corner resizing and the starting of a new event based method.
+
+Phew! That was a lot, thanks for staying tuned!
+
 ## Kernel
 
 - [@jackpot51](https://github.com/jackpot51) Added reset code. Details [here](https://github.com/redox-os/kernel/commit/b4d502c7639f54be0c4c27e7c86c6396dc617c5d).
@@ -103,9 +109,9 @@ Phew, that was a lot, and is just the "summary" xD Sorry by that! <3
 - [@ticki](https://github.com/ticki) Added a test for debug assertions in `conc`. Details [here](https://github.com/redox-os/tfs/commit/b39d66790019bf1b1a7d95e266b77e835bb32c73).
 - [@ticki](https://github.com/ticki) Documented how `conc::Atomic` is represented. Details [here](https://github.com/redox-os/tfs/commit/50841d456956c362169fdc3db6b4ed56a1fe0e6b).
 - [@ticki](https://github.com/ticki) Added `conc::sync::Treiber::top()` for getting the top item of the stack w/o popping. Details [here](https://github.com/redox-os/tfs/commit/58fe7ee6c9c00650c5991482409ad607637f37c7).
-- [@ticki](https://github.com/ticki) After reverted `conc::sync::Treiber::top()` as it was unsound as it could cause double drop.  Details [here](https://github.com/redox-os/tfs/commit/9b40d809054b8f0df90c125afc5974933e2f372f). 
+- [@ticki](https://github.com/ticki) After reverted `conc::sync::Treiber::top()` as it was unsound as it could cause double drop.  Details [here](https://github.com/redox-os/tfs/commit/9b40d809054b8f0df90c125afc5974933e2f372f).
 - [@ticki](https://github.com/ticki) Set a spin limit for `conc::hazard::Hazard` up to avoid spurious panics in debug mode.  Details [here](https://github.com/redox-os/tfs/commit/95088d84a0f654fb41b210df1c3e688b393e2aec).
-- [@ticki](https://github.com/ticki) Added a test for panicking in destructor of `conc::sync::Treiber`.  Details [here](https://github.com/redox-os/tfs/commit/01f913be8f444a44ebfaf63754865af7a8c0c6a5). 
+- [@ticki](https://github.com/ticki) Added a test for panicking in destructor of `conc::sync::Treiber`.  Details [here](https://github.com/redox-os/tfs/commit/01f913be8f444a44ebfaf63754865af7a8c0c6a5).
 - [@ticki](https://github.com/ticki) Added a test to make sure that the destructor actually runs in `conc::local`. Details [here](https://github.com/redox-os/tfs/commit/3fd52777c9cd770e99b3acff0141bfa4d11b8af4).
 - [@ticki](https://github.com/ticki) Added a test to make sure that the destructor actually runs in `conc::global`. Details [here](https://github.com/redox-os/tfs/commit/d2efa7285756dd0d3060e57dbd4ae7c78644026a).
 - [@ticki](https://github.com/ticki) Added support for handling unwinding destructors in `conc::Garbage` by crashing when they panic. Details [here](https://github.com/redox-os/tfs/commit/e1a5f921e6351ab8750756b2d23ee1048b219288).
@@ -130,21 +136,21 @@ Phew, that was a lot, and is just the "summary" xD Sorry by that! <3
 
 ## Netstack
 
-- [@jackpot51](https://github.com/jackpot51) Trimmed the network configuration. Details [here](https://github.com/redox-os/netstack/commit/133d38ba7e41a1b61c3d95d492b9f3dd31d02d93). 
+- [@jackpot51](https://github.com/jackpot51) Trimmed the network configuration. Details [here](https://github.com/redox-os/netstack/commit/133d38ba7e41a1b61c3d95d492b9f3dd31d02d93).
 - [@ids1024](https://github.com/ids1024) Corrected `fpath()` for `tcpd`. Details [here](github.com/redox-os/netstack/pull/2).
 - [@ids1024](https://github.com/ids1024) Fixed a bug in `tcpd`s partial reads that was breaking https in `curl`. Details [here](https://github.com/redox-os/netstack/pull/3).
 
 ## Netutils
 
 - [@jackpot51](https://github.com/jackpot51) Add newlines to network config. Details [here](https://github.com/redox-os/netutils/commit/638578afc2a5647a419b99b659aa0f877f0f143b).
-- [@jackpot51](https://github.com/jackpot51) Fixed trim usage in `dhcpd`. Details [here](https://github.com/redox-os/netutils/commit/9d3b8daeb9240fd8b761b8435cbb404bb2c1232b). 
+- [@jackpot51](https://github.com/jackpot51) Fixed trim usage in `dhcpd`. Details [here](https://github.com/redox-os/netutils/commit/9d3b8daeb9240fd8b761b8435cbb404bb2c1232b).
 
 ## Orbital
 
 Orbital is the windowing system and compositor for Redox.
 
-- [@jackpot51](https://github.com/jackpot51) Made a fix to close display and socket before launching `orblogin`. Details [here](https://github.com/redox-os/orbital/commit/19e475b0fac8f197fb779f87c5b14f4d48b04829). 
-- [@jackpot51](https://github.com/jackpot51) Started the work on moving to an event based method. Details [here](https://github.com/redox-os/orbital/commit/b82b7e74ad66a7281401b638ceeb24558d13c12b). 
+- [@jackpot51](https://github.com/jackpot51) Made a fix to close display and socket before launching `orblogin`. Details [here](https://github.com/redox-os/orbital/commit/19e475b0fac8f197fb779f87c5b14f4d48b04829).
+- [@jackpot51](https://github.com/jackpot51) Started the work on moving to an event based method. Details [here](https://github.com/redox-os/orbital/commit/b82b7e74ad66a7281401b638ceeb24558d13c12b).
 - [@jackpot51](https://github.com/jackpot51) Removed a lot of debugging. Details [here](https://github.com/redox-os/orbital/commit/e8a73040268708a5f8bde3e9d703f6cbbab2b85f).
 - [@jackpot51](https://github.com/jackpot51) Added support for left side and bottom left corner resizing. Details [here](https://github.com/redox-os/orbital/commit/65cde145f09f310425c5309b6f32abc9473c90f6).
 -  [@jackpot51](https://github.com/jackpot51) Made a change to add `/ui/bin` to `PATH` when launching the first orbital application.
@@ -153,9 +159,9 @@ Orbital is the windowing system and compositor for Redox.
 
 The [cookbook](https://github.com/redox-os/cookbook) the collection of package recipes of Redox.
 
-- [@jackpot51](https://github.com/jackpot51) Made an update to the `drivers` recipe. Details [here](https://github.com/redox-os/cookbook/commit/5b78bf1d6c134cd6a2f23ed4fbd935ea9610c26a). 
-- [@jackpot51](https://github.com/jackpot51) Added file types to `pastel`. Details [here](https://github.com/redox-os/cookbook/commit/3d2010b26a2b9cd966cb7982b7e50b150a5f530b). 
-- [@jackpot51](https://github.com/jackpot51) Added a manifest for Pastel, placing it in /ui/bin. Details [here](https://github.com/redox-os/cookbook/commit/7d6529d6c0341d2a8e5a92bc0866671f23cb5264). 
+- [@jackpot51](https://github.com/jackpot51) Made an update to the `drivers` recipe. Details [here](https://github.com/redox-os/cookbook/commit/5b78bf1d6c134cd6a2f23ed4fbd935ea9610c26a).
+- [@jackpot51](https://github.com/jackpot51) Added file types to `pastel`. Details [here](https://github.com/redox-os/cookbook/commit/3d2010b26a2b9cd966cb7982b7e50b150a5f530b).
+- [@jackpot51](https://github.com/jackpot51) Added a manifest for Pastel, placing it in /ui/bin. Details [here](https://github.com/redox-os/cookbook/commit/7d6529d6c0341d2a8e5a92bc0866671f23cb5264).
 - [@ids1024](https://github.com/ids1024) Updated the `git` recipe to override `git`s SHA1 implementation. Details [here](https://github.com/redox-os/cookbook/pull/39).
 
 # Handy links
@@ -181,5 +187,5 @@ Sorted in alphabetical order.
 - Jean-Loup 'clippix' Bogalho 🎂
 - m4b 🎂
 - Richard Palethorpe 🎂
- 
+
 If I missed something, feel free to contact me (goyox86) or send a PR to [Redox website](https://github.com/redox-os/website).
