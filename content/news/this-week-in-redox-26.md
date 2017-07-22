@@ -16,29 +16,29 @@ If you have any questions, ideas, or are curious about Redox, we recommend joini
 
 ## TL;DR
 
-Welcome back to a new edition of TWiR! We have a lot to share this time so let's get started!
+Welcome back to a new edition of TWiR! We have a lot to share this time. Let's get started!
 
 A new reset facility and `iopl` support were added by [@jackpot51](https://github.com/jackpot51) to the **kernel**  along the `uname` infrastructure done by  [@ids1024](https://github.com/ids1024) who also shipped a couple of fixes for pipes.
 
-**Ion** continues on fire! Gaining a new contributor this week: [@drosseau](https://github.com/drosseau) who shipped a ton of stuff including fixes for `echo`, comparison operators and the range syntax. All of that with new features like the `not` builtin as well as some general refactoring. Well done!
+**Ion** continues on fire! Gaining a new contributor this week: [@drosseau](https://github.com/drosseau) who shipped a ton of stuff including fixes for `echo`, comparison operators and the range syntax. All of that with new features like the `not` builtin and some general refactoring. Well done!
 
 [@mmstick](https://github.com/mmstick) has been also very busy this week with the starting the new **Ion**'s user manual. He also improved the recently added job control in conjunction with many bug fixes and refactorings.
 
 **Ion** also received love from [@huntergoldstein](https://github.com/huntergoldstein) who added support for inline expressions in methods and  made case statements implicitly ended.
 
-On the land of the **drivers** there was not much activity. Some improvements to the network drivers configuration and the splitting of `pcid`s configuration into `initfs`/`fs` by [@jackpot51](https://github.com/jackpot51).
+On the land of the **drivers** there was not much activity: some improvements to the network drivers configuration and the splitting of `pcid`'s configuration into `initfs` and `fs` by [@jackpot51](https://github.com/jackpot51).
 
-As part of his GSoC  [@ids1024](https://github.com/ids1024)  did some work on **Redoxfs** such as preventing permission related failures on file creation as well as a fix to `unlink` (also related to permission handling).
+As part of his GSoC  [@ids1024](https://github.com/ids1024)  did some work on **Redoxfs** preventing permission related failures on file creation as well as a fix to `unlink` (also related to permission handling).
 
-What about **TFS** ? Well, [@ticki](https://github.com/ticki) was on fire this week! Mostly hardening the test suite of the various concurrent data structure libraries that are the base of **TFS**. He even found a segfault in `conc::hazard::Hazard`'s safe code. But to be honest, I don't think I'm honouring all the work I saw while looking at the commit history. So, go ahead and check yourself ;)
+What about **TFS** ? Well, [@ticki](https://github.com/ticki) was on fire this week! Mostly hardening the test suite of the various concurrent data structure libraries that conform the base of **TFS**. He even found a segfault in `conc::hazard::Hazard`'s safe code. But to be honest, I don't think I'm honouring all the work I saw while looking at the commit history. So, go ahead and check yourself ;)
 
 **Coreutils** also progressed with the addition of a `--reset` flag to `shutdown` by [@jackpot51](https://github.com/jackpot51).  [@goyox86](https://github.com/goyox86) extracted the `ArgParser` to it's own library and migrated `coreutils` and `userutils` to it. [@ids1024](https://github.com/ids1024) added the `uname` utility and shipped fixes for both `rm` and `which`.
 
-[@goyox86](https://github.com/goyox86) tried to improve overall quality of by reimplementing `whoami` and `id` from scratch using system calls (previous implementations relied on environment vars). He also added docs for all of the user utilities and applied most of the recent `coreutils` code conventions there.
+[@goyox86](https://github.com/goyox86) tried to improve overall quality of **userutils** by reimplementing `whoami` and `id` from scratch using system calls (previous implementations relied on environment vars). He also added docs to all user utilities and applied most of the recent `coreutils` code conventions there.
 
 On the **netstack** [@jackpot51](https://github.com/jackpot51) trimmed the network configuration while [@ids1024](https://github.com/ids1024) corrected `fpath()` implementation on `tcpd` and fixed a bug in `tcpd` responsible of the breakage HTTPS in `curl`.
 
-The **cookbook** was not as active as in past weeks only with some fixes to the `pastel` recipe and all the hard work from [@ids1024](https://github.com/ids1024) on the `git`.
+The **cookbook** was not as active as in past weeks only with some fixes to the `pastel` recipe and all the hard work from [@ids1024](https://github.com/ids1024) on the `git` one.
 
 Last but not least **Orbital** Redox's composition and windowing manager received some attention from [@jackpot51](https://github.com/jackpot51) resulting on the addition of left corner resizing and the starting of a new event based method.
 
