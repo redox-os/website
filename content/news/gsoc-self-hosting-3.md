@@ -26,9 +26,9 @@ I've implemented [dirname](https://github.com/redox-os/coreutils/pull/166), adde
 
 I added [uname](https://github.com/redox-os/kernel/pull/39) to the sys scheme, and a [uname utility](https://github.com/redox-os/coreutils/pull/172) to coreutils.
 
-I've been using expr from uutils (a Rust implementation of coreutils), since Redox's coreutils doesn't provide that currently. Redox should use uutils utilities for that and more; I've [patched chmod](https://github.com/uutils/coreutils/pull/1054) from uutils to run on Redox, and submitted a PR upstream. I intend to look into making Redox use portions or uutils by default where suitable.
+I've been using expr from uutils (a Rust implementation of coreutils), since Redox's coreutils doesn't provide that currently. Redox should use uutils utilities for that and more; I've [patched chmod](https://github.com/uutils/coreutils/pull/1054) from uutils to run on Redox, and submitted a PR upstream. I intend to look into making Redox use portions of uutils by default where suitable.
 
-I've looked into porting Perl (which would be needed to run autotools itself). Perl is awkward to cross compile though, and there are still some issues, so that isn't available yet.
+I've looked into porting Perl (which would be needed to run autotools itself). Perl is awkward to cross compile though, and there are still some issues, so that isn't available yet. Perl requires ssh access a target machine to cross-compile (yes, really); but luckily a project called [perl-cross](http://arsv.github.io/perl-cross/) provides an alternate build system to address that. That much seems to work, but some other things need to be fixed.
 
 # Upstreaming
 
