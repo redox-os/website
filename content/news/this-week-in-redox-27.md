@@ -71,7 +71,7 @@ Enjoy the rest, and see you next week!
 - [@huntergoldstein](https://github.com/huntergoldstein) Made a fix to ignore `SIGTTOU` before setting process group. Details [here](https://github.com/redox-os/ion/pull/462).
 - [@bb010g](https://github.com/bb010g) Moved OS #[cfg] functions to `sys`. Details [here](https://github.com/redox-os/ion/pull/464).
 - [@bblancha](https://github.com/bblancha) Implemented a simple form of associative arrays. Details [here](https://github.com/redox-os/ion/pull/465).
-- [@llambda[(https://github.com/llambda) Made `Ion` compile on Darwin. Details [here](https://github.com/redox-os/ion/pull/466). 
+- [@llambda](https://github.com/llambda) Made `Ion` compile on Darwin. Details [here](https://github.com/redox-os/ion/pull/466). 
 - [@fengalin](https://github.com/fengalin) Fixed the compilation on Redox. Details [here](https://github.com/redox-os/ion/pull/467).
 - [@nivkner](https://github.com/nivkner) Included whitespace in `alias` builtin arguments. Details [here](https://github.com/redox-os/ion/pull/468).
 - [@memoryleak47](https://github.com/memoryleak47) Implemented `popd` command line options. Details [here](https://github.com/redox-os/ion/pull/473).
