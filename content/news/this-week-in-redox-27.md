@@ -37,7 +37,7 @@ The XHCI **driver** got a lot of love by [@jackpot51](https://github.com/jackpot
 On the **TFS** department we have for the first time in a while new contributors! This work includes [@m4b](https://github.com/m4b)'s  usage of `debug_map` in `chashmap` enabling maps pretty printing, [@cedenday](https://github.com/cedenday)'s remotion of `speck`s dependency on `std` and the fix for an infinite loop in `chashmap`'s `scan()` by [@memoryleak47](https://github.com/memoryleak47). Well done people! 
 
 [@ticki](https://github.com/ticki) continues improving **TFS**'s
-test suite along with an interesting work in reserving reserved special pointers for `conc::hazard::State` to avoid overlapping with pointers used in `Protect`. Also, if you are an compression algorithm aficionado you might want to look at @ticki](https://github.com/ticki)'s [notes](https://github.com/redox-os/tfs/commit/624dce5fc4e12063972bc4817edfacfaa558f333) on `zmicro`, as they were updated this week.
+test suite along with an interesting work in reserving reserved special pointers for `conc::hazard::State` to avoid overlapping with pointers used in `Protect`. Also, if you are an compression algorithm aficionado you might want to look at [@ticki](https://github.com/ticki)'s [notes](https://github.com/redox-os/tfs/commit/624dce5fc4e12063972bc4817edfacfaa558f333) on `zmicro`, as they were updated this week.
 
 In **coreutils** land [@ids1024](https://github.com/ids1024) allowed directory as second argument to `ln` and implemented octal escapes in `tr`. 
 
