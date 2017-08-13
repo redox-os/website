@@ -18,6 +18,26 @@ If you have any questions, ideas, or are curious about Redox, we recommend joini
 
 Welcome to the 28th edition of "This Week in Redox"!
 
+The team has been very busy working on cool stuff this last weeks!
+
+Starting with the **kernel**, [@cookie545445](https://github.com/cookie545445) improved the portability of the kernel codebase by isolating `X86_64` dependent code into subfolders and [@ids1024](https://github.com/ids1024) added support for file descriptions, updated `pipe` to use `FIFO` flag, reverted a freeze caused by  a double locking finishig with the implementation of `F_DUPFD`.
+
+**Ion** flow continues fast and steady! Some cool features were added by [@mmstick](https://github.com/mmstick): `$contains`, `$starts_with`, `$ends_with()`, `$replace()`, `$replacen()` and `$repeat()`. He also removed the dependency on the `peg` crate, enabled function pipelining/redirecting, `rustfmt`ed the whole codebase and implemented `contains`, `starts_with`, and `ends_with` builtins. Also in **Ion**, [@huntergoldstein](https://github.com/huntergoldstein) implemented command line options for `pushd` and `dirs`. Meanwhile, [@bb010g](https://github.com/bb010g) switched **Ion** from `HISTORY_FILE` to `HISTFILE` for history tracking.
+
+On **drivers** land, the star of this week is the work being done by [@jackpot51](https://github.com/jackpot51) in the `XCHI` controller driver (which means that USB support is around the corner!). He also simplified `vesad` control logic.
+
+Next stop is **Redoxfs**, where [@jackpot51](https://github.com/jackpot51) and [@ids1024](https://github.com/ids1024) enabled deallocating on resizing and fixed a freeze caused by a double lock respectively.
+
+**TFS** folks where also very busy these last weeks! Notably [@ticki](https://github.com/ticki) who published a [blog post](http://ticki.github.io/blog/fearless-concurrency-with-hazard-pointers/) about the new shiny [conc](https://crates.io/crates/conc) crate which uses hazard pointers instead of epochs for doing concurrent memory reclamation. [@ticki](https://github.com/ticki) was also busy improving the documentation of the `conc` crate, rewriting `conc::sync::treiber` and adding `conc::Guard::{try,maybe}_map` while [@cedenday](https://github.com/cedenday) added a few trait derivations to `speck`'s `Key`.
+
+[@Abogical](https://github.com/Abogical) added the `whois` utility to **Netutils** and [@ids1024](https://github.com/ids1024) added `gzip` and `xz` extraction support to **extrautils**'s `tar`.
+
+And! Last but not least in the **cookbook**: [@jackpot51](https://github.com/jackpot51) switched to a Redox patched version of `findutils` and `uutils`, while [@ids1024](https://github.com/ids1024) enabled C++ support in the `gcc` recipe, replaced the target triple from `"x86_64-elf-redox-*` to `x86_64-unknown-redox-*`. Ultimately, new recipes for `bash`, `xz` and `patch` were alsoe added this week.
+
+On a side note, I'm gonna be on holidays until September 7th and in consequence there will be radio silence during that period. But don't panic! we will be back sooner than you think!
+
+Enjoy the rest of this weeks issue!
+
 ## Kernel
 
 - [@ids1024](https://github.com/ids1024) Added file descriptions to be shared between file descriptors. Details [here](https://github.com/redox-os/kernel/pull/42).
@@ -31,7 +51,7 @@ Welcome to the 28th edition of "This Week in Redox"!
 
 [Ion](https://github.com/redox-os/ion) is a shell for UNIX platforms, and is the default shell in Redox. It is still a work in progress, but much of the core functionality is complete. It is also currently significantly faster than Bash, and even Dash, making it the fastest system shell to date.
 
-- [@huntergoldstein](https://github.com/huntergoldstein) Replace use of `RawFd` with `File` for `RefinedJob`. Details [here](https://github.com/redox-os/ion/commit/b4a8ae4832e395885905fe9c5a1a69fa337268de).
+- [@huntergoldstein](https://github.com/huntergoldstein) Replaced the use of `RawFd` with `File` for `RefinedJob`. Details [here](https://github.com/redox-os/ion/commit/b4a8ae4832e395885905fe9c5a1a69fa337268de).
 - [@bb010g](https://github.com/bb010g) Switched from `HISTORY_FILE` to `HISTFILE`. Details [here](https://github.com/redox-os/ion/pull/484).
 - [@huntergoldstein](https://github.com/huntergoldstein) Made the `read` builtin detect if `stdin` is a TTY. Details [here](https://github.com/redox-os/ion/pull/484).
 - [@mmstick](https://github.com/mmstick) Fixed implicit `cd` support. Details [here](https://github.com/redox-os/ion/commit/b9c84c4b4b9471881288032a3d6b7610eb168e1d).
@@ -74,7 +94,7 @@ Welcome to the 28th edition of "This Week in Redox"!
 - [@jackpot51](https://github.com/jackpot51) Added missing imports in the XHCI driver. Details [here](https://github.com/redox-os/drivers/commit/84a8a6c0640325b2c545bbdfbb47a82d4a4a9774).
 - [@jackpot51](https://github.com/jackpot51) Added more debugging to the XHCI driver. Details [here](https://github.com/redox-os/drivers/commit/545ec4d21fa6b239cb7ee27f86a21baea9563f9b).
 - [@jackpot51](https://github.com/jackpot51) Updated the `EventSte` structure in the XHCI driver. Details [here](https://github.com/redox-os/drivers/commit/832f830cc4f0b77e493515cc227516cefa31f14e).
-- [@jackpot51](https://github.com/jackpot51) Simplefied `vesad` using `ptyd` control logic. Details [here](https://github.com/redox-os/drivers/commit/eb64f59d10d39a5373c2d1048c79e91841168a31).
+- [@jackpot51](https://github.com/jackpot51) Simplyfied `vesad` using `ptyd` for control logic. Details [here](https://github.com/redox-os/drivers/commit/eb64f59d10d39a5373c2d1048c79e91841168a31).
 - [@jackpot51](https://github.com/jackpot51) Started work on grabbing device information on the XHCI driver. Details [here](https://github.com/redox-os/drivers/commit/646e8c9eac0fe62588b4aa2e595cb73f719d50dd).
 - [@jackpot51](https://github.com/jackpot51) Added support for reading device, config, interface, and endpoint descriptions in the XHCI driver. Details [here](https://github.com/redox-os/drivers/commit/096a9a6e52d2d6db92220e40885a96a0f3e13816).
 - [@jackpot51](https://github.com/jackpot51) Improved the format of debugging data in XHCI. Details [here](https://github.com/redox-os/drivers/commit/144cc2a995b1434c0cca72f74e5ad511c8e31ad2) and [here](https://github.com/redox-os/drivers/commit/0231e4489276867ff6ee1f48e3eec8c887e43ab6).
@@ -130,7 +150,7 @@ Welcome to the 28th edition of "This Week in Redox"!
 ## Netutils
 
 - [@jackpot51](https://github.com/jackpot51) Replaced `termion`. Details [here](https://github.com/redox-os/netutils/commit/cdc0ebd10322ce0e9885da558a9d89d5c5d8abc4)
-- [@Abogical](https://github.com/Abogical) Addd the `whois` utility. Details [here](https://github.com/redox-os/netutils/pull/24), [here](https://github.com/redox-os/netutils/pull/25) and [here](https://github.com/redox-os/netutils/pull/27)
+- [@Abogical](https://github.com/Abogical) Added the `whois` utility. Details [here](https://github.com/redox-os/netutils/pull/24), [here](https://github.com/redox-os/netutils/pull/25) and [here](https://github.com/redox-os/netutils/pull/27).
  - [@ids1024](https://github.com/ids1024) Made `wget` use the `-O` argument, matching standard behavior. Details [here](https://github.com/redox-os/netutils/pull/26).
 
 ## Extrautils
@@ -176,19 +196,7 @@ Since the list of contributors are growing too fast, we'll now only list the new
 
 Sorted in alphabetical order.
 
-- Agoston Szepessy 🎂
-- Brayden Banks 🎂
-- Bryan Blanchard 🎂
-- Danny 🎂
-- fengalin 🎂
-- Fredrik 🎂
-- friend 🎂
+- Abogical 🎂
 - garasubo 🎂
-- Grant Miner 🎂
-- m4b 🎂
-- memoryleak47 🎂
-- Michel Boaventura 🎂
-- Niv 🎂
-- Richard Palethorpe 🎂
 
 If I missed something, feel free to contact me (goyox86) or send a PR to [Redox website](https://github.com/redox-os/website).
