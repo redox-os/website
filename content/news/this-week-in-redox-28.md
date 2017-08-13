@@ -157,6 +157,8 @@ The [cookbook](https://github.com/redox-os/cookbook) the collection of package r
 - [@ids1024](https://github.com/ids1024) Made a change to user system `pkg` when cookbook is running on Redox. Details [here](https://github.com/redox-os/cookbook/pull/64).
 - [@ids1024](https://github.com/ids1024) Patched `patch` to prevent it from calling `chown`. Details [here](https://github.com/redox-os/cookbook/pull/65).
 - [@ids1024](https://github.com/ids1024) Passed `-p` to `cp` in order to make running autotools unnecessary. Details [here](https://github.com/redox-os/cookbook/pull/66).
+- [@ids1024](https://github.com/ids1024) Opened a PR for making `rustc` backtraces work on Redox. Details [here](https://github.com/rust-lang/rust/pull/43635).
+- [@goyox86](https://github.com/goyox86) Added some permission and misc (mostly `mode_t` related) constants to Redox on the `libc` crate (this is part of the ongoing `exa` port). Details [here](https://github.com/rust-lang/libc/pull/715).
 
 # Handy links
 
