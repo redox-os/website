@@ -151,13 +151,13 @@ Enjoy the rest of this weeks issue!
 
 - [@jackpot51](https://github.com/jackpot51) Replaced `termion`. Details [here](https://github.com/redox-os/netutils/commit/cdc0ebd10322ce0e9885da558a9d89d5c5d8abc4)
 - [@Abogical](https://github.com/Abogical) Added the `whois` utility. Details [here](https://github.com/redox-os/netutils/pull/24), [here](https://github.com/redox-os/netutils/pull/25) and [here](https://github.com/redox-os/netutils/pull/27).
- - [@ids1024](https://github.com/ids1024) Made `wget` use the `-O` argument, matching standard behavior. Details [here](https://github.com/redox-os/netutils/pull/26).
+- [@ids1024](https://github.com/ids1024) Made `wget` use the `-O` argument, matching standard behavior. Details [here](https://github.com/redox-os/netutils/pull/26).
 
 ## Extrautils
 
 - [@jackpot51](https://github.com/jackpot51) Replaced and updated `termion`. Details [here](https://github.com/redox-os/extrautils/commit/001600d7f7e4bea018837eef11c6a8bdca0d1285) and [here](https://github.com/redox-os/extrautils/commit/afb9afd51e9c81853e2e4f79adf99b9adddd02c3) respectively.
- - [@ids1024](https://github.com/ids1024) Added gzip and xz extraction support, along with verbose support to `tar`. Details [here](https://github.com/redox-os/extrautils/pull/26).
- - [@ids1024](https://github.com/ids1024) Implemented `--directory` and `--strip-components` for `tar`. Details [here](https://github.com/redox-os/extrautils/pull/27).
+- [@ids1024](https://github.com/ids1024) Added gzip and xz extraction support, along with verbose support to `tar`. Details [here](https://github.com/redox-os/extrautils/pull/26).
+- [@ids1024](https://github.com/ids1024) Implemented `--directory` and `--strip-components` for `tar`. Details [here](https://github.com/redox-os/extrautils/pull/27).
 
 ## Orbital
 
