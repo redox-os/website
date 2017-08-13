@@ -92,7 +92,7 @@ Welcome to the 28th edition of "This Week in Redox"!
 
 [TFS](https://github.com/redox-os/tfs) is a modular, fast, and feature rich next-gen file system, employing modern techniques for high performance, high space efficiency, and high scalability.
 
-- [@ticki](https://github.com/ticki) Published a new blog post "Fearless concurrency with hazard pointers". Details [here](http://ticki.github.io/blog/fearless-concurrency-with-hazard-pointers/).
+- [@ticki](https://github.com/ticki) Published a new blog "Fearless concurrency with hazard pointers" about the new shiny [conc](https://crates.io/crates/conc) crate. Details [here](http://ticki.github.io/blog/fearless-concurrency-with-hazard-pointers/).
 - [@ticki](https://github.com/ticki) Fixed some compile errors in `atomic-hashmap`. Details [here](https://github.com/redox-os/tfs/commit/7118c7bf135647a3e452831e2836b6df79326d4e).
 - [@ticki](https://github.com/ticki) Fix documentation for wrong use of `Guard::new`. Details [here](https://github.com/redox-os/tfs/commit/f8a080e4415982b34f34a30235b2bb91d42b8450).
 - [@ticki](https://github.com/ticki) Improved documentation of `atomic-hashmap`. Details [here](https://github.com/redox-os/tfs/commit/27b8c62e29f718347dacd6d44c4add6dfa9f4d74).
@@ -116,6 +116,7 @@ Welcome to the 28th edition of "This Week in Redox"!
 - [@ticki](https://github.com/ticki) Rewrote `conc::sync::treiber` to consider [#57](https://github.com/redox-os/tfs/issues/57). Details [here](https://github.com/redox-os/tfs/commit/a558832f98f5810eb4daf07683ecbf944aa241a2).
 - [@ticki](https://github.com/ticki) Updated the library-wide docs of `conc` with usage information. Details [here](https://github.com/redox-os/tfs/commit/f5ee6a850be9786ca4ab01ee3feb8910407631ef).
 - [@ticki](https://github.com/ticki) Rename `conc::Guard::as_raw()` to `as_ptr()` and implement `PartialEq` for `Guard`. Details [here](https://github.com/redox-os/tfs/commit/ddaed7e3dc357ec640e9abdcdd299249df308f43).
+- [@ticki](https://github.com/ticki) Added `conc::Guard::{try,maybe}_map`. Details [here](https://github.com/redox-os/tfs/commit/a89569cc6f10a46baf4ba7b0d17251fbd1126411).
 
 ## Coreutils
 
@@ -140,20 +141,22 @@ Welcome to the 28th edition of "This Week in Redox"!
 
 ## Orbital
 
-- [@jackpot51](https://github.com/jackpot51) Added Cargo.lock to version control. Details [here](https://github.com/redox-os/orbital/commit/5d9d274068f06732b9805c048ae39be074846357) and [here](https://github.com/redox-os/orbital/commit/dc6a6c901126d60cf154baabc73ac2bf68ff3b79).
+- [@jackpot51](https://github.com/jackpot51) Removed a bunch of unnecessary muts. Details [here](https://github.com/redox-os/orbital/commit/ca660480a99e5e2a662d47fcec68c83f81efa64d) and [here](https://github.com/redox-os/orbital/commit/8dcf7acdac80b2db3629a7c15170aaa3ba347d6a).
 
 ## Cookbook
 
 The [cookbook](https://github.com/redox-os/cookbook) the collection of package recipes of Redox.
 
-- [@jackpot51](https://github.com/jackpot51) Added a `status.sh` script for checking git modifications. Details [here](https://github.com/redox-os/cookbook/commit/1df0bc544357bfadf66502d87ddff4a3bd709c25),[here](https://github.com/redox-os/cookbook/commit/eb0a4c73156c9038107bc4454b40637065e03f9e) and [here](https://github.com/redox-os/cookbook/commit/943fe8ae8c99250b2ee0ffe2f4dc9edfe782e328).
-- [@jackpot51](https://github.com/jackpot51) Added a `update.sh` script. Details [here](https://github.com/redox-os/cookbook/commit/3863dc9b4243ecd7c80f1f6984bcb1083f37c359).
-- [@jackpot51](https://github.com/jackpot51) Updated the `ion` recipe to use a custom branch with simpler signal handling and afterwards switched back to `master` as the simpler signals work was mainstreamed into `Ion`. Details [here](https://github.com/redox-os/cookbook/commit/6e4d16d5d3b3525f31f10bcb9f9c6681004e1136) and [here](https://github.com/redox-os/cookbook/commit/2067c8292e1f7e2af2f794ff7d445bd4772ff1c6) respectively.
-- [@ids1024](https://github.com/ids1024) Added a recipe for GNU `grep`. Details [here](https://github.com/redox-os/cookbook/pull/52) and [here](https://github.com/redox-os/cookbook/pull/53).
-- [@ids1024](https://github.com/ids1024) Made a patch in the `git` to use `;` as `PATH` separator. Details [here](https://github.com/redox-os/cookbook/pull/54).
-- [@ids1024](https://github.com/ids1024) Added a recipe for `diffutils`. Details [here](https://github.com/redox-os/cookbook/pull/55).
-- [@jackpot51](https://github.com/jackpot51) Made a change to `cook.sh` so it updates the `source` and not the `build` directory as Cargo.lock is now committed. Details [here](https://github.com/redox-os/cookbook/commit/7d06611aa92938727325dbda68ff3e0805a3ce13).
-- [@jackpot51](https://github.com/jackpot51) Made a change to `update.sh` to check for `source` and not for `build` as Cargo.lock is now committed. Details [here](https://github.com/redox-os/cookbook/commit/7d06611aa92938727325dbda68ff3e0805a3ce13).
+- [@jackpot51](https://github.com/jackpot51) Switched to a Redox patched version of `findutils` and `uutils`. Details [here](https://github.com/redox-os/cookbook/commit/e9c632537d700b59d1539826e19541605ca61709).
+- [@ids1024](https://github.com/ids1024) Enabled C++ support in the `gcc` recipe. Details [here](https://github.com/redox-os/cookbook/pull/57).
+- [@ids1024](https://github.com/ids1024) Switch the target triple from `"x86_64-elf-redox-*` to `x86_64-unknown-redox-*`. Details [here](https://github.com/redox-os/cookbook/pull/59).
+- [@ids1024](https://github.com/ids1024) Added a recipe for `bash`. Details [here](https://github.com/redox-os/cookbook/pull/60).
+- [@ids1024](https://github.com/ids1024) Added a recipe for `xz`. Details [here](https://github.com/redox-os/cookbook/pull/61).
+- [@ids1024](https://github.com/ids1024) Made `xz` a build dependency of `extrautils`. Details [here](https://github.com/redox-os/cookbook/pull/62).
+- [@ids1024](https://github.com/ids1024) Added a recipe for `patch`. Details [here](https://github.com/redox-os/cookbook/pull/61).
+- [@ids1024](https://github.com/ids1024) Made a change to user system `pkg` when cookbook is running on Redox. Details [here](https://github.com/redox-os/cookbook/pull/64).
+- [@ids1024](https://github.com/ids1024) Patched `patch` to prevent it from calling `chown`. Details [here](https://github.com/redox-os/cookbook/pull/65).
+- [@ids1024](https://github.com/ids1024) Passed `-p` to `cp` in order to make running autotools unnecessary. Details [here](https://github.com/redox-os/cookbook/pull/66).
 
 # Handy links
 
