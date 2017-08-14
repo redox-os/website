@@ -32,7 +32,7 @@ Next stop is **Redoxfs**, where [@jackpot51](https://github.com/jackpot51) and [
 
 [@Abogical](https://github.com/Abogical) added the `whois` utility to **Netutils** and [@ids1024](https://github.com/ids1024) added `gzip` and `xz` extraction support to **extrautils**'s `tar`.
 
-And! Last but not least in the **cookbook**: [@jackpot51](https://github.com/jackpot51) switched to a Redox patched version of `findutils` and `uutils`, while [@ids1024](https://github.com/ids1024) enabled C++ support in the `gcc` recipe, replaced the target triple from `"x86_64-elf-redox-*` to `x86_64-unknown-redox-*`. Ultimately, new recipes for `bash`, `xz` and `patch` were alsoe added this week.
+And! Last but not least in the **cookbook**: [@jackpot51](https://github.com/jackpot51) switched to a Redox patched version of `findutils` and `uutils`, while [@ids1024](https://github.com/ids1024) enabled C++ support in the `gcc` recipe, replaced the target triple from `"x86_64-elf-redox-*` to `x86_64-unknown-redox-*`. Ultimately, new recipes for `bash`, `xz` and `patch` were also added this week.
 
 On a side note, I'm gonna be on holidays until September 7th and in consequence there will be radio silence during that period. But don't panic! we will be back sooner than you think!
 
