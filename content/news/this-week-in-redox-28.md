@@ -196,7 +196,6 @@ Since the list of contributors are growing too fast, we'll now only list the new
 
 Sorted in alphabetical order.
 
-- Abogical 🎂
 - cookie545445 🎂
 - garasubo 🎂
 
