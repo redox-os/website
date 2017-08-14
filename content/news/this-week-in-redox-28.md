@@ -145,7 +145,7 @@ Enjoy the rest of this weeks issue!
 ## Userutils
 
 - [@jackpot51](https://github.com/jackpot51) Replaced `termion`. Details [here](https://github.com/redox-os/userutils/commit/f6fd552f45cb684f498720296e39a636b6c66b1e).
-- [@jackpot51](https://github.com/jackpot51) Updated password read to new method in `passwd` and `su`. Details [here](https://github.com/redox-os/userutils/commit/f6fd552f45cb684f498720296e39a636b6c66b1e).
+- [@jackpot51](https://github.com/jackpot51) Updated password read to new method in `passwd` and `su`. Details [here](https://github.com/redox-os/userutils/commit/d811d8758c25be36d5a1d1b8baa6832d5569496b).
 
 ## Netutils
 
