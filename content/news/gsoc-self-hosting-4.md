@@ -28,7 +28,7 @@ Those uutils utilities also required Redox patches to [atty](https://github.com/
 
 I have gotten basic autotools builds to work; although it requires `export LD=ld` (the detection code requires an absolute path, and a Redox path starting with `file:` isn't recognized as absolute). Some things fail to build due to other issues, including other issues related to Redox's schemes.
 
-One annoying this with autotools is that `config.guess` needs to have code for the host system. I sent [a patch](https://lists.gnu.org/archive/html/config-patches/2017-08/msg00002.html) upstream, so in the future software should contain the new `config.guess`, but for now we need to override this.
+One annoying thing with autotools is that `config.guess` needs to have code for the host system. I sent [a patch](https://lists.gnu.org/archive/html/config-patches/2017-08/msg00002.html) upstream, so in the future software should contain the new `config.guess`, but for now we need to override this.
 
 `./configure` scripts triggered a weird bug in redoxfs, where large numbers of unlinks resulted in corruption. That was hard to debug, but eventually I found the cause and [send a PR](https://github.com/redox-os/redoxfs/pull/30).
 
