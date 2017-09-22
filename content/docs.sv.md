@@ -19,16 +19,16 @@ Vi rekommenderar starkt att du börjar med [boken](https://doc.redox-os.org/book
 ## Bidra till Redox
 
 Tack för ditt intresse av att bidra till Redox!
-Det finns många sätt att hjälpa oss och vi uppskattar dem
+Det finns många sätt att hjälpa oss och vi uppskattar dem.
 
 Redox är ett stort projekt utspridda över många repos som kan hittas i
-[Redox organisationan på GitHub](https://github.com/redox-os). Det här dokumentet,
+[Redox organisationen på GitHub](https://github.com/redox-os). Det här dokumentet,
 [CONTRIBUTING.md](https://github.com/redox-os/redox/blob/master/CONTRIBUTING.md)
-är en guide för att hjälpa nybörjare bidra!
+är en guide för att hjälpa nybörjare att bidra!
 
 ## Kommunikation och chatt
 
-Det snabbaste och mest öppna sättet att kommunicera med Redox-teamat är på vår chatt-server. För närvarande är det enda sättet att ansluta sig genom att skicka ett e-mail till
+Det snabbaste och mest öppna sättet att kommunicera med Redox-teamet är på vår chatt-server. För närvarande är det enda sättet att ansluta sig genom att skicka ett e-mail till
 [info@redox-os.org](mailto:info@redox-os.org), vilket kan ta en stund,
 eftersom det inte är automatiserad. Vi arbetar på ett mer bekvämt sätt
 men detta är det enklaste sättet just nu.
