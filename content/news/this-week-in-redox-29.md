@@ -28,7 +28,7 @@ First things first: During my absence there were 3 new releases [0.3.1](https://
 
 We also have a new [login window and a file dialog](https://imgur.com/a/4E7sz) thanks to [@jackpot51](https://github.com/jackpot51). 
 
-Other important news is that we took over the maintenance of the **RustType** crate, it now lives [here](https://github.com/redox-os/rusttype) under the redox-os Github organization.
+Other important news is that we are now maintaining the **RustType** crate, which can be found [here](https://github.com/redox-os/rusttype), under the redox-os Github organization.
 
 Let's start the more detailed view with the **kernel** where we have the [huge ACPI revamp](https://github.com/redox-os/kernel/pull/48) done by [@CWood1](https://github.com/CWood1) which implements (among other things) a full fledged AML parser. Mr [@jackpot51](https://github.com/jackpot51) was busy improving the debugging code, implementing events on pipe (which in turn adds up to `mio`s crate support AKA: [this](https://gist.github.com/goyox86/5902f42988b91741bc12a42a6b5c78ed) small sample now works in Redox). He also fixed the mapping of TLS (which now page aligned) as well as improved error information and cleaned the interrupt macros.
 
