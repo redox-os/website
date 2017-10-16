@@ -28,7 +28,7 @@ The other very important change is related to schemes. Redox now supports hierar
 
 Other exciting news in the **kernel** is the work on capability based security. Basically, capability mode will make a process unable to open new file descriptors unless it has required access to it, improving security and allowing more reasoning about the system. The `sys:iostat` scheme for example, should tell you what any process is allowed to do, once it is in capability mode. You can read more about capability based security [here](https://en.wikipedia.org/wiki/Capability-based_security) and also check out [FreeBSD's implementation of this model](https://wiki.freebsd.org/Capsicum).
 
-Along with this work is the support for disk hierarchies added to the AHCID **driver** and the support for capability mode added to all the **drivers** by using the `null` scheme. In addition to that, we have now a `vmmouse` driver which should improve significantly the mouse support in `QEMU`.
+Along with this work is the support for disk hierarchies added to the AHCID **driver** and the support for capability mode added to all the **drivers** by using the `0` namespace (also known as null namespace). In addition to that, we have now a `vmmouse` driver which should improve significantly the mouse support in `QEMU`.
 
 **Redoxfs** was cleaned to allow use of most functions when linking the library, including mounting and creating file systems. It was also extended to allow a bootloader to be written during `redoxfs-mkfs` but, without doubt, the most notable feature is the addition of `UUID` support, enabling file systems to be mounted by `UUID` (used by the installer).
 
