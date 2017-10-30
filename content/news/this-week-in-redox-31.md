@@ -38,7 +38,9 @@ As mentioned before, **ransid**, our backend for terminal emulators got some lov
 
 Stopping on the utilities station we have: **userutils**, **coreutils** and **extrautils** getting `man` pages and **netutils**'s `dhcpd` gaining the ability to broadcast packets.
 
-And last but never least [@sajattack](https://github.com/sajattack) added some networking headers to our fork of the **newlib** C standard library (Which we implement in Rust :).
+Our C standard library, **newlib** (our fork of [https://sourceware.org/newlib/](newlib) with Redox support, which we implement in Rust :)) saw some networking header additions additions by [@sajattack](https://github.com/sajattack).
+
+Last but not least! [@ids1024](https://github.com/ids1024) is working on a Rust port of `cook.sh` (our package builder script). Take a look at the issue tracking it [here](https://github.com/redox-os/pkgutils/issues/21) and join the design discussion!
 
 Looking forward to a next issue potentially talking about `rustc` and `cargo` running on Redox <3.
 
