@@ -18,7 +18,7 @@ If you have any questions, ideas, or are curious about Redox, we recommend joini
 
 Hello there! Welcome to another issue of TWiR!
 
-This week [@jackpot51](https://github.com/jackpot51) surprised us by sharing this on the IRC channel:
+This week [@jackpot51](https://github.com/jackpot51) surprised us by sharing this on the Mattermost channel:
 
 ![cargo on Redox](https://chat.redox-os.org/files/qnmgh4pcefdg5xs1uda9ekby7a/public?h=O9WYJaxO_3GjDPRTDIhAUdK5KPH8UWRFOwo7TOnHNvs)
 
@@ -26,7 +26,7 @@ Yes! it's `cargo` running on Redox! This milestone represents a significant step
 
 It's worth mentioning that `cargo` and `rustc` have been [@jackpot51](https://github.com/jackpot51)'s focus these last two weeks and many changes are directly related (but not limited) to this effort.
 
-So, without further do, let's give you an overview of what happened this week in the Redox universe!
+So, without further ado, let's give you an overview of what happened this week in the Redox universe!
 
 I'm gonna start with the [**book**](https://github.com/redox-os/book/) where [@sajattack](https://github.com/sajattack) made some updates on installation and build instructions.
 
