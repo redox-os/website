@@ -20,7 +20,7 @@ Hello there! Welcome to another issue of TWiR!
 
 This week [@jackpot51](https://github.com/jackpot51) surprised us by sharing this on the IRC channel:
 
-![cargo on Redox](https://chat.redox-os.org/files/qnmgh4pcefdg5xs1uda9ekby7a/public?h=O9WYJaxO_3GjDPRTDIhAUdK5KPH8UWRFOwo7TOnHNvs).
+![cargo on Redox](https://chat.redox-os.org/files/qnmgh4pcefdg5xs1uda9ekby7a/public?h=O9WYJaxO_3GjDPRTDIhAUdK5KPH8UWRFOwo7TOnHNvs)
 
 Yes! it's `cargo` running on Redox! This milestone represents a significant step forward on our path to self-hosting. Kudos to [@ids1024](https://github.com/ids1024) who worked really hard on self-hosting during the GSoC.
 
@@ -28,25 +28,25 @@ It's worth mentioning that `cargo` and `rustc` have been [@jackpot51](https://gi
 
 So, without further do, let's give you an overview of what happened this week in the Redox universe!
 
-I'm gonna start with the [book](https://github.com/redox-os/book/) where [@sajattack](https://github.com/sajattack) made some updates on installation and build instructions.
+I'm gonna start with the [**book**](https://github.com/redox-os/book/) where [@sajattack](https://github.com/sajattack) made some updates on installation and build instructions.
 
-Moving to the [kernel](https://github.com/redox-os/kernel/), [@jackpot51](https://github.com/jackpot51) was focused on implementing the remaining `cargo` and `rustc` missing pieces, specifically: timeouts for futexes and improving interruption detection. Also in the kernel, [@pzmarzly](https://github.com/pzmarzly) made a fix on `elf.rs` to prevent the inlining of some constants from `goblin`.
+Moving to the [**kernel**](https://github.com/redox-os/kernel/), [@jackpot51](https://github.com/jackpot51) was focused on implementing the remaining `cargo` and `rustc` missing pieces, specifically: timeouts for futexes and improving interruption detection. Also in the kernel, [@pzmarzly](https://github.com/pzmarzly) made a fix on `elf.rs` to prevent the inlining of some constants from `goblin`.
 
-As always the [Ion](https://github.com/redox-os/ion) shell saw a lot of work. Including the introduction of a new fork abstraction, which will hopefully help to eliminate some redundancy caused by the manual handling of forking logic in command expansions and function prompts. There were also `readln` and quote termination refactorings as well as the elimination of heap allocations with `!*` designator. All of that thanks to [@mmstick](https://github.com/mmstick). [@ids1024](https://github.com/ids1024) also worked on in **Ion**, adding the `set_var()` and `get_var()` methods to `IonLibrary` while [@KaKnife](https://github.com/KaKnife) was busy implementing the `random` builtin in addition to [@AgustinCB](https://github.com/AgustinCB) implementing `escape` and `unescape` as well as a major optimization to perform builtin Lookup when parsing now the builtin lookup once when parsing the statement, rather than performing a lookup for a given builtin command for each statement repeatedly.
+As always the [**Ion**](https://github.com/redox-os/ion) shell saw a lot of work. Including the introduction of a new fork abstraction, which will hopefully help to eliminate some redundancy caused by the manual handling of forking logic in command expansions and function prompts. There were also `readln` and quote termination refactorings as well as the elimination of heap allocations with `!*` designator. All of that thanks to [@mmstick](https://github.com/mmstick). [@ids1024](https://github.com/ids1024) also worked on in **Ion**, adding the `set_var()` and `get_var()` methods to `IonLibrary` while [@KaKnife](https://github.com/KaKnife) was busy implementing the `random` builtin in addition to [@AgustinCB](https://github.com/AgustinCB) implementing `escape` and `unescape` as well as a major optimization to perform builtin Lookup when parsing now the builtin lookup once when parsing the statement, rather than performing a lookup for a given builtin command for each statement repeatedly.
 
-This week, I saw a new contributor super active in the chat, asking many questions, and trying to port stuff to Redox. The result: the addition of recipes for `vim`, `jansson` and `openssh` to the [cookbook](https://github.com/redox-os/cookbook). Give it up for [@sajattack](https://github.com/sajattack)!
+This week, I saw a new contributor super active in the chat, asking many questions, and trying to port stuff to Redox. The result: the addition of recipes for `vim`, `jansson` and `openssh` to the [**ookbook**](https://github.com/redox-os/cookbook). Give it up for [@sajattack](https://github.com/sajattack)!
 
-Continuing in the **cookbook**: [@xTibor](https://github.com/xTibor) added recipe version to `vttest` recipe, along with lots of activity from [@jackpot51](https://github.com/jackpot51) who cleaned up LLVM the build and improved build speed of the `rust` recipe, fixed `llvm-config`'s path. Meanwhile [@AgustinCB](https://github.com/AgustinCB) focused efforts on fixing the `xz` recipe. Also, [@xTibor](https://github.com/xTibor) added a `periodictable` recipe.
+Continuing with the [**ookbook**](https://github.com/redox-os/cookbook): [@xTibor](https://github.com/xTibor) added recipe version to `vttest` in addtion to a new `periodictable` recipe, along with lots of activity from [@jackpot51](https://github.com/jackpot51) who cleaned up LLVM the build and improved build speed of the `rust` recipe, fixed `llvm-config`'s path. Meanwhile [@AgustinCB](https://github.com/AgustinCB) focused efforts on fixing the `xz` recipe.
 
-On the [Orbtk](https://github.com/redox-os/orbtk) side of things, [@BojanKogoj](https://github.com/BojanKogoj) added `clear()` to `Grid` plus some examples. Continuing on the GUI work, the [Orbterm](https://github.com/redox-os/orbterm) emulator saw a bunch of updates, mostly related to bumping of the [ransid](https://github.com/redox-os/ransid) dependency who experienced a bunch of improvements: fixes to overflow, improvements on the `vt100` compliance, better `vttest` performance and few enhancements to the parsing of nested control characters.
+On the [**Orbtk**](https://github.com/redox-os/orbtk) side of things, [@BojanKogoj](https://github.com/BojanKogoj) added `clear()` to `Grid` plus some examples. Continuing on the GUI work, the [**Orbterm**](https://github.com/redox-os/orbterm) emulator saw a bunch of updates, mostly related to bumping [**ransid**](https://github.com/redox-os/ransid) who experienced a bunch of improvements: fixes to overflow, improvements on the `vt100` compliance, better `vttest` performance and few enhancements to the parsing of nested control characters.
 
-Moving onto [pkgutils](https://github.com/redox-os/pkgutils), few issues related to dependency resolution were adressed, and now we are retrieveing the dependency list from repo.
+Moving onto [**pkgutils**](https://github.com/redox-os/pkgutils), few issues related to dependency resolution were adressed, and now we are retrieveing the dependency list from repo.
 
-A quick glimpse to the utilities land reveals a new small new crate: [redox_users](https://github.com/redox-os/users). Basically, we moved all of the users and groups functionality there (along with few new goodies and documentation improvements), functionality that was previously embedded on [userutils](https://github.com/redox-os/userutils) which was not optimal. This was done by [@goyox86](https://github.com/goyox86) as part of his ongoing work on porting the [exa](https://github.com/ogham/exa) to Redox.
+A quick glimpse to the utilities land reveals a new small new crate: [**redox_users**](https://github.com/redox-os/users). Basically, we moved all of the users and groups functionality there (along with few new goodies and documentation improvements), functionality that was previously embedded on [userutils](https://github.com/redox-os/userutils) which was not optimal. This was done by [@goyox86](https://github.com/goyox86) as part of his ongoing work on porting the [exa](https://github.com/ogham/exa) to Redox.
 
-The [userutils](https://github.com/redox-os/userutils/) and [coreutils](https://github.com/redox-os/coreutils/) packages were updated to **redox_users** in addition to some general refactoring and cleanup.
+The [**userutils**](https://github.com/redox-os/userutils) and [**coreutils**](https://github.com/redox-os/coreutils/) packages were updated to [**redox_users**](https://github.com/redox-os/users) in addition to some general refactoring and cleanup.
 
-And last but not least, [newlib](https://github.com/redox-os/newlib) our C library got some attention from [@sajattack](https://github.com/sajattack) who removed include of nonexistent endian.h file, added all the headers necessary for `openssh` to compile, replaced `glibc` headers with newlib ones where possible and  implemented `scandir()` and `alphasort()`.
+And last but not least, [**newlib**](https://github.com/redox-os/newlib) our C library got some attention from [@sajattack](https://github.com/sajattack) who removed include of nonexistent `endian.h` file, added all the headers necessary for `openssh` to compile, replaced `glibc` headers with newlib ones where possible as well as implemented `scandir()` and `alphasort()`.
 
 Now I let you with the details. See you next time, hopefully with `rustc` compiling some interesting crates ;)!
 
@@ -226,7 +226,7 @@ A fork of newlib from git://sourceware.org/git/newlib-cygwin.git with Redox supp
 
 Since the list of contributors are growing too fast, we'll now only list the new contributors. This might change in the future.
 
-Sorted in alphabetical order.
+Sorted in alphabetical order:
 
 - [@AgustinCB](https://github.com/AgustinCB) 🎂
 - [@BojanKogoj](https://github.com/BojanKogoj) 🎂
