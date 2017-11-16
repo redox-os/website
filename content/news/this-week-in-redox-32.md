@@ -34,9 +34,9 @@ Moving to the [**kernel**](https://github.com/redox-os/kernel/), [@jackpot51](ht
 
 As always the [**Ion**](https://github.com/redox-os/ion) shell saw a lot of work. Including the introduction of a new fork abstraction, which will hopefully help to eliminate some redundancy caused by the manual handling of forking logic in command expansions and function prompts. There were also `readln` and quote termination refactorings as well as the elimination of heap allocations with `!*` designator. All of that thanks to [@mmstick](https://github.com/mmstick). [@ids1024](https://github.com/ids1024) also worked on in **Ion**, adding the `set_var()` and `get_var()` methods to `IonLibrary` while [@KaKnife](https://github.com/KaKnife) was busy implementing the `random` builtin in addition to [@AgustinCB](https://github.com/AgustinCB) implementing `escape` and `unescape` as well as a major optimization to perform builtin Lookup when parsing now the builtin lookup once when parsing the statement, rather than performing a lookup for a given builtin command for each statement repeatedly.
 
-This week, I saw a new contributor super active in the chat, asking many questions, and trying to port stuff to Redox. The result: the addition of recipes for `vim`, `jansson` and `openssh` to the [**ookbook**](https://github.com/redox-os/cookbook). Give it up for [@sajattack](https://github.com/sajattack)!
+This week, I saw a new contributor super active in the chat, asking many questions, and trying to port stuff to Redox. The result: the addition of recipes for `vim`, `jansson` and `openssh` to the [**cookbook**](https://github.com/redox-os/cookbook). Give it up for [@sajattack](https://github.com/sajattack)!
 
-Continuing with the [**ookbook**](https://github.com/redox-os/cookbook): [@xTibor](https://github.com/xTibor) added recipe version to `vttest` in addtion to a new `periodictable` recipe, along with lots of activity from [@jackpot51](https://github.com/jackpot51) who cleaned up LLVM the build and improved build speed of the `rust` recipe, fixed `llvm-config`'s path. Meanwhile [@AgustinCB](https://github.com/AgustinCB) focused efforts on fixing the `xz` recipe.
+Continuing with the [**cookbook**](https://github.com/redox-os/cookbook): [@xTibor](https://github.com/xTibor) added recipe version to `vttest` in addtion to a new `periodictable` recipe, along with lots of activity from [@jackpot51](https://github.com/jackpot51) who cleaned up LLVM the build and improved build speed of the `rust` recipe, fixed `llvm-config`'s path. Meanwhile [@AgustinCB](https://github.com/AgustinCB) focused efforts on fixing the `xz` recipe.
 
 On the [**Orbtk**](https://github.com/redox-os/orbtk) side of things, [@BojanKogoj](https://github.com/BojanKogoj) added `clear()` to `Grid` plus some examples. Continuing on the GUI work, the [**Orbterm**](https://github.com/redox-os/orbterm) emulator saw a bunch of updates, mostly related to bumping [**ransid**](https://github.com/redox-os/ransid) who experienced a bunch of improvements: fixes to overflow, improvements on the `vt100` compliance, better `vttest` performance and few enhancements to the parsing of nested control characters.
 
@@ -44,7 +44,9 @@ Moving onto [**pkgutils**](https://github.com/redox-os/pkgutils), few issues rel
 
 A quick glimpse to the utilities land reveals a new small new crate: [**redox_users**](https://github.com/redox-os/users). Basically, we moved all of the users and groups functionality there (along with few new goodies and documentation improvements), functionality that was previously embedded on [userutils](https://github.com/redox-os/userutils) which was not optimal. This was done by [@goyox86](https://github.com/goyox86) as part of his ongoing work on porting the [exa](https://github.com/ogham/exa) to Redox.
 
-The [**userutils**](https://github.com/redox-os/userutils) and [**coreutils**](https://github.com/redox-os/coreutils/) packages were updated to [**redox_users**](https://github.com/redox-os/users) in addition to some general refactoring and cleanup.
+The [**userutils**](https://github.com/redox-os/userutils) [**coreutils**](https://github.com/redox-os/coreutils/) packages were updated to [**redox_users**](https://github.com/redox-os/users) in addition to some general refactoring and cleanup.
+
+Another package updated to **redox_users** was [**Orbutils**](https://github.com/redox-os/coreutils/). The migration was done by [@chebykinn](https://github.com/chebykinn) and [@AleVul](https://github.com/AleVul).
 
 And last but not least, [**newlib**](https://github.com/redox-os/newlib) our C library got some attention from [@sajattack](https://github.com/sajattack) who removed include of nonexistent `endian.h` file, added all the headers necessary for `openssh` to compile, replaced `glibc` headers with newlib ones where possible as well as implemented `scandir()` and `alphasort()`.
 
@@ -151,6 +153,13 @@ Orbital Terminal, compatible with Redox and Linux.
 - [@jackpot51](https://github.com/jackpot51) Added resize event. Details [here](https://github.com/redox-os/orbterm/commit/f762ad4a50728fb2476e1a1ba6241e85229e8295).
 - [@jackpot51](https://github.com/jackpot51) Released version`0.3.0`. Details [here](https://github.com/redox-os/orbterm/commit/da3090e5a664948d446bfe181dc9cb2fde520091).
 
+## Orbutils
+
+The Orbital Utilities. Compatible with Redox and SDL2.
+
+- [@chebykinn](https://github.com/chebykinn) Migrated to `redox_users` in `orblogin`. Details [here](https://github.com/redox-os/orbutils/pull/31).
+- [@AleVul](https://github.com/AleVul) replace userutils with redox_users in `orblogin`. Details [here](https://github.com/redox-os/orbutils/pull/32).
+
 ## ransid
 
 Rust ANSI Driver - a backend for terminal emulators in Rust.
@@ -229,6 +238,7 @@ Since the list of contributors are growing too fast, we'll now only list the new
 Sorted in alphabetical order:
 
 - [@AgustinCB](https://github.com/AgustinCB) 🎂
+- [@AleVul](https://github.com/AleVul) 🎂
 - [@BojanKogoj](https://github.com/BojanKogoj) 🎂
 - [@dlrobertson](https://github.com/dlrobertson) 🎂
 - [@Eijebong](https://github.com/Eijebong) 🎂
