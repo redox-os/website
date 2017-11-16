@@ -40,7 +40,7 @@ Continuing with the [**cookbook**](https://github.com/redox-os/cookbook): [@xTib
 
 On the [**Orbtk**](https://github.com/redox-os/orbtk) side of things, [@BojanKogoj](https://github.com/BojanKogoj) added `clear()` to `Grid` plus some examples. Continuing on the GUI work, the [**Orbterm**](https://github.com/redox-os/orbterm) emulator saw a bunch of updates, mostly related to bumping [**ransid**](https://github.com/redox-os/ransid) who experienced a bunch of improvements: fixes to overflow, improvements on the `vt100` compliance, better `vttest` performance and few enhancements to the parsing of nested control characters.
 
-Moving onto [**pkgutils**](https://github.com/redox-os/pkgutils), few issues related to dependency resolution were adressed, and now we are retrieveing the dependency list from repo.
+Moving onto [**pkgutils**](https://github.com/redox-os/pkgutils), few issues related to dependency resolution were adressed, and now we are retrieving the dependency list from repo.
 
 A quick glimpse to the utilities land reveals a new small new crate: [**redox_users**](https://github.com/redox-os/users). Basically, we moved all of the users and groups functionality there (along with few new goodies and documentation improvements), functionality that was previously embedded on [userutils](https://github.com/redox-os/userutils) which was not optimal. This was done by [@goyox86](https://github.com/goyox86) as part of his ongoing work on porting the [exa](https://github.com/ogham/exa) to Redox.
 
@@ -50,7 +50,7 @@ Another package updated to **redox_users** was [**Orbutils**](https://github.com
 
 And last but not least, [**newlib**](https://github.com/redox-os/newlib) our C library got some attention from [@sajattack](https://github.com/sajattack) who removed include of nonexistent `endian.h` file, added all the headers necessary for `openssh` to compile, replaced `glibc` headers with newlib ones where possible as well as implemented `scandir()` and `alphasort()`.
 
-Now I let you with the details. See you next time, hopefully with `rustc` compiling some interesting crates ;)!
+Now I leave you with the details. See you next time, hopefully with `rustc` compiling some interesting crates ;)!
 
 ## Book
 
