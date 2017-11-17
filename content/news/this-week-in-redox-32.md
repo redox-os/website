@@ -36,7 +36,7 @@ As always the [**Ion**](https://github.com/redox-os/ion) shell saw a lot of work
 
 This week, I saw a new contributor super active in the chat, asking many questions, and trying to port stuff to Redox. The result: the addition of recipes for `vim`, `jansson` and `openssh` to the [**cookbook**](https://github.com/redox-os/cookbook). Give it up for [@sajattack](https://github.com/sajattack)!
 
-Continuing with the [**cookbook**](https://github.com/redox-os/cookbook): [@xTibor](https://github.com/xTibor) added recipe version to `vttest` in addtion to a new `periodictable` recipe, along with lots of activity from [@jackpot51](https://github.com/jackpot51) who cleaned up LLVM the build and improved build speed of the `rust` recipe, fixed `llvm-config`'s path. Meanwhile [@AgustinCB](https://github.com/AgustinCB) focused efforts on fixing the `xz` recipe.
+Continuing with the [**cookbook**](https://github.com/redox-os/cookbook): [@xTibor](https://github.com/xTibor) added recipe version to `vttest` in addition to a new `periodictable` recipe, along with lots of activity from [@jackpot51](https://github.com/jackpot51) who cleaned up LLVM the build and improved build speed of the `rust` recipe, fixed `llvm-config`'s path. Meanwhile [@AgustinCB](https://github.com/AgustinCB) focused efforts on fixing the `xz` recipe.
 
 On the [**Orbtk**](https://github.com/redox-os/orbtk) side of things, [@BojanKogoj](https://github.com/BojanKogoj) added `clear()` to `Grid` plus some examples. Continuing on the GUI work, the [**Orbterm**](https://github.com/redox-os/orbterm) emulator saw a bunch of updates, mostly related to bumping [**ransid**](https://github.com/redox-os/ransid) who experienced a bunch of improvements: fixes to overflow, improvements on the `vt100` compliance, better `vttest` performance and few enhancements to the parsing of nested control characters.
 
@@ -57,7 +57,7 @@ Now I leave you with the details. See you next time, hopefully with `rustc` comp
 The Redox book.
 
 - [@sajattack](https://github.com/sajattack) Made a change to highlight the fact that we need `cargo install xargo`. Details [here](https://github.com/redox-os/book/commit/12e3c55d8536b13445da0688f607f366b75c41e5).
-- [@sajattack](https://github.com/sajattack) Updated the build preparation intructions. Details [here](https://github.com/redox-os/book/commit/040ff9ca62a9c7c79b1a7768f34b7a222a4006e3).
+- [@sajattack](https://github.com/sajattack) Updated the build preparation instructions. Details [here](https://github.com/redox-os/book/commit/040ff9ca62a9c7c79b1a7768f34b7a222a4006e3).
 - [@sajattack](https://github.com/sajattack) Updated the toolchain installation instructions. Details [here](https://github.com/redox-os/book/commit/e387551b36000acb22ca31a9be8f7f2d9d154475).
 
 ## Kernel
@@ -194,7 +194,7 @@ Redox OS APIs for accessing users and groups information.
 - [@goyox86](https://github.com/goyox86) Updated Cargo.toml. Details [here](https://github.com/redox-os/users/commit/5cda74ef5c50a2ea5557d02770302c0c744e90cb).
 - [@goyox86](https://github.com/goyox86) Made some renaming and improved docs. Details [here](https://github.com/redox-os/users/pull/1).
 - [@goyox86](https://github.com/goyox86) Moved `Group` `users` field to be a vector of `String`s. Details [here](https://github.com/redox-os/users/pull/2).
-- [@goyox86](https://github.com/goyox86) Implemened `AllUsers` iterator. Details [here](https://github.com/redox-os/users/pull/3).
+- [@goyox86](https://github.com/goyox86) Implemented `AllUsers` iterator. Details [here](https://github.com/redox-os/users/pull/3).
 
 ## Userutils
 
@@ -216,7 +216,7 @@ A fork of newlib from git://sourceware.org/git/newlib-cygwin.git with Redox supp
 - [@sajattack](https://github.com/sajattack) Removed include of nonexistent endian.h file. Details [here](https://github.com/redox-os/newlib/pull/67).
 - [@sajattack](https://github.com/sajattack) Added all the headers necessary for `openssh` to compile. Details [here](https://github.com/redox-os/newlib/pull/68).
 - [@sajattack](https://github.com/sajattack) Replaced `glibc` headers with newlib ones where possible. Details [here](https://github.com/redox-os/newlib/pull/69).
-- [@sajattack](https://github.com/sajattack) Removed `ioctl.h` and revert netdb.h for breaking ncurses and bash. Details [here](https://github.com/redox-os/newlib/pull/70).
+- [@sajattack](https://github.com/sajattack) Removed `ioctl.h` and revert `netdb.h` for breaking ncurses and bash. Details [here](https://github.com/redox-os/newlib/pull/70).
 - [@sajattack](https://github.com/sajattack) Removed `un.h` for breaking openssl. Details [here](https://github.com/redox-os/newlib/pull/71).
 - [@sajattack](https://github.com/sajattack) Added `ssh` dependencies. Details [here](https://github.com/redox-os/newlib/pull/72).
 - [@sajattack](https://github.com/sajattack) Implemented `scandir()` and `alphasort()`. Details [here](https://github.com/redox-os/newlib/pull/73).
