@@ -20,7 +20,7 @@ Hello there! Welcome to another issue of TWiR!
 
 This week [@jackpot51](https://github.com/jackpot51) surprised us by sharing this on the Mattermost channel:
 
-![cargo on Redox](https://chat.redox-os.org/files/qnmgh4pcefdg5xs1uda9ekby7a/public?h=O9WYJaxO_3GjDPRTDIhAUdK5KPH8UWRFOwo7TOnHNvs)
+<img class="img-responsive" src="https://chat.redox-os.org/files/qnmgh4pcefdg5xs1uda9ekby7a/public?h=O9WYJaxO_3GjDPRTDIhAUdK5KPH8UWRFOwo7TOnHNvs" alt="cargo on Redox"/>
 
 Yes! it's `cargo` running on Redox! This milestone represents a significant step forward on our path to self-hosting. Kudos to [@ids1024](https://github.com/ids1024) who worked really hard on self-hosting during the GSoC.
 
