@@ -74,7 +74,7 @@ The Redox microkernel.
 The Ion Shell. Compatible with Redox and Linux.
 
 - [@Eijebong](https://github.com/Eijebong) Bumped `bitflags` to 1.0. Details [here](https://github.com/redox-os/ion/pull/568).
-- [@mmstick](https://github.com/mmstick) Made process expansions to allow access to stdin. Builtin commands like read aren't working yet.. Details [here](https://github.com/redox-os/ion/commit/becfbfb83499b32beb1ff0e9bfb23f243938cb03).
+- [@mmstick](https://github.com/mmstick) Made process expansions to allow access to stdin. Builtin commands like read aren't working yet. Details [here](https://github.com/redox-os/ion/commit/becfbfb83499b32beb1ff0e9bfb23f243938cb03).
 - [@mmstick](https://github.com/mmstick) Created fork abstraction with cmd expansions and fn prompts. Details [here](https://github.com/redox-os/ion/commit/2529362cf2e0210984b430c0683cdb08a5d7e2a6).
 - [@mmstick](https://github.com/mmstick) Refactored `readln` logic into it's own module. Details [here](https://github.com/redox-os/ion/commit/9f8e9e539fb62f7513f33ff110d1a3253bad2c3c).
 - [@mmstick](https://github.com/mmstick) Refactored quote termination logic. Details [here](https://github.com/redox-os/ion/commit/a09aa7d6fb1c0e607be15fd4eb05faa8e0859fcc).
