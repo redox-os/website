@@ -1,7 +1,3 @@
-# Szervezet
-
-A szervererőforrásokat a [DMC Networks](http://dmcnet.net/) adományozta.
-
 # Jackpot51
 
 Jackpot51, avagy Jeremy Soller, a Redox OS készítője, karbantartója és vezető fejlesztője.

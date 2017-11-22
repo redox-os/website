@@ -1,7 +1,3 @@
-# Organisatie
-
-Server resources zijn gedoneerd door [DMC Networks](http://dmcnet.net/)
-
 # Jackpot51
 
 Jackpot51, of Jeremy Soller, is de maker, onderhouder en hoofd ontwikkelaar van Redox OS.

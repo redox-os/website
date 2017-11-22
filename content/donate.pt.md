@@ -1,7 +1,3 @@
-# Organização
-
-Recursos de servidores foram doados pela [DMC Networks](http://dmcnet.net/).
-
 # Jackpot51
 
 Jackpot51, ou Jeremy Soller, é o criador, mantenedor, e desenvolvedor líder do Redox OS.

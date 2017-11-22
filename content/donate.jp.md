@@ -1,11 +1,7 @@
-# Organization
-
-サーバー資源は[DMC Networks](http://dmcnet.net/)から寄付を受けています。
-
 # Jackpot51
 
 Jackpot51（Jeremy Soller）は、Redox OSの作者であり、保守者であり、主要な開発者です。
- 
+
 Jackpot51には以下の方法で寄付できます。
 
 - [Patreon](https://www.patreon.com/redox_os)
