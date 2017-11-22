@@ -30,7 +30,7 @@ date = "2016-12-07T08:26:00-07:00"
     <ul class="laundry-list">
       <li>MITライセンス</li>
       <li>ドライバはユーザ空間で動作</li>
-      <li>一般的なUinxコマンドを持つ</li>
+      <li>一般的なUnixコマンドを持つ</li>
       <li>C言語プログラムの移植</li>
     </ul>
   </div>
