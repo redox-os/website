@@ -16,52 +16,54 @@ If you have any questions, ideas, or are curious about Redox, we recommend joini
 
 ## TL;DR
 
-Hello and welcome back to another issue of TWiR!
+Hello and welcome back to another issue of TWiRx!
 
-First of all, apologies for disappearing for a while but I've been super busy at work these last few weeks.
+First of all, apologies for disappearing for a while but I've been super busy at work.
 
 With that out of the way, let's start our tour!
 
-The fact that I was super busy these last couple of weeks did not mean that the rest of the team was idle too, in fact, they were super busy and because of that, I have a ton of progress to share!
+The fact that I was super busy these last couple of weeks did not mean that the rest of the team was idle too, in fact, they were super busy which means I have a ton of progress to share!
 
-Lets's star with the main repo where [@sajattack](https://github.com/sajattack) and [@HarryU](https://github.com/HarryU) made some fixes to the `bootstrap.sh` script and [@dlrobertson](https://github.com/dlrobertson) made possible to keep debug info in a `.sym` file. Also, [@jackpot51](https://github.com/jackpot51) switched us to the `smolnetd` network stack!
+Lets's start with the main repo where [@sajattack](https://github.com/sajattack) and [@HarryU](https://github.com/HarryU) made some fixes to the `bootstrap.sh` script and [@dlrobertson](https://github.com/dlrobertson) made it possible to keep debug info in a `.sym` file. Also, [@jackpot51](https://github.com/jackpot51) switched us to the `smolnetd` network stack!
 
 The **bootloader** that has been updated to **Redoxfs** version 3.
 
-In the **kernel** land [@jackpot51](https://github.com/jackpot51) implemented `fchown` and `fchmod`. He also improved multi-core support while [@dlrobertson](https://github.com/dlrobertson) was busy improving the debugging support by preventing the discarding of the `.debug` section
+In lower land of the **kernel** [@jackpot51](https://github.com/jackpot51) implemented `fchown` and `fchmod`. He also improved multi-core support while [@dlrobertson](https://github.com/dlrobertson) was busy improving the debugging support by preventing the discarding of the `.debug` section
 as well as documenting on how to use `gdb`.
 
 Keeping things low level (not really because Redox drivers are in userspace ;)), we have the **drivers** where [@jackpot51](https://github.com/jackpot51) made some `vesad` related updates in `ransid` and a fix of an error (`E0133`) on `pcid` was shipped by [@ghatdev](https://github.com/ghatdev).
 
-Also driver-related is **ransid**, the ANSI terminal driver, who got two new versions released (`0.4.4` and `0.4.5`) containing the ICH implementation and some fixes to DCH.
+Also driver-related is **ransid**, the ANSI terminal driver, who got two new versions released (`0.4.4` and `0.4.5`) containing an ICH implementation and fixes to DCH.
 
 The system call interface, AKA the **syscall** crate saw the birth of `fchown` and `fchmod` which should make porting easier.
 
-Before departing from the lower level layer we have **Redoxfs** with it's new major version, 3, with a new block size of `4096` bytes. This new version also includes an updated lock format, changes to set block size programmatically, a simplified disk cache and implementations of `fchmod` and `fchown`.
+Before departing from the lower level layer we have **Redoxfs** with it's new major version, 3, with a new block size of `4096` bytes. This new version also includes changes enabling to set block size programmatically, a simplified disk cache and implementations of `fchmod` and `fchown`.
 
 That's it with low level stuff. Let's move up in the stack!
 
-What do we have there? Well, unsurprisingly we are gonna start with **Ion**. As almost always it was a busy period for the **Ion** folks. Notably: The addition of the `status`, `bool`, and `is` builtins by [@Sag0Sag0](https://github.com/Sag0Sag0) as well as the migration to XDG and the implementation of a "command not found" hook by [@jD91mZM2](https://github.com/jD91mZM2). All of that along [@mmstick](https://github.com/mmstick)'s work on implementation of recursive aliases, the start of the migration of the error handling to the `failure` crate, the implementation of `huponexit` and the fixed to multi-line array assignments.
+What do we have there? Well, unsurprisingly, **Ion** is the first. As always it was a busy period for the **Ion** folks. Notably: The addition of the `status`, `bool`, and `is` builtins by [@Sag0Sag0](https://github.com/Sag0Sag0) as well as the migration to XDG and the implementation of a "command not found" hook by [@jD91mZM2](https://github.com/jD91mZM2). All of that along [@mmstick](https://github.com/mmstick)'s work on implementation of recursive aliases, the start of the migration of the error handling to the `failure` crate, the implementation of `huponexit` and the fixed to multi-line array assignments.
 
-Continuing our trip, we have the **cookbook**, our software packages recipes repository. Let's see, we have new packages for: `libzip`, `libpng`, `cmatrix`, `netdb`, `mdp`, `TiMidity++` and the `GeneralUser GS` sound fonts along with a big increase in the set of binaries we use from `uutils`.
+Continuing our trip, we stop at the **cookbook**, our software packages recipes repository. Let's see, we have new packages for: `libzip`, `libpng`, `cmatrix`, `netdb`, `mdp`, `TiMidity++` and the `GeneralUser GS` sound fonts along with a big increase in the set of binaries we use from `uutils`.
 
-Switching gears to GUI related stuff we have **Orbclient** where [@robbycerantola](https://github.com/robbycerantola) implemented antialiased circles and lines.
+Switching gears to the GUI is **Orbclient** where [@robbycerantola](https://github.com/robbycerantola) implemented antialiased circles and lines.
 
-Also in the GUI department, is the **Orbtk** toolkit with a new version `0.2.26` including a `Grid` by [@FloVanGH](https://github.com/FloVanGH), fixes to label backgrounds, splitting of CSS into separate files, addition of border radii to button to `Button` and many more from [@jackpot51](https://github.com/jackpot51), without forgetting [@jsalzbergedu](https://github.com/jsalzbergedu) who allowed the user to specify a theme.
+Also in the GUI department, the **Orbtk** toolkit saw new version `0.2.26` including a `Grid` by [@FloVanGH](https://github.com/FloVanGH), fixes to label backgrounds, splitting of CSS into separate files, addition of border radii to button to `Button` and many more from [@jackpot51](https://github.com/jackpot51), without forgetting [@jsalzbergedu](https://github.com/jsalzbergedu) who allowed the user to specify a theme.
 
-**Orbutils** was the object of [@BojanKogoj](https://github.com/BojanKogoj)'s attention this period with updates on the run instructions were and the addition of a new shinny `Calendar` app. [@MggMuggins](https://github.com/MggMuggins) was also busy updating all the code related to `redox_users` as we changed that API quite a lot during the last few weeks.
+**Orbutils** was the object of [@BojanKogoj](https://github.com/BojanKogoj)'s attention this period with updates on the run instructions and the addition of a new shinny `Calendar` app. Also, [@MggMuggins](https://github.com/MggMuggins) updated all the code related to `redox_users` as we changed that API quite a lot during the last few weeks.
 
-Next on the queue, is **Orbterm**, the terminal emulator. **Orbterm** released two new versions: `0.3.1` and `0.3.2` with improved resize performance by [@jackpot51](https://github.com/jackpot51) and the extraction of width and heights into fields by [@xTibor](https://github.com/xTibor).
+Next in the queue, is **Orbterm**, the terminal emulator. **Orbterm** released two new versions: `0.3.1` and `0.3.2` with improved resize performance by [@jackpot51](https://github.com/jackpot51) and the extraction of width and heights into fields by [@xTibor](https://github.com/xTibor).
 
 **Sodium**, the text editor got a bit of love from [@sajattack](https://github.com/sajattack) who made a change to infer file to save to from file opened. 
 
-On the utils section, the **userutils** crate was under heavy refactoring and improvement primarily by [@MggMuggins](https://github.com/MggMuggins) who implemented `groupadd` and `useradd` as well refactotring of almost all the rest of the tools. Related to this work is the work of [@goyox86](https://github.com/goyox86) on the **redox_users** crate improving error handling and propagation by moving it to the `failure` crate. [@MggMuggins](https://github.com/MggMuggins) also extended `redox_users` API with the `add_user`, `add_group` and `get_gid` functions.
+On the utils section, the **userutils** crate was under heavy refactoring and improvement primarily by [@MggMuggins](https://github.com/MggMuggins) who added `groupadd` and `useradd` as well refactored of almost all the rest of the tools. Related to this work is the one done by [@goyox86](https://github.com/goyox86) on the **redox_users** crate improving error handling and propagation by moving it to the `failure` crate. [@MggMuggins](https://github.com/MggMuggins) also extended `redox_users` API with the `add_user`, `add_group` and `get_gid` functions.
 
-The **coreutils** package got lots of attention too. Here [@Mojo4242](https://github.com/Mojo4242) simplified `dd`, [@Tommoa](https://github.com/Tommoa) made a performance improvements for `cat`, while [@jackpot51](https://github.com/jackpot51) was shipping `chown` and using more utilities from `uutils` instead of our own.
+The **coreutils** package got lots of attention too. Here [@Mojo4242](https://github.com/Mojo4242) simplified `dd`, [@Tommoa](https://github.com/Tommoa) made some performance improvements for `cat`, while [@jackpot51](https://github.com/jackpot51) was shipping `chown` and using more utilities from `uutils` instead of our own.
 
 Lastly but not least is **extrautils** who experienced a small change to use `cksum` from `uutils`. 
 
-Phew! That was a lot!
+Phew! That was a lot of work <3
+
+See you soon!
 
 ## Redox
 
@@ -148,7 +150,7 @@ The Ion Shell. Compatible with Redox and Linux.
 - [@mmstick](https://github.com/mmstick) Added a few more integration tests. Details [here](https://github.com/redox-os/ion/commit/446692400a4f213dc97a6d8149b4a44de1ab9eb7).
 - [@mmstick](https://github.com/mmstick) Made a change to only borrow builtin args when needed. Details [here](https://github.com/redox-os/ion/commit/e81543bfc389136a355815d3e47e5266adb405b8).
 
-## drivers
+## Drivers
 
 Redox OS Drivers
 
