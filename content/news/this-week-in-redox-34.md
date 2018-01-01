@@ -18,7 +18,7 @@ If you have any questions, ideas, or are curious about Redox, we recommend joini
 
 Welcome to the last TWiRx of the year!
 
-2017 has been a fantastic! The project has been more active and vibrant than ever.
+2017 has been fantastic! The project has been more active and vibrant than ever.
 The team worked super hard and shipped a ton of interesting stuff! I am preparing a summary of the most interesting things that happened in 2017 and I will be publishing it in a few days. So stay tuned!
 
 Without further ado, here is what happened this last few weeks:
