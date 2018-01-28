@@ -181,7 +181,7 @@ programs on Redox OS, such as the examples
 
 ### Skills Preferred
 
-Experience with asynchronous I/O is preffered, but not required. The student is
+Experience with asynchronous I/O is preferred, but not required. The student is
 expected to learn about the Redox OS event stack and to research mio and tokio
 during the project.
 
