@@ -23,15 +23,22 @@ Port Redox OS to the AArch64 architecture
 
 ### Details
 
-...
+The purpose of this project is to port Redox OS to a 64-bit ARM device, such as
+the Raspberry Pi. This project will begin with porting the kernel, implementing
+memory detection, paging, and security ring support. After userspace binaries
+can be launched, the cookbook recipes required to launch a shell on a serial
+port should be ported. If the project is finished early, work could begin on
+framebuffer support, allowing the graphics stack of Redox to be ported.
 
 ### Expected Outcome
 
-...
+The expected outcome of this project is to run Redox OS on a device such as the
+Raspberry Pi, with full support for a shell on a serial port.
 
 ### Skills Preferred
 
-...
+Experience with ARM devices is preferred. The student is expected to learn about
+the Redox OS kernel and to research their device of choice thoroughly.
 
 ### Mentors
 
