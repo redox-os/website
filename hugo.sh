@@ -6,7 +6,7 @@ cp -v content/*.md build/content
 mkdir -pv build/content/news
 for language in $(grep '^\[languages\..*\]$' config.toml | cut -d '.' -f2 | cut -d ']' -f1)
 do
-    cp -v "content/donate.md" "build/content/donate.$language.md"
+    cp -v "content/gsoc.md" "build/content/gsoc.$language.md"
     for file in content/news/*.md
     do
         cp -v "$file" "build/${file%.md}.$language.md"
