@@ -38,11 +38,12 @@ Raspberry Pi, with full support for a shell on a serial port.
 ### Skills Preferred
 
 Experience with ARM devices is preferred. The student is expected to learn about
-the Redox OS kernel and to research their device of choice thoroughly.
+the Redox OS kernel and to research their device of choice thoroughly during the
+project.
 
 ### Mentors
 
-Jeremy Soller
+[Jeremy Soller](https://github.com/jackpot51/)
 
 ### Difficulty
 
@@ -78,7 +79,7 @@ project.
 
 ### Mentors
 
-Jeremy Soller
+[Jeremy Soller](https://github.com/jackpot51/)
 
 ### Difficulty
 
@@ -110,13 +111,13 @@ a linear framebuffer to be acquired.
 
 ### Skills Preferred
 
-Experience with writing graphics-related code is prefered, but not required. The
+Experience with writing graphics-related code is preferred, but not required. The
 student is expected to learn about the Redox OS graphics stack and to research
 Intel Graphics during the project.
 
 ### Mentors
 
-Jeremy Soller
+[Jeremy Soller](https://github.com/jackpot51/)
 
 ### Difficulty
 
@@ -129,19 +130,29 @@ Port Mesa with Software Rendering using the llvmpipe driver
 
 ### Details
 
-...
+The purpose of this project is to port Mesa and the llvmpipe driver to Redox OS.
+This project will begin with making modifications to Mesa so that it compiles
+correctly with the Redox cross compiler. After it compiles correctly, a simple
+application making use of OSMesa will be written and tested. Modifications will
+be made to Mesa, newlib, and other parts of Redox as necessary to fix any test
+failures. After OSMesa works correctly, a backend for orbital will be added to
+Mesa. Finally, llvmpipe will be ported, utilizing this new backend, and a test
+application such as glxgears will be demonstrated.
 
 ### Expected Outcome
 
-...
+The expected outcome of this project is to be able to run a simple OpenGL
+example, such as glxgears, on Redox OS using llvmpipe as the rendering backend.
 
 ### Skills Preferred
 
-...
+Experience with 3D graphics is preferred, especially experience with OpenGL on
+Linux. The student is expected to learn about the Redox OS graphics stack during
+the project.
 
 ### Mentors
 
-Jeremy Soller
+[Jeremy Soller](https://github.com/jackpot51/)
 
 ### Dificulty
 
@@ -166,7 +177,7 @@ Port tokio to support a number of asynchronous Rust programs
 
 ### Mentors
 
-Jeremy Soller
+[Jeremy Soller](https://github.com/jackpot51/)
 
 ### Dificulty
 
@@ -191,7 +202,7 @@ Implement a FAT32 filesystem driver for Redox OS
 
 ### Mentors
 
-Jeremy Soller
+[Jeremy Soller](https://github.com/jackpot51/)
 
 ### Dificulty
 
