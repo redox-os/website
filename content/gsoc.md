@@ -152,7 +152,8 @@ the project.
 
 ### Mentors
 
-[Jeremy Soller](https://github.com/jackpot51/)
+[Jeremy Soller](https://github.com/jackpot51/) and
+[Ian Douglas Scott](https://github.com/ids1024)
 
 ### Dificulty
 
@@ -187,7 +188,8 @@ during the project.
 
 ### Mentors
 
-[Jeremy Soller](https://github.com/jackpot51/)
+[Jeremy Soller](https://github.com/jackpot51/) and
+[Ian Douglas Scott](https://github.com/ids1024)
 
 ### Dificulty
 
