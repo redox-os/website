@@ -190,15 +190,25 @@ Implement a FAT32 filesystem driver for Redox OS
 
 ### Details
 
-...
+The purpose of this project is to implement a driver for FAT32 filesystems on
+Redox OS. This project will begin with partition detection using MBR and GPT
+partition tables. After partitions can be detected, filesystems will be checked
+for known filesystem types. A FAT32 driver will be launched for any detected
+FAT32 filesystem. This driver will support both read and write functionality,
+using RedoxFS as an example implementation to compare against. If the project
+is finished early, work could begin on other filesystem types.
 
 ### Expected Outcome
 
-...
+The expected outcome of this project is for Redox OS to automatically launch a
+FAT32 driver for all detected FAT32 filesystems, allowing for those filesystems
+to be read and modified.
 
 ### Skills Preferred
 
-...
+Experience with filesystems is preferred, but not required. The student is
+expected to learn about the current Redox OS filesystem and to research FAT32
+during the project.
 
 ### Mentors
 
