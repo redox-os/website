@@ -1,7 +1,5 @@
 +++
 title = "截图"
-author = "Jackpot51"
-date = "2016-03-25T10:42:20-07:00"
 +++
 
 ## 松下 Toughbook CF-18

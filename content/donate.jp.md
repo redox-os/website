@@ -1,4 +1,8 @@
-# Jackpot51
++++
+title = "寄付"
++++
+
+## Jackpot51
 
 Jackpot51（Jeremy Soller）は、Redox OSの作者であり、保守者であり、主要な開発者です。
 

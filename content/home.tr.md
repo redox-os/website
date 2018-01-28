@@ -1,8 +1,6 @@
 +++
 title = "Ev"
 url = "/home"
-author = "myavuz"
-date = "2016-12-07T08:26:00-07:00"
 +++
 <div class="row install-row">
   <div class="col-md-8">

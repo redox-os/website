@@ -1,4 +1,8 @@
-# Jackpot51
++++
+title = "Donate"
++++
+
+## Jackpot51
 
 Jackpot51, or Jeremy Soller, is the creator, maintainer, and lead developer of Redox OS.
 

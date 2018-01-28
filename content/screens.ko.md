@@ -1,7 +1,5 @@
 +++
 title = "스크린샷"
-author = "skdltmxn"
-date = "2016-03-25T10:42:20-07:00"
 +++
 
 ## Panasonic Toughbook CF-18

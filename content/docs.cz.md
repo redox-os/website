@@ -1,7 +1,5 @@
 +++
 title = "Documentation"
-author = "Jackpot51"
-date = "2016-03-25T10:42:20-07:00"
 +++
 
 ## Začínáme
@@ -22,7 +20,7 @@ Děkujeme za váš zájem o přispění do Redoxu!
 Existuje mnoho způsobů jak přispět a vážíme si každého z nich.
 
 Redox je veliký projekt rozdělený na mnoho repozitářů, které naleznete zde:
-[Organizace Redox na GitHub](https://github.com/redox-os). Dokument 
+[Organizace Redox na GitHub](https://github.com/redox-os). Dokument
 [CONTRIBUTING.md](https://github.com/redox-os/redox/blob/master/CONTRIBUTING.md)
 podrobně popisuje způsoby jakými můžete přispět.
 
@@ -35,7 +33,7 @@ což ovšem může chvíli trvat. Na jednodušším způsobu se pracuje.
 
 Rovněž můžete najít Redox na Redditu:
 [/r/rust/](https://www.reddit.com/r/rust) a
-[/r/redox/](https://www.reddit.com/r/redox). 
+[/r/redox/](https://www.reddit.com/r/redox).
 
 ## Chování
 

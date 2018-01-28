@@ -1,7 +1,5 @@
 +++
 title = "Documentación"
-author = "Jackpot51"
-date = "2016-03-25T10:42:20-07:00"
 +++
 
 ## Primeros Pasos
@@ -28,16 +26,16 @@ Redox es un gran proyecto separado en muchos repositorios que se pueden encontra
 
 ## Comunicación y Chat
 
-La forma mas rápida y abierta de comunicarse con el equipo de Redox es en 
-nuestro servidor de chat. Actualmente, la única forma de acceder es enviando 
-un correo electrónico a [info@redox-os.org](mailto:info@redox-os.org), 
-lo cual puede llevar un tiempo, ya que no es automático. Actualmente estamos 
-trabajando en una forma más rápida de hacerlo, pero esta es la más 
+La forma mas rápida y abierta de comunicarse con el equipo de Redox es en
+nuestro servidor de chat. Actualmente, la única forma de acceder es enviando
+un correo electrónico a [info@redox-os.org](mailto:info@redox-os.org),
+lo cual puede llevar un tiempo, ya que no es automático. Actualmente estamos
+trabajando en una forma más rápida de hacerlo, pero esta es la más
 conveniente actualmente.
 
 También se puede encontrar Redox en Reddit en
 [/r/rust/](https://www.reddit.com/r/rust) y
-[/r/redox/](https://www.reddit.com/r/redox). La actualización semanal se 
+[/r/redox/](https://www.reddit.com/r/redox). La actualización semanal se
 escribe en la primera.
 
 ## Conducta

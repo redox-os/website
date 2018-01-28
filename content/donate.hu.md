@@ -1,4 +1,8 @@
-# Jackpot51
++++
+title = "Adakozás"
++++
+
+## Jackpot51
 
 Jackpot51, avagy Jeremy Soller, a Redox OS készítője, karbantartója és vezető fejlesztője.
 

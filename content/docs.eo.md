@@ -1,7 +1,5 @@
 +++
 title = "Dokumentado"
-author = "Ticki"
-date = "2016-03-25T10:42:20-07:00"
 +++
 
 ## Komenciĝi
