@@ -30,28 +30,37 @@ This month we've also got the [Redox Crash Challenge](https://www.reddit.com/r/r
 
 Basically, a fun way of testing and discover bugs in the system, and ultimately hardening it!
 
-Regarding changes, we have some interesting ones. Starting with the work done in the **kernel** related to the implementation of the `SIGCONT/SIGSTOP` signals, fixes for the TLS when forking that were causing some programs to misbehave and/or crash, and the implementation of `waitpid` on `PGID`. 
+So far, it has been productive! We have found (and successfully fixed) few bugs:
 
-One interesting thing I saw in the kernel was the start of the work on PTI (Page Table Isolation) as a mitigation for the recently discovered [Meltdown vulnerability](https://en.wikipedia.org/wiki/Meltdown_(security_vulnerability)). I was gladly impressed when looking at the [changes](https://github.com/redox-os/kernel/commit/a6550341bbe3614d595dd8ba8113517f3a25f637), very interesting to see how small, localized and the time frame in which they were made. One of the advantages of having a microkernel!
+- An issue with too many arguments to exec not returning E2BIG: [redox-os/kernel#81](https://github.com/redox-os/kernel/issues/81)
+- An issue with the kernel attempting to remap kernel code (and failing due to protections) in: [redox-os/kernel#79](https://github.com/redox-os/kernel/issues/79)
+- An issue with address validation allowing overflows: [redox-os/kernel@dcb49be](https://github.com/redox-os/kernel/commit/dcb49be48133cf811dcd870e8af5f7ffaffc2ab0)
+- An issue with su allowing login as any user by pressing `Ctrl+D`: [redox-os/userutils@02759b4](https://github.com/redox-os/userutils/commit/02759b4a5a347726e6e81d4ee46a2ade86fd9e1e)
 
-Also in the low level, **syscall**, our system call interface crate, got a bunch of additions like: `WUNTRACED`/`WCONTINUED`, `wif*` functions, and lastly a few more `wait` calls.
+Without further ado, let's start with this week's work!
+
+We begin with the **kernel**, where `SIGCONT/SIGSTOP` signals were implemented, a bug in the TLS when forking was fixed (this one was causing some programs to crash and/or miss behave), along with the implementation of `waitpid` on `PGID`.
+
+One interesting thing I saw in the kernel was the start of the work on PTI (Page Table Isolation) as a mitigation for the recently discovered [Meltdown vulnerability](https://en.wikipedia.org/wiki/Meltdown_(security_vulnerability)). I was gladly impressed while looking at the [changes](https://github.com/redox-os/kernel/commit/a6550341bbe3614d595dd8ba8113517f3a25f637), how small, isolated they were. All of this, without mentioning the time frame in which they were made. One of the advantages of having a microkernel!
+
+Also in the low level, **syscall**, our system call interface crate, got a bunch of additions like: `WUNTRACED`/`WCONTINUED`, `wif*` functions, and a few more `wait` calls.
 
 A quick look at **Redoxfs** reveals a small change to enter into the null namespace by [@jackpot51](https://github.com/jackpot51).
 
-Moving up to the **drivers** [@ids1024](https://github.com/ids1024) have been busy working on an `ATAPI` driver which gives support for CD-ROM drives. I think is pretty cool!
+Moving up to the **drivers** [@ids1024](https://github.com/ids1024) have been busy working on an `ATAPI` driver which gives support for CD-ROM drives along with an [implementation](https://github.com/ids1024/iso9660-rs) of the ISO-9660 filesystem (the standard filesystem for CD-ROM drives). I think is pretty cool!
 
-On the **Ion** shell We saw the addition `isatty` builtin by [@Sag0Sag0](https://github.com/Sag0Sag0) as well as many small fixes and improvements.
+On the **Ion** shell We saw the addition of the `isatty` builtin by [@Sag0Sag0](https://github.com/Sag0Sag0) as well as many small fixes and improvements.
 
-In the **Cookbook**, the collection of package recipes for Redox [@zachlute](https://github.com/zachlute) added the `logd` package which implements a log daemon located at `log:` for collecting all log output.
+In the **Cookbook**, the collection of package recipes for Redox, [@zachlute](https://github.com/zachlute) added the `logd` package which implements a log daemon located at `log:` for collecting all log output.
 
 During this period, I saw a lot of activity on the GUI front, particularly **Orbtk** and **Orbutils** namely: Changes to allow apps to add classes and pseudo-classes to widgets, the addition of a `Style` trait to remaining widgets,
-correction on the initialization of fonts in `WindowBuilder`, the implementation of `KeyPressed` and `KeyReleased` events and some other goodies. Good work [@blackle](https://github.com/blackle) and [@FloVanGH](https://github.com/FloVanGH)!
+correction on the initialization of fonts in `WindowBuilder`, the implementation of `KeyPressed` and `KeyReleased` events plus some other goodies. Good work [@blackle](https://github.com/blackle) and [@FloVanGH](https://github.com/FloVanGH)!
 
-Last but not least we have the **Userutils** **Coreutils** and **Extrautils** with bugfixes for `su`, updates to `README` and some unused code removal respectively.
+Lastly (but not least) we have the **Userutils** **Coreutils** and **Extrautils** with bugfixes for `su`, updates to `README` and some unused code removal respectively.
 
 Looking forward to see you soon in the next issue of TWiRx.
 
-BTW! keep trying to [Crash Redox](https://www.reddit.com/r/rust/comments/7rv9vw/redox_os_crash_challenge/) and report bugs!
+BTW! keep trying to [crash Redox](https://www.reddit.com/r/rust/comments/7rv9vw/redox_os_crash_challenge/) and report bugs!
 
 ## Redox
 
@@ -67,7 +76,7 @@ Redox: A Rust Operating System - Main Repo
 
 The Redox book
 
-- [@bmusin](https://github.com/bmusin) Replaced "I" with "We" for consistency with rest of text. Details [here](https://github.com/redox-os/book/pull/113) 
+- [@bmusin](https://github.com/bmusin) Replaced "I" with "We" for consistency with rest of text. Details [here](https://github.com/redox-os/book/pull/113)
 
 ## kernel
 
@@ -108,7 +117,7 @@ Redox Rust Syscall Library
 - [@jackpot51](https://github.com/jackpot51) Added `WUNTRACED`. Details [here](https://github.com/redox-os/syscall/commit/88a0512d71c4cfaaa8a9102159416d7f1d09b68a).
 - [@jackpot51](https://github.com/jackpot51) Added `WCONTINUED`. Details [here](https://github.com/redox-os/syscall/commit/8f012900589854cd54ac0a6edb9a3f2b0e017669).
 - [@jD91mZM2](https://github.com/jD91mZM2) Added `wif*` functions. Details [here](https://github.com/redox-os/syscall/pull/22).
-- [@jackpot51](https://github.com/jackpot51) Relased vesrion `0.1.36`. Details [here](https://github.com/redox-os/syscall/commit/7ab7dbe3c80b9b829dd1537fbbacd240092d7019).
+- [@jackpot51](https://github.com/jackpot51) Released version `0.1.36`. Details [here](https://github.com/redox-os/syscall/commit/7ab7dbe3c80b9b829dd1537fbbacd240092d7019).
 - [@jackpot51](https://github.com/jackpot51) Added more `wait` related calls. Details [here](https://github.com/redox-os/syscall/commit/7c805d2a289ec19bf505256eb90395913d9f50b9).
 - [@ids1024](https://github.com/ids1024) Removed the `core_intrinsics` feature. Details [here](https://github.com/redox-os/syscall/pull/23).
 
@@ -192,22 +201,22 @@ Extra utilities for Redox (and Unix systems).
 7. [The Extreme Screenshots](http://www.redox-os.org/screens/)
 
 # New contributors
- 
+
 Since the list of contributors are growing too fast, we'll now only list the new contributors. This might change in the future.
 
 Sorted in alphabetical order.
 
-- [@Nopey](https://github.com/Nopey) 🎂
-- [@dogHere](https://github.com/dogHere) 🎂
-- [@bugabinga](https://github.com/bugabinga) 🎂
-- [@bmusin](https://github.com/bmusin) 🎂
-- [@wartman4404](https://github.com/wartman4404) 🎂
-- [@biotty](https://github.com/biotty) 🎂
-- [@gibfahn](https://github.com/gibfahn) 🎂
-- [@blackle](https://github.com/blackle) 🎂
-- [@its-suun](https://github.com/its-suun) 🎂
-- [@spacingnix](https://github.com/spacingnix) 🎂
 - [@aimof](https://github.com/aimof) 🎂
+- [@biotty](https://github.com/biotty) 🎂
+- [@blackle](https://github.com/blackle) 🎂
+- [@bmusin](https://github.com/bmusin) 🎂
+- [@bugabinga](https://github.com/bugabinga) 🎂
+- [@dogHere](https://github.com/dogHere) 🎂
+- [@gibfahn](https://github.com/gibfahn) 🎂
+- [@its-suun](https://github.com/its-suun) 🎂
+- [@Nopey](https://github.com/Nopey) 🎂
+- [@spacingnix](https://github.com/spacingnix) 🎂
+- [@wartman4404](https://github.com/wartman4404) 🎂
 - [@zachlute](https://github.com/zachlute) 🎂
 
 If I missed something, feel free to contact me [@goyox86](https://github.com/goyox86) or send a PR to [Redox website](https://github.com/redox-os/website).
