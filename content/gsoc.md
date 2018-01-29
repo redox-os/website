@@ -43,7 +43,8 @@ project.
 
 ### Mentors
 
-[Jeremy Soller](https://github.com/jackpot51/)
+[Jeremy Soller](https://github.com/jackpot51/) and
+[Robin Randhawa](https://github.com/raw-bin/)
 
 ### Difficulty
 
