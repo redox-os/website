@@ -170,7 +170,7 @@ Port tokio to support a number of asynchronous Rust programs
 The purpose of this project is to port mio and tokio to Redox OS. This project
 will begin by making modifications to mio and tokio to have them compile
 correctly on Redox OS. After they compile, examples of tokio usage
-[here](https://github.com/tokio-rs/tokio/tree/new-crate/examples) will be
+[here](https://github.com/tokio-rs/tokio/tree/master/examples) will be
 tested. Test failures will be addressed until a majority of the examples work
 on Redox OS. If the project is finished early, work could begin on porting the
 net2 crate, and addressing the remaining test failures.
@@ -179,7 +179,7 @@ net2 crate, and addressing the remaining test failures.
 
 The expected outcome of this project is to support a number of asynchronous Rust
 programs on Redox OS, such as the examples
-[here](https://github.com/tokio-rs/tokio/tree/new-crate/examples).
+[here](https://github.com/tokio-rs/tokio/tree/master/examples).
 
 ### Skills Preferred
 
