@@ -13,7 +13,7 @@ If you have any questions, ideas, or are curious about Redox, we recommend joini
 
 # What's new in Redox?
 
-- We've been featured on [InfoWorld](http://www.infoworld.com/article/3046100/open-source-tools/rusts-redox-os-could-show-linux-a-few-new-tricks.html) ("Rust's Redox OS Could Show Linux a Few New Tricks"), [Linux.com](https://www.linux.com/news/software/applications/894311-rusts-redox-os-could-show-linux-a-few-new-tricks), [Phoronix](https://www.phoronix.com/scan.php?page=news_item&px=Redos-OS-Intro), [OSNews](http://www.osnews.com/story/29131/The_Redox_operating_system), and probably more.
+- We've been featured on [InfoWorld](https://www.infoworld.com/article/3046100/open-source-tools/rusts-redox-os-could-show-linux-a-few-new-tricks.html) ("Rust's Redox OS Could Show Linux a Few New Tricks"), [Linux.com](https://www.linux.com/news/software/applications/894311-rusts-redox-os-could-show-linux-a-few-new-tricks), [Phoronix](https://www.phoronix.com/scan.php?page=news_item&px=Redos-OS-Intro), [OSNews](https://www.osnews.com/story/29131/The_Redox_operating_system), and probably more.
 
 - [@ticki](https://github.com/ticki) has has started [libmalloc](https://github.com/redox-os/libmalloc), an efficient userspace memory allocator for Redox.
 
@@ -51,7 +51,7 @@ If you have any questions, ideas, or are curious about Redox, we recommend joini
 
 - We finally reached [3,500 stargazers](https://github.com/redox-os/redox).
 
-- [@ticki](https://github.com/ticki) has added a [Code of Conduct](http://www.redox-os.org/coc/). It is based on Rust's with some slight modifications.
+- [@ticki](https://github.com/ticki) has added a [Code of Conduct](https://www.redox-os.org/coc/). It is based on Rust's with some slight modifications.
 
 - [@jackpot51](https://github.com/jackpot51) has been working on IO from userspace.
 
@@ -97,15 +97,15 @@ Hello world from Java:
 
 Redox running on Thinkpad T-420:
 
-<img class="img-responsive" src="http://www.redox-os.org/img/hardware/thinkpad-t420.png"/>
+<img class="img-responsive" src="https://www.redox-os.org/img/hardware/thinkpad-t420.png"/>
 
 Redox running on ASUS eeePC 900:
 
-<img class="img-responsive" src="http://www.redox-os.org/img/hardware/asus-eepc-900.png"/>
+<img class="img-responsive" src="https://www.redox-os.org/img/hardware/asus-eepc-900.png"/>
 
 Redox running on Panasonic Toughbook CF-18:
 
-<img class="img-responsive" src="http://www.redox-os.org/img/hardware/panasonic-toughbook-cf18.png"/>
+<img class="img-responsive" src="https://www.redox-os.org/img/hardware/panasonic-toughbook-cf18.png"/>
 
 RustType running on Redox:
 
@@ -134,11 +134,11 @@ The above pictures are all real.
 1. [The Glorious Book](https://doc.redox-os.org/book/)
 2. [The Holiest Forum](https://discourse.redox-os.org/)
 3. [The Shiny ISOs](https://static.redox-os.org/)
-4. [Redocs](http://www.redox-os.org/docs/)
+4. [Redocs](https://www.redox-os.org/docs/)
 5. [Fancy GitHub organization](https://github.com/redox-os)
-6. [Our Holy Grail of a Website](http://www.redox-os.org/)
-7. [Our Nice Code of Conduct](http://www.redox-os.org/coc/)
-8. [The Extreme Screenshots](http://www.redox-os.org/screens/)
+6. [Our Holy Grail of a Website](https://www.redox-os.org/)
+7. [Our Nice Code of Conduct](https://www.redox-os.org/coc/)
+8. [The Extreme Screenshots](https://www.redox-os.org/screens/)
 
 # What's next?
 

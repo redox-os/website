@@ -29,4 +29,4 @@ A Redox megtalálható a Redditen is a [/r/rust/](https://www.reddit.com/r/rust)
 
 ## Magatartás
 
-A [Rust magatartási kódexet](http://www.rust-lang.org/conduct.html) követjük.
+A [Rust magatartási kódexet](https://www.rust-lang.org/conduct.html) követjük.

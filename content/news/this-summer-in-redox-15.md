@@ -6,13 +6,13 @@ title = "This Summer in Redox"
 
 Lately, we've been kind of silent, because we've focused on the coding, and we have a lot of exciting news for everyone.
 
-# A Complete Rewrite of the Kernel ([@jackpot51](http://github.com/jackpot51))
+# A Complete Rewrite of the Kernel ([@jackpot51](https://github.com/jackpot51))
 
 Since August 13, the kernel is going through a complete rewrite, which makes the kernel space ultra-small (about the size of [L4](https://en.wikipedia.org/wiki/L4_microkernel_family)). Everything which can run outside the kernel in practice, will do so.
 
 It is almost complete and will likely be merged in the coming week. [You can find it on GitHub here.](https://github.com/redox-os/redox/)
 
-Thanks to [@jackpot51](http://github.com/jackpot51) for the great [implementation work](https://github.com/redox-os/redox/commits/master).
+Thanks to [@jackpot51](https://github.com/jackpot51) for the great [implementation work](https://github.com/redox-os/redox/commits/master).
 
 ## Reasons for the Rewrite
 
@@ -126,7 +126,7 @@ Instead of being stringly typed, URLs (resource descriptors) are now described b
 
 Overall, the code quality of the new kernel is much better.
 
-### Work-in-progress: Capabilities ([@ticki](http://github.com/ticki))
+### Work-in-progress: Capabilities ([@ticki](https://github.com/ticki))
 
 Capabilities are an interesting way of managing privileges and permissions in many modern kernels. Redox is planning to adopting this. [Scheme-centric capabilities](https://github.com/ticki/kernel) are being designed and implemented.
 
@@ -134,9 +134,9 @@ Capabilities themselves are simply a byte buffer and some restrictions on how th
 
 The scheme can then check if the user of the scheme has the correct capabilities to do a particular action.
 
-# Ralloc is now 2x faster! ([@ticki](http://github.com/ticki))
+# Ralloc is now 2x faster! ([@ticki](https://github.com/ticki))
 
-[Ralloc, the memory allocator of Redox](https://github.com/redox-os/ralloc/tree/skiplist) is going through a major performance pass. I've been working on this for some time now, and the big deal-breaker is really that I switch from a flat array to skiplists. More information can be found [here](http://ticki.github.io/blog/skip-lists-done-right/).
+[Ralloc, the memory allocator of Redox](https://github.com/redox-os/ralloc/tree/skiplist) is going through a major performance pass. I've been working on this for some time now, and the big deal-breaker is really that I switch from a flat array to skiplists. More information can be found [here](https://ticki.github.io/blog/skip-lists-done-right/).
 
 ## Logarithmic allocation tree traversal
 
@@ -172,13 +172,13 @@ The test suite of ralloc has been expanded significantly.
 
 A WIP paper on the design and implementation of ralloc can be found [here](https://github.com/redox-os/ralloc/tree/skiplist/paper). Eventually, ralloc will be formally verified as well.
 
-# Formal verification ([@ticki](http://github.com/ticki))
+# Formal verification ([@ticki](https://github.com/ticki))
 
 A major step towards formalizing and verifying the kernel has been made. In particular, I've constructed a model of the Rust MIR's semantics in terms of Hoare logic and separation logic.
 
-You can read more about this [here](http://ticki.github.io/blog/a-hoare-logic-for-rust/).
+You can read more about this [here](https://ticki.github.io/blog/a-hoare-logic-for-rust/).
 
-# An important update on the ZFS implementation ([@ticki](http://github.com/ticki))
+# An important update on the ZFS implementation ([@ticki](https://github.com/ticki))
 
 The work on the ZFS implementation has been limited in the past few months. This can be attributed to mainly the fact that following the specification word-by-word is a big limitation without significant benefits.
 
@@ -232,11 +232,11 @@ TFS implements a significant part of the stack as disk drivers, transforming the
 
 This is a major improvement over the approach taken by most other file systems, not because of any semantic changes, but simply because it simplifies the implementation a great deal.
 
-# Major refactoring in coreutils ([@stratact](http://github.com/stratact))
+# Major refactoring in coreutils ([@stratact](https://github.com/stratact))
 
-A lot of things in Redox's [coreutils](https://github.com/redox-os/coreutils) has been changed. [@stratact](http://github.com/stratact) has implemented a command-line flag parser and added multiple new features to various utilities, as well as fixing bugs and cleaning up code.
+A lot of things in Redox's [coreutils](https://github.com/redox-os/coreutils) has been changed. [@stratact](https://github.com/stratact) has implemented a command-line flag parser and added multiple new features to various utilities, as well as fixing bugs and cleaning up code.
 
-[@stratact](http://github.com/stratact) also removed a hack in `libextra`'s `GetSlice` implementation since the `std` crate introduce `Option<T>` conversion since Rust 1.12. He improve `Orbtk`'s API to be more user friendly.
+[@stratact](https://github.com/stratact) also removed a hack in `libextra`'s `GetSlice` implementation since the `std` crate introduce `Option<T>` conversion since Rust 1.12. He improve `Orbtk`'s API to be more user friendly.
 
 # Porting stuff
 

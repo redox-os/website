@@ -23,7 +23,7 @@ The team worked super hard and shipped a ton of interesting stuff! I am preparin
 
 Without further ado, here is what happened this last few weeks:
 
-Big news! We were surprised this week by [@jackpot51](https://github.com/jackpot51) and his news about the plans to create a foundation to support and foster Redox OS and it's ecosystem. This is really good news! More on it on the upcoming issues. 
+Big news! We were surprised this week by [@jackpot51](https://github.com/jackpot51) and his news about the plans to create a foundation to support and foster Redox OS and it's ecosystem. This is really good news! More on it on the upcoming issues.
 
 In the main top-level repo (**redox**) `netdb` (which contains the default `/etc/hosts` and friends) is now included in the filesystem by default. Also, [@jD91mZM2](https://github.com/jD91mZM2) fixed the rust toolchain to `nightly-2017-12-21` as the `ring` does not work with the latest `nightly`.
 
@@ -33,11 +33,11 @@ The `null` and `zero` daemons which implement the `null:` and `zero:` schemes re
 
 As you might suspect, the **syscall** crate the new, shinny `frename` call, <3.
 
-**Redoxfs** got renaming support with the implementation of `frename`. 
+**Redoxfs** got renaming support with the implementation of `frename`.
 
 **Ion**, The Redox (and Linux) shell, saw a lot of activity, notably the addition of the `exec` builtin by [@dlrobertson](https://github.com/dlrobertson), the addition of a title bar setting and the ability to produce any character using hex code by [@jackpot51](https://github.com/jackpot51). [@nihathrael](https://github.com/nihathrael) was busy adding the `@lines()` and `@reverse()` methods while [@mmstick](https://github.com/mmstick) made a change to use a static map for simple color lookups, removed `Shell::update_variables`, added `UID` and `EUID`, added support for enabling forks to ignore streams, fixed `EAGAIN` error on forks and started to work on library/binary separation.
 
-The **cookbook** saw the birth of a `newlib` test suite, packages for the recently moved to userspace `nulld` and `zerod` daemons, some improvements to the `bash` along a fixed the `raw-bin` (which was broken because of the recent changes to `redox_users`'s API).   
+The **cookbook** saw the birth of a `newlib` test suite, packages for the recently moved to userspace `nulld` and `zerod` daemons, some improvements to the `bash` along a fixed the `raw-bin` (which was broken because of the recent changes to `redox_users`'s API).
 
 On the GUI side of things, **Orbtk** the widget toolkit saw a change by [@FloVanGH](https://github.com/FloVanGH) who used `include_bytes!` to load icons on ComboBoxes.
 
@@ -47,9 +47,9 @@ Also UI related, **Orbterm**, the terminal emulator, received an Ion related fix
 
 Finally, in the land of the utils (**coreutils** and **userutils**), there were only two minor changes related to using `unwrap_or_exit` and the new APIs exposed by `redox_users`.
 
-Thanks to all the people who supported the project this year, from the contributors to the patreons, and all the people that spread the word, and the Rust community for creating such an amazing tool, enabling us our ultimate objective: to create a modern, lightweight fast and above all, a safer operating system. 
+Thanks to all the people who supported the project this year, from the contributors to the patreons, and all the people that spread the word, and the Rust community for creating such an amazing tool, enabling us our ultimate objective: to create a modern, lightweight fast and above all, a safer operating system.
 
-See you next year! 
+See you next year!
 
 ## Redox
 
@@ -174,13 +174,13 @@ The Redox coreutils.
 1. [The Glorious Book](https://doc.redox-os.org/book/)
 2. [The Holiest Forum](https://discourse.redox-os.org/)
 3. [The Shiny ISOs](https://github.com/redox-os/redox/releases)
-4. [Redocs](http://www.redox-os.org/docs/)
+4. [Redocs](https://www.redox-os.org/docs/)
 5. [Fancy GitHub organization](https://github.com/redox-os)
-6. [Our Holy Grail of a Website](http://www.redox-os.org/)
-7. [The Extreme Screenshots](http://www.redox-os.org/screens/)
+6. [Our Holy Grail of a Website](https://www.redox-os.org/)
+7. [The Extreme Screenshots](https://www.redox-os.org/screens/)
 
 # New contributors
- 
+
 Since the list of contributors are growing too fast, we'll now only list the new contributors. This might change in the future.
 
 Sorted in alphabetical order.

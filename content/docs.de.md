@@ -38,5 +38,5 @@ Sie können Redox auch auf Reddit finden: unter [/r/rust/](https://www.reddit.co
 
 ## Verhaltensweisen
 
-Wir haben für uns beschlossen, dem [Rust Code of Conduct](http://www.rust-lang.org/conduct.html) zu
+Wir haben für uns beschlossen, dem [Rust Code of Conduct](https://www.rust-lang.org/conduct.html) zu
 folgen.

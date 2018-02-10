@@ -26,7 +26,7 @@ There is a lot of stuff packed on this one. So... Buckle up!
 
 First things first: During my absence there were 3 new releases [0.3.1](https://github.com/redox-os/redox/releases/tag/0.3.1), [0.3.2](https://github.com/redox-os/redox/releases/tag/0.3.2) and [0.3.3](https://github.com/redox-os/redox/releases/tag/0.3.3) focused on better POSIX compatibility, improved ACPI support and lower memory usage respectively (Along many other things I'm gonna cover next).
 
-We also have a new [login window and a file dialog](https://imgur.com/a/4E7sz) thanks to [@jackpot51](https://github.com/jackpot51). 
+We also have a new [login window and a file dialog](https://imgur.com/a/4E7sz) thanks to [@jackpot51](https://github.com/jackpot51).
 
 Other important news is that we are now maintaining the **RustType** crate, which can be found [here](https://github.com/redox-os/rusttype), under the redox-os Github organization.
 
@@ -40,7 +40,7 @@ The **RedoxFS** got some attention from [@ids1024](https://github.com/ids1024) w
 
 **TFS** land was visited by [@ticki](https://github.com/ticki) and among the highlights are: the introduction of a new `control-flow` crate to control control-flow outside closures, a fix for several compile errors in `atomic-hashmap`, the addition of `conc::Guard::{try,maybe}_map` followed by the switch to `parking_lot` in `conc`.
 
-The **cookbook** (our collection of packages) was also very active during this period! [@7h0ma5](https://github.com/7h0ma5) added recipes for `ncurses` and `readline` while [@ids1024](https://github.com/ids1024) added one for `perl` and [@xTibor](https://github.com/xTibor) added `ffmpeg`. `python` was updated to a new version and a new `--debug` argument was added to `cook.sh` (the package builder). Last but no least! [@AgostonSzepessy](https://github.com/AgostonSzepessy) added support for dependency info to packages. Nice! 
+The **cookbook** (our collection of packages) was also very active during this period! [@7h0ma5](https://github.com/7h0ma5) added recipes for `ncurses` and `readline` while [@ids1024](https://github.com/ids1024) added one for `perl` and [@xTibor](https://github.com/xTibor) added `ffmpeg`. `python` was updated to a new version and a new `--debug` argument was added to `cook.sh` (the package builder). Last but no least! [@AgostonSzepessy](https://github.com/AgostonSzepessy) added support for dependency info to packages. Nice!
 
 Also, there are big news in **coreutils**: We are now using [coreutils](https://github.com/uutils/coreutils) versions of the utilities where it makes sense. For example: [@ids1024](https://github.com/ids1024) removed our versions of `chmod`, `env`, and `ls` opening room for the better versions on `uutils` (our fork of `coreutils`). While all of that was being done, [@dabbydubby](https://github.com/dabbydubby) was improving `pwd`'s description, reformatting, restructuring and fixing few bugs in `mv` and afterwhile porting those changes over to `cp`.
 
@@ -48,7 +48,7 @@ Finally on the GUI side of things **Orbital** experienced bunch of unused code r
 
 *Bonus*: Few days ago we saw this message from [@jackpot51](https://github.com/jackpot51) on the Redox chat: "Gentlemen, I am going to port libservo". Yes! some `libservo` work is on the way <3
 
-*Bonus 2*: I also woke up one day and saw this [MESA fork](https://github.com/redox-os/mesa). 
+*Bonus 2*: I also woke up one day and saw this [MESA fork](https://github.com/redox-os/mesa).
 
 Exciting times! Aren't they? Stay tunned for more!
 
@@ -282,10 +282,10 @@ The Orbital Widget Toolkit. Compatible with Redox and SDL2.
 1. [The Glorious Book](https://doc.redox-os.org/book/)
 2. [The Holiest Forum](https://discourse.redox-os.org/)
 3. [The Shiny ISOs](https://github.com/redox-os/redox/releases)
-4. [Redocs](http://www.redox-os.org/docs/)
+4. [Redocs](https://www.redox-os.org/docs/)
 5. [Fancy GitHub organization](https://github.com/redox-os)
-6. [Our Holy Grail of a Website](http://www.redox-os.org/)
-7. [The Extreme Screenshots](http://www.redox-os.org/screens/)
+6. [Our Holy Grail of a Website](https://www.redox-os.org/)
+7. [The Extreme Screenshots](https://www.redox-os.org/screens/)
 
 # New contributors
 

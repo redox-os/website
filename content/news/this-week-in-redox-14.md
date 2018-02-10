@@ -57,26 +57,26 @@ If you have any questions, ideas, or are curious about Redox, we recommend joini
 
 Redox running on Thinkpad T-420:
 
-<img class="img-responsive" src="http://www.redox-os.org/img/hardware/thinkpad-t420.png"/>
+<img class="img-responsive" src="https://www.redox-os.org/img/hardware/thinkpad-t420.png"/>
 
 Redox running on ASUS eeePC 900:
 
-<img class="img-responsive" src="http://www.redox-os.org/img/hardware/asus-eepc-900.png"/>
+<img class="img-responsive" src="https://www.redox-os.org/img/hardware/asus-eepc-900.png"/>
 
 Redox running on Panasonic Toughbook CF-18:
 
-<img class="img-responsive" src="http://www.redox-os.org/img/hardware/panasonic-toughbook-cf18.png"/>
+<img class="img-responsive" src="https://www.redox-os.org/img/hardware/panasonic-toughbook-cf18.png"/>
 
 # Handy links
 
 1. [The Glorious Book](https://doc.redox-os.org/book/)
 2. [The Holiest Forum](https://discourse.redox-os.org/)
 3. [The Shiny ISOs](https://static.redox-os.org/)
-4. [Redocs](http://www.redox-os.org/docs/)
+4. [Redocs](https://www.redox-os.org/docs/)
 5. [Fancy GitHub organization](https://github.com/redox-os)
-6. [Our Holy Grail of a Website](http://www.redox-os.org/)
-7. [Our Nice Code of Conduct](http://www.redox-os.org/coc/)
-8. [The Extreme Screenshots](http://www.redox-os.org/screens/)
+6. [Our Holy Grail of a Website](https://www.redox-os.org/)
+7. [Our Nice Code of Conduct](https://www.redox-os.org/coc/)
+8. [The Extreme Screenshots](https://www.redox-os.org/screens/)
 
 # What's next?
 

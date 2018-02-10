@@ -1,5 +1,5 @@
 weight = 1
-baseurl = "http://www.redox-os.org/"
+baseurl = "https://www.redox-os.org/"
 title = "Redox - Your Next(Gen) OS"
 DefaultContentLanguage = "en"
 

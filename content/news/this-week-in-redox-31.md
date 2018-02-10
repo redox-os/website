@@ -18,11 +18,11 @@ Don't forget that if you would like to see any package ported to Redox or are wo
 
 ## TL;DR
 
-Hello and welcome to another issue of This Week in Redox! 
+Hello and welcome to another issue of This Week in Redox!
 
-The Last two weeks we have been busy working on some cool and exciting stuff! 
+The Last two weeks we have been busy working on some cool and exciting stuff!
 
-Let's start with the no-so-exciting things. That is: **bootloader** and **drivers** got their LICENSE file. 
+Let's start with the no-so-exciting things. That is: **bootloader** and **drivers** got their LICENSE file.
 
 Moving on to the super exciting territory we have [@jackpot51](https://github.com/jackpot51) (who else!?), who has been pretty busy standing on [@ids1024](https://github.com/ids1024)'s shoulders and his GSoC work on self hosting. He has been implementing the remaining tasks and fixing the outstanding issues preventing us to run `rustc` and `cargo` inside Redox. This is a big deal! As is the crucial step on making Redox OS self hosted.
 
@@ -32,7 +32,7 @@ On the **Ion** side of things (and pretty much as always) we have a ton of stuff
 
 There was lots of activity on the **cookbook** too: The addition of man pages by [@jackpot51](https://github.com/jackpot51), [@NilSet](https://github.com/NilSet) adding a recipe for `PrBoom` (Yes! we *almost* run doom!). Mr [@goyox86](https://github.com/goyox86) adding support for the recently released `fd`, [@sajattack](https://github.com/sajattack) porting `termplay` finishing up with [@xTibor](https://github.com/xTibor) who added a `vttest` recipe.
 
-**Orbterm** saw [@jackpot51](https://github.com/jackpot51) updating `ransid` which improved significantly ANSI compliance. Versions `0.2.0`, `0.2.1` and `0.2.2` were also released while [@xTibor](https://github.com/xTibor) made some updates to use the new `ransid` color handling. 
+**Orbterm** saw [@jackpot51](https://github.com/jackpot51) updating `ransid` which improved significantly ANSI compliance. Versions `0.2.0`, `0.2.1` and `0.2.2` were also released while [@xTibor](https://github.com/xTibor) made some updates to use the new `ransid` color handling.
 
 As mentioned before, **ransid**, our backend for terminal emulators got some love. It's ANSI compliance was improved significantly. Notably, versions `0.3.1`, `0.3.2`, `0.3.3` and `0.3.4` shipped improvements to unknown escapes parsing, corrections on csi handling of missing escapes and fixes for cursor movement csis.
 
@@ -177,13 +177,13 @@ A fork of newlib from git://sourceware.org/git/newlib-cygwin.git with Redox supp
 1. [The Glorious Book](https://doc.redox-os.org/book/)
 2. [The Holiest Forum](https://discourse.redox-os.org/)
 3. [The Shiny ISOs](https://github.com/redox-os/redox/releases)
-4. [Redocs](http://www.redox-os.org/docs/)
+4. [Redocs](https://www.redox-os.org/docs/)
 5. [Fancy GitHub organization](https://github.com/redox-os)
-6. [Our Holy Grail of a Website](http://www.redox-os.org/)
-7. [The Extreme Screenshots](http://www.redox-os.org/screens/)
+6. [Our Holy Grail of a Website](https://www.redox-os.org/)
+7. [The Extreme Screenshots](https://www.redox-os.org/screens/)
 
 # New contributors
- 
+
 Since the list of contributors are growing too fast, we'll now only list the new contributors. This might change in the future.
 
 Sorted in alphabetical order.

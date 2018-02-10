@@ -30,4 +30,4 @@ Możesz nas również znaleźć na Reddicie: [/r/rust/](https://www.reddit.com/r
 
 ## Zasady Postępowania
 
-Przestrzegamy [Zasad Postępowania Rust](http://www.rust-lang.org/conduct.html)
+Przestrzegamy [Zasad Postępowania Rust](https://www.rust-lang.org/conduct.html)
