@@ -16,13 +16,13 @@ If you have any questions, ideas, or are curious about Redox, we recommend joini
 
 ## TL;DR
 
-Hello there! And welcome to another edition of TWiR! 
+Hello there! And welcome to another edition of TWiR!
 
 As usual, we have been busy making Redox better and we have a couple of exciting news to share. So, Let's get started!
 
 First of all, [@andre](https://github.com/andre-richter) pointed out that the Docker experience has been improved. Among others, consecutive builds are now way faster because `cargo` downloads are cached with named volumes. Also, there's documentation for running the container interactively now. Please check it out [here](https://github.com/redox-os/redox/blob/master/docker/README.md)!
 
-We are super excited about the work done by [@jackpot51](https://github.com/jackpot51) towards the installer support. For example, the **bootloader** now supports filesystem UUID detection and is able to send that information to the kernel at boot time. The **kernel** has notably gained the ability to receive environment variables at the main entry point (`kmain`) this is needed to being able to receive that `REDOXFS_UUID` environment with the filesystem UUID to be mounted. It's also worth mentioning that [@jackpot51](https://github.com/jackpot51) made some refactoring to the **kernel** arguments infrastructure. 
+We are super excited about the work done by [@jackpot51](https://github.com/jackpot51) towards the installer support. For example, the **bootloader** now supports filesystem UUID detection and is able to send that information to the kernel at boot time. The **kernel** has notably gained the ability to receive environment variables at the main entry point (`kmain`) this is needed to being able to receive that `REDOXFS_UUID` environment with the filesystem UUID to be mounted. It's also worth mentioning that [@jackpot51](https://github.com/jackpot51) made some refactoring to the **kernel** arguments infrastructure.
 
 The other very important change is related to schemes. Redox now supports hierarchical schemes enabling for example, more than one disk controller.
 
@@ -180,13 +180,13 @@ The Redox coreutils.
 1. [The Glorious Book](https://doc.redox-os.org/book/)
 2. [The Holiest Forum](https://discourse.redox-os.org/)
 3. [The Shiny ISOs](https://github.com/redox-os/redox/releases)
-4. [Redocs](http://www.redox-os.org/docs/)
+4. [Redocs](https://www.redox-os.org/docs/)
 5. [Fancy GitHub organization](https://github.com/redox-os)
-6. [Our Holy Grail of a Website](http://www.redox-os.org/)
-7. [The Extreme Screenshots](http://www.redox-os.org/screens/)
+6. [Our Holy Grail of a Website](https://www.redox-os.org/)
+7. [The Extreme Screenshots](https://www.redox-os.org/screens/)
 
 # New contributors
- 
+
 Since the list of contributors are growing too fast, we'll now only list the new contributors. This might change in the future.
 
 Sorted in alphabetical order.

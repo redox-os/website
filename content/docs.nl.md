@@ -38,4 +38,4 @@ Je kunt Redox ook vinden op reddit onder
 
 ## Gedrag
 
-We volgen de [Rust Code of Conduct](http://www.rust-lang.org/conduct.html)
+We volgen de [Rust Code of Conduct](https://www.rust-lang.org/conduct.html)

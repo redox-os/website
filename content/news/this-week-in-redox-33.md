@@ -53,13 +53,13 @@ Also in the GUI department, the **Orbtk** toolkit saw new version `0.2.26` inclu
 
 Next in the queue, is **Orbterm**, the terminal emulator. **Orbterm** released two new versions: `0.3.1` and `0.3.2` with improved resize performance by [@jackpot51](https://github.com/jackpot51) and the extraction of width and heights into fields by [@xTibor](https://github.com/xTibor).
 
-**Sodium**, the text editor got a bit of love from [@sajattack](https://github.com/sajattack) who made a change to infer file to save to from file opened. 
+**Sodium**, the text editor got a bit of love from [@sajattack](https://github.com/sajattack) who made a change to infer file to save to from file opened.
 
 On the utils section, the **userutils** crate was under heavy refactoring and improvement primarily by [@MggMuggins](https://github.com/MggMuggins) who added `groupadd` and `useradd` as well refactored of almost all the rest of the tools. Related to this work is the one done by [@goyox86](https://github.com/goyox86) on the **redox_users** crate improving error handling and propagation by moving it to the `failure` crate. [@MggMuggins](https://github.com/MggMuggins) also extended `redox_users` API with the `add_user`, `add_group` and `get_gid` functions.
 
 The **coreutils** package got lots of attention too. Here [@Mojo4242](https://github.com/Mojo4242) simplified `dd`, [@Tommoa](https://github.com/Tommoa) made some performance improvements for `cat`, while [@jackpot51](https://github.com/jackpot51) was shipping `chown` and using more utilities from `uutils` instead of our own.
 
-Lastly but not least is **extrautils** who experienced a small change to use `cksum` from `uutils`. 
+Lastly but not least is **extrautils** who experienced a small change to use `cksum` from `uutils`.
 
 Phew! That was a lot of work <3
 
@@ -300,13 +300,13 @@ Extra utilities for Redox (and Unix systems).
 1. [The Glorious Book](https://doc.redox-os.org/book/)
 2. [The Holiest Forum](https://discourse.redox-os.org/)
 3. [The Shiny ISOs](https://github.com/redox-os/redox/releases)
-4. [Redocs](http://www.redox-os.org/docs/)
+4. [Redocs](https://www.redox-os.org/docs/)
 5. [Fancy GitHub organization](https://github.com/redox-os)
-6. [Our Holy Grail of a Website](http://www.redox-os.org/)
-7. [The Extreme Screenshots](http://www.redox-os.org/screens/)
+6. [Our Holy Grail of a Website](https://www.redox-os.org/)
+7. [The Extreme Screenshots](https://www.redox-os.org/screens/)
 
 # New contributors
- 
+
 Since the list of contributors are growing too fast, we'll now only list the new contributors. This might change in the future.
 
 Sorted in alphabetical order.

@@ -28,7 +28,7 @@ On **drivers** land, the star of this week is the work being done by [@jackpot51
 
 Next stop is **Redoxfs**, where [@jackpot51](https://github.com/jackpot51) and [@ids1024](https://github.com/ids1024) enabled deallocating on resizing and fixed a freeze caused by a double lock respectively.
 
-**TFS** folks where also very busy these last weeks! Notably [@ticki](https://github.com/ticki) who published a [blog post](http://ticki.github.io/blog/fearless-concurrency-with-hazard-pointers/) about the new shiny [conc](https://crates.io/crates/conc) crate which uses hazard pointers instead of epochs for doing concurrent memory reclamation. [@ticki](https://github.com/ticki) was also busy improving the documentation of the `conc` crate, rewriting `conc::sync::treiber` and adding `conc::Guard::{try,maybe}_map` while [@cedenday](https://github.com/cedenday) added a few trait derivations to `speck`'s `Key`.
+**TFS** folks where also very busy these last weeks! Notably [@ticki](https://github.com/ticki) who published a [blog post](https://ticki.github.io/blog/fearless-concurrency-with-hazard-pointers/) about the new shiny [conc](https://crates.io/crates/conc) crate which uses hazard pointers instead of epochs for doing concurrent memory reclamation. [@ticki](https://github.com/ticki) was also busy improving the documentation of the `conc` crate, rewriting `conc::sync::treiber` and adding `conc::Guard::{try,maybe}_map` while [@cedenday](https://github.com/cedenday) added a few trait derivations to `speck`'s `Key`.
 
 [@Abogical](https://github.com/Abogical) added the `whois` utility to **Netutils** and [@ids1024](https://github.com/ids1024) added `gzip` and `xz` extraction support to **extrautils**'s `tar`.
 
@@ -112,7 +112,7 @@ Enjoy the rest of this weeks issue!
 
 [TFS](https://github.com/redox-os/tfs) is a modular, fast, and feature rich next-gen file system, employing modern techniques for high performance, high space efficiency, and high scalability.
 
-- [@ticki](https://github.com/ticki) Published a new blog "Fearless concurrency with hazard pointers" about the new shiny [conc](https://crates.io/crates/conc) crate. Details [here](http://ticki.github.io/blog/fearless-concurrency-with-hazard-pointers/).
+- [@ticki](https://github.com/ticki) Published a new blog "Fearless concurrency with hazard pointers" about the new shiny [conc](https://crates.io/crates/conc) crate. Details [here](https://ticki.github.io/blog/fearless-concurrency-with-hazard-pointers/).
 - [@ticki](https://github.com/ticki) Fixed some compile errors in `atomic-hashmap`. Details [here](https://github.com/redox-os/tfs/commit/7118c7bf135647a3e452831e2836b6df79326d4e).
 - [@ticki](https://github.com/ticki) Fix documentation for wrong use of `Guard::new`. Details [here](https://github.com/redox-os/tfs/commit/f8a080e4415982b34f34a30235b2bb91d42b8450).
 - [@ticki](https://github.com/ticki) Improved documentation of `atomic-hashmap`. Details [here](https://github.com/redox-os/tfs/commit/27b8c62e29f718347dacd6d44c4add6dfa9f4d74).
@@ -185,10 +185,10 @@ The [cookbook](https://github.com/redox-os/cookbook) the collection of package r
 1. [The Glorious Book](https://doc.redox-os.org/book/)
 2. [The Holiest Forum](https://discourse.redox-os.org/)
 3. [The Shiny ISOs](https://github.com/redox-os/redox/releases)
-4. [Redocs](http://www.redox-os.org/docs/)
+4. [Redocs](https://www.redox-os.org/docs/)
 5. [Fancy GitHub organization](https://github.com/redox-os)
-6. [Our Holy Grail of a Website](http://www.redox-os.org/)
-7. [The Extreme Screenshots](http://www.redox-os.org/screens/)
+6. [Our Holy Grail of a Website](https://www.redox-os.org/)
+7. [The Extreme Screenshots](https://www.redox-os.org/screens/)
 
 # New contributors
 

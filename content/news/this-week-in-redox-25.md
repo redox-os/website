@@ -20,13 +20,13 @@ Big news this week: We released **0.3.0**.It is a big release including many imp
 
 Now to this weeks summary: We shipped a couple of changes to the bootstrap script and the cookbook that should make the on-boarding on macOS smooth again. Go ahead try and give us feedback <3.
 
-The **kernel** was very active this week, particularly with the landing of the initial support for signals by [@jackpot51](https://github.com/jackpot51)! Also, a new API for specifying custom memory allocators and changes in the `alloc` crate API landed in nightly so the kernel had to be updated. Mr [@CWood1](https://github.com/CWood1) added an HPET (High Precision Event Time) driver to the kernel and also moved the PIT (Programmable Interval Timer) driver from the bootloader to the kernel as part of his ongoing work on ACPI. [@ids1024](https://github.com/ids1024) shipped some fixes to kernel's `dup2()` and `exec()` too. 
+The **kernel** was very active this week, particularly with the landing of the initial support for signals by [@jackpot51](https://github.com/jackpot51)! Also, a new API for specifying custom memory allocators and changes in the `alloc` crate API landed in nightly so the kernel had to be updated. Mr [@CWood1](https://github.com/CWood1) added an HPET (High Precision Event Time) driver to the kernel and also moved the PIT (Programmable Interval Timer) driver from the bootloader to the kernel as part of his ongoing work on ACPI. [@ids1024](https://github.com/ids1024) shipped some fixes to kernel's `dup2()` and `exec()` too.
 
-**Ion** impressive streak continues mainly propelled (but no limited to) by  [@mmstick](https://github.com/mmstick) and [@huntergoldstein](https://github.com/huntergoldstein). **Ion**'s biggest highlight this week? The completion of job control and addition of the `fg` builtin command! Also asynchronous history writing, the addition of an `array!` macro to ease the creation of  inline `Array`s in Ion's codebase, initial support for herestrings, the extraction of `calc` to it's own crate, refactoring to signal handling, forking, the reimplementation of `pipelines::collect` into a recursive descendent parser, `set -x`'s implementation and many fixes. You should try it , works in Linux too ;).  
+**Ion** impressive streak continues mainly propelled (but no limited to) by  [@mmstick](https://github.com/mmstick) and [@huntergoldstein](https://github.com/huntergoldstein). **Ion**'s biggest highlight this week? The completion of job control and addition of the `fg` builtin command! Also asynchronous history writing, the addition of an `array!` macro to ease the creation of  inline `Array`s in Ion's codebase, initial support for herestrings, the extraction of `calc` to it's own crate, refactoring to signal handling, forking, the reimplementation of `pipelines::collect` into a recursive descendent parser, `set -x`'s implementation and many fixes. You should try it , works in Linux too ;).
 
 **Drivers** had to also be updated to the new `alloc` API (mainly `vesad`). **Coreutils** now have a `base64` command by  [@goyox86](https://github.com/goyox86), a new shiny `dirname` command along with recent support for `rm` for the `-f` flag thanks to [@ids1024](https://github.com/ids1024).
 
-Other important highlight is the addition of initial `mtime/ctime` support and the implementation of `futimens` in **Redoxfs**. 
+Other important highlight is the addition of initial `mtime/ctime` support and the implementation of `futimens` in **Redoxfs**.
 
 Last but not least the **cookbook** saw a lot of activity with a new system for compile-time dependencies by [@ids1024](https://github.com/ids1024) and package recipes for `git`, `gawk`, `findutils`, GNU `sed`, `pastel`, `nasm`, `rustual-boy`.
 
@@ -114,18 +114,18 @@ The [cookbook](https://github.com/redox-os/cookbook) the collection of package r
 - [@goyox86](https://github.com/goyox86) Added some code in the cookbook system to determine tools at runtime and fix macOS build. Details [here](https://github.com/redox-os/cookbook/pull/47).
 - [@ids1024](https://github.com/ids1024) Added a recipe for GNU `sed`. Details [here](https://github.com/redox-os/cookbook/pull/48).
 - [@ids1024](https://github.com/ids1024) Added a recipe for uutils `findutils`. Details [here](https://github.com/redox-os/cookbook/pull/49).
-- [@jackpot51](https://github.com/jackpot51) Add a recipe for `pastel`. Details [here](https://github.com/redox-os/cookbook/commit/5b78bf1d6c134cd6a2f23ed4fbd935ea9610c26a). 
-- [@7h0ma5](https://github.com/7h0ma5)  Added a recipe for `nasm`. Details [here](https://github.com/redox-os/cookbook/pull/42). 
+- [@jackpot51](https://github.com/jackpot51) Add a recipe for `pastel`. Details [here](https://github.com/redox-os/cookbook/commit/5b78bf1d6c134cd6a2f23ed4fbd935ea9610c26a).
+- [@7h0ma5](https://github.com/7h0ma5)  Added a recipe for `nasm`. Details [here](https://github.com/redox-os/cookbook/pull/42).
 
 # Handy links
 
 1. [The Glorious Book](https://doc.redox-os.org/book/)
 2. [The Holiest Forum](https://discourse.redox-os.org/)
 3. [The Shiny ISOs](https://github.com/redox-os/redox/releases)
-4. [Redocs](http://www.redox-os.org/docs/)
+4. [Redocs](https://www.redox-os.org/docs/)
 5. [Fancy GitHub organization](https://github.com/redox-os)
-6. [Our Holy Grail of a Website](http://www.redox-os.org/)
-7. [The Extreme Screenshots](http://www.redox-os.org/screens/)
+6. [Our Holy Grail of a Website](https://www.redox-os.org/)
+7. [The Extreme Screenshots](https://www.redox-os.org/screens/)
 
 # New contributors
 
@@ -135,5 +135,5 @@ Sorted in alphabetical order.
 
 - Luca Weiss 🎂
 - Thomas Gatzweiler 🎂
- 
+
 If I missed something, feel free to contact me (goyox86) or send a PR to [Redox website](https://github.com/redox-os/website).

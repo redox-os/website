@@ -124,10 +124,10 @@ The [pkgutils](https://github.com/redox-os/cookbook) are a set of utilities for 
 1. [The Glorious Book](https://doc.redox-os.org/book/)
 2. [The Holiest Forum](https://discourse.redox-os.org/)
 3. [The Shiny ISOs](https://github.com/redox-os/redox/releases)
-4. [Redocs](http://www.redox-os.org/docs/)
+4. [Redocs](https://www.redox-os.org/docs/)
 5. [Fancy GitHub organization](https://github.com/redox-os)
-6. [Our Holy Grail of a Website](http://www.redox-os.org/)
-7. [The Extreme Screenshots](http://www.redox-os.org/screens/)
+6. [Our Holy Grail of a Website](https://www.redox-os.org/)
+7. [The Extreme Screenshots](https://www.redox-os.org/screens/)
 
 # New contributors
 

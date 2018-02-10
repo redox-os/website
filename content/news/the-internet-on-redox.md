@@ -23,11 +23,11 @@ Major changes to the Redox network stack allow for routing to the internet and b
  - This means we can kinda code in rust from redox via #rust's playbot ;-)
 - added basic netcat command, `nc`
 
-#### Images downloaded from [here](http://static.redox-os.org) using `wget`
+#### Images downloaded from [here](https://static.redox-os.org) using `wget`
 <img class="img-responsive" src="https://chat.redox-os.org/api/v3/public/files/get/zoa4meoqjbbcdju9ghd7745phe/aduzjsjphirwtj6togzspotzko/6izutbttt3fhmqxrbihouu6i1c/umrx67rhwifrirabmjznweozaa/works.png?d=%7B%22filename%22%3A%22umrx67rhwifrirabmjznweozaa%2Fworks.png%22%7D&h=%242a%2410%24Qo9E5tp5RaJFUrLdB3jweedFDlroJTjs4KoK16DdkKRL1unXEX0Ke"/>
 
 #### IRC client
-<img class="img-responsive" src="http://i.imgur.com/98vCnlu.png"/>
+<img class="img-responsive" src="https://i.imgur.com/98vCnlu.png"/>
 
 ## 2. Ralloc.
 
@@ -95,7 +95,7 @@ Using [rusttype](https://github.com/dylanede/rusttype), we are able to display T
 - Viewer will show alpha as a grid like the other image viewers
 
 #### Start menu and character map
-<img class="img-responsive" src="http://i.imgur.com/E28ATd4.png"/>
+<img class="img-responsive" src="https://i.imgur.com/E28ATd4.png"/>
 
 ## 4. Games
 - added reblox
@@ -119,7 +119,7 @@ Lots of changes have been happening beneath the hood to ensure feature completen
 - colorized default prompt for ion
 
 #### Terminal with TTF fonts, obligatory `screenfetch`
-<img class="img-responsive" src="http://i.imgur.com/YDCSuiz.png"/>
+<img class="img-responsive" src="https://i.imgur.com/YDCSuiz.png"/>
 
 ## 6. Handbook
 We have started a handbook, which can be viewed [here](https://github.com/redox-os/handbook/blob/master/index.md), and made a terminal viewer for MD files
@@ -128,7 +128,7 @@ We have started a handbook, which can be viewed [here](https://github.com/redox-
 - less and mdless can read from a pipe by reconnecting to the terminal (only works in kernel terminal until PTTY system)
 
 #### `info` displaying the Redox handbook, using `mdless`
-<img class="img-responsive" src="http://i.imgur.com/beTS2Dz.png"/>
+<img class="img-responsive" src="https://i.imgur.com/beTS2Dz.png"/>
 
 ## 7. RedoxFS
 Our filesystem, [RedoxFS](https://github.com/redox-os/redoxfs), can be used on Linux using FUSE and has been tested thoroughly, builds are done by mounting a new filesystem using the FUSE driver.

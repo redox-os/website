@@ -27,7 +27,7 @@ If you have any questions, ideas, or are curious about Redox, we recommend joini
 - [@pi-pi3](https://github.com/pi-pi3) has improved the performance of `memcpy()` family of functions.
 
 - [@CWood1](https://github.com/CWood1) has been working on adding AML support for the ACPI subsystem.
- 
+
 - [@InsidiousMind](https://github.com/InsidiousMind) did some work on the PIT (Programmable interval timer). Now the PIT interrupt properly context switches fixing crashes in the kernel.
 
 - [@bjorn3](https://github.com/bjorn3) added support for listing all schemes using the `:` scheme.
@@ -37,9 +37,9 @@ If you have any questions, ideas, or are curious about Redox, we recommend joini
 There has been so much work [ion shell](https://github.com/redox-os/ion) that we have it's own section for this issue. Ion is a shell for UNIX platforms, and is the default shell in Redox. It is still a work in progress, but much of the core functionality is complete. It is also currently significantly faster than Bash, and even Dash, making it the fastest system shell to date.
 
 - [@ids1024](https://github.com/ids1024) has been working on Redox's Newlib's [fork](https://github.com/redox-os/newlib). Adding support for getuid(), getgid(), getcwd(), fixed execve() and many others.
- 
+
 - [@jFransham](https://github.com/jFransham) landed a patch enabling LTO which yields a ~15% speedup. Details [here](https://github.com/redox-os/ion/pull/278).
- 
+
 - [@jFransham](https://github.com/jFransham) reduced the number of allocations. Details [here](https://github.com/redox-os/ion/pull/271).
 
 - [@Maaarcocr](https://github.com/Maaarcocr) added descriptions to functions.  Details [here](https://github.com/redox-os/ion/pull/268).
@@ -54,13 +54,13 @@ There has been so much work [ion shell](https://github.com/redox-os/ion) that we
 
 - [@mmstick](https://github.com/mmstick) implemented basic arithmetic for let/export in. Details [here](https://github.com/redox-os/ion/pull/237).
 
-- [@mmstick](https://github.com/mmstick) reworked the while loops and they now work as they do in other shells . Details [here](https://github.com/redox-os/ion/pull/235). 
+- [@mmstick](https://github.com/mmstick) reworked the while loops and they now work as they do in other shells . Details [here](https://github.com/redox-os/ion/pull/235).
 
-- [@mmstick](https://github.com/mmstick) implemented the `&&` and `||`  operators. Details [here](https://github.com/redox-os/ion/pull/227).  
+- [@mmstick](https://github.com/mmstick) implemented the `&&` and `||`  operators. Details [here](https://github.com/redox-os/ion/pull/227).
 
-- [@mmstick](https://github.com/mmstick) implement aliasing support. Details [here](https://github.com/redox-os/ion/pull/222).  
+- [@mmstick](https://github.com/mmstick) implement aliasing support. Details [here](https://github.com/redox-os/ion/pull/222).
 
-- [@mmstick](https://github.com/mmstick) added the ability to pass variables into subshells by expanding inner variables before performing process expansion. Details [here](https://github.com/redox-os/ion/pull/221).  
+- [@mmstick](https://github.com/mmstick) added the ability to pass variables into subshells by expanding inner variables before performing process expansion. Details [here](https://github.com/redox-os/ion/pull/221).
 
 - [@mmstick](https://github.com/mmstick) refactored the parser and also added process recursion. Details [here](https://github.com/redox-os/ion/pull/219).
 
@@ -108,7 +108,7 @@ First of all: Great news! [@ticki](https://github.com/ticki) has been working on
 - [lz4](https://github.com/redox-os/tfs/tree/master/lz4) - An implementation of lz4.
 - [speck](https://github.com/redox-os/tfs/tree/master/speck) - An implementation of SPECK cipher.
 - [tm](https://github.com/redox-os/tfs/tree/master/tm) - transactional memory.
-- [atomic-hashmap](https://github.com/redox-os/tfs/tree/master/atomic-hashmap) - Atomic hashmaps (you can read the [blog post](http://ticki.github.io/blog/an-atomic-hash-table/)).
+- [atomic-hashmap](https://github.com/redox-os/tfs/tree/master/atomic-hashmap) - Atomic hashmaps (you can read the [blog post](https://ticki.github.io/blog/an-atomic-hash-table/)).
 - [mlcr](https://github.com/redox-os/tfs/tree/master/mlcr) - A machine-learning based cache replacement strategy.
 - [seahash](https://github.com/redox-os/tfs/tree/master/seahash) - A hash function.
 - [concurrent](https://github.com/redox-os/tfs/tree/master/concurrent) - Hazard pointers implementation.
@@ -137,10 +137,10 @@ There has been a ton of work on this topic specially on the [pkgutils](https://g
 1. [The Glorious Book](https://doc.redox-os.org/book/)
 2. [The Holiest Forum](https://discourse.redox-os.org/)
 3. [The Shiny ISOs](https://github.com/redox-os/redox/releases)
-4. [Redocs](http://www.redox-os.org/docs/)
+4. [Redocs](https://www.redox-os.org/docs/)
 5. [Fancy GitHub organization](https://github.com/redox-os)
-6. [Our Holy Grail of a Website](http://www.redox-os.org/)
-7. [The Extreme Screenshots](http://www.redox-os.org/screens/)
+6. [Our Holy Grail of a Website](https://www.redox-os.org/)
+7. [The Extreme Screenshots](https://www.redox-os.org/screens/)
 
 # New contributors
 

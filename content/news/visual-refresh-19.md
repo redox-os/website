@@ -30,12 +30,12 @@ I will work to improve the other applications - in the order of launcher, file m
 
 **Without further ado, here are the before and after images!**
 
-<a href="http://imgur.com/xvT3eA1.png">
+<a href="https://imgur.com/xvT3eA1.png">
 ## Login Before &amp; After:
-<img class="img-responsive" src="http://i.imgur.com/xvT3eA1.png"/>
+<img class="img-responsive" src="https://i.imgur.com/xvT3eA1.png"/>
 </a>
 
-<a href="http://imgur.com/XUsQ82U.png">
+<a href="https://imgur.com/XUsQ82U.png">
 ## Apps Before &amp; After:
-<img class="img-responsive" src="http://i.imgur.com/XUsQ82U.png"/>
+<img class="img-responsive" src="https://i.imgur.com/XUsQ82U.png"/>
 </a>

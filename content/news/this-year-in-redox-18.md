@@ -92,24 +92,24 @@ We are also looking into a more long-term solution such as funding from a univer
 Finally, Redox has been covered in a number of news articles:
 
 - [2015-10-07 - OpenNet - Представлена операционная система Redox, написанная на языке Rust](https://www.opennet.ru/opennews/art.shtml?num=43105)
-- [2016-03-19 - OSNews - The Redox operating system](http://www.osnews.com/story/29131/The_Redox_operating_system)
+- [2016-03-19 - OSNews - The Redox operating system](https://www.osnews.com/story/29131/The_Redox_operating_system)
 - [2016-03-20 - Phoronix - Redox: A Rust-Written, Microkernel Open-Source OS](https://www.phoronix.com/scan.php?page=news_item&px=Redos-OS-Intro)
-- [2016-03-21 - InfoWorld - Rust's Redox OS could show Linux a few new tricks](http://www.infoworld.com/article/3046100/open-source-tools/rusts-redox-os-could-show-linux-a-few-new-tricks.html)
+- [2016-03-21 - InfoWorld - Rust's Redox OS could show Linux a few new tricks](https://www.infoworld.com/article/3046100/open-source-tools/rusts-redox-os-could-show-linux-a-few-new-tricks.html)
 - [2016-03-21 - TuxNews.it - Redox: nasce il sistema operativo (da 26 MB) Unix-like scritto in Rust!](http://tuxnews.it/redox-nasce-il-sistema-operativo-da-26-mb-unix-like-scritto-in-rust/)
 - [2016-03-22 - Linux.com - Rust's Redox OS Could Show Linux a Few New Tricks](https://www.linux.com/news/rusts-redox-os-could-show-linux-few-new-tricks)
-- [2016-03-22 - Pro-Linux - Betriebssystem Redox in Rust geschrieben](http://www.pro-linux.de/news/1/23383/betriebssystem-redox-in-rust-geschrieben.html)
+- [2016-03-22 - Pro-Linux - Betriebssystem Redox in Rust geschrieben](https://www.pro-linux.de/news/1/23383/betriebssystem-redox-in-rust-geschrieben.html)
 - [2016-03-22 - SoylentNews - Microkernel, Rust-Programmed Redox OS's Devs Slam Linux, Unix, GPL](https://soylentnews.org/article.pl?sid=16/03/22/0116231) (The title is their choice - not ours)
 - [2016-04-06 - LWN.net - Redox: a Rust-based microkernel](https://lwn.net/Articles/682591/)
-- [2016-05-04 - formtek - Rust Redox – An Next-Generation Attempt to Plug Linux OS Gaps](http://formtek.com/blog/operating-systems-rust-redox-an-next-generation-attempt-to-plug-linux-os-gaps/)
+- [2016-05-04 - formtek - Rust Redox – An Next-Generation Attempt to Plug Linux OS Gaps](https://formtek.com/blog/operating-systems-rust-redox-an-next-generation-attempt-to-plug-linux-os-gaps/)
 - [2016-05-24 - Laboratorio Linux - Redox OS el Sistema Operativo de Código Abierto alternativo a Linux](http://laboratoriolinux.es/index.php/-noticias-mundo-linux-/distribuciones/16043-redox-os-el-sistema-operativo-de-codigo-abierto-alternativo-a-linux.html)
 - [2016-06-16 - It's F.O.S.S. - REDOX OS: AN OPERATING SYSTEM WRITTEN IN RUST](https://itsfoss.com/redox-os-an-operating-system-written-in-rust/)
-- [2016-06-23 - Ubuntu Next - REDOX OS: YOUR NEXT GENERATION OPERATING SYSTEM](http://ubuntunext.com/2016/06/23/redox-os-your-next-generation-operating-system)
+- [2016-06-23 - Ubuntu Next - REDOX OS: YOUR NEXT GENERATION OPERATING SYSTEM](https://ubuntunext.com/2016/06/23/redox-os-your-next-generation-operating-system)
 - [2016-06-28 - Websetnet - Redox OS: an Operating System Written in Rust](https://websetnet.com/redox-os-operating-system-written-rust/)
-- [2016-11-01 - OSNews - A complete rewrite of the Redox kernel](http://www.osnews.com/story/29463/A_complete_rewrite_of_the_Redox_kernel)
-- [2016-12-09 - Golem.de - REDOX OS: Wer nicht rustet, rostet](http://www.golem.de/news/redox-os-wer-nicht-rustet-rostet-1612-124867.html)
-- [2016-12-31 - Phoronix - Rust-Based Redox OS Had A Busy Year With Rewriting Its Kernel, Writing A File-System](http://phoronix.com/scan.php?page=news_item&px=Redox-OS-2016-State)
+- [2016-11-01 - OSNews - A complete rewrite of the Redox kernel](https://www.osnews.com/story/29463/A_complete_rewrite_of_the_Redox_kernel)
+- [2016-12-09 - Golem.de - REDOX OS: Wer nicht rustet, rostet](https://www.golem.de/news/redox-os-wer-nicht-rustet-rostet-1612-124867.html)
+- [2016-12-31 - Phoronix - Rust-Based Redox OS Had A Busy Year With Rewriting Its Kernel, Writing A File-System](https://phoronix.com/scan.php?page=news_item&px=Redox-OS-2016-State)
 
 If you know of others, please create an issue at [our website repo](https://github.com/redox-os/website).
 
 Here is a composite image:
-<a href="http://i.imgur.com/dwNevsk.jpg"><img class="img-responsive" src="http://i.imgur.com/dwNevsk.jpg"/></a>
+<a href="https://i.imgur.com/dwNevsk.jpg"><img class="img-responsive" src="https://i.imgur.com/dwNevsk.jpg"/></a>

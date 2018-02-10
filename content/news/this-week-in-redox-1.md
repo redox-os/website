@@ -13,7 +13,7 @@ This is the first post in a blog series tracking the development and progress of
 - The development of Redox's package manager, Oxide (`ox` for short), has started. The source for Oxide can be found [here](https://github.com/redox-os/oxide).
 - [@jackpot51](https://github.com/jackpot51), [@stratact](https://github.com/stratact), and [@tedsta](https://github.com/tedsta) have started implementing support for ZFS, which is planned to be the main file system used in Redox.
 - [@ticki](https://github.com/ticki) made an icon for Redox (see screenshots).
-- [@hauleth](https://github.com/hauleth) set up a cool website, using [Hugo](http://gohugo.io).
+- [@hauleth](https://github.com/hauleth) set up a cool website, using [Hugo](https://gohugo.io).
 - [@ticki](https://github.com/ticki) cleaned up the style in the whole codebase.
 - [@esell](https://github.com/esell) cargoified a lot of crates in the main repository.
 

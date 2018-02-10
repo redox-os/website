@@ -10,7 +10,7 @@ This is the sixth post of a series of blog posts tracking the development and pr
 
 # What's new in Redox?
 
-- [@jackpot51](https://github.com/jackpot51) has done lots of changes in the kernel. The distinction between user and kernel space is now complete. You can read about all this [here](http://dictator.redox-os.org/index.php?controller=post&action=view&id_post=17).
+- [@jackpot51](https://github.com/jackpot51) has done lots of changes in the kernel. The distinction between user and kernel space is now complete. You can read about all this [here](https://dictator.redox-os.org/index.php?controller=post&action=view&id_post=17).
 
 - [@ticki](https://github.com/ticki) has written a new memory manager inspired by jemalloc. It's not merged to master yet. This change makes heap allocation much faster.
 

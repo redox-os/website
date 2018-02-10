@@ -22,7 +22,7 @@ As always, we have a bunch of good news to share with you. So lets get the ball 
 
 This week, one of the biggest changes is that we started to track the `Cargo.lock` file of most of Redox crates in Git as an attempt to improve the reproducibility of builds.
 
-[@jackpot51](https://github.com/jackpot51) did a bunch of work in the **kernel** in order to add support for process groups. Result: as of this week, you can send signals to process groups! 
+[@jackpot51](https://github.com/jackpot51) did a bunch of work in the **kernel** in order to add support for process groups. Result: as of this week, you can send signals to process groups!
 
 There was a also a small change on the **kernel** making an error to pass an non-empty buffer to `dup` in schemes, basically, after this change you will get `EINVAL` if you do so. [@jackpot51](https://github.com/jackpot51) also prevented handling of nested signals.
 
@@ -34,21 +34,21 @@ The XHCI **driver** got a lot of love by [@jackpot51](https://github.com/jackpot
 
 **Redoxfs** saw the birth of directory symbolic links, a fix for `readdir` when directories don't fit in the buffer and a FUSE update allowing setting `mtime` to earlier times. All of those by [@ids1024](https://github.com/ids1024).
 
-On the **TFS** department we have for the first time in a while new contributors! This work includes [@m4b](https://github.com/m4b)'s  usage of `debug_map` in `chashmap` enabling maps pretty printing, [@cedenday](https://github.com/cedenday)'s remotion of `speck`s dependency on `std` and the fix for an infinite loop in `chashmap`'s `scan()` by [@memoryleak47](https://github.com/memoryleak47). Well done people! 
+On the **TFS** department we have for the first time in a while new contributors! This work includes [@m4b](https://github.com/m4b)'s  usage of `debug_map` in `chashmap` enabling maps pretty printing, [@cedenday](https://github.com/cedenday)'s remotion of `speck`s dependency on `std` and the fix for an infinite loop in `chashmap`'s `scan()` by [@memoryleak47](https://github.com/memoryleak47). Well done people!
 
 [@ticki](https://github.com/ticki) continues improving **TFS**'s
 test suite along with an interesting work in reserving reserved special pointers for `conc::hazard::State` to avoid overlapping with pointers used in `Protect`. Also, if you are an compression algorithm aficionado you might want to look at [@ticki](https://github.com/ticki)'s [notes](https://github.com/redox-os/tfs/commit/624dce5fc4e12063972bc4817edfacfaa558f333) on `zmicro`, as they were updated this week.
 
-In **coreutils** land [@ids1024](https://github.com/ids1024) allowed directory as second argument to `ln` and implemented octal escapes in `tr`. 
+In **coreutils** land [@ids1024](https://github.com/ids1024) allowed directory as second argument to `ln` and implemented octal escapes in `tr`.
 
 Continuing his last week's work on **userutils** [@goyox86](https://github.com/goyox86) made revisions to `getty`, `passwd`, `login` and `su` in order to update them to `coreutils` conventions and new APIs while Mr [@jackpot51](https://github.com/jackpot51) made updates to `getty` in order to use `PTY` to provide line control for raw consoles and `vesad`.
 
-We end this week's tour on the **cookbook**  which saw the addition of a `status.sh` script for checking git modifications, an `update.sh` one to, well, update everything and the corresponding updates to `cook.sh` caused by `Cargo.lock` being now tracked in version control. All of that by [@jackpot51](https://github.com/jackpot51). 
+We end this week's tour on the **cookbook**  which saw the addition of a `status.sh` script for checking git modifications, an `update.sh` one to, well, update everything and the corresponding updates to `cook.sh` caused by `Cargo.lock` being now tracked in version control. All of that by [@jackpot51](https://github.com/jackpot51).
 
 [@ids1024](https://github.com/ids1024) added recipes for GNU `grep`, `diffutils` and made a patch in the `git` recipe to use `;` as `PATH` separator.
 
 Enjoy the rest, and see you next week!
- 
+
 ## Kernel
 
 - [@jackpot51](https://github.com/jackpot51) Made changes to make an error to supply a `dup` buffer to schemes that do not handle it. Details [here](https://github.com/redox-os/kernel/commit/fc914e0cae8c865ed260af7286314c7dc8e63f19) and [here](https://github.com/redox-os/kernel/commit/6a061665e47febfff53e356363cfb7c13873dbec).
@@ -71,7 +71,7 @@ Enjoy the rest, and see you next week!
 - [@huntergoldstein](https://github.com/huntergoldstein) Made a fix to ignore `SIGTTOU` before setting process group. Details [here](https://github.com/redox-os/ion/pull/462).
 - [@bb010g](https://github.com/bb010g) Moved OS #[cfg] functions to `sys`. Details [here](https://github.com/redox-os/ion/pull/464).
 - [@bblancha](https://github.com/bblancha) Implemented a simple form of associative arrays. Details [here](https://github.com/redox-os/ion/pull/465).
-- [@llambda](https://github.com/llambda) Made `Ion` compile on Darwin. Details [here](https://github.com/redox-os/ion/pull/466). 
+- [@llambda](https://github.com/llambda) Made `Ion` compile on Darwin. Details [here](https://github.com/redox-os/ion/pull/466).
 - [@fengalin](https://github.com/fengalin) Fixed the compilation on Redox. Details [here](https://github.com/redox-os/ion/pull/467).
 - [@nivkner](https://github.com/nivkner) Included whitespace in `alias` builtin arguments. Details [here](https://github.com/redox-os/ion/pull/468).
 - [@memoryleak47](https://github.com/memoryleak47) Implemented `popd` command line options. Details [here](https://github.com/redox-os/ion/pull/473).
@@ -171,10 +171,10 @@ The [cookbook](https://github.com/redox-os/cookbook) the collection of package r
 1. [The Glorious Book](https://doc.redox-os.org/book/)
 2. [The Holiest Forum](https://discourse.redox-os.org/)
 3. [The Shiny ISOs](https://github.com/redox-os/redox/releases)
-4. [Redocs](http://www.redox-os.org/docs/)
+4. [Redocs](https://www.redox-os.org/docs/)
 5. [Fancy GitHub organization](https://github.com/redox-os)
-6. [Our Holy Grail of a Website](http://www.redox-os.org/)
-7. [The Extreme Screenshots](http://www.redox-os.org/screens/)
+6. [Our Holy Grail of a Website](https://www.redox-os.org/)
+7. [The Extreme Screenshots](https://www.redox-os.org/screens/)
 
 # New contributors
 
