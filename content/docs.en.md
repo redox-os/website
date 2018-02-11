@@ -28,16 +28,7 @@ is a guide to help newcomers contribute!
 
 ## Communication and Chat
 
-The quickest and most open way to communicate with the Redox team is on our chat
-server. Currently, the only way to join it is by sending an email to
-[info@redox-os.org](mailto:info@redox-os.org), which might take a little while,
-since it&rsquo;s not automated. We&rsquo;re currently working on an
-easier way to do this, but this is the most convenient way right now.
-
-You can also find Redox on Reddit in
-[/r/rust/](https://www.reddit.com/r/rust) and
-[/r/redox/](https://www.reddit.com/r/redox). The weekly update news is posted on
-the former.
+Please check on on [Community](/community/)
 
 ## Conduct
 
