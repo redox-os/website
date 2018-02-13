@@ -13,6 +13,7 @@ propose working on a project not included below.
 - [USB HID Input Driver](#usbhid)
 - [Intel Graphics Framebuffer Driver](#intelfb)
 - [Port Mesa with Software Rendering](#mesa)
+- [IP Fragmentation Support](#ip-fragmentation)
 - [Port Tokio](#tokio)
 - [FAT32 Filesystem Driver](#fat32)
 
@@ -159,6 +160,42 @@ the project.
 ### Dificulty
 
 Medium
+
+<a id="ip-fragmentation"></a>
+## IP Fragmentation Support
+
+Add support for IP Fragmentation to the network stack used by RedoxOS
+
+### Details:
+The purpose of this project is to add IP fragmentation support to the network
+stack used by RedoxOS ([smoltcp]). This project will begin with adding basic support
+for correctly processing fragmented IP packets in [smoltcp] as outlined in the upstream
+issue [smoltcp#54]. After support is added in [smoltcp], the [netstack] implementation
+should be updated to synchronize with any updates to the interface defined in the
+upstream repository. If the project is finished early, work could begin on path based
+MTU discovery.
+
+### Expected Outcome:
+The expected outcome of this project is that fragmented IP packets are able to
+be correctly processed by the network stack used by RedoxOS.
+
+### Skills Preferred:
+Experience with network stacks and the [IPv4] and [IPv6] RFCs is preferred but
+not strictly required.
+
+### Mentors:
+[Jeremy Soller](https://github.com/jackpot51/),
+[Dan Robertson](https://github.com/dlrobertson/), and
+[Egor Karavaev](https://github.com/batonius/)
+
+### Difficulty:
+Medium
+
+[IPv4]: https://tools.ietf.org/html/rfc791
+[IPv6]: https://tools.ietf.org/html/rfc8200
+[netstack]: https://github.com/redox-os/netstack
+[smoltcp]: https://github.com/m-labs/smoltcp
+[smoltcp#54]: https://github.com/m-labs/smoltcp/issues/52
 
 <a id="tokio"></a>
 ## Port Tokio
