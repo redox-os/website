@@ -13,30 +13,26 @@ name = "Documentation"
 url = "/docs/"
 [[languages.en.menu.main]]
 weight = 2
+name = "Community"
+url = "/community"
+[[languages.en.menu.main]]
+weight = 3
 name = "News"
 url = "/news/"
 [[languages.en.menu.main]]
-weight = 3
+weight = 4
 name = "Screenshots"
 url = "/screens/"
 [[languages.en.menu.main]]
-weight = 4
+weight = 5
 name = "Donate"
 url = "/donate/"
-[[languages.en.menu.main]]
-weight = 5
-name = "Forum"
-url = "https://discourse.redox-os.org/"
 [[languages.en.menu.main]]
 weight = 6
 name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.en.menu.main]]
 weight = 7
-name = "Twitter"
-url = "https://twitter.com/redox_os"
-[[languages.en.menu.main]]
-weight = 8
 name = "GSoC"
 url = "/gsoc/"
 
@@ -50,30 +46,26 @@ name = "文档"
 url = "/docs/"
 [[languages.zh.menu.main]]
 weight = 2
+name = "Community"
+url = "/community"
+[[languages.zh.menu.main]]
+weight = 3
 name = "新闻"
 url = "/news/"
 [[languages.zh.menu.main]]
-weight = 3
+weight = 4
 name = "截图"
 url = "/screens/"
 [[languages.zh.menu.main]]
-weight = 4
+weight = 5
 name = "捐赠"
 url = "/donate/"
-[[languages.zh.menu.main]]
-weight = 5
-name = "论坛"
-url = "https://discourse.redox-os.org/"
 [[languages.zh.menu.main]]
 weight = 6
 name = "代码库"
 url = "https://github.com/redox-os/redox"
 [[languages.zh.menu.main]]
 weight = 7
-name = "推特"
-url = "https://twitter.com/redox_os"
-[[languages.zh.menu.main]]
-weight = 8
 name = "GSoC"
 url = "/gsoc/"
 
@@ -87,30 +79,26 @@ name = "Documentación"
 url = "/docs/"
 [[languages.es.menu.main]]
 weight = 2
+name = "Community"
+url = "/community"
+[[languages.es.menu.main]]
+weight = 3
 name = "Novedades"
 url = "/news/"
 [[languages.es.menu.main]]
-weight = 3
+weight = 4
 name = "Capturas"
 url = "/screens/"
 [[languages.es.menu.main]]
-weight = 4
+weight = 5
 name = "Donar"
 url = "/donate/"
-[[languages.es.menu.main]]
-weight = 5
-name = "Foro"
-url = "https://discourse.redox-os.org/"
 [[languages.es.menu.main]]
 weight = 6
 name = "Repositorio"
 url = "https://github.com/redox-os/redox"
 [[languages.es.menu.main]]
 weight = 7
-name = "Twitter"
-url = "https://twitter.com/redox_os"
-[[languages.es.menu.main]]
-weight = 8
 name = "GSoC"
 url = "/gsoc/"
 
@@ -124,30 +112,26 @@ name = "Документация"
 url = "/docs/"
 [[languages.ru.menu.main]]
 weight = 2
+name = "Community"
+url = "/community"
+[[languages.ru.menu.main]]
+weight = 3
 name = "Новости"
 url = "/news/"
 [[languages.ru.menu.main]]
-weight = 3
+weight = 4
 name = "Скриншоты"
 url = "/screens/"
 [[languages.ru.menu.main]]
-weight = 4
+weight = 5
 name = "Пожертвования"
 url = "/donate/"
-[[languages.ru.menu.main]]
-weight = 5
-name = "Форум"
-url = "https://discourse.redox-os.org/"
 [[languages.ru.menu.main]]
 weight = 6
 name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.ru.menu.main]]
 weight = 7
-name = "Twitter"
-url = "https://twitter.com/redox_os"
-[[languages.ru.menu.main]]
-weight = 8
 name = "GSoC"
 url = "/gsoc/"
 
@@ -161,30 +145,26 @@ name = "Documentation"
 url = "/docs/"
 [[languages.fr.menu.main]]
 weight = 2
+name = "Community"
+url = "/community"
+[[languages.fr.menu.main]]
+weight = 3
 name = "Nouvelles"
 url = "/news/"
 [[languages.fr.menu.main]]
-weight = 3
+weight = 4
 name = "Captures d'écran"
 url = "/screens/"
 [[languages.fr.menu.main]]
-weight = 4
+weight = 5
 name = "Donation"
 url = "/donate/"
-[[languages.fr.menu.main]]
-weight = 5
-name = "Forum"
-url = "https://discourse.redox-os.org/"
 [[languages.fr.menu.main]]
 weight = 6
 name = "Code source"
 url = "https://github.com/redox-os/redox"
 [[languages.fr.menu.main]]
 weight = 7
-name = "Twitter"
-url = "https://twitter.com/redox_os"
-[[languages.fr.menu.main]]
-weight = 8
 name = "GSoC"
 url = "/gsoc/"
 
@@ -198,30 +178,26 @@ name = "Dokumentation"
 url = "/docs/"
 [[languages.de.menu.main]]
 weight = 2
+name = "Community"
+url = "/community"
+[[languages.de.menu.main]]
+weight = 3
 name = "Neuigkeiten"
 url = "/news/"
 [[languages.de.menu.main]]
-weight = 3
+weight = 4
 name = "Bildschirmfotos"
 url = "/screens/"
 [[languages.de.menu.main]]
-weight = 4
+weight = 5
 name = "Spenden"
 url = "/donate/"
-[[languages.de.menu.main]]
-weight = 5
-name = "Forum"
-url = "https://discourse.redox-os.org/"
 [[languages.de.menu.main]]
 weight = 6
 name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.de.menu.main]]
 weight = 7
-name = "Twitter"
-url = "https://twitter.com/redox_os"
-[[languages.de.menu.main]]
-weight = 8
 name = "GSoC"
 url = "/gsoc/"
 
@@ -235,30 +211,26 @@ name = "Documentazione"
 url = "/docs/"
 [[languages.it.menu.main]]
 weight = 2
+name = "Community"
+url = "/community"
+[[languages.it.menu.main]]
+weight = 3
 name = "Novità"
 url = "/news/"
 [[languages.it.menu.main]]
-weight = 3
+weight = 4
 name = "Screenshot"
 url = "/screens/"
 [[languages.it.menu.main]]
-weight = 4
+weight = 5
 name = "Donare"
 url = "/donate/"
-[[languages.it.menu.main]]
-weight = 5
-name = "Forum"
-url = "https://discourse.redox-os.org/"
 [[languages.it.menu.main]]
 weight = 6
 name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.it.menu.main]]
 weight = 7
-name = "Twitter"
-url = "https://twitter.com/redox_os"
-[[languages.it.menu.main]]
-weight = 8
 name = "GSoC"
 url = "/gsoc/"
 
@@ -272,30 +244,26 @@ name = "Belgeler"
 url = "/docs/"
 [[languages.tr.menu.main]]
 weight = 2
+name = "Community"
+url = "/community"
+[[languages.tr.menu.main]]
+weight = 3
 name = "Haberler"
 url = "/news/"
 [[languages.tr.menu.main]]
-weight = 3
+weight = 4
 name = "Ekran Görüntüleri"
 url = "/screens/"
 [[languages.tr.menu.main]]
-weight = 4
+weight = 5
 name = "Bağış"
 url = "/donate/"
-[[languages.tr.menu.main]]
-weight = 5
-name = "Forum"
-url = "https://discourse.redox-os.org/"
 [[languages.tr.menu.main]]
 weight = 6
 name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.tr.menu.main]]
 weight = 7
-name = "Twitter"
-url = "https://twitter.com/redox_os"
-[[languages.tr.menu.main]]
-weight = 8
 name = "GSoC"
 url = "/gsoc/"
 
@@ -309,30 +277,26 @@ name = "Dokumentation"
 url = "/docs/"
 [[languages.sv.menu.main]]
 weight = 2
+name = "Community"
+url = "/community"
+[[languages.sv.menu.main]]
+weight = 3
 name = "Nyheter"
 url = "/news/"
 [[languages.sv.menu.main]]
-weight = 3
+weight = 4
 name = "Skärmbilder"
 url = "/screens/"
 [[languages.sv.menu.main]]
-weight = 4
+weight = 5
 name = "Donera"
 url = "/donate/"
-[[languages.sv.menu.main]]
-weight = 5
-name = "Forum"
-url = "https://discourse.redox-os.org/"
 [[languages.sv.menu.main]]
 weight = 6
 name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.sv.menu.main]]
 weight = 7
-name = "Twitter"
-url = "https://twitter.com/redox_os"
-[[languages.sv.menu.main]]
-weight = 8
 name = "GSoC"
 url = "/gsoc/"
 
@@ -346,30 +310,26 @@ name = "Documentatie"
 url = "/docs/"
 [[languages.nl.menu.main]]
 weight = 2
+name = "Community"
+url = "/community"
+[[languages.nl.menu.main]]
+weight = 3
 name = "Nieuws"
 url = "/news/"
 [[languages.nl.menu.main]]
-weight = 3
+weight = 4
 name = "Screenshots"
 url = "/screens/"
 [[languages.nl.menu.main]]
-weight = 4
+weight = 5
 name = "Doneer"
 url = "/donate/"
-[[languages.nl.menu.main]]
-weight = 5
-name = "Forum"
-url = "https://discourse.redox-os.org/"
 [[languages.nl.menu.main]]
 weight = 6
 name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.nl.menu.main]]
 weight = 7
-name = "Twitter"
-url = "https://twitter.com/redox_os"
-[[languages.nl.menu.main]]
-weight = 8
 name = "GSoC"
 url = "/gsoc/"
 
@@ -383,30 +343,26 @@ name = "Dokumentation"
 url = "/docs/"
 [[languages.da.menu.main]]
 weight = 2
+name = "Community"
+url = "/community"
+[[languages.da.menu.main]]
+weight = 3
 name = "Nyheder"
 url = "/news/"
 [[languages.da.menu.main]]
-weight = 3
+weight = 4
 name = "Skærmbilleder"
 url = "/screens/"
 [[languages.da.menu.main]]
-weight = 4
+weight = 5
 name = "Doner"
 url = "/donate/"
-[[languages.da.menu.main]]
-weight = 5
-name = "Forum"
-url = "https://discourse.redox-os.org/"
 [[languages.da.menu.main]]
 weight = 6
 name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.da.menu.main]]
 weight = 7
-name = "Twitter"
-url = "https://twitter.com/redox_os"
-[[languages.da.menu.main]]
-weight = 8
 name = "GSoC"
 url = "/gsoc/"
 
@@ -420,30 +376,26 @@ name = "Dokumentasjon"
 url = "/docs/"
 [[languages.no.menu.main]]
 weight = 2
+name = "Community"
+url = "/community"
+[[languages.no.menu.main]]
+weight = 3
 name = "Nyheter"
 url = "/news/"
 [[languages.no.menu.main]]
-weight = 3
+weight = 4
 name = "Skjermbilder"
 url = "/screens/"
 [[languages.no.menu.main]]
-weight = 4
+weight = 5
 name = "Donere"
 url = "/donate/"
-[[languages.no.menu.main]]
-weight = 5
-name = "Forum"
-url = "https://discourse.redox-os.org/"
 [[languages.no.menu.main]]
 weight = 6
 name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.no.menu.main]]
 weight = 7
-name = "Twitter"
-url = "https://twitter.com/redox_os"
-[[languages.no.menu.main]]
-weight = 8
 name = "GSoC"
 url = "/gsoc/"
 
@@ -457,30 +409,26 @@ name = "Dokumentace"
 url = "/docs/"
 [[languages.cz.menu.main]]
 weight = 2
+name = "Community"
+url = "/community"
+[[languages.cz.menu.main]]
+weight = 3
 name = "Novinky"
 url = "../news/"
 [[languages.cz.menu.main]]
-weight = 3
+weight = 4
 name = "Jak vypadá?"
 url = "/screens/"
 [[languages.cz.menu.main]]
-weight = 4
+weight = 5
 name = "Darovat"
 url = "/donate/"
-[[languages.cz.menu.main]]
-weight = 5
-name = "Fórum"
-url = "https://discourse.redox-os.org/"
 [[languages.cz.menu.main]]
 weight = 6
 name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.cz.menu.main]]
 weight = 7
-name = "Twitter"
-url = "https://twitter.com/redox_os"
-[[languages.cz.menu.main]]
-weight = 8
 name = "GSoC"
 url = "/gsoc/"
 
@@ -494,30 +442,26 @@ name = "Dokumentado"
 url = "/docs/"
 [[languages.eo.menu.main]]
 weight = 2
+name = "Community"
+url = "/community"
+[[languages.eo.menu.main]]
+weight = 3
 name = "Novaĵoj"
 url = "/news/"
 [[languages.eo.menu.main]]
-weight = 3
+weight = 4
 name = "Ekrankopioj"
 url = "/screens/"
 [[languages.eo.menu.main]]
-weight = 4
+weight = 5
 name = "Donaci"
 url = "/donate/"
-[[languages.eo.menu.main]]
-weight = 5
-name = "Forumo"
-url = "https://discourse.redox-os.org/"
 [[languages.eo.menu.main]]
 weight = 6
 name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.eo.menu.main]]
 weight = 7
-name = "Twitter"
-url = "https://twitter.com/redox_os"
-[[languages.eo.menu.main]]
-weight = 8
 name = "GSoC"
 url = "/gsoc/"
 
@@ -531,30 +475,26 @@ name = "Documentação"
 url = "/docs/"
 [[languages.pt.menu.main]]
 weight = 2
+name = "Community"
+url = "/community"
+[[languages.pt.menu.main]]
+weight = 3
 name = "Notícias"
 url = "/news/"
 [[languages.pt.menu.main]]
-weight = 3
+weight = 4
 name = "Capturas de Tela"
 url = "/screens/"
 [[languages.pt.menu.main]]
-weight = 4
+weight = 5
 name = "Doações"
 url = "/donate/"
-[[languages.pt.menu.main]]
-weight = 5
-name = "Fórum"
-url = "https://discourse.redox-os.org/"
 [[languages.pt.menu.main]]
 weight = 6
 name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.pt.menu.main]]
 weight = 7
-name = "Twitter"
-url = "https://twitter.com/redox_os"
-[[languages.pt.menu.main]]
-weight = 8
 name = "GSoC"
 url = "/gsoc/"
 
@@ -568,30 +508,26 @@ name = "ドキュメント"
 url = "/docs/"
 [[languages.jp.menu.main]]
 weight = 2
+name = "Community"
+url = "/community"
+[[languages.jp.menu.main]]
+weight = 3
 name = "最新情報"
 url = "/news/"
 [[languages.jp.menu.main]]
-weight = 3
+weight = 4
 name = "スクリーンショット"
 url = "/screens/"
 [[languages.jp.menu.main]]
-weight = 4
+weight = 5
 name = "寄付"
 url = "/donate/"
-[[languages.jp.menu.main]]
-weight = 5
-name = "フォーラム"
-url = "https://discourse.redox-os.org/"
 [[languages.jp.menu.main]]
 weight = 6
 name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.jp.menu.main]]
 weight = 7
-name = "Twitter"
-url = "https://twitter.com/redox_os"
-[[languages.jp.menu.main]]
-weight = 8
 name = "GSoC"
 url = "/gsoc/"
 
@@ -605,30 +541,26 @@ name = "문서"
 url = "/docs/"
 [[languages.ko.menu.main]]
 weight = 2
+name = "Community"
+url = "/community"
+[[languages.ko.menu.main]]
+weight = 3
 name = "공지사항"
 url = "/news/"
 [[languages.ko.menu.main]]
-weight = 3
+weight = 4
 name = "스크린샷"
 url = "/screens/"
 [[languages.ko.menu.main]]
-weight = 4
+weight = 5
 name = "후원하기"
 url = "/donate/"
-[[languages.ko.menu.main]]
-weight = 5
-name = "포럼"
-url = "https://discourse.redox-os.org/"
 [[languages.ko.menu.main]]
 weight = 6
 name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.ko.menu.main]]
 weight = 7
-name = "트위터"
-url = "https://twitter.com/redox_os"
-[[languages.ko.menu.main]]
-weight = 8
 name = "GSoC"
 url = "/gsoc/"
 
@@ -642,30 +574,26 @@ name = "Dokumentáció"
 url = "/docs/"
 [[languages.hu.menu.main]]
 weight = 2
+name = "Community"
+url = "/community"
+[[languages.hu.menu.main]]
+weight = 3
 name = "Hírek"
 url = "/news/"
 [[languages.hu.menu.main]]
-weight = 3
+weight = 4
 name = "Képernyőképek"
 url = "/screens/"
 [[languages.hu.menu.main]]
-weight = 4
+weight = 5
 name = "Adakozás"
 url = "/donate/"
-[[languages.hu.menu.main]]
-weight = 5
-name = "Fórum"
-url = "https://discourse.redox-os.org/"
 [[languages.hu.menu.main]]
 weight = 6
 name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.hu.menu.main]]
 weight = 7
-name = "Twitter"
-url = "https://twitter.com/redox_os"
-[[languages.hu.menu.main]]
-weight = 8
 name = "GSoC"
 url = "/gsoc/"
 
@@ -679,29 +607,25 @@ name = "Dokumentacja"
 url = "/docs/"
 [[languages.pl.menu.main]]
 weight = 2
+name = "Community"
+url = "/community"
+[[languages.pl.menu.main]]
+weight = 3
 name = "Aktualności"
 url = "/news/"
 [[languages.pl.menu.main]]
-weight = 3
+weight = 4
 name = "Zrzuty Ekranu"
 url = "/screens/"
 [[languages.pl.menu.main]]
-weight = 4
+weight = 5
 name = "Darowizny"
 url = "/donate/"
-[[languages.pl.menu.main]]
-weight = 5
-name = "Forum"
-url = "https://discourse.redox-os.org/"
 [[languages.pl.menu.main]]
 weight = 6
 name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.pl.menu.main]]
 weight = 7
-name = "Twitter"
-url = "https://twitter.com/redox_os"
-[[languages.pl.menu.main]]
-weight = 8
 name = "GSoC"
 url = "/gsoc/"
