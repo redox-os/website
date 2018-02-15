@@ -11,12 +11,12 @@ This page attempts to explain how the Redox OS community is organised and help y
 The quickest and most open way to communicate with the Redox team is on our chat server. Currently, you can only get an invite by sending an email request to info@redox-os.org, which might take a little while, since it's not automated. Simply say you'd like to join the chat. We're working on an better way to do this, but this is the best way right now.
 
 <a id="forum"></a>
-## [Forum](https://discourse.redox-os.org/) 
+## [Forum](https://discourse.redox-os.org/)
 
 This is the best way to discuss more general topics that aren't about specific things that need to be addressed one way or another. You can sign up like any other website.
 
 <a id="github"></a>
-## [Github] (https://github.com/redox-os/redox)
+## [GitHub](https://github.com/redox-os/redox)
 
 
 A bit more formal way of communication with fellow Redox devs, but a little less quick and convenient like the chat. Submit an issue when you run into problems compiling, testing, or just would like to discuss a certain topic, be it features, code style, code inconsistencies, minor changes and fixes, etc.
@@ -27,7 +27,7 @@ A bit more formal way of communication with fellow Redox devs, but a little less
 
 If you want a quick look at what's going on and talk about it.
 
-[reddit.com/r/rust](reddit.com/reddit.com/r/rust) for related Rust news and discussions.
+[reddit.com/r/rust](https://www.reddit.com/r/rust) for related Rust news and discussions.
 
 <a id="twitter"></a>
 ## [Twitter](https://twitter.com/redox_os)
