@@ -574,7 +574,7 @@ name = "Dokumentáció"
 url = "/docs/"
 [[languages.hu.menu.main]]
 weight = 2
-name = "Community"
+name = "Közösség"
 url = "/community"
 [[languages.hu.menu.main]]
 weight = 3
