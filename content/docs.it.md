@@ -39,4 +39,4 @@ sulla prima pagina.
 
 ## Condotta
 
-Noi seguiamo il [Codice di Condotta di Rust](https://www.rust-lang.org/conduct.html)
+Noi seguiamo il [Codice di Condotta di Rust](https://www.rust-lang.org/it-IT/conduct.html)

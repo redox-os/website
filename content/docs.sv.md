@@ -37,4 +37,4 @@ Du kan också hitta Redox på Reddit i
 
 ## Uppförande
 
-Vi följer [Rusts uppföranderegler](https://www.rust-lang.org/conduct.html)
+Vi följer [Rusts uppföranderegler](https://www.rust-lang.org/sv-SE/conduct.html)

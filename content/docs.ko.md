@@ -37,4 +37,4 @@ Redox는 여러 개의 저장소로 이루어진 하나의 거대한 프로젝�
 
 ## 행동규칙
 
-저희는 [Rust Code of Conduct](https://www.rust-lang.org/conduct.html)를 따르고 있습니다.
+저희는 [Rust Code of Conduct](https://www.rust-lang.org/ko-KR/conduct.html)를 따르고 있습니다.

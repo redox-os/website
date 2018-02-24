@@ -38,4 +38,4 @@ yayınlanmaktadır.
 
 ## Davranış
 
-Biz [Rust Davranış Kodu](https://www.rust-lang.org/conduct.html)nu takip ediyoruz.
+Biz [Rust Davranış Kodu](https://www.rust-lang.org/en-US/conduct.html)nu takip ediyoruz.

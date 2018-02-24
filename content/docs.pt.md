@@ -31,4 +31,4 @@ Você também pode encontrar o Redox no Reddit através dos subreddits [/r/rust/
 
 ## Conduta
 
-Nós seguimos o [Código de Conduta do Rust](https://www.rust-lang.org/conduct.html)
+Nós seguimos o [Código de Conduta do Rust](https://www.rust-lang.org/pt-BR/conduct.html)
