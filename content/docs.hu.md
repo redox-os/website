@@ -27,4 +27,4 @@ Tekintsd meg a [Közösség](/community/) menüpontot.
 
 ## Magatartás
 
-A [Rust magatartási kódexet](https://www.rust-lang.org/conduct.html) követjük.
+A [Rust magatartási kódexet](https://www.rust-lang.org/en-US/conduct.html) követjük.

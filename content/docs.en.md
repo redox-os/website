@@ -32,4 +32,4 @@ Please check on on [Community](/community/)
 
 ## Conduct
 
-We follow the [Rust Code of Conduct](https://www.rust-lang.org/conduct.html)
+We follow the [Rust Code of Conduct](https://www.rust-lang.org/en-US/conduct.html)

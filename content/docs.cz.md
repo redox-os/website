@@ -37,4 +37,4 @@ Rovněž můžete najít Redox na Redditu:
 
 ## Chování
 
-Držíme se [Rust Code of Conduct](https://www.rust-lang.org/conduct.html)
+Držíme se [Rust Code of Conduct](https://www.rust-lang.org/en-US/conduct.html)

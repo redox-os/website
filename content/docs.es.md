@@ -40,4 +40,4 @@ escribe en la primera.
 
 ## Conducta
 
-Seguimos el [Código de Conducta de Rust](https://www.rust-lang.org/conduct.html)
+Seguimos el [Código de Conducta de Rust](https://www.rust-lang.org/es-ES/conduct.html)
