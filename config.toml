@@ -629,3 +629,36 @@ url = "https://github.com/redox-os/redox"
 weight = 7
 name = "GSoC"
 url = "/gsoc/"
+
+[languages.uk]
+weight = 20
+languageName = "Українська"
+languageCode = "uk-UA"
+[[languages.uk.menu.main]]
+weight = 1
+name = "Документація"
+url = "/docs/"
+[[languages.uk.menu.main]]
+weight = 2
+name = "Спільнота"
+url = "/community"
+[[languages.uk.menu.main]]
+weight = 3
+name = "Новини"
+url = "/news/"
+[[languages.uk.menu.main]]
+weight = 4
+name = "Знімки Екрана"
+url = "/screens/"
+[[languages.uk.menu.main]]
+weight = 5
+name = "Пожертвування"
+url = "/donate/"
+[[languages.uk.menu.main]]
+weight = 6
+name = "GitHub"
+url = "https://github.com/redox-os/redox"
+[[languages.uk.menu.main]]
+weight = 7
+name = "GSoC"
+url = "/gsoc/"
