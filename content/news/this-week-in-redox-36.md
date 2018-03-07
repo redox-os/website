@@ -26,7 +26,7 @@ As usual, we start our journey from the bottom of the stack making our way up to
 
 Moving a bit, we get to the **drivers** level, we have a couple of fixes for `vesad` and `ps2d` by [@xTibor](https://github.com/xTibor) and [@jackpot51](https://github.com/jackpot51) respectively. The `vesad` one was related to Unicode character input and the one in `ps2d` was related to resizing `ps2d` bounding box when `vesad` resizes. Also, [@dlrobertson](https://github.com/dlrobertson) allowed PCI config space parsing to handle types.
 
-One of the surprising news on this issue, is related to **Ion**, Redox's shell. There has been significantly less activity on it, mainly because of the fact that [@mmstick](https://github.com/mmstick) Ion's maintainer and original creator is transitioning to a new job and hope everything is going great for him!
+One of the surprising news on this issue, is related to **Ion**, Redox's shell. There has been significantly less activity on it, mainly because of the fact that [@mmstick](https://github.com/mmstick) Ion's maintainer and original creator is transitioning to a new job. He has been busy with System76-related Rust projects. Particularly [distinst](https://github.com/pop-os/distinst), and recently a GTK3 front-end for [muff](https://github.com/pop-os/muff). We are glad he is doing great!
 
 Anyways, here is what happened in **Ion** in the last few weeks: [@abeaumont](https://github.com/abeaumont) fixed some typos in the manual while [@Sag0Sag0](https://github.com/Sag0Sag0) made `popd`/`pushd` update `PWD`
 and [@forbjok](https://github.com/forbjok) fixed cd'ing into a symlinked directory along with various issues fixes by [@Sag0Sag0](https://github.com/Sag0Sag0) and [@zen3ger](https://github.com/zen3ger).
