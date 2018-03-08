@@ -20,34 +20,36 @@ Welcome to another issue of TWiRx!
 
 First of all, Sorry for the gap between the last release and this one. It has just been crazy at work! 
 
-Maybe the most exciting news for this period is the birth of a new project, [relibc](https://github.com/redox-os/relibc) Yes! A C standard library written in Rust. Why? Mainly because it's easier to develop than `newlib` (our current C library), cross platform support is easier and last but not least, it has the potential to improve security. It's a cool project that needs tons of help and it has great potential. We would be happy to mentor you, just send a mail to `info@redox-os.org` and we will give you access to our [Mattermost](https://chat.redox-os.org/) or just ask on the [Discourse forum](https://discourse.redox-os.org/) for more info.
+Maybe the most exciting news for this period is the birth of a new project, [relibc](https://github.com/redox-os/relibc). Yes!, A C standard library written in Rust. Why? Mainly because it's easier to develop than `newlib` (our current C library), better cross platform support and it has the potential to improve security. It's a cool project with great potential and needs tons of help! We would be happy to mentor you, just send a mail to `info@redox-os.org` and we will give you access to our [Mattermost](https://chat.redox-os.org/) or just ask on the [Discourse forum](https://discourse.redox-os.org/) for more info.
 
 As usual, we start our journey from the bottom of the stack making our way up to userland. There at the bottom, we have the **kernel**, where Mr [@jackpot51](https://github.com/jackpot51) switched to a linked list allocator and added the ACPI cargo feature. He also shipped a fix for a bug the signals mechanism. Basically, if a signal was delivered while the process was blocked, it would handle the signal and then go back to an unblocked state.
 
-Moving a bit, we get to the **drivers** level, we have a couple of fixes for `vesad` and `ps2d` by [@xTibor](https://github.com/xTibor) and [@jackpot51](https://github.com/jackpot51) respectively. The `vesad` one was related to Unicode character input and the one in `ps2d` was related to resizing `ps2d` bounding box when `vesad` resizes. Also, [@dlrobertson](https://github.com/dlrobertson) allowed PCI config space parsing to handle types.
+Moving up a bit, we get to the **drivers** level, where we have a couple of fixes for `vesad` and `ps2d` by [@xTibor](https://github.com/xTibor) and [@jackpot51](https://github.com/jackpot51) respectively. The `vesad` one was related to Unicode character input and the one in `ps2d` was related to resizing `ps2d` bounding box when `vesad` resizes. Also, [@dlrobertson](https://github.com/dlrobertson) allowed PCI config space parsing to handle types.
 
 One of the surprising news on this issue, is related to **Ion**, Redox's shell. There has been significantly less activity on it, mainly because of the fact that [@mmstick](https://github.com/mmstick) Ion's maintainer and original creator is transitioning to a new job. He has been busy with System76-related Rust projects. Particularly [distinst](https://github.com/pop-os/distinst), and recently a GTK3 front-end for [muff](https://github.com/pop-os/muff). We are glad he is doing great!
 
-Anyways, here is what happened in **Ion** in the last few weeks: [@abeaumont](https://github.com/abeaumont) fixed some typos in the manual while [@Sag0Sag0](https://github.com/Sag0Sag0) made `popd`/`pushd` update `PWD`
-and [@forbjok](https://github.com/forbjok) fixed cd'ing into a symlinked directory along with various issues fixes by [@Sag0Sag0](https://github.com/Sag0Sag0) and [@zen3ger](https://github.com/zen3ger).
+Anyways, here is what happened in **Ion** in the last few weeks: [@abeaumont](https://github.com/abeaumont) fixed some typos in the manual, [@Sag0Sag0](https://github.com/Sag0Sag0) made `popd`/`pushd` update `PWD`
+and [@forbjok](https://github.com/forbjok) fixed cd'ing into a symlinked directory.All of this, along various issues fixes by [@Sag0Sag0](https://github.com/Sag0Sag0) and [@zen3ger](https://github.com/zen3ger).
 
-In the **cookbook** front, most of the activity came from [@jackpot51](https://github.com/jackpot51) and [@xTibor](https://github.com/xTibor) in the shape of updates and tweaks for the `rust` and `cargo` packages as well as a new package for `netsurf` plus lots of improvements to the `sdl` package: updates video to the latest orbital protocol, support for mouse wheel scrolling and middle/right buttons, the implementation of `SDL_RESIZABLE` and `SDL_WM_SetCaption` along with a fix for a page fault on `SDL_Quit`.
+In the **cookbook** front, most of the activity came from [@jackpot51](https://github.com/jackpot51) and [@xTibor](https://github.com/xTibor) in the shape of updates and tweaks for the `rust` and `cargo` packages, a new package for `netsurf` plus lots of improvements to the `sdl` package: updates video to the latest orbital protocol, support for mouse wheel scrolling and middle/right buttons, the implementation of `SDL_RESIZABLE` and `SDL_WM_SetCaption` along with a fix for a page fault on `SDL_Quit`.
 
-Our next station is GUIs where **Orbclient**, the Orbital client library, saw a few improvements notably, faster image rendering with falling back to legacy function and the implementation of parallel rendering and window overwriting by [@robbycerantola](https://github.com/robbycerantola) while **Orbtk** got it's version `0.2.27`.
+Our next station is GUIs where **Orbclient**, the Orbital client library, saw a few improvements, such as the implementation of faster image rendering and the implementation of parallel rendering and window overwriting by [@robbycerantola](https://github.com/robbycerantola).
 
-**Orbutils** was ported to the most recent version of the `users` crate by [@MggMuggins](https://github.com/MggMuggins) while `FileManager` got a fix for a panic on Unicode filenames and **Orbterm** Redox's terminal emulator (also compatible with Linux) saw a fix for Unicode character input. Both of them by [@xTibor](https://github.com/xTibor).
+**Orbutils** was ported to the most recent version of the `users` crate by [@MggMuggins](https://github.com/MggMuggins), `FileManager` got a fix for a panic on Unicode filenames.
+
+**Orbterm**, Redox's terminal emulator (also compatible with Linux) saw a fix for Unicode character input by [@xTibor](https://github.com/xTibor).
 
 Also GUI related, the **Sodium** text editor compilation was fixed by [@jamessral](https://github.com/jamessral).
 
 Our **users** crate has been under a lot of activity, mostly from [@MggMuggins](https://github.com/MggMuggins) who implemented: removal of users and groups, "unset" passwords (not to be confused with blank ones), improvements of users and groups writing, timeouts and lastly he brought iterators over users and groups back. Nicely done!
 
-As usual our last stop is on the **\*_utils** crates: **Userutils**, **Coreutils** and **Netutils**.
+As usual, our last stop is on the **\*_utils** crates: **Userutils**, **Coreutils** and **Netutils**.
 
-**Userutils** was ported to `users`'s new API. It got also implementations for `usermod`, `groupmod`, `userdel` and `groupdel` plus the migration from our own `ArgParser` to the more powerful `clap-rs` crate. All of this by [@MggMuggins](https://github.com/MggMuggins)
+**Userutils** was ported to `users`'s new API. It got also implementations for `usermod`, `groupmod`, `userdel` and `groupdel` added to the migration from our own `ArgParser` to the more powerful `clap-rs` crate. All of this by [@MggMuggins](https://github.com/MggMuggins).
 
 In **Coreutils**, [@dlrobertson](https://github.com/dlrobertson) made the update to the new `users` API.
 
-Finishing with **Netutils** where [@batonius](https://github.com/batonius) implemented `dhcpd` support for `netcfg` and [@Nickforall](https://github.com/Nickforall) Fixed deprecation warning on the `ping` and `dns` binaries.
+Finishing with **Netutils** where [@batonius](https://github.com/batonius) implemented `dhcpd` support for `netcfg` and [@Nickforall](https://github.com/Nickforall) fixed deprecation warning on the `ping` and `dns` binaries.
 
 Now I leave you with the details!
 
