@@ -2,8 +2,9 @@
 title = "Google Summer of Code"
 +++
 
-Redox OS is participating in [GSoC 2018](https://summerofcode.withgoogle.com/)
-with the [Microkernel devroom](http://gsoc.microkernel.info/). If you would like
+Redox OS and the [Microkernel devroom](http://gsoc.microkernel.info/) did not get
+accepted into [GSoC 2018](https://summerofcode.withgoogle.com/) this year. We are
+still planning to fund a couple students under similar rules. If you would like
 to sign up as a GSoC student with Redox OS, please send an email to
 [info@redox-os.org](mailto:info@redox-os.org). The following is a list of
 project ideas. This list is meant to provide suggestions, as students can
