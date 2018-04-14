@@ -2,13 +2,63 @@
 title = "Redox Summer of Code"
 +++
 
-Redox OS and the [Microkernel devroom](http://gsoc.microkernel.info/) did not get
-accepted into [GSoC 2018](https://summerofcode.withgoogle.com/) this year. We are
-planning to fund a couple students under similar rules. If you would like
-to sign up as a RSoC student with Redox OS, please send an email to
-[info@redox-os.org](mailto:info@redox-os.org). The following is a list of
-project ideas. This list is meant to provide suggestions, as students can
-propose working on a project not included below.
+Redox OS is running its own Summer of Code this year, after the [Microkernel devroom](http://gsoc.microkernel.info/)
+did not get accepted into [GSoC 2018](https://summerofcode.withgoogle.com/). We
+are looking for both [Students](#students) and [Sponsors](#sponsors) who want to
+help Redox OS grow.
+
+<a id="sponsors"></a>
+## Becoming a RSoC Sponsor
+
+At the moment, Redox OS has $10,800 in donations from various platforms to use
+to fund students. This will give us three students working for three months, if
+each student requests $1200 per month on average as described in [Payment](#payment).
+
+In order to fund more students, we are looking for sponsors who are willing to
+fund RSoC. Donations can be made on the [Donate](https://www.redox-os.org/donate/)
+page. All donations will be used to fund Redox OS activities, with about 90% of
+those over the past year currently allocated to RSoC.
+
+<a id="students"></a>
+## Becoming a RSoC Student
+
+If you would like to sign up as a RSoC student with Redox OS, please send an
+email to [info@redox-os.org](mailto:info@redox-os.org) with the following
+information:
+
+- Your name, or whatever you would like to be referred to
+
+- Your location, ideally identifying which time zone you are in
+
+- Your programming background, with links to source code if available
+
+- Your project idea, please see [Projects](#projects) for examples.
+
+- Your estimated start and end date, ideally from June 1st to August 31st.
+
+- Your desired payment, see [Payment](#payment) for more information.
+
+RSoC provides more freedom than the GSoC program. Any person can participate, on
+a schedule of their choosing, for the payment of their choosing.
+
+<a id="payment"></a>
+## Payment
+
+Students are free to request any amount, to be paid monthly. A good guideline is
+to use this [cost of living index](https://www.expatistan.com/cost-of-living/index)
+times $12 per month.
+
+For example, if the index is 100, such as in Prague, the student would be
+expected to request $1200 per month, or a total of $3600 for three months.
+
+This matches with the [GSoC stipends](https://developers.google.com/open-source/gsoc/help/student-stipends),
+but provides more accuracy than on a per-country measurement.
+
+<a id="projects"></a>
+## Projects
+
+The following is a list of project ideas. This list is meant to provide
+suggestions, as students can propose working on a project not included below.
 
 - [ARM 64-bit Support](#aarch64)
 - [USB HID Input Driver](#usbhid)
