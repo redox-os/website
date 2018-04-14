@@ -8,7 +8,7 @@ are looking for both [Students](#students) and [Sponsors](#sponsors) who want to
 help Redox OS grow.
 
 <a id="sponsors"></a>
-## Becoming a RSoC Sponsor
+## Becoming a Sponsor
 
 At the moment, Redox OS has $10,800 in donations from various platforms to use
 to fund students. This will give us three students working for three months, if
@@ -20,7 +20,7 @@ page. All donations will be used to fund Redox OS activities, with about 90% of
 those over the past year currently allocated to RSoC.
 
 <a id="students"></a>
-## Becoming a RSoC Student
+## Becoming a Student
 
 If you would like to sign up as a RSoC student with Redox OS, please send an
 email to [info@redox-os.org](mailto:info@redox-os.org) with the following
