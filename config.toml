@@ -33,8 +33,8 @@ name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.en.menu.main]]
 weight = 7
-name = "GSoC"
-url = "/gsoc/"
+name = "RSoC"
+url = "/rsoc/"
 
 [languages.zh]
 weight = 2
@@ -66,8 +66,8 @@ name = "代码库"
 url = "https://github.com/redox-os/redox"
 [[languages.zh.menu.main]]
 weight = 7
-name = "GSoC"
-url = "/gsoc/"
+name = "RSoC"
+url = "/rsoc/"
 
 [languages.es]
 weight = 3
@@ -99,8 +99,8 @@ name = "Repositorio"
 url = "https://github.com/redox-os/redox"
 [[languages.es.menu.main]]
 weight = 7
-name = "GSoC"
-url = "/gsoc/"
+name = "RSoC"
+url = "/rsoc/"
 
 [languages.ru]
 weight = 4
@@ -132,8 +132,8 @@ name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.ru.menu.main]]
 weight = 7
-name = "GSoC"
-url = "/gsoc/"
+name = "RSoC"
+url = "/rsoc/"
 
 [languages.fr]
 weight = 5
@@ -165,8 +165,8 @@ name = "Code source"
 url = "https://github.com/redox-os/redox"
 [[languages.fr.menu.main]]
 weight = 7
-name = "GSoC"
-url = "/gsoc/"
+name = "RSoC"
+url = "/rsoc/"
 
 [languages.de]
 weight = 6
@@ -198,8 +198,8 @@ name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.de.menu.main]]
 weight = 7
-name = "GSoC"
-url = "/gsoc/"
+name = "RSoC"
+url = "/rsoc/"
 
 [languages.it]
 weight = 7
@@ -231,8 +231,8 @@ name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.it.menu.main]]
 weight = 7
-name = "GSoC"
-url = "/gsoc/"
+name = "RSoC"
+url = "/rsoc/"
 
 [languages.tr]
 weight = 8
@@ -264,8 +264,8 @@ name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.tr.menu.main]]
 weight = 7
-name = "GSoC"
-url = "/gsoc/"
+name = "RSoC"
+url = "/rsoc/"
 
 [languages.sv]
 weight = 9
@@ -297,8 +297,8 @@ name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.sv.menu.main]]
 weight = 7
-name = "GSoC"
-url = "/gsoc/"
+name = "RSoC"
+url = "/rsoc/"
 
 [languages.nl]
 weight = 10
@@ -330,8 +330,8 @@ name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.nl.menu.main]]
 weight = 7
-name = "GSoC"
-url = "/gsoc/"
+name = "RSoC"
+url = "/rsoc/"
 
 [languages.da]
 weight = 11
@@ -363,8 +363,8 @@ name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.da.menu.main]]
 weight = 7
-name = "GSoC"
-url = "/gsoc/"
+name = "RSoC"
+url = "/rsoc/"
 
 [languages.no]
 weight = 12
@@ -396,8 +396,8 @@ name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.no.menu.main]]
 weight = 7
-name = "GSoC"
-url = "/gsoc/"
+name = "RSoC"
+url = "/rsoc/"
 
 [languages.cz]
 weight = 13
@@ -429,8 +429,8 @@ name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.cz.menu.main]]
 weight = 7
-name = "GSoC"
-url = "/gsoc/"
+name = "RSoC"
+url = "/rsoc/"
 
 [languages.eo]
 weight = 14
@@ -462,8 +462,8 @@ name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.eo.menu.main]]
 weight = 7
-name = "GSoC"
-url = "/gsoc/"
+name = "RSoC"
+url = "/rsoc/"
 
 [languages.pt]
 weight = 15
@@ -495,8 +495,8 @@ name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.pt.menu.main]]
 weight = 7
-name = "GSoC"
-url = "/gsoc/"
+name = "RSoC"
+url = "/rsoc/"
 
 [languages.jp]
 weight = 16
@@ -528,8 +528,8 @@ name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.jp.menu.main]]
 weight = 7
-name = "GSoC"
-url = "/gsoc/"
+name = "RSoC"
+url = "/rsoc/"
 
 [languages.ko]
 weight = 17
@@ -561,8 +561,8 @@ name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.ko.menu.main]]
 weight = 7
-name = "GSoC"
-url = "/gsoc/"
+name = "RSoC"
+url = "/rsoc/"
 
 [languages.hu]
 weight = 18
@@ -594,8 +594,8 @@ name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.hu.menu.main]]
 weight = 7
-name = "GSoC"
-url = "/gsoc/"
+name = "RSoC"
+url = "/rsoc/"
 
 [languages.pl]
 weight = 19
@@ -627,8 +627,8 @@ name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.pl.menu.main]]
 weight = 7
-name = "GSoC"
-url = "/gsoc/"
+name = "RSoC"
+url = "/rsoc/"
 
 [languages.uk]
 weight = 20
@@ -660,5 +660,5 @@ name = "GitHub"
 url = "https://github.com/redox-os/redox"
 [[languages.uk.menu.main]]
 weight = 7
-name = "GSoC"
-url = "/gsoc/"
+name = "RSoC"
+url = "/rsoc/"
