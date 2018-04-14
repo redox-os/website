@@ -26,17 +26,19 @@ If you would like to sign up as a RSoC student with Redox OS, please send an
 email to [info@redox-os.org](mailto:info@redox-os.org) with the following
 information, and `[RSoC]` in the subject:
 
-- Your name, or whatever you would like to be referred to
+- Your name, or whatever you would like to be referred to as.
 
-- Your location, ideally identifying which time zone you are in
+- Your location, ideally identifying which time zone you are in.
 
-- Your programming background, with links to source code if available
+- Your programming background, with links to source code if available.
 
 - Your project idea, please see [Projects](#projects) for examples.
 
 - Your estimated start and end date, ideally from June 1st to August 31st.
 
 - Your desired payment, see [Payment](#payment) for more information.
+
+- Any other information you would like to provide.
 
 RSoC provides more freedom than the GSoC program. Any person can participate, on
 a schedule of their choosing, for the payment of their choosing.
