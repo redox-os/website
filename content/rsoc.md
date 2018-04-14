@@ -24,7 +24,7 @@ those over the past year currently allocated to RSoC.
 
 If you would like to sign up as a RSoC student with Redox OS, please send an
 email to [info@redox-os.org](mailto:info@redox-os.org) with the following
-information:
+information, and `[RSoC]` in the subject:
 
 - Your name, or whatever you would like to be referred to
 
