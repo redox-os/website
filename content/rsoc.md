@@ -43,7 +43,7 @@ information, and `[RSoC]` in the subject:
 
 - Any other information you would like to provide.
 
-The deadline for submissions is May 15th, 2018. Due to the number of
+The deadline for submissions is May 1st, 2018. Due to the number of
 applications, it will be good to provide more than one potential project you are
 interested in. When considering payment, understand that it is important for the
 selection process.
