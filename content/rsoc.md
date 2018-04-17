@@ -22,6 +22,9 @@ those over the past year currently allocated to RSoC.
 <a id="students"></a>
 ## Becoming a Student
 
+RSoC provides more freedom than the GSoC program. Any person can participate, on
+a schedule of their choosing, for the payment of their choosing.
+
 If you would like to sign up as a RSoC student with Redox OS, please send an
 email to [info@redox-os.org](mailto:info@redox-os.org) with the following
 information, and `[RSoC]` in the subject:
@@ -40,8 +43,10 @@ information, and `[RSoC]` in the subject:
 
 - Any other information you would like to provide.
 
-RSoC provides more freedom than the GSoC program. Any person can participate, on
-a schedule of their choosing, for the payment of their choosing.
+The deadline for submissions is May 15th, 2018. Due to the number of
+applications, it will be good to provide more than one potential project you are
+interested in. When considering payment, understand that it is important for the
+selection process.
 
 <a id="payment"></a>
 ## Payment
