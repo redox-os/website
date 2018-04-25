@@ -71,7 +71,7 @@ suggestions, as students can propose working on a project not included below.
 - [USB HID Input Driver](#usbhid)
 - [Intel Graphics Framebuffer Driver](#intelfb)
 - [Port Mesa with Software Rendering](#mesa)
-- [IP Fragmentation Support](#ip-fragmentation)
+- [Network Configuration](#network-config)
 - [Port Tokio](#tokio)
 - [FAT32 Filesystem Driver](#fat32)
 
@@ -219,23 +219,21 @@ the project.
 
 Medium
 
-<a id="ip-fragmentation"></a>
-## IP Fragmentation Support
+<a id="network-config"></a>
+## Network Configuration
 
-Add support for IP Fragmentation to the network stack used by RedoxOS
+Improve Network and DNS configuration
 
 ### Details:
-The purpose of this project is to add IP fragmentation support to the network
-stack used by RedoxOS ([smoltcp]). This project will begin with adding basic support
-for correctly processing fragmented IP packets in [smoltcp] as outlined in the upstream
-issue [smoltcp#54]. After support is added in [smoltcp], the [netstack] implementation
-should be updated to synchronize with any updates to the interface defined in the
-upstream repository. If the project is finished early, work could begin on path based
-MTU discovery.
+The purpose of this project is to improve the user interface provided to configure
+a network interface. This project will begin with adding better support for configuring
+network interfaces and DNS nameservers as summarized in [netstack#19], [netstack#20],
+and [netstack#21]. If the project is finished early, work could begin on adding
+support to configure IPv6 addresses and DNS for IPv6.
 
 ### Expected Outcome:
-The expected outcome of this project is that fragmented IP packets are able to
-be correctly processed by the network stack used by RedoxOS.
+The expected outcome of this project is that users are able to easilty configure
+network interfaces.
 
 ### Skills Preferred:
 Experience with network stacks and the [IPv4] and [IPv6] RFCs is preferred but
@@ -247,13 +245,13 @@ not strictly required.
 [Egor Karavaev](https://github.com/batonius/)
 
 ### Difficulty:
-Medium
+Easy
 
 [IPv4]: https://tools.ietf.org/html/rfc791
 [IPv6]: https://tools.ietf.org/html/rfc8200
-[netstack]: https://github.com/redox-os/netstack
-[smoltcp]: https://github.com/m-labs/smoltcp
-[smoltcp#54]: https://github.com/m-labs/smoltcp/issues/52
+[netstack#19]: https://github.com/redox-os/netstack/issues/19
+[netstack#20]: https://github.com/redox-os/netstack/issues/20
+[netstack#21]: https://github.com/redox-os/netstack/issues/21
 
 <a id="tokio"></a>
 ## Port Tokio
