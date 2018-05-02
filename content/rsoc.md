@@ -2,6 +2,10 @@
 title = "Redox Summer of Code"
 +++
 
+**Applications for the 2018 Redox Summer of Code will no longer be accepted. We
+are in the process of evaluating the applications and will have results
+available some time before May 5th, 2018.**
+
 Redox OS is running its own Summer of Code this year, after the [Microkernel devroom](http://gsoc.microkernel.info/)
 did not get accepted into [GSoC 2018](https://summerofcode.withgoogle.com/). We
 are looking for both [Students](#students) and [Sponsors](#sponsors) who want to
