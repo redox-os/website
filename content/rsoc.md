@@ -2,6 +2,35 @@
 title = "Redox Summer of Code"
 +++
 
+## Estimated time remaining for the results
+<h1 id="countdown"><
+<script>
+var target_date = new Date("May 5, 2018").getTime();
+
+var days, hours, minutes, seconds;
+var countdown = document.getElementById("countdown");
+
+setInterval(function () {
+
+    var current_date = new Date().getTime();
+    var seconds_left = (target_date - current_date) / 1000;
+
+    days = parseInt(seconds_left / 86400);
+    seconds_left = seconds_left % 86400;
+
+    hours = parseInt(seconds_left / 3600);
+    seconds_left = seconds_left % 3600;
+
+    minutes = parseInt(seconds_left / 60);
+    seconds = parseInt(seconds_left % 60);
+
+    countdown.innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+
+}, 1000);
+</script>
+</h1>
+
 **Applications for the 2018 Redox Summer of Code will no longer be accepted. We
 are in the process of evaluating the applications and will have results
 available some time before May 5th, 2018.**
