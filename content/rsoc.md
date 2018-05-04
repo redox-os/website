@@ -5,27 +5,28 @@ title = "Redox Summer of Code"
 ## Estimated time remaining for the results
 <h1 id="countdown"><
 <script>
-var target_date = new Date("May 5, 2018").getTime();
+var target_date = new Date(Date.UTC(2018, 4, 5)).getTime(); // 4 because month is zero based :|
+
+target_date += 1000 * 60 * 60 * 6; // GMT-6
 
 var days, hours, minutes, seconds;
 var countdown = document.getElementById("countdown");
 
 setInterval(function () {
-
     var current_date = new Date().getTime();
-    var seconds_left = (target_date - current_date) / 1000;
+    var remaining = (target_date - current_date) / 1000;
 
-    days = parseInt(seconds_left / 86400);
-    seconds_left = seconds_left % 86400;
+    let seconds = Math.floor(remaining % 60);
+    let minutes = Math.floor((remaining / 60) % 60);
+    let hours = Math.floor((remaining / (60*60)) % 24);
+    let days = Math.floor(remaining / (60*60*24));
 
-    hours = parseInt(seconds_left / 3600);
-    seconds_left = seconds_left % 3600;
-
-    minutes = parseInt(seconds_left / 60);
-    seconds = parseInt(seconds_left % 60);
-
-    countdown.innerHTML = days + "d " + hours + "h "
-    + minutes + "m " + seconds + "s ";
+    var output = "";
+    if (days > 0) { output += days + "d "; }
+    if (hours > 0) { output += hours + "h "; }
+    if (minutes > 0) { output += minutes + "m "; }
+    if (seconds > 0) { output += seconds + "s "; }
+    countdown.innerHTML = output;
 
 }, 1000);
 </script>
