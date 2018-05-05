@@ -5,7 +5,7 @@ title = "Redox Summer of Code"
 ## Estimated time remaining for the results
 <h1 id="countdown"><
 <script>
-var target_date = new Date(Date.UTC(2018, 4, 5)).getTime(); // 4 because month is zero based :|
+var target_date = new Date(Date.UTC(2018, 4, 5, 17)).getTime(); // 4 because month is zero based :|
 
 target_date += 1000 * 60 * 60 * 6; // GMT-6
 
