@@ -2,39 +2,18 @@
 title = "Redox Summer of Code"
 +++
 
-## Estimated time remaining for the results
-<h1 id="countdown"><
-<script>
-var target_date = new Date(Date.UTC(2018, 4, 5, 17)).getTime(); // 4 because month is zero based :|
+Redox OS has selected 5 students to sponsor for the following projects:
 
-target_date += 1000 * 60 * 60 * 6; // GMT-6
+* Deepak Sirone - FAT32
+* Ioannis Valasakis - ARM64
+* jD91mZM2 - Tokio
+* 董瑜亮 - Network Config
+* Tavish McDonald - RedoxFS
 
-var days, hours, minutes, seconds;
-var countdown = document.getElementById("countdown");
+We would like to thank all of the 88 applicants for their applications -
+we hope that you will consider contributing to Redox OS in the future!
 
-setInterval(function () {
-    var current_date = new Date().getTime();
-    var remaining = (target_date - current_date) / 1000;
-
-    let seconds = Math.floor(remaining % 60);
-    let minutes = Math.floor((remaining / 60) % 60);
-    let hours = Math.floor((remaining / (60*60)) % 24);
-    let days = Math.floor(remaining / (60*60*24));
-
-    var output = "";
-    if (days > 0) { output += days + "d "; }
-    if (hours > 0) { output += hours + "h "; }
-    if (minutes > 0) { output += minutes + "m "; }
-    if (seconds > 0) { output += seconds + "s "; }
-    countdown.innerHTML = output;
-
-}, 1000);
-</script>
-</h1>
-
-**Applications for the 2018 Redox Summer of Code will no longer be accepted. We
-are in the process of evaluating the applications and will have results
-available some time before May 5th, 2018.**
+**For archival purposes, here is the previous page:**
 
 Redox OS is running its own Summer of Code this year, after the [Microkernel devroom](http://gsoc.microkernel.info/)
 did not get accepted into [GSoC 2018](https://summerofcode.withgoogle.com/). We
