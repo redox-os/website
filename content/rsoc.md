@@ -245,7 +245,7 @@ and [netstack#21]. If the project is finished early, work could begin on adding
 support to configure IPv6 addresses and DNS for IPv6.
 
 ### Expected Outcome:
-The expected outcome of this project is that users are able to easilty configure
+The expected outcome of this project is that users are able to easily configure
 network interfaces.
 
 ### Skills Preferred:
