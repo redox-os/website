@@ -38,15 +38,15 @@ url = "/home"
     <div style="font-size: 16px; text-align: center;">
       Redox executando Orbital
     </div>
-    <a href="img/redox-orbital/large.png">
+    <a href="/img/redox-orbital/large.png">
       <picture>
-        <source media="(min-width: 1300px)" srcset="img/redox-orbital/large.webp" type="image/webp">
-        <source media="(min-width: 640px)" srcset="img/redox-orbital/medium.webp" type="image/webp">
-        <source media="(min-width: 320px)" srcset="img/redox-orbital/medium.webp" type="image/webp">
-        <source media="(min-width: 1300px)" srcset="img/redox-orbital/large.png" type="image/png">
-        <source media="(min-width: 640px)" srcset="img/redox-orbital/medium.png" type="image/png">
-        <source media="(min-width: 320px)" srcset="img/redox-orbital/small.png" type="image/png">
-        <img src="img/redox-orbital/medium.png" class="img-responsive" alt="Redox and Orbital">
+        <source media="(min-width: 1300px)" srcset="/img/redox-orbital/large.webp" type="image/webp">
+        <source media="(min-width: 640px)" srcset="/img/redox-orbital/medium.webp" type="image/webp">
+        <source media="(min-width: 320px)" srcset="/img/redox-orbital/medium.webp" type="image/webp">
+        <source media="(min-width: 1300px)" srcset="/img/redox-orbital/large.png" type="image/png">
+        <source media="(min-width: 640px)" srcset="/img/redox-orbital/medium.png" type="image/png">
+        <source media="(min-width: 320px)" srcset="/img/redox-orbital/small.png" type="image/png">
+        <img src="/img/redox-orbital/medium.png" class="img-responsive" alt="Redox and Orbital">
       </picture>
     </a>
   </div>
