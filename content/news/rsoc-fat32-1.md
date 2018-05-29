@@ -6,7 +6,7 @@ date = "2018-05-29T15:27:18+05:30"
 
 This is a blog post about the work which I have done so far in implementing a FAT32 filesystem in Redox. Currently the Redox [bootloader](https://github.com/redox-os/bootloader) as well as the userspace filesystem [daemon](https://github.com/redox-os/redoxfs/tree/master/src/bin) supports only RedoxFS.
 
-## Goals identified
+#### Goals identified
 * Modify the bootloader using Rust to support loading the kernel from commonly supported filesystems
 * Write a userspace daemon which can mount FAT32 filesystems
 
