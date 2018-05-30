@@ -1,5 +1,5 @@
 +++
-title = "RSoC: Porting tokio to redox"
+title = "RSoC: Porting tokio to redox - week 1"
 author = "jD91mZM2"
 date = "2018-05-21T19:03:54+02:00"
 +++
@@ -68,6 +68,6 @@ and I was back to where I left off Day 3, but now with *much* better - and faste
 Now, what was the answer to why `tokio::spawn` wasn't working?
 Oh that was simple, my VM only has one CPU and it turns out tokio adjusts the number of worker threads
 to the amount of CPUs.
-I mean, it probably should be work anyway. Guessing that could be a tokio bug.
+I mean, it probably should work anyway. Guessing that could be a tokio bug.
 For now I just made it use at least two workers.
 This and a few other problems were patched, and here we are.
