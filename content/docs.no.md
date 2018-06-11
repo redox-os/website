@@ -20,8 +20,8 @@ Takk for din interesse i å bidra til Redox!
 Det finnes mange måter å hjelpe oss og vi setter pris på dem alle.
 
 Redox er et stort prosjekt spredt ut over mange repos som kan finnes i
-[Redoxorganisasjon på GitHub](https://github.com/redox-os). Dette dokumentet,
-[CONTRIBUTING.md](https://github.com/redox-os/redox/blob/master/CONTRIBUTING.md)
+[Redoxorganisasjon på GitLab](https://gitlab.redox-os.org/redox-os). Dette dokumentet,
+[CONTRIBUTING.md](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md)
 er en guide for å hjelpe nybegynnere til å bidra.
 
 ## Kommunikasjon og chat

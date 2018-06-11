@@ -19,9 +19,9 @@ Biz, Redox'u nasıl kurup kullanacağınızı açıkladığı için [kitabımız
 Redox'a katkı yapmak hakkındaki ilginiz için teşekkür ederiz!
 Bize yardım etmenin birçok yolu var ve biz hepsini takdir ederiz.
 
-Redox [Github'da Redox organizasyonu](https://github.com/redox-os)'nda bulabileceğiniz
+Redox [GitLab'da Redox organizasyonu](https://gitlab.redox-os.org/redox-os)'nda bulabileceğiniz
 birçok depo arasında yayılmış büyük bir projedir. Bu belge,
-[CONTRIBUTING.md](https://github.com/redox-os/redox/blob/master/CONTRIBUTING.md)
+[CONTRIBUTING.md](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md)
 yeni gelenlere katkı yapmak için bir kılavuzdur!
 
 ## Haberleşme ve Konuşma

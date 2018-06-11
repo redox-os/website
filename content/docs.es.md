@@ -20,8 +20,8 @@ Recomendamos encarecidamente empezar con el [Libro](https://doc.redox-os.org/boo
 Hay muchas formas de ayudarnos y apreciamos cada una de ellas.
 
 Redox es un gran proyecto separado en muchos repositorios que se pueden encontrar en la
-[Organización de Redox en GitHub](https://github.com/redox-os). Este documento,
-[CONTRIBUYENDO.md](https://github.com/redox-os/redox/blob/master/CONTRIBUTING.md),
+[Organización de Redox en GitLab](https://gitlab.redox-os.org/redox-os). Este documento,
+[CONTRIBUYENDO.md](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md),
  ¡es una guía para ayudar a los recién llegados a contribuir!
 
 ## Comunicación y Chat

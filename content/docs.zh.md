@@ -19,8 +19,8 @@ title = "文档"
 非常感谢您有兴趣为Redox做贡献！
 有很多可以帮助我们的方式，我们喜欢任何形式的帮助。
 
-Redox是一个非常大的工程， 分散在[GitHub的Redox](https://github.com/redox-os)里的很多代码库里面。
-. 这个[文档](https://github.com/redox-os/redox/blob/master/CONTRIBUTING.md)可以帮助新人了解如何为Redox做贡献!
+Redox是一个非常大的工程， 分散在[GitLab的Redox](https://gitlab.redox-os.org/redox-os)里的很多代码库里面。
+. 这个[文档](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md)可以帮助新人了解如何为Redox做贡献!
 
 ## 聊天室
 

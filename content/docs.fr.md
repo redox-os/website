@@ -22,8 +22,8 @@ Merci de votre intérêt pour Redox !  Il y a de nombreuses façons de
 contribuer au projet, et nous les apprécions toutes.
 
 Redox est un gros projet réparti sur plusieurs dépôts qui font tous partie de
-[l'organisation Redox sur GitHub](https://github.com/redox-os).  Le document
-[CONTRIBUTING.md](https://github.com/redox-os/redox/blob/master/CONTRIBUTING.md)
+[l'organisation Redox sur GitLab](https://gitlab.redox-os.org/redox-os).  Le document
+[CONTRIBUTING.md](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md)
 est un bon guide pour faciliter les premières contributions !
 
 ## Communication et partage

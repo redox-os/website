@@ -29,8 +29,8 @@ name = "Donate"
 url = "/donate/"
 [[languages.en.menu.main]]
 weight = 6
-name = "GitHub"
-url = "https://github.com/redox-os/redox"
+name = "GitLab"
+url = "https://gitlab.redox-os.org/redox-os/redox"
 [[languages.en.menu.main]]
 weight = 7
 name = "RSoC"
@@ -63,7 +63,7 @@ url = "/donate/"
 [[languages.zh.menu.main]]
 weight = 6
 name = "代码库"
-url = "https://github.com/redox-os/redox"
+url = "https://gitlab.redox-os.org/redox-os/redox"
 [[languages.zh.menu.main]]
 weight = 7
 name = "RSoC"
@@ -96,7 +96,7 @@ url = "/donate/"
 [[languages.es.menu.main]]
 weight = 6
 name = "Repositorio"
-url = "https://github.com/redox-os/redox"
+url = "https://gitlab.redox-os.org/redox-os/redox"
 [[languages.es.menu.main]]
 weight = 7
 name = "RSoC"
@@ -128,8 +128,8 @@ name = "Пожертвования"
 url = "/donate/"
 [[languages.ru.menu.main]]
 weight = 6
-name = "GitHub"
-url = "https://github.com/redox-os/redox"
+name = "GitLab"
+url = "https://gitlab.redox-os.org/redox-os/redox"
 [[languages.ru.menu.main]]
 weight = 7
 name = "RSoC"
@@ -162,7 +162,7 @@ url = "/donate/"
 [[languages.fr.menu.main]]
 weight = 6
 name = "Code source"
-url = "https://github.com/redox-os/redox"
+url = "https://gitlab.redox-os.org/redox-os/redox"
 [[languages.fr.menu.main]]
 weight = 7
 name = "RSoC"
@@ -194,8 +194,8 @@ name = "Spenden"
 url = "/donate/"
 [[languages.de.menu.main]]
 weight = 6
-name = "GitHub"
-url = "https://github.com/redox-os/redox"
+name = "GitLab"
+url = "https://gitlab.redox-os.org/redox-os/redox"
 [[languages.de.menu.main]]
 weight = 7
 name = "RSoC"
@@ -227,8 +227,8 @@ name = "Donare"
 url = "/donate/"
 [[languages.it.menu.main]]
 weight = 6
-name = "GitHub"
-url = "https://github.com/redox-os/redox"
+name = "GitLab"
+url = "https://gitlab.redox-os.org/redox-os/redox"
 [[languages.it.menu.main]]
 weight = 7
 name = "RSoC"
@@ -260,8 +260,8 @@ name = "Bağış"
 url = "/donate/"
 [[languages.tr.menu.main]]
 weight = 6
-name = "GitHub"
-url = "https://github.com/redox-os/redox"
+name = "GitLab"
+url = "https://gitlab.redox-os.org/redox-os/redox"
 [[languages.tr.menu.main]]
 weight = 7
 name = "RSoC"
@@ -293,8 +293,8 @@ name = "Donera"
 url = "/donate/"
 [[languages.sv.menu.main]]
 weight = 6
-name = "GitHub"
-url = "https://github.com/redox-os/redox"
+name = "GitLab"
+url = "https://gitlab.redox-os.org/redox-os/redox"
 [[languages.sv.menu.main]]
 weight = 7
 name = "RSoC"
@@ -326,8 +326,8 @@ name = "Doneer"
 url = "/donate/"
 [[languages.nl.menu.main]]
 weight = 6
-name = "GitHub"
-url = "https://github.com/redox-os/redox"
+name = "GitLab"
+url = "https://gitlab.redox-os.org/redox-os/redox"
 [[languages.nl.menu.main]]
 weight = 7
 name = "RSoC"
@@ -359,8 +359,8 @@ name = "Doner"
 url = "/donate/"
 [[languages.da.menu.main]]
 weight = 6
-name = "GitHub"
-url = "https://github.com/redox-os/redox"
+name = "GitLab"
+url = "https://gitlab.redox-os.org/redox-os/redox"
 [[languages.da.menu.main]]
 weight = 7
 name = "RSoC"
@@ -392,8 +392,8 @@ name = "Donere"
 url = "/donate/"
 [[languages.no.menu.main]]
 weight = 6
-name = "GitHub"
-url = "https://github.com/redox-os/redox"
+name = "GitLab"
+url = "https://gitlab.redox-os.org/redox-os/redox"
 [[languages.no.menu.main]]
 weight = 7
 name = "RSoC"
@@ -425,8 +425,8 @@ name = "Darovat"
 url = "/donate/"
 [[languages.cz.menu.main]]
 weight = 6
-name = "GitHub"
-url = "https://github.com/redox-os/redox"
+name = "GitLab"
+url = "https://gitlab.redox-os.org/redox-os/redox"
 [[languages.cz.menu.main]]
 weight = 7
 name = "RSoC"
@@ -458,8 +458,8 @@ name = "Donaci"
 url = "/donate/"
 [[languages.eo.menu.main]]
 weight = 6
-name = "GitHub"
-url = "https://github.com/redox-os/redox"
+name = "GitLab"
+url = "https://gitlab.redox-os.org/redox-os/redox"
 [[languages.eo.menu.main]]
 weight = 7
 name = "RSoC"
@@ -491,8 +491,8 @@ name = "Doações"
 url = "/donate/"
 [[languages.pt.menu.main]]
 weight = 6
-name = "GitHub"
-url = "https://github.com/redox-os/redox"
+name = "GitLab"
+url = "https://gitlab.redox-os.org/redox-os/redox"
 [[languages.pt.menu.main]]
 weight = 7
 name = "RSoC"
@@ -524,8 +524,8 @@ name = "寄付"
 url = "/donate/"
 [[languages.jp.menu.main]]
 weight = 6
-name = "GitHub"
-url = "https://github.com/redox-os/redox"
+name = "GitLab"
+url = "https://gitlab.redox-os.org/redox-os/redox"
 [[languages.jp.menu.main]]
 weight = 7
 name = "RSoC"
@@ -557,8 +557,8 @@ name = "후원하기"
 url = "/donate/"
 [[languages.ko.menu.main]]
 weight = 6
-name = "GitHub"
-url = "https://github.com/redox-os/redox"
+name = "GitLab"
+url = "https://gitlab.redox-os.org/redox-os/redox"
 [[languages.ko.menu.main]]
 weight = 7
 name = "RSoC"
@@ -590,8 +590,8 @@ name = "Adakozás"
 url = "/donate/"
 [[languages.hu.menu.main]]
 weight = 6
-name = "GitHub"
-url = "https://github.com/redox-os/redox"
+name = "GitLab"
+url = "https://gitlab.redox-os.org/redox-os/redox"
 [[languages.hu.menu.main]]
 weight = 7
 name = "RSoC"
@@ -623,8 +623,8 @@ name = "Darowizny"
 url = "/donate/"
 [[languages.pl.menu.main]]
 weight = 6
-name = "GitHub"
-url = "https://github.com/redox-os/redox"
+name = "GitLab"
+url = "https://gitlab.redox-os.org/redox-os/redox"
 [[languages.pl.menu.main]]
 weight = 7
 name = "RSoC"
@@ -656,8 +656,8 @@ name = "Пожертвування"
 url = "/donate/"
 [[languages.uk.menu.main]]
 weight = 6
-name = "GitHub"
-url = "https://github.com/redox-os/redox"
+name = "GitLab"
+url = "https://gitlab.redox-os.org/redox-os/redox"
 [[languages.uk.menu.main]]
 weight = 7
 name = "RSoC"

@@ -21,8 +21,8 @@ Redox에 기여하고 싶으시다구요? 감사합니다!
 여러분이 도움을 줄 수 있는 방법은 무궁무진하며 여러분의 참여 하나하나가 저희에게 피가 되고 살이 됩니다.
 
 Redox는 여러 개의 저장소로 이루어진 하나의 거대한 프로젝트이며,
-[Redox GitHub](https://github.com/redox-os)에서 그 구조를 확인하실 수 있습니다.
-처음 오셨다구요? [CONTRIBUTING.md](https://github.com/redox-os/redox/blob/master/CONTRIBUTING.md)를
+[Redox GitLab](https://gitlab.redox-os.org/redox-os)에서 그 구조를 확인하실 수 있습니다.
+처음 오셨다구요? [CONTRIBUTING.md](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md)를
 한번 읽어보시면 큰 도움이 될 겁니다.
 
 ## 커뮤니케이션과 채팅

@@ -20,8 +20,8 @@ Děkujeme za váš zájem o přispění do Redoxu!
 Existuje mnoho způsobů jak přispět a vážíme si každého z nich.
 
 Redox je veliký projekt rozdělený na mnoho repozitářů, které naleznete zde:
-[Organizace Redox na GitHub](https://github.com/redox-os). Dokument
-[CONTRIBUTING.md](https://github.com/redox-os/redox/blob/master/CONTRIBUTING.md)
+[Organizace Redox na GitLab](https://gitlab.redox-os.org/redox-os). Dokument
+[CONTRIBUTING.md](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md)
 podrobně popisuje způsoby jakými můžete přispět.
 
 

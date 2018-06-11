@@ -12,7 +12,7 @@ url = "/home"
   <div class="col-md-4 install-box">
     <br/>
     <a class="btn btn-primary" href="https://github.com/redox-os/redox/releases">查看发布版本</a>
-    <a class="btn btn-default" href="https://github.com/redox-os/redox/">从GitHub获取代码</a>
+    <a class="btn btn-default" href="https://gitlab.redox-os.org/redox-os/redox/">从GitLab获取代码</a>
   </div>
 </div>
 <div class="row features">

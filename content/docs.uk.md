@@ -21,9 +21,9 @@ title = "Документація"
 Дякуємо за вашу зацікавленість у підтримці Redox!
 Існує декілька способів підтримати нас і ми цінуємо кожен із них.
 
-Redox - великий проект, розбитий на багато репозиторіїв, які знаходяться у 
-[організації Redox на GitHub](https://github.com/redox-os). Цей документ,
-[CONTRIBUTING.md](https://github.com/redox-os/redox/blob/master/CONTRIBUTING.md)
+Redox - великий проект, розбитий на багато репозиторіїв, які знаходяться у
+[організації Redox на GitLab](https://gitlab.redox-os.org/redox-os). Цей документ,
+[CONTRIBUTING.md](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md)
 стане в нагоді новачкам, які бажають підтримати проект!
 
 ## Спілкування та Чат

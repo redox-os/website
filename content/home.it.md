@@ -11,8 +11,8 @@ url = "/home"
   </div>
   <div class="col-md-4 install-box">
     <br/>
-    <a class="btn btn-primary" href="https://github.com/redox-os/redox/releases">Versioni Rilasciate</a>
-    <a class="btn btn-default" href="https://github.com/redox-os/redox/">Vedi su GitHub</a>
+    <a class="btn btn-primary" href="https://gitlab.redox-os.org/redox-os/redox/tags">Versioni Rilasciate</a>
+    <a class="btn btn-default" href="https://gitlab.redox-os.org/redox-os/redox/">Vedi su GitLab</a>
   </div>
 </div>
 <div class="row features">

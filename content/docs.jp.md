@@ -19,8 +19,8 @@ title = "ドキュメント"
 Redoxへの貢献に興味を持っていただきありがとうございます！
 我々に貢献する方法はいろいろあります。いずれの方法でも貢献してくださると助かります。
 
-Redoxは[Redoxの構成](https://github.com/redox-os)のように、多岐のリポジトリにわたる巨大なプロジェクトです。
-このドキュメント（[CONTRIBUTING.md](https://github.com/redox-os/redox/blob/master/CONTRIBUTING.md)）には、新しく来た人たちが貢献するための方針が書かれています！
+Redoxは[Redoxの構成](https://gitlab.redox-os.org/redox-os)のように、多岐のリポジトリにわたる巨大なプロジェクトです。
+このドキュメント（[CONTRIBUTING.md](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md)）には、新しく来た人たちが貢献するための方針が書かれています！
 
 ## コミュニケーションとチャット
 

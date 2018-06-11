@@ -18,8 +18,8 @@ title = "Докумендация"
 
 Спасибо за интерес к разработке Redox! Есть несколько способов помочь нам, и мы высоко ценим каждый из них.
 
-Redox - огромный проект, разбитый на несколько репозиториев, которые находятся в [организации Redox на GitHub](https://github.com/redox-os). Файл
-[CONTRIBUTING.md](https://github.com/redox-os/redox/blob/master/CONTRIBUTING.md) - это руководство по разработке для новичков.
+Redox - огромный проект, разбитый на несколько репозиториев, которые находятся в [организации Redox на GitLab](https://gitlab.redox-os.org/redox-os). Файл
+[CONTRIBUTING.md](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md) - это руководство по разработке для новичков.
 
 ## Общение и чат
 
