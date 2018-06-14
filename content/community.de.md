@@ -15,8 +15,8 @@ The quickest and most open way to communicate with the Redox team is on our chat
 
 This is the best way to discuss more general topics that aren't about specific things that need to be addressed one way or another. You can sign up like any other website.
 
-<a id="github"></a>
-## [GitHub](https://github.com/redox-os/redox)
+<a id="gitlab"></a>
+## [GitLab](https://gitlab.redox-os.org/redox-os/redox)
 
 
 A bit more formal way of communication with fellow Redox devs, but a little less quick and convenient like the chat. Submit an issue when you run into problems compiling, testing, or just would like to discuss a certain topic, be it features, code style, code inconsistencies, minor changes and fixes, etc.

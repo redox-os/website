@@ -19,7 +19,7 @@ Erősen ajánljuk, hogy elsőként pillants bele a [Kézikönyvbe](https://doc.r
 Köszünjük, hogy hozzá szeretnél járulni a Redox fejlesztéséhez!
 Számos módon segíthetsz és mindet nagyra értékeljük.
 
-A Redox egy nagy, sok tárolóra kiterjedő projekt, amely a [GitHub-on lévő Redox szervezet](https://github.com/redox-os) alatt található meg. A [CONTRIBUTING.md](https://github.com/redox-os/redox/blob/master/CONTRIBUTING.md) nevű dokumentum egy útmutató új közreműködők számára.
+A Redox egy nagy, sok tárolóra kiterjedő projekt, amely a [GitLabon lévő Redox szervezet](https://gitlab.redox-os.org/redox-os) alatt található meg. A [CONTRIBUTING.md](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md) nevű dokumentum egy útmutató új közreműködők számára.
 
 ## Kommunikáció és chat
 

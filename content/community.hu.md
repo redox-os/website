@@ -14,8 +14,8 @@ A leggyorsabb és legnyíltabb módja a Redox csapatával való kapcsolatfelvét
 
 Ez a legjobb módja ha olyan általánosabb témákról szeretnél beszélni amik nem konkrét tennivalók. Regisztálhatsz rá, mint bármely más weboldalra.
 
-<a id="github"></a>
-## [GitHub](https://github.com/redox-os/redox)
+<a id="gitlab"></a>
+## [GitLab](https://gitlab.redox-os.org/redox-os/redox)
 
 Egy kicsivel formálisabb módja a Redox fejlesztőivel való kommunikációra, azonban kevésbé gyors és kényelmes mint a chat. Nyiss egy hibajegyet ha problémád akadt a fordítással vagy teszteléssel kapcsolatban, vagy esetleg csak meg szeretnél vitatni egy bizonyos témát, legyen az valamilyen funkció, kódstílus, inkonzisztens kód, kisebb változtatások és javítások, stb.
 

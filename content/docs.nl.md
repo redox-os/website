@@ -20,8 +20,8 @@ Bedankt voor je interesse om aan Redox bij te dragen!
 Er zijn verschillende manieren waarop je ons kunt helpen, en we waarderen ze allemaal.
 
 Redox is een groot project verspreid over meerdere repos. Deze repos kunen gevonden worden in de
-[Redox organizatie op GitHub](https://github.com/redox-os). Dit document,
-[CONTRIBUTING.md](https://github.com/redox-os/redox/blob/master/CONTRIBUTING.md)
+[Redox organizatie op GitLab](https://gitlab.redox-os.org/redox-os). Dit document,
+[CONTRIBUTING.md](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md)
 is een gids om nieuwe mensen te ondersteunen om aan het project mee te werken!
 
 ## Communicatie en Chat

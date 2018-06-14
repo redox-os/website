@@ -20,8 +20,8 @@ Dankon pro via intereso kontribui al Redox!
 Ekzistas multaj manieroj por helpi nin kaj ni dankas ĉiujn.
 
 Redoksa estas granda projekto etendantaj trans multaj repoj troveblaj en la
-[Redox organizo sur GitHub](https://github.com/redox-os). Tiu dokumento,
-[CONTRIBUTING.md](https://github.com/redox-os/redox/blob/master/CONTRIBUTING.md)
+[Redox organizo sur GitLab](https://gitlab.redox-os.org/redox-os). Tiu dokumento,
+[CONTRIBUTING.md](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md)
 estas gvidilo por helpi novulojn kontribui!
 
 ## Komunikado kaj babilejo
