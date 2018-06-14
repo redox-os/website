@@ -1,0 +1,8 @@
+before_script:
+  - apt-get update -qq && apt-get install -y -qq hugo
+
+hugo:
+  script: "./hugo.sh"
+  artifacts:
+    paths:
+    - build/public
