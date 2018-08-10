@@ -27,7 +27,7 @@ The RedoxFS filesystem is an [extent based filesystem](https://en.wikipedia.org/
 * Develop a 64-bit stub in Rust which parses the MBR/GPT and loads a module for the specific filesystem where the kernel resides
 * The module loads the kernel into memory and jumps to it
 
-Currently I am using the `-D KERNEL` to insert the stub into the bootloader image. It is based on an old version of Philip Opperman's blog OS which has been hacked to mimic the Redox kernel's linker addresses as well as page size. The stub repo which I am currently using can be found [here](https://github.com/deepaksirone/pamb-os/tree/loader_stub). qemu does not boot the disk when using the `-machine q35` flag if the size of the disk image is too small. So the image is padded with about 8MB worth of zeroes, aligned to 512 bytes. Currently the stub does not support printing functions and hence the only was to verify that it is running is by using qemu's gdb debug target.
+Currently I am using the `-D KERNEL` to insert the stub into the bootloader image. It is based on an old version of Philip Opperman's blog OS which has been hacked to mimic the Redox kernel's linker addresses as well as page size. The stub repo which I am currently using can be found [here](https://github.com/deepaksirone/redox-loader). qemu does not boot the disk when using the `-machine q35` flag if the size of the disk image is too small. So the image is padded with about 8MB worth of zeroes, aligned to 512 bytes. Currently the stub does not support printing functions and hence the only was to verify that it is running is by using qemu's gdb debug target.
 
 #### Future Work
 * Add printing/debug capability to the stub
