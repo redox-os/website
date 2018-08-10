@@ -35,3 +35,7 @@ Currently the kernel is loaded from a FAT32 partition and the rest of userspace 
 * Write a FAT32 userspace daemon which can access a FAT32 partition from userspace
 * Add code to read the UUID from a RedoxFS parition
 * Do some more code cleanup
+
+#### Miscellaneous Stuff
+* The release build of the loader stub is about 164KB in size
+* The kernel read in time from the disk is < 3 seconds
