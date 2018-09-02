@@ -12,4 +12,4 @@ title = "Screenshots"
 <img class="img-responsive" src="/img/hardware/thinkpad-t420.png"/>
 
 ## Thinkpad T520, Thinkpad P50 and Asus P7P55D-E Pro Desktop
-<img class="img-responsive" src="/img/hardware/T520-P50-Asus-Desktop"
+<img class="img-responsive" src="/img/hardware/T520-P50-Asus-Desktop"/>
