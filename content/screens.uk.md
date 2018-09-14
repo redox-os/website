@@ -12,4 +12,4 @@ title = "Знімки Екрана"
 <img class="img-responsive" src="/img/hardware/thinkpad-t420.png"/>
 
 ## ThinkPad T520, ThinkPad P50 and Asus P7P55D-E Pro Desktop
-<img class="img-responsive" src="/img/hardware/T520-P50-Asus-Desktop"/>
+<img class="img-responsive" src="/img/hardware/T520-P50-Asus-Desktop.jpg"/>
