@@ -32,4 +32,4 @@ Redox - великий проект, розбитий на багато репо
 
 ## Кодекс
 
-Ми притримуємось [Кодексу поведінки Rust](https://www.rust-lang.org/en-US/conduct.html)
+Ми притримуємось [Кодексу поведінки Rust](https://www.rust-lang.org/policies/code-of-conduct)

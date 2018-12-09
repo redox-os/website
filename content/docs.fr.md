@@ -44,4 +44,4 @@ hebdomadaires).
 
 ## Conduite
 
-Nous appliquons le [code de conduite de Rust](https://www.rust-lang.org/fr/conduct.html).
+Nous appliquons le [code de conduite de Rust](https://www.rust-lang.org/policies/code-of-conduct).

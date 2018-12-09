@@ -37,4 +37,4 @@ Du kan også finne Redox på Reddit:
 [/r/redox/](https://www.reddit.com/r/redox). Den ukentlige oppdateringen legges ut på den første.
 
 ## Opførsel
-Vi følger Rusts [regler for god oppførsel](https://www.rust-lang.org/en-US/conduct.html).
+Vi følger Rusts [regler for god oppførsel](https://www.rust-lang.org/policies/code-of-conduct).

@@ -34,4 +34,4 @@ Redox是一个非常大的工程， 分散在[GitLab的Redox](https://gitlab.red
 
 ## 行为守则
 
-我们遵守 [Rust代码规范](https://www.rust-lang.org/zh-CN/conduct.html)
+我们遵守 [Rust代码规范](https://www.rust-lang.org/policies/code-of-conduct)

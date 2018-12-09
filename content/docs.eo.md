@@ -37,4 +37,4 @@ Vi povas ankaŭ trovi Redox sur Reddit en
 
 ## Code of Conduct
 
-Ni sekvas la [Rust Code of Conduct](https://www.rust-lang.org/en-US/conduct.html).
+Ni sekvas la [Rust Code of Conduct](https://www.rust-lang.org/policies/code-of-conduct).
