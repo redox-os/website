@@ -34,4 +34,4 @@ Redox - огромный проект, разбитый на несколько 
 
 ## Кодекс
 
-Мы используем [Кодекс поведения Rust](https://www.rust-lang.org/ru-RU/conduct.html)
+Мы используем [Кодекс поведения Rust](https://www.rust-lang.org/policies/code-of-conduct)

@@ -34,4 +34,4 @@ Reddit上（[/r/rust/](https://www.reddit.com/r/rust)と[/r/redox/](https://www.
 
 ## 規約
 
-[Rustコード規約](https://www.rust-lang.org/ja-JP/conduct.html)に従います。
+[Rustコード規約](https://www.rust-lang.org/policies/code-of-conduct)に従います。
