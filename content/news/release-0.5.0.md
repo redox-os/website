@@ -145,6 +145,20 @@ Please use the following links to see all the code changes since 0.3.5:
 - [redox](https://gitlab.redox-os.org/redox-os/redox/compare/0.3.5...0.5.0)
 - [cookbook](https://gitlab.redox-os.org/redox-os/cookbook/compare/0.3.5...0.5.0)
 - [kernel](https://gitlab.redox-os.org/redox-os/cookbook/compare/0.3.5...0.5.0)
-- [relibc is completely new](https://gitlab.redox-os.org/redox-os/relibc)
+- [relibc](https://gitlab.redox-os.org/redox-os/relibc) is completely new
+- [orbtk](https://gitlab.redox-os.org/redox-os/orbtk) is going through a
+  redesign
 - Many other repositories have changed, but are not tracked in the main Redox
-  repository.
+  repository. I encourage you to browse through our
+  [projects on the Redox OS GitLab](https://gitlab.redox-os.org/redox-os)
+
+## Discussion
+
+Please see the following links for discussion:
+
+- [Discourse](https://discourse.redox-os.org/t/redox-os-0-5-0-is-here/1051)
+- [Hacker News](https://news.ycombinator.com/item?id=19478720)
+- [Patreon](https://www.patreon.com/posts/25602110)
+- [Reddit /r/redox](https://www.reddit.com/r/Redox/comments/b51e40/redox_os_050/)
+- [Reddit /r/rust](https://www.reddit.com/r/rust/comments/b51ec3/redox_os_050/)
+- [Twitter](https://twitter.com/redox_os/status/1109921288758288384)
