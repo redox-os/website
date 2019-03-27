@@ -10,6 +10,8 @@ Doporučujeme začít s oficiální [Knihou](https://doc.redox-os.org/book/) o R
 
 [Kniha](https://doc.redox-os.org/book/). Kniha popisující návrh operačního sytému Redox.
 
+[Talks](/talks/). Redox talks given at various events and conferences.
+
 [Jádro OS](https://doc.redox-os.org/kernel/kernel/). Dokumentace jádra.
 
 [Standardní knihovna](https://doc.redox-os.org/std/std/). Dokumentace standardní knihovny.

@@ -10,6 +10,8 @@ Biz, Redox'u nasıl kurup kullanacağınızı açıkladığı için [kitabımız
 
 [Kitap](https://doc.redox-os.org/book/). Redox'un tasarımını açıklayan bir kitap.
 
+[Talks](/talks/). Redox talks given at various events and conferences.
+
 [Kernel](https://doc.redox-os.org/kernel/kernel/). Redox'un kerneli için belge.
 
 [Standard Kütüphane](https://doc.redox-os.org/std/std/). Redox standart kütüphanesi için belge.

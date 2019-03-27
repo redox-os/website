@@ -10,6 +10,8 @@ We highly recommend that you start with the [Book](https://doc.redox-os.org/book
 
 [Book](https://doc.redox-os.org/book/). A Book describing Redox's design.
 
+[Talks](/talks/). Redox talks given at various events and conferences.
+
 [Kernel](https://doc.redox-os.org/kernel/kernel/). Documentation for the Redox kernel.
 
 [Standard Library](https://doc.redox-os.org/std/std/). Documentation for the Redox standard library.

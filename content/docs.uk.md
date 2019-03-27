@@ -10,6 +10,8 @@ title = "Документація"
 
 [Книга](https://doc.redox-os.org/book/). Книга, що описує архітектуру Redox.
 
+[Talks](/talks/). Redox talks given at various events and conferences.
+
 [Ядро](https://doc.redox-os.org/kernel/kernel/). Документація ядра Redox.
 
 [Стандартна Бібліотека](https://doc.redox-os.org/std/std/). Документація стандартної бібліотеки Redox.

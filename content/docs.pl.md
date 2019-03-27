@@ -10,6 +10,8 @@ Gorąco polecamy zacząć od [Książki](https://doc.redox-os.org/book/), gdyż 
 
 [Książka](https://doc.redox-os.org/book/). Książka opisująca architekturę systemu Redox.
 
+[Talks](/talks/). Redox talks given at various events and conferences.
+
 [Jądro](https://doc.redox-os.org/kernel/kernel/). Dokumentacja struktury jądra systemu Redox.
 
 [Biblioteka Standardowa](https://doc.redox-os.org/std/std/). Dokumentacja biblioteki standardowej systemu Redox.

@@ -10,6 +10,8 @@ title = "ドキュメント"
 
 [ブック](https://doc.redox-os.org/book/). Redoxのデザインについて書かれた本。
 
+[Talks](/talks/). Redox talks given at various events and conferences.
+
 [カーネル](https://doc.redox-os.org/kernel/kernel/). Redoxカーネルのドキュメント。
 
 [標準ライブラリ](https://doc.redox-os.org/std/std/). 標準ライブラリのドキュメント。
