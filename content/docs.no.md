@@ -10,6 +10,8 @@ Vi anbefaler at du starter med [Redoxboken](https://doc.redox-os.org/book/), da 
 
 [Boken](https://doc.redox-os.org/book/). En bok som beskriver Redoxs design.
 
+[Talks](/talks/). Redox talks given at various events and conferences.
+
 [Kjernen](https://doc.redox-os.org/kernel/kernel/). Dokumentasjon for Redoxkjernen.
 
 [Standard Library](https://doc.redox-os.org/std/std/). Dokumentasjon for Redoxs Standard Library.

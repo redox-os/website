@@ -10,6 +10,8 @@ We raden aan om te beginnen met het [Boek](https://doc.redox-os.org/book/). Dit 
 
 [Boek](https://doc.redox-os.org/book/). Het boek dat het ontwerp van Redox beschrijft.
 
+[Talks](/talks/). Redox talks given at various events and conferences.
+
 [Kernel](https://doc.redox-os.org/kernel/kernel/). Documentatie van de Redox kernel.
 
 [Standard Library](https://doc.redox-os.org/std/std/). Documentatie van de Redox standard library.

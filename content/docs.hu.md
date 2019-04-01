@@ -10,6 +10,8 @@ Erősen ajánljuk, hogy elsőként pillants bele a [Kézikönyvbe](https://doc.r
 
 [Kézikönyv](https://doc.redox-os.org/book/). A Redox felépítését bemutató kézikönyv.
 
+[Talks](/talks/). Redox talks given at various events and conferences.
+
 [Rendszermag](https://doc.redox-os.org/kernel/kernel/). A Redox rendszermag dokumentációja.
 
 [Standard könyvtár](https://doc.redox-os.org/std/std/). A Redox standard könyvtár dokumentációja.

@@ -11,6 +11,8 @@ werfen, welches beschreibt wie man Redox einrichtet und benutzt.
 
 [Book](https://doc.redox-os.org/book/). Ein Buch, welches das Design von Redox erklärt.
 
+[Talks](/talks/). Redox talks given at various events and conferences.
+
 [Kernel](https://doc.redox-os.org/kernel/kernel/). Dokumentation des Redox-Kernels.
 
 [Standard Library](https://doc.redox-os.org/std/std/). Dokumentation der Redox-Standardbibliothek.

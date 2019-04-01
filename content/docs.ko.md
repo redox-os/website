@@ -11,6 +11,8 @@ Redox를 설치하고 사용하는 방법에 대한 자세한 내용을 배울 �
 
 [책](https://doc.redox-os.org/book/). Redox의 설계에 관한 문서입니다.
 
+[Talks](/talks/). Redox talks given at various events and conferences.
+
 [커널](https://doc.redox-os.org/kernel/kernel/). Redox의 커널에 관한 문서입니다.
 
 [표준 라이브러리](https://doc.redox-os.org/std/std/). Redox 표준 라이브러리에 관한 문서입니다.

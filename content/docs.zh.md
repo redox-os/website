@@ -10,6 +10,8 @@ title = "文档"
 
 [Redox](https://doc.redox-os.org/book/). 描述了Redox的设计理念。
 
+[Talks](/talks/). Redox talks given at various events and conferences.
+
 [内核](https://doc.redox-os.org/kernel/kernel/). Redox的内核文档。
 
 [标准库](https://doc.redox-os.org/std/std/). Redox的标准库。

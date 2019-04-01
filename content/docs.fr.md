@@ -12,6 +12,8 @@ et utiliser Redox.
 
 [Livre](https://doc.redox-os.org/book/). Un livre qui présente l'architecture de Redox.
 
+[Talks](/talks/). Redox talks given at various events and conferences.
+
 [Noyau](https://doc.redox-os.org/kernel/kernel/). La documentation du noyau de Redox.
 
 [Bibliothèque standard](https://doc.redox-os.org/std/std/). La documentation de la bibliothèque standard de Redox.

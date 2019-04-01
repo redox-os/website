@@ -10,6 +10,8 @@ Recomendamos encarecidamente empezar con el [Libro](https://doc.redox-os.org/boo
 
 [Libro](https://doc.redox-os.org/book/). Un Libro que describe el diseño de Redox.
 
+[Talks](/talks/). Redox talks given at various events and conferences.
+
 [Núcleo](https://doc.redox-os.org/kernel/kernel/). Documentación del núcleo de Redox.
 
 [Librería Estándar](https://doc.redox-os.org/std/std/). Documentación de la librería estándar de Redox.
