@@ -1,5 +1,5 @@
 ---
-title: "Rsoc Ion Lib 3"
+title: "Rsoc: Ion as a Library, week 4"
 date: 2019-07-01T22:19:56-04:00
 author: "AdminXVII"
 ---
@@ -18,21 +18,21 @@ author: "AdminXVII"
     - Document every external type defined for rustdoc
     - Deny adding a public item without documentation
     - Add a man page for the `fn`, `help`, `dir_depth`, `wait` and string-related builtins
- - Merge builtins
-    - Merge the `type` & `which builtin`
  - Add API examples
     - Move the integration tests to the tests folder to make room for examples
     - Add a basic demo of the usage of the Shell API for reactive configuration based on a dummy piston example
- - Move to nix for safer abstraction over c functions
- - Command not found is now an unrecoverable error
- - Add a pre-command callback
- - Add generics to avoid mixing pre- and post-expansion pipelines
- - Make function execution cheaper by avoiding cloning
- - Misc
-    - Use generics with range parsing
-    - Add support for Ion as a login shell
+ - Safer & cleaner internals
+    - Move to nix for safer abstraction over c functions
+    - Add generics to avoid mixing pre- and post-expansion pipelines
     - Apply clippy in pedantic mode
     - Move parsing to the FromStr trait rather than custom functions
+    - Use generics with range parsing
+ - Misc
+    - Merge the `type` & `which` builtins
+    - Command not found is now an unrecoverable error
+    - Add a pre-command callback
+    - Make function execution cheaper by avoiding cloning
+    - Add support for Ion as a login shell
     - Truncate output files when not appending
 
 ## What needs to be done
