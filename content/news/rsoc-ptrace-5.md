@@ -1,7 +1,7 @@
 +++
 title = "RSoC: Implementing ptrace for Redox OS - part 5"
 author = "jD91mZM2"
-date = "2019-07-13T11:07:22+02:00"
+date = "2019-07-22T20:28:47+02:00"
 +++
 
 # Introduction
