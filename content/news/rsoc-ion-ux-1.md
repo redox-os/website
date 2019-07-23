@@ -1,5 +1,5 @@
 ---
-title: "Rsoc: Ion as a Library, week 5"
+title: "Rsoc: Improving Ion's UX, week 2"
 date: 2019-07-21T12:12:30-04:00
 author: "AdminXVII"
 ---
