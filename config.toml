@@ -79,7 +79,7 @@ name = "Documentación"
 url = "/docs/"
 [[languages.es.menu.main]]
 weight = 2
-name = "Community"
+name = "Comunidad"
 url = "/community"
 [[languages.es.menu.main]]
 weight = 3

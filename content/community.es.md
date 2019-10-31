@@ -1,35 +1,33 @@
 +++
-title = "Community"
+title = "Comunidad"
 +++
 
-This page attempts to explain how the Redox OS community is organised and help you navigate it.
+Esta página intenta explicar como está organizada la comunidad de Redox OS y ayudarle a navegarla.
 
 
 <a id="chat"></a>
 ## [Chat](https://chat.redox-os.org)
 
-The quickest and most open way to communicate with the Redox team is on our chat server. Currently, you can only get an invite by sending an email request to info@redox-os.org, which might take a little while, since it's not automated. Simply say you'd like to join the chat. We're working on an better way to do this, but this is the best way right now.
+La forma más rápida y abierta de comunicarse con el equipo de Redox es por nuestro sevidor de chat. Actualmente la única manera de recibir una invitación es mandar la petición a info@redox-os.org. No es automatizado y puede tardar un tiempo. En el mensage simplemente escriba su deseo de unirse al chat. Estamos trabajando en una manera más rápida a hacerlo, pero esta es la mejor por ahora.
 
 <a id="forum"></a>
-## [Forum](https://discourse.redox-os.org/)
+## [Foro](https://discourse.redox-os.org/)
 
-This is the best way to discuss more general topics that aren't about specific things that need to be addressed one way or another. You can sign up like any other website.
+El Foro es la mejor manera de hablar de temas que no exigen ser atendidos por otra forma comunicación. Se puede inscribir como cualquier otro sitio de web.
 
 <a id="gitlab"></a>
 ## [GitLab](https://gitlab.redox-os.org/redox-os/redox)
 
-
-A bit more formal way of communication with fellow Redox devs, but a little less quick and convenient like the chat. Submit an issue when you run into problems compiling, testing, or just would like to discuss a certain topic, be it features, code style, code inconsistencies, minor changes and fixes, etc.
-
+Comunicación por GitLab es una forma más formal para comunicarse con otros programadores, pero es más lento y menos accesible que el chat. Envie propuestas cuando encuentre problemas al compilar, o al probar o si quiere hablar de temas específicos, que sean características, estilo de código, incongruencias de código, pequeñas modificaciones, arreglos, etc.
 
 <a id="reddit"></a>
-## [Redox OS on Reddit](https://www.reddit.com/r/Redox/)
+## [Redox OS en Reddit](https://www.reddit.com/r/Redox/)
 
-If you want a quick look at what's going on and talk about it.
+Puede utilizar Reddit para rápidamente ver las novedades y hablar de ellas.
 
-[reddit.com/r/rust](https://www.reddit.com/r/rust) for related Rust news and discussions.
+[reddit.com/r/rust](https://www.reddit.com/r/rust) por noticias y conversaciones relacionadas con Rust.
 
 <a id="twitter"></a>
 ## [Twitter](https://twitter.com/redox_os)
 
-News and related content.
+Noticias y contenido relacionado.
