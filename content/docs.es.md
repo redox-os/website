@@ -10,7 +10,7 @@ Recomendamos encarecidamente empezar con el [Libro](https://doc.redox-os.org/boo
 
 [Libro](https://doc.redox-os.org/book/). Un Libro que describe el diseño de Redox.
 
-[Talks](/talks/). Redox talks given at various events and conferences.
+[Talks](/talks/). Discursos de Redox de varios eventos y conferencias.
 
 [Núcleo](https://doc.redox-os.org/kernel/kernel/). Documentación del núcleo de Redox.
 
