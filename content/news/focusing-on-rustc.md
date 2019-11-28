@@ -102,3 +102,13 @@ filling in the USB stack and adding graphics drivers.
 But, more importantly than what I will be able to do, is the contributions by
 others that will be unlocked by having a fully self-hosted, microkernel
 Operating System written in Rust, Redox OS.
+
+---
+
+Discuss this post on:
+- [Patreon](https://www.patreon.com/posts/31909467)
+- [Discourse](https://discourse.redox-os.org/t/real-hardware-breakthroughs-focusing-on-rustc/1170)
+- [Twitter](https://twitter.com/redox_os/status/1199910340282052608)
+- [Reddit /r/redox](https://www.reddit.com/r/Redox/comments/e2ssuq/real_hardware_breakthroughs_and_focusing_on_rustc/)
+- [Reddit /r/rust](https://www.reddit.com/r/rust/comments/e2ssqr/redox_os_real_hardware_breakthroughs_and_focusing/)
+- [Hacker News](https://news.ycombinator.com/item?id=21654609)
