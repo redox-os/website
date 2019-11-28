@@ -105,6 +105,9 @@ Operating System written in Rust, Redox OS.
 
 ---
 
+As a bonus for reading the whole post,
+[here is the Redox OS boot time with an NVMe drive](https://twitter.com/jeremy_soller/status/1199912796713959424).
+
 Discuss this post on:
 - [Patreon](https://www.patreon.com/posts/31909467)
 - [Discourse](https://discourse.redox-os.org/t/real-hardware-breakthroughs-focusing-on-rustc/1170)
