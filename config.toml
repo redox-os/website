@@ -3,6 +3,9 @@ baseurl = "https://www.redox-os.org/"
 title = "Redox - Your Next(Gen) OS"
 DefaultContentLanguage = "en"
 
+[markup.goldmark.renderer]
+unsafe = true
+
 [languages.en]
 weight = 1
 languageName = "English"

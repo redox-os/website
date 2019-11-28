@@ -2,6 +2,9 @@
 title = "Skærmbilleder"
 +++
 
+## System76 Galago Pro (galp3-c)
+<img class="img-responsive" src="/img/hardware/system76-galp3-c.jpg"/>
+
 ## Panasonic Toughbook CF-18
 <img class="img-responsive" src="/img/hardware/panasonic-toughbook-cf18.png"/>
 
