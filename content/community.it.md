@@ -19,7 +19,7 @@ Questo é il miglior modo per discutere di temi piú generali. Puoi registrarti 
 ## [GitLab](https://gitlab.redox-os.org/redox-os/redox)
 
 
-Un modo un po' piú formale per comunicare con gli sviluppatori di Redox, ma meno veloce e conveniente di una chat. Segnala un errore quando incontri problemi compilando, testando, o anche se vuoi semplicemente discutere un argomento, che siano funzionalitá, stile del codice, inconsistenze nel codice, piccoli cambiamenti e soluzioni, etc.
+Un modo un po' piú formale per comunicare con gli sviluppatori di Redox, ma meno veloce e conveniente di una chat. Segnala un errore quando incontri problemi compilando, testando, o anche se vuoi semplicemente discutere un argomento, che sia funzionalitá, stile del codice, inconsistenze nel codice, piccoli cambiamenti e soluzioni, etc.
 
 
 <a id="reddit"></a>
@@ -27,7 +27,7 @@ Un modo un po' piú formale per comunicare con gli sviluppatori di Redox, ma men
 
 Se vuoi semplicemente dare un occhiata veloce a quello che succede e parlarne.
 
-[reddit.com/r/rust](https://www.reddit.com/r/rust) per le correlate news su Rust e discussioni.
+[reddit.com/r/rust](https://www.reddit.com/r/rust) per le correlate news e discussioni su Rust.
 
 <a id="twitter"></a>
 ## [Twitter](https://twitter.com/redox_os)
