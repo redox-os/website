@@ -6,7 +6,7 @@ url = "/home"
   <div class="col-md-8">
     <p class="pitch">
       <b>Redox</b> è un Sistema Operativo Unix-like scritto in <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>,
-      con l'obiettivo di portare le innovazioni di Rust in un microkernel moderno e con un pacchetto di applicazioni.
+      con l'obiettivo di portare le innovazioni di Rust in un microkernel moderno ed in un pacchetto completo di applicazioni.
     </p>
   </div>
   <div class="col-md-4 install-box">
@@ -19,7 +19,7 @@ url = "/home"
   <div class="col-md-6">
     <ul class="laundry-list" style="margin-bottom: 0px;">
       <li>Implementato in Rust</li>
-      <li>Microkernel</li>
+      <li>Architettura Microkernel</li>
       <li>Include una GUI facoltativa - Orbital</li>
       <li>Supporta la Rust Standard Library</li>
     </ul>
@@ -27,9 +27,9 @@ url = "/home"
   <div class="col-md-6">
     <ul class="laundry-list">
       <li>Sotto licenza MIT</li>
-      <li>I driver sono eseguiti nello spazio utente</li>
+      <li>Driver eseguiti nello spazio utente</li>
       <li>Include i comuni comandi Unix</li>
-      <li>Port di Newlib per i programmi in C</li>
+      <li>libc customizzata scritta in Rust (relibc)</li>
     </ul>
   </div>
 </div>
