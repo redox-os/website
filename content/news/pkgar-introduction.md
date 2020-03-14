@@ -23,6 +23,7 @@ are still in development, so I think it is good to instead review the goals of
 `pkgar` and some examples that demonstrate its design principles.
 
 The goals of `pkgar` are as follows:
+
 - Atomic - updates are done atomically if possible
 - Economical - transfer of data must only occur when hashes change, allowing for
   network and data usage to be minimized
