@@ -13,23 +13,23 @@ Li max rapid e apert metode por comunicar con li equip Redox es in nor servitor 
 <a id="forum"></a>
 ## [Forum](https://discourse.redox-os.org/)
 
-This is the best way to discuss more general topics that aren't about specific things that need to be addressed one way or another. You can sign up like any other website.
+Vi li max bon metode por discusser pri temas plu general queles ne acte se pri specific coses besonant rectification. On posse adherer se ci, just quam in quelcunc altri situ web.
 
 <a id="gitlab"></a>
 ## [GitLab](https://gitlab.redox-os.org/redox-os/redox)
 
 
-A bit more formal way of communication with fellow Redox devs, but a little less quick and convenient like the chat. Submit an issue when you run into problems compiling, testing, or just would like to discuss a certain topic, be it features, code style, code inconsistencies, minor changes and fixes, etc.
+Un metode un poc plu formal por comunicar con codevelopatores de Redox, ma alquant minu rapid e comod quam li chat. Ples submisser un   'issue' quande hay problemas in compilada, provadas, o mem si tu vole simplicmen discusser un dat tema, inter queles functionalitás, stil de code, ínconsistenties in code, changes e corectiones minor, etc.
 
 
 <a id="reddit"></a>
-## [Redox OS on Reddit](https://www.reddit.com/r/Redox/)
+## [Redox OS sur Reddit](https://www.reddit.com/r/Redox/)
 
-If you want a quick look at what's going on and talk about it.
+Si tu have interesse in jettar un rapid ocul al max recent activitás e parlar pri les.
 
-[reddit.com/r/rust](https://www.reddit.com/r/rust) for related Rust news and discussions.
+[reddit.com/r/rust](https://www.reddit.com/r/rust) por novas e discussiones pri Rust.
 
 <a id="twitter"></a>
 ## [Twitter](https://twitter.com/redox_os)
 
-News and related content.
+Novas e contenete relationat.
