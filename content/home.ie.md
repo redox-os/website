@@ -27,9 +27,9 @@ url = "/home"
   <div class="col-md-6">
     <ul class="laundry-list">
       <li>Licensiat sub MIT</li>
-      <li>Drivers run in Userspace</li>
-      <li>Includes common Unix commands</li>
-      <li>Custom libc written in Rust (relibc)</li>
+      <li>Drivers (controlatores de aparates) executet in Userspace</li>
+      <li>Include comandas comun de Unix</li>
+      <li>Customisat libc scrit in Rust (relibc)</li>
     </ul>
   </div>
 </div>
