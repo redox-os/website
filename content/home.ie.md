@@ -5,7 +5,7 @@ url = "/home"
 <div class="row install-row">
   <div class="col-md-8">
     <p class="pitch">
-      <b>Redox</b> es un sistema de operation tip Unix quel es crit in <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>,
+      <b>Redox</b> es un sistema de operation tip Unix quel es scrit in <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>,
       quel intente aportar li innovationes de Rust a un modern microkernel e un plen complement de aplicationes.
     </p>
   </div>
@@ -36,7 +36,7 @@ url = "/home"
 <div class="row features">
   <div class="col-sm-12">
     <div style="font-size: 16px; text-align: center;">
-      Redox running Orbital
+      Redox executent Orbital
     </div>
     <a href="/img/redox-orbital/large.png">
       <picture>
@@ -46,7 +46,7 @@ url = "/home"
         <source media="(min-width: 1300px)" srcset="/img/redox-orbital/large.png" type="image/png">
         <source media="(min-width: 640px)" srcset="/img/redox-orbital/medium.png" type="image/png">
         <source media="(min-width: 320px)" srcset="/img/redox-orbital/small.png" type="image/png">
-        <img src="/img/redox-orbital/medium.png" class="img-responsive" alt="Redox and Orbital">
+        <img src="/img/redox-orbital/medium.png" class="img-responsive" alt="Redox e Orbital">
       </picture>
     </a>
   </div>
