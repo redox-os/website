@@ -2,6 +2,12 @@
 title = "Talks"
 +++
 
+## Cyberdeck Users Weekly
+
+**By Jeremy Soller and Paul Miller on May 13, 2020**
+
+<iframe src="https://anchor.fm/futurepaul/embed/episodes/Redox-OS-with-Jeremy-Soller-ee08k2/a-a26b1ul" height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
+
 ## FOSDEM 2019
 
 **By Robin Randhawa on February 3, 2019**
