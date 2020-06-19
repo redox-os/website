@@ -262,9 +262,9 @@ Easy
 
 [IPv4]: https://tools.ietf.org/html/rfc791
 [IPv6]: https://tools.ietf.org/html/rfc8200
-[netstack#19]: https://github.com/redox-os/netstack/issues/19
-[netstack#20]: https://github.com/redox-os/netstack/issues/20
-[netstack#21]: https://github.com/redox-os/netstack/issues/21
+[netstack#19]: https://gitlab.redox-os.org/redox-os/netstack/issues/19
+[netstack#20]: https://gitlab.redox-os.org/redox-os/netstack/issues/20
+[netstack#21]: https://gitlab.redox-os.org/redox-os/netstack/issues/21
 
 <a id="tokio"></a>
 ## Port Tokio
