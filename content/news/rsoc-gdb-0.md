@@ -4,7 +4,7 @@ author = "jD91mZM2"
 date = "2020-06-22T16:00:22+02:00"
 +++
 
-![GDB Crash](https://imgur.com/1TQONiO)
+![GDB Crash](https://redox-os.org/img/screenshot/gdb-sigsegv.jpg)
 
 *We're here. The moment you've all been waiting for, the end of our journey is
 at hand.*
