@@ -29,7 +29,7 @@ url = "/home"
       <li>MIT-licens</li>
       <li>Drivere kører i userspace</li>
       <li>Inkluderer almindelig Unix-kommandoer</li>
-      <li>Newlib-port til C-programmer</li>
+      <li>Eget C-standardbibliotek skrevet i Rust (relibc)</li>
     </ul>
   </div>
 </div>
