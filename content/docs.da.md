@@ -2,19 +2,21 @@
 title = "Dokumentation"
 +++
 
-## Kom i gang!
+## Kom i gang
 
-Vi anbefaler at du starter med [Redoxbogen](https://doc.redox-os.org/book/), da den beskriver hvordan du sætter Redox op og bruger det.
+Vi anbefaler at du starter med [Redox-bogen](https://doc.redox-os.org/book/), da den beskriver hvordan du sætter Redox op og bruger det.
 
-## Referenser
+## Referencer
 
-[Bogen](https://doc.redox-os.org/book/). En bog som beskriver Redox's design.
+[Bogen](https://doc.redox-os.org/book/). En bog som beskriver Redox' design.
 
-[Talks](/talks/). Redox talks given at various events and conferences.
+[Foredrag](/talks/). Redox-foredrag holdt til diverse begivenheder og konferencer.
 
-[Kernen](https://doc.redox-os.org/kernel/kernel/). Dokumentation for Redoxkernen.
+[Kernen](https://doc.redox-os.org/kernel/kernel/). Dokumentation for Redox-kernen.
 
-[Standard Library](https://doc.redox-os.org/std/std/). Dokumentation for Redoxs Standard Library.
+[Standardbiblioteket](https://doc.redox-os.org/std/std/). Dokumentation for Redox' standardbibliotek.
+
+[Ion-manual](https://doc.redox-os.org/ion-manual/html). Dokumentation for kommandofortolkeren Ion.
 
 ## Bidrag til Redox
 
@@ -22,21 +24,13 @@ Tak for din interesse i at bidrage til Redox!
 Der findes mange måder at hjælpe os og vi sætter pris på dem alle.
 
 Redox er et stort projekt spredt ud over mange repos som kan findes i
-[Redoxorganisationen på GitLab](https://gitlab.redox-os.org/redox-os). Dette dokument,
+[Redox-organisationen på GitLab](https://gitlab.redox-os.org/redox-os). Dokumentet
 [CONTRIBUTING.md](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md)
-er en guide til at hjælpe nybegyndere med at bidrage.
+er en guide til at hjælpe nybegyndere med at bidrage!
 
 ## Kommunikation og chat
 
-Den hurtigeste og mest åbne måde at kommunikere med Redox-teamet er på vores
-chatserver. Foreløbig er den eneste måde at blive det ved at sende en e-mail til
-[info@redox-os.org](mailto:info@redox-os.org), som kan tage lidt tid
-siden det ikke er automatiseret. Vi arbejder på en enklere måde at gøre dette,
-men det er den mest praktiske måde lige nu.
-
-Du kan også finde Redox på Reddit:
-[/r/rust/](https://www.reddit.com/r/rust) og
-[/r/redox/](https://www.reddit.com/r/redox). Den ugenlige opdatering er lagt ud på det første link.
+Se venligst under [Community](/da/community/).
 
 ## Opførsel
-Vi følger Rusts [regler for god opførsel](https://www.rust-lang.org/policies/code-of-conduct).
+Vi følger [Rusts adfærdskodeks](https://www.rust-lang.org/policies/code-of-conduct).
