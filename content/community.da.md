@@ -2,34 +2,34 @@
 title = "Community"
 +++
 
-This page attempts to explain how the Redox OS community is organised and help you navigate it.
+Denne side tilstræber at forklare hvordan fællesskabet omkring Redox OS er organiseret og at hjælpe dig med at navigere i det.
 
 
 <a id="chat"></a>
 ## [Chat](https://chat.redox-os.org)
 
-The quickest and most open way to communicate with the Redox team is on our chat server. Currently, you can only get an invite by sending an email request to info@redox-os.org, which might take a little while, since it's not automated. Simply say you'd like to join the chat. We're working on an better way to do this, but this is the best way right now.
+Den hurtigste og mest åbne måde form for kommunikation med Redox-teamet er via vores chatserver. Foreløbig er den eneste måde at få en invitation ved at sende en forespørgsel pr. e-mail til info@redox-os.org, hvilket kan tage lidt tid, da det ikke er automatiseret. Skriv blot at du gerne vil deltage i chatten. Vi arbejder på en bedre måde at gøre dette, men det er den bedste måde lige nu.
 
 <a id="forum"></a>
 ## [Forum](https://discourse.redox-os.org/)
 
-This is the best way to discuss more general topics that aren't about specific things that need to be addressed one way or another. You can sign up like any other website.
+Dette er den bedste måde at diskutere mere generelle emner, der ikke omhandler specifikke ting der skal tages hånd om på den ene eller anden måde. Du kan oprette en brugerkonto som på ethvert andet websted.
 
 <a id="gitlab"></a>
 ## [GitLab](https://gitlab.redox-os.org/redox-os/redox)
 
 
-A bit more formal way of communication with fellow Redox devs, but a little less quick and convenient like the chat. Submit an issue when you run into problems compiling, testing, or just would like to discuss a certain topic, be it features, code style, code inconsistencies, minor changes and fixes, etc.
+En lidt mere formel form for kommunikation med andre Redox-udviklere, men lige knap så hurtig og bekvem som chatten. Opret et issue når du støder på problemer med at compile, teste, eller hvis du blot vil diskutere et bestemt emne, hvad enten det er features, kodestil, uoverensstemmelser i koden, småændringer og -rettelser osv.
 
 
 <a id="reddit"></a>
-## [Redox OS on Reddit](https://www.reddit.com/r/Redox/)
+## [Redox OS på Reddit](https://www.reddit.com/r/Redox/)
 
-If you want a quick look at what's going on and talk about it.
+Hvis du vil have et hurtigt kig på hvad der foregår og tale om det.
 
-[reddit.com/r/rust](https://www.reddit.com/r/rust) for related Rust news and discussions.
+[reddit.com/r/rust](https://www.reddit.com/r/rust) for relaterede Rust-nyheder og -diskussioner.
 
 <a id="twitter"></a>
 ## [Twitter](https://twitter.com/redox_os)
 
-News and related content.
+Nyheder og relateret indhold.
