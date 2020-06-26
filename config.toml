@@ -358,7 +358,7 @@ name = "Skærmbilleder"
 url = "/screens/"
 [[languages.da.menu.main]]
 weight = 5
-name = "Doner"
+name = "Donér"
 url = "/donate/"
 [[languages.da.menu.main]]
 weight = 6

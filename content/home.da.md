@@ -5,8 +5,8 @@ url = "/home"
 <div class="row install-row">
   <div class="col-md-8">
     <p class="pitch">
-      <b>Redox</b> er et Unix-lignende operativsystem som er skrevet i programmeringsproget <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>,
-      for at bringe innovationer fra Rust til en moderne mikrokerne med et komplet set af programmer.
+      <b>Redox</b> er et Unix-lignende operativsystem skrevet i <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>
+      med det mål at bringe nyskabelserne fra Rust til en moderne mikrokerne og et komplet udvalg af applikationer.
     </p>
   </div>
   <div class="col-md-4 install-box">
@@ -20,23 +20,23 @@ url = "/home"
     <ul class="laundry-list" style="margin-bottom: 0px;">
       <li>Skrevet i Rust</li>
       <li>Mikrokerne-design</li>
-      <li>Valgfrit GUI - Orbital</li>
-      <li>Understøtter Rusts Standard Library</li>
+      <li>Inkluderer valgfri GUI - Orbital</li>
+      <li>Understøtter Rusts standardbibliotek</li>
     </ul>
   </div>
   <div class="col-md-6">
     <ul class="laundry-list">
       <li>MIT-licens</li>
       <li>Drivere kører i userspace</li>
-      <li>Inkluderer almindelig Unix-kommandoer</li>
-      <li>Newlib-port til C-programmer</li>
+      <li>Inkluderer almindelige Unix-kommandoer</li>
+      <li>Eget C-standardbibliotek skrevet i Rust (relibc)</li>
     </ul>
   </div>
 </div>
 <div class="row features">
   <div class="col-sm-12">
     <div style="font-size: 16px; text-align: center;">
-      Redox kører Orbital
+      Redox med Orbital
     </div>
     <a href="/img/redox-orbital/large.png">
       <picture>
