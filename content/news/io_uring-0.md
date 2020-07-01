@@ -24,7 +24,7 @@ I/O](https://kernel.dk/io_uring.pdf), although with a few major differences.
 The idea, just as with Linux, is to use two kernel-managed SPSC queues (rings)
 as an alternative syscall interface, rather than relying on a direct context
 switch to the kernel, via register parameters and the syscall instruction;
-instead, a syscall is made by pushing a new entry onto the _Completion Queue_,
+instead, a syscall is made by pushing a new entry onto the _Submission Queue_,
 then doing other useful work, and then eventually popping an entry from the
 _Completion Queue_, which indicates that the syscall has completed with a
 specific return value. This has numerous advantages, apart from being more
