@@ -12,8 +12,8 @@ imporantly how the kernel is going to be involved in `io_uring` operation.
 
 I also came up with a set of standard opcodes, that schemes are meant to use
 when using `io_uring`, unless in some special scenarios (like general-purpose
-IPC between processes).<!-- The opcodes at this point in time, can be found
-[here](0.0.0.0).-->
+IPC between processes). The opcodes at this point in time, can be found
+[here](https://doc.redox-os.org/io_uring/syscall/io_uring/v1/enum.StandardOpcode.html).
 
 ## The three attachment modes
 The most notable change that I made, is that instead of always attaching an
