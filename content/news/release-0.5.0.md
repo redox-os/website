@@ -144,7 +144,7 @@ Please use the following links to see all the code changes since 0.3.5:
 
 - [redox](https://gitlab.redox-os.org/redox-os/redox/compare/0.3.5...0.5.0)
 - [cookbook](https://gitlab.redox-os.org/redox-os/cookbook/compare/0.3.5...0.5.0)
-- [kernel](https://gitlab.redox-os.org/redox-os/cookbook/compare/0.3.5...0.5.0)
+- [kernel](https://gitlab.redox-os.org/redox-os/kernel/compare/0.3.5...0.5.0)
 - [relibc](https://gitlab.redox-os.org/redox-os/relibc) is completely new
 - [orbtk](https://gitlab.redox-os.org/redox-os/orbtk) is going through a
   redesign
