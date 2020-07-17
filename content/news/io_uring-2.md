@@ -26,7 +26,7 @@ sense for `pcid` itself to block, since that was the process calling
 a similar freeze when working with interrupts in the drivers (which were
 deadlock related), I unconciously assumed that it had something to do with
 faulty event queues or a faulty scheduler, also due to a more recent freeze
-seen my me and jD91mZM2, where `ahcid` blocked and the entire system froze.
+seen by me and jD91mZM2, where `ahcid` blocked and the entire system froze.
 
 After about four days of debugging, as I had kept failing to find the bug in
 the kernel that caused this, I saw that `init` actually blocked on every
