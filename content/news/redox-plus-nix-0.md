@@ -1,7 +1,7 @@
 +++
 title = "Cross-compiling to Redox using Nix"
 author = "Aaron Janse"
-date = "2020-07-20T12:00:00+05:00"
+date = "2020-07-22T12:00:00+05:00"
 +++
 
 <img class="img-responsive" src="/img/screenshot/nix-build-hexyl.png" alt="Cross-compiling a package to Redox using Nix" />
