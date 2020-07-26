@@ -39,13 +39,15 @@ process-arguments interface as well). There is a possibility that a few
 arguments of some functions may change there, but apart from that, that part
 needs not that much more work.
 
-However, most of the io_uring code actually happens within `redox-iou`, and the
-newly-separated crate `redox-buffer-pool`, which handle the actual OS
-interface. The goal someday, is for these to eventually be integrated into
-`mio`, and hence, `tokio`. While I managed to get all types of io_urings, be it
-userspace-to-userspace, userspace-to-kernel, and kernel-to-userspace working
-(not tested, and not fully implemented in the kernel yet), there is one
-limitation currently: memory and buffer management.
+However, most of the io_uring code actually happens within
+[`redox-iou`](https://gitlab.redox-os.org/redox-os/redox-iou), and the
+newly-separated crate
+[`redox-buffer-pool`](https://gitlab.redox-os.org/redox-os/redox-buffer-pool),
+which handle the actual OS interface. The goal someday, is for these to
+eventually be integrated into `mio`, and hence, `tokio`. While I managed to get
+all types of io_urings, be it userspace-to-userspace, userspace-to-kernel, and
+kernel-to-userspace working (not tested, and not fully implemented in the
+kernel yet), there is one limitation currently: memory and buffer management.
 
 ## `redox-buffer-pool`
 Userspace-to-userspace and kernel-to-userspace is easy; the kernel manages all
