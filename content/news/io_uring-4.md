@@ -29,7 +29,7 @@ descriptors used in system calls belong to that scheme. While the biggest and
 the most important challenge is making `UserScheme` async, there is at least
 one scheme now that has requests that can wake a possible infinite time to
 complete, that doesn't block internally. Consequently, `pcid` was now able to
-receive an SQE directly from `xhcid`, albeit with now handling for that.
+receive an SQE directly from `xhcid`, albeit now with handling for that.
 
 ## Almost there, PCI!
 The `pcid_interface` part should already be finished for the most part; it now
@@ -50,8 +50,8 @@ kernel-to-userspace working (not tested, and not fully implemented in the
 kernel yet), there is one limitation currently: memory and buffer management.
 
 ## `redox-buffer-pool`
-Userspace-to-userspace and kernel-to-userspace is easy; the kernel manages all
-the memory for us, as it's man-in-the-middle for all syscalls there! With
+Userspace-to-kernel and kernel-to-userspace is easy; the kernel manages all
+the memory for us, as it's man-in-the-middle for all syscalls there. With
 userspace-to-userspace io_urings however, all the kernel can do is to make
 io_uring memory management easier, but the processes will still need some
 method of systematically sharing buffers for syscalls.
