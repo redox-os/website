@@ -49,7 +49,7 @@ name = "文档"
 url = "/docs/"
 [[languages.zh.menu.main]]
 weight = 2
-name = "Community"
+name = "社区"
 url = "/community"
 [[languages.zh.menu.main]]
 weight = 3

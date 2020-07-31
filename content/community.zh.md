@@ -1,35 +1,34 @@
 +++
-title = "Community"
+title = "社区"
 +++
 
-This page attempts to explain how the Redox OS community is organised and help you navigate it.
+此页面解释了 Redox OS 社区是如何运作的并为你指点迷津。
 
 
 <a id="chat"></a>
-## [Chat](https://chat.redox-os.org)
+## [聊天](https://chat.redox-os.org)
 
-The quickest and most open way to communicate with the Redox team is on our chat server. Currently, you can only get an invite by sending an email request to info@redox-os.org, which might take a little while, since it's not automated. Simply say you'd like to join the chat. We're working on an better way to do this, but this is the best way right now.
+最快速且开放地与 Redox 团队讨论的方式是进入我们的聊天室。现在，你只能向 info@redox-os.org 发送邮件来申请进入，由于并不是自动的，所以可能需要等待一些时间。你只需说明你想要加入聊天室即可。在未来，我们会探寻一个更好的方式，但现在这就是最好的方式。
 
 <a id="forum"></a>
-## [Forum](https://discourse.redox-os.org/)
+## [论坛](https://discourse.redox-os.org/)
 
-This is the best way to discuss more general topics that aren't about specific things that need to be addressed one way or another. You can sign up like any other website.
+这是讨论较笼统的主题的最好方式，这些主题不涉及需要以一种或其他方式解决的特定问题。
+你可以像其他任何网站一样注册。
 
 <a id="gitlab"></a>
 ## [GitLab](https://gitlab.redox-os.org/redox-os/redox)
 
-
-A bit more formal way of communication with fellow Redox devs, but a little less quick and convenient like the chat. Submit an issue when you run into problems compiling, testing, or just would like to discuss a certain topic, be it features, code style, code inconsistencies, minor changes and fixes, etc.
-
+这是一种较为正式地与 Redox 开发者交流的方式，但没有聊天来的快速与方便。当你在编译，测试出现问题，或只是想讨论一个特定的话题，诸如功能，代码风格，代码不一致，较小的更改，修复等话题时，可以提出一个 Issue。
 
 <a id="reddit"></a>
-## [Redox OS on Reddit](https://www.reddit.com/r/Redox/)
+## [Redox OS 在 Reddit 上的看板](https://www.reddit.com/r/Redox/)
 
-If you want a quick look at what's going on and talk about it.
+当你想浏览最新的动态并进行讨论时。
 
-[reddit.com/r/rust](https://www.reddit.com/r/rust) for related Rust news and discussions.
+关于 Rust 相关的动态与讨论，请到： [reddit.com/r/rust](https://www.reddit.com/r/rust)
 
 <a id="twitter"></a>
 ## [Twitter](https://twitter.com/redox_os)
 
-News and related content.
+动态以及相关内容。
