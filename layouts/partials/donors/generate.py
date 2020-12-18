@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import csv
+import html
 import sys
 
 with open(sys.argv[1], "r") as file:
@@ -9,6 +10,7 @@ with open(sys.argv[1], "r") as file:
     rows=0
     for row in reader:
         if rows >= 2:
-            print("<li>" + row[0] + "</li>")
+            name = html.escape(row[0].strip())
+            print("<li>" + name + "</li>")
         rows+=1
     print("</ul>")
