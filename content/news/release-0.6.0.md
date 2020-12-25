@@ -39,7 +39,7 @@ instead of shell scripts, and a number of packages have been ported to it.
 change in Rust nightlies, where the `asm` macro was redesigned. This change was
 completed many months ago, but other issues kept us from a release.
 
-<img class="img-responsive" src="/img/release/0.6.0.png"/>
+<a href="/img/release/0.6.0.png"><img class="img-responsive" src="/img/release/0.6.0.png"/></a>
 
 ## Code Changes
 
