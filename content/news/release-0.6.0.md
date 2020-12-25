@@ -54,4 +54,9 @@ release:
 
 ## Discussion
 
-Links will be added here as they are posted
+- [Discourse](https://discourse.redox-os.org/t/redox-os-0-6-0-release/1414)
+- [Hacker News](https://news.ycombinator.com/item?id=25533563)
+- [Reddit /r/redox](https://www.reddit.com/r/Redox/comments/kjr932/redox_os_060/)
+- [Reddit /r/rust](https://www.reddit.com/r/rust/comments/kjr949/redox_os_060/)
+- [Patreon](https://www.patreon.com/posts/45415783)
+- [Twitter](https://twitter.com/redox_os/status/1342291855896002560)
