@@ -665,3 +665,36 @@ url = "https://gitlab.redox-os.org/redox-os/redox"
 weight = 7
 name = "RSoC"
 url = "/rsoc/"
+
+[languages.gr]
+weight = 1
+languageName = "Ελληνικά"
+languageCode = "gr"
+[[languages.gr.menu.main]]
+weight = 1
+name = "Τεκμηρίωση"
+url = "/docs/"
+[[languages.gr.menu.main]]
+weight = 2
+name = "Κοινότητα"
+url = "/community"
+[[languages.gr.menu.main]]
+weight = 3
+name = "Νέα"
+url = "/news/"
+[[languages.gr.menu.main]]
+weight = 4
+name = "Στιγμιότυπα Οθόνης"
+url = "/screens/"
+[[languages.gr.menu.main]]
+weight = 5
+name = "Δώρισμα"
+url = "/donate/"
+[[languages.gr.menu.main]]
+weight = 6
+name = "GitLab"
+url = "https://gitlab.redox-os.org/redox-os/redox"
+[[languages.gr.menu.main]]
+weight = 7
+name = "RSoC"
+url = "/rsoc/"
