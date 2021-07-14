@@ -38,6 +38,10 @@ url = "https://gitlab.redox-os.org/redox-os/redox"
 weight = 7
 name = "RSoC"
 url = "/rsoc/"
+[[languages.en.menu.main]]
+weight = 8
+name = "RFCs"
+url = "/rfcs/"
 
 [languages.zh]
 weight = 2
@@ -71,6 +75,10 @@ url = "https://gitlab.redox-os.org/redox-os/redox"
 weight = 7
 name = "RSoC"
 url = "/rsoc/"
+[[languages.zh.menu.main]]
+weight = 8
+name = "RFCs"
+url = "/rfcs/"
 
 [languages.es]
 weight = 3
@@ -104,6 +112,10 @@ url = "https://gitlab.redox-os.org/redox-os/redox"
 weight = 7
 name = "RSoC"
 url = "/rsoc/"
+[[languages.es.menu.main]]
+weight = 8
+name = "RFCs"
+url = "/rfcs/"
 
 [languages.ru]
 weight = 4
@@ -137,6 +149,10 @@ url = "https://gitlab.redox-os.org/redox-os/redox"
 weight = 7
 name = "RSoC"
 url = "/rsoc/"
+[[languages.ru.menu.main]]
+weight = 8
+name = "RFCs"
+url = "/rfcs/"
 
 [languages.fr]
 weight = 5
@@ -170,6 +186,10 @@ url = "https://gitlab.redox-os.org/redox-os/redox"
 weight = 7
 name = "RSoC"
 url = "/rsoc/"
+[[languages.fr.menu.main]]
+weight = 8
+name = "RFCs"
+url = "/rfcs/"
 
 [languages.de]
 weight = 6
@@ -203,6 +223,10 @@ url = "https://gitlab.redox-os.org/redox-os/redox"
 weight = 7
 name = "RSoC"
 url = "/rsoc/"
+[[languages.de.menu.main]]
+weight = 8
+name = "RFCs"
+url = "/rfcs/"
 
 [languages.it]
 weight = 7
@@ -236,6 +260,10 @@ url = "https://gitlab.redox-os.org/redox-os/redox"
 weight = 7
 name = "RSoC"
 url = "/rsoc/"
+[[languages.it.menu.main]]
+weight = 8
+name = "RFCs"
+url = "/rfcs/"
 
 [languages.tr]
 weight = 8
@@ -269,6 +297,10 @@ url = "https://gitlab.redox-os.org/redox-os/redox"
 weight = 7
 name = "RSoC"
 url = "/rsoc/"
+[[languages.tr.menu.main]]
+weight = 8
+name = "RFCs"
+url = "/rfcs/"
 
 [languages.sv]
 weight = 9
@@ -302,6 +334,10 @@ url = "https://gitlab.redox-os.org/redox-os/redox"
 weight = 7
 name = "RSoC"
 url = "/rsoc/"
+[[languages.sv.menu.main]]
+weight = 8
+name = "RFCs"
+url = "/rfcs/"
 
 [languages.nl]
 weight = 10
@@ -335,6 +371,10 @@ url = "https://gitlab.redox-os.org/redox-os/redox"
 weight = 7
 name = "RSoC"
 url = "/rsoc/"
+[[languages.nl.menu.main]]
+weight = 8
+name = "RFCs"
+url = "/rfcs/"
 
 [languages.da]
 weight = 11
@@ -368,6 +408,10 @@ url = "https://gitlab.redox-os.org/redox-os/redox"
 weight = 7
 name = "RSoC"
 url = "/rsoc/"
+[[languages.da.menu.main]]
+weight = 8
+name = "RFCs"
+url = "/rfcs/"
 
 [languages.no]
 weight = 12
@@ -401,6 +445,10 @@ url = "https://gitlab.redox-os.org/redox-os/redox"
 weight = 7
 name = "RSoC"
 url = "/rsoc/"
+[[languages.no.menu.main]]
+weight = 8
+name = "RFCs"
+url = "/rfcs/"
 
 [languages.cz]
 weight = 13
@@ -434,6 +482,10 @@ url = "https://gitlab.redox-os.org/redox-os/redox"
 weight = 7
 name = "RSoC"
 url = "/rsoc/"
+[[languages.cz.menu.main]]
+weight = 8
+name = "RFCs"
+url = "/rfcs/"
 
 [languages.eo]
 weight = 14
@@ -467,6 +519,10 @@ url = "https://gitlab.redox-os.org/redox-os/redox"
 weight = 7
 name = "RSoC"
 url = "/rsoc/"
+[[languages.eo.menu.main]]
+weight = 8
+name = "RFCs"
+url = "/rfcs/"
 
 [languages.pt]
 weight = 15
@@ -500,6 +556,10 @@ url = "https://gitlab.redox-os.org/redox-os/redox"
 weight = 7
 name = "RSoC"
 url = "/rsoc/"
+[[languages.pt.menu.main]]
+weight = 8
+name = "RFCs"
+url = "/rfcs/"
 
 [languages.jp]
 weight = 16
@@ -533,6 +593,10 @@ url = "https://gitlab.redox-os.org/redox-os/redox"
 weight = 7
 name = "RSoC"
 url = "/rsoc/"
+[[languages.jp.menu.main]]
+weight = 8
+name = "RFCs"
+url = "/rfcs/"
 
 [languages.ko]
 weight = 17
@@ -566,6 +630,10 @@ url = "https://gitlab.redox-os.org/redox-os/redox"
 weight = 7
 name = "RSoC"
 url = "/rsoc/"
+[[languages.ko.menu.main]]
+weight = 8
+name = "RFCs"
+url = "/rfcs/"
 
 [languages.hu]
 weight = 18
@@ -599,6 +667,10 @@ url = "https://gitlab.redox-os.org/redox-os/redox"
 weight = 7
 name = "RSoC"
 url = "/rsoc/"
+[[languages.hu.menu.main]]
+weight = 8
+name = "RFCs"
+url = "/rfcs/"
 
 [languages.pl]
 weight = 19
@@ -632,6 +704,10 @@ url = "https://gitlab.redox-os.org/redox-os/redox"
 weight = 7
 name = "RSoC"
 url = "/rsoc/"
+[[languages.pl.menu.main]]
+weight = 8
+name = "RFCs"
+url = "/rfcs/"
 
 [languages.uk]
 weight = 20
@@ -665,3 +741,8 @@ url = "https://gitlab.redox-os.org/redox-os/redox"
 weight = 7
 name = "RSoC"
 url = "/rsoc/"
+[[languages.uk.menu.main]]
+weight = 8
+name = "RFCs"
+url = "/rfcs/"
+
