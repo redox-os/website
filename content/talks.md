@@ -31,7 +31,7 @@ title = "Talks"
 
 **By Jeremy Soller and Bryan Lunduke on March 13, 2017**
 
-{{< youtube eH5JgMlNE8o >}}
+{{< odysee redoxos-microkernel-os-written-in-rust >}}
 
 ## FOSDEM 2017
 
