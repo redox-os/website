@@ -1,4 +1,4 @@
-# website
+# [website](https://www.redox-os.org/)
 
 To build this site, you must install [Hugo](https://gohugo.io/) and run the `hugo.sh` file.
 
