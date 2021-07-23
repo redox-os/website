@@ -27,7 +27,7 @@ Công cụ này là cách chính thống hơn trong việc làm việc với đ�
 
 Bạn sẽ có cái nhìn khá tổng quan về các vấn đề đang diễn ra và thảo luận về nó.
 
-[reddit.com/r/rust](https://www.reddit.com/r/rust) for related Rust news and discussions.
+[reddit.com/r/rust](https://www.reddit.com/r/rust) Địa chỉ này bàn về các vấn đề chung của Rust.
 
 <a id="twitter"></a>
 ## [Twitter](https://twitter.com/redox_os)
