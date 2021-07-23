@@ -24,8 +24,7 @@ Cám ơn các bạn đã quan tâm và đóng góp cho Redox!
 Có rất nhiều cách đóng góp và chúng tôi rất biết ơn về đóng góp của bạn.
 
 Redox là một dự án lớn, bao gồm nhiều bộ mã nguồn mà bạn có thể tìm thấy ở địa chỉ
-[Redox organization on GitLab](https://gitlab.redox-os.org/redox-os). tài liệu này, [CONTRIBUTING.md](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md
-đây là tài liệu giúp cho những người mới tham gia đóng góp cho dự án.
+[Redox organization on GitLab](https://gitlab.redox-os.org/redox-os). Tài liệu này [CONTRIBUTING.md](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md) là tài liệu giúp cho những người mới tham gia đóng góp cho dự án.
 
 ## Công cụ liên lạc và Chat
 
