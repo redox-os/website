@@ -1,5 +1,5 @@
 +++
-title = "Screenshots"
+title = "Giao diện"
 +++
 
 ## System76 Galago Pro (galp3-c)
