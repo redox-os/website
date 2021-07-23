@@ -14,5 +14,5 @@ Bạn có thể tài trợ cho Jackpot51 bằng một số cách:
 - [Bitcoin](bitcoin:1MD8PqWMUhNPBR6YhYUUgrztEJ6StkxGQK) 1MD8PqWMUhNPBR6YhYUUgrztEJ6StkxGQK
 - [Ethereum](ethereum:0xa0589F36202c6dFFB0e3e0aCAEa5D62c0f5469ce) 0xa0589F36202c6dFFB0e3e0aCAEa5D62c0f5469ce
 
-Những nhà hảo tâm sau đã tài trợ ít nhất $4 cho Jackpot51 để sử dụng và phát triển Redox OS:
+Những mạnh thường quân sau đã tài trợ ít nhất $4 cho Jackpot51 để sử dụng và phát triển Redox OS:
 {{% partial "donors/jackpot51.html" %}}
