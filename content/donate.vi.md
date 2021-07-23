@@ -1,12 +1,12 @@
 +++
-title = "Donate"
+title = "Tài trợ"
 +++
 
 ## Jackpot51
 
-Jackpot51, or Jeremy Soller, is the creator, maintainer, and lead developer of Redox OS.
+Jackpot51, hay Jeremy Soller, là tác giả, người bảo trì, và là người dẫn đầu dự án Redox OS.
 
-You can donate to Jackpot51 the following ways:
+Bạn có thể tài trợ cho Jackpot51 bằng một số cách:
 
 - [Patreon](https://www.patreon.com/redox_os)
 - [Liberapay](https://liberapay.com/redox_os)
@@ -14,5 +14,5 @@ You can donate to Jackpot51 the following ways:
 - [Bitcoin](bitcoin:1MD8PqWMUhNPBR6YhYUUgrztEJ6StkxGQK) 1MD8PqWMUhNPBR6YhYUUgrztEJ6StkxGQK
 - [Ethereum](ethereum:0xa0589F36202c6dFFB0e3e0aCAEa5D62c0f5469ce) 0xa0589F36202c6dFFB0e3e0aCAEa5D62c0f5469ce
 
-The following patrons have donated $4 or more to Jackpot51 for use in developing Redox OS:
+Những nhà hảo tâm sau đã tài trợ ít nhất $4 cho Jackpot51 để sử dụng và phát triển Redox OS:
 {{% partial "donors/jackpot51.html" %}}
