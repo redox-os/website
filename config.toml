@@ -665,3 +665,37 @@ url = "https://gitlab.redox-os.org/redox-os/redox"
 weight = 7
 name = "RSoC"
 url = "/rsoc/"
+
+
+[languages.ar]
+weight = 21
+languageName = "العربية"
+languageCode = "ar"
+[[languages.ar.menu.main]]
+weight = 1
+name = "توثيق"
+url = "/docs/"
+[[languages.ar.menu.main]]
+weight = 2
+name = "مجتمع المطورين"
+url = "/community"
+[[languages.ar.menu.main]]
+weight = 3
+name = "أخبار"
+url = "/news/"
+[[languages.ar.menu.main]]
+weight = 4
+name = "لقطات شاشة"
+url = "/screens/"
+[[languages.ar.menu.main]]
+weight = 5
+name = "تبرع"
+url = "/donate/"
+[[languages.ar.menu.main]]
+weight = 6
+name = "شيفرة مصدرية"
+url = "https://gitlab.redox-os.org/redox-os/redox"
+[[languages.ar.menu.main]]
+weight = 7
+name = "RSoC"
+url = "/rsoc/"
