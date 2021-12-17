@@ -9,8 +9,9 @@ with open(sys.argv[1], "r") as file:
     reader = csv.reader(file, quotechar='"')
     rows=0
     for row in reader:
-        if rows >= 2:
+        if rows >= 1:
             name = html.escape(row[0].strip())
-            print("<li>" + name + "</li>")
+            if len(name) > 0:
+                print("<li>" + name + "</li>")
         rows+=1
     print("</ul>")
