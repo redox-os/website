@@ -75,4 +75,9 @@ in a VM.
 
 ## Discussion
 
-TODO: discussion
+- [Discourse](https://discourse.redox-os.org/t/redox-os-release-0-7-0/1607)
+- [Hacker News](https://news.ycombinator.com/item?id=31200377)
+- [Patreon](https://www.patreon.com/posts/65742951)
+- [Reddit r/redox](https://www.reddit.com/r/Redox/comments/ueapm6/redox_os_070/)
+- [Reddit r/rust](https://www.reddit.com/r/rust/comments/ueaq9s/redox_os_070/)
+- [Twitter](https://twitter.com/redox_os/status/1519854042909794304)
