@@ -4,9 +4,6 @@ author = "jackpot51"
 date = "2022-04-28"
 +++
 
-**You can download the 0.7.0 images**
-[**here**](https://gitlab.redox-os.org/redox-os/redox/-/releases/0.7.0)
-
 ## Overview
 
 A lot has changed since release [0.6.0](/news/release-0.6.0/)! First thing, it
@@ -58,6 +55,21 @@ I really wanted to go into more depth, but the time since the last release has
 been pretty long and the changes wild and free (as in freedom). I hope to create
 Redox OS releases more regularly, which will also decrease the changes that have
 to be rediscovered in order to write the release notes.
+
+## Images
+
+Verify compressed images with sha256sum: https://static.redox-os.org/releases/0.7.0/SHA256SUM
+
+Extract compressed images with gunzip before flashing to a USB drive, or loading
+in a VM.
+
+- **UEFI (recommended)**
+  - **USB (recommended)**: https://static.redox-os.org/releases/0.7.0/redox_2022-04-28_570_livedisk-efi.bin.gz
+  - SSD: https://static.redox-os.org/releases/0.7.0/redox_2022-04-28_570_harddrive-efi.bin.gz
+- BIOS
+  - **USB (recommended)**: https://static.redox-os.org/releases/0.7.0/redox_2022-04-28_570_livedisk.bin.gz
+  - CD: https://static.redox-os.org/releases/0.7.0/redox_2022-04-28_570_livedisk.iso.gz
+  - SSD: https://static.redox-os.org/releases/0.7.0/redox_2022-04-28_570_harddrive.bin.gz
 
 ## Discussion
 
