@@ -4,6 +4,8 @@ author = "jackpot51"
 date = "2022-04-28"
 +++
 
+<a href="/img/release/0.7.0.png"><img class="img-responsive" src="/img/release/0.7.0.png"/></a>
+
 ## Overview
 
 A lot has changed since release [0.6.0](/news/release-0.6.0/)! First thing, it
