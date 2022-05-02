@@ -65,13 +65,14 @@ Verify compressed images with sha256sum: https://static.redox-os.org/releases/0.
 Extract compressed images with gunzip before flashing to a USB drive, or loading
 in a VM.
 
-- **x86_64 UEFI (recommended)**
-  - **USB (recommended)**: https://static.redox-os.org/releases/0.7.0/redox_2022-04-28_570_livedisk-efi.bin.gz
-  - SSD: https://static.redox-os.org/releases/0.7.0/redox_2022-04-28_570_harddrive-efi.bin.gz
 - x86_64 BIOS
-  - **USB (recommended)**: https://static.redox-os.org/releases/0.7.0/redox_2022-04-28_570_livedisk.bin.gz
+  - **OVA (recommended for virtual machine)**: https://static.redox-os.org/releases/0.7.0/redox_2022-04-28_570_harddrive.ova
   - CD: https://static.redox-os.org/releases/0.7.0/redox_2022-04-28_570_livedisk.iso.gz
   - SSD: https://static.redox-os.org/releases/0.7.0/redox_2022-04-28_570_harddrive.bin.gz
+  - USB: https://static.redox-os.org/releases/0.7.0/redox_2022-04-28_570_livedisk.bin.gz
+- x86_64 UEFI
+  - **USB (recommended for real hardware)**: https://static.redox-os.org/releases/0.7.0/redox_2022-04-28_570_livedisk-efi.bin.gz
+  - SSD: https://static.redox-os.org/releases/0.7.0/redox_2022-04-28_570_harddrive-efi.bin.gz
 
 ## Discussion
 
