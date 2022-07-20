@@ -8,6 +8,27 @@ Hey there everyone! I'm <font color="#fd098f">Eny</font><font color="#a58f01">gm
 
 <br/>
 
+### Outline
+
+1. **Prologue** (what to expect)
+2. **Intro to Revirt** (The hypervisor for Redox OS)
+3. **Virtualization** (a recap of concepts)
+4. **Hardware-level Virtualization** (a little in depth understanding)
+   * **Paravirtualization** (and how it works with Hardware-level Virtualization)
+5. **Revirt** (A detailed overview)
+   1. **Revirt-K** (The Type-1 hypervisor for Redox OS)
+   2. **Revirt-U** (The Type-2 hypervisor for Redox OS)
+      * **Revirter** (The custom VMM for Redox OS that will use the Revirt-U backend)
+   3. **Other Uses for Revirt**
+6. **The Project Plan**
+   1. **Phase-1** (Revirt-U)
+   2. **Phase-2** (Revirt-K)
+7. **References** (that served as inspiration for Revirt implementation)
+8. **Epilogue**
+   * **Until Later!**
+
+<br/>
+
 # Prologue
 
 I am one of the **RSoC (Redox Summer of Code) students this year (2022)**.
@@ -97,13 +118,6 @@ When I say "Hardware-assisted", I mean that there are certain features in the CP
 **Hypervisors**, also known as **Virtual Machine Monitors (VMMs)**, are programs that are written in order to support the creation and operation of **virtual machines (VMs)**. They can be made to work with or without hardware-assisted virtualization technology. **Revirt is the software (feature) that enables these VMMs to use hardware-assisted virtualization**.
 
 There are two types of Hypervisors (VMMs), which are explained below. Revirt needs to be implemented differently in order to be able to support the different types. Hence, Revirt itself has two implementations - Revirt-K and Revirt-U.
-
-Type-1 (Revirt-K) vs Type-2 (Revirt-U) hypervisor:  
-
-<!--<img class="img-responsive" src="/img/revirt/revirt-1_Type-1-and-type-2-hypervisor.png" alt="Type 1 vs Type 2 hypervisor (architecture)" />  -->
-
-<!--[Image Source](https://www.nakivo.com/blog/wp-content/uploads/2018/10/Type-1-and-type-2-hypervisor.png)-->
-
 
 ## Revirt-K (`revirt_k`) - Type-1 hypervisor
 

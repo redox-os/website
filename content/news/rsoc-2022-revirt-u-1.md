@@ -10,6 +10,27 @@ Hey there everyone! I'm <font color="#fd098f">Eny</font><font color="#a58f01">gm
 
 <br/>
 
+### Outline
+
+1. **Prologue** (what to expect)
+2. **Revirt-U** (Type-2 hypervisor for Redox OS)
+   1. **A quick intro**
+   2. **RSoC Implementation Plan** (4 steps)
+   3. **Implementation** (Details)
+      1. **Architecture of Revirt-U** (how various components of Revirt-U are put together)
+         * **brief overview**
+         * **The API** (exposed to VMM in order to control VMX)
+         * **VM Memory management** (memory+paging in VM & VMM in full detail)
+         * **vCPU implementation** (with threads) and `VMEXIT` fault handling
+         * **other details** (security, etc.)
+      2. **Revirter** (The custom VMM for Redox OS that will use the Revirt-U backend)
+   4. **Referenced hypervisors** (that served as architectural inspiration for Revirt)
+3. **Epilogue**
+   1. **Learning OS Dev, and contributing to Redox OS**
+   2. **Until Later!**
+
+<br/>
+
 # Prologue
 
 As you already know from my previous post - ["Revirt - Virtualization on Redox OS"](https://redox-os.org/news/revirt-1/) - which explains the conception of Virtualization in Redox OS, I am one of the **RSoC (Redox Summer of Code) students this year (2022)**.
@@ -194,17 +215,17 @@ The accesses of various threads in different modes of operation are limited to r
 
 <br/>
 
-#### Revirter
-
-I'm also creating `Revirter`, which is a light-weight VMM (that uses `revirt_u`'s HAV API via the wrapper library I'm creating). It is like a highly stripped down version of QEMU.
-
-<br/>
-
 #### Other Details
 
 - **Security**: This is something which needs to be looked into more closely (in the near future), as it's obviously very important for the overall security of Redox OS   
 - **SVM Support**: I'm planning to look into SVM later on. The intention is to have code for both VMX and SVM in the kernel (as opposed to conditional compilation), and the check for availability can be done at runtime.  
 - **aarch64 | riscv ?**: This won't be a target (at least for the near future). But it will be possible, as Redox OS has a working branch for this.  
+
+<br/>
+
+### Revirter
+
+I'm also creating `Revirter`, which is a light-weight VMM (that uses `revirt_u`'s HAV API via the wrapper library I'm creating). It is like a highly stripped down version of QEMU.
 
 
 ## Reference Hypervisors
