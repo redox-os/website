@@ -6,8 +6,8 @@ date = "2022-07-08T13:37:00+02:00"
 
 # Introduction
 
-So far it's been two weeks since my third RSoC, where so far I have mainly
-worked on moving large parts of kernel code, which deal with process
+So far it's been two weeks since my third RSoC began, where so far I have
+mainly worked on moving large parts of kernel code, which deal with process
 management, to userspace. In this blog post I will try summarizing what has
 been accomplished so far, and exciting things I have started but not finished.
 
