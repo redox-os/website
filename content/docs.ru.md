@@ -16,6 +16,8 @@ title = "Докумендация"
 
 [Стандартная библиотека](https://doc.redox-os.org/std/std/). Документация к стандартной библиотеке Redox.
 
+[Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
+
 ## Сотрудничество с Redox
 
 Спасибо за интерес к разработке Redox! Есть несколько способов помочь нам, и мы высоко ценим каждый из них.

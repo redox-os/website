@@ -16,6 +16,8 @@ Ni forte rekomendas ke vi komencu per [la libro](https://doc.redox-os.org/book/)
 
 [Standard Library](https://doc.redox-os.org/std/std/). Dokumentado por la Redox Standard Library.
 
+[Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
+
 ## Kontribui al Redox
 
 Dankon pro via intereso kontribui al Redox!

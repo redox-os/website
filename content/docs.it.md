@@ -16,6 +16,8 @@ Noi ti consigliamo di iniziare con [Book](https://doc.redox-os.org/book/), che d
 
 [Libreria Standard](https://doc.redox-os.org/std/std/). Documentazione per le librerie standard di Redox.
 
+[Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
+
 ## Contribuisci a Redox
 
 Grazie per il tuo interesse a contriuire a Redox!

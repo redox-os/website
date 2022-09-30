@@ -17,6 +17,8 @@ Redox를 설치하고 사용하는 방법에 대한 자세한 내용을 배울 �
 
 [표준 라이브러리](https://doc.redox-os.org/std/std/). Redox 표준 라이브러리에 관한 문서입니다.
 
+[Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
+
 ## Redox에 기여하기
 
 Redox에 기여하고 싶으시다구요? 감사합니다!

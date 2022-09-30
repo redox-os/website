@@ -16,6 +16,8 @@ Biz, Redox'u nasıl kurup kullanacağınızı açıkladığı için [kitabımız
 
 [Standard Kütüphane](https://doc.redox-os.org/std/std/). Redox standart kütüphanesi için belge.
 
+[Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
+
 ## Redox'a Katkı Sağlama
 
 Redox'a katkı yapmak hakkındaki ilginiz için teşekkür ederiz!

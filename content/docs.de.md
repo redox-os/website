@@ -17,6 +17,8 @@ werfen, welches beschreibt wie man Redox einrichtet und benutzt.
 
 [Standard Library](https://doc.redox-os.org/std/std/). Dokumentation der Redox-Standardbibliothek.
 
+[Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
+
 ## Mitwirken bei Redox
 
 Danke für Ihr Interesse, an Redox mitwirken zu wollen!

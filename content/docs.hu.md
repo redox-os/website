@@ -16,6 +16,8 @@ Erősen ajánljuk, hogy elsőként pillants bele a [Kézikönyvbe](https://doc.r
 
 [Standard könyvtár](https://doc.redox-os.org/std/std/). A Redox standard könyvtár dokumentációja.
 
+[Ion Kézikönyv](https://doc.redox-os.org/ion-manual/). Az Ion rendszerhéj dokumentációja.
+
 ## Közreműködés
 
 Köszünjük, hogy hozzá szeretnél járulni a Redox fejlesztéséhez!

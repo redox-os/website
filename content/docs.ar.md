@@ -20,17 +20,17 @@ title = "توثيق"
 
 [نواة](https://doc.redox-os.org/kernel/kernel/). توثيق نواة Rodex.
 
-[مكتبة القياسية](https://doc.redox-os.org/std/std/). توثيق المكتبه 
+[مكتبة القياسية](https://doc.redox-os.org/std/std/). توثيق المكتبه
 القياسية ل Redox.
 
-[Ion دليل استخدام](https://doc.redox-os.org/ion-manual/html). توثيق Ion shell.
+[Ion دليل استخدام](https://doc.redox-os.org/ion-manual/). توثيق Ion shell.
 
 ## المساهمة في Redox
 
 شكرًا لك على اهتمامك بالمساهمة في Redox!
 هناك العديد من الطرق لمساعدتنا ونقدرها جميعًا.
 
-Redox هو مشروع كبير منتشر عبر العديد من المستودعات التي يمكن العثور عليها في 
+Redox هو مشروع كبير منتشر عبر العديد من المستودعات التي يمكن العثور عليها في
 [Redox organization على GitLab](https://gitlab.redox-os.org/redox-os).
 هذا المستند,
 [CONTRIBUTING.md](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md)

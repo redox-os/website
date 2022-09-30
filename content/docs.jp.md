@@ -16,6 +16,8 @@ title = "ドキュメント"
 
 [標準ライブラリ](https://doc.redox-os.org/std/std/). 標準ライブラリのドキュメント。
 
+[Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
+
 ## Redoxへの貢献
 
 Redoxへの貢献に興味を持っていただきありがとうございます！
