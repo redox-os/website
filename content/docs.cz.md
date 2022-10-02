@@ -16,6 +16,8 @@ Doporučujeme začít s oficiální [Knihou](https://doc.redox-os.org/book/) o R
 
 [Standardní knihovna](https://doc.redox-os.org/std/std/). Dokumentace standardní knihovny.
 
+[Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
+
 ## Přispívání do Redoxu
 
 Děkujeme za váš zájem o přispění do Redoxu!

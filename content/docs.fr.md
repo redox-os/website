@@ -18,6 +18,8 @@ et utiliser Redox.
 
 [Bibliothèque standard](https://doc.redox-os.org/std/std/). La documentation de la bibliothèque standard de Redox.
 
+[Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
+
 ## Contribuer à Redox
 
 Merci de votre intérêt pour Redox !  Il y a de nombreuses façons de

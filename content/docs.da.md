@@ -16,7 +16,7 @@ Vi anbefaler at du starter med [Redox-bogen](https://doc.redox-os.org/book/), da
 
 [Standardbiblioteket](https://doc.redox-os.org/std/std/). Dokumentation for Redox' standardbibliotek.
 
-[Ion-manual](https://doc.redox-os.org/ion-manual/html). Dokumentation for kommandofortolkeren Ion.
+[Ion-manual](https://doc.redox-os.org/ion-manual/). Dokumentation for kommandofortolkeren Ion.
 
 ## Bidrag til Redox
 

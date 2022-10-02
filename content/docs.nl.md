@@ -16,6 +16,8 @@ We raden aan om te beginnen met het [Boek](https://doc.redox-os.org/book/). Dit 
 
 [Standard Library](https://doc.redox-os.org/std/std/). Documentatie van de Redox standard library.
 
+[Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
+
 ## Bijdragen aan Redox
 
 Bedankt voor je interesse om aan Redox bij te dragen!

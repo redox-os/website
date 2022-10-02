@@ -16,6 +16,8 @@ title = "文档"
 
 [标准库](https://doc.redox-os.org/std/std/). Redox的标准库。
 
+[Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
+
 ## 为Redox做贡献
 
 非常感谢您有兴趣为Redox做贡献！
