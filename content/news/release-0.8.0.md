@@ -45,6 +45,12 @@ donation, I will describe in another news post what it means for Redox OS.
 Links where this release is discussed will be added here. To contact me
 directly, view the links on my personal website: https://soller.dev/
 
+- [Mastodon](https://fosstodon.org/@soller/109395197521419157)
+- [Patreon](https://www.patreon.com/posts/redox-os-0-8-0-75033993)
+- [Reddit /r/redox](https://www.reddit.com/r/Redox/comments/z30uv5/redox_os_080_is_now_released/)
+- [Redox OS Chat](https://chat.redox-os.org/redox/pl/sfz4mfeiqfy7imyd1uiuwxiq3r)
+- [Twitter](https://twitter.com/redox_os/status/1595527019608973312)
+
 ## Supported Hardware
 
 Redox OS generally supports the following hardware, and any issues should be
