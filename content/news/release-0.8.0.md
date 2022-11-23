@@ -306,7 +306,7 @@ catagory, for example
 
 ### `redoxfs`
 
-- Modify disk cache size for lower memory systems, iti s now 16 MiB and is
+- Modify disk cache size for lower memory systems, it is now 16 MiB and is
 pre-allocated
 - Various improvements, see detailed link:
 https://gitlab.redox-os.org/redox-os/redoxfs/-/compare/0e0ae52...f601b2a
