@@ -29,7 +29,12 @@ If you want a quick look at what's going on and talk about it.
 
 [reddit.com/r/rust](https://www.reddit.com/r/rust) for related Rust news and discussions.
 
+<a id="mastodon"></a>
+## [Mastodon](https://fosstodon.org/@redox)
+
+News and related content.
+
 <a id="twitter"></a>
 ## [Twitter](https://twitter.com/redox_os)
 
-News and related content.
+News and related content. Mastodon is preferred.
