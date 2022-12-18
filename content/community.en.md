@@ -34,6 +34,11 @@ If you want a quick look at what's going on and talk about it.
 
 News and related content.
 
+<a id="matrix"></a>
+## [Matrix](https://matrix.to/#/#redox:matrix.org)
+
+Matrix is currently being evaluated for use as the official Redox OS chatroom.
+
 <a id="twitter"></a>
 ## [Twitter](https://twitter.com/redox_os)
 
