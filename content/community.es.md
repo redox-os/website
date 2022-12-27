@@ -26,8 +26,3 @@ Comunicación por GitLab es una forma más formal para comunicarse con otros pro
 Puede utilizar Reddit para rápidamente ver las novedades y hablar de ellas.
 
 [reddit.com/r/rust](https://www.reddit.com/r/rust) por noticias y conversaciones relacionadas con Rust.
-
-<a id="twitter"></a>
-## [Twitter](https://twitter.com/redox_os)
-
-Noticias y contenido relacionado.

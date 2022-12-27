@@ -38,8 +38,3 @@ News and related content.
 ## [Matrix](https://matrix.to/#/#redox:matrix.org)
 
 Matrix is currently being evaluated for use as the official Redox OS chatroom.
-
-<a id="twitter"></a>
-## [Twitter](https://twitter.com/redox_os)
-
-News and related content. Mastodon is preferred.

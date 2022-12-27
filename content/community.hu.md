@@ -25,8 +25,3 @@ Egy kicsivel formálisabb módja a Redox fejlesztőivel való kommunikációra, 
 Ha egy gyors pillantást szeretnél vetni a történésekre és beszélgetni szeretnél róluk.
 
 [reddit.com/r/rust](https://www.reddit.com/r/rust) a Rust programozási nyelvhez kötődő hírekhez és beszélgetésekhez.
-
-<a id="twitter"></a>
-## [Twitter](https://twitter.com/redox_os)
-
-Hírek és kapcsolódó tartalmak.

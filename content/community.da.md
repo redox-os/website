@@ -28,8 +28,3 @@ En lidt mere formel form for kommunikation med andre Redox-udviklere, men lige k
 Hvis du vil have et hurtigt kig på hvad der foregår og tale om det.
 
 [reddit.com/r/rust](https://www.reddit.com/r/rust) for relaterede Rust-nyheder og -diskussioner.
-
-<a id="twitter"></a>
-## [Twitter](https://twitter.com/redox_os)
-
-Nyheder og relateret indhold.

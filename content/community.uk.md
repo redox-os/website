@@ -25,8 +25,3 @@ title = "Спільнота"
 Якщо ви бажаєте ознайомитись із тим, що тут відбувається та обговорити це.
 
 [reddit.com/r/rust](https://www.reddit.com/r/rust) для новин та дискусій, пов'язаних із Rust.
-
-<a id="twitter"></a>
-## [Twitter](https://twitter.com/redox_os)
-
-Новини та пов'язаний контент.
