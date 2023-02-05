@@ -6,9 +6,9 @@ This page attempts to explain how the Redox OS community is organised and help y
 
 
 <a id="chat"></a>
-## [Chat](https://chat.redox-os.org)
+## [Chat](https://matrix.to/#/#redox:matrix.org)
 
-The quickest and most open way to communicate with the Redox team is on our chat server. Currently, you can only get an invite by sending an email request to info@redox-os.org, which might take a little while, since it's not automated. Simply say you'd like to join the chat. We're working on an better way to do this, but this is the best way right now.
+Matrix is currently being evaluated for use as the official Redox OS chatroom.
 
 <a id="forum"></a>
 ## [Forum](https://discourse.redox-os.org/)
@@ -34,7 +34,7 @@ If you want a quick look at what's going on and talk about it.
 
 News and related content.
 
-<a id="matrix"></a>
-## [Matrix](https://matrix.to/#/#redox:matrix.org)
+<a id="chat"></a>
+## [Mattermost](https://chat.redox-os.org)
 
-Matrix is currently being evaluated for use as the official Redox OS chatroom.
+Until recently, we have been using a Mattermost chat server, which we are currently maintaining for historical purposes. Contact us on Redox OS/General if you need access to the Mattermost server.
