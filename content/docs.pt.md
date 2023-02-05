@@ -2,21 +2,21 @@
 title = "Documentação"
 +++
 
-## Iniciando
+## Introdução
 
 Nós recomendamos que você comece pelo [Livro](https://doc.redox-os.org/book/), pois ele descreve como configurar e usar o Redox.
 
 ## Referências
 
-[Livro](https://doc.redox-os.org/book/). Um livro que descreve o desenho do Redox.
+[Livro](https://doc.redox-os.org/book/). Um livro que descreve o design do Redox.
 
-[Talks](/talks/). Redox talks given at various events and conferences.
+[Palestras](/talks/). Palestras sobre o Redox em diversos eventos e conferências.
 
-[Núcleo](https://doc.redox-os.org/kernel/kernel/). Documentação sobre o núcleo (`kernel`) do Redox.
+[Núcleo/Kernel](https://doc.redox-os.org/kernel/kernel/). Documentação sobre o núcleo (`kernel`) do Redox.
 
 [Biblioteca Padrão](https://doc.redox-os.org/std/std/). Documentação sobre a biblioteca padrão do Redox.
 
-[Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
+[Ion Manual](https://doc.redox-os.org/ion-manual/). Documentação para a shell Ion.
 
 ## Contribuindo pro Redox
 
@@ -29,7 +29,7 @@ O Redox é um grande projeto distribuído através de muitos repositórios que s
 
 ## Comunicação e Chat
 
-O método mais rápido e aberto de se comunicar com o time do Redox é através do nosso servidor de chat. Atualmente, a única forma de juntar-se a ele é enviando um email para [info@redox-os.org](mailto:info@redox-os.org), o qual pode demorar um pouco, já que o mesmo não é automatizado. Nós estamos trabalhando num processo mais fácil, mas no momento esta é a forma mais conveniente.
+Por favor olhe em [Comunidade](/community/)
 
 Você também pode encontrar o Redox no Reddit através dos subreddits [/r/rust/](https://www.reddit.com/r/rust) e [/r/redox/](https://www.reddit.com/r/redox). As notícias da semana são publicadas no /r/redox.
 

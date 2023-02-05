@@ -4,7 +4,7 @@ title = "Doações"
 
 ## Jackpot51
 
-Jackpot51, ou Jeremy Soller, é o criador, mantenedor, e desenvolvedor líder do Redox OS.
+Jackpot51, ou Jeremy Soller, é o criador, mantenedor e desenvolvedor líder do Redox OS.
 
 Você pode doar pro Jackpot51 das seguintes formas:
 
