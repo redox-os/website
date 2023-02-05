@@ -24,7 +24,7 @@ Uma forma mais formal de comunicação com os desenvolvedores do Redox, porém m
 Envie uma Issue se você tiver problemas compilando/testando ou apenas queira discutir algum assunto, seja funções, estilo de código, inconsistências de código, pequenas mudanças ou correções.
 
 <a id="forum"></a>
-## [Forum](https://discourse.redox-os.org/)
+## [Fórum](https://discourse.redox-os.org/)
 
 Essa é a melhor forma de discutir assuntos gerais que não sejam problemas do sistema.
 
