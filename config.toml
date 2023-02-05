@@ -478,8 +478,8 @@ name = "Documentação"
 url = "/docs/"
 [[languages.pt.menu.main]]
 weight = 2
-name = "Community"
-url = "/community"
+name = "Comunidade"
+url = "/community/"
 [[languages.pt.menu.main]]
 weight = 3
 name = "Notícias"
