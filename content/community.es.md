@@ -6,9 +6,7 @@ Esta página intenta explicar como está organizada la comunidad de Redox OS y a
 
 
 <a id="chat"></a>
-## [Chat](https://chat.redox-os.org)
-
-La forma más rápida y abierta de comunicarse con el equipo de Redox es por nuestro sevidor de chat. Actualmente la única manera de recibir una invitación es mandar la petición a info@redox-os.org. No es automatizado y puede tardar un tiempo. En el mensage simplemente escriba su deseo de unirse al chat. Estamos trabajando en una manera más rápida a hacerlo, pero esta es la mejor por ahora.
+## [Chat](https://matrix.to/#/#redox:matrix.org)
 
 <a id="forum"></a>
 ## [Foro](https://discourse.redox-os.org/)

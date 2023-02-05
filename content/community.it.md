@@ -6,9 +6,7 @@ Questa pagina prova a spiegare come é organizzata la comunitá di Redox OS e ti
 
 
 <a id="chat"></a>
-## [Chat](https://chat.redox-os.org)
-
-Il modo piú veloce ed aperto per comunicare con il team di Redox é di farlo sul nostro server per le chat. Per il momento, puoi essere invitato solamente inviando una richiesta via mail a  info@redox-os.org, ci potrebbe volere del tempo, dato che non é un processo automatizzato. Dí semplicemente che vorresti essere aggiunto alla chat. Stiamo lavorando ad un modo migliore per farlo, ma questo é il miglior modo per ora.
+## [Chat](https://matrix.to/#/#redox:matrix.org)
 
 <a id="forum"></a>
 ## [Forum](https://discourse.redox-os.org/)

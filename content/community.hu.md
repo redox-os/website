@@ -5,9 +5,7 @@ title = "Közösség"
 Ez az oldal megpróbálja elmagyarázni, hogy hogyan is szerveződik a Redox OS közössége és megpróbál segíteni az eligazodásban.
 
 <a id="chat"></a>
-## [Chat](https://chat.redox-os.org)
-
-A leggyorsabb és legnyíltabb módja a Redox csapatával való kapcsolatfelvételre a chatszerverünk használata. Csatlakozni jelenleg egy [info@redox-os.org](mailto:info@redox-os.org)-ra küldött e-mailes kérelemmel lehetséges. Ez sajnos eltarthat egy ideig, mivel nincs automatizálva. Egyszerűen csak írd meg, hogy csatlakozni szeretnél a chathez. Dolgozunk egy jobb módszeren, azonban jelen pillanatban ez a legjobb megoldás.
+## [Chat](https://matrix.to/#/#redox:matrix.org)
 
 <a id="forum"></a>
 ## [Fórum](https://discourse.redox-os.org/)
