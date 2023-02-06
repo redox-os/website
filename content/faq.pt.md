@@ -26,7 +26,7 @@ It's important to remind that Unix was the first modern multitasking system of t
 
 ### How Redox is inspired on other systems?
 
-[Plan 9] - maybe the most perfect operating system of the history, bring the concept of "everything is a file" to it's highest level, doing all the system communication from the filesystem.
+[Plan 9] - This Bell Labs OS bring the concept of "everything is a file" to it's highest level, doing all the system communication from the filesystem.
 
 You just need to mount your software on some path and it have the required functionality, any software can work with this interface.
 
@@ -37,7 +37,7 @@ You just need to mount your software on some path and it have the required funct
 [Drew DeVault explain the Plan 9]: https://drewdevault.com/2022/11/12/In-praise-of-Plan-9.html
 [How Redox use the Plan 9 design]: https://doc.redox-os.org/book/ch05-00-urls-schemes-resources.html
 
-[Minix] - the most important Unix-like system with a microkernel, it has advanced features such as system modularity, [kernel panic] resistence, driver reincarnation, protection against bad drivers and secure interfaces for [process comunication].
+[Minix] - the most influential Unix-like system with a microkernel, it has advanced features such as system modularity, [kernel panic] resistence, driver reincarnation, protection against bad drivers and secure interfaces for [process comunication].
 
 Redox is largely inspired by Minix, it have basically the same features but written in Rust.
 
