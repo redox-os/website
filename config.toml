@@ -16,26 +16,34 @@ name = "Documentation"
 url = "/docs/"
 [[languages.en.menu.main]]
 weight = 2
-name = "Community"
-url = "/community"
+name = "FAQ"
+url = "/faq"
 [[languages.en.menu.main]]
 weight = 3
-name = "News"
-url = "/news/"
+name = "Features"
+url = "/features"
 [[languages.en.menu.main]]
 weight = 4
 name = "Screenshots"
 url = "/screens/"
 [[languages.en.menu.main]]
 weight = 5
-name = "Donate"
-url = "/donate/"
+name = "News"
+url = "/news/"
 [[languages.en.menu.main]]
 weight = 6
 name = "GitLab"
 url = "https://gitlab.redox-os.org/redox-os/redox"
 [[languages.en.menu.main]]
 weight = 7
+name = "Community"
+url = "/community"
+[[languages.en.menu.main]]
+weight = 8
+name = "Donate"
+url = "/donate/"
+[[languages.en.menu.main]]
+weight = 9
 name = "RSoC"
 url = "/rsoc/"
 
@@ -490,14 +498,22 @@ name = "Capturas de Tela"
 url = "/screens/"
 [[languages.pt.menu.main]]
 weight = 5
+name = "FAQ"
+url = "/faq/"
+[[languages.pt.menu.main]]
+weight = 6
+name = "Funções"
+url = "/features/"
+[[languages.pt.menu.main]]
+weight = 7
 name = "Doações"
 url = "/donate/"
 [[languages.pt.menu.main]]
-weight = 6
+weight = 8
 name = "GitLab"
 url = "https://gitlab.redox-os.org/redox-os/redox"
 [[languages.pt.menu.main]]
-weight = 7
+weight = 9
 name = "RSoC"
 url = "/rsoc/"
 
