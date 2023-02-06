@@ -15,6 +15,7 @@ This page covers the most asked questions.
 - [How to update the sources and compile the changes?](#how-to-update-the-sources-and-compile-the-changes)
 - [How to insert files inside Redox QEMU harddisk](#how-to-insert-files-inside-redox-qemu-harddisk)
 - [How to troubleshoot your build in case of errors](#how-to-troubleshoot-your-build-in-case-of-errors)
+- [How to launch QEMU without GUI](#how-to-launch-qemu-without-gui)
 
 
 ### What is an Unix-like OS?
@@ -176,3 +177,9 @@ We are moving to use Podman as our main compilation method, actually it's mature
 
 [Book Troubleshooting Guide]: https://doc.redox-os.org/book/ch08-05-troubleshooting.html
 [GitLab Troubleshooting Guide]: https://gitlab.redox-os.org/redox-os/redox#help-redox-wont-compile
+
+### How to launch QEMU without GUI
+
+- Run `make qemu vga=no`
+
+QEMU terminal will looks like a container/chroot.
