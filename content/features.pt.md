@@ -27,9 +27,9 @@ O design em microkernel escrito em Rust torna a maioria das falhas de segurança
 
 ## Sistema de arquivos inspirado no ZFS
 
-O Redox utiliza o RedoxFS como sistema de arquivos padrão, ele suporta as mesmas funções do [ZFS] (copy-on-write, integridade de arquivos, volumes, snapshots, etc) com mudanças na implementação.
+O Redox utiliza o RedoxFS como sistema de arquivos padrão, ele suporta as mesmas funções do [ZFS] com mudanças na implementação.
 
-Espere alto desempenho e segurança dos dados (endurecido contra a perda de arquivos).
+Espere alto desempenho e segurança dos dados (copy-on-write, integridade de arquivos, volumes, snapshots, endurecido contra a perda de arquivos).
 
 [ZFS]: https://docs.freebsd.org/en/books/handbook/zfs/
 
