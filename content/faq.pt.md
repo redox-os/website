@@ -4,6 +4,15 @@ title = "FAQ"
 
 This page covers the most asked questions.
 
+- [What is an Unix-like OS?](#what-is-an-unix-like-os)
+- [How Redox is inspired by other systems](#how-redox-is-inspired-by-other-systems)
+- [What is a microkernel?](#what-is-a-microkernel)
+- [Which devices Redox support?](#which-devices-redox-support)
+- [How to build Redox?](#how-to-build-redox)
+- [How to report bugs on Redox?](#how-to-report-bugs-on-redox)
+- [How to contribute for Redox?](#how-to-contribute-for-redox)
+- [I have a problem/question for Redox team](#i-have-a-problemquestion-for-redox-team)
+
 ### What is an Unix-like OS?
 
 Any OS with [Unix] design aspects, such as shell, "everything is a file" concept, multitasking and multiuser.
@@ -51,10 +60,6 @@ Redox tries to implement the Linux performance improvements in a microkernel des
 
 [Linux]: https://www.kernel.org/
 
-### Which processor architectures Redox support?
-
-The most maintained/updated is x86_64 (AMD64), the second is x86 and ARM64 is incomplete yet.
-
 ### What is a microkernel?
 
 - [Redox Book explanation]
@@ -62,6 +67,12 @@ The most maintained/updated is x86_64 (AMD64), the second is x86 and ARM64 is in
 [Redox Book explanation]: https://doc.redox-os.org/book/ch04-01-microkernels.html
 
 ### Which devices Redox support?
+
+#### CPU
+
+- x86_64/AMD64 (Intel/AMD)
+- x86/i686 (Intel/AMD, incomplete)
+- ARM64 (WIP, incomplete)
 
 #### Internet
 
@@ -98,3 +109,46 @@ The most maintained/updated is x86_64 (AMD64), the second is x86 and ARM64 is in
 - PS/2 keyboards
 - PS/2 mouse
 - PS/2 touchpad
+
+### How to build Redox?
+
+Currently Redox has a bootstrap script Debian/Ubuntu/Pop OS! with unmaintained support for other distributions.
+
+We are moving to use Podman as our main compilation method, actually it's mature and compile like the raw script.
+
+(Podman avoid environment problems on compilation)
+
+- [Redox Book Guide] (Debian/Ubuntu/Pop OS!)
+- [Redox Book Advanced Guide] (Debian/Ubuntu/Pop OS!)
+- [Redox Book Podman Guide]
+- [Redox Book Podman Advanced Guide]
+
+[Redox Book Guide]: https://doc.redox-os.org/book/ch02-05-building-redox.html
+[Redox Book Advanced Guide]: https://doc.redox-os.org/book/ch08-01-advanced-build.html
+[Redox Book Podman Guide]: https://doc.redox-os.org/book/ch02-06-podman-build.html
+[Redox Book Podman Advanced Guide]: https://doc.redox-os.org/book/ch08-02-advanced-podman-build.html
+
+### How to report bugs on Redox?
+
+- [Redox Book Bug Report Guide]
+
+[Redox Book Bug Report Guide]: https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html
+
+### How to contribute for Redox?
+
+- [GitLab Guide]
+- [Redox Book Contribution Guide]
+- [How to make pull requests properly]
+
+[GitLab Guide]: https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md
+[Redox Book Contribution Guide]: https://doc.redox-os.org/book/ch10-02-low-hanging-fruit.html
+[How to make pull requests properly]: https://doc.redox-os.org/book/ch12-04-creating-proper-pull-requests.html
+
+### I have a problem/question for Redox team
+
+- Read all the [Redox book] to see if it answer your questions/fix your problem.
+- If the book is not enough for you, make your question/say your problem on [Redox Support] or [Redox Dev] rooms on Matrix.
+
+[Redox book]: https://doc.redox-os.org/book/
+[Redox Support]: https://matrix.to/#/#redox-support:matrix.org
+[Redox Dev]: https://matrix.to/#/#redox-dev:matrix.org
