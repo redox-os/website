@@ -33,7 +33,7 @@ Expect high performance and data safety (copy-on-write, data integrity, volumes,
 
 [ZFS]: https://docs.freebsd.org/en/books/handbook/zfs/
 
-## Best system performance and less memory usage
+## Better system performance and less memory usage
 
 As the kernel is small, it uses less memory to do his work.
 
