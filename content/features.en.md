@@ -10,7 +10,7 @@ You can change every system component without a system restart, similar to [live
 
 ## Bug isolation
 
-The kernel is small and are close to bug-free status ([KISS] goal), a bug on any system component can't [crash the system].
+The kernel is small and close to bug-free status ([KISS] goal), a bug on any system component can't [crash the system].
 
 [KISS]: https://en.wikipedia.org/wiki/KISS_principle
 [crash the system]: https://en.wikipedia.org/wiki/Kernel_panic
@@ -27,9 +27,9 @@ The microkernel design written in Rust makes most C/C++ security bugs irrelevant
 
 ## ZFS-inspired filesystem
 
-Redox uses RedoxFS as the default filesystem, it support the same features of [ZFS] (copy-on-write, data integrity, volumes, snapshots, etc) with changes on implementation.
+Redox uses RedoxFS as the default filesystem, it support the same features of [ZFS] with changes on implementation.
 
-Expect high performance and data safety (hardened against data loss).
+Expect high performance and data safety (copy-on-write, data integrity, volumes, snapshots, hardened against data loss).
 
 [ZFS]: https://docs.freebsd.org/en/books/handbook/zfs/
 
