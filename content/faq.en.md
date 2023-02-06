@@ -152,3 +152,23 @@ We are moving to use Podman as our main compilation method, actually it's mature
 [Redox book]: https://doc.redox-os.org/book/
 [Redox Support]: https://matrix.to/#/#redox-support:matrix.org
 [Redox Dev]: https://matrix.to/#/#redox-dev:matrix.org
+
+### How to update the sources and compile the changes?
+
+- [Book Rebuild Guide]
+
+[Book Rebuild Guide]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#the-full-rebuild-cycle
+
+### How to insert files inside Redox QEMU harddisk
+
+- [Book QEMU Guide]
+
+[Book QEMU Guide]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#patch-an-image
+
+### How to troubleshoot your build in case of errors
+
+- [Book Troubleshooting Guide]
+- [GitLab Troubleshooting Guide]
+
+[Book Troubleshooting Guide]: https://doc.redox-os.org/book/ch08-05-troubleshooting.html
+[GitLab Troubleshooting Guide]: https://gitlab.redox-os.org/redox-os/redox#help-redox-wont-compile
