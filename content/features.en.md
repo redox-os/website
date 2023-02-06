@@ -49,4 +49,4 @@ Drivers written in Rust have less bugs, more security and performance (less bugs
 
 ## Easy to develop and debug
 
-Most of the system components run on user-space, you don't need virtualization to test/debug then, more quick to develop.
+Most of the system components run on user-space, you don't need virtualization to test/debug them, more quick to develop.
