@@ -5,7 +5,7 @@ title = "FAQ"
 This page covers the most asked questions.
 
 - [What is an Unix-like OS?](#what-is-an-unix-like-os)
-- [How Redox is inspired by other systems](#how-redox-is-inspired-by-other-systems)
+- [How Redox is inspired by other systems?](#how-redox-is-inspired-by-other-systems)
 - [What is a microkernel?](#what-is-a-microkernel)
 - [Which devices Redox support?](#which-devices-redox-support)
 - [How to build Redox?](#how-to-build-redox)
