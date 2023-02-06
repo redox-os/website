@@ -12,6 +12,10 @@ This page covers the most asked questions.
 - [How to report bugs on Redox?](#how-to-report-bugs-on-redox)
 - [How to contribute for Redox?](#how-to-contribute-for-redox)
 - [I have a problem/question for Redox team](#i-have-a-problemquestion-for-redox-team)
+- [How to update the sources and compile the changes?](#how-to-update-the-sources-and-compile-the-changes)
+- [How to insert files inside Redox QEMU harddisk](#how-to-insert-files-inside-redox-qemu-harddisk)
+- [How to troubleshoot your build in case of errors](#how-to-troubleshoot-your-build-in-case-of-errors)
+
 
 ### What is an Unix-like OS?
 
