@@ -10,14 +10,13 @@ You can change every system component without a system restart, similar to [live
 
 ## Bug isolation
 
-The kernel is small and close to bug-free status ([KISS] goal), a bug on any system component can't [crash the system].
+Most system components run in user-space on a microkernel system, a bug on any system component can't [crash the system/kernel].
 
-[KISS]: https://en.wikipedia.org/wiki/KISS_principle
-[crash the system]: https://en.wikipedia.org/wiki/Kernel_panic
+[crash the system/kernel]: https://en.wikipedia.org/wiki/Kernel_panic
 
 ## No-reboot design
 
-The kernel is small and change very little (bug fixing), then you don't need to restart your system to update the system, since most of the system components are on user-space, they can be replaced on-the-fly (it helps a lot server administrators).
+The kernel change very little (bug fixing), then you don't need to restart your system to update the system, since most of the system components are on user-space, they can be replaced on-the-fly (it helps a lot server administrators).
 
 Expect less kernel updates too (less chance to more bugs).
 
@@ -35,11 +34,13 @@ Expect high performance and data safety (copy-on-write, data integrity, volumes,
 
 ## Better system performance and less memory usage
 
-As the kernel is small, it uses less memory to do his work.
+As the kernel is small, it uses less memory to do his work and close to bug-free status ([KISS] goal).
 
 Beyond being small, the system is written in Rust, this language helps the programmer to write better code that don't cause performance problems.
 
 Rust implement performance optimization with safety by default.
+
+[KISS]: https://en.wikipedia.org/wiki/KISS_principle
 
 ## Rust-written drivers
 

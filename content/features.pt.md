@@ -10,10 +10,9 @@ Você pode mudar cada componente do sistema sem reiniciar o sistema, similar ao 
 
 ## Isolamento de bugs
 
-O kernel é pequeno e está perto de ser livre de bugs (objetivo do príncipio [KISS]), um bug em um componente do sistema não pode [quebrar o sistema].
+A maioria dos componentes do sistema executam no espaço do usuário em um sistema com microkernel, um bug em qualquer componente do sistema não pode [quebrar o sistema/kernel].
 
-[KISS]: https://en.wikipedia.org/wiki/KISS_principle
-[quebrar o sistema]: https://en.wikipedia.org/wiki/Kernel_panic
+[quebrar o sistema/kernel]: https://en.wikipedia.org/wiki/Kernel_panic
 
 ## Design de não-reinicialização
 
@@ -35,11 +34,13 @@ Espere alto desempenho e segurança dos dados (copy-on-write, integridade de arq
 
 ## Melhor desempenho do sistema e menos uso de memória
 
-Como o kernel é pequeno, ele usa menos memória para fazer sua função.
+Como o kernel é pequeno, ele usa menos memória para fazer suas funções e está perto de ser livre de bugs (objetivo do príncipio [KISS]).
 
 Além de ser pequeno, o sistema é escrito em Rust, essa linguaguem de programação ajuda os programadores a escrever um código melhor sem problemas de desempenho.
 
 A Rust implementa otimização de desempenho com segurança por padrão.
+
+[KISS]: https://en.wikipedia.org/wiki/KISS_principle
 
 ## Drivers escritos em Rust
 
