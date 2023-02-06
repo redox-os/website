@@ -10,7 +10,7 @@ Você pode mudar cada componente do sistema sem reiniciar o sistema, similar ao 
 
 ## Isolamento de bugs
 
-O kernel é pequeno e está perto de ser livre de bugs (objetivo do príncipio [KISS]), um bug em um serviço do sistema não pode [quebrar o sistema].
+O kernel é pequeno e está perto de ser livre de bugs (objetivo do príncipio [KISS]), um bug em um componente do sistema não pode [quebrar o sistema].
 
 [KISS]: https://en.wikipedia.org/wiki/KISS_principle
 [quebrar o sistema]: https://en.wikipedia.org/wiki/Kernel_panic
@@ -40,3 +40,14 @@ Como o kernel é pequeno, ele usa menos memória para fazer sua função.
 Além de ser pequeno, o sistema é escrito em Rust, essa linguaguem de programação ajuda os programadores a escrever um código melhor sem problemas de desempenho.
 
 A Rust implementa otimização de desempenho com segurança por padrão.
+
+## Drivers escritos em Rust
+
+Drivers written in Rust have less bugs, more security and performance (less bugs can bring more performance).
+Drivers escritos em Rust tem menos bugs, mais segurança e desempenho (menos bugs podem melhorar o desempenho do dispositivo).
+
+- [Dispositivos suportados atualmente](/faq/#which-devices-redox-support)
+
+## Fácil de desenvolver e depurar
+
+A maioria dos componentes do sistema estão no espaço do usuário, você não precisa de virtualização para testar/depurar eles, mais rápido de desenvolver.

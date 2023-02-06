@@ -10,14 +10,14 @@ You can change every system component without a system restart, similar to [live
 
 ## Bug isolation
 
-The kernel is small and are close to bug-free status ([KISS] goal), a bug on any system service can't [crash the system].
+The kernel is small and are close to bug-free status ([KISS] goal), a bug on any system component can't [crash the system].
 
 [KISS]: https://en.wikipedia.org/wiki/KISS_principle
 [crash the system]: https://en.wikipedia.org/wiki/Kernel_panic
 
 ## No-reboot design
 
-The kernel is small and change very little (bug fixing), then you don't need to restart your system to update the system, since most of the system services are on user-space, they can be replaced on-the-fly.
+The kernel is small and change very little (bug fixing), then you don't need to restart your system to update the system, since most of the system components are on user-space, they can be replaced on-the-fly (it helps a lot server administrators).
 
 Expect less kernel updates too (less chance to more bugs).
 
@@ -40,3 +40,13 @@ As the kernel is small, it uses less memory to do his work.
 Beyond being small, the system is written in Rust, this language helps the programmer to write better code that don't cause performance problems.
 
 Rust implement performance optimization with safety by default.
+
+## Rust-written drivers
+
+Drivers written in Rust have less bugs, more security and performance (less bugs can bring more performance of the device).
+
+- [Currently supported devices](/faq/#which-devices-redox-support)
+
+## Easy to develop and debug
+
+Most of the system components run on user-space, you don't need virtualization to test/debug then, more quick to develop.

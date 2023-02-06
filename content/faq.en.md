@@ -54,3 +54,47 @@ Redox tries to implement the Linux performance improvements in a microkernel des
 ### Which processor architectures Redox support?
 
 The most maintained/updated is x86_64 (AMD64), the second is x86 and ARM64 is incomplete yet.
+
+### What is a microkernel?
+
+- [Redox Book explanation]
+
+[Redox Book explanation]: https://doc.redox-os.org/book/ch04-01-microkernels.html
+
+### Which devices Redox support?
+
+#### Internet
+
+- Intel ethernet
+- Realtek ethernet
+
+(Wi-Fi soon)
+
+#### Sound
+
+- Intel chipsets
+- Realtek chipsets
+
+#### Video
+
+- VGA (BIOS)
+- GOP (UEFI)
+- [LLVMpipe] (Software Rendering)
+
+(Intel/AMD and others in the future)
+
+[LLVMpipe]: https://docs.mesa3d.org/drivers/llvmpipe.html
+
+#### Storage
+
+- IDE (PATA)
+- AHCI (SATA)
+- NVMe
+
+(USB soon)
+
+#### Input
+
+- PS/2 keyboards
+- PS/2 mouse
+- PS/2 touchpad
