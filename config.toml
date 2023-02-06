@@ -498,14 +498,22 @@ name = "Capturas de Tela"
 url = "/screens/"
 [[languages.pt.menu.main]]
 weight = 5
+name = "FAQ"
+url = "/faq/"
+[[languages.pt.menu.main]]
+weight = 6
+name = "Funções"
+url = "/features/"
+[[languages.pt.menu.main]]
+weight = 7
 name = "Doações"
 url = "/donate/"
 [[languages.pt.menu.main]]
-weight = 6
+weight = 8
 name = "GitLab"
 url = "https://gitlab.redox-os.org/redox-os/redox"
 [[languages.pt.menu.main]]
-weight = 7
+weight = 9
 name = "RSoC"
 url = "/rsoc/"
 

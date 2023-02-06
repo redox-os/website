@@ -2,7 +2,7 @@
 title = "Features"
 +++
 
-## Real modularity
+## True modularity
 
 You can change every system component without a system restart, similar to [livepatching]).
 
@@ -10,7 +10,10 @@ You can change every system component without a system restart, similar to [live
 
 ## Bug isolation
 
-The kernel is small and are close to bug-free status (KISS goal), don't expect a system service bug to crash the system (kernel panic).
+The kernel is small and are close to bug-free status ([KISS] goal), a bug on any system service can't [crash the system].
+
+[KISS]: https://en.wikipedia.org/wiki/KISS_principle
+[crash the system]: https://en.wikipedia.org/wiki/Kernel_panic
 
 ## No-reboot design
 
