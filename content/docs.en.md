@@ -26,7 +26,7 @@ You can contribute to Redox documentation/code on these repositories:
 
 - [Website](https://gitlab.redox-os.org/redox-os/website)
 - [Book](https://gitlab.redox-os.org/redox-os/book)
-- [Scripts/Config](https://gitlab.redox-os.org/redox-os/redox)
+- [Main Repository (build system/config)](https://gitlab.redox-os.org/redox-os/redox)
 - [Redox Packages (all system components/ported software)](https://gitlab.redox-os.org/redox-os/cookbook)
 - [Redox Desktop Environment](https://gitlab.redox-os.org/redox-os/orbital)
 - [Orbital Client Library](https://gitlab.redox-os.org/redox-os/orbclient)
