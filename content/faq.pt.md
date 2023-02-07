@@ -2,236 +2,264 @@
 title = "FAQ"
 +++
 
-This page covers the most asked questions.
+Essa página cobre as perguntas mais comuns.
+
+
+- [O que é um sistema Unix-like?](#o-que-%C3%A9-um-sistema-unix-like)
+- [Como o Redox é inspirado em outros sistemas?](#como-o-redox-%C3%A9-inspirado-em-outros-sistemas)
+- [O que é um microkernel?](#o-que-%C3%A9-um-microkernel)
+- [Quais dispositivos o Redox suporta?](#quais-dispositivos-o-redox-suporta)
+- [Como compilar o Redox?](#como-compilar-o-redox)
+- [Como reportar bugs para o Redox?](#como-reportar-bugs-para-o-redox)
+- [Como contribuir para o Redox?](#como-contribuir-para-o-redox)
+- [Eu tenho um problema/pergunta para a equipe do Redox](#eu-tenho-um-problemapergunta-para-a-equipe-do-redox)
+- [Como atualizar o código-fonte e compilar as mudanças?](#como-atualizar-o-c%C3%B3digo-fonte-e-compilar-as-mudan%C3%A7as)
+- [Como inserir arquivos no disco rígido do QEMU](#como-inserir-arquivos-dentro-do-disco-r%C3%ADgido-do-qemu)
+- [Como diagnosticar seu Redox em caso de erros](#como-diagnosticar-seu-redox-em-caso-de-erros)
+- [Como abrir o QEMU sem interface gráfica](#como-abrir-o-qemu-sem-interface-gr%C3%A1fica)
 
 
 
-- [What is an Unix-like OS?](#what-is-an-unix-like-os)
-- [How Redox is inspired by other systems?](#how-redox-is-inspired-by-other-systems)
-- [What is a microkernel?](#what-is-a-microkernel)
-- [Which devices Redox support?](#which-devices-redox-support)
-- [How to build Redox?](#how-to-build-redox)
-- [How to report bugs on Redox?](#how-to-report-bugs-on-redox)
-- [How to contribute for Redox?](#how-to-contribute-for-redox)
-- [I have a problem/question for Redox team](#i-have-a-problemquestion-for-redox-team)
-- [How to update the sources and compile the changes?](#how-to-update-the-sources-and-compile-the-changes)
-- [How to insert files inside Redox QEMU harddisk](#how-to-insert-files-inside-redox-qemu-harddisk)
-- [How to troubleshoot your build in case of errors](#how-to-troubleshoot-your-build-in-case-of-errors)
-- [How to launch QEMU without GUI](#how-to-launch-qemu-without-gui)
+### O que é um sistema Unix-like?
 
 
-
-### What is an Unix-like OS?
-
-
-Any OS with [Unix] design aspects, such as shell, "everything is a file" concept, multitasking and multiuser.
+Qualquer sistema com traços do design [Unix], tal como uma Shell, o conceito de "Tudo é um arquivo", multitarefa e multiusuário.
 
 
-It's important to remind that Unix was the first modern multitasking system of the world, then any system used his design choices in some way.
+É importante lembrar que o Unix foi o primeiro sistema de multitarefa moderno do mundo, então qualquer sistema pode ter usado aspectos do seu design de alguma forma.
+
+- [Artigo da Wikipedia]
+
+[Unix]: https://pt.wikipedia.org/wiki/Unix
+[Artigo da Wikipedia]: https://pt.wikipedia.org/wiki/Sistema_operacional_tipo_Unix
+
+### Como o Redox é inspirado em outros sistemas?
 
 
-- [Wikipedia article]
-
-[Unix]: https://en.wikipedia.org/wiki/Unix
-[Wikipedia article]: https://en.wikipedia.org/wiki/Unix-like
-
-### How Redox is inspired by other systems?
+[Plan 9] - Este sistema da Bell Labs trouxe o conceito de "Tudo é um arquivo" ao seu maior nível, fazendo toda a comunicação do sistema pelo sistemas de arquivos.
 
 
-[Plan 9] - This Bell Labs OS bring the concept of "everything is a file" to the highest level, doing all the system communication from the filesystem.
+Você apenas precisa montar o software em algum local para obter a função desejada, qualquer software pode funcionar dessa forma.
 
-
-You just need to mount your software on some path and it have the required functionality, any software can work with this interface.
-
-
-- [Drew DeVault explain the Plan 9]
-- [How Redox use the Plan 9 design]
+- [Drew DeVault explicando o Plan 9]
+- [Como o Redox utiliza o design do Plan 9]
 
 
 [Plan 9]: http://9p.io/plan9/index.html
-[Drew DeVault explain the Plan 9]: https://drewdevault.com/2022/11/12/In-praise-of-Plan-9.html
-[How Redox use the Plan 9 design]: https://doc.redox-os.org/book/ch05-00-urls-schemes-resources.html
+[Drew DeVault explicando o Plan 9]: https://drewdevault.com/2022/11/12/In-praise-of-Plan-9.html
+[Como o Redox utiliza o design do Plan 9]: https://doc.redox-os.org/book/ch05-00-urls-schemes-resources.html
 
-[Minix] - the most influential Unix-like system with a microkernel, it has advanced features such as system modularity, [kernel panic] resistence, driver reincarnation, protection against bad drivers and secure interfaces for [process comunication].
+[Minix] - o sistema Unix-like com microkernel mais influente, ele possuí funções avançadas tais como modularidade do sistema, resistência a [quebra do kernel], reincarnação de driver, proteção contra drivers ruins e interfaces seguras para a [comunicação dos processos].
 
 
-Redox is largely inspired by Minix, it have basically the same features but written in Rust.
+O Redox é largamente inspirado pelo Minix, ele tem basicamente as mesmas funções mas escritas em Rust.
 
 [Minix]: https://minix3.org/
-[kernel panic]: https://en.wikipedia.org/wiki/Kernel_panic
-[process comunication]: https://en.wikipedia.org/wiki/Inter-process_communication
-[How Redox implement the Minix microkernel design]: https://doc.redox-os.org/book/ch04-01-microkernels.html
+[quebra do kernel]: https://en.wikipedia.org/wiki/Kernel_panic
+[comunicação dos processos]: https://en.wikipedia.org/wiki/Inter-process_communication
+[Como o Redox implementa o design de microkernel do Minix]: https://doc.redox-os.org/book/ch04-01-microkernels.html
 
 
-[BSD] - This Unix OS [family] did several improvements on Unix systems, the most notable is [BSD sockets], that brings network communication inside the Unix filesystem (before Plan 9).
+[BSD] - Essa [família] de sistemas Unix fez diversas melhorias para os sistemas Unix, a mais notável são os [sockets BSD], eles trazem a comunicação de rede para o sistema de arquivos Unix (antes do Plan 9).
+
+- [Documentação do FreeBSD]
 
 
-- [FreeBSD documentation]
+[BSD]: https://www.bsd.org/
+[família]: https://en.wikipedia.org/wiki/Research_Unix
+[sockets BSD]: https://en.wikipedia.org/wiki/Berkeley_sockets
+[Documentação do FreeBSD]: https://docs.freebsd.org/en/books/developers-handbook/sockets/
+
+[Linux] - o kernel monolítico mais avançado do mundo e maior projeto de código-aberto do mundo, ele traz diversas melhorias/otimizações para sistemas Unix-like.
 
 
-[family]: https://en.wikipedia.org/wiki/Research_Unix
-[BSD sockets]: https://en.wikipedia.org/wiki/Berkeley_sockets
-[FreeBSD documentation]: https://docs.freebsd.org/en/books/developers-handbook/sockets/
-
-[Linux] - the most advanced monolithic kernel of the world and biggest open-source project of the world, it brings several improvements/optimizations to Unix-like systems.
-
-
-Redox tries to implement the Linux performance improvements in a microkernel design.
-
+O Redox tenta implementar as melhorias de desempenho do Linux em um design de microkernel.
 
 [Linux]: https://www.kernel.org/
 
-### What is a microkernel?
+### O que é um microkernel?
 
 
-- [Redox Book explanation]
+- [Explicação do livro Redox]
 
-[Redox Book explanation]: https://doc.redox-os.org/book/ch04-01-microkernels.html
+[Explicação do livro Redox]: https://doc.redox-os.org/book/ch04-01-microkernels.html
 
-
-### Which devices Redox support?
+### Quais dispositivos o Redox suporta?
 
 
 #### CPU
 
 
-- x86_64/AMD64 (Intel/AMD)
-- x86/i686 (Intel/AMD, incomplete)
-- ARM64 (WIP, incomplete)
+- [x86_64/AMD64] - (Intel/AMD)
+- [x86/i686] - (Intel/AMD, incompleto)
+- [ARM64] - (incompleto)
 
+[x86_64/AMD64]: https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/x86_64
+[x86/i686]: https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/x86
+[ARM64]: https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/aarch64
+
+#### Interfaces do Hardware
+
+
+- [ACPI]
+- [PCI]
+
+
+(USB soon)
+
+[ACPI]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/acpid
+[PCI]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/pcid
 
 #### Internet
 
 
-- Intel ethernet
-- Realtek ethernet
+- [Intel Gigabit ethernet]
+- [Intel 10 Gigabit ethernet]
+- [Realtek ethernet]
 
 
-(Wi-Fi soon)
+(Wi-Fi em breve)
+
+[Intel Gigabit ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/e1000d
+[Intel 10 Gigabit ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ixgbed
+[Realtek ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/rtl8168d
+
+#### Som
 
 
-#### Sound
+- [Intel chipsets]
+- [Realtek chipsets]
 
-
-- Intel chipsets
-- Realtek chipsets
-
+[Intel chipsets]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ihdad
+[Realtek chipsets]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ac97d
 
 #### Video
 
 
-- VGA (BIOS)
+- [VGA] - (BIOS)
 - GOP (UEFI)
-- [LLVMpipe] (Software Rendering)
+- [LLVMpipe] - Renderização de Software
 
 
-(Intel/AMD and others in the future)
+(Intel/AMD e outros no futuro)
 
-
+[VGA]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/vesad
 [LLVMpipe]: https://docs.mesa3d.org/drivers/llvmpipe.html
 
 #### Storage
 
 
-- IDE (PATA)
-- AHCI (SATA)
-- NVMe
-
-(USB soon)
+- [IDE] - (PATA)
+- [AHCI] - (SATA)
+- [NVMe]
 
 
-#### Input
+(USB em breve)
+
+[IDE]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ided
+[AHCI]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ahcid
+[NVMe]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/nvmed
+
+#### Periféricos
 
 
-- PS/2 keyboards
-- PS/2 mouse
-- PS/2 touchpad
+- [Teclados PS/2]
+- [Mouse PS/2]
+- [Touchpad PS/2]
 
 
-### How to build Redox?
+(USB em breve)
+
+[Teclados PS/2]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d
+[Mouse PS/2]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d
+[Touchpad PS/2]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d
 
 
-Currently Redox has a bootstrap script Debian/Ubuntu/Pop OS! with unmaintained support for other distributions.
+### Como compilar o Redox?
 
 
-We are moving to use Podman as our main compilation method, actually it's mature and compile like the raw script.
+Atualmente o Redox tem um script de bootstrap para o Debian/Ubuntu/Pop OS! com suporte não mantido para outras distribuições.
 
 
-(Podman avoid environment problems on compilation)
+Nós estamos em transição para o Podman como nosso método de compilação principal, atualmente ele é bem maduro e compila como o script normal.
 
 
-- [Redox Book Guide] (Debian/Ubuntu/Pop OS!)
-- [Redox Book Advanced Guide] (Debian/Ubuntu/Pop OS!)
-- [Redox Book Podman Guide]
-- [Redox Book Podman Advanced Guide]
-
-[Redox Book Guide]: https://doc.redox-os.org/book/ch02-05-building-redox.html
-[Redox Book Advanced Guide]: https://doc.redox-os.org/book/ch08-01-advanced-build.html
-[Redox Book Podman Guide]: https://doc.redox-os.org/book/ch02-06-podman-build.html
-[Redox Book Podman Advanced Guide]: https://doc.redox-os.org/book/ch08-02-advanced-podman-build.html
+(O Podman evita problemas de ambiente durante a compilação)
 
 
-### How to report bugs on Redox?
+- [Guia no Livro do Redox] - (Debian/Ubuntu/Pop OS!)
+- [Guia Avançado no Livro do Redox] - (Debian/Ubuntu/Pop OS!)
+- [Guia do Podman no Livro do Redox]
+- [Guia Avançado do Podman no Livro do Redox]
+
+[Guia no Livro do Redox]: https://doc.redox-os.org/book/ch02-05-building-redox.html
+[Guia Avançado no Livro do Redox]: https://doc.redox-os.org/book/ch08-01-advanced-build.html
+[Guia do Podman no Livro do Redox]: https://doc.redox-os.org/book/ch02-06-podman-build.html
+[Guia Avançado do Podman no Livro do Redox]: https://doc.redox-os.org/book/ch08-02-advanced-podman-build.html
 
 
-- [Redox Book Bug Report Guide]
-
-[Redox Book Bug Report Guide]: https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html
+### Como reportar bugs para o Redox?
 
 
-### How to contribute for Redox?
+- [Guia para Relatório de Bug no Livro do Redox]
+
+[Guia para Relatório de Bug no Livro do Redox]: https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html
 
 
-- [GitLab Guide]
-- [Redox Book Contribution Guide]
-- [How to make pull requests properly]
-
-[GitLab Guide]: https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md
-[Redox Book Contribution Guide]: https://doc.redox-os.org/book/ch10-02-low-hanging-fruit.html
-[How to make pull requests properly]: https://doc.redox-os.org/book/ch12-04-creating-proper-pull-requests.html
+### Como contribuir para o Redox?
 
 
-### I have a problem/question for Redox team
+- [Guia de Contribuição no Livro do Redox]
+- [Como fazer pull requests corretamente]
+- [Guia do GitLab]
 
 
-- Read all the [Redox book] to see if it answer your questions/fix your problem.
-- If the book is not enough for you, make your question/say your problem on [Redox Support] or [Redox Dev] rooms on Matrix.
+[Guia de Contribuição no Livro do Redox]: https://doc.redox-os.org/book/ch10-02-low-hanging-fruit.html
+[Como fazer pull requests corretamente]: https://doc.redox-os.org/book/ch12-04-creating-proper-pull-requests.html
+[Guia do GitLab]: https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md
 
-[Redox book]: https://doc.redox-os.org/book/
+
+### Eu tenho um problema/pergunta para a equipe do Redox
+
+
+- Leia todo [livro do Redox] para ver se isso responde suas pergunta/corrige seu problema.
+- Se o livro não for suficiente pra você, diga sua pergunta/problema nas salas [Redox Support] ou [Redox Dev] no Matrix.
+
+[livro do Redox]: https://doc.redox-os.org/book/
 [Redox Support]: https://matrix.to/#/#redox-support:matrix.org
 [Redox Dev]: https://matrix.to/#/#redox-dev:matrix.org
 
 
-### How to update the sources and compile the changes?
+### Como atualizar o código-fonte e compilar as mudanças?
 
 
-- [Book Rebuild Guide]
+- [Guia de Recompilação no Livro do Redox]
 
-[Book Rebuild Guide]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#the-full-rebuild-cycle
-
-
-### How to insert files inside Redox QEMU harddisk
+[Guia de Recompilação no Livro do Redox]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#the-full-rebuild-cycle
 
 
-- [Book QEMU Guide]
-
-[Book QEMU Guide]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#patch-an-image
+### Como inserir arquivos dentro do disco rígido do QEMU
 
 
-### How to troubleshoot your build in case of errors
+- [Guia do QEMU no livro do Redox]
+
+[Guia do QEMU no livro do Redox]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#patch-an-image
 
 
-- [Book Troubleshooting Guide]
-- [GitLab Troubleshooting Guide]
-
-[Book Troubleshooting Guide]: https://doc.redox-os.org/book/ch08-05-troubleshooting.html
-[GitLab Troubleshooting Guide]: https://gitlab.redox-os.org/redox-os/redox#help-redox-wont-compile
+### Como diagnosticar seu Redox em caso de erros
 
 
-### How to launch QEMU without GUI
+- [Guia de Diagnóstico no Livro do Redox]
+- [Guia de Diagnóstico no GitLab]
+
+[Guia de Diagnóstico no Livro do Redox]: https://doc.redox-os.org/book/ch08-05-troubleshooting.html
+[Guia de Diagnóstico no GitLab]: https://gitlab.redox-os.org/redox-os/redox#help-redox-wont-compile
 
 
-- Run `make qemu vga=no`
+### Como abrir o QEMU sem interface gráfica
 
 
-QEMU terminal will looks like a container/chroot.
+- Execute `make qemu vga=no`
+
+
+O QEMU ficará semelhante a um container/chroot.

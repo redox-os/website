@@ -192,8 +192,8 @@ We are moving to use Podman as our main compilation method, actually it's mature
 (Podman avoid environment problems on compilation)
 
 
-- [Redox Book Guide] (Debian/Ubuntu/Pop OS!)
-- [Redox Book Advanced Guide] (Debian/Ubuntu/Pop OS!)
+- [Redox Book Guide] - (Debian/Ubuntu/Pop OS!)
+- [Redox Book Advanced Guide] - (Debian/Ubuntu/Pop OS!)
 - [Redox Book Podman Guide]
 - [Redox Book Podman Advanced Guide]
 
@@ -218,9 +218,9 @@ We are moving to use Podman as our main compilation method, actually it's mature
 - [How to make pull requests properly]
 - [GitLab Guide]
 
-[GitLab Guide]: https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md
 [Redox Book Contribution Guide]: https://doc.redox-os.org/book/ch10-02-low-hanging-fruit.html
 [How to make pull requests properly]: https://doc.redox-os.org/book/ch12-04-creating-proper-pull-requests.html
+[GitLab Guide]: https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md
 
 
 ### I have a problem/question for Redox team
@@ -237,26 +237,26 @@ We are moving to use Podman as our main compilation method, actually it's mature
 ### How to update the sources and compile the changes?
 
 
-- [Book Rebuild Guide]
+- [Redox Book Rebuild Guide]
 
-[Book Rebuild Guide]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#the-full-rebuild-cycle
+[Redox Book Rebuild Guide]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#the-full-rebuild-cycle
 
 
 ### How to insert files inside Redox QEMU harddisk
 
 
-- [Book QEMU Guide]
+- [Redox Book QEMU Guide]
 
-[Book QEMU Guide]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#patch-an-image
+[Redox Book QEMU Guide]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#patch-an-image
 
 
 ### How to troubleshoot your build in case of errors
 
 
-- [Book Troubleshooting Guide]
+- [Redox Book Troubleshooting Guide]
 - [GitLab Troubleshooting Guide]
 
-[Book Troubleshooting Guide]: https://doc.redox-os.org/book/ch08-05-troubleshooting.html
+[Redox Book Troubleshooting Guide]: https://doc.redox-os.org/book/ch08-05-troubleshooting.html
 [GitLab Troubleshooting Guide]: https://gitlab.redox-os.org/redox-os/redox#help-redox-wont-compile
 
 
