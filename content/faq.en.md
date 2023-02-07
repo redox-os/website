@@ -10,13 +10,13 @@ This page covers the most asked questions.
 - [Which devices Redox support?](#which-devices-redox-support)
 - [Which virtual machines Redox has integration?](#which-virtual-machines-redox-has-integration)
 - [How to build Redox?](#how-to-build-redox)
+- [How to update the sources and compile the changes?](#how-to-update-the-sources-and-compile-the-changes)
+- [How to launch QEMU without GUI](#how-to-launch-qemu-without-gui)
+- [How to insert files inside Redox QEMU harddisk](#how-to-insert-files-inside-redox-qemu-harddisk)
+- [How to troubleshoot your build in case of errors](#how-to-troubleshoot-your-build-in-case-of-errors)
 - [How to report bugs on Redox?](#how-to-report-bugs-on-redox)
 - [How to contribute for Redox?](#how-to-contribute-for-redox)
 - [I have a problem/question for Redox team](#i-have-a-problemquestion-for-redox-team)
-- [How to update the sources and compile the changes?](#how-to-update-the-sources-and-compile-the-changes)
-- [How to insert files inside Redox QEMU harddisk](#how-to-insert-files-inside-redox-qemu-harddisk)
-- [How to troubleshoot your build in case of errors](#how-to-troubleshoot-your-build-in-case-of-errors)
-- [How to launch QEMU without GUI](#how-to-launch-qemu-without-gui)
 
 ## What is an Unix-like OS?
 
@@ -163,6 +163,7 @@ Redox tries to implement the Linux performance improvements in a microkernel des
 [VirtualBox]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/vboxd
 [Bochs]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/bgad
 
+
 ## How to build Redox?
 
 Currently Redox has a bootstrap script Debian/Ubuntu/Pop OS! with unmaintained support for other distributions.
@@ -181,36 +182,19 @@ We are moving to use Podman as our main compilation method, actually it's mature
 [Redox Book Podman Guide]: https://doc.redox-os.org/book/ch02-06-podman-build.html
 [Redox Book Podman Advanced Guide]: https://doc.redox-os.org/book/ch08-02-advanced-podman-build.html
 
-## How to report bugs on Redox?
-
-- [Redox Book Bug Report Guide]
-
-[Redox Book Bug Report Guide]: https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html
-
-## How to contribute for Redox?
-
-- [Redox Book Contribution Guide]
-- [How to make pull requests properly]
-- [GitLab Guide]
-
-[Redox Book Contribution Guide]: https://doc.redox-os.org/book/ch10-02-low-hanging-fruit.html
-[How to make pull requests properly]: https://doc.redox-os.org/book/ch12-04-creating-proper-pull-requests.html
-[GitLab Guide]: https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md
-
-## I have a problem/question for Redox team
-
-- Read all the [Redox book] to see if it answer your questions/fix your problem.
-- If the book is not enough for you, make your question/say your problem in [Redox Support] or [Redox Dev] rooms on Matrix.
-
-[Redox book]: https://doc.redox-os.org/book/
-[Redox Support]: https://matrix.to/#/#redox-support:matrix.org
-[Redox Dev]: https://matrix.to/#/#redox-dev:matrix.org
-
 ## How to update the sources and compile the changes?
 
 - [Redox Book Rebuild Guide]
 
 [Redox Book Rebuild Guide]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#the-full-rebuild-cycle
+
+## How to launch QEMU without GUI
+
+Run:
+
+- `make qemu vga=no`
+
+QEMU terminal will looks like a container/chroot.
 
 ## How to insert files inside Redox QEMU harddisk
 
@@ -226,8 +210,31 @@ We are moving to use Podman as our main compilation method, actually it's mature
 [Redox Book Troubleshooting Guide]: https://doc.redox-os.org/book/ch08-05-troubleshooting.html
 [GitLab Troubleshooting Guide]: https://gitlab.redox-os.org/redox-os/redox#help-redox-wont-compile
 
-## How to launch QEMU without GUI
+## How to report bugs on Redox?
 
-- Run `make qemu vga=no`
+- [Redox Book Bug Report Guide]
 
-QEMU terminal will looks like a container/chroot.
+[Redox Book Bug Report Guide]: https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html
+
+## How to contribute for Redox?
+
+- [Documentation](/docs/)
+- [Redox Book Contribution Guide]
+- [How to make pull requests properly]
+- [GitLab Guide]
+- [Redox Dev room]
+
+[Redox Book Contribution Guide]: https://doc.redox-os.org/book/ch10-02-low-hanging-fruit.html
+[How to make pull requests properly]: https://doc.redox-os.org/book/ch12-04-creating-proper-pull-requests.html
+[GitLab Guide]: https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md
+[Redox Dev room]: https://matrix.to/#/#redox-dev:matrix.org
+
+## I have a problem/question for Redox team
+
+- Read all the [Documentation](/docs/) page.
+- Read all the [Redox book] to see if it answer your questions/fix your problem.
+- If the book is not enough for you, make your question/say your problem in [Redox Support] or [Redox Dev] rooms on Matrix.
+
+[Redox book]: https://doc.redox-os.org/book/
+[Redox Support]: https://matrix.to/#/#redox-support:matrix.org
+[Redox Dev]: https://matrix.to/#/#redox-dev:matrix.org

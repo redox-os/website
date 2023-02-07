@@ -11,14 +11,13 @@ Essa página cobre as perguntas mais comuns.
 - [Quais dispositivos o Redox suporta?](#quais-dispositivos-o-redox-suporta)
 - [Quais máquinas virtuais o Redox possui integração?](#quais-m%C3%A1quinas-virtuais-o-redox-possui-integra%C3%A7%C3%A3o)
 - [Como compilar o Redox?](#como-compilar-o-redox)
+- [Como atualizar o código-fonte e compilar as mudanças?](#como-atualizar-o-c%C3%B3digo-fonte-e-compilar-as-mudan%C3%A7as)
+- [Como abrir o QEMU sem interface gráfica](#como-abrir-o-qemu-sem-interface-gr%C3%A1fica)
+- [Como inserir arquivos no disco rígido do QEMU](#como-inserir-arquivos-dentro-do-disco-r%C3%ADgido-do-qemu)
+- [Como diagnosticar seu Redox em caso de erros](#como-diagnosticar-seu-redox-em-caso-de-erros)
 - [Como reportar bugs para o Redox?](#como-reportar-bugs-para-o-redox)
 - [Como contribuir para o Redox?](#como-contribuir-para-o-redox)
 - [Eu tenho um problema/pergunta para a equipe do Redox](#eu-tenho-um-problemapergunta-para-a-equipe-do-redox)
-- [Como atualizar o código-fonte e compilar as mudanças?](#como-atualizar-o-c%C3%B3digo-fonte-e-compilar-as-mudan%C3%A7as)
-- [Como inserir arquivos no disco rígido do QEMU](#como-inserir-arquivos-dentro-do-disco-r%C3%ADgido-do-qemu)
-- [Como diagnosticar seu Redox em caso de erros](#como-diagnosticar-seu-redox-em-caso-de-erros)
-- [Como abrir o QEMU sem interface gráfica](#como-abrir-o-qemu-sem-interface-gr%C3%A1fica)
-
 
 ## O que é um sistema Unix-like?
 
@@ -183,36 +182,19 @@ Nós estamos em transição para o Podman como nosso método de compilação pri
 [Guia do Podman no Livro do Redox]: https://doc.redox-os.org/book/ch02-06-podman-build.html
 [Guia Avançado do Podman no Livro do Redox]: https://doc.redox-os.org/book/ch08-02-advanced-podman-build.html
 
-## Como reportar bugs para o Redox?
-
-- [Guia para Relatório de Bug no Livro do Redox]
-
-[Guia para Relatório de Bug no Livro do Redox]: https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html
-
-## Como contribuir para o Redox?
-
-- [Guia de Contribuição no Livro do Redox]
-- [Como fazer pull requests corretamente]
-- [Guia do GitLab]
-
-[Guia de Contribuição no Livro do Redox]: https://doc.redox-os.org/book/ch10-02-low-hanging-fruit.html
-[Como fazer pull requests corretamente]: https://doc.redox-os.org/book/ch12-04-creating-proper-pull-requests.html
-[Guia do GitLab]: https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md
-
-## Eu tenho um problema/pergunta para a equipe do Redox
-
-- Leia todo [livro do Redox] para ver se isso responde suas pergunta/corrige seu problema.
-- Se o livro não for suficiente pra você, diga sua pergunta/problema nas salas [Redox Support] ou [Redox Dev] no Matrix.
-
-[livro do Redox]: https://doc.redox-os.org/book/
-[Redox Support]: https://matrix.to/#/#redox-support:matrix.org
-[Redox Dev]: https://matrix.to/#/#redox-dev:matrix.org
-
 ## Como atualizar o código-fonte e compilar as mudanças?
 
 - [Guia de Recompilação no Livro do Redox]
 
 [Guia de Recompilação no Livro do Redox]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#the-full-rebuild-cycle
+
+## Como abrir o QEMU sem interface gráfica
+
+Execute:
+
+- `make qemu vga=no`
+
+O QEMU ficará semelhante a um container/chroot.
 
 ## Como inserir arquivos dentro do disco rígido do QEMU
 
@@ -228,8 +210,31 @@ Nós estamos em transição para o Podman como nosso método de compilação pri
 [Guia de Diagnóstico no Livro do Redox]: https://doc.redox-os.org/book/ch08-05-troubleshooting.html
 [Guia de Diagnóstico no GitLab]: https://gitlab.redox-os.org/redox-os/redox#help-redox-wont-compile
 
-## Como abrir o QEMU sem interface gráfica
+## Como reportar bugs para o Redox?
 
-- Execute `make qemu vga=no`
+- [Guia para Relatório de Bug no Livro do Redox]
 
-O QEMU ficará semelhante a um container/chroot.
+[Guia para Relatório de Bug no Livro do Redox]: https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html
+
+## Como contribuir para o Redox?
+
+- [Documentação](/docs/)
+- [Guia de Contribuição no Livro do Redox]
+- [Como fazer pull requests corretamente]
+- [Guia do GitLab]
+- [Sala de Desenvolvimento do Redox] - Nos diga o que você planeja fazer.
+
+[Guia de Contribuição no Livro do Redox]: https://doc.redox-os.org/book/ch10-02-low-hanging-fruit.html
+[Como fazer pull requests corretamente]: https://doc.redox-os.org/book/ch12-04-creating-proper-pull-requests.html
+[Guia do GitLab]: https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md
+[Sala de Desenvolvimento do Redox]: https://matrix.to/#/#redox-dev:matrix.org
+
+## Eu tenho um problema/pergunta para a equipe do Redox
+
+- Leia a [Documentação](/docs/).
+- Leia todo [livro do Redox] para ver se isso responde suas pergunta/corrige seu problema.
+- Se o livro não for suficiente pra você, diga sua pergunta/problema nas salas [Redox Support] ou [Redox Dev] no Matrix.
+
+[livro do Redox]: https://doc.redox-os.org/book/
+[Redox Support]: https://matrix.to/#/#redox-support:matrix.org
+[Redox Dev]: https://matrix.to/#/#redox-dev:matrix.org
