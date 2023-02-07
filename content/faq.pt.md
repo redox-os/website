@@ -113,12 +113,14 @@ O Redox tenta implementar as melhorias de desempenho do Linux em um design de mi
 
 - [Intel chipsets]
 - [Realtek chipsets]
+- [PC speaker]
 
 ([Sound Blaster] em breve)
 
 [Intel chipsets]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ihdad
 [Realtek chipsets]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ac97d
 [Sound Blaster]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/sb16d
+[PC speaker]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/pcspkrd
 
 ### Video
 

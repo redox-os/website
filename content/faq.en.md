@@ -111,12 +111,14 @@ Redox tries to implement the Linux performance improvements in a microkernel des
 
 - [Intel chipsets]
 - [Realtek chipsets]
+- [PC speaker]
 
 ([Sound Blaster] soon)
 
 [Intel chipsets]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ihdad
 [Realtek chipsets]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ac97d
 [Sound Blaster]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/sb16d
+[PC speaker]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/pcspkrd
 
 ### Video
 
