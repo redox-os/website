@@ -27,7 +27,7 @@ This page covers the most asked questions.
 Any OS with [Unix] design aspects, such as shell, "everything is a file" concept, multitasking and multiuser.
 
 
-It's important to remind that Unix was the first modern multitasking system of the world, then any system used his design choices in some way.
+It's important to remind that Unix was the first modern multitasking system of the world, then any system used its design choices in some way.
 
 
 - [Wikipedia article]
