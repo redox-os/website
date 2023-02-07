@@ -21,7 +21,7 @@ This page covers the most asked questions.
 
 
 
-### What is an Unix-like OS?
+## What is an Unix-like OS?
 
 
 Any OS with [Unix] design aspects, such as shell, "everything is a file" concept, multitasking and multiuser.
@@ -35,7 +35,7 @@ It's important to remind that Unix was the first modern multitasking system of t
 [Unix]: https://en.wikipedia.org/wiki/Unix
 [Wikipedia article]: https://en.wikipedia.org/wiki/Unix-like
 
-### How Redox is inspired by other systems?
+## How Redox is inspired by other systems?
 
 
 [Plan 9] - This Bell Labs OS bring the concept of "everything is a file" to the highest level, doing all the system communication from the filesystem.
@@ -82,17 +82,17 @@ Redox tries to implement the Linux performance improvements in a microkernel des
 
 [Linux]: https://www.kernel.org/
 
-### What is a microkernel?
+## What is a microkernel?
 
 
 - [Redox Book explanation]
 
 [Redox Book explanation]: https://doc.redox-os.org/book/ch04-01-microkernels.html
 
-### Which devices Redox support?
+## Which devices Redox support?
 
 
-#### CPU
+### CPU
 
 
 - [x86_64/AMD64] - (Intel/AMD)
@@ -103,7 +103,7 @@ Redox tries to implement the Linux performance improvements in a microkernel des
 [x86/i686]: https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/x86
 [ARM64]: https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/aarch64
 
-#### Hardware Interfaces
+### Hardware Interfaces
 
 
 - [ACPI]
@@ -115,7 +115,7 @@ Redox tries to implement the Linux performance improvements in a microkernel des
 [ACPI]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/acpid
 [PCI]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/pcid
 
-#### Internet
+### Internet
 
 
 - [Intel Gigabit ethernet]
@@ -129,7 +129,7 @@ Redox tries to implement the Linux performance improvements in a microkernel des
 [Intel 10 Gigabit ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ixgbed
 [Realtek ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/rtl8168d
 
-#### Sound
+### Sound
 
 
 - [Intel chipsets]
@@ -138,7 +138,7 @@ Redox tries to implement the Linux performance improvements in a microkernel des
 [Intel chipsets]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ihdad
 [Realtek chipsets]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ac97d
 
-#### Video
+### Video
 
 
 - [VGA] - (BIOS)
@@ -151,7 +151,7 @@ Redox tries to implement the Linux performance improvements in a microkernel des
 [VGA]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/vesad
 [LLVMpipe]: https://docs.mesa3d.org/drivers/llvmpipe.html
 
-#### Storage
+### Storage
 
 
 - [IDE] - (PATA)
@@ -165,7 +165,7 @@ Redox tries to implement the Linux performance improvements in a microkernel des
 [AHCI]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ahcid
 [NVMe]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/nvmed
 
-#### Input
+### Input
 
 
 - [PS/2 keyboards]
@@ -180,7 +180,7 @@ Redox tries to implement the Linux performance improvements in a microkernel des
 [PS/2 touchpad]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d
 
 
-### How to build Redox?
+## How to build Redox?
 
 
 Currently Redox has a bootstrap script Debian/Ubuntu/Pop OS! with unmaintained support for other distributions.
@@ -203,7 +203,7 @@ We are moving to use Podman as our main compilation method, actually it's mature
 [Redox Book Podman Advanced Guide]: https://doc.redox-os.org/book/ch08-02-advanced-podman-build.html
 
 
-### How to report bugs on Redox?
+## How to report bugs on Redox?
 
 
 - [Redox Book Bug Report Guide]
@@ -211,7 +211,7 @@ We are moving to use Podman as our main compilation method, actually it's mature
 [Redox Book Bug Report Guide]: https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html
 
 
-### How to contribute for Redox?
+## How to contribute for Redox?
 
 
 - [Redox Book Contribution Guide]
@@ -223,7 +223,7 @@ We are moving to use Podman as our main compilation method, actually it's mature
 [GitLab Guide]: https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md
 
 
-### I have a problem/question for Redox team
+## I have a problem/question for Redox team
 
 
 - Read all the [Redox book] to see if it answer your questions/fix your problem.
@@ -234,7 +234,7 @@ We are moving to use Podman as our main compilation method, actually it's mature
 [Redox Dev]: https://matrix.to/#/#redox-dev:matrix.org
 
 
-### How to update the sources and compile the changes?
+## How to update the sources and compile the changes?
 
 
 - [Redox Book Rebuild Guide]
@@ -242,7 +242,7 @@ We are moving to use Podman as our main compilation method, actually it's mature
 [Redox Book Rebuild Guide]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#the-full-rebuild-cycle
 
 
-### How to insert files inside Redox QEMU harddisk
+## How to insert files inside Redox QEMU harddisk
 
 
 - [Redox Book QEMU Guide]
@@ -250,7 +250,7 @@ We are moving to use Podman as our main compilation method, actually it's mature
 [Redox Book QEMU Guide]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#patch-an-image
 
 
-### How to troubleshoot your build in case of errors
+## How to troubleshoot your build in case of errors
 
 
 - [Redox Book Troubleshooting Guide]
@@ -260,7 +260,7 @@ We are moving to use Podman as our main compilation method, actually it's mature
 [GitLab Troubleshooting Guide]: https://gitlab.redox-os.org/redox-os/redox#help-redox-wont-compile
 
 
-### How to launch QEMU without GUI
+## How to launch QEMU without GUI
 
 
 - Run `make qemu vga=no`

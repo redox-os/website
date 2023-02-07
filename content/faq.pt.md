@@ -20,7 +20,7 @@ Essa página cobre as perguntas mais comuns.
 
 
 
-### O que é um sistema Unix-like?
+## O que é um sistema Unix-like?
 
 
 Qualquer sistema com traços do design [Unix], tal como uma Shell, o conceito de "Tudo é um arquivo", multitarefa e multiusuário.
@@ -33,7 +33,7 @@ Qualquer sistema com traços do design [Unix], tal como uma Shell, o conceito de
 [Unix]: https://pt.wikipedia.org/wiki/Unix
 [Artigo da Wikipedia]: https://pt.wikipedia.org/wiki/Sistema_operacional_tipo_Unix
 
-### Como o Redox é inspirado em outros sistemas?
+## Como o Redox é inspirado em outros sistemas?
 
 
 [Plan 9] - Este sistema da Bell Labs trouxe o conceito de "Tudo é um arquivo" ao seu maior nível, fazendo toda a comunicação do sistema pelo sistemas de arquivos.
@@ -77,17 +77,17 @@ O Redox tenta implementar as melhorias de desempenho do Linux em um design de mi
 
 [Linux]: https://www.kernel.org/
 
-### O que é um microkernel?
+## O que é um microkernel?
 
 
 - [Explicação do livro Redox]
 
 [Explicação do livro Redox]: https://doc.redox-os.org/book/ch04-01-microkernels.html
 
-### Quais dispositivos o Redox suporta?
+## Quais dispositivos o Redox suporta?
 
 
-#### CPU
+### CPU
 
 
 - [x86_64/AMD64] - (Intel/AMD)
@@ -98,7 +98,7 @@ O Redox tenta implementar as melhorias de desempenho do Linux em um design de mi
 [x86/i686]: https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/x86
 [ARM64]: https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/aarch64
 
-#### Interfaces do Hardware
+### Interfaces do Hardware
 
 
 - [ACPI]
@@ -110,7 +110,7 @@ O Redox tenta implementar as melhorias de desempenho do Linux em um design de mi
 [ACPI]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/acpid
 [PCI]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/pcid
 
-#### Internet
+### Internet
 
 
 - [Intel Gigabit ethernet]
@@ -124,7 +124,7 @@ O Redox tenta implementar as melhorias de desempenho do Linux em um design de mi
 [Intel 10 Gigabit ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ixgbed
 [Realtek ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/rtl8168d
 
-#### Som
+### Som
 
 
 - [Intel chipsets]
@@ -133,7 +133,7 @@ O Redox tenta implementar as melhorias de desempenho do Linux em um design de mi
 [Intel chipsets]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ihdad
 [Realtek chipsets]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ac97d
 
-#### Video
+### Video
 
 
 - [VGA] - (BIOS)
@@ -146,7 +146,7 @@ O Redox tenta implementar as melhorias de desempenho do Linux em um design de mi
 [VGA]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/vesad
 [LLVMpipe]: https://docs.mesa3d.org/drivers/llvmpipe.html
 
-#### Storage
+### Storage
 
 
 - [IDE] - (PATA)
@@ -160,7 +160,7 @@ O Redox tenta implementar as melhorias de desempenho do Linux em um design de mi
 [AHCI]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ahcid
 [NVMe]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/nvmed
 
-#### Periféricos
+### Periféricos
 
 
 - [Teclados PS/2]
@@ -175,7 +175,7 @@ O Redox tenta implementar as melhorias de desempenho do Linux em um design de mi
 [Touchpad PS/2]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d
 
 
-### Como compilar o Redox?
+## Como compilar o Redox?
 
 
 Atualmente o Redox tem um script de bootstrap para o Debian/Ubuntu/Pop OS! com suporte não mantido para outras distribuições.
@@ -198,7 +198,7 @@ Nós estamos em transição para o Podman como nosso método de compilação pri
 [Guia Avançado do Podman no Livro do Redox]: https://doc.redox-os.org/book/ch08-02-advanced-podman-build.html
 
 
-### Como reportar bugs para o Redox?
+## Como reportar bugs para o Redox?
 
 
 - [Guia para Relatório de Bug no Livro do Redox]
@@ -206,7 +206,7 @@ Nós estamos em transição para o Podman como nosso método de compilação pri
 [Guia para Relatório de Bug no Livro do Redox]: https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html
 
 
-### Como contribuir para o Redox?
+## Como contribuir para o Redox?
 
 
 - [Guia de Contribuição no Livro do Redox]
@@ -219,7 +219,7 @@ Nós estamos em transição para o Podman como nosso método de compilação pri
 [Guia do GitLab]: https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md
 
 
-### Eu tenho um problema/pergunta para a equipe do Redox
+## Eu tenho um problema/pergunta para a equipe do Redox
 
 
 - Leia todo [livro do Redox] para ver se isso responde suas pergunta/corrige seu problema.
@@ -230,7 +230,7 @@ Nós estamos em transição para o Podman como nosso método de compilação pri
 [Redox Dev]: https://matrix.to/#/#redox-dev:matrix.org
 
 
-### Como atualizar o código-fonte e compilar as mudanças?
+## Como atualizar o código-fonte e compilar as mudanças?
 
 
 - [Guia de Recompilação no Livro do Redox]
@@ -238,7 +238,7 @@ Nós estamos em transição para o Podman como nosso método de compilação pri
 [Guia de Recompilação no Livro do Redox]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#the-full-rebuild-cycle
 
 
-### Como inserir arquivos dentro do disco rígido do QEMU
+## Como inserir arquivos dentro do disco rígido do QEMU
 
 
 - [Guia do QEMU no livro do Redox]
@@ -246,7 +246,7 @@ Nós estamos em transição para o Podman como nosso método de compilação pri
 [Guia do QEMU no livro do Redox]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#patch-an-image
 
 
-### Como diagnosticar seu Redox em caso de erros
+## Como diagnosticar seu Redox em caso de erros
 
 
 - [Guia de Diagnóstico no Livro do Redox]
@@ -256,7 +256,7 @@ Nós estamos em transição para o Podman como nosso método de compilação pri
 [Guia de Diagnóstico no GitLab]: https://gitlab.redox-os.org/redox-os/redox#help-redox-wont-compile
 
 
-### Como abrir o QEMU sem interface gráfica
+## Como abrir o QEMU sem interface gráfica
 
 
 - Execute `make qemu vga=no`
