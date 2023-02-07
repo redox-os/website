@@ -20,12 +20,21 @@ Nós recomendamos que você comece pelo [Livro](https://doc.redox-os.org/book/),
 
 ## Contribuindo pro Redox
 
-Muito obrigado pelo seu interesse em contribuir pro Redox!
-Existem muitas formas de nos ajudar e nós somos gratos por qualquer ajuda.
+Você pode contribuir para a documentação/código do Redox nestes repositórios:
 
-O Redox é um grande projeto distribuído através de muitos repositórios que se encontram na
-[organização Redox no GitLab](https://gitlab.redox-os.org/redox-os). O documento [CONTRIBUTING.md](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md)
-é um guia para ajudar os recém-chegados a contribuir.
+(The order is based on difficulty, easy things first)
+(A ordem é baseada na dificuldade, coisas fáceis primeiro)
+
+- [Site](https://gitlab.redox-os.org/redox-os/website)
+- [Livro](https://gitlab.redox-os.org/redox-os/book)
+- [Scripts/Configuração](https://gitlab.redox-os.org/redox-os/redox)
+- [Pacotes do Redox (todos os componentes do sistema/softwares portados)](https://gitlab.redox-os.org/redox-os/cookbook)
+- [Ambiente de Desktop do Redox](https://gitlab.redox-os.org/redox-os/orbital)
+- [Biblioteca de Cliente do Orbital](https://gitlab.redox-os.org/redox-os/orbclient)
+- [Aplicações do Orbital](https://gitlab.redox-os.org/redox-os/orbutils)
+- [Biblioteca C do Redox](https://gitlab.redox-os.org/redox-os/relibc)
+- [Drivers](https://gitlab.redox-os.org/redox-os/drivers)
+- [Kernel](https://gitlab.redox-os.org/redox-os/kernel)
 
 ## Comunicação e Chat
 
