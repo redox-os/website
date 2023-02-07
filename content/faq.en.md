@@ -69,6 +69,7 @@ Redox is largely inspired by Minix, it have basically the same features but writ
 - [FreeBSD documentation]
 
 
+[BSD]: https://www.bsd.org/
 [family]: https://en.wikipedia.org/wiki/Research_Unix
 [BSD sockets]: https://en.wikipedia.org/wiki/Berkeley_sockets
 [FreeBSD documentation]: https://docs.freebsd.org/en/books/developers-handbook/sockets/
@@ -88,64 +89,95 @@ Redox tries to implement the Linux performance improvements in a microkernel des
 
 [Redox Book explanation]: https://doc.redox-os.org/book/ch04-01-microkernels.html
 
-
 ### Which devices Redox support?
 
 
 #### CPU
 
 
-- x86_64/AMD64 (Intel/AMD)
-- x86/i686 (Intel/AMD, incomplete)
-- ARM64 (WIP, incomplete)
+- [x86_64/AMD64] - (Intel/AMD)
+- [x86/i686] - (Intel/AMD, incomplete)
+- [ARM64] - (WIP, incomplete)
 
+[x86_64/AMD64]: https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/x86_64
+[x86/i686]: https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/x86
+[ARM64]: https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/aarch64
+
+#### Hardware Interfaces
+
+
+- [ACPI]
+- [PCI]
+
+
+(USB soon)
+
+[ACPI]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/acpid
+[PCI]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/pcid
 
 #### Internet
 
 
-- Intel ethernet
-- Realtek ethernet
+- [Intel Gigabit ethernet]
+- [Intel 10 Gigabit ethernet]
+- [Realtek ethernet]
 
 
 (Wi-Fi soon)
 
+[Intel Gigabit ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/e1000d
+[Intel 10 Gigabit ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ixgbed
+[Realtek ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/rtl8168d
 
 #### Sound
 
 
-- Intel chipsets
-- Realtek chipsets
+- [Intel chipsets]
+- [Realtek chipsets]
 
+[Intel chipsets]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ihdad
+[Realtek chipsets]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ac97d
 
 #### Video
 
 
-- VGA (BIOS)
+- [VGA] - (BIOS)
 - GOP (UEFI)
-- [LLVMpipe] (Software Rendering)
+- [LLVMpipe] - Software Rendering
 
 
 (Intel/AMD and others in the future)
 
-
+[VGA]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/vesad
 [LLVMpipe]: https://docs.mesa3d.org/drivers/llvmpipe.html
 
 #### Storage
 
 
-- IDE (PATA)
-- AHCI (SATA)
-- NVMe
+- [IDE] - (PATA)
+- [AHCI] - (SATA)
+- [NVMe]
+
 
 (USB soon)
 
+[IDE]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ided
+[AHCI]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ahcid
+[NVMe]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/nvmed
 
 #### Input
 
 
-- PS/2 keyboards
-- PS/2 mouse
-- PS/2 touchpad
+- [PS/2 keyboards]
+- [PS/2 mouse]
+- [PS/2 touchpad]
+
+
+(USB soon)
+
+[PS/2 keyboards]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d
+[PS/2 mouse]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d
+[PS/2 touchpad]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d
 
 
 ### How to build Redox?
@@ -182,9 +214,9 @@ We are moving to use Podman as our main compilation method, actually it's mature
 ### How to contribute for Redox?
 
 
-- [GitLab Guide]
 - [Redox Book Contribution Guide]
 - [How to make pull requests properly]
+- [GitLab Guide]
 
 [GitLab Guide]: https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md
 [Redox Book Contribution Guide]: https://doc.redox-os.org/book/ch10-02-low-hanging-fruit.html
@@ -195,7 +227,7 @@ We are moving to use Podman as our main compilation method, actually it's mature
 
 
 - Read all the [Redox book] to see if it answer your questions/fix your problem.
-- If the book is not enough for you, make your question/say your problem on [Redox Support] or [Redox Dev] rooms on Matrix.
+- If the book is not enough for you, make your question/say your problem in [Redox Support] or [Redox Dev] rooms on Matrix.
 
 [Redox book]: https://doc.redox-os.org/book/
 [Redox Support]: https://matrix.to/#/#redox-support:matrix.org
