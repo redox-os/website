@@ -24,7 +24,7 @@ Essa página cobre as perguntas mais comuns.
 
 ## O que é o Redox?
 
-O Redox é um sistema operacional baseado em microkernel, completo, funcional, para uso geral com foco em segurança, liberdade, confiabilidade, correção e pragmatismo.
+Redox é um sistema operacional baseado em microkernel, completo, funcional, para uso geral com foco em segurança, liberdade, confiabilidade, correção e pragmatismo.
 
 Onde for possível, os componentes do sistema serão escritos em Rust e executam no espaço do usuário.
 
@@ -100,10 +100,9 @@ O Redox tenta implementar as melhorias de desempenho do Linux em um design de mi
 
 Programas Unix/POSIX, o Redox é compátivel em código-fonte com o Linux (precisa de compilação).
 
-Some software need porting (recipes), as we don't support X11/Wayland yet, but SDL/Orbital.
 Alguns softwares precisam ser portados (recipes), já que não possuímos suporte para X11/Wayland ainda, mas SDL/Orbital.
 
-Alguns softwares importantes que o Redox suporta:
+Softwares importantes que o Redox suporta:
 
 - [Bash](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/bash)
 - [ffmpeg](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/ffmpeg)
@@ -139,7 +138,7 @@ Um [supervisor] é um software the gerencia máquinas virtuais, ele pode ser uma
 - [ACPI]
 - [PCI]
 
-(USB soon)
+(USB breve)
 
 [ACPI]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/acpid
 [PCI]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/pcid
