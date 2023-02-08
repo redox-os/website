@@ -4,7 +4,7 @@ title = "FAQ"
 
 This page covers the most asked questions.
 
-- [How is Redox?](#how-is-redox)
+- [What is Redox?](#what-is-redox)
 - [What is the purpose of Redox?](#what-is-the-purpose-of-redox)
 - [What I can do with Redox?](#what-i-can-do-with-redox)
 - [What is a Unix-like OS?](#what-is-a-unix-like-os)
@@ -22,7 +22,7 @@ This page covers the most asked questions.
 - [How do I contribute to Redox?](#how-do-i-contribute-for-redox)
 - [I have a problem/question for Redox team](#i-have-a-problemquestion-for-redox-team)
 
-## How is Redox?
+## What is Redox?
 
 Redox is a microkernel-based operating system, a complete, fully-functioning, general-purpose operating system with a focus on safety, freedom, reliability, correctness, and pragmatism.
 
