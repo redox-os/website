@@ -26,7 +26,7 @@ Essa página cobre as perguntas mais comuns.
 
 O Redox é um sistema operacional baseado em microkernel, completo, funcional, para uso geral com foco em segurança, liberdade, confiabilidade, correção e pragmatismo.
 
-Todos os componentes do sistema são escritos em Rust e executam no espaço do usuário.
+Onde for possível, os componentes do sistema serão escritos em Rust e executam no espaço do usuário.
 
 ## Qual o propósito do Redox?
 

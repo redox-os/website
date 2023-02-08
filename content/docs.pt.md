@@ -20,6 +20,8 @@ Nós recomendamos que você comece pelo [Livro](https://doc.redox-os.org/book/),
 
 ## Contribuindo pro Redox
 
+- Leia o [CONTRIBUTING.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md)
+
 Você pode contribuir para a documentação/código do Redox nestes repositórios:
 
 (The order is based on difficulty, easy things first)
