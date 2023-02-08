@@ -14,11 +14,11 @@ This page covers the most asked questions.
 - [Which devices does Redox support?](#which-devices-does-redox-support)
 - [Which virtual machines does Redox have integration with?](#which-virtual-machines-does-redox-have-integration-with)
 - [How do I build Redox?](#how-do-i-build-redox)
-- [How to update the sources and compile the changes?](#how-to-update-the-sources-and-compile-the-changes)
-- [How to launch QEMU without GUI](#how-to-launch-qemu-without-gui)
-- [How to insert files inside Redox QEMU harddisk](#how-to-insert-files-inside-redox-qemu-harddisk)
-- [How to troubleshoot your build in case of errors](#how-to-troubleshoot-your-build-in-case-of-errors)
-- [How to report bugs on Redox?](#how-to-report-bugs-on-redox)
+ - [How to update the sources and compile the changes](#how-to-update-the-sources-and-compile-the-changes)
+ - [How to launch QEMU without GUI](#how-to-launch-qemu-without-gui)
+ - [How to insert files inside Redox QEMU harddisk](#how-to-insert-files-inside-redox-qemu-harddisk)
+ - [How to troubleshoot your build in case of errors](#how-to-troubleshoot-your-build-in-case-of-errors)
+ - [How to report bugs on Redox](#how-to-report-bugs-on-redox)
 - [How do I contribute to Redox?](#how-do-i-contribute-for-redox)
 - [I have a problem/question for Redox team](#i-have-a-problemquestion-for-redox-team)
 
@@ -42,14 +42,15 @@ Wherever possible, the system components are written in Rust and run in user-spa
 
 ## What is a Unix-like OS?
 
-Any OS based on [Unix] or compatible with [POSIX] and Single Unix Specification, such as shell, "everything is a file" concept, multitasking and multiuser.
+Any OS compatible with [Single Unix Specification] and [POSIX], such as shell, "everything is a file" concept, multitasking and multiuser.
 
-Unix was a highly influential multitasking system and impacted the design choices of most modern systems.
+[Unix] was a highly influential multitasking system and impacted the design choices of most modern systems.
 
 - [Wikipedia article]
 
-[Unix]: https://en.wikipedia.org/wiki/Unix
+[Single Unix Specification]: https://en.wikipedia.org/wiki/Single_UNIX_Specification
 [POSIX]: https://en.wikipedia.org/wiki/POSIX
+[Unix]: https://en.wikipedia.org/wiki/Unix
 [Wikipedia article]: https://en.wikipedia.org/wiki/Unix-like
 
 ## How Redox is inspired by other systems?
@@ -230,13 +231,13 @@ We are moving to use Podman as our main compilation method, actually it's mature
 [Redox Book Podman Guide]: https://doc.redox-os.org/book/ch02-06-podman-build.html
 [Redox Book Podman Advanced Guide]: https://doc.redox-os.org/book/ch08-02-advanced-podman-build.html
 
-## How to update the sources and compile the changes?
+### How to update the sources and compile the changes
 
 - [Redox Book Rebuild Guide]
 
 [Redox Book Rebuild Guide]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#the-full-rebuild-cycle
 
-## How to launch QEMU without GUI
+### How to launch QEMU without GUI
 
 Run:
 
@@ -244,13 +245,13 @@ Run:
 
 QEMU terminal will looks like a container/chroot.
 
-## How to insert files inside Redox QEMU harddisk
+### How to insert files inside Redox QEMU harddisk
 
 - [Redox Book QEMU Guide]
 
 [Redox Book QEMU Guide]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#patch-an-image
 
-## How to troubleshoot your build in case of errors
+### How to troubleshoot your build in case of errors
 
 - [Redox Book Troubleshooting Guide]
 - [GitLab Troubleshooting Guide]
@@ -258,7 +259,7 @@ QEMU terminal will looks like a container/chroot.
 [Redox Book Troubleshooting Guide]: https://doc.redox-os.org/book/ch08-05-troubleshooting.html
 [GitLab Troubleshooting Guide]: https://gitlab.redox-os.org/redox-os/redox#help-redox-wont-compile
 
-## How to report bugs on Redox?
+### How to report bugs on Redox
 
 - [Redox Book Bug Report Guide]
 
