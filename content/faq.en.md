@@ -19,7 +19,7 @@ This page covers the most asked questions.
  - [How to insert files inside Redox QEMU harddisk](#how-to-insert-files-inside-redox-qemu-harddisk)
  - [How to troubleshoot your build in case of errors](#how-to-troubleshoot-your-build-in-case-of-errors)
  - [How to report bugs on Redox](#how-to-report-bugs-on-redox)
-- [How do I contribute to Redox?](#how-do-i-contribute-for-redox)
+- [How do I contribute to Redox?](#how-do-i-contribute-to-redox)
 - [I have a problem/question for Redox team](#i-have-a-problemquestion-for-redox-team)
 
 ## What is Redox?
