@@ -48,7 +48,7 @@ O [Unix] foi um sistema operacional de multitarefa muito influente e impactou as
 
 - [Artigo da Wikipedia]
 
-[[Especificação Única do Unix]]: https://en.wikipedia.org/wiki/Single_UNIX_Specification
+[Especificação Única do Unix]]: https://en.wikipedia.org/wiki/Single_UNIX_Specification
 [POSIX]: https://en.wikipedia.org/wiki/POSIX
 [Unix]: https://pt.wikipedia.org/wiki/Unix
 [Artigo da Wikipedia]: https://pt.wikipedia.org/wiki/Sistema_operacional_tipo_Unix
