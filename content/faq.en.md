@@ -42,13 +42,14 @@ Wherever possible, the system components will be written in Rust and run on user
 
 ## What is an Unix-like OS?
 
-Any OS with [Unix] design aspects, such as shell, "everything is a file" concept, multitasking and multiuser.
+Any OS with based on [Unix], [POSIX] and Single Unix Specification design, such as shell, "everything is a file" concept, multitasking and multiuser.
 
 It's important to remind that Unix was the first modern multitasking system of the world, then any system used its design choices in some way.
 
 - [Wikipedia article]
 
 [Unix]: https://en.wikipedia.org/wiki/Unix
+[POSIX]: https://en.wikipedia.org/wiki/POSIX
 [Wikipedia article]: https://en.wikipedia.org/wiki/Unix-like
 
 ## How Redox is inspired by other systems?
