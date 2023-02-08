@@ -266,7 +266,7 @@ O QEMU ficará semelhante a um container/chroot.
 
 ## Como contribuir para o Redox?
 
-- [Documentação](/docs/)
+- [Documentação](/pt/docs/)
 - [Guia de Contribuição no Livro do Redox]
 - [Como fazer pull requests corretamente]
 - [Guia do GitLab]
