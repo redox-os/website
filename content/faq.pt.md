@@ -42,7 +42,7 @@ Onde for possível, os componentes do sistema serão escritos em Rust e executam
 
 ## O que é um sistema Unix-like?
 
-Qualquer sistema compátivel com a [Especificação Única do Unix] e [POSIX], tal como uma Shell, o conceito de "Tudo é um arquivo", multitarefa e multiusuário.
+Qualquer sistema compátivel com a [Especificação Única do Unix] e [POSIX], portanto com uma Shell, o conceito de "Tudo é um arquivo", multitarefa e multiusuário.
 
 O [Unix] foi um sistema operacional de multitarefa muito influente e impactou as decisões de design em diversos sistemas modernos.
 
@@ -105,15 +105,15 @@ Alguns softwares precisam ser portados (recipes), já que não possuímos suport
 
 Alguns softwares importantes que o Redox suporta:
 
-- [Bash]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/bash
-- [ffmpeg]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/ffmpeg
-- [GCC]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/gcc
-- [Git]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/git
-- [LLVM]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/llvm
-- [Mesa3D]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/mesa
-- [OpenSSL]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/openssl
-- [Python]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/python
-- [SDL]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/sdl2
+- [Bash](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/bash)
+- [ffmpeg](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/ffmpeg)
+- [GCC](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/gcc)
+- [Git](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/git)
+- [LLVM](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/llvm)
+- [Mesa3D](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/mesa)
+- [OpenSSL](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/openssl)
+- [Python](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/python)
+- [SDL](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/sdl2)
 
 No futuro o microkernel pode agir como um supervisor, similar ao [Xen].
 
