@@ -42,7 +42,7 @@ Onde for possível, os componentes do sistema serão escritos em Rust e executam
 
 ## O que é um sistema Unix-like?
 
-Qualquer sistema baseado no design [Unix], [POSIX] e Especificação Única do Unix, tal como uma Shell, o conceito de "Tudo é um arquivo", multitarefa e multiusuário.
+Qualquer sistema baseado no [Unix], compátivel com a [POSIX] e Especificação Única do Unix, que tenha uma Shell, o conceito de "Tudo é um arquivo", multitarefa e multiusuário.
 
 É importante lembrar que o Unix foi o mais influente sistema de multitarefa moderno, então muitos sistemas utilizaram seu design de alguma forma.
 
