@@ -4,9 +4,13 @@ title = "FAQ"
 
 This page covers the most asked questions.
 
+- [What is Redox?](#what-is-redox)
+- [What is the purpose of Redox?](#what-is-the-purpose-of-redox)
+- [What I can do with Redox?](#what-i-can-do-with-redox)
 - [What is an Unix-like OS?](#what-is-an-unix-like-os)
 - [How Redox is inspired by other systems?](#how-redox-is-inspired-by-other-systems)
 - [What is a microkernel?](#what-is-a-microkernel)
+- [Which programs Redox run?](#which-programs-redox-run)
 - [Which devices Redox support?](#which-devices-redox-support)
 - [Which virtual machines Redox has integration?](#which-virtual-machines-redox-has-integration)
 - [How to build Redox?](#how-to-build-redox)
@@ -17,6 +21,24 @@ This page covers the most asked questions.
 - [How to report bugs on Redox?](#how-to-report-bugs-on-redox)
 - [How to contribute for Redox?](#how-to-contribute-for-redox)
 - [I have a problem/question for Redox team](#i-have-a-problemquestion-for-redox-team)
+
+## What is Redox?
+
+Redox is a microkernel-based operating system, a complete, fully-functioning, general-purpose operating system with a focus on safety, freedom, reliability, correctness, and pragmatism.
+
+All system components were written in Rust and run on user-space
+
+## What is the purpose of Redox?
+
+[Our Goals]
+
+[Our Goals]: https://doc.redox-os.org/book/ch01-01-our-goals.html
+
+## What I can do with Redox?
+
+[Use Cases]
+
+[Use Cases]: https://doc.redox-os.org/book/ch01-04-redox-use-cases.html
 
 ## What is an Unix-like OS?
 
@@ -71,6 +93,31 @@ Redox tries to implement the Linux performance improvements in a microkernel des
 - [Redox Book explanation]
 
 [Redox Book explanation]: https://doc.redox-os.org/book/ch04-01-microkernels.html
+
+## Which programs Redox run?
+
+Unix/POSIX programs, Redox is source-compatible with Linux too (need to compile).
+
+Some software need porting (recipes), as we don't support X11/Wayland yet, but SDL/Orbital.
+
+Some important software that Redox support:
+
+- [Bash]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/bash
+- [ffmpeg]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/ffmpeg
+- [GCC]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/gcc
+- [Git]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/git
+- [LLVM]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/llvm
+- [Mesa3D]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/mesa
+- [OpenSSL]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/openssl
+- [Python]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/python
+- [SDL]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/sdl2
+
+In the future the microkernel can act as a hypervisor, similar to [Xen].
+
+A [hypervisor] is a software that manage virtual machines, it can be a "compatibility layer" for any operating system.
+
+[Xen]: https://xenproject.org/
+[hypervisor]: https://en.wikipedia.org/wiki/Hypervisor
 
 ## Which devices Redox support?
 
