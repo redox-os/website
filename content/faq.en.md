@@ -44,7 +44,7 @@ Wherever possible, the system components are written in Rust and run on user-spa
 
 Any OS based on [Unix] or compatible with [POSIX] and Single Unix Specification, such as shell, "everything is a file" concept, multitasking and multiuser.
 
-It's important to remind that Unix was the most influential modern multitasking system, then many systems used his design choices.
+Unix was a highly influential multitasking system and impacted the design choices of most modern systems.
 
 - [Wikipedia article]
 
