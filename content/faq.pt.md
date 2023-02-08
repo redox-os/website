@@ -44,11 +44,11 @@ Onde for possível, os componentes do sistema serão escritos em Rust e executam
 
 Qualquer sistema compátivel com a [Especificação Única do Unix] e [POSIX], portanto com uma Shell, o conceito de "Tudo é um arquivo", multitarefa e multiusuário.
 
-O [Unix] foi um sistema operacional de multitarefa muito influente e impactou as decisões de design em diversos sistemas modernos.
+[Unix] foi um sistema operacional de multitarefa muito influente e impactou as decisões de design em diversos sistemas modernos.
 
 - [Artigo da Wikipedia]
 
-[[Especificação Única do Unix]]: https://en.wikipedia.org/wiki/Single_UNIX_Specification
+[Especificação Única do Unix]]: https://en.wikipedia.org/wiki/Single_UNIX_Specification
 [POSIX]: https://en.wikipedia.org/wiki/POSIX
 [Unix]: https://pt.wikipedia.org/wiki/Unix
 [Artigo da Wikipedia]: https://pt.wikipedia.org/wiki/Sistema_operacional_tipo_Unix
