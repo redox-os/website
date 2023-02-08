@@ -4,25 +4,25 @@ title = "FAQ"
 
 This page covers the most asked questions.
 
-- [What is Redox?](#what-is-redox)
+- [How is Redox?](#how-is-redox)
 - [What is the purpose of Redox?](#what-is-the-purpose-of-redox)
 - [What I can do with Redox?](#what-i-can-do-with-redox)
 - [What is an Unix-like OS?](#what-is-an-unix-like-os)
 - [How Redox is inspired by other systems?](#how-redox-is-inspired-by-other-systems)
 - [What is a microkernel?](#what-is-a-microkernel)
-- [Which programs Redox run?](#which-programs-redox-run)
-- [Which devices Redox support?](#which-devices-redox-support)
-- [Which virtual machines Redox has integration?](#which-virtual-machines-redox-has-integration)
-- [How to build Redox?](#how-to-build-redox)
+- [What programs can Redox run?](#what-programs-can-redox-run)
+- [Which devices does Redox support?](#which-devices-does-redox-support)
+- [Which virtual machines does Redox have integration with?](#which-virtual-machines-does-redox-have-integration-with)
+- [How do I build Redox?](#how-do-i-build-redox)
 - [How to update the sources and compile the changes?](#how-to-update-the-sources-and-compile-the-changes)
 - [How to launch QEMU without GUI](#how-to-launch-qemu-without-gui)
 - [How to insert files inside Redox QEMU harddisk](#how-to-insert-files-inside-redox-qemu-harddisk)
 - [How to troubleshoot your build in case of errors](#how-to-troubleshoot-your-build-in-case-of-errors)
 - [How to report bugs on Redox?](#how-to-report-bugs-on-redox)
-- [How to contribute for Redox?](#how-to-contribute-for-redox)
+- [How do I contribute to Redox?](#how-do-i-contribute-for-redox)
 - [I have a problem/question for Redox team](#i-have-a-problemquestion-for-redox-team)
 
-## What is Redox?
+## How is Redox?
 
 Redox is a microkernel-based operating system, a complete, fully-functioning, general-purpose operating system with a focus on safety, freedom, reliability, correctness, and pragmatism.
 
@@ -95,7 +95,7 @@ Redox tries to implement the Linux performance improvements in a microkernel des
 
 [Redox Book explanation]: https://doc.redox-os.org/book/ch04-01-microkernels.html
 
-## Which programs Redox run?
+## What programs can Redox run?
 
 Unix/POSIX programs, Redox is source-compatible with Linux too (need to compile).
 
@@ -120,7 +120,7 @@ A [hypervisor] is a software that manage virtual machines, it can be a "compatib
 [Xen]: https://xenproject.org/
 [hypervisor]: https://en.wikipedia.org/wiki/Hypervisor
 
-## Which devices Redox support?
+## Which devices does Redox support?
 
 ### CPU
 
@@ -203,7 +203,7 @@ A [hypervisor] is a software that manage virtual machines, it can be a "compatib
 [PS/2 mouse]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d
 [PS/2 touchpad]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d
 
-## Which virtual machines Redox has integration?
+## Which virtual machines does Redox have integration with?
 
 - [VirtualBox]
 - [Bochs]
@@ -212,7 +212,7 @@ A [hypervisor] is a software that manage virtual machines, it can be a "compatib
 [Bochs]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/bgad
 
 
-## How to build Redox?
+## How do I build Redox?
 
 Currently Redox has a bootstrap script Debian/Ubuntu/Pop OS! with unmaintained support for other distributions.
 
@@ -264,7 +264,7 @@ QEMU terminal will looks like a container/chroot.
 
 [Redox Book Bug Report Guide]: https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html
 
-## How to contribute for Redox?
+## How do I contribute to Redox?
 
 - [Documentation](/docs/)
 - [Redox Book Contribution Guide]
