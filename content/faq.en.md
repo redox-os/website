@@ -44,7 +44,7 @@ Wherever possible, the system components will be written in Rust and run on user
 
 Any OS with based on [Unix], [POSIX] and Single Unix Specification design, such as shell, "everything is a file" concept, multitasking and multiuser.
 
-It's important to remind that Unix was the first modern multitasking system of the world, then any system used its design choices in some way.
+It's important to remind that Unix was the most influential modern multitasking system, then many systems used his design choices.
 
 - [Wikipedia article]
 
