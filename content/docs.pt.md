@@ -20,6 +20,8 @@ Nós recomendamos que você comece pelo [Livro](https://doc.redox-os.org/book/),
 
 ## Contribuindo pro Redox
 
+- Leia o [CONTRIBUTING.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md)
+
 Você pode contribuir para a documentação/código do Redox nestes repositórios:
 
 (The order is based on difficulty, easy things first)
@@ -27,7 +29,7 @@ Você pode contribuir para a documentação/código do Redox nestes repositório
 
 - [Site](https://gitlab.redox-os.org/redox-os/website)
 - [Livro](https://gitlab.redox-os.org/redox-os/book)
-- [Scripts/Configuração](https://gitlab.redox-os.org/redox-os/redox)
+- [Repositório Principal (sistema de compilação/configuração)](https://gitlab.redox-os.org/redox-os/redox)
 - [Pacotes do Redox (todos os componentes do sistema/softwares portados)](https://gitlab.redox-os.org/redox-os/cookbook)
 - [Ambiente de Desktop do Redox](https://gitlab.redox-os.org/redox-os/orbital)
 - [Biblioteca de Cliente do Orbital](https://gitlab.redox-os.org/redox-os/orbclient)

@@ -4,29 +4,52 @@ title = "FAQ"
 
 Essa página cobre as perguntas mais comuns.
 
-
+- [O que é o Redox?](#o-que-%C3%A9-o-redox)
+- [Qual o propósito do Redox?](#qual-o-prop%C3%B3sito-do-redox)
+- [O que posso fazer com o Redox?](#o-que-posso-fazer-com-o-redox)
 - [O que é um sistema Unix-like?](#o-que-%C3%A9-um-sistema-unix-like)
 - [Como o Redox é inspirado em outros sistemas?](#como-o-redox-%C3%A9-inspirado-em-outros-sistemas)
 - [O que é um microkernel?](#o-que-%C3%A9-um-microkernel)
+- [Quais programas o Redox executa?](#quais-programas-o-redox-executa)
 - [Quais dispositivos o Redox suporta?](#quais-dispositivos-o-redox-suporta)
 - [Quais máquinas virtuais o Redox possui integração?](#quais-m%C3%A1quinas-virtuais-o-redox-possui-integra%C3%A7%C3%A3o)
 - [Como compilar o Redox?](#como-compilar-o-redox)
-- [Como atualizar o código-fonte e compilar as mudanças?](#como-atualizar-o-c%C3%B3digo-fonte-e-compilar-as-mudan%C3%A7as)
-- [Como abrir o QEMU sem interface gráfica](#como-abrir-o-qemu-sem-interface-gr%C3%A1fica)
-- [Como inserir arquivos no disco rígido do QEMU](#como-inserir-arquivos-dentro-do-disco-r%C3%ADgido-do-qemu)
-- [Como diagnosticar seu Redox em caso de erros](#como-diagnosticar-seu-redox-em-caso-de-erros)
-- [Como reportar bugs para o Redox?](#como-reportar-bugs-para-o-redox)
+ - [Como atualizar o código-fonte e compilar as mudanças](#como-atualizar-o-c%C3%B3digo-fonte-e-compilar-as-mudan%C3%A7as)
+ - [Como abrir o QEMU sem interface gráfica](#como-abrir-o-qemu-sem-interface-gr%C3%A1fica)
+ - [Como inserir arquivos no disco rígido do QEMU](#como-inserir-arquivos-dentro-do-disco-r%C3%ADgido-do-qemu)
+ - [Como diagnosticar seu Redox em caso de erros](#como-diagnosticar-seu-redox-em-caso-de-erros)
+ - [Como reportar bugs para o Redox](#como-reportar-bugs-para-o-redox)
 - [Como contribuir para o Redox?](#como-contribuir-para-o-redox)
 - [Eu tenho um problema/pergunta para a equipe do Redox](#eu-tenho-um-problemapergunta-para-a-equipe-do-redox)
 
+## O que é o Redox?
+
+O Redox é um sistema operacional baseado em microkernel, completo, funcional, para uso geral com foco em segurança, liberdade, confiabilidade, correção e pragmatismo.
+
+Onde for possível, os componentes do sistema serão escritos em Rust e executam no espaço do usuário.
+
+## Qual o propósito do Redox?
+
+[Nossos Objetivos]
+
+[Nossos Objetivos]: https://doc.redox-os.org/book/ch01-01-our-goals.html
+
+## O que posso fazer com o Redox?
+
+[Casos de Uso]
+
+[Casos de Uso]: https://doc.redox-os.org/book/ch01-04-redox-use-cases.html
+
 ## O que é um sistema Unix-like?
 
-Qualquer sistema com traços do design [Unix], tal como uma Shell, o conceito de "Tudo é um arquivo", multitarefa e multiusuário.
+Qualquer sistema compátivel com a [Especificação Única do Unix] e [POSIX], tal como uma Shell, o conceito de "Tudo é um arquivo", multitarefa e multiusuário.
 
-É importante lembrar que o Unix foi o primeiro sistema de multitarefa moderno do mundo, então qualquer sistema pode ter usado aspectos do seu design de alguma forma.
+O [Unix] foi um sistema operacional de multitarefa muito influente e impactou as decisões de design em diversos sistemas modernos.
 
 - [Artigo da Wikipedia]
 
+[[Especificação Única do Unix]]: https://en.wikipedia.org/wiki/Single_UNIX_Specification
+[POSIX]: https://en.wikipedia.org/wiki/POSIX
 [Unix]: https://pt.wikipedia.org/wiki/Unix
 [Artigo da Wikipedia]: https://pt.wikipedia.org/wiki/Sistema_operacional_tipo_Unix
 
@@ -72,6 +95,32 @@ O Redox tenta implementar as melhorias de desempenho do Linux em um design de mi
 - [Explicação do livro Redox]
 
 [Explicação do livro Redox]: https://doc.redox-os.org/book/ch04-01-microkernels.html
+
+## Quais programas o Redox executa?
+
+Programas Unix/POSIX, o Redox é compátivel em código-fonte com o Linux (precisa de compilação).
+
+Some software need porting (recipes), as we don't support X11/Wayland yet, but SDL/Orbital.
+Alguns softwares precisam ser portados (recipes), já que não possuímos suporte para X11/Wayland ainda, mas SDL/Orbital.
+
+Alguns softwares importantes que o Redox suporta:
+
+- [Bash]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/bash
+- [ffmpeg]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/ffmpeg
+- [GCC]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/gcc
+- [Git]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/git
+- [LLVM]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/llvm
+- [Mesa3D]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/mesa
+- [OpenSSL]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/openssl
+- [Python]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/python
+- [SDL]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/sdl2
+
+No futuro o microkernel pode agir como um supervisor, similar ao [Xen].
+
+Um [supervisor] é um software the gerencia máquinas virtuais, ele pode ser uma "camada de compatibilidade" para qualquer sistema operacional.
+
+[Xen]: https://xenproject.org/
+[supervisor]: https://en.wikipedia.org/wiki/Hypervisor
 
 ## Quais dispositivos o Redox suporta?
 
@@ -168,7 +217,7 @@ O Redox tenta implementar as melhorias de desempenho do Linux em um design de mi
 
 Atualmente o Redox tem um script de bootstrap para o Debian/Ubuntu/Pop OS! com suporte não mantido para outras distribuições.
 
-Nós estamos em transição para o Podman como nosso método de compilação principal, atualmente ele é bem maduro e compila como o script normal.
+Nós estamos em transição para o Podman como nosso método de compilação principal, ele é método de compilação recomendado para sistemas que não sejam baseados no Debian.
 
 (O Podman evita problemas de ambiente durante a compilação)
 
@@ -182,13 +231,13 @@ Nós estamos em transição para o Podman como nosso método de compilação pri
 [Guia do Podman no Livro do Redox]: https://doc.redox-os.org/book/ch02-06-podman-build.html
 [Guia Avançado do Podman no Livro do Redox]: https://doc.redox-os.org/book/ch08-02-advanced-podman-build.html
 
-## Como atualizar o código-fonte e compilar as mudanças?
+### Como atualizar o código-fonte e compilar as mudanças?
 
 - [Guia de Recompilação no Livro do Redox]
 
 [Guia de Recompilação no Livro do Redox]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#the-full-rebuild-cycle
 
-## Como abrir o QEMU sem interface gráfica
+### Como abrir o QEMU sem interface gráfica
 
 Execute:
 
@@ -196,13 +245,13 @@ Execute:
 
 O QEMU ficará semelhante a um container/chroot.
 
-## Como inserir arquivos dentro do disco rígido do QEMU
+### Como inserir arquivos dentro do disco rígido do QEMU
 
 - [Guia do QEMU no livro do Redox]
 
 [Guia do QEMU no livro do Redox]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#patch-an-image
 
-## Como diagnosticar seu Redox em caso de erros
+### Como diagnosticar seu Redox em caso de erros
 
 - [Guia de Diagnóstico no Livro do Redox]
 - [Guia de Diagnóstico no GitLab]
@@ -210,7 +259,7 @@ O QEMU ficará semelhante a um container/chroot.
 [Guia de Diagnóstico no Livro do Redox]: https://doc.redox-os.org/book/ch08-05-troubleshooting.html
 [Guia de Diagnóstico no GitLab]: https://gitlab.redox-os.org/redox-os/redox#help-redox-wont-compile
 
-## Como reportar bugs para o Redox?
+### Como reportar bugs para o Redox?
 
 - [Guia para Relatório de Bug no Livro do Redox]
 

@@ -4,28 +4,52 @@ title = "FAQ"
 
 This page covers the most asked questions.
 
-- [What is an Unix-like OS?](#what-is-an-unix-like-os)
+- [What is Redox?](#what-is-redox)
+- [What is the purpose of Redox?](#what-is-the-purpose-of-redox)
+- [What I can do with Redox?](#what-i-can-do-with-redox)
+- [What is a Unix-like OS?](#what-is-a-unix-like-os)
 - [How Redox is inspired by other systems?](#how-redox-is-inspired-by-other-systems)
 - [What is a microkernel?](#what-is-a-microkernel)
-- [Which devices Redox support?](#which-devices-redox-support)
-- [Which virtual machines Redox has integration?](#which-virtual-machines-redox-has-integration)
-- [How to build Redox?](#how-to-build-redox)
-- [How to update the sources and compile the changes?](#how-to-update-the-sources-and-compile-the-changes)
-- [How to launch QEMU without GUI](#how-to-launch-qemu-without-gui)
-- [How to insert files inside Redox QEMU harddisk](#how-to-insert-files-inside-redox-qemu-harddisk)
-- [How to troubleshoot your build in case of errors](#how-to-troubleshoot-your-build-in-case-of-errors)
-- [How to report bugs on Redox?](#how-to-report-bugs-on-redox)
-- [How to contribute for Redox?](#how-to-contribute-for-redox)
+- [What programs can Redox run?](#what-programs-can-redox-run)
+- [Which devices does Redox support?](#which-devices-does-redox-support)
+- [Which virtual machines does Redox have integration with?](#which-virtual-machines-does-redox-have-integration-with)
+- [How do I build Redox?](#how-do-i-build-redox)
+ - [How to update the sources and compile the changes](#how-to-update-the-sources-and-compile-the-changes)
+ - [How to launch QEMU without GUI](#how-to-launch-qemu-without-gui)
+ - [How to insert files inside Redox QEMU harddisk](#how-to-insert-files-inside-redox-qemu-harddisk)
+ - [How to troubleshoot your build in case of errors](#how-to-troubleshoot-your-build-in-case-of-errors)
+ - [How to report bugs on Redox](#how-to-report-bugs-on-redox)
+- [How do I contribute to Redox?](#how-do-i-contribute-to-redox)
 - [I have a problem/question for Redox team](#i-have-a-problemquestion-for-redox-team)
 
-## What is an Unix-like OS?
+## What is Redox?
 
-Any OS with [Unix] design aspects, such as shell, "everything is a file" concept, multitasking and multiuser.
+Redox is a microkernel-based operating system, a complete, fully-functioning, general-purpose operating system with a focus on safety, freedom, reliability, correctness, and pragmatism.
 
-It's important to remind that Unix was the first modern multitasking system of the world, then any system used its design choices in some way.
+Wherever possible, the system components are written in Rust and run in user-space
+
+## What is the purpose of Redox?
+
+[Our Goals]
+
+[Our Goals]: https://doc.redox-os.org/book/ch01-01-our-goals.html
+
+## What I can do with Redox?
+
+[Use Cases]
+
+[Use Cases]: https://doc.redox-os.org/book/ch01-04-redox-use-cases.html
+
+## What is a Unix-like OS?
+
+Any OS compatible with [Single Unix Specification] and [POSIX], such as shell, "everything is a file" concept, multitasking and multiuser.
+
+[Unix] was a highly influential multitasking system and impacted the design choices of most modern systems.
 
 - [Wikipedia article]
 
+[Single Unix Specification]: https://en.wikipedia.org/wiki/Single_UNIX_Specification
+[POSIX]: https://en.wikipedia.org/wiki/POSIX
 [Unix]: https://en.wikipedia.org/wiki/Unix
 [Wikipedia article]: https://en.wikipedia.org/wiki/Unix-like
 
@@ -72,7 +96,32 @@ Redox tries to implement the Linux performance improvements in a microkernel des
 
 [Redox Book explanation]: https://doc.redox-os.org/book/ch04-01-microkernels.html
 
-## Which devices Redox support?
+## What programs can Redox run?
+
+Unix/POSIX programs, Redox is source-compatible with Linux too (need to compile).
+
+Some software need porting (recipes), as we don't support X11/Wayland yet, but SDL/Orbital.
+
+Some important software that Redox support:
+
+- [Bash]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/bash
+- [ffmpeg]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/ffmpeg
+- [GCC]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/gcc
+- [Git]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/git
+- [LLVM]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/llvm
+- [Mesa3D]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/mesa
+- [OpenSSL]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/openssl
+- [Python]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/python
+- [SDL]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/sdl2
+
+In the future the microkernel can act as a hypervisor, similar to [Xen].
+
+A [hypervisor] is a software that manage virtual machines, it can be a "compatibility layer" for any operating system.
+
+[Xen]: https://xenproject.org/
+[hypervisor]: https://en.wikipedia.org/wiki/Hypervisor
+
+## Which devices does Redox support?
 
 ### CPU
 
@@ -155,7 +204,7 @@ Redox tries to implement the Linux performance improvements in a microkernel des
 [PS/2 mouse]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d
 [PS/2 touchpad]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d
 
-## Which virtual machines Redox has integration?
+## Which virtual machines does Redox have integration with?
 
 - [VirtualBox]
 - [Bochs]
@@ -164,11 +213,11 @@ Redox tries to implement the Linux performance improvements in a microkernel des
 [Bochs]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/bgad
 
 
-## How to build Redox?
+## How do I build Redox?
 
 Currently Redox has a bootstrap script Debian/Ubuntu/Pop OS! with unmaintained support for other distributions.
 
-We are moving to use Podman as our main compilation method, actually it's mature and compile like the raw script.
+We are moving to use Podman as our main compilation method, it is the recommended build process for non-Debian systems.
 
 (Podman avoid environment problems on compilation)
 
@@ -182,13 +231,13 @@ We are moving to use Podman as our main compilation method, actually it's mature
 [Redox Book Podman Guide]: https://doc.redox-os.org/book/ch02-06-podman-build.html
 [Redox Book Podman Advanced Guide]: https://doc.redox-os.org/book/ch08-02-advanced-podman-build.html
 
-## How to update the sources and compile the changes?
+### How to update the sources and compile the changes
 
 - [Redox Book Rebuild Guide]
 
 [Redox Book Rebuild Guide]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#the-full-rebuild-cycle
 
-## How to launch QEMU without GUI
+### How to launch QEMU without GUI
 
 Run:
 
@@ -196,13 +245,13 @@ Run:
 
 QEMU terminal will looks like a container/chroot.
 
-## How to insert files inside Redox QEMU harddisk
+### How to insert files inside Redox QEMU harddisk
 
 - [Redox Book QEMU Guide]
 
 [Redox Book QEMU Guide]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#patch-an-image
 
-## How to troubleshoot your build in case of errors
+### How to troubleshoot your build in case of errors
 
 - [Redox Book Troubleshooting Guide]
 - [GitLab Troubleshooting Guide]
@@ -210,13 +259,13 @@ QEMU terminal will looks like a container/chroot.
 [Redox Book Troubleshooting Guide]: https://doc.redox-os.org/book/ch08-05-troubleshooting.html
 [GitLab Troubleshooting Guide]: https://gitlab.redox-os.org/redox-os/redox#help-redox-wont-compile
 
-## How to report bugs on Redox?
+### How to report bugs on Redox
 
 - [Redox Book Bug Report Guide]
 
 [Redox Book Bug Report Guide]: https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html
 
-## How to contribute for Redox?
+## How do I contribute to Redox?
 
 - [Documentation](/docs/)
 - [Redox Book Contribution Guide]
