@@ -217,7 +217,7 @@ Um [supervisor] é um software the gerencia máquinas virtuais, ele pode ser uma
 
 Atualmente o Redox tem um script de bootstrap para o Debian/Ubuntu/Pop OS! com suporte não mantido para outras distribuições.
 
-Nós estamos em transição para o Podman como nosso método de compilação principal, atualmente ele é bem maduro e compila como o script normal.
+Nós estamos em transição para o Podman como nosso método de compilação principal, ele é método de compilação recomendado para sistemas que não sejam baseados no Debian.
 
 (O Podman evita problemas de ambiente durante a compilação)
 

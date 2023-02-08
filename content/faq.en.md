@@ -217,7 +217,7 @@ A [hypervisor] is a software that manage virtual machines, it can be a "compatib
 
 Currently Redox has a bootstrap script Debian/Ubuntu/Pop OS! with unmaintained support for other distributions.
 
-We are moving to use Podman as our main compilation method, actually it's mature and compile like the raw script.
+We are moving to use Podman as our main compilation method, it is the recommended build process for non-Debian systems.
 
 (Podman avoid environment problems on compilation)
 
