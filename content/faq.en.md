@@ -7,7 +7,7 @@ This page covers the most asked questions.
 - [How is Redox?](#how-is-redox)
 - [What is the purpose of Redox?](#what-is-the-purpose-of-redox)
 - [What I can do with Redox?](#what-i-can-do-with-redox)
-- [What is an Unix-like OS?](#what-is-an-unix-like-os)
+- [What is a Unix-like OS?](#what-is-a-unix-like-os)
 - [How Redox is inspired by other systems?](#how-redox-is-inspired-by-other-systems)
 - [What is a microkernel?](#what-is-a-microkernel)
 - [What programs can Redox run?](#what-programs-can-redox-run)
@@ -40,7 +40,7 @@ Wherever possible, the system components are written in Rust and run on user-spa
 
 [Use Cases]: https://doc.redox-os.org/book/ch01-04-redox-use-cases.html
 
-## What is an Unix-like OS?
+## What is a Unix-like OS?
 
 Any OS based on [Unix] or compatible with [POSIX] and Single Unix Specification, such as shell, "everything is a file" concept, multitasking and multiuser.
 
