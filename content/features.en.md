@@ -10,13 +10,13 @@ You can change every system component without a system restart, similar to [live
 
 ## Bug isolation
 
-Most system components run in user-space on a microkernel system, a bug on any system component can't [crash the system/kernel].
+Most system components run in user-space on a microkernel system, a bug in a system component out of the kernel can't [crash the system/kernel].
 
 [crash the system/kernel]: https://en.wikipedia.org/wiki/Kernel_panic
 
 ## No-reboot design
 
-The kernel change very little (bug fixing), then you don't need to restart your system to update the system, since most of the system components are on user-space, they can be replaced on-the-fly (it helps a lot server administrators).
+The kernel change very little (bug fixing), then you don't need to restart your system with frequency to update the system, since most of the system components are on user-space, they can be replaced on-the-fly (it helps a lot server administrators).
 
 Expect less kernel updates too (less chance to more bugs).
 
