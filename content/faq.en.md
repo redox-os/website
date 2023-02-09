@@ -126,7 +126,7 @@ A [hypervisor] is a software that manage virtual machines, it can be a "compatib
 ### CPU
 
 - [x86_64/AMD64] - (Intel/AMD)
-- [x86/i686] - (Intel/AMD, incomplete)
+- [x86/i686] - (Intel/AMD from Pentium II and after, incomplete)
 - [ARM64] - (WIP, incomplete)
 
 [x86_64/AMD64]: https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/x86_64
