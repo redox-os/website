@@ -10,19 +10,19 @@ Você pode mudar cada componente do sistema sem reiniciar o sistema, similar ao 
 
 ## Isolamento de bugs
 
-A maioria dos componentes do sistema executam no espaço do usuário em um sistema com microkernel, um bug em qualquer componente do sistema não pode [quebrar o sistema/kernel].
+A maioria dos componentes do sistema executam no espaço do usuário em um sistema com microkernel, um bug em componentes do sistema fora do kernel não pode [quebrar o sistema/kernel].
 
 [quebrar o sistema/kernel]: https://en.wikipedia.org/wiki/Kernel_panic
 
 ## Design de não-reinicialização
 
-O kernel é pequeno e muda muito pouco (correção de bugs), então você não precisa reiniciar seu sistema para atualizar, já que a maioria dos serviços do sistema estão no espaço do usuário, eles podem ser trocados durante a execução.
+O kernel é pequeno e muda muito pouco (correção de bugs), então você não precisa reiniciar seu sistema com frequência para atualizar, já que a maioria dos serviços do sistema estão no espaço do usuário, eles podem ser trocados durante a execução.
 
 A frequência de atualizações é menor também (menos chance de bugs).
 
 ## Sem necessidade para mitigações de exploit
 
-O design em microkernel escrito em Rust torna a maioria das falhas de segurança C/C++ irrelevante/inútil, com esse design o invasor/hacker não pode usar estes bugs para explorar o sistema.
+O design em microkernel escrito em Rust torna a maioria das falhas de segurança C/C++ irrelevantes/inúteis, com esse design o invasor/hacker não pode usar estes bugs para explorar o sistema.
 
 ## Sistema de arquivos inspirado no ZFS
 
@@ -44,7 +44,6 @@ A Rust implementa otimização de desempenho com segurança por padrão.
 
 ## Drivers escritos em Rust
 
-Drivers written in Rust have less bugs, more security and performance (less bugs can bring more performance).
 Drivers escritos em Rust tem menos bugs, mais segurança e desempenho (menos bugs podem melhorar o desempenho do dispositivo).
 
 - [Dispositivos suportados atualmente](/faq/#which-devices-redox-support)

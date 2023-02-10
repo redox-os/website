@@ -126,7 +126,7 @@ Um [supervisor] é um software the gerencia máquinas virtuais, ele pode ser uma
 ### CPU
 
 - [x86_64/AMD64] - (Intel/AMD)
-- [x86/i686] - (Intel/AMD, incompleto)
+- [x86/i686] - (Intel/AMD a partir do Pentium II e após, incompleto)
 - [ARM64] - (incompleto)
 
 [x86_64/AMD64]: https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/x86_64
