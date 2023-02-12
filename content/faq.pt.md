@@ -5,6 +5,7 @@ title = "FAQ"
 Essa página cobre as perguntas mais comuns.
 
 - [O que é o Redox?](#o-que-%C3%A9-o-redox)
+- [Quais funções o Redox possui?](#quais-fun%C3%A7%C3%B5es-o-redox-possui)
 - [Qual o propósito do Redox?](#qual-o-prop%C3%B3sito-do-redox)
 - [O que posso fazer com o Redox?](#o-que-posso-fazer-com-o-redox)
 - [O que é um sistema Unix-like?](#o-que-%C3%A9-um-sistema-unix-like)
@@ -27,6 +28,59 @@ Essa página cobre as perguntas mais comuns.
 Redox é um sistema operacional baseado em microkernel, completo, funcional, para uso geral com foco em segurança, liberdade, confiabilidade, correção e pragmatismo.
 
 Onde for possível, os componentes do sistema serão escritos em Rust e executam no espaço do usuário.
+
+## Quais funções o Redox possui?
+
+### Modularidade real
+
+Você pode mudar cada componente do sistema sem reiniciar o sistema, similar ao [livepatching]).
+
+[livepatching]: https://en.wikipedia.org/wiki/Kpatch
+
+### Isolamento de bugs
+
+A maioria dos componentes do sistema executam no espaço do usuário em um sistema com microkernel, um bug em componentes do sistema fora do kernel não pode [quebrar o sistema/kernel].
+
+[quebrar o sistema/kernel]: https://en.wikipedia.org/wiki/Kernel_panic
+
+### Design de não-reinicialização
+
+O kernel é pequeno e muda muito pouco (correção de bugs), então você não precisa reiniciar seu sistema com frequência para atualizar, já que a maioria dos serviços do sistema estão no espaço do usuário, eles podem ser trocados durante a execução.
+
+A frequência de atualizações é menor também (menos chance de bugs).
+
+### Sem necessidade para mitigações de exploit
+
+O design em microkernel escrito em Rust torna a maioria das falhas de segurança C/C++ irrelevantes/inúteis, com esse design o invasor/hacker não pode usar estes bugs para explorar o sistema.
+
+### Sistema de arquivos inspirado no ZFS
+
+O Redox utiliza o RedoxFS como sistema de arquivos padrão, ele suporta as mesmas funções do [ZFS] com mudanças na implementação.
+
+Espere alto desempenho e segurança dos dados (copy-on-write, integridade de arquivos, volumes, snapshots, endurecido contra a perda de arquivos).
+
+[ZFS]: https://docs.freebsd.org/en/books/handbook/zfs/
+
+### Melhor desempenho do sistema e menos uso de memória
+
+Como o kernel é pequeno, ele usa menos memória para fazer suas funções e está perto de ser livre de bugs (objetivo do príncipio [KISS]).
+
+Além de ser pequeno, o sistema é escrito em Rust, essa linguaguem de programação ajuda os programadores a escrever um código melhor sem problemas de desempenho.
+
+A Rust implementa otimização de desempenho com segurança por padrão.
+
+[KISS]: https://en.wikipedia.org/wiki/KISS_principle
+
+### Drivers escritos em Rust
+
+Drivers escritos em Rust tem menos bugs, mais segurança e desempenho (menos bugs podem melhorar o desempenho do dispositivo).
+
+- [Dispositivos suportados atualmente](/faq/#which-devices-redox-support)
+
+### Fácil de desenvolver e depurar
+
+A maioria dos componentes do sistema estão no espaço do usuário, você não precisa de virtualização para testar/depurar eles, mais rápido de desenvolver.
+
 
 ## Qual o propósito do Redox?
 
