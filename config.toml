@@ -20,22 +20,26 @@ name = "FAQ"
 url = "/faq"
 [[languages.en.menu.main]]
 weight = 3
+name = "Quickstart"
+url = "/quickstart/"
+[[languages.en.menu.main]]
+weight = 4
 name = "News"
 url = "/news/"
 [[languages.en.menu.main]]
-weight = 4
+weight = 5
 name = "GitLab"
 url = "https://gitlab.redox-os.org/redox-os/redox"
 [[languages.en.menu.main]]
-weight = 5
+weight = 6
 name = "Community"
 url = "/community"
 [[languages.en.menu.main]]
-weight = 6
+weight = 7
 name = "Donate"
 url = "/donate/"
 [[languages.en.menu.main]]
-weight = 7
+weight = 8
 name = "RSoC"
 url = "/rsoc/"
 
@@ -488,6 +492,10 @@ url = "/news/"
 weight = 4
 name = "FAQ"
 url = "/faq/"
+[[languages.pt.menu.main]]
+weight = 5
+name = "Começo Rápido"
+url = "/quickstart/"
 [[languages.pt.menu.main]]
 weight = 5
 name = "Doações"

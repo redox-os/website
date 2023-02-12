@@ -6,6 +6,14 @@ Essa página cobre as perguntas mais comuns.
 
 - [O que é o Redox?](#o-que-%C3%A9-o-redox)
 - [Quais funções o Redox possui?](#quais-fun%C3%A7%C3%B5es-o-redox-possui)
+ - [Modularidade real](#modularidade-real)
+ - [Isolamento de bugs](#isolamento-de-bugs)
+ - [Design de não-reinicialização](#design-de-não-reinicialização)
+ - [Sem necessidade para mitigações de exploit](#sem-necessidade-para-mitigações-de-exploit)
+ - [Sistema de arquivos inspirado no ZFS](#sistema-de-arquivos-inspirado-no-zfs)
+ - [Melhor desempenho do sistema e menos uso de memória](#melhor-desempenho-do-sistema-e-menos-uso-de-memória)
+ - [Drivers escritos em Rust](#drivers-escritos-em-rust)
+ - [Fácil de desenvolver e depurar](#fácil-de-desenvolver-e-depurar)
 - [Qual o propósito do Redox?](#qual-o-prop%C3%B3sito-do-redox)
 - [O que posso fazer com o Redox?](#o-que-posso-fazer-com-o-redox)
 - [O que é um sistema Unix-like?](#o-que-%C3%A9-um-sistema-unix-like)
@@ -13,6 +21,13 @@ Essa página cobre as perguntas mais comuns.
 - [O que é um microkernel?](#o-que-%C3%A9-um-microkernel)
 - [Quais programas o Redox executa?](#quais-programas-o-redox-executa)
 - [Quais dispositivos o Redox suporta?](#quais-dispositivos-o-redox-suporta)
+ - [CPU](#cpu)
+ - [Interfaces do Hardware](#interfaces-do-hardware)
+ - [Vídeo](#vídeo)
+ - [Som](#som)
+ - [Armazenamento](#armazenamento)
+ - [Periféricos](#periféricos)
+ - [Internet](#internet)
 - [Quais máquinas virtuais o Redox possui integração?](#quais-m%C3%A1quinas-virtuais-o-redox-possui-integra%C3%A7%C3%A3o)
 - [Como compilar o Redox?](#como-compilar-o-redox)
  - [Como atualizar o código-fonte e compilar as mudanças](#como-atualizar-o-c%C3%B3digo-fonte-e-compilar-as-mudan%C3%A7as)
@@ -197,18 +212,16 @@ Um [supervisor] é um software the gerencia máquinas virtuais, ele pode ser uma
 [ACPI]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/acpid
 [PCI]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/pcid
 
-### Internet
+### Vídeo
 
-- [Intel Gigabit ethernet]
-- [Intel 10 Gigabit ethernet]
-- [Realtek ethernet]
+- [VGA] - (BIOS)
+- GOP (UEFI)
+- [LLVMpipe] - Renderização de Software
 
-(Wi-Fi/[Atheros ethernet] em breve)
+(Intel/AMD e outros no futuro)
 
-[Intel Gigabit ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/e1000d
-[Intel 10 Gigabit ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ixgbed
-[Realtek ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/rtl8168d
-[Atheros ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/alxd
+[VGA]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/vesad
+[LLVMpipe]: https://docs.mesa3d.org/drivers/llvmpipe.html
 
 ### Som
 
@@ -223,18 +236,7 @@ Um [supervisor] é um software the gerencia máquinas virtuais, ele pode ser uma
 [Sound Blaster]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/sb16d
 [PC speaker]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/pcspkrd
 
-### Video
-
-- [VGA] - (BIOS)
-- GOP (UEFI)
-- [LLVMpipe] - Renderização de Software
-
-(Intel/AMD e outros no futuro)
-
-[VGA]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/vesad
-[LLVMpipe]: https://docs.mesa3d.org/drivers/llvmpipe.html
-
-### Storage
+### Armazenamento
 
 - [IDE] - (PATA)
 - [AHCI] - (SATA)
@@ -257,6 +259,19 @@ Um [supervisor] é um software the gerencia máquinas virtuais, ele pode ser uma
 [Teclados PS/2]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d
 [Mouse PS/2]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d
 [Touchpad PS/2]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d
+
+### Internet
+
+- [Intel Gigabit ethernet]
+- [Intel 10 Gigabit ethernet]
+- [Realtek ethernet]
+
+(Wi-Fi/[Atheros ethernet] em breve)
+
+[Intel Gigabit ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/e1000d
+[Intel 10 Gigabit ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ixgbed
+[Realtek ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/rtl8168d
+[Atheros ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/alxd
 
 ## Quais máquinas virtuais o Redox possui integração?
 
