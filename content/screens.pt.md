@@ -1,5 +1,5 @@
 +++
-title = "Capturas de Tela"
+title = "Redox em Ação"
 +++
 
 ## System76 Galago Pro (galp3-c)
@@ -16,3 +16,6 @@ title = "Capturas de Tela"
 
 ## ThinkPad T520, ThinkPad P50 and Asus P7P55D-E Pro Desktop
 <img class="img-responsive" src="/img/hardware/T520-P50-Asus-Desktop.jpg"/>
+
+## Redox OS playing Stargate SG-1 Season 10 intro
+<video class="img-responsive" src="https://www.youtube.com/watch?v=3cPekY4c9Hc"/>
