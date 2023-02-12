@@ -6,6 +6,14 @@ This page covers the most asked questions.
 
 - [What is Redox?](#what-is-redox)
 - [What features does Redox have?](#what-features-does-redox-have)
+ - [True modularity](#true-modularity)
+ - [Bug isolation](#bug-isolation)
+ - [No-reboot design](#no-reboot-design)
+ - [No need for exploit mitigations](#no-need-for-exploit-mitigations)
+ - [ZFS-inspired filesystem](#zfs-inspired-filesystem)
+ - [Better system performance and less memory usage](#better-system-performance-and-less-memory-usage)
+ - [Rust-written drivers](#rust-written-drivers)
+ - [Easy to develop and debug](#easy-to-develop-and-debug)
 - [What is the purpose of Redox?](#what-is-the-purpose-of-redox)
 - [What I can do with Redox?](#what-i-can-do-with-redox)
 - [What is a Unix-like OS?](#what-is-a-unix-like-os)
@@ -13,6 +21,13 @@ This page covers the most asked questions.
 - [What is a microkernel?](#what-is-a-microkernel)
 - [What programs can Redox run?](#what-programs-can-redox-run)
 - [Which devices does Redox support?](#which-devices-does-redox-support)
+ - [CPU](#cpu)
+ - [Hardware Interfaces](#hardware-interfaces)
+ - [Video](#video)
+ - [Sound](#sound)
+ - [Storage](#storage)
+ - [Input](#input)
+ - [Internet](#internet)
 - [Which virtual machines does Redox have integration with?](#which-virtual-machines-does-redox-have-integration-with)
 - [How do I build Redox?](#how-do-i-build-redox)
  - [How to update the sources and compile the changes](#how-to-update-the-sources-and-compile-the-changes)
@@ -197,18 +212,16 @@ A [hypervisor] is a software that manage virtual machines, it can be a "compatib
 [ACPI]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/acpid
 [PCI]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/pcid
 
-### Internet
+### Video
 
-- [Intel Gigabit ethernet]
-- [Intel 10 Gigabit ethernet]
-- [Realtek ethernet]
+- [VGA] - (BIOS)
+- GOP (UEFI)
+- [LLVMpipe] - Software Rendering
 
-(Wi-Fi/[Atheros ethernet] soon)
+(Intel/AMD and others in the future)
 
-[Intel Gigabit ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/e1000d
-[Intel 10 Gigabit ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ixgbed
-[Realtek ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/rtl8168d
-[Atheros ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/alxd
+[VGA]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/vesad
+[LLVMpipe]: https://docs.mesa3d.org/drivers/llvmpipe.html
 
 ### Sound
 
@@ -222,17 +235,6 @@ A [hypervisor] is a software that manage virtual machines, it can be a "compatib
 [Realtek chipsets]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ac97d
 [Sound Blaster]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/sb16d
 [PC speaker]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/pcspkrd
-
-### Video
-
-- [VGA] - (BIOS)
-- GOP (UEFI)
-- [LLVMpipe] - Software Rendering
-
-(Intel/AMD and others in the future)
-
-[VGA]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/vesad
-[LLVMpipe]: https://docs.mesa3d.org/drivers/llvmpipe.html
 
 ### Storage
 
@@ -257,6 +259,19 @@ A [hypervisor] is a software that manage virtual machines, it can be a "compatib
 [PS/2 keyboards]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d
 [PS/2 mouse]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d
 [PS/2 touchpad]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d
+
+### Internet
+
+- [Intel Gigabit ethernet]
+- [Intel 10 Gigabit ethernet]
+- [Realtek ethernet]
+
+(Wi-Fi/[Atheros ethernet] soon)
+
+[Intel Gigabit ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/e1000d
+[Intel 10 Gigabit ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ixgbed
+[Realtek ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/rtl8168d
+[Atheros ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/alxd
 
 ## Which virtual machines does Redox have integration with?
 
