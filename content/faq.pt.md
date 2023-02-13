@@ -15,9 +15,7 @@ Essa página cobre as perguntas mais comuns.
 - [Quais dispositivos o Redox suporta?](#quais-dispositivos-o-redox-suporta)
 - [Quais máquinas virtuais o Redox possui integração?](#quais-m%C3%A1quinas-virtuais-o-redox-possui-integra%C3%A7%C3%A3o)
 - [Como compilar o Redox?](#como-compilar-o-redox)
- - [Como atualizar o código-fonte e compilar as mudanças](#como-atualizar-o-c%C3%B3digo-fonte-e-compilar-as-mudan%C3%A7as)
  - [Como abrir o QEMU sem interface gráfica](#como-abrir-o-qemu-sem-interface-gr%C3%A1fica)
- - [Como inserir arquivos no disco rígido do QEMU](#como-inserir-arquivos-dentro-do-disco-r%C3%ADgido-do-qemu)
  - [Como diagnosticar seu Redox em caso de erros](#como-diagnosticar-seu-redox-em-caso-de-erros)
  - [Como reportar bugs para o Redox](#como-reportar-bugs-para-o-redox)
 - [Como contribuir para o Redox?](#como-contribuir-para-o-redox)
@@ -35,19 +33,15 @@ Onde for possível, os componentes do sistema serão escritos em Rust e executam
 
 #### Modularidade real
 
-Você pode modificar/trocar a maioria dos componentes do sistema sem reiniciar o sistema, similar ao [livepatching]).
-
-[livepatching]: https://en.wikipedia.org/wiki/Kpatch
+Você pode modificar/trocar a maioria dos componentes do sistema sem reiniciar o sistema, similar ao [livepatching](https://en.wikipedia.org/wiki/Kpatch) porém mais seguro).
 
 #### Isolamento de bugs
 
-A maioria dos componentes do sistema executam no espaço do usuário em um sistema com microkernel, um bug em componentes do sistema fora do kernel não pode [quebrar o kernel].
-
-[quebrar o kernel]: https://en.wikipedia.org/wiki/Kernel_panic
+A maioria dos componentes do sistema executam no espaço do usuário em um sistema com microkernel, um bug em componentes do sistema fora do kernel não pode [quebrar o kernel](https://en.wikipedia.org/wiki/Kernel_panic).
 
 #### Design de não-reinicialização
 
-O kernel é pequeno e muda muito pouco (correção de bugs), portanto você não precisa reiniciar seu sistema com frequência para atualizar, já que a maioria dos serviços do sistema estão no espaço do usuário, eles podem ser trocados/atualizados durante a execução.
+O kernel é pequeno e muda muito pouco (correção de bugs), portanto você não precisa reiniciar seu sistema com frequência para atualizar, já que a maioria dos serviços do sistema estão no espaço do usuário, eles podem ser trocados/atualizados durante a execução (reduzindo o tempo offline de servidores).
 
 ### Benefícios da Rust
 
@@ -57,25 +51,19 @@ O design em microkernel escrito em Rust protege contra as falhas de memória da 
 
 #### Sistema de arquivos inspirado no ZFS
 
-O Redox utiliza o RedoxFS como sistema de arquivos padrão, ele suporta funções parecidas com as do [ZFS] com uma implementação escrita em Rust.
+O Redox utiliza o RedoxFS como sistema de arquivos padrão, ele suporta funções parecidas com as do [ZFS](https://docs.freebsd.org/en/books/handbook/zfs/) com uma implementação escrita em Rust.
 
 Espere alto desempenho e segurança dos dados (copy-on-write, integridade de arquivos, volumes, snapshots, endurecido contra a perda de arquivos).
 
-[ZFS]: https://docs.freebsd.org/en/books/handbook/zfs/
-
 #### Melhorias de segurança/confiabilidade sem impacto significante no desempenho
 
-Como o kernel é pequeno, ele usa menos memória para fazer suas funções e está perto de ser livre de bugs (objetivo do príncipio [KISS]).
+Como o kernel é pequeno, ele usa menos memória para fazer suas funções e o código limitado no kernel torna ele quase livre de bugs (objetivo do príncipio [KISS](https://en.wikipedia.org/wiki/KISS_principle)).
 
-Além de ser pequeno, o sistema é escrito em Rust, essa linguaguem de programação ajuda os programadores a escrever um código melhor sem problemas de desempenho.
-
-A Rust implementa otimização de desempenho com segurança por padrão.
-
-[KISS]: https://en.wikipedia.org/wiki/KISS_principle
+O design seguro e veloz da linguagem Rust, combinado com a pequena quantidade de código no kernel, ajudam a garantir um núcleo fácil, confiável e veloz de manter.
 
 #### Drivers escritos em Rust
 
-Drivers escritos em Rust tem menos bugs, mais segurança e desempenho (menos bugs podem melhorar o desempenho do dispositivo).
+Drivers escritos em Rust possuem incentivos para ter menos bugs, melhor segurança e desempenho (menos bugs podem melhorar o desempenho do dispositivo).
 
 - [Dispositivos suportados atualmente](/faq/#which-devices-redox-support)
 
@@ -88,77 +76,54 @@ A maioria dos componentes do sistema estão no espaço do usuário, simplificand
 
 O objetivo principal do Redox é ser um sistema de propósito geral para qualquer tarefa/computador, mantendo a segurança, confiabilidade e correção.
 
-Nós pretendemos ser uma alternativa aos sistemas Unix (Linux/BSD) existentes também, podendo executar programas Unix com apenas modificações mínimas.
+O Redox pretende ser uma alternativa aos sistemas Unix (Linux/BSD) existentes também, podendo executar programas Unix com apenas compilação ou modificações mínimas.
 
-[Nossos Objetivos]
-
-[Nossos Objetivos]: https://doc.redox-os.org/book/ch01-01-our-goals.html
+- [Nossos Objetivos](https://doc.redox-os.org/book/ch01-01-our-goals.html)
 
 ## O que posso fazer com o Redox?
 
-Como um sistema de propósito geral, você pode fazer quase tudo na maioria dos dispositivos com alto desempenho/segurança.
+Como um sistema de propósito geral, você é capaz de fazer quase tudo na maioria dos dispositivos com alto desempenho/segurança.
 
-[Casos de Uso]
+O Redox está em desenvolvimento, portanto nossa lista de aplicações suportada é limitada atualmente, mas crescente.
 
-[Casos de Uso]: https://doc.redox-os.org/book/ch01-04-redox-use-cases.html
+- [Casos de Uso](https://doc.redox-os.org/book/ch01-04-redox-use-cases.html)
 
 ## O que é um sistema Unix-like?
 
-Qualquer sistema compátivel com a [Especificação Única do Unix] e [POSIX], portanto com uma Shell, o conceito de "Tudo é um arquivo", multitarefa e multiusuário.
+Qualquer sistema compátivel com a [Especificação Única do Unix](https://en.wikipedia.org/wiki/Single_UNIX_Specification) e [POSIX](https://en.wikipedia.org/wiki/POSIX), portanto com uma [Shell](https://en.wikipedia.org/wiki/Unix_shell), o conceito de "[Tudo é um arquivo](https://en.wikipedia.org/wiki/Everything_is_a_file)", multitarefa e multiusuário.
 
-[Unix] foi um sistema operacional de multitarefa muito influente e impactou as decisões de design em diversos sistemas modernos.
+[Unix](https://pt.wikipedia.org/wiki/Unix) foi um sistema operacional de multitarefa muito influente e impactou as decisões de design em diversos sistemas modernos.
 
-- [Artigo da Wikipedia]
-
-[Especificação Única do Unix]]: https://en.wikipedia.org/wiki/Single_UNIX_Specification
-[POSIX]: https://en.wikipedia.org/wiki/POSIX
-[Unix]: https://pt.wikipedia.org/wiki/Unix
-[Artigo da Wikipedia]: https://pt.wikipedia.org/wiki/Sistema_operacional_tipo_Unix
+- [Artigo da Wikipedia](https://pt.wikipedia.org/wiki/Sistema_operacional_tipo_Unix)
 
 ## Como o Redox é inspirado em outros sistemas?
 
-[Plan 9] - Este sistema da Bell Labs trouxe o conceito de "Tudo é um arquivo" ao seu maior nível, fazendo toda a comunicação do sistema pelo sistemas de arquivos.
+[Plan 9](http://9p.io/plan9/index.html) - Este sistema da Bell Labs trouxe o conceito de "Tudo é um arquivo" ao seu maior nível, fazendo toda a comunicação do sistema pelo sistemas de arquivos.
 
 Você apenas precisa montar o software em algum local para obter a função desejada, qualquer software pode funcionar dessa forma.
 
-- [Drew DeVault explicando o Plan 9]
-- [Como o Redox utiliza o design do Plan 9]
+- [Drew DeVault explicando o Plan 9](https://drewdevault.com/2022/11/12/In-praise-of-Plan-9.html)
+- [Como o Redox utiliza o design do Plan 9](https://doc.redox-os.org/book/ch05-00-urls-schemes-resources.html)
 
-[Plan 9]: http://9p.io/plan9/index.html
-[Drew DeVault explicando o Plan 9]: https://drewdevault.com/2022/11/12/In-praise-of-Plan-9.html
-[Como o Redox utiliza o design do Plan 9]: https://doc.redox-os.org/book/ch05-00-urls-schemes-resources.html
-
-[Minix] - o sistema Unix-like com microkernel mais influente, ele possuí funções avançadas tais como modularidade do sistema, resistência a [quebra do kernel], reincarnação de driver, proteção contra drivers ruins e interfaces seguras para a [comunicação dos processos].
+[Minix](https://minix3.org/) - o sistema Unix-like com microkernel mais influente, ele possuí funções avançadas tais como modularidade do sistema, resistência a [quebra do kernel](https://en.wikipedia.org/wiki/Kernel_panic), reincarnação de driver, proteção contra drivers ruins e interfaces seguras para a [comunicação dos processos](https://en.wikipedia.org/wiki/Inter-process_communication).
 
 O Redox é largamente inspirado pelo Minix, ele tem basicamente as mesmas funções mas escritas em Rust.
 
-[Minix]: https://minix3.org/
-[quebra do kernel]: https://en.wikipedia.org/wiki/Kernel_panic
-[comunicação dos processos]: https://en.wikipedia.org/wiki/Inter-process_communication
-[Como o Redox implementa o design de microkernel do Minix]: https://doc.redox-os.org/book/ch04-01-microkernels.html
+- [Como o Redox implementa o design de microkernel do Minix](https://doc.redox-os.org/book/ch04-01-microkernels.html)
 
-[BSD] - Essa [família] de sistemas Unix fez diversas melhorias para os sistemas Unix, a mais notável são os [sockets BSD], eles trazem a comunicação de rede para o sistema de arquivos Unix (antes do Plan 9).
+[BSD](https://www.bsd.org/) - Essa [família](https://en.wikipedia.org/wiki/Research_Unix) de sistemas Unix fez diversas melhorias para os sistemas Unix, a mais notável são os [sockets BSD](https://en.wikipedia.org/wiki/Berkeley_sockets), eles trazem a comunicação de rede para o sistema de arquivos Unix (antes do Plan 9).
 
-- [Documentação do FreeBSD]
+- [Documentação do FreeBSD](https://docs.freebsd.org/en/books/developers-handbook/sockets/)
 
-[BSD]: https://www.bsd.org/
-[família]: https://en.wikipedia.org/wiki/Research_Unix
-[sockets BSD]: https://en.wikipedia.org/wiki/Berkeley_sockets
-[Documentação do FreeBSD]: https://docs.freebsd.org/en/books/developers-handbook/sockets/
-
-[Linux] - o kernel monolítico mais avançado do mundo e maior projeto de código-aberto do mundo, ele traz diversas melhorias/otimizações para sistemas Unix-like.
+[Linux](https://www.kernel.org/) - o kernel monolítico mais avançado do mundo e maior projeto de código-aberto do mundo, ele traz diversas melhorias/otimizações para sistemas Unix-like.
 
 O Redox tenta implementar as melhorias de desempenho do Linux em um design de microkernel.
-
-[Linux]: https://www.kernel.org/
 
 ## O que é um microkernel?
 
 Um microkernel é um modelo para núcleo de sistema operacional com uma pequena quantidade de código executando no maior privilégio do processador, este modelo melhora a estabilidade e segurança, com um pequeno custo de desempenho.
 
-- [Explicação do livro Redox]
-
-[Explicação do livro Redox]: https://doc.redox-os.org/book/ch04-01-microkernels.html
+- [Explicação do livro Redox](https://doc.redox-os.org/book/ch04-01-microkernels.html)
 
 ## Quais programas o Redox executa?
 
@@ -178,106 +143,71 @@ Softwares importantes que o Redox suporta:
 - [Python](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/python)
 - [SDL](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/sdl2)
 
-No futuro o microkernel pode agir como um supervisor, similar ao [Xen].
+No futuro o microkernel pode agir como um supervisor, similar ao [Xen](https://xenproject.org/).
 
-Um [supervisor] é um software the gerencia máquinas virtuais, ele pode ser uma "camada de compatibilidade" para qualquer sistema operacional.
-
-[Xen]: https://xenproject.org/
-[supervisor]: https://en.wikipedia.org/wiki/Hypervisor
+Um [supervisor](https://en.wikipedia.org/wiki/Hypervisor) é um software the gerencia máquinas virtuais, ele pode ser uma "camada de compatibilidade" para qualquer sistema operacional.
 
 ## Quais dispositivos o Redox suporta?
 
-There are billions of devices with hundreds of models/architectures in the world, we try to write drivers for the most used devices to support more people, some drivers are device-specific and others are architecture-specific (better to port).
 Há bilhões de dispositivos com centenas de modelos/arquiteturas no mundo, nós tentamos escrever drivers para os dispositivos mais utilizados para ajudar mais pessoas, alguns drivers são específicos para um dispositivo e outros são específicos de arquitetura (melhor para portar).
 
 ### CPU
 
-- [x86_64/AMD64] - (Intel/AMD)
-- [x86/i686] - (Intel/AMD a partir do Pentium II e após, incompleto)
-- [ARM64] - (incompleto)
-
-[x86_64/AMD64]: https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/x86_64
-[x86/i686]: https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/x86
-[ARM64]: https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/aarch64
+- [x86_64/AMD64](https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/x86_64) - (Intel/AMD)
+- [x86/i686](https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/x86) - (Intel/AMD a partir do Pentium II e após, incompleto)
+- [ARM64](https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/aarch64) - (incompleto)
 
 ### Interfaces do Hardware
 
-- [ACPI]
-- [PCI]
+- [ACPI](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/acpid)
+- [PCI](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/pcid)
 
 (USB breve)
 
-[ACPI]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/acpid
-[PCI]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/pcid
-
 ### Vídeo
 
-- [VGA] - (BIOS)
+- [VGA](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/vesad) - (BIOS)
 - GOP (UEFI)
-- [LLVMpipe] - Renderização de Software
+- [LLVMpipe](https://docs.mesa3d.org/drivers/llvmpipe.html) - Renderização de Software
 
 (Intel/AMD e outros no futuro)
 
-[VGA]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/vesad
-[LLVMpipe]: https://docs.mesa3d.org/drivers/llvmpipe.html
-
 ### Som
 
-- [Intel chipsets]
-- [Realtek chipsets]
-- [PC speaker]
+- [Intel chipsets](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ihdad)
+- [Realtek chipsets](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ac97d)
+- [PC speaker](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/pcspkrd)
 
-([Sound Blaster] em breve)
-
-[Intel chipsets]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ihdad
-[Realtek chipsets]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ac97d
-[Sound Blaster]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/sb16d
-[PC speaker]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/pcspkrd
+([Sound Blaster](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/sb16d) em breve)
 
 ### Armazenamento
 
-- [IDE] - (PATA)
-- [AHCI] - (SATA)
-- [NVMe]
+- [IDE](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ided) - (PATA)
+- [AHCI](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ahcid) - (SATA)
+- [NVMe](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/nvmed)
 
 (USB em breve)
-
-[IDE]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ided
-[AHCI]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ahcid
-[NVMe]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/nvmed
 
 ### Periféricos
 
-- [Teclados PS/2]
-- [Mouse PS/2]
-- [Touchpad PS/2]
+- [Teclados PS/2](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d)
+- [Mouse PS/2](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d)
+- [Touchpad PS/2](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d)
 
 (USB em breve)
 
-[Teclados PS/2]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d
-[Mouse PS/2]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d
-[Touchpad PS/2]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d
-
 ### Internet
 
-- [Intel Gigabit ethernet]
-- [Intel 10 Gigabit ethernet]
-- [Realtek ethernet]
+- [Intel Gigabit ethernet](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/e1000d)
+- [Intel 10 Gigabit ethernet](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ixgbed)
+- [Realtek ethernet](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/rtl8168d)
 
-(Wi-Fi/[Atheros ethernet] em breve)
-
-[Intel Gigabit ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/e1000d
-[Intel 10 Gigabit ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ixgbed
-[Realtek ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/rtl8168d
-[Atheros ethernet]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/alxd
+(Wi-Fi/[Atheros ethernet](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/alxd) em breve)
 
 ## Quais máquinas virtuais o Redox possui integração?
 
-- [VirtualBox]
-- [Bochs]
-
-[VirtualBox]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/vboxd
-[Bochs]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/bgad
+- [QEMU](https://www.qemu.org/)
+- [VirtualBox](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/vboxd)
 
 ## Como compilar o Redox?
 
@@ -287,23 +217,10 @@ Nós estamos em transição para o Podman como nosso método de compilação pri
 
 (O Podman evita problemas de ambiente durante a compilação)
 
-- [Guia no Livro do Redox] - (Debian/Ubuntu/Pop OS!)
-- [Guia Avançado no Livro do Redox] - (Debian/Ubuntu/Pop OS!)
-- [Guia do Podman no Livro do Redox]
-- [Guia Avançado do Podman no Livro do Redox]
-
-[Guia no Livro do Redox]: https://doc.redox-os.org/book/ch02-05-building-redox.html
-[Guia Avançado no Livro do Redox]: https://doc.redox-os.org/book/ch08-01-advanced-build.html
-[Guia do Podman no Livro do Redox]: https://doc.redox-os.org/book/ch02-06-podman-build.html
-[Guia Avançado do Podman no Livro do Redox]: https://doc.redox-os.org/book/ch08-02-advanced-podman-build.html
-
-### Como atualizar o código-fonte e compilar as mudanças?
-
-Se você já baixou o código-fonte do Redox e compilou, é muito fácil de baixar/compilar novas mudanças.
-
-- [Guia de Recompilação no Livro do Redox]
-
-[Guia de Recompilação no Livro do Redox]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#the-full-rebuild-cycle
+- [Guia no Livro do Redox](https://doc.redox-os.org/book/ch02-05-building-redox.html) - (Debian/Ubuntu/Pop OS!)
+- [Guia Avançado no Livro do Redox](https://doc.redox-os.org/book/ch08-01-advanced-build.html) - (Debian/Ubuntu/Pop OS!)
+- [Guia do Podman no Livro do Redox](https://doc.redox-os.org/book/ch02-06-podman-build.html)
+- [Guia Avançado do Podman no Livro do Redox](https://doc.redox-os.org/book/ch08-02-advanced-podman-build.html)
 
 ### Como abrir o QEMU sem interface gráfica
 
@@ -313,53 +230,32 @@ Execute:
 
 O QEMU ficará semelhante a um container/chroot.
 
-### Como inserir arquivos dentro do disco rígido do QEMU
-
-Se você quiser fazer mudanças/testes rápidos na imagem QEMU.
-
-- [Guia do QEMU no livro do Redox]
-
-[Guia do QEMU no livro do Redox]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#patch-an-image
-
 ### Como diagnosticar seu Redox em caso de erros
 
 Leia todo o livro do Redox antes para ver se seu problema é sua configuração de compilação ou ferramentas de compilação, se isto não resolver seu erro, leia:
 
-- [Guia de Diagnóstico no Livro do Redox]
-- [Guia de Diagnóstico no GitLab]
-
-[Guia de Diagnóstico no Livro do Redox]: https://doc.redox-os.org/book/ch08-05-troubleshooting.html
-[Guia de Diagnóstico no GitLab]: https://gitlab.redox-os.org/redox-os/redox#help-redox-wont-compile
+- [Guia de Diagnóstico no Livro do Redox](https://doc.redox-os.org/book/ch08-05-troubleshooting.html)
+- [Guia de Diagnóstico no GitLab](https://gitlab.redox-os.org/redox-os/redox#help-redox-wont-compile)
 
 ### Como reportar bugs para o Redox?
 
 Verifique as Issues no GitLab primeiro para ver se seu problema é conhecido.
 
-- [Guia para Relatório de Bug no Livro do Redox]
-
-[Guia para Relatório de Bug no Livro do Redox]: https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html
+- [Guia para Relatório de Bug no Livro do Redox](https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html)
+- [CONTRIBUTING.md](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md)
 
 ## Como contribuir para o Redox?
 
 Você pode contribuir para o Redox de diversas formas, leia sobre abaixo:
 
+- [Guia do GitLab](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md)
+- [Guia de Contribuição no Livro do Redox](https://doc.redox-os.org/book/ch10-02-low-hanging-fruit.html)
+- [Como fazer pull requests corretamente](https://doc.redox-os.org/book/ch12-04-creating-proper-pull-requests.html)
 - [Documentação](/pt/docs/)
-- [Guia de Contribuição no Livro do Redox]
-- [Como fazer pull requests corretamente]
-- [Guia do GitLab]
-- [Sala de Desenvolvimento do Redox] - Nos diga o que você planeja fazer.
-
-[Guia de Contribuição no Livro do Redox]: https://doc.redox-os.org/book/ch10-02-low-hanging-fruit.html
-[Como fazer pull requests corretamente]: https://doc.redox-os.org/book/ch12-04-creating-proper-pull-requests.html
-[Guia do GitLab]: https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md
-[Sala de Desenvolvimento do Redox]: https://matrix.to/#/#redox-dev:matrix.org
+- [Sala de Desenvolvimento do Redox](https://matrix.to/#/#redox-dev:matrix.org) - Nos diga o que você planeja fazer.
 
 ## Eu tenho um problema/pergunta para a equipe do Redox
 
 - Leia a [Documentação](/docs/).
-- Leia todo [livro do Redox] para ver se isso responde suas pergunta/corrige seu problema.
-- Se o livro não for suficiente pra você, diga sua pergunta/problema nas salas [Redox Support] ou [Redox Dev] no Matrix.
-
-[livro do Redox]: https://doc.redox-os.org/book/
-[Redox Support]: https://matrix.to/#/#redox-support:matrix.org
-[Redox Dev]: https://matrix.to/#/#redox-dev:matrix.org
+- Leia todo [livro do Redox](https://doc.redox-os.org/book/) para ver se isso responde suas pergunta/corrige seu problema.
+- Se a documentação/livro não resolver, diga sua pergunta/problema nas salas [Redox Support](https://matrix.to/#/#redox-support:matrix.org) ou [Redox Dev](https://matrix.to/#/#redox-dev:matrix.org) no Matrix.

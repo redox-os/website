@@ -256,9 +256,9 @@ Check GitLab Issues first to see if your problem is already known.
 You can contribute to Redox in many ways, here some of them:
 
 - [GitLab Guide](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md)
-- [Documentation](/docs/)
 - [Redox Book Contribution Guide](https://doc.redox-os.org/book/ch10-02-low-hanging-fruit.html)
 - [How to make pull requests properly](https://doc.redox-os.org/book/ch12-04-creating-proper-pull-requests.html)
+- [Documentation](/docs/)
 - [Redox Dev room](https://matrix.to/#/#redox-dev:matrix.org)
 
 ## I have a problem/question for Redox team
