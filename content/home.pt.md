@@ -39,7 +39,7 @@ url = "/home"
     <div style="font-size: 16px; text-align: center;">
       Redox executando Orbital
     </div>
-      Outras capturas de tela/vídeo podem ser acessados em <a href="/screens/">Redox em Ação</a>
+      Outras capturas de tela/vídeo podem ser acessados em <a href="/pt/screens/">Redox em Ação</a>
     </div>
     <a href="/img/redox-orbital/large.png">
       <picture>
