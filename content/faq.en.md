@@ -134,7 +134,7 @@ Redox is designed to be source-compatible with most Unix, Linux and POSIX-compil
 
 Currently, most GUI applications require porting, as we don't support X11 or Wayland yet.
 
-Some important software that Redox support:
+Some important software that Redox supports:
 
 - [Bash](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/bash)
 - [ffmpeg](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/ffmpeg)

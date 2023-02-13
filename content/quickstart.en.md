@@ -3,9 +3,9 @@ title = "Quickstart"
 +++
 
 - [Latest Release](https://www.redox-os.org/news/release-0.8.0/)
-- [Releases](https://gitlab.redox-os.org/redox-os/redox/-/releases)
-- [Redox Images](https://static.redox-os.org/img/)
 - [Getting Started (Redox Book)](https://doc.redox-os.org/book/ch02-00-getting-started.html)
+- [Redox Images](https://static.redox-os.org/img/)
+- [Releases](https://gitlab.redox-os.org/redox-os/redox/-/releases)
 
 ## Building Redox
 

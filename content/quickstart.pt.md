@@ -3,9 +3,9 @@ title = "Começo Rápido"
 +++
 
 - [Última Versão](https://www.redox-os.org/news/release-0.8.0/)
-- [Versões](https://gitlab.redox-os.org/redox-os/redox/-/releases)
-- [Imagens do Redox](https://static.redox-os.org/img/)
 - [Começando (Livro do Redox)](https://doc.redox-os.org/book/ch02-00-getting-started.html)
+- [Imagens do Redox](https://static.redox-os.org/img/)
+- [Versões](https://gitlab.redox-os.org/redox-os/redox/-/releases)
 
 ## Compilando o Redox
 
