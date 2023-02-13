@@ -40,8 +40,6 @@ url = "/home"
     <div style="font-size: 16px; text-align: center;">
       Redox executando Orbital
     </div>
-      Outras capturas de tela/vídeo podem ser acessados em <a href="/pt/screens/">Redox em Ação</a>
-    </div>
     <a href="/img/redox-orbital/large.png">
       <picture>
         <source media="(min-width: 1300px)" srcset="/img/redox-orbital/large.webp" type="image/webp">
