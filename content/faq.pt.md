@@ -81,7 +81,7 @@ Drivers escritos em Rust tem menos bugs, mais segurança e desempenho (menos bug
 
 #### Fácil de desenvolver e depurar
 
-A maioria dos componentes do sistema estão no espaço do usuário, você não precisa de virtualização para testar/depurar eles, mais rápido de desenvolver.
+A maioria dos componentes do sistema estão no espaço do usuário, simplificando a depuração.
 
 
 ## Qual o propósito do Redox?
