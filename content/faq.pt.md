@@ -63,7 +63,7 @@ O design seguro e veloz da linguagem Rust, combinado com a pequena quantidade de
 
 #### Drivers escritos em Rust
 
-Drivers escritos em Rust possuem incentivos para ter menos bugs, melhor segurança e desempenho (menos bugs podem melhorar o desempenho do dispositivo).
+Drivers escritos em Rust possuem incentivos para ter menos bugs e melhor segurança.
 
 - [Dispositivos suportados atualmente](/faq/#which-devices-redox-support)
 
@@ -74,7 +74,7 @@ A maioria dos componentes do sistema estão no espaço do usuário, simplificand
 
 ## Qual o propósito do Redox?
 
-O objetivo principal do Redox é ser um sistema de propósito geral para qualquer tarefa/computador, mantendo a segurança, confiabilidade e correção.
+O objetivo principal do Redox é ser um sistema de propósito geral com foco em segurança, confiabilidade e correção.
 
 O Redox pretende ser uma alternativa aos sistemas Unix (Linux/BSD) existentes também, podendo executar programas Unix com apenas compilação ou modificações mínimas.
 
@@ -103,15 +103,15 @@ Qualquer sistema compátivel com a [Especificação Única do Unix](https://en.w
 Você apenas precisa montar o software em algum local para obter a função desejada, qualquer software pode funcionar dessa forma.
 
 - [Drew DeVault explicando o Plan 9](https://drewdevault.com/2022/11/12/In-praise-of-Plan-9.html)
-- [Como o Redox utiliza o design do Plan 9](https://doc.redox-os.org/book/ch05-00-urls-schemes-resources.html)
+- [Como o Redox foi influenciado pelo Plan 9](https://doc.redox-os.org/book/ch05-00-urls-schemes-resources.html)
 
 [Minix](https://minix3.org/) - o sistema Unix-like com microkernel mais influente, ele possuí funções avançadas tais como modularidade do sistema, resistência a [quebra do kernel](https://en.wikipedia.org/wiki/Kernel_panic), reincarnação de driver, proteção contra drivers ruins e interfaces seguras para a [comunicação dos processos](https://en.wikipedia.org/wiki/Inter-process_communication).
 
-O Redox é largamente inspirado pelo Minix, ele tem basicamente as mesmas funções mas escritas em Rust.
+O Redox é largamente inspirado pelo Minix, ele tem funções e arquitetura similar escrita em Rust.
 
-- [Como o Redox implementa o design de microkernel do Minix](https://doc.redox-os.org/book/ch04-01-microkernels.html)
+- [Como o Redox foi influenciado pelo Minix](https://doc.redox-os.org/book/ch04-01-microkernels.html)
 
-[BSD](https://www.bsd.org/) - Essa [família](https://en.wikipedia.org/wiki/Research_Unix) de sistemas Unix fez diversas melhorias para os sistemas Unix, a mais notável são os [sockets BSD](https://en.wikipedia.org/wiki/Berkeley_sockets), eles trazem a comunicação de rede para o sistema de arquivos Unix (antes do Plan 9).
+[BSD](https://www.bsd.org/) - Essa [família](https://en.wikipedia.org/wiki/Research_Unix) de sistemas Unix fez diversas melhorias para os sistemas Unix, a mais notável são os [sockets BSD](https://en.wikipedia.org/wiki/Berkeley_sockets), eles trazem a comunicação de rede com operação de arquivos (antes do Plan 9).
 
 - [Documentação do FreeBSD](https://docs.freebsd.org/en/books/developers-handbook/sockets/)
 
@@ -147,7 +147,9 @@ Você pode ver todos os componentes do Redox/programas portados [aqui]((https://
 
 ## Quais dispositivos o Redox suporta?
 
-Há bilhões de dispositivos com centenas de modelos/arquiteturas no mundo, nós tentamos escrever drivers para os dispositivos mais utilizados para ajudar mais pessoas, alguns drivers são específicos para um dispositivo e outros são específicos de arquitetura (melhor para portar).
+Há bilhões de dispositivos com centenas de modelos/arquiteturas no mundo, nós tentamos escrever drivers para os dispositivos mais utilizados para ajudar mais pessoas, alguns drivers são específicos para um dispositivo e outros são específicos de arquitetura.
+
+Leia o [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HARDWARE.md) para ver todos os computadores testados.
 
 ### CPU
 
@@ -209,28 +211,22 @@ Há bilhões de dispositivos com centenas de modelos/arquiteturas no mundo, nós
 
 No futuro o microkernel poderia agir como um supervisor, similar ao [Xen](https://xenproject.org/).
 
-Um [supervisor](https://en.wikipedia.org/wiki/Hypervisor) é um software the gerencia máquinas virtuais, ele pode ser uma "camada de compatibilidade" para qualquer sistema operacional.
+Um [supervisor](https://en.wikipedia.org/wiki/Hypervisor) é um software que executa múltiplas instâncias isoladas de sistemas operacionais simultaneamente.
 
 ## Como compilar o Redox?
 
 Atualmente o Redox tem um script de bootstrap para o Debian/Ubuntu/Pop OS! com suporte não mantido para outras distribuições.
 
-Nós estamos em transição para o Podman como nosso método de compilação principal, ele é método de compilação recomendado para sistemas que não sejam baseados no Debian.
-
-(O Podman evita problemas de ambiente durante a compilação)
+Nós estamos em transição para o Podman como nosso método de compilação principal, ele é método de compilação recomendado para sistemas que não sejam baseados no Debian, pois ele evita problemas de ambiente durante a compilação.
 
 - [Guia no Livro do Redox](https://doc.redox-os.org/book/ch02-05-building-redox.html) - (Debian/Ubuntu/Pop OS!)
-- [Guia Avançado no Livro do Redox](https://doc.redox-os.org/book/ch08-01-advanced-build.html) - (Debian/Ubuntu/Pop OS!)
 - [Guia do Podman no Livro do Redox](https://doc.redox-os.org/book/ch02-06-podman-build.html)
-- [Guia Avançado do Podman no Livro do Redox](https://doc.redox-os.org/book/ch08-02-advanced-podman-build.html)
 
 ### Como abrir o QEMU sem interface gráfica
 
 Execute:
 
 - `make qemu vga=no`
-
-O QEMU ficará semelhante a um container/chroot.
 
 ### Como diagnosticar seu Redox em caso de erros
 

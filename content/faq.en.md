@@ -65,9 +65,9 @@ Rust's safe and fast language design, combined with the small size of the kernel
 
 #### Rust-written drivers
 
-Drivers written in Rust are likely to have fewer bugs, better security and performance (fewer bugs can bring more performance on the device).
+Drivers written in Rust are likely to have fewer bugs and better security.
 
-- [Currently supported devices](/faq/#which-devices-redox-support)
+- [Currently supported devices](/faq/#which-devices-does-redox-support)
 
 #### ZFS-inspired filesystem
 
@@ -77,9 +77,9 @@ Expect high performance and data safety (copy-on-write, data integrity, volumes,
 
 ## What is the purpose of Redox?
 
-The main goal of Redox is to be a general-purpose OS for any kind of task/computer, while maintaining security, reliability and correctness.
+The main goal of Redox is to be a general-purpose OS, while maintaining security, reliability and correctness.
 
-Redox aims to be an alternative for existing Unix systems (Linux/BSD), with the ability to run most Unix programs too, with only recompilation or minimal modifications.
+Redox aims to be an alternative to existing Unix systems (Linux/BSD), with the ability to run most Unix programs with only recompilation or minimal modifications.
 
 - [Our Goals](https://doc.redox-os.org/book/ch01-01-our-goals.html)
 
@@ -101,20 +101,18 @@ Any OS compatible with [Single Unix Specification](https://en.wikipedia.org/wiki
 
 ## How Redox is inspired by other systems?
 
-[Plan 9](http://9p.io/plan9/index.html) - This Bell Labs OS bring the concept of "everything is a file" to the highest level, doing all the system communication from the filesystem.
+[Plan 9](http://9p.io/plan9/index.html) - This Bell Labs OS brings the concept of "everything is a file" to the highest level, doing all the system communication from the filesystem.
 
-You just need to mount your software on some path and it have the required functionality, any software can work with this interface.
+- [Drew DeVault explains the Plan 9](https://drewdevault.com/2022/11/12/In-praise-of-Plan-9.html)
+- [Plan 9's influence on Redox](https://doc.redox-os.org/book/ch05-00-urls-schemes-resources.html)
 
-- [Drew DeVault explain the Plan 9](https://drewdevault.com/2022/11/12/In-praise-of-Plan-9.html)
-- [How Redox use the Plan 9 design](https://doc.redox-os.org/book/ch05-00-urls-schemes-resources.html)
+[Minix](https://minix3.org/) - The most influential Unix-like system with a microkernel, it has advanced features such as system modularity, [kernel panic](https://en.wikipedia.org/wiki/Kernel_panic) resistence, driver reincarnation, protection against bad drivers and secure interfaces for [process comunication](https://en.wikipedia.org/wiki/Inter-process_communication).
 
-[Minix](https://minix3.org/) - the most influential Unix-like system with a microkernel, it has advanced features such as system modularity, [kernel panic](https://en.wikipedia.org/wiki/Kernel_panic) resistence, driver reincarnation, protection against bad drivers and secure interfaces for [process comunication](https://en.wikipedia.org/wiki/Inter-process_communication).
+Redox is largely inspired by Minix, it has a similar architecture and feature set written in Rust.
 
-Redox is largely inspired by Minix, it have basically the same features but written in Rust.
+- [How Minix influenced the Redox design](https://doc.redox-os.org/book/ch04-01-microkernels.html)
 
-- [How Redox implement the Minix microkernel design](https://doc.redox-os.org/book/ch04-01-microkernels.html)
-
-[BSD](https://www.bsd.org/) - This Unix OS [family](https://en.wikipedia.org/wiki/Research_Unix) did several improvements on Unix systems, the most notable is [BSD sockets](https://en.wikipedia.org/wiki/Berkeley_sockets), that brings network communication inside the Unix filesystem (before Plan 9).
+[BSD](https://www.bsd.org/) - This Unix OS [family](https://en.wikipedia.org/wiki/Research_Unix) included several improvements on Unix systems, the most notable is [BSD sockets](https://en.wikipedia.org/wiki/Berkeley_sockets), that brings network communication with file-like operation (before Plan 9).
 
 - [FreeBSD documentation](https://docs.freebsd.org/en/books/developers-handbook/sockets/)
 
@@ -124,7 +122,7 @@ Redox tries to implement the Linux performance improvements in a microkernel des
 
 ## What is a microkernel?
 
-A microkernel is the near-minimum amount of software that can provide the mechanisms needed to implement an operating system, which run on the highest privilege of the processor.
+A microkernel is the near-minimum amount of software that can provide the mechanisms needed to implement an operating system, which runs on the highest privilege of the processor.
 
 This approach to OS design brings more stability and security, with a small cost on performance.
 
@@ -152,13 +150,15 @@ You can see all Redox components/ported programs [here](https://gitlab.redox-os.
 
 ## Which devices does Redox support?
 
-There are billions of devices with hundreds of models/architectures in the world, we try to write drivers for the most used devices to support more people, some drivers are device-specific and others are architecture-specific (better to port).
+There are billions of devices with hundreds of models/architectures in the world, we try to write drivers for the most used devices to support more people, some drivers are device-specific and others are architecture-specific.
+
+Have a look at [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HARDWARE.md) to see all tested computers.
 
 ### CPU
 
 - [x86_64/AMD64](https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/x86_64) - (Intel/AMD)
-- [x86/i686](https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/x86) - (Intel/AMD from Pentium II and after, incomplete)
-- [ARM64](https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/aarch64) - (WIP, incomplete)
+- [x86/i686](https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/x86) - (Intel/AMD from Pentium II and after supported with limitations)
+- [ARM64](https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/aarch64) - (supported with limitations)
 
 ### Hardware Interfaces
 
@@ -214,20 +214,16 @@ There are billions of devices with hundreds of models/architectures in the world
 
 In the future the microkernel could act as a hypervisor, similar to [Xen](https://xenproject.org/).
 
-A [hypervisor](https://en.wikipedia.org/wiki/Hypervisor) is a software that manage virtual machines, it can be a "compatibility layer" for any operating system.
+A [hypervisor](https://en.wikipedia.org/wiki/Hypervisor) is software providing the ability to run multiple isolated operating system instances simultaneously.
 
 ## How do I build Redox?
 
 Currently Redox has a bootstrap script for Debian/Ubuntu/Pop OS! with unmaintained support for other distributions.
 
-We are moving to use Podman as our main compilation method, it is the recommended build process for non-Debian systems.
-
-(Podman avoids environment problems on compilation)
+We are moving to use Podman as our main compilation method, it is the recommended build process for non-Debian systems because it avoids environment problems on compilation.
 
 - [Redox Book Guide](https://doc.redox-os.org/book/ch02-05-building-redox.html) - (Debian/Ubuntu/Pop OS!)
-- [Redox Book Advanced Guide](https://doc.redox-os.org/book/ch08-01-advanced-build.html) - (Debian/Ubuntu/Pop OS!)
 - [Redox Book Podman Guide](https://doc.redox-os.org/book/ch02-06-podman-build.html)
-- [Redox Book Podman Advanced Guide](https://doc.redox-os.org/book/ch08-02-advanced-podman-build.html)
 
 ### How to launch QEMU without GUI
 
@@ -235,11 +231,9 @@ Run:
 
 - `make qemu vga=no`
 
-QEMU terminal will looks like a container/chroot.
-
 ### How to troubleshoot your build in case of errors
 
-Refer to the Redox Book before to see if the problem is your build configuration or toolchain, if you still have problems, see the following or join us on [Redox Chat](https://doc.redox-os.org/book/ch13-01-chat.html).
+Refer to the Redox Book to see if the problem is your build configuration or toolchain, if you still have problems, see the following or join us on [Redox Chat](https://doc.redox-os.org/book/ch13-01-chat.html).
 
 - [Redox Book Troubleshooting Guide](https://doc.redox-os.org/book/ch08-05-troubleshooting.html)
 - [GitLab Troubleshooting Guide](https://gitlab.redox-os.org/redox-os/redox#help-redox-wont-compile)
@@ -249,7 +243,7 @@ Refer to the Redox Book before to see if the problem is your build configuration
 Check GitLab Issues first to see if your problem is already known.
 
 - [Redox Book Bug Report Guide](https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html)
-- [CONTRIBUTING.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md)
+- [GitLab Guide](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md)
 
 ## How do I contribute to Redox?
 
