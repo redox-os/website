@@ -490,10 +490,6 @@ name = "FAQ"
 url = "/faq/"
 [[languages.pt.menu.main]]
 weight = 5
-name = "Começo Rápido"
-url = "/quickstart/"
-[[languages.pt.menu.main]]
-weight = 5
 name = "Doações"
 url = "/donate/"
 [[languages.pt.menu.main]]
