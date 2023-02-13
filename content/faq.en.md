@@ -53,7 +53,7 @@ Since most of the system components are in user-space, they can be replaced on-t
 
 #### Easy to develop and debug
 
-Most of the system components run in user-space, simplifying debugging.
+Most of the system components run in user-space, simplifying testing/debugging.
 
 ### Rust benefits
 
