@@ -35,7 +35,7 @@ Wherever possible, the system components are written in Rust and run in user-spa
 
 #### True modularity
 
-You can modify/change many system components without a system restart, similar to [livepatching]).
+You can modify/change many system components without a system restart, similar to [livepatching].
 
 [livepatching]: https://en.wikipedia.org/wiki/Kpatch
 
