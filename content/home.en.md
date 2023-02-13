@@ -11,15 +11,14 @@ url = "/home"
   </div>
   <div class="col-md-4 install-box">
     <br/>
-    <a class="btn btn-primary" href="https://www.redox-os.org/news/release-0.8.0/">Latest Release</a>
-    <a class="btn btn-primary" href="https://gitlab.redox-os.org/redox-os/redox/-/releases">View Releases</a>
-    <a class="btn btn-default" href="https://gitlab.redox-os.org/redox-os/redox/">Pull from GitLab</a>
+    <a class="btn btn-primary" href="/quickstart/">Quickstart</a>
+    <a class="btn btn-default" href="https://gitlab.redox-os.org/redox-os/redox/">GitLab</a>
   </div>
 </div>
 <div class="row features">
   <div class="col-md-6">
     <ul class="laundry-list" style="margin-bottom: 0px;">
-      <li>Inspired on Plan 9, Minix, BSD and Linux</li>
+      <li>Inspired by Plan 9, Minix, BSD and Linux</li>
       <li>Implemented in Rust</li>
       <li>Microkernel Design</li>
       <li>Includes optional GUI - Orbital</li>
@@ -32,6 +31,7 @@ url = "/home"
       <li>Drivers run in Userspace</li>
       <li>Includes common Unix commands</li>
       <li>Custom libc written in Rust (relibc)</li>
+      <li>See <a href="/screens/">Redox in Action</a></li>
     </ul>
   </div>
 </div>

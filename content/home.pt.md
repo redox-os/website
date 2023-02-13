@@ -11,15 +11,14 @@ url = "/home"
   </div>
   <div class="col-md-4 install-box">
     <br/>
-    <a class="btn btn-primary" href="https://www.redox-os.org/news/release-0.8.0/">Última versão</a>
-    <a class="btn btn-primary" href="https://gitlab.redox-os.org/redox-os/redox/-/releases">Ver as versões</a>
-    <a class="btn btn-default" href="https://gitlab.redox-os.org/redox-os/redox/">Baixar do GitLab</a>
+    <a class="btn btn-primary" href="/pt/quickstart/">Começo Rápido</a>
+    <a class="btn btn-default" href="https://gitlab.redox-os.org/redox-os/redox/">GitLab</a>
   </div>
 </div>
 <div class="row features">
   <div class="col-md-6">
     <ul class="laundry-list" style="margin-bottom: 0px;">
-      <li>Inspirado no Plan 9, Minix, BSD e Linux</li>
+      <li>Inspirado pelo Plan 9, Minix, BSD e Linux</li>
       <li>Implementado em Rust</li>
       <li>Design de Microkernel</li>
       <li>Inclui uma GUI opcional - Orbital</li>
@@ -32,6 +31,7 @@ url = "/home"
       <li>Os drivers são executados no espaço do usuário</li>
       <li>Inclui os comandos Unix mais comuns</li>
       <li>Nova biblioteca para portar programas em C (relibc)</li>
+      <li>Veja <a href="/pt/screens/">Redox em Ação</a></li>
     </ul>
   </div>
 </div>
