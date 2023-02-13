@@ -51,14 +51,6 @@ The kernel changes very little (bug fixing), so you won't need to restart your s
 
 Since most of the system components are in user-space, they can be replaced on-the-fly (reducing downtime for server administrators).
 
-#### ZFS-inspired filesystem
-
-Redox uses RedoxFS as the default filesystem, it supports similar features as [ZFS] with a written-in-Rust implementation.
-
-Expect high performance and data safety (copy-on-write, data integrity, volumes, snapshots, hardened against data loss).
-
-[ZFS]: https://docs.freebsd.org/en/books/handbook/zfs/
-
 #### Easy to develop and debug
 
 Most of the system components run on user-space, you don't need virtualization to test/debug them, more quick to develop.
@@ -86,6 +78,14 @@ Rust implement performance optimization with safety by default.
 Drivers written in Rust have less bugs, more security and performance (less bugs can bring more performance of the device).
 
 - [Currently supported devices](/faq/#which-devices-redox-support)
+
+#### ZFS-inspired filesystem
+
+Redox uses RedoxFS as the default filesystem, it supports similar features as [ZFS] with a written-in-Rust implementation.
+
+Expect high performance and data safety (copy-on-write, data integrity, volumes, snapshots, hardened against data loss).
+
+[ZFS]: https://docs.freebsd.org/en/books/handbook/zfs/
 
 ## What is the purpose of Redox?
 

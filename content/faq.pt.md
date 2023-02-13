@@ -31,37 +31,39 @@ Onde for possível, os componentes do sistema serão escritos em Rust e executam
 
 ## Quais funções o Redox possui?
 
-### Modularidade real
+### Benefícios do Microkernel
+
+#### Modularidade real
 
 Você pode modificar/trocar a maioria dos componentes do sistema sem reiniciar o sistema, similar ao [livepatching]).
 
 [livepatching]: https://en.wikipedia.org/wiki/Kpatch
 
-### Isolamento de bugs
+#### Isolamento de bugs
 
-A maioria dos componentes do sistema executam no espaço do usuário em um sistema com microkernel, um bug em componentes do sistema fora do kernel não pode [quebrar o sistema/kernel].
+A maioria dos componentes do sistema executam no espaço do usuário em um sistema com microkernel, um bug em componentes do sistema fora do kernel não pode [quebrar o kernel].
 
-[quebrar o sistema/kernel]: https://en.wikipedia.org/wiki/Kernel_panic
+[quebrar o kernel]: https://en.wikipedia.org/wiki/Kernel_panic
 
-### Design de não-reinicialização
+#### Design de não-reinicialização
 
-O kernel é pequeno e muda muito pouco (correção de bugs), então você não precisa reiniciar seu sistema com frequência para atualizar, já que a maioria dos serviços do sistema estão no espaço do usuário, eles podem ser trocados durante a execução.
+O kernel é pequeno e muda muito pouco (correção de bugs), portanto você não precisa reiniciar seu sistema com frequência para atualizar, já que a maioria dos serviços do sistema estão no espaço do usuário, eles podem ser trocados/atualizados durante a execução.
 
-A frequência de atualizações é menor também (menos chance de bugs).
+### Benefícios da Rust
 
-### Sem necessidade para mitigações de exploit
+#### Sem necessidade para mitigações de exploit
 
-O design em microkernel escrito em Rust torna a maioria das falhas de segurança C/C++ irrelevantes/inúteis, com esse design o invasor/hacker não pode usar estes bugs para explorar o sistema.
+O design em microkernel escrito em Rust protege contra as falhas de memória da C/C++, por isolar o sistema do kernel, a superfície de ataque é muito limitada.
 
-### Sistema de arquivos inspirado no ZFS
+#### Sistema de arquivos inspirado no ZFS
 
-O Redox utiliza o RedoxFS como sistema de arquivos padrão, ele suporta as mesmas funções do [ZFS] com mudanças na implementação.
+O Redox utiliza o RedoxFS como sistema de arquivos padrão, ele suporta funções parecidas com as do [ZFS] com uma implementação escrita em Rust.
 
 Espere alto desempenho e segurança dos dados (copy-on-write, integridade de arquivos, volumes, snapshots, endurecido contra a perda de arquivos).
 
 [ZFS]: https://docs.freebsd.org/en/books/handbook/zfs/
 
-### Melhor desempenho do sistema e menos uso de memória
+#### Melhorias de segurança/confiabilidade sem impacto significante no desempenho
 
 Como o kernel é pequeno, ele usa menos memória para fazer suas funções e está perto de ser livre de bugs (objetivo do príncipio [KISS]).
 
@@ -71,13 +73,13 @@ A Rust implementa otimização de desempenho com segurança por padrão.
 
 [KISS]: https://en.wikipedia.org/wiki/KISS_principle
 
-### Drivers escritos em Rust
+#### Drivers escritos em Rust
 
 Drivers escritos em Rust tem menos bugs, mais segurança e desempenho (menos bugs podem melhorar o desempenho do dispositivo).
 
 - [Dispositivos suportados atualmente](/faq/#which-devices-redox-support)
 
-### Fácil de desenvolver e depurar
+#### Fácil de desenvolver e depurar
 
 A maioria dos componentes do sistema estão no espaço do usuário, você não precisa de virtualização para testar/depurar eles, mais rápido de desenvolver.
 
