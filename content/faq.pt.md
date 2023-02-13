@@ -33,7 +33,7 @@ Onde for possível, os componentes do sistema serão escritos em Rust e executam
 
 ### Modularidade real
 
-Você pode mudar cada componente do sistema sem reiniciar o sistema, similar ao [livepatching]).
+Você pode modificar/trocar a maioria dos componentes do sistema sem reiniciar o sistema, similar ao [livepatching]).
 
 [livepatching]: https://en.wikipedia.org/wiki/Kpatch
 

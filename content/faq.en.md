@@ -31,37 +31,47 @@ Wherever possible, the system components are written in Rust and run in user-spa
 
 ## What features does Redox have?
 
-### True modularity
+### Microkernel benefits
 
-You can change every system component without a system restart, similar to [livepatching]).
+#### True modularity
+
+You can modify/change many system components without a system restart, similar to [livepatching]).
 
 [livepatching]: https://en.wikipedia.org/wiki/Kpatch
 
-### Bug isolation
+#### Bug isolation
 
-Most system components run in user-space on a microkernel system, a bug in a system component out of the kernel can't [crash the system/kernel].
+Most system components run in user-space on a microkernel system, a bug in a non-kernel component won't [crash the system/kernel].
 
 [crash the system/kernel]: https://en.wikipedia.org/wiki/Kernel_panic
 
-### No-reboot design
+#### No-reboot design
 
-The kernel change very little (bug fixing), then you don't need to restart your system with frequency to update the system, since most of the system components are on user-space, they can be replaced on-the-fly (it helps a lot server administrators).
+The kernel changes very little (bug fixing), so you won't need to restart your system very often to update the system.
 
-Expect less kernel updates too (less chance to more bugs).
+Since most of the system components are in user-space, they can be replaced on-the-fly (reducing downtime for server administrators).
 
-### No need for exploit mitigations
+#### ZFS-inspired filesystem
 
-The microkernel design written in Rust makes most C/C++ security bugs irrelevant/useless, with this design the attacker can't use these bugs to exploit the system.
-
-### ZFS-inspired filesystem
-
-Redox uses RedoxFS as the default filesystem, it support the same features of [ZFS] with changes on implementation.
+Redox uses RedoxFS as the default filesystem, it supports similar features as [ZFS] with a written-in-Rust implementation.
 
 Expect high performance and data safety (copy-on-write, data integrity, volumes, snapshots, hardened against data loss).
 
 [ZFS]: https://docs.freebsd.org/en/books/handbook/zfs/
 
-### Better system performance and less memory usage
+#### Easy to develop and debug
+
+Most of the system components run on user-space, you don't need virtualization to test/debug them, more quick to develop.
+
+### Rust benefits
+
+#### No need for exploit mitigations
+
+The microkernel design written in Rust protects against C/C++ memory defects, by isolating the system components from the kernel, the [attack surface] is very limited..
+
+[attack surface]: https://en.wikipedia.org/wiki/Attack_surface
+
+#### Improved security and reliability without significant performance impact
 
 As the kernel is small, it uses less memory to do his work and close to bug-free status ([KISS] goal).
 
@@ -71,16 +81,11 @@ Rust implement performance optimization with safety by default.
 
 [KISS]: https://en.wikipedia.org/wiki/KISS_principle
 
-### Rust-written drivers
+#### Rust-written drivers
 
 Drivers written in Rust have less bugs, more security and performance (less bugs can bring more performance of the device).
 
 - [Currently supported devices](/faq/#which-devices-redox-support)
-
-### Easy to develop and debug
-
-Most of the system components run on user-space, you don't need virtualization to test/debug them, more quick to develop.
-
 
 ## What is the purpose of Redox?
 
