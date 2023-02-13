@@ -242,14 +242,14 @@ Refer to the Redox Book to see if the problem is your build configuration or too
 
 Check GitLab Issues first to see if your problem is already known.
 
+- [CONTRIBUTING](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md)
 - [Redox Book Bug Report Guide](https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html)
-- [GitLab Guide](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md)
 
 ## How do I contribute to Redox?
 
 You can contribute to Redox in many ways, here some of them:
 
-- [GitLab Guide](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md)
+- [CONTRIBUTING](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md)
 - [Redox Book Contribution Guide](https://doc.redox-os.org/book/ch10-02-low-hanging-fruit.html)
 - [How to make pull requests properly](https://doc.redox-os.org/book/ch12-04-creating-proper-pull-requests.html)
 - [Documentation](/docs/)
