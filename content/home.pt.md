@@ -11,7 +11,7 @@ url = "/home"
   </div>
   <div class="col-md-4 install-box">
     <br/>
-    <a class="btn btn-primary" href="/quickstart/">Começo Rápido</a>
+    <a class="btn btn-primary" href="/pt/quickstart/">Começo Rápido</a>
     <a class="btn btn-default" href="https://gitlab.redox-os.org/redox-os/redox/">Baixar do GitLab</a>
   </div>
 </div>
@@ -38,6 +38,8 @@ url = "/home"
   <div class="col-sm-12">
     <div style="font-size: 16px; text-align: center;">
       Redox executando Orbital
+    </div>
+      Outras capturas de tela/vídeo podem ser acessados em <a href="/screens/">Redox em Ação</a>
     </div>
     <a href="/img/redox-orbital/large.png">
       <picture>
