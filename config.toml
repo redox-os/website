@@ -24,20 +24,14 @@ name = "News"
 url = "/news/"
 [[languages.en.menu.main]]
 weight = 4
-name = "GitLab"
-url = "https://gitlab.redox-os.org/redox-os/redox"
-[[languages.en.menu.main]]
-weight = 5
 name = "Community"
 url = "/community"
 [[languages.en.menu.main]]
-weight = 6
+weight = 5
 name = "Donate"
 url = "/donate/"
 [[languages.en.menu.main]]
-weight = 7
-name = "RSoC"
-url = "/rsoc/"
+weight = 6
 
 [languages.zh]
 weight = 2
@@ -494,12 +488,6 @@ name = "Doações"
 url = "/donate/"
 [[languages.pt.menu.main]]
 weight = 6
-name = "GitLab"
-url = "https://gitlab.redox-os.org/redox-os/redox"
-[[languages.pt.menu.main]]
-weight = 7
-name = "RSoC"
-url = "/rsoc/"
 
 [languages.jp]
 weight = 16
