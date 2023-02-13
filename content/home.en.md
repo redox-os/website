@@ -31,7 +31,7 @@ url = "/home"
       <li>Drivers run in Userspace</li>
       <li>Includes common Unix commands</li>
       <li>Custom libc written in Rust (relibc)</li>
-      <li>See [Redox in Action](/screens/)</li>
+      <li>See <a href="/screens/">Redox in Action</a></li>
     </ul>
   </div>
 </div>

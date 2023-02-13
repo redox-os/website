@@ -31,6 +31,7 @@ url = "/home"
       <li>Os drivers são executados no espaço do usuário</li>
       <li>Inclui os comandos Unix mais comuns</li>
       <li>Nova biblioteca para portar programas em C (relibc)</li>
+      <li>Veja <a href="/pt/screens/">Redox em Ação</a></li>
     </ul>
   </div>
 </div>
