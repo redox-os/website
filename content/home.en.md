@@ -38,9 +38,10 @@ url = "/home"
   <div class="col-sm-12">
     <div style="font-size: 16px; text-align: center;">
       Redox running Orbital
-    </div>
-    </div>
-    </div>
+    <p>
+    <p>
+    <p>
+    <div style="font-size: 16px; text-align: center;">
       Other screenshots/videos can be found in <a href="/screens/">Redox in Action</a>
     </div>
     <a href="/img/redox-orbital/large.png">
