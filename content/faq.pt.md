@@ -127,9 +127,9 @@ Um microkernel é um modelo para núcleo de sistema operacional com uma pequena 
 
 ## Quais programas o Redox executa?
 
-Programas Unix/POSIX, o Redox é compátivel em código-fonte com o Linux (precisa de compilação).
+O Redox é desenhado para ser compátivel-em-código com a maioria dos sistemas Unix, Linux e programas POSIX, necessitando apenas de compilação.
 
-Alguns softwares precisam ser portados (recipes), já que não possuímos suporte para X11/Wayland ainda, mas SDL/Orbital.
+Atualmente, a maioria das aplicações com interface gráfica requer um port, já que não suportamos X11 ou Wayland ainda.
 
 Softwares importantes que o Redox suporta:
 
@@ -143,9 +143,7 @@ Softwares importantes que o Redox suporta:
 - [Python](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/python)
 - [SDL](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/sdl2)
 
-No futuro o microkernel pode agir como um supervisor, similar ao [Xen](https://xenproject.org/).
-
-Um [supervisor](https://en.wikipedia.org/wiki/Hypervisor) é um software the gerencia máquinas virtuais, ele pode ser uma "camada de compatibilidade" para qualquer sistema operacional.
+Você pode ver todos os componentes do Redox/programas portados [aqui]((https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes))
 
 ## Quais dispositivos o Redox suporta?
 
@@ -208,6 +206,10 @@ Há bilhões de dispositivos com centenas de modelos/arquiteturas no mundo, nós
 
 - [QEMU](https://www.qemu.org/)
 - [VirtualBox](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/vboxd)
+
+No futuro o microkernel poderia agir como um supervisor, similar ao [Xen](https://xenproject.org/).
+
+Um [supervisor](https://en.wikipedia.org/wiki/Hypervisor) é um software the gerencia máquinas virtuais, ele pode ser uma "camada de compatibilidade" para qualquer sistema operacional.
 
 ## Como compilar o Redox?
 
