@@ -27,7 +27,7 @@ This page covers the most asked questions.
 
 Redox is a microkernel-based operating system, a complete, fully-functioning, general-purpose operating system with a focus on safety, freedom, reliability, correctness, and pragmatism.
 
-Wherever possible, the system components are written in Rust and run in user-space
+Wherever possible, the system components are written in Rust and run in user-space.
 
 ## What features does Redox have?
 
@@ -35,7 +35,7 @@ Wherever possible, the system components are written in Rust and run in user-spa
 
 #### True modularity
 
-You can modify/change many system components without a system restart, similar to [livepatching].
+You can modify/change many system components without a system restart, similar to but safer than [livepatching].
 
 [livepatching]: https://en.wikipedia.org/wiki/Kpatch
 
@@ -67,17 +67,15 @@ By isolating the system components from the kernel, the [attack surface] is very
 
 #### Improved security and reliability without significant performance impact
 
-As the kernel is small, it uses less memory to do its work and close to bug-free status ([KISS] goal).
+As the kernel is small, it uses less memory to do its work and the limited kernel code helps keep it close to bug-free status ([KISS] goal).
 
-Beyond being small, the system is written in Rust, this language helps the programmer to write better code that don't cause performance problems.
-
-Rust implement performance optimization with safety by default.
+Rust's safe and fast language design, combined with the small size of the kernel code base, helps ensure a reliable, performant and easy to maintain core.
 
 [KISS]: https://en.wikipedia.org/wiki/KISS_principle
 
 #### Rust-written drivers
 
-Drivers written in Rust have less bugs, more security and performance (less bugs can bring more performance of the device).
+Drivers written in Rust are likely to have fewer bugs, better security and performance (fewer bugs can bring more performance on the device).
 
 - [Currently supported devices](/faq/#which-devices-redox-support)
 
@@ -93,7 +91,7 @@ Expect high performance and data safety (copy-on-write, data integrity, volumes,
 
 The main goal of Redox is to be a general-purpose OS for any kind of task/computer, while maintaining security, reliability and correctness.
 
-We aim to be an alternative for existing Unix systems (Linux/BSD) too, with the ability to run Unix programs only minimal modifications.
+Redox aims to be an alternative for existing Unix systems (Linux/BSD), with the ability to run most Unix programs too, with only recompilation or minimal modifications.
 
 [Our Goals]
 
@@ -101,7 +99,9 @@ We aim to be an alternative for existing Unix systems (Linux/BSD) too, with the 
 
 ## What I can do with Redox?
 
-As a general-purpose operating system, you can do almost anything on most devices with high performance/security.
+As a general-purpose operating system, you will be able to do almost anything on most devices with high performance/security.
+
+Redox is still under development, so our list of supported applications is currently limited, but growing.
 
 [Use Cases]
 
@@ -159,7 +159,9 @@ Redox tries to implement the Linux performance improvements in a microkernel des
 
 ## What is a microkernel?
 
-A microkernel is a OS core model with a small quantity of code running on the first privilege of the processor, this model of OS core brings more stability and security, with a small cost on performance.
+A microkernel is the near-minimum amount of software that can provide the mechanisms needed to implement an operating system, which run on the highest privilege of the processor.
+
+This approach to OS design brings more stability and security, with a small cost on performance.
 
 - [Redox Book explanation]
 
@@ -167,9 +169,9 @@ A microkernel is a OS core model with a small quantity of code running on the fi
 
 ## What programs can Redox run?
 
-Unix/POSIX programs, Redox is source-compatible with Linux too (need to compile).
+Redox is designed to be source-compatible with most Unix, Linux and POSIX-compilant applications, only requiring compilation.
 
-Some software need porting (recipes), as we don't support X11/Wayland yet, but SDL/Orbital.
+Currently, most GUI applications require porting, as we don't support X11 or Wayland yet.
 
 Some important software that Redox support:
 
@@ -183,12 +185,9 @@ Some important software that Redox support:
 - [Python](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/python)
 - [SDL](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/sdl2)
 
-In the future the microkernel can act as a hypervisor, similar to [Xen].
+You can see all Redox components/ported programs [here].
 
-A [hypervisor] is a software that manage virtual machines, it can be a "compatibility layer" for any operating system.
-
-[Xen]: https://xenproject.org/
-[hypervisor]: https://en.wikipedia.org/wiki/Hypervisor
+[here]: https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes
 
 ## Which devices does Redox support?
 
@@ -277,20 +276,25 @@ There are billions of devices with hundreds of models/architectures in the world
 
 ## Which virtual machines does Redox have integration with?
 
+- [QEMU]
 - [VirtualBox]
-- [Bochs]
 
+In the future the microkernel can act as a hypervisor, similar to [Xen].
+
+A [hypervisor] is a software that manage virtual machines, it can be a "compatibility layer" for any operating system.
+
+[QEMU]: https://www.qemu.org/
 [VirtualBox]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/vboxd
-[Bochs]: https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/bgad
-
+[Xen]: https://xenproject.org/
+[hypervisor]: https://en.wikipedia.org/wiki/Hypervisor
 
 ## How do I build Redox?
 
-Currently Redox has a bootstrap script Debian/Ubuntu/Pop OS! with unmaintained support for other distributions.
+Currently Redox has a bootstrap script for Debian/Ubuntu/Pop OS! with unmaintained support for other distributions.
 
 We are moving to use Podman as our main compilation method, it is the recommended build process for non-Debian systems.
 
-(Podman avoid environment problems on compilation)
+(Podman avoids environment problems on compilation)
 
 - [Redox Book Guide] - (Debian/Ubuntu/Pop OS!)
 - [Redox Book Advanced Guide] - (Debian/Ubuntu/Pop OS!)
@@ -302,14 +306,6 @@ We are moving to use Podman as our main compilation method, it is the recommende
 [Redox Book Podman Guide]: https://doc.redox-os.org/book/ch02-06-podman-build.html
 [Redox Book Podman Advanced Guide]: https://doc.redox-os.org/book/ch08-02-advanced-podman-build.html
 
-### How to update the sources and compile the changes
-
-If you already downloaded Redox sources and compiled, it's very easy to fetch/rebuild new changes.
-
-- [Redox Book Rebuild Guide]
-
-[Redox Book Rebuild Guide]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#the-full-rebuild-cycle
-
 ### How to launch QEMU without GUI
 
 Run:
@@ -318,20 +314,12 @@ Run:
 
 QEMU terminal will looks like a container/chroot.
 
-### How to insert files inside Redox QEMU harddisk
-
-If you want to do quick changes/testing on QEMU image.
-
-- [Redox Book QEMU Guide]
-
-[Redox Book QEMU Guide]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#patch-an-image
-
 ### How to troubleshoot your build in case of errors
 
-Read all the Redox Book before to see if the problem is your build configuration or toolchain, if it don't fix your error, read:
+Refer to the Redox Book before to see if the problem is your build configuration or toolchain, if you still have problems, see the following or join us on [Redox Chat](https://doc.redox-os.org/book/ch13-01-chat.html).
 
-- [Redox Book Troubleshooting Guide]
 - [GitLab Troubleshooting Guide]
+- [Redox Book Troubleshooting Guide]
 
 [Redox Book Troubleshooting Guide]: https://doc.redox-os.org/book/ch08-05-troubleshooting.html
 [GitLab Troubleshooting Guide]: https://gitlab.redox-os.org/redox-os/redox#help-redox-wont-compile
@@ -341,6 +329,7 @@ Read all the Redox Book before to see if the problem is your build configuration
 Check GitLab Issues first to see if your problem is already known.
 
 - [Redox Book Bug Report Guide]
+- [CONTRIBUTING.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md)
 
 [Redox Book Bug Report Guide]: https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html
 
@@ -348,10 +337,10 @@ Check GitLab Issues first to see if your problem is already known.
 
 You can contribute to Redox in many ways, here some of them:
 
+- [GitLab Guide]
 - [Documentation](/docs/)
 - [Redox Book Contribution Guide]
 - [How to make pull requests properly]
-- [GitLab Guide]
 - [Redox Dev room]
 
 [Redox Book Contribution Guide]: https://doc.redox-os.org/book/ch10-02-low-hanging-fruit.html
@@ -361,10 +350,10 @@ You can contribute to Redox in many ways, here some of them:
 
 ## I have a problem/question for Redox team
 
-- Read all the [Documentation](/docs/) page.
-- Read all the [Redox book] to see if it answer your questions/fix your problem.
-- If the book is not enough for you, make your question/say your problem in [Redox Support] or [Redox Dev] rooms on Matrix.
+- Have a look at the [Documentation](/docs/) page for more details of Redox internals.
+- Have a look at the [Redox Book] to see if it answers your questions/fixes your problem.
+- If the book does not answer your question, ask your question/say your problem in [Redox Support] or [Redox Dev] rooms on Matrix.
 
-[Redox book]: https://doc.redox-os.org/book/
+[Redox Book]: https://doc.redox-os.org/book/
 [Redox Support]: https://matrix.to/#/#redox-support:matrix.org
 [Redox Dev]: https://matrix.to/#/#redox-dev:matrix.org

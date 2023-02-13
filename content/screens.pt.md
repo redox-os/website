@@ -17,5 +17,8 @@ title = "Redox em Ação"
 ## ThinkPad T520, ThinkPad P50 and Asus P7P55D-E Pro Desktop
 <img class="img-responsive" src="/img/hardware/T520-P50-Asus-Desktop.jpg"/>
 
-## Redox OS playing Stargate SG-1 Season 10 intro
-<video class="img-responsive" src="https://www.youtube.com/watch?v=3cPekY4c9Hc"/>
+## Redox OS reproduzindo a intro da temporada 10 de Stargate SG-1
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3cPekY4c9Hc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+## Redox OS executando Mesa3D Gears com LLVMpipe
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ADSvEA_YY7E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
