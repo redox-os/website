@@ -99,11 +99,17 @@ A maioria dos componentes do sistema estão no espaço do usuário, você não p
 
 ## Qual o propósito do Redox?
 
+O objetivo principal do Redox é ser um sistema de propósito geral para qualquer tarefa/computador, mantendo a segurança, confiabilidade e correção.
+
+Nós pretendemos ser uma alternativa aos sistemas Unix (Linux/BSD) existentes também, podendo executar programas Unix com apenas modificações mínimas.
+
 [Nossos Objetivos]
 
 [Nossos Objetivos]: https://doc.redox-os.org/book/ch01-01-our-goals.html
 
 ## O que posso fazer com o Redox?
+
+Como um sistema de propósito geral, você pode fazer quase tudo na maioria dos dispositivos com alto desempenho/segurança.
 
 [Casos de Uso]
 
@@ -161,6 +167,8 @@ O Redox tenta implementar as melhorias de desempenho do Linux em um design de mi
 
 ## O que é um microkernel?
 
+Um microkernel é um modelo para núcleo de sistema operacional com uma pequena quantidade de código executando no maior privilégio do processador, este modelo melhora a estabilidade e segurança, com um pequeno custo de desempenho.
+
 - [Explicação do livro Redox]
 
 [Explicação do livro Redox]: https://doc.redox-os.org/book/ch04-01-microkernels.html
@@ -191,6 +199,9 @@ Um [supervisor] é um software the gerencia máquinas virtuais, ele pode ser uma
 [supervisor]: https://en.wikipedia.org/wiki/Hypervisor
 
 ## Quais dispositivos o Redox suporta?
+
+There are billions of devices with hundreds of models/architectures in the world, we try to write drivers for the most used devices to support more people, some drivers are device-specific and others are architecture-specific (better to port).
+Há bilhões de dispositivos com centenas de modelos/arquiteturas no mundo, nós tentamos escrever drivers para os dispositivos mais utilizados para ajudar mais pessoas, alguns drivers são específicos para um dispositivo e outros são específicos de arquitetura (melhor para portar).
 
 ### CPU
 
@@ -301,6 +312,8 @@ Nós estamos em transição para o Podman como nosso método de compilação pri
 
 ### Como atualizar o código-fonte e compilar as mudanças?
 
+Se você já baixou o código-fonte do Redox e compilou, é muito fácil de baixar/compilar novas mudanças.
+
 - [Guia de Recompilação no Livro do Redox]
 
 [Guia de Recompilação no Livro do Redox]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#the-full-rebuild-cycle
@@ -315,11 +328,15 @@ O QEMU ficará semelhante a um container/chroot.
 
 ### Como inserir arquivos dentro do disco rígido do QEMU
 
+Se você quiser fazer mudanças/testes rápidos na imagem QEMU.
+
 - [Guia do QEMU no livro do Redox]
 
 [Guia do QEMU no livro do Redox]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#patch-an-image
 
 ### Como diagnosticar seu Redox em caso de erros
+
+Leia todo o livro do Redox antes para ver se seu problema é sua configuração de compilação ou ferramentas de compilação, se isto não resolver seu erro, leia:
 
 - [Guia de Diagnóstico no Livro do Redox]
 - [Guia de Diagnóstico no GitLab]
@@ -329,11 +346,15 @@ O QEMU ficará semelhante a um container/chroot.
 
 ### Como reportar bugs para o Redox?
 
+Verifique as Issues no GitLab primeiro para ver se seu problema é conhecido.
+
 - [Guia para Relatório de Bug no Livro do Redox]
 
 [Guia para Relatório de Bug no Livro do Redox]: https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html
 
 ## Como contribuir para o Redox?
+
+Você pode contribuir para o Redox de diversas formas, leia sobre abaixo:
 
 - [Documentação](/pt/docs/)
 - [Guia de Contribuição no Livro do Redox]

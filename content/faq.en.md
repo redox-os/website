@@ -99,11 +99,17 @@ Most of the system components run on user-space, you don't need virtualization t
 
 ## What is the purpose of Redox?
 
+The main goal of Redox is to be a general-purpose OS for any kind of task/computer, while maintaining security, reliability and correctness.
+
+We aim to be an alternative for existing Unix systems (Linux/BSD) too, with the ability to run Unix programs only minimal modifications.
+
 [Our Goals]
 
 [Our Goals]: https://doc.redox-os.org/book/ch01-01-our-goals.html
 
 ## What I can do with Redox?
+
+As a general-purpose operating system, you can do almost anything on most devices with high performance/security.
 
 [Use Cases]
 
@@ -161,6 +167,8 @@ Redox tries to implement the Linux performance improvements in a microkernel des
 
 ## What is a microkernel?
 
+A microkernel is a OS core model with a small quantity of code running on the first privilege of the processor, this model of OS core brings more stability and security, with a small cost on performance.
+
 - [Redox Book explanation]
 
 [Redox Book explanation]: https://doc.redox-os.org/book/ch04-01-microkernels.html
@@ -191,6 +199,8 @@ A [hypervisor] is a software that manage virtual machines, it can be a "compatib
 [hypervisor]: https://en.wikipedia.org/wiki/Hypervisor
 
 ## Which devices does Redox support?
+
+There are billions of devices with hundreds of models/architectures in the world, we try to write drivers for the most used devices to support more people, some drivers are device-specific and others are architecture-specific (better to port).
 
 ### CPU
 
@@ -302,6 +312,8 @@ We are moving to use Podman as our main compilation method, it is the recommende
 
 ### How to update the sources and compile the changes
 
+If you already downloaded Redox sources and compiled, it's very easy to fetch/rebuild new changes.
+
 - [Redox Book Rebuild Guide]
 
 [Redox Book Rebuild Guide]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#the-full-rebuild-cycle
@@ -316,11 +328,15 @@ QEMU terminal will looks like a container/chroot.
 
 ### How to insert files inside Redox QEMU harddisk
 
+If you want to do quick changes/testing on QEMU image.
+
 - [Redox Book QEMU Guide]
 
 [Redox Book QEMU Guide]: https://doc.redox-os.org/book/ch09-02-coding-and-building.html#patch-an-image
 
 ### How to troubleshoot your build in case of errors
+
+Read all the Redox Book before to see if the problem is your build configuration or toolchain, if it don't fix your error, read:
 
 - [Redox Book Troubleshooting Guide]
 - [GitLab Troubleshooting Guide]
@@ -330,11 +346,15 @@ QEMU terminal will looks like a container/chroot.
 
 ### How to report bugs on Redox
 
+Check GitLab Issues first to see if your problem is already known.
+
 - [Redox Book Bug Report Guide]
 
 [Redox Book Bug Report Guide]: https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html
 
 ## How do I contribute to Redox?
+
+You can contribute to Redox in many ways, here some of them:
 
 - [Documentation](/docs/)
 - [Redox Book Contribution Guide]
