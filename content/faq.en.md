@@ -53,19 +53,21 @@ Since most of the system components are in user-space, they can be replaced on-t
 
 #### Easy to develop and debug
 
-Most of the system components run on user-space, you don't need virtualization to test/debug them, more quick to develop.
+Most of the system components run on user-space, simplifying debugging.
 
 ### Rust benefits
 
 #### No need for exploit mitigations
 
-The microkernel design written in Rust protects against C/C++ memory defects, by isolating the system components from the kernel, the [attack surface] is very limited..
+The microkernel design written in Rust protects against C/C++ memory defects.
+
+By isolating the system components from the kernel, the [attack surface] is very limited.
 
 [attack surface]: https://en.wikipedia.org/wiki/Attack_surface
 
 #### Improved security and reliability without significant performance impact
 
-As the kernel is small, it uses less memory to do his work and close to bug-free status ([KISS] goal).
+As the kernel is small, it uses less memory to do its work and close to bug-free status ([KISS] goal).
 
 Beyond being small, the system is written in Rust, this language helps the programmer to write better code that don't cause performance problems.
 
