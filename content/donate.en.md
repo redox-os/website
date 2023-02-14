@@ -6,7 +6,8 @@ title = "Donate"
 
 Redox OS has a Colorado incorporated nonprofit that manages donations. This
 nonprofit is not currently tax-exempt, but is working on acquiring `501(c)(3)`
-status.
+status. Donations to the Redox OS nonprofit will be used as determined by the
+Redox OS board of directors.
 
 You can donate to Redox OS the following ways:
 
@@ -17,6 +18,8 @@ You can donate to Redox OS the following ways:
 ## Jeremy Soller
 
 Jeremy Soller, is the creator, maintainer, and lead developer of Redox OS.
+Donations to Jeremy Soller are treated as a taxable gift, and will be used at
+his discretion.
 
 You can donate to Jeremy Soller the following ways:
 
