@@ -21,11 +21,8 @@ This source also includes LiberaPay donations, which can be found at
 https://liberapay.com/redox_os.
 Together, these provided $745.97 of income.
 
-Lastly, the Bitcoin address
-1MD8PqWMUhNPBR6YhYUUgrztEJ6StkxGQK
-and the Ethereum address
-0xa0589F36202c6dFFB0e3e0aCAEa5D62c0f5469ce
-provided $72.31 and $16.35 of income, respectively.
+Lastly, the Bitcoin address and the Ethereum address provided $72.31 and $16.35
+of income, respectively.
 
 Together, these sources provided $13368.16 of income, more than prior years.
 

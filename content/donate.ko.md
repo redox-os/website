@@ -11,8 +11,8 @@ Jackpot51을 후원하고 싶으신 분은 다음 방법을 이용해주세요:
 - [Patreon](https://www.patreon.com/redox_os)
 - [Liberapay](https://liberapay.com/redox_os)
 - [Paypal](https://www.paypal.me/redoxos)
-- [Bitcoin](bitcoin:1MD8PqWMUhNPBR6YhYUUgrztEJ6StkxGQK) 1MD8PqWMUhNPBR6YhYUUgrztEJ6StkxGQK
-- [Ethereum](ethereum:0xa0589F36202c6dFFB0e3e0aCAEa5D62c0f5469ce) 0xa0589F36202c6dFFB0e3e0aCAEa5D62c0f5469ce
+- Jeremy Soller no longer accepts Bitcoin or Ethereum donations. Do not send
+  anything to the previously listed addresses, as it will not be received.
 
 Redox OS 개발을 위해 Jackpot51에게 $4 이상 후원해주신 분들입니다:
 {{% partial "donors/jackpot51.html" %}}

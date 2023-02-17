@@ -11,8 +11,8 @@ Sie können über folgende Wege an Jackpot51 spenden:
 - [Patreon](https://www.patreon.com/redox_os)
 - [Liberapay](https://liberapay.com/redox_os)
 - [Paypal](https://www.paypal.me/redoxos)
-- [Bitcoin](bitcoin:1MD8PqWMUhNPBR6YhYUUgrztEJ6StkxGQK) 1MD8PqWMUhNPBR6YhYUUgrztEJ6StkxGQK
-- [Ethereum](ethereum:0xa0589F36202c6dFFB0e3e0aCAEa5D62c0f5469ce) 0xa0589F36202c6dFFB0e3e0aCAEa5D62c0f5469ce
+- Jeremy Soller no longer accepts Bitcoin or Ethereum donations. Do not send
+  anything to the previously listed addresses, as it will not be received.
 
 Die folgenden Patreon-Nutzer haben $4 oder mehr an Jackpot51 für die Entwicklung von Redox OS
 gespendet:
