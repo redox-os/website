@@ -16,9 +16,6 @@ Você pode doar para o Redox OS das seguintes formas:
 
 ## Jeremy Soller
 
-Jeremy Soller, is the creator, maintainer, and lead developer of Redox OS.
-Donations to Jeremy Soller are treated as a taxable gift, and will be used at
-his discretion.
 Jeremy Soller é o criador, mantenedor e desenvolvedor chefe do Redox OS.
 
 Doações para Jeremy Soller são tratadas como presente taxável e serão usadas conforme sua vontade.
