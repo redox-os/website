@@ -14,15 +14,16 @@ url = "/home"
   </div>
   <div class="col-md-4 install-box">
     <br/>
-    <a class="btn btn-primary" href="https://gitlab.redox-os.org/redox-os/redox/-/releases">Voir les versions</a>
-    <a class="btn btn-default" href="https://gitlab.redox-os.org/redox-os/redox/">Télécharger depuis GitLab</a>
+    <a class="btn btn-primary" href="/fr/quickstart/">Débuter</a>
+    <a class="btn btn-default" href="https://gitlab.redox-os.org/redox-os/redox/">GitLab</a>
   </div>
 </div>
 <div class="row features">
   <div class="col-md-6">
     <ul class="laundry-list" style="margin-bottom: 0px;">
+      <li>Inspiré de Plan 9, Minix, BSD et Linux</li>
       <li>Écrit en Rust</li>
-      <li>Architecture de micro-noyau</li>
+      <li>Architecture en micro-noyau</li>
       <li>Interface graphique optionnelle incluse - Orbital</li>
       <li>Compatible avec la bibliothèque standard de Rust</li>
     </ul>
@@ -32,7 +33,7 @@ url = "/home"
       <li>Licence MIT</li>
       <li>Les pilotes s'exécutent en mode utilisateur</li>
       <li>Commandes courantes d'Unix disponibles</li>
-      <li>Port de Newlib pour les programmes écrits en C</li>
+      <li>Relibc, une implémentation de Libc écrit en Rust</li>
     </ul>
   </div>
 </div>
