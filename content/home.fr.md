@@ -34,6 +34,7 @@ url = "/home"
       <li>Les pilotes s'exécutent en mode utilisateur</li>
       <li>Commandes courantes d'Unix disponibles</li>
       <li>Relibc, une implémentation de Libc écrit en Rust</li>
+      <li>Voir <a href="/fr/screens/">Redox en fonctionnement</a></li>
     </ul>
   </div>
 </div>
