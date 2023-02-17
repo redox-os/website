@@ -2,17 +2,33 @@
 title = "Doações"
 +++
 
-## Jackpot51
+## Redox OS Organização Sem Fins Lucrativos
 
-Jackpot51, ou Jeremy Soller, é o criador, mantenedor e desenvolvedor líder do Redox OS.
+O Redox OS tem uma organização sem fins lucrativos no Colorado (EUA) que gerencia as doações, essa organização sem fins lucrativos atualmente não está isenta de impostos, mas está trabalhando para adquirir o status `501(c)(3)`.
 
-Você pode doar pro Jackpot51 das seguintes formas:
+As doações da organização serão usadas conforme as decisões da mesa de diretores.
+
+Você pode doar para o Redox OS das seguintes formas:
+
+ - [Donorbox](https://donorbox.org/redox-os)
+ - Para doações maiores que 1000 dólares ou mais opções de doações, por favor entre em contato no endereço de e-mail:
+   donate@redox-os.org
+
+## Jeremy Soller
+
+Jeremy Soller, is the creator, maintainer, and lead developer of Redox OS.
+Donations to Jeremy Soller are treated as a taxable gift, and will be used at
+his discretion.
+Jeremy Soller é o criador, mantenedor e desenvolvedor chefe do Redox OS.
+
+Doações para Jeremy Soller são tratadas como presente taxável e serão usadas conforme sua vontade.
+
+Você pode doar para Jeremy Soller das seguintes formas:
 
 - [Patreon](https://www.patreon.com/redox_os)
 - [Liberapay](https://liberapay.com/redox_os)
 - [Paypal](https://www.paypal.me/redoxos)
-- Jeremy Soller no longer accepts Bitcoin or Ethereum donations. Do not send
-  anything to the previously listed addresses, as it will not be received.
+- Jeremy Soller não aceita doações em Bitcoin ou Ethereum, não envie nada para os endereços anteriores, pois elas não serão recebidas.
 
-Os seguintes patronos doaram 4 dólares ou mais pro Jackpot51 para uso no desenvolvimento do Redox OS:
+Os seguintes Patreons doaram 4 dólares ou mais para Jeremy Soller desenvolver o Redox OS:
 {{% partial "donors/jackpot51.html" %}}
