@@ -140,7 +140,7 @@ languageCode = "fr-fr"
 weight = 1
 name = "Documentation"
 url = "/docs/"
-[[languages.en.menu.main]]
+[[languages.fr.menu.main]]
 weight = 2
 name = "FAQ"
 url = "/faq"
