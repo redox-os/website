@@ -65,7 +65,7 @@ O design seguro e veloz da linguagem Rust, combinado com a pequena quantidade de
 
 Drivers escritos em Rust possuem incentivos para ter menos bugs e melhor segurança.
 
-- [Dispositivos suportados atualmente](/faq/#which-devices-redox-support)
+- [Dispositivos suportados atualmente](#quais-dispositivos-o-redox-suporta)
 
 #### Fácil de desenvolver e depurar
 

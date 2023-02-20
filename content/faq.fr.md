@@ -67,7 +67,7 @@ La conception de langage sûre et rapide de Rust, combinée à la petite taille 
 
 Les pilotes écrits en Rust sont susceptibles d'avoir moins de bogues et une meilleure sécurité.
 
-- [Appareils actuellement pris en charge](/fr/faq/#quels-appareils-sont-supportés-par-redox)
+- [Appareils actuellement pris en charge](#quels-appareils-sont-supportés-par-redox)
 
 #### Système de fichiers inspiré de ZFS
 
