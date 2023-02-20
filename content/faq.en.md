@@ -67,7 +67,7 @@ Rust's safe and fast language design, combined with the small size of the kernel
 
 Drivers written in Rust are likely to have fewer bugs and better security.
 
-- [Currently supported devices](/faq/#which-devices-does-redox-support)
+- [Currently supported devices](#which-devices-does-redox-support)
 
 #### ZFS-inspired filesystem
 
