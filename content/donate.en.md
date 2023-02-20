@@ -11,6 +11,7 @@ Redox OS board of directors.
 
 You can donate to Redox OS the following ways:
 
+ - [Patreon](https://www.patreon.com/redox_os)
  - [Donorbox](https://donorbox.org/redox-os)
  - For donations larger than $1000, or for more donation options, please contact
    donate@redox-os.org
@@ -23,7 +24,6 @@ his discretion.
 
 You can donate to Jeremy Soller the following ways:
 
-- [Patreon](https://www.patreon.com/redox_os)
 - [Liberapay](https://liberapay.com/redox_os)
 - [Paypal](https://www.paypal.me/redoxos)
 - Jeremy Soller no longer accepts Bitcoin or Ethereum donations. Do not send
