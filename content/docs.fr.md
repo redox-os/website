@@ -12,38 +12,36 @@ et utiliser Redox.
 
 [Livre](https://doc.redox-os.org/book/). Un livre qui présente l'architecture de Redox.
 
-[Talks](/talks/). Redox talks given at various events and conferences.
+[Conférences](/talks/). Conférences de Redox données à divers événements.
 
 [Noyau](https://doc.redox-os.org/kernel/kernel/). La documentation du noyau de Redox.
 
 [Bibliothèque standard](https://doc.redox-os.org/std/std/). La documentation de la bibliothèque standard de Redox.
 
-[Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
+[Manuel de Ion](https://doc.redox-os.org/ion-manual/). Documentation du shell de Ion.
 
 ## Contribuer à Redox
 
-Merci de votre intérêt pour Redox !  Il y a de nombreuses façons de
-contribuer au projet, et nous les apprécions toutes.
+- Lisez [CONTRIBUTING.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md)
 
-Redox est un gros projet réparti sur plusieurs dépôts qui font tous partie de
-[l'organisation Redox sur GitLab](https://gitlab.redox-os.org/redox-os).  Le document
-[CONTRIBUTING.md](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md)
-est un bon guide pour faciliter les premières contributions !
+Vous pouvez contribuer à la documentation / au code de Redox dans ces dépôts:
 
-## Communication et partage
+(Ils sont ordonnés par difficulté, les premiers étant les plus simples)
 
-La manière la plus simple et la plus ouverte de communiquer avec
-l'équipe Redox est via notre serveur de messagerie instantanée.
-Actuellement, la seule manière de le rejoindre est de faire une demande
-à [info@redox-os.org](mailto:info@redox-os.org).  Le processus n'étant
-pas automatisé, il est possible que la réponse prenne un petit moment.
-Nous sommes en train de réfléchir à une solution plus simple, mais
-c'est pour l'instant ce que l'on a trouvé de mieux.
+- [Site](https://gitlab.redox-os.org/redox-os/website)
+- [Livre](https://gitlab.redox-os.org/redox-os/book)
+- [Dépôt principal (construction et configuration du système)](https://gitlab.redox-os.org/redox-os/redox)
+- [Paquets Redox (tous les composants systèmes / logiciels portés)](https://gitlab.redox-os.org/redox-os/cookbook)
+- [L'environnement de bureau Redox](https://gitlab.redox-os.org/redox-os/orbital)
+- [Bibliothèque client d'Orbital](https://gitlab.redox-os.org/redox-os/orbclient)
+- [Applications d'Orbital](https://gitlab.redox-os.org/redox-os/orbutils)
+- [Bibliothèque C de Redox](https://gitlab.redox-os.org/redox-os/relibc)
+- [Pilotes](https://gitlab.redox-os.org/redox-os/drivers)
+- [Noyau](https://gitlab.redox-os.org/redox-os/kernel)
 
-Redox est également présent sur Reddit sur
-[/r/redox/](https://www.reddit.com/r/redox), et
-[/r/rust/](https://www.reddit.com/r/rust) (où sont postées les nouvelles
-hebdomadaires).
+## Communication et Chat
+
+Veuillez voir sur la [Communauté](/fr/community/)
 
 
 ## Conduite

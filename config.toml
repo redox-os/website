@@ -150,11 +150,11 @@ name = "Communauté"
 url = "/community"
 [[languages.fr.menu.main]]
 weight = 4
-name = "Nouvelles"
+name = "Actualité"
 url = "/news/"
 [[languages.fr.menu.main]]
 weight = 5
-name = "Donation"
+name = "Donner"
 url = "/donate/"
 [[languages.fr.menu.main]]
 weight = 6
