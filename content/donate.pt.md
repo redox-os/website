@@ -10,6 +10,7 @@ As doações da organização serão usadas conforme as decisões da mesa de dir
 
 Você pode doar para o Redox OS das seguintes formas:
 
+ - [Patreon](https://www.patreon.com/redox_os)
  - [Donorbox](https://donorbox.org/redox-os)
  - Para doações maiores que 1000 dólares ou mais opções de doações, por favor entre em contato no endereço de e-mail:
    donate@redox-os.org
@@ -22,7 +23,6 @@ Doações para Jeremy Soller são tratadas como presente taxável e serão usada
 
 Você pode doar para Jeremy Soller das seguintes formas:
 
-- [Patreon](https://www.patreon.com/redox_os)
 - [Liberapay](https://liberapay.com/redox_os)
 - [Paypal](https://www.paypal.me/redoxos)
 - Jeremy Soller não aceita doações em Bitcoin ou Ethereum, não envie nada para os endereços anteriores, pois elas não serão recebidas.
