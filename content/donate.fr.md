@@ -1,5 +1,5 @@
 +++
-title = "Donation"
+title = "Donner"
 +++
 
 ## Organisation Redox OS à but non lucratif
@@ -13,6 +13,7 @@ Conseil d'administration de Redox OS.
 Vous pouvez faire un don à Redox OS des manières suivantes:
 
  - [Donorbox](https://donorbox.org/redox-os)
+ - [Patreon](https://www.patreon.com/redox_os)
  - Pour les dons supérieurs à 1 000 $ ou pour plus d'options de don, veuillez contacter
    donate@redox-os.org
 
@@ -23,7 +24,6 @@ Les dons à Jeremy Soller sont traités comme un don imposable et seront utilis�
 
 Vous pouvez faire un don à Jeremy Soller des manières suivantes :
 
-- [Patreon](https://www.patreon.com/redox_os)
 - [Liberapay](https://liberapay.com/redox_os)
 - [Paypal](https://www.paypal.me/redoxos)
 - Jeremy Soller n'accepte plus les dons Bitcoin ou Ethereum. Ne pas envoyer 
