@@ -249,11 +249,12 @@ Check GitLab Issues first to see if your problem is already known.
 
 You can contribute to Redox in many ways, here some of them:
 
-- [CONTRIBUTING](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md)
-- [Redox Book Contribution Guide](https://doc.redox-os.org/book/ch10-02-low-hanging-fruit.html)
+- [CONTRIBUTING](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md) - developer guide.
+- [Redox Book Contribution Guide](https://doc.redox-os.org/book/ch10-02-low-hanging-fruit.html) - tasks to do.
 - [How to make pull requests properly](https://doc.redox-os.org/book/ch12-04-creating-proper-pull-requests.html)
 - [Documentation](/docs/)
-- [Redox Dev room](https://matrix.to/#/#redox-dev:matrix.org)
+- [Redox Dev room](https://matrix.to/#/#redox-dev:matrix.org) - to talk with developers.
+- [Redox Merge Requests room](https://matrix.to/#/#redox-mrs:matrix.org) - to post your merge requests ready to merge (without merge conflicts).
 
 ## I have a problem/question for Redox team
 
