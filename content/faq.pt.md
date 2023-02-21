@@ -251,7 +251,7 @@ Você pode contribuir para o Redox de diversas formas, leia sobre abaixo:
 - [Como fazer pull requests corretamente](https://doc.redox-os.org/book/ch12-04-creating-proper-pull-requests.html)
 - [Documentação](/pt/docs/)
 - [Sala de Desenvolvimento do Redox](https://matrix.to/#/#redox-dev:matrix.org) - para conversar com os desenvolvedores.
-- [Sala de Merge Requests do Redox](https://matrix.to/#/#redox-mrs:matrix.org) - para postar seus merge requests prontos para mesclar.
+- [Sala de Merge Requests do Redox](https://matrix.to/#/#redox-mrs:matrix.org) - para enviar seus merge requests prontos para mesclar.
 
 ## Eu tenho um problema/pergunta para a equipe do Redox
 
