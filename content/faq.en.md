@@ -30,7 +30,7 @@ Wherever possible, the system components are written in Rust and run in user-spa
 
 ## What Redox means?
 
-[Redox](https://en.wikipedia.org/wiki/Redox) is the chemical reaction (reduction–oxidation) that creastes rust, as Redox is an operating system written in Rust, it makes sense.
+[Redox](https://en.wikipedia.org/wiki/Redox) is the chemical reaction (reduction–oxidation) that creates rust, as Redox is an operating system written in Rust, it makes sense.
 
 It sounds like Minix/Linux too.
 
