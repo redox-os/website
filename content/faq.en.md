@@ -5,6 +5,7 @@ title = "FAQ"
 This page covers the most asked questions.
 
 - [What is Redox?](#what-is-redox)
+- [What Redox means?](#what-redox-means)
 - [What features does Redox have?](#what-features-does-redox-have)
 - [What is the purpose of Redox?](#what-is-the-purpose-of-redox)
 - [What I can do with Redox?](#what-i-can-do-with-redox)
@@ -26,6 +27,12 @@ This page covers the most asked questions.
 Redox is a microkernel-based operating system, a complete, fully-functioning, general-purpose operating system with a focus on safety, freedom, reliability, correctness, and pragmatism.
 
 Wherever possible, the system components are written in Rust and run in user-space.
+
+## What Redox means?
+
+[Redox](https://en.wikipedia.org/wiki/Redox) is the chemical reaction (reduction–oxidation) that creastes rust, as Redox is an operating system written in Rust, it makes sense.
+
+It sounds like Minix/Linux too.
 
 ## What features does Redox have?
 
