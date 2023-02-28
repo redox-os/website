@@ -2,7 +2,7 @@
 title = "Redox OS Summer of Code"
 +++
 
-(This page was dropped because we will have a bounty program, you don't need to translate it or add on config.toml)
+(This page was dropped because we are deciding how we will hire devs in the future, you don't need to translate it or add on config.toml)
 
 The Redox OS Summer of Code is the primary use of donations to the Redox OS
 project. Students are selected who have already demonstrated a desire and
