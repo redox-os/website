@@ -246,19 +246,12 @@ Leia todo o livro do Redox antes para ver se seu problema é sua configuração 
 
 Verifique as Issues no GitLab primeiro para ver se seu problema é conhecido.
 
-- [CONTRIBUTING](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md)
 - [Guia para Relatório de Bug no Livro do Redox](https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html)
+- [CONTRIBUTING](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md)
 
 ## Como contribuir para o Redox?
 
-Você pode contribuir para o Redox de diversas formas, leia sobre abaixo:
-
-- [CONTRIBUTING](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md) - guia do desenvolvedor.
-- [Guia de Contribuição no Livro do Redox](https://doc.redox-os.org/book/ch10-02-low-hanging-fruit.html) - tarefas para fazer.
-- [Como fazer pull requests corretamente](https://doc.redox-os.org/book/ch12-04-creating-proper-pull-requests.html)
-- [Documentação](/pt/docs/)
-- [Sala de Desenvolvimento do Redox](https://matrix.to/#/#redox-dev:matrix.org) - para conversar com os desenvolvedores.
-- [Sala de Merge Requests do Redox](https://matrix.to/#/#redox-mrs:matrix.org) - para enviar seus merge requests prontos para mesclar.
+Você pode contribuir para o Redox de diversas formas, veja elas em [CONTRIBUTING](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md).
 
 ## Eu tenho um problema/pergunta para a equipe do Redox
 
