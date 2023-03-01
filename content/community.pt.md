@@ -39,3 +39,9 @@ Se quiser dar uma olhada nas novidades e discutir sobre.
 ## [Mastodon](https://fosstodon.org/@redox)
 
 Notícias e conteúdo relacionado.
+
+### Nota
+
+A divulgação da comunidade é uma parte importante no sucesso do Redox, quanto mais pessoas souberem sobre o Redox, mais contribuições podem vir e todos podem se beneficiar.
+
+Você pode fazer a diferença escrevendo artigos, conversando com entusiastas de sistemas operacionais ou procurando por comunidades que podem estar interessadas em conhecer o Redox.
