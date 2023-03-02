@@ -8,7 +8,7 @@ This page attempts to explain how the Redox OS community is organised and help y
 <a id="chat"></a>
 ## [Chat](https://matrix.to/#/#redox:matrix.org)
 
-Matrix is currently being evaluated for use as the official Redox OS chatroom.
+Matrix is the official way to talk with Redox OS team/community.
 
 <a id="gitlab"></a>
 ## [GitLab](https://gitlab.redox-os.org/redox-os/redox)

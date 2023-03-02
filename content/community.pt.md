@@ -7,7 +7,7 @@ Essa página explica como a comunidade do Redox OS é organizada e como você po
 <a id="chat"></a>
 ## [Chat](https://matrix.to/#/#redox:matrix.org)
 
-O Matrix atualmente está sendo testado para ser a sala de chat oficial do Redox OS.
+Matrix é a forma de comunicação oficial com o time/comunidade do Redox OS.
 
 <a id="gitlab"></a>
 ## [GitLab](https://gitlab.redox-os.org/redox-os/redox)
