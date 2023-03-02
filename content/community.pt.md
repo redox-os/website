@@ -43,6 +43,7 @@ Nosso fórum histórico com perguntas clássicas/antigas, está inátivo e deve 
 
 Se você tem uma pergunta, faça no chat Matrix.
 
+<a id="nota"></a>
 ### Nota
 
 A divulgação da comunidade é uma parte importante no sucesso do Redox, quanto mais pessoas souberem sobre o Redox, mais contribuições podem vir e todos podem se beneficiar.
