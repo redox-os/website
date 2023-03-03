@@ -12,6 +12,10 @@ title = "Докумендация"
 
 [Talks](/talks/). Redox talks given at various events and conferences.
 
+[Ядро](https://doc.redox-os.org/kernel/kernel/). Документация к ядру Redox
+
+[Стандартная библиотека](https://doc.redox-os.org/std/std/). Документация к стандартной библиотеке Redox.
+
 [Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
 
 ## Сотрудничество с Redox

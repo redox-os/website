@@ -13,6 +13,10 @@ werfen, welches beschreibt wie man Redox einrichtet und benutzt.
 
 [Talks](/talks/). Redox talks given at various events and conferences.
 
+[Kernel](https://doc.redox-os.org/kernel/kernel/). Dokumentation des Redox-Kernels.
+
+[Standard Library](https://doc.redox-os.org/std/std/). Dokumentation der Redox-Standardbibliothek.
+
 [Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
 
 ## Mitwirken bei Redox

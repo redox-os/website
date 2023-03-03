@@ -12,6 +12,10 @@ title = "文档"
 
 [Talks](/talks/). Redox talks given at various events and conferences.
 
+[内核](https://doc.redox-os.org/kernel/kernel/). Redox的内核文档。
+
+[标准库](https://doc.redox-os.org/std/std/). Redox的标准库。
+
 [Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
 
 ## 为Redox做贡献

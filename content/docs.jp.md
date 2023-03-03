@@ -12,6 +12,10 @@ title = "ドキュメント"
 
 [Talks](/talks/). Redox talks given at various events and conferences.
 
+[カーネル](https://doc.redox-os.org/kernel/kernel/). Redoxカーネルのドキュメント。
+
+[標準ライブラリ](https://doc.redox-os.org/std/std/). 標準ライブラリのドキュメント。
+
 [Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
 
 ## Redoxへの貢献

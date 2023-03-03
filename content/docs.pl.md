@@ -12,6 +12,10 @@ Gorąco polecamy zacząć od [Książki](https://doc.redox-os.org/book/), gdyż 
 
 [Talks](/talks/). Redox talks given at various events and conferences.
 
+[Jądro](https://doc.redox-os.org/kernel/kernel/). Dokumentacja struktury jądra systemu Redox.
+
+[Biblioteka Standardowa](https://doc.redox-os.org/std/std/). Dokumentacja biblioteki standardowej systemu Redox.
+
 [Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
 
 ## Współtworzenie systemu Redox

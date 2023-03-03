@@ -18,6 +18,11 @@ title = "توثيق"
 
 [محادثات](/talks/). المحادثات التي ألقيت في مختلف المناسبات والمؤتمرات.
 
+[نواة](https://doc.redox-os.org/kernel/kernel/). توثيق نواة Rodex.
+
+[مكتبة القياسية](https://doc.redox-os.org/std/std/). توثيق المكتبه
+القياسية ل Redox.
+
 [Ion دليل استخدام](https://doc.redox-os.org/ion-manual/). توثيق Ion shell.
 
 ## المساهمة في Redox
