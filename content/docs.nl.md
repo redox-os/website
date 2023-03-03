@@ -12,9 +12,9 @@ We raden aan om te beginnen met het [Boek](https://doc.redox-os.org/book/). Dit 
 
 [Talks](/talks/). Redox talks given at various events and conferences.
 
-[Kernel](https://doc.redox-os.org/kernel/kernel/). Documentatie van de Redox kernel.
+[redox_syscall](https://docs.rs/redox_syscall/latest/syscall/). Documentation for the Redox system calls.
 
-[Standard Library](https://doc.redox-os.org/std/std/). Documentatie van de Redox standard library.
+[libstd](https://doc.rust-lang.org/stable/std/). Documentation for the Rust standard library.
 
 [Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
 

@@ -12,9 +12,9 @@ Erősen ajánljuk, hogy elsőként pillants bele a [Kézikönyvbe](https://doc.r
 
 [Talks](/talks/). Redox talks given at various events and conferences.
 
-[Rendszermag](https://doc.redox-os.org/kernel/kernel/). A Redox rendszermag dokumentációja.
+[redox_syscall](https://docs.rs/redox_syscall/latest/syscall/). Documentation for the Redox system calls.
 
-[Standard könyvtár](https://doc.redox-os.org/std/std/). A Redox standard könyvtár dokumentációja.
+[libstd](https://doc.rust-lang.org/stable/std/). Documentation for the Rust standard library.
 
 [Ion Kézikönyv](https://doc.redox-os.org/ion-manual/). Az Ion rendszerhéj dokumentációja.
 

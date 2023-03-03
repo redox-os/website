@@ -12,9 +12,9 @@ Nós recomendamos que você comece pelo [Livro](https://doc.redox-os.org/book/),
 
 [Palestras](/talks/). Palestras sobre o Redox em diversos eventos e conferências.
 
-[Núcleo/Kernel](https://doc.redox-os.org/kernel/kernel/). Documentação sobre o núcleo (`kernel`) do Redox.
+[redox_syscall](https://docs.rs/redox_syscall/latest/syscall/). Documentação para as chamadas de sistema do Redox.
 
-[Biblioteca Padrão](https://doc.redox-os.org/std/std/). Documentação sobre a biblioteca padrão do Redox.
+[libstd](https://doc.rust-lang.org/stable/std/). Documentação para a biblioteca padrão da Rust.
 
 [Manual da Ion](https://doc.redox-os.org/ion-manual/). Documentação para a shell Ion.
 

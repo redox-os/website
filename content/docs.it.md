@@ -12,9 +12,9 @@ Noi ti consigliamo di iniziare con [Book](https://doc.redox-os.org/book/), che d
 
 [Talks](/talks/). Redox talks given at various events and conferences.
 
-[Kernel](https://doc.redox-os.org/kernel/kernel/). Documentazione per il kernel Redox.
+[redox_syscall](https://docs.rs/redox_syscall/latest/syscall/). Documentation for the Redox system calls.
 
-[Libreria Standard](https://doc.redox-os.org/std/std/). Documentazione per le librerie standard di Redox.
+[libstd](https://doc.rust-lang.org/stable/std/). Documentation for the Rust standard library.
 
 [Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
 

@@ -18,10 +18,9 @@ title = "توثيق"
 
 [محادثات](/talks/). المحادثات التي ألقيت في مختلف المناسبات والمؤتمرات.
 
-[نواة](https://doc.redox-os.org/kernel/kernel/). توثيق نواة Rodex.
+[redox_syscall](https://docs.rs/redox_syscall/latest/syscall/). Documentation for the Redox system calls.
 
-[مكتبة القياسية](https://doc.redox-os.org/std/std/). توثيق المكتبه
-القياسية ل Redox.
+[libstd](https://doc.rust-lang.org/stable/std/). Documentation for the Rust standard library.
 
 [Ion دليل استخدام](https://doc.redox-os.org/ion-manual/). توثيق Ion shell.
 

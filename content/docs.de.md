@@ -13,9 +13,9 @@ werfen, welches beschreibt wie man Redox einrichtet und benutzt.
 
 [Talks](/talks/). Redox talks given at various events and conferences.
 
-[Kernel](https://doc.redox-os.org/kernel/kernel/). Dokumentation des Redox-Kernels.
+[redox_syscall](https://docs.rs/redox_syscall/latest/syscall/). Documentation for the Redox system calls.
 
-[Standard Library](https://doc.redox-os.org/std/std/). Dokumentation der Redox-Standardbibliothek.
+[libstd](https://doc.rust-lang.org/stable/std/). Documentation for the Rust standard library.
 
 [Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
 

@@ -12,9 +12,9 @@ Vi anbefaler at du starter med [Redox-bogen](https://doc.redox-os.org/book/), da
 
 [Foredrag](/talks/). Redox-foredrag holdt til diverse begivenheder og konferencer.
 
-[Kernen](https://doc.redox-os.org/kernel/kernel/). Dokumentation for Redox-kernen.
+[redox_syscall](https://docs.rs/redox_syscall/latest/syscall/). Documentation for the Redox system calls.
 
-[Standardbiblioteket](https://doc.redox-os.org/std/std/). Dokumentation for Redox' standardbibliotek.
+[libstd](https://doc.rust-lang.org/stable/std/). Documentation for the Rust standard library.
 
 [Ion-manual](https://doc.redox-os.org/ion-manual/). Dokumentation for kommandofortolkeren Ion.
 
