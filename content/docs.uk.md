@@ -12,9 +12,9 @@ title = "Документація"
 
 [Talks](/talks/). Redox talks given at various events and conferences.
 
-[Ядро](https://doc.redox-os.org/kernel/kernel/). Документація ядра Redox.
+[redox_syscall](https://docs.rs/redox_syscall/latest/syscall/). Documentation for the Redox system calls.
 
-[Стандартна Бібліотека](https://doc.redox-os.org/std/std/). Документація стандартної бібліотеки Redox.
+[libstd](https://doc.rust-lang.org/stable/std/). Documentation for the Rust standard library.
 
 [Посібник Ion](https://doc.redox-os.org/ion-manual/). Документація оболонки Ion.
 

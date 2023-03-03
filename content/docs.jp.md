@@ -12,9 +12,9 @@ title = "ドキュメント"
 
 [Talks](/talks/). Redox talks given at various events and conferences.
 
-[カーネル](https://doc.redox-os.org/kernel/kernel/). Redoxカーネルのドキュメント。
+[redox_syscall](https://docs.rs/redox_syscall/latest/syscall/). Documentation for the Redox system calls.
 
-[標準ライブラリ](https://doc.redox-os.org/std/std/). 標準ライブラリのドキュメント。
+[libstd](https://doc.rust-lang.org/stable/std/). Documentation for the Rust standard library.
 
 [Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
 

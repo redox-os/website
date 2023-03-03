@@ -12,9 +12,9 @@ title = "文档"
 
 [Talks](/talks/). Redox talks given at various events and conferences.
 
-[内核](https://doc.redox-os.org/kernel/kernel/). Redox的内核文档。
+[redox_syscall](https://docs.rs/redox_syscall/latest/syscall/). Documentation for the Redox system calls.
 
-[标准库](https://doc.redox-os.org/std/std/). Redox的标准库。
+[libstd](https://doc.rust-lang.org/stable/std/). Documentation for the Rust standard library.
 
 [Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
 
