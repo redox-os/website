@@ -12,10 +12,6 @@ Vi anbefaler at du starter med [Redoxboken](https://doc.redox-os.org/book/), da 
 
 [Talks](/talks/). Redox talks given at various events and conferences.
 
-[Kjernen](https://doc.redox-os.org/kernel/kernel/). Dokumentasjon for Redoxkjernen.
-
-[Standard Library](https://doc.redox-os.org/std/std/). Dokumentasjon for Redoxs Standard Library.
-
 [Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
 
 ## Bidra til Redox

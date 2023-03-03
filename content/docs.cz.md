@@ -12,10 +12,6 @@ Doporučujeme začít s oficiální [Knihou](https://doc.redox-os.org/book/) o R
 
 [Talks](/talks/). Redox talks given at various events and conferences.
 
-[Jádro OS](https://doc.redox-os.org/kernel/kernel/). Dokumentace jádra.
-
-[Standardní knihovna](https://doc.redox-os.org/std/std/). Dokumentace standardní knihovny.
-
 [Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
 
 ## Přispívání do Redoxu

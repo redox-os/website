@@ -12,10 +12,6 @@ Recomendamos encarecidamente empezar con el [Libro](https://doc.redox-os.org/boo
 
 [Talks](/talks/). Discursos de Redox de varios eventos y conferencias.
 
-[Núcleo](https://doc.redox-os.org/kernel/kernel/). Documentación del núcleo de Redox.
-
-[Librería Estándar](https://doc.redox-os.org/std/std/). Documentación de la librería estándar de Redox.
-
 [Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
 
 ## Contribuyendo a Redox

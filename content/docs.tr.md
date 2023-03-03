@@ -12,10 +12,6 @@ Biz, Redox'u nasıl kurup kullanacağınızı açıkladığı için [kitabımız
 
 [Talks](/talks/). Redox talks given at various events and conferences.
 
-[Kernel](https://doc.redox-os.org/kernel/kernel/). Redox'un kerneli için belge.
-
-[Standard Kütüphane](https://doc.redox-os.org/std/std/). Redox standart kütüphanesi için belge.
-
 [Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
 
 ## Redox'a Katkı Sağlama

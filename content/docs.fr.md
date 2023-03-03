@@ -14,10 +14,6 @@ et utiliser Redox.
 
 [Conférences](/talks/). Conférences de Redox données à divers événements.
 
-[Noyau](https://doc.redox-os.org/kernel/kernel/). La documentation du noyau de Redox.
-
-[Bibliothèque standard](https://doc.redox-os.org/std/std/). La documentation de la bibliothèque standard de Redox.
-
 [Manuel de Ion](https://doc.redox-os.org/ion-manual/). Documentation du shell de Ion.
 
 ## Contribuer à Redox
