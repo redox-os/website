@@ -17,9 +17,9 @@ Uma forma mais formal de comunicação com os desenvolvedores do Redox, porém m
 Envie uma Issue se você tiver problemas compilando/testando ou apenas queira discutir algum assunto, seja funções, estilo de código, inconsistências de código, pequenas mudanças ou correções.
 
 <a id="reddit"></a>
-## [Redox OS on Reddit](https://www.reddit.com/r/Redox/)
+## [Reddit](https://www.reddit.com/r/Redox/)
 
-Se quiser dar uma olhada nas novidades e discutir sobre.
+Caso queira ver as novidades e discutir sobre.
 
 [reddit.com/r/rust](https://www.reddit.com/r/rust) - Para notícias relacionadas a Rust e discussões.
 
