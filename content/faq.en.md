@@ -153,7 +153,7 @@ Some important software that Redox supports:
 - [Python](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/python)
 - [SDL](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/sdl2)
 
-You can see all Redox components/ported programs [here](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes).
+You can see all Redox components/ported programs [here](https://static.redox-os.org/pkg/x86_64-unknown-redox/).
 
 ## Which devices does Redox support?
 
