@@ -3,10 +3,10 @@ title = "Redox in Action"
 +++
 
 ## Redox OS playing Stargate SG-1 Season 10 intro
- <iframe src="https://vid.puffyan.us/embed/3cPekY4c9Hc" style="border:none;height:315px;width:560px;" title="Invidious video player"></iframe> 
+ <iframe src="https://vid.puffyan.us/embed/3cPekY4c9Hc" style="border:none;height:601px;width:796px;" title="Invidious video player"></iframe> 
 
 ## Redox OS running Mesa3D Gears with LLVMpipe
- <iframe src="https://vid.puffyan.us/embed/ADSvEA_YY7E" style="border:none;height:315px;width:560px;" title="Invidious video player"></iframe> 
+ <iframe src="https://vid.puffyan.us/embed/ADSvEA_YY7E" style="border:none;height:601px;width:796px;" title="Invidious video player"></iframe> 
 
 ## System76 Galago Pro (galp3-c)
 <img class="img-responsive" src="/img/hardware/system76-galp3-c.jpg"/>
