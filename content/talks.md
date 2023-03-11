@@ -12,13 +12,13 @@ title = "Talks"
 
 **By Robin Randhawa on February 3, 2019**
 
- <iframe src="https://vid.puffyan.us/embed/qpazyDkuqLw" style="border:none;height:601px;width:796px;" title="Invidious video player"></iframe> 
+ <iframe src="https://vid.puffyan.us/embed/qpazyDkuqLw" style="border:none;height:472px;width:796px;" title="Invidious video player"></iframe> 
 
 ## Linaro Connect Vancouver 2018
 
 **By Jeremy Soller and Robin Randhawa on September 21, 2018**
 
- <iframe src="https://vid.puffyan.us/embed/G4VlHzyKZeE" style="border:none;height:601px;width:796px;" title="Invidious video player"></iframe> 
+ <iframe src="https://vid.puffyan.us/embed/G4VlHzyKZeE" style="border:none;height:472px;width:796px;" title="Invidious video player"></iframe> 
 
 ## The Changelog
 
@@ -37,4 +37,4 @@ title = "Talks"
 
 **By David Teller on February 4, 2017**
 
- <iframe src="https://vid.puffyan.us/embed/TlTYWDU-mM4" style="border:none;height:601px;width:796px;" title="Invidious video player"></iframe> 
+ <iframe src="https://vid.puffyan.us/embed/TlTYWDU-mM4" style="border:none;height:472px;width:796px;" title="Invidious video player"></iframe> 
