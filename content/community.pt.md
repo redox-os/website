@@ -4,6 +4,8 @@ title = "Comunidade"
 
 Essa página explica como a comunidade do Redox OS é organizada e como você pode acessar ela.
 
+Nós seguidos o [Código de Conduta da Rust](https://www.rust-lang.org/policies/code-of-conduct) como regra em todos os nossos canais de comunidade/chats.
+
 ## [Chat](https://matrix.to/#/#redox:matrix.org)
 
 Matrix é a forma de comunicação oficial com o time/comunidade do Redox OS.

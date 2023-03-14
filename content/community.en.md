@@ -4,7 +4,7 @@ title = "Community"
 
 This page attempts to explain how the Redox OS community is organised and help you navigate it.
 
-We follow the [Rust Code Of Conduct](https://www.rust-lang.org/policies/code-of-conduct) for rules in all community channels.
+We follow the [Rust Code Of Conduct](https://www.rust-lang.org/policies/code-of-conduct) for rules in all community/chat channels.
 
 ## [Chat](https://matrix.to/#/#redox:matrix.org)
 
