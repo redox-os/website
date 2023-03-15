@@ -29,17 +29,6 @@ release. Finally, I would like to thank the donors to Redox OS, for it is their
 contributions that keep our RSoC program and our infrastructure running. Please
 consider donating to Redox OS using the links on the [Donate page](/donate/)!
 
-In addition to the exciting technical changes, there is also organizational news
-to share. Redox OS received a donation of $400,000 (USD). This donation
-was anonymous, and the way in which it was made anonymous has made it not
-possible to use at this time. Presently, I am working with a legal team on
-determining specifically how the
-[OFAC sanctions on Tornado Cash](https://home.treasury.gov/news/press-releases/jy0916)
-apply to this donation, which was made through Tornado Cash. At present, as I am
-a US citizen, I have blocked the transfer of this donation in order to comply
-with potential OFAC sanctions. In the event that I am allowed to use this
-donation, I will describe in another news post what it means for Redox OS.
-
 ## Discussion
 
 Links where this release is discussed will be added here. To contact me
