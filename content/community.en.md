@@ -10,6 +10,8 @@ We follow the [Rust Code Of Conduct](https://www.rust-lang.org/policies/code-of-
 
 Matrix is the official way to talk with Redox OS team/community.
 
+- #redox:matrix.org
+
 ## [GitLab](https://gitlab.redox-os.org/redox-os/redox)
 
 A bit more formal way of communication with fellow Redox devs, but a little less quick and convenient like the chat. Submit an issue when you run into problems compiling, testing, or just would like to discuss a certain topic, be it features, code style, code inconsistencies, minor changes and fixes, etc.
