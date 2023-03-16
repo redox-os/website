@@ -12,6 +12,8 @@ Matrix is the official way to talk with Redox OS team/community.
 
 - #redox:matrix.org
 
+Matrix has several different clients. [Element](https://element.io/) is a commonly used choice.
+
 ## [GitLab](https://gitlab.redox-os.org/redox-os/redox)
 
 A bit more formal way of communication with fellow Redox devs, but a little less quick and convenient like the chat. Submit an issue when you run into problems compiling, testing, or just would like to discuss a certain topic, be it features, code style, code inconsistencies, minor changes and fixes, etc.
