@@ -10,6 +10,10 @@ Nós seguidos o [Código de Conduta da Rust](https://www.rust-lang.org/policies/
 
 Matrix é a forma de comunicação oficial com o time/comunidade do Redox OS.
 
+- #redox:matrix.org
+
+A rede Matrix tem diferentes clientes, [Element](https://element.io/) é o mais utilizado.
+
 ## [GitLab](https://gitlab.redox-os.org/redox-os/redox)
 
 Uma forma mais formal de comunicação com os desenvolvedores do Redox, porém mais lento e menos conveniente de conversar.
