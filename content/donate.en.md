@@ -5,16 +5,14 @@ title = "Donate"
 ## Redox OS Nonprofit
 
 Redox OS has a Colorado (US) incorporated nonprofit that manages donations. This
-nonprofit is not currently tax-exempt, but is working on acquiring `501(c)(3)`
-status. Donations to the Redox OS nonprofit will be used as determined by the
-Redox OS board of directors.
+nonprofit is not tax-exempt. Donations to the Redox OS nonprofit will be used as
+determined by the Redox OS volunteer board of directors.
 
 You can donate to Redox OS the following ways:
 
  - [Patreon](https://www.patreon.com/redox_os)
  - [Donorbox](https://donorbox.org/redox-os)
- - For donations larger than $1000, or for more donation options, please contact
-   donate@redox-os.org
+ - For more donation options, please contact donate@redox-os.org
 
 ## Jeremy Soller
 
