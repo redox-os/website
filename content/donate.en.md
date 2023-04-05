@@ -4,9 +4,9 @@ title = "Donate"
 
 ## Redox OS Nonprofit
 
-Redox OS has a Colorado (US) incorporated nonprofit that manages donations. This
-nonprofit is not tax-exempt. Donations to the Redox OS nonprofit will be used as
-determined by the Redox OS volunteer board of directors.
+Redox OS has a Colorado (US) incorporated 501(c)(4) nonprofit that manages
+donations. Donations to the Redox OS nonprofit will be used as determined by
+the Redox OS volunteer board of directors.
 
 You can donate to Redox OS the following ways:
 
