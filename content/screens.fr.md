@@ -2,11 +2,14 @@
 title = "Redox en fonctionnement"
 +++
 
+## Redox OS exécutant Doom II
+<iframe src="https://vid.puffyan.us/embed/-wwwYIqfQik" style="border:none;height:601px;width:796px;" title="Invidious video player"></iframe>
+
 ## Redox OS exécutant l'intro de Stargate SG-1 Saison 10
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3cPekY4c9Hc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe src="https://vid.puffyan.us/embed/3cPekY4c9Hc" style="border:none;height:601px;width:796px;" title="Invidious video player"></iframe>
 
 ## Redox OS exécutant Mesa3D Gears avec LLVMpipe
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ADSvEA_YY7E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe src="https://vid.puffyan.us/embed/ADSvEA_YY7E" style="border:none;height:601px;width:796px;" title="Invidious video player"></iframe>
 
 ## System76 Galago Pro (galp3-c)
 <img class="img-responsive" src="/img/hardware/system76-galp3-c.jpg"/>

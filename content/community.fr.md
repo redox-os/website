@@ -4,37 +4,45 @@ title = "Communauté"
 
 Cette page tente d'expliquer comment la communauté Redox OS est organisée et vous aide à y naviguer.
 
+Nous suivons le [Code de conduite de Rust](https://www.rust-lang.org/policies/code-of-conduct) pour les règles dans tous les salons de chat/de la communauté.
 
-<a id="chat"></a>
 ## [Chat](https://matrix.to/#/#redox:matrix.org)
 
-Matrix est actuellement en cours d'évaluation pour être utilisé comme salon de discussion officiel de Redox OS.
+Matrix est la plateforme officielle pour communiquer avec l'équipe et la communautée de Redox OS
 
-<a id="chat"></a>
-## [Mattermost](https://chat.redox-os.org)
+- #redox:matrix.org
 
-Jusqu'à récemment, nous utilisions Mattermost comme serveur de discussion, que nous conservons actuellement à des fins d'archivage. Contactez-nous sur Redox OS/General si vous avez besoin d'accéder au serveur Mattermost.
+Matrix possède de multiples clients. [Element](https://element.io/) est le choix le plus courant.
 
 
-<a id="gitlab"></a>
 ## [GitLab](https://gitlab.redox-os.org/redox-os/redox)
 
 Un moyen de communication un peu plus formel avec les autres développeurs de Redox, mais un peu moins rapide et pratique que le chat. Soumettez une Issue lorsque vous rencontrez des problèmes de compilation, de tests ou si vous souhaitez simplement discuter d'un sujet en particulier, qu'il s'agisse de fonctionnalités, de style de code, d'incohérences de code, de modifications et de correctifs mineurs, etc.
 
-
-<a id="forum"></a>
-## [Forum](https://discourse.redox-os.org/)
-
-C'est la meilleure façon de discuter de sujets plus généraux qui ne concernent pas des choses spécifiques. Vous pouvez vous inscrire comme sur n'importe quel autre site Web.
-
-<a id="reddit"></a>
-## [Redox OS on Reddit](https://www.reddit.com/r/Redox/)
+## [Reddit](https://www.reddit.com/r/Redox/)
 
 Si vous voulez un aperçu rapide de ce qui se passe et en parler.
 
 [reddit.com/r/rust](https://www.reddit.com/r/rust) pour des nouvelles et des discussions sur Rust.
 
-<a id="mastodon"></a>
 ## [Mastodon](https://fosstodon.org/@redox)
 
-Nouvelles et actualités liées.
+Nouvelles et actualités liées à Redox OS.
+
+
+## [Mattermost](https://chat.redox-os.org)
+
+Jusqu'à récemment, nous utilisions Mattermost comme serveur de discussion, que nous conservons actuellement à des fins d'archivage. Contactez-nous sur Redox OS/General si vous avez besoin d'accéder au serveur Mattermost.
+
+
+## [Forum](https://discourse.redox-os.org/)
+
+Ceci est notre forum historique avec des questions anciennes/classiques, il est inactif et doit être utilisé à des fins historiques, si vous avez une question, envoyez-la sur le chat Matrix.
+
+## [Conférences](/talks/)
+
+Conférences de Redox réalisées à différents événements.
+
+### Note
+
+Développer la communauté est un élément important du succès de Redox. Si davantage de personnes connaissent Redox, davantage de contributeurs sont susceptibles d'intervenir et tout le monde peut bénéficier de leur expertise supplémentaire. Vous pouvez faire la différence en écrivant des articles, en discutant avec d'autres passionnés de système d'exploitation ou en recherchant des communautés qui souhaiteraient en savoir plus sur Redox.
