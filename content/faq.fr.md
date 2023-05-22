@@ -5,6 +5,7 @@ title = "FAQ"
 Cette page couvre les questions les plus courantes.
 
 - [Qu'est-ce que Redox?](#quest-ce-que-redox)
+- [Que veut dire Redox?](#que-veut-dire-redox)
 - [Quelles fonctionnalités a Redox?](#quelles-fonctionnalités-a-redox)
 - [Quelle est l'utilité de Redox?](#quelle-est-lutilité-de-redox)
 - [Que peut-on faire avec Redox?](#que-peut-on-faire-avec-redox)
@@ -26,6 +27,12 @@ Cette page couvre les questions les plus courantes.
 Redox est un système d'exploitation en micro noyau, il est complet, entièrement fonctionnel, a un usage général et est axé sur la sécurité, la liberté, la fiabilité, l'exactitude et le pragmatisme.
 
 Dans la mesure du possible, les composants du système sont écrits en Rust et exécutés dans l'espace utilisateur.
+
+## Que veut dire Redox?
+
+[Redox](https://en.wikipedia.org/wiki/Redox) est la réaction chimique (réduction-oxydation) qui crée la rouille, comme Redox est un système d'exploitation écrit en Rust (rouille en Anglais), cela a du sens.
+
+Cela sonne aussi comme Minix/Linux.
 
 ## Quelles fonctionnalités a Redox?
 
@@ -146,7 +153,7 @@ Certains logiciels importants pris en charge par Redox :
 - [Python](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/python)
 - [SDL](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/sdl2)
 
-Vous pouvez voir tous les composants/programmes portés sur Redox [ici](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes).
+Vous pouvez voir tous les composants/programmes portés sur Redox [ici](https://static.redox-os.org/pkg/x86_64-unknown-redox/).
 
 ## Quels appareils sont supportés par Redox?
 
@@ -242,18 +249,12 @@ Reportez-vous au livre Redox pour voir si le problème vient de votre configurat
 
 Vérifiez d'abord les problèmes de GitLab pour voir si votre problème est déjà connu.
 
+- [Guide de rapport de bogue du livre Redox](https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html)
 - [CONTRIBUER](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md)
-- [Guide de rapport de bogue de livre Redox](https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html)
 
 ## Comment contribuer à Redox?
 
-Vous pouvez contribuer à Redox de plusieurs manières, en voici quelques-unes :
-
-- [CONTRIBUER](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md)
-- [Guide de contribution du livre Redox](https://doc.redox-os.org/book/ch10-02-low-hanging-fruit.html)
-- [How to make pull requests properly](https://doc.redox-os.org/book/ch12-04-creating-proper-pull-requests.html)
-- [Documentation](/docs/)
-- [Salle de discussion du développement Redox](https://matrix.to/#/#redox-dev:matrix.org)
+Vous pouvez contribuer à Redox de plusieurs façons, vous pouvez les voir sur [CONTRIBUER](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md).
 
 ## J'ai un problème ou des questions pour l'équipe de Redox
 
