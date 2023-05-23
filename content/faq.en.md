@@ -13,6 +13,7 @@ This page covers the most asked questions.
 - [How Redox is inspired by other systems?](#how-redox-is-inspired-by-other-systems)
 - [What is a microkernel?](#what-is-a-microkernel)
 - [What programs can Redox run?](#what-programs-can-redox-run)
+- [How to install programs on Redox?](#how-to-install-programs-on-redox)
 - [Which devices does Redox support?](#which-devices-does-redox-support)
 - [Which virtual machines does Redox have integration with?](#which-virtual-machines-does-redox-have-integration-with)
 - [How do I build Redox?](#how-do-i-build-redox)
@@ -154,6 +155,12 @@ Some important software that Redox supports:
 - [SDL](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/sdl2)
 
 You can see all Redox components/ported programs [here](https://static.redox-os.org/pkg/x86_64-unknown-redox/).
+
+## How to install programs on Redox?
+
+Redox has a package manager similar to `apt` (Debian) and `pkg` (FreeBSD), you can see how to use it on this page:
+
+- [Redox package manager](https://doc.redox-os.org/book/ch02-08-pkg.html)
 
 ## Which devices does Redox support?
 
