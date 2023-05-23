@@ -8,7 +8,7 @@ We follow the [Rust Code Of Conduct](https://www.rust-lang.org/policies/code-of-
 
 ## [Chat](https://matrix.to/#/#redox:matrix.org)
 
-Matrix is the official way to talk with Redox OS team/community.
+Matrix is the official way to talk with Redox OS team/community (these rooms are English-only, we don't accept other languages because we don't understand them).
 
 - #redox:matrix.org
 

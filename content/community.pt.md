@@ -8,7 +8,7 @@ Nós seguidos o [Código de Conduta da Rust](https://www.rust-lang.org/policies/
 
 ## [Chat](https://matrix.to/#/#redox:matrix.org)
 
-Matrix é a forma de comunicação oficial com o time/comunidade do Redox OS.
+Matrix é a forma de comunicação oficial com o time/comunidade do Redox OS (aceitamos apenas o Inglês nestas salas, pois não entendemos outras linguagens).
 
 - #redox:matrix.org
 
