@@ -6,13 +6,15 @@ Essa página explica como a comunidade do Redox OS é organizada e como você po
 
 Nós seguidos o [Código de Conduta da Rust](https://www.rust-lang.org/policies/code-of-conduct) como regra em todos os nossos canais de comunidade/chats.
 
-## [Chat](https://matrix.to/#/#redox:matrix.org)
+## [Chat](https://matrix.to/#/#redox-join:matrix.org)
 
 Matrix é a forma de comunicação oficial com o time/comunidade do Redox OS (aceitamos apenas o Inglês nestas salas, pois não entendemos outras linguagens).
 
-- #redox:matrix.org
+- #redox-join:matrix.org
 
 A rede Matrix tem diferentes clientes, [Element](https://element.io/) é o mais utilizado.
+
+(Nós recomendamos que você saia da sala "Join Requests" depois de entrar no espaço do Redox)
 
 ## [GitLab](https://gitlab.redox-os.org/redox-os/redox)
 
