@@ -36,3 +36,18 @@ Jeremy created the Redox OS project in 2015. He has been involved with open sour
 <a href="/img/board/alberto-souza.jpg"><img width=256 height=256 src="/img/board/alberto-souza.jpg"/></a>
 
 Alberto has been an open-source activist and systems researcher since 2016. He has used dozens of Unix-like systems, from mainstream to underground, and has a passion for kernel models. He has been in love with BSDs due to their maturity and simplicity, and has been following Redox OS development over the years, feeling confident to start contributing in 2023. Since starting, he has made vast improvements to the Redox OS documentation and worked on porting numerous programs.
+
+<hr>
+
+### Discussion
+
+Feel free to discuss this on social media:
+
+- [Patreon](https://www.patreon.com/posts/84927623), help us by providing funding!
+- [Lemmy](https://lemmy.world/post/397986)
+- [Mastodon @redox](https://fosstodon.org/@redox/110584297927846238)
+- [Mastodon @soller](https://fosstodon.org/@soller/110584297023639320)
+- [Matrix](https://matrix.to/#/#redox-general:matrix.org), for new members go to the [join requests room](https://matrix.to/#/#redox-join:matrix.org)
+- [Reddit r/redox](https://www.reddit.com/r/Redox/comments/14fju3d/redox_os_elects_its_first_board_of_directors/)
+- [Twitter @redox_os](https://twitter.com/redox_os/status/1671629242197770240)
+- [Twitter @jeremy_soller](https://twitter.com/jeremy_soller/status/1671629284233060352)
