@@ -19,7 +19,7 @@ The Redox OS Board of Directors consists of:
 
 <a href="/img/board/ron-williams.jpg"><img width=256 height=256 src="/img/board/ron-williams.jpg"/></a>
 
-Ron has over 30 years in the software industry in technical, consulting and executive roles. He has consulted to Fortune 500 companies in designing and developing new products. As president and co-founder of Ensemble Systems, he grew the company to over 100 technical staff, with Ensemble twice being selected as one of the best places to work in British Columbia. After many years as a consultant and executive, he has rediscovered his love of coding by contributing to Redox OS.
+Ron has over 30 years experience in the software industry in technical, consulting and executive roles. He has consulted to Fortune 500 companies in designing and developing new products. As president and co-founder of Ensemble Systems, he grew the company to over 100 technical staff, with Ensemble twice being selected as one of the best places to work in British Columbia. After many years as a consultant and executive, he has rediscovered his love of coding by contributing to Redox OS.
 
 <hr>
 
