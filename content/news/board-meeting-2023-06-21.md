@@ -27,7 +27,7 @@ Ron has over 30 years in the software industry in technical, consulting and exec
 
 <a href="/img/board/jeremy-soller.jpg"><img width=256 height=256 src="/img/board/jeremy-soller.jpg"/></a>
 
-Jeremy created the Redox OS project in 2015. He has been involved with open source software development for over fifteen years, starting with hobby projects and soon moving into professional open source software development. He is currently employed as Principal Engineer at System76, where he manages a team of engineers building open source software, firmware, and hardware. His experience with low-level development has driven many successful projects at both Redox OS and System76.
+Jeremy created the Redox OS project in 2015, and is the Redox [BDFL](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life). He has been involved with open source software development for over fifteen years, starting with hobby projects and soon moving into professional open source software development. He is currently employed as Principal Engineer at System76, where he manages a team of engineers building open source software, firmware, and hardware. His experience with low-level development has driven many successful projects at both Redox OS and System76.
 
 <hr>
 
