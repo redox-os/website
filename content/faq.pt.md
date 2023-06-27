@@ -31,7 +31,7 @@ Onde for possível, os componentes do sistema serão escritos em Rust e executam
 
 ### Estado atual
 
-O Redox está em qualidade alpha/beta, pois implementamos funções e corrigimos bugs ao mesmo tempo.
+O Redox está em qualidade alpha/beta, pois implementamos novas funções enquanto corrigimos bugs.
 
 A versão 1.0 será lançada quando todas as APIs do sistema forem consideradas estáveis.
 
