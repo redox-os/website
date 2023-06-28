@@ -29,6 +29,12 @@ Redox is a microkernel-based operating system, a complete, fully-functioning, ge
 
 Wherever possible, the system components are written in Rust and run in user-space.
 
+### Current status
+
+Redox is a alpha/beta quality software, because we implement new features while fix the bugs.
+
+The version 1.0 will be released once all system APIs are considered stable.
+
 ## What does Redox mean?
 
 [Redox](https://en.wikipedia.org/wiki/Redox) is the chemical reaction (reduction–oxidation) that creates rust, as Redox is an operating system written in Rust, it makes sense.
