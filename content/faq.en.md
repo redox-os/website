@@ -192,49 +192,49 @@ Redox has some variants for each task, take a look on them below:
 
 CPU - any i686, x86_64 or ARM64 capable processor.
 
-Memory - 64MB of RAM
+Memory - 128MB of RAM
 
-Storage - 64MB of available space
+Storage - 128MB of available space
 
 - `desktop-minimal`
 
 CPU - any i686, x86_64 or ARM64 capable processor.
 
-Memory - 128MB of RAM
+Memory - 256MB of RAM
 
-Storage - 128MB of available space
+Storage - 256MB of available space
 
 - `server`
 
 CPU - any i686, x86_64 or ARM64 capable processor.
 
-Memory - 128MB of RAM
+Memory - 256MB of RAM
 
-Storage - 128MB of available space
+Storage - 256MB of available space
 
 - `desktop`
 
 CPU - any i686, x86_64 or ARM64 capable processor.
 
-Memory - 300MB of RAM
+Memory - 512MB of RAM
 
-Storage - 300MB of available space
+Storage - 512MB of available space
 
 - `dev`
+
+CPU - any i686, x86_64 or ARM64 capable processor.
+
+Memory - 4096MB of RAM
+
+Storage - 4096MB of available space
+
+- `demo`
 
 CPU - any i686, x86_64 or ARM64 capable processor.
 
 Memory - 2048MB of RAM
 
 Storage - 2048MB of available space
-
-- `demo`
-
-CPU - any i686, x86_64 or ARM64 capable processor.
-
-Memory - 1024MB of RAM
-
-Storage - 1024MB of available space
 
 ## Which devices does Redox support?
 
