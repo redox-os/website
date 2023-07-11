@@ -109,7 +109,7 @@ name = "Документация"
 url = "/docs/"
 [[languages.ru.menu.main]]
 weight = 2
-name = "Community"
+name = "Сообщество"
 url = "/community"
 [[languages.ru.menu.main]]
 weight = 3
