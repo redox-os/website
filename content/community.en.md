@@ -14,11 +14,17 @@ Matrix is the official way to talk with Redox OS team/community (these rooms are
 
 Matrix has several different clients. [Element](https://element.io/) is a commonly used choice.
 
+- Join this room and don't forget to request an invite to the Redox space.
+
 (We recommend that you leave the "Join Requests" room after your entry on Redox space)
 
 ## [GitLab](https://gitlab.redox-os.org/redox-os/redox)
 
 A bit more formal way of communication with fellow Redox devs, but a little less quick and convenient like the chat. Submit an issue when you run into problems compiling, testing, or just would like to discuss a certain topic, be it features, code style, code inconsistencies, minor changes and fixes, etc.
+
+## [Lemmy](https://lemmy.world/c/redox)
+
+Our alternative to Reddit, we post news and community threads.
 
 ## [Reddit](https://www.reddit.com/r/Redox/)
 
@@ -26,13 +32,13 @@ If you want a quick look at what's going on and talk about it.
 
 [reddit.com/r/rust](https://www.reddit.com/r/rust) for related Rust news and discussions.
 
-## [Mastodon](https://fosstodon.org/@redox)
+## [Fosstodon](https://fosstodon.org/@redox)
 
-News and related content.
+Our alternative to Twitter, we post news and community threads.
 
-## [Mattermost](https://chat.redox-os.org)
+## [Twitter](https://twitter.com/redox_os)
 
-Until recently, we have been using a Mattermost chat server, which we are currently maintaining for historical purposes. Contact us on Redox OS/General if you need access to the Mattermost server.
+News and community threads.
 
 ## [Forum](https://discourse.redox-os.org/)
 
@@ -42,6 +48,6 @@ This is our historical forum with old/classic questions, it's inactive and must 
 
 Redox talks given at various events and conferences.
 
-### Note
+## Note
 
 Community outreach is an important part of Redox's success. If more people know about Redox, then more contributors are likely to step in, and everyone can benefit from their added expertise. You can make a difference by writing articles, talking to fellow OS enthusiasts, or looking for communities that would be interested in knowing more about Redox.

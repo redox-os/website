@@ -62,9 +62,9 @@ O kernel é pequeno e muda muito pouco (correção de bugs), portanto você não
 
 ### Benefícios da Rust
 
-#### Sem necessidade para mitigações de exploit
+#### Sem necessidade para mitigações de exploit das linguagens C e C++
 
-O design em microkernel escrito em Rust protege contra as falhas de memória da C/C++, por isolar o sistema do kernel, a superfície de ataque é muito limitada.
+O design de um microkernel escrito em Rust protege contra as falhas de memória das linguagens C e C++, isolando o sistema do kernel a superfície de ataque é muito limitada.
 
 #### Sistema de arquivos inspirado no ZFS
 
@@ -80,14 +80,13 @@ O design seguro e veloz da linguagem Rust, combinado com a pequena quantidade de
 
 #### Drivers escritos em Rust
 
-Drivers escritos em Rust possuem incentivos para ter menos bugs e melhor segurança.
+Drivers escritos em Rust possuem incentivos para ter menos bugs e portanto melhor segurança.
 
 - [Dispositivos suportados atualmente](#quais-dispositivos-o-redox-suporta)
 
 #### Fácil de desenvolver e depurar
 
 A maioria dos componentes do sistema estão no espaço do usuário, simplificando a depuração.
-
 
 ## Qual o propósito do Redox?
 
