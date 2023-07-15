@@ -1,7 +1,7 @@
 +++
 title = "Community Announcements - Matrix, Fosstodon, Lemmy and YouTube"
 author = "Ribbon"
-date = "waiting"
+date = "2023-07-15"
 +++
 
 This post will cover the important changes for community on this year.
