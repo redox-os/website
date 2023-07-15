@@ -1,9 +1,9 @@
 <footer class="copyright">
     <p>
-        <a style="color: inherit; margin-right: 2em;" href="{{ .URL }}">{{ .Language.LanguageName }}</a>
+        <a style="color: inherit; margin-right: 2em;" href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
         {{ if .IsTranslated }}
           {{ range .Translations }}
-            <a style="color: inherit; margin-right: 2em;" href="{{ .URL }}">{{ .Language.LanguageName }}</a>
+            <a style="color: inherit; margin-right: 2em;" href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
           {{ end}}
         {{ end }}
     </p>
