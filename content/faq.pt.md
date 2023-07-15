@@ -14,6 +14,7 @@ Essa página cobre as perguntas mais comuns.
 - [O que é um microkernel?](#o-que-%C3%A9-um-microkernel)
 - [Quais programas o Redox executa?](#quais-programas-o-redox-executa)
 - [Como instalar programas no Redox?](#como-instalar-programas-no-redox)
+- [Quais são as variantes do Redox?](#quais-são-as-variantes-do-redox)
 - [Quais dispositivos o Redox suporta?](#quais-dispositivos-o-redox-suporta)
 - [Quais máquinas virtuais o Redox possui integração?](#quais-m%C3%A1quinas-virtuais-o-redox-possui-integra%C3%A7%C3%A3o)
 - [Como compilar o Redox?](#como-compilar-o-redox)
@@ -166,6 +167,22 @@ Você pode ver todos os componentes do Redox/programas portados [aqui](https://s
 O Redox tem um gerenciador de pacotes similar ao `apt` (Debian) e `pkg` (FreeBSD), você pode ler como utiliza-lo nesta página:
 
 - [Gerenciador de Pacotes do Redox](https://doc.redox-os.org/book/ch02-08-pkg.html)
+
+## Quais são as variantes do Redox?
+
+O Redox possuí variantes para cada tarefa, leia sobre elas abaixo:
+
+- `server-minimal` - A variante mais enxuta com um sistema básico, destinada a dispositivos embarcados, computadores muito antigos e programadores.
+
+- `desktop-minimal` - A variante mais enxuta com o ambiente de desktop Orbital incluído, destinado para dispositivos embarcados, computadores muito antigos e programadores.
+
+- `server` - A variante para servidores, com um sistema completo e ferramentas de rede, destinado para admnistradores de rede, dispositivos embarcados, computadores fracos e programadores.
+
+- `desktop` - A variante padrão com um sistema completo, o ambiente de desktop Orbital e ferramentas úteis, destinado para o uso diário, produtores, programadores e jogadores.
+
+- `dev` - A variante para desenvolvimento com um sistema completo e ferramentas de programação, destinado para programadores.
+
+- `demo` - A variante para demonstração com um sistema completo, ferramentas, reprodutores e jogos, destinado para testadores, jogadores e programadores.
 
 ## Quais dispositivos o Redox suporta?
 
