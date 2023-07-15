@@ -1,5 +1,5 @@
 +++
-title = "Community Announcements - Matrix, Fosstodon, Lemmy and YouTube"
+title = "Community Announcements - Matrix, Fosstodon and Lemmy"
 author = "Ribbon"
 date = "2023-07-15"
 +++
