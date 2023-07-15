@@ -1,6 +1,6 @@
 +++
 title = "Início"
-url = "/home"
+url = "home"
 +++
 <div class="row install-row">
   <div class="col-md-8">

@@ -1,6 +1,6 @@
 +++
 title = "Home"
-url = "/home"
+url = "home"
 +++
 <meta charset="utf-8">
 <div dir="rtl" lang="ar">

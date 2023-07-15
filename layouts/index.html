@@ -1,6 +1,6 @@
 {{ partial "head.html" . }}
 {{ partial "menu.html" . }}
 {{ range .Data.Pages }}
-{{if eq .Params.url "/home" }} {{.Content}} {{end}}
+{{if eq .Params.url "home" }} {{.Content}} {{end}}
 {{ end }}
 {{ partial "footer.html" . }}
