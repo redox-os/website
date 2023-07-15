@@ -33,6 +33,8 @@ Onde for possível, os componentes do sistema serão escritos em Rust e executam
 
 O Redox está em qualidade alpha/beta, pois implementamos novas funções enquanto corrigimos bugs.
 
+Portanto, ele não está pronto para uso diário, sinta-se livre para testar o sistema até sua maturidade e **não armazene arquivos sensíveis sem o devido backup.**
+
 A versão 1.0 será lançada quando todas as APIs do sistema forem consideradas estáveis.
 
 ## O que Redox significa?

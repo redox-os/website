@@ -33,6 +33,8 @@ Wherever possible, the system components are written in Rust and run in user-spa
 
 Redox is a alpha/beta quality software, because we implement new features while fix the bugs.
 
+Thus it's not ready for daily usage yet, feel free to test the system until its maturity and **don't store your sensitive data without a proper backup.**
+
 The version 1.0 will be released once all system APIs are considered stable.
 
 ## What does Redox mean?
