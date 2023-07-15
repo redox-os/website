@@ -14,6 +14,7 @@ Cette page couvre les questions les plus courantes.
 - [Qu'est-ce qu'un micro noyau?](#quest-ce-quun-micro-noyau)
 - [Quels programmes peuvent tourner sur Redox?](#quels-programmes-peuvent-tourner-sur-redox)
 - [Comment installer des programmes sur Redox?](#comment-installer-des-programmes-sur-redox)
+- [Quelles sont les variantes de Redox?](#quelles-sont-les-variantes-de-redox)
 - [Quels appareils sont supportés par Redox?](#quels-appareils-sont-supportés-par-redox)
 - [Avec quelles machines virtuelles Redox s'intègre-t-il?](#avec-quelles-machines-virtuelles-redox-sintègre-t-il)
 - [Comment compiler Redox?](#comment-compiler-redox)
@@ -28,6 +29,14 @@ Cette page couvre les questions les plus courantes.
 Redox est un système d'exploitation en micro noyau, il est complet, entièrement fonctionnel, a un usage général et est axé sur la sécurité, la liberté, la fiabilité, l'exactitude et le pragmatisme.
 
 Dans la mesure du possible, les composants du système sont écrits en Rust et exécutés dans l'espace utilisateur.
+
+### Statut actuel
+
+Redox est un logiciel de qualité alpha/bêta, car nous implémentons de nouvelles fonctionnalités tout en corrigeant les bugs.
+
+Ainsi, il n'est pas encore prêt pour une utilisation quotidienne, n'hésitez pas à tester le système jusqu'à sa maturité et **ne stockez pas vos données sensibles sans une sauvegarde appropriée.**
+
+La version 1.0 sera publiée une fois que toutes les API système seront considérées comme stables.
 
 ## Que veut dire Redox?
 
@@ -49,7 +58,7 @@ La plupart des composants système s'exécutent dans l'espace utilisateur sur un
 
 #### Conception sans redémarrage
 
-Le noyau change très peu (correction de bugs), vous n'aurez donc pas besoin de redémarrer votre système très souvent pour mettre à jour le système.
+Un micro-noyau mature change très peu (correction de bugs), vous n'aurez donc pas besoin de redémarrer votre système très souvent pour mettre à jour le système.
 
 Étant donné que la plupart des composants du système se trouvent dans l'espace utilisateur, ils peuvent être remplacés à la volée (ce qui réduit les temps d'arrêt pour les administrateurs de serveur).
 
@@ -59,7 +68,7 @@ La plupart des composants du système s'exécutent dans l'espace utilisateur, ce
 
 ### Les avantages de Rust
 
-#### Pas besoin de mesures d'atténuation des exploits
+#### Pas besoin de mesures d'atténuation des exploits de C/C++
 
 La conception du micro-noyau écrite en Rust protège contre les défauts de mémoire C/C++.
 
@@ -67,13 +76,13 @@ En isolant les composants du système du noyau, [la surface d'attaque](https://e
 
 #### Sécurité et fiabilité améliorées sans impact significatif sur les performances
 
-Comme le noyau est petit, il utilise moins de mémoire pour faire son travail et le code limité du noyau l'aide à rester proche de l'objectif ([KISS](https://en.wikipedia.org/wiki/KISS_principle) sans bugs).
+Comme le noyau est petit, il utilise moins de mémoire pour faire son travail et la quantité de code limité du noyau l'aide à rester proche de l'objectif ([KISS](https://en.wikipedia.org/wiki/KISS_principle) sans bugs).
 
-La conception de langage sûre et rapide de Rust, combinée à la petite taille de la base de code du noyau, contribue à garantir un noyau fiable, performant et facile à entretenir.
+La conception de langage sûre et rapide de Rust, combinée à la petite taille du noyau, contribue à garantir un noyau fiable, performant et facile à entretenir.
 
 #### Pilotes écrits en Rust
 
-Les pilotes écrits en Rust sont susceptibles d'avoir moins de bogues et une meilleure sécurité.
+Les pilotes écrits en Rust sont susceptibles d'avoir moins de bogues et donc une meilleure sécurité.
 
 - [Appareils actuellement pris en charge](#quels-appareils-sont-supportés-par-redox)
 
@@ -161,6 +170,22 @@ Vous pouvez voir tous les composants/programmes portés sur Redox [ici](https://
 Redox a un gestionnaire de paquets similaire à `apt` (Debian) et `pkg` (FreeBSD), vous pouvez voir comment l'utiliser sur cette page :
 
 - [Gestionnaire de paquets de Redox](https://doc.redox-os.org/book/ch02-08-pkg.html)
+
+## Quelles sont les variantes de Redox?
+
+Redox a quelques variantes pour chaque tâche, jetez-y un œil ci-dessous :
+
+- `server-minimal` - La variante la plus minimale avec un système de base, destinée aux appareils embarqués, aux ordinateurs très anciens et aux développeurs.
+
+- `desktop-minimal` - La variante la plus minimale avec l'environnement de bureau Orbital inclus, destinée aux appareils embarqués, aux ordinateurs très anciens et aux développeurs.
+
+- `server` - La variante de serveur avec un système complet et des outils réseau, destinée aux administrateurs de serveur, aux appareils embarqués, aux ordinateurs bas de gamme et aux développeurs.
+
+- `desktop` - La variante standard avec un système complet, un environnement de bureau Orbital et des outils utiles, destinés à une utilisation quotidienne, aux producteurs, aux développeurs et aux joueurs.
+
+- `dev` - La variante de développement avec un système complet et des outils de développement, destinée aux développeurs.
+
+- `demo` - La variante de démonstration avec un système complet, des outils, des joueurs et des jeux, destinée aux testeurs, joueurs et développeurs.
 
 ## Quels appareils sont supportés par Redox?
 

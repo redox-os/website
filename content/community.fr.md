@@ -14,11 +14,17 @@ Matrix est la plateforme officielle pour communiquer avec l'équipe et la commun
 
 Matrix possède de multiples clients. [Element](https://element.io/) est le choix le plus courant.
 
-(Nous vous recommandons de quitter la salle "Join Requests" après votre entrée sur le salon Redox)
+- Rejoignez ce salon et n'oubliez pas de demander une invitation à l'espace Redox.
+
+(Nous vous recommandons de quitter le salon "Join Requests" après votre entrée sur l'espace Redox)
 
 ## [GitLab](https://gitlab.redox-os.org/redox-os/redox)
 
 Un moyen de communication un peu plus formel avec les autres développeurs de Redox, mais un peu moins rapide et pratique que le chat. Soumettez une Issue lorsque vous rencontrez des problèmes de compilation, de tests ou si vous souhaitez simplement discuter d'un sujet en particulier, qu'il s'agisse de fonctionnalités, de style de code, d'incohérences de code, de modifications et de correctifs mineurs, etc.
+
+## [Lemmy](https://lemmy.world/c/redox)
+
+Notre alternative à Reddit, nous publions des actualités et des fils de discussion communautaires.
 
 ## [Reddit](https://www.reddit.com/r/Redox/)
 
@@ -26,15 +32,14 @@ Si vous voulez un aperçu rapide de ce qui se passe et en parler.
 
 [reddit.com/r/rust](https://www.reddit.com/r/rust) pour des nouvelles et des discussions sur Rust.
 
-## [Mastodon](https://fosstodon.org/@redox)
+## [Fosstodon](https://fosstodon.org/@redox)
 
-Nouvelles et actualités liées à Redox OS.
+Notre alternative à Twitter, nous publions des nouvelles et des fils de discussion communautaires.
 
 
-## [Mattermost](https://chat.redox-os.org)
+## [Twitter](https://twitter.com/redox_os)
 
-Jusqu'à récemment, nous utilisions Mattermost comme serveur de discussion, que nous conservons actuellement à des fins d'archivage. Contactez-nous sur Redox OS/General si vous avez besoin d'accéder au serveur Mattermost.
-
+Nouvelles et fils de la communauté.
 
 ## [Forum](https://discourse.redox-os.org/)
 
@@ -44,6 +49,6 @@ Ceci est notre forum historique avec des questions anciennes/classiques, il est 
 
 Conférences de Redox réalisées à différents événements.
 
-### Note
+## Note
 
 Développer la communauté est un élément important du succès de Redox. Si davantage de personnes connaissent Redox, davantage de contributeurs sont susceptibles d'intervenir et tout le monde peut bénéficier de leur expertise supplémentaire. Vous pouvez faire la différence en écrivant des articles, en discutant avec d'autres passionnés de système d'exploitation ou en recherchant des communautés qui souhaiteraient en savoir plus sur Redox.
