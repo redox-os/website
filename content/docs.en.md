@@ -14,6 +14,8 @@ We highly recommend that you start with the [Book](https://doc.redox-os.org/book
 
 - [libstd](https://doc.rust-lang.org/stable/std/) - Documentation for the Rust standard library.
 
+- [Drivers](https://gitlab.redox-os.org/redox-os/drivers/-/blob/master/README.md) - High-level documentation of the drivers.
+
 - [RFCs](https://gitlab.redox-os.org/redox-os/rfcs) - Request for Changes to Redox.
 
 - [Ion Manual](https://doc.redox-os.org/ion-manual/) - Documentation for the Ion shell.

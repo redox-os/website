@@ -14,6 +14,8 @@ Matrix é a forma de comunicação oficial com o time/comunidade do Redox OS (ac
 
 A rede Matrix tem diferentes clientes, [Element](https://element.io/) é o mais utilizado.
 
+- Entre na sala e não esqueça de solicitar um convite para o espaço do Redox.
+
 (Nós recomendamos que você saia da sala "Join Requests" depois de entrar no espaço do Redox)
 
 ## [GitLab](https://gitlab.redox-os.org/redox-os/redox)
@@ -22,25 +24,26 @@ Uma forma mais formal de comunicação com os desenvolvedores do Redox, porém m
 
 Envie uma Issue se você tiver problemas compilando/testando ou apenas queira discutir algum assunto, seja funções, estilo de código, inconsistências de código, pequenas mudanças ou correções.
 
+## [Lemmy](https://lemmy.world/c/redox)
+
+Nossa alternativa ao Reddit, postamos notícias e tópicos da comunidade.
+
 ## [Reddit](https://www.reddit.com/r/Redox/)
 
 Caso queira ver as novidades e discutir sobre.
 
 [reddit.com/r/rust](https://www.reddit.com/r/rust) - Para notícias relacionadas a Rust e discussões.
 
-## [Mastodon](https://fosstodon.org/@redox)
+## [Fosstodon](https://fosstodon.org/@redox)
 
-Notícias e conteúdo relacionado.
+Nossa alternativa ao Twitter, postamos notícias e tópicos da comunidade.
 
-## [Mattermost](https://chat.redox-os.org)
+## [Twitter](https://twitter.com/redox_os)
 
-Até recentemente, estavamos utilizando o servidor de chat Mattermost, o qual nós estamos hospedando para consulta histórica.
-
-Nos chame em "Redox OS/General" se você precisar acessar o servidor Mattermost.
+Notícias e tópicos da comunidade.
 
 ## [Fórum](https://discourse.redox-os.org/)
 
-This is our historical forum with old/classic questions, it's inactive and must be used for historical purposes, if you have a question, send on Matrix.
 Nosso fórum histórico com perguntas clássicas/antigas, está inátivo e deve ser usado para consulta histórica.
 
 Se você tem uma pergunta, faça no chat Matrix.

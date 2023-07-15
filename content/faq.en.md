@@ -14,6 +14,7 @@ This page covers the most asked questions.
 - [What is a microkernel?](#what-is-a-microkernel)
 - [What programs can Redox run?](#what-programs-can-redox-run)
 - [How to install programs on Redox?](#how-to-install-programs-on-redox)
+- [Which are the Redox variants?](#which-are-the-redox-variants)
 - [Which devices does Redox support?](#which-devices-does-redox-support)
 - [Which virtual machines does Redox have integration with?](#which-virtual-machines-does-redox-have-integration-with)
 - [How do I build Redox?](#how-do-i-build-redox)
@@ -32,6 +33,8 @@ Wherever possible, the system components are written in Rust and run in user-spa
 ### Current status
 
 Redox is a alpha/beta quality software, because we implement new features while fix the bugs.
+
+Thus it's not ready for daily usage yet, feel free to test the system until its maturity and **don't store your sensitive data without a proper backup.**
 
 The version 1.0 will be released once all system APIs are considered stable.
 
@@ -55,17 +58,17 @@ Most system components run in user-space on a microkernel system, a bug in a non
 
 #### No-reboot design
 
-The kernel changes very little (bug fixing), so you won't need to restart your system very often to update the system.
+A mature microkernel changes very little (bug fixing), so you won't need to restart your system very often to update the system.
 
-Since most of the system components are in user-space, they can be replaced on-the-fly (reducing downtime for server administrators).
+Since most of the system components are in userspace, they can be replaced on-the-fly (reducing downtime for server administrators).
 
 #### Easy to develop and debug
 
-Most of the system components run in user-space, simplifying testing/debugging.
+Most of the system components run in userspace, simplifying testing/debugging.
 
 ### Rust benefits
 
-#### No need for exploit mitigations
+#### No need for C/C++ exploit mitigations
 
 The microkernel design written in Rust protects against C/C++ memory defects.
 
@@ -73,13 +76,13 @@ By isolating the system components from the kernel, the [attack surface](https:/
 
 #### Improved security and reliability without significant performance impact
 
-As the kernel is small, it uses less memory to do its work and the limited kernel code helps keep it close to bug-free status ([KISS](https://en.wikipedia.org/wiki/KISS_principle) goal).
+As the kernel is small, it uses less memory to do its work and the limited kernel code size helps to keep it close to bug-free status ([KISS](https://en.wikipedia.org/wiki/KISS_principle) goal).
 
-Rust's safe and fast language design, combined with the small size of the kernel code base, helps ensure a reliable, performant and easy to maintain core.
+Rust's safe and fast language design, combined with the small kernel code size, helps ensure a reliable, performant and easy to maintain core.
 
 #### Rust-written drivers
 
-Drivers written in Rust are likely to have fewer bugs and better security.
+Drivers written in Rust are likely to have fewer bugs and therefore are more secure.
 
 - [Currently supported devices](#which-devices-does-redox-support)
 
@@ -167,6 +170,22 @@ You can see all Redox components/ported programs [here](https://static.redox-os.
 Redox has a package manager similar to `apt` (Debian) and `pkg` (FreeBSD), you can see how to use it on this page:
 
 - [Redox package manager](https://doc.redox-os.org/book/ch02-08-pkg.html)
+
+## Which are  the Redox variants?
+
+Redox has some variants for each task, take a look on them below:
+
+- `server-minimal` - The most minimal variant with a basic system, aimed for embedded devices, very old computers and developers.
+
+- `desktop-minimal` - The most minimal variant with the Orbital desktop environment included, aimed for embedded devices, very old computers and developers.
+
+- `server` - The server variant with a complete system and network tools, aimed for server administrators, embedded devices, low-end computers and developers.
+
+- `desktop` - The standard variant with a complete system, Orbital desktop environment and useful tools, aimed for daily usage, producers, developers and gamers.
+
+- `dev` - The development variant with a complete system and development tools, aimed for developers.
+
+- `demo` - The demo variant with a complete system, tools, players and games, aimed for testers, gamers and developers.
 
 ## Which devices does Redox support?
 
