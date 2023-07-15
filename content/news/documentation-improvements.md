@@ -49,7 +49,7 @@ A non-exaustive list of my improvements:
     [link]: link here
     ```
 
-    Global hyperlinks are sensible to typos and more time consuming to organize, thus more error-prone.
+    Global hyperlinks are sensitive to typos and more time consuming to organize, thus more error-prone.
 
     - Local hyperlink example
 
