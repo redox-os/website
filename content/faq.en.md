@@ -14,6 +14,7 @@ This page covers the most asked questions.
 - [What is a microkernel?](#what-is-a-microkernel)
 - [What programs can Redox run?](#what-programs-can-redox-run)
 - [How to install programs on Redox?](#how-to-install-programs-on-redox)
+- [Which are the Redox variants?](#which-are-the-redox-variants)
 - [Which devices does Redox support?](#which-devices-does-redox-support)
 - [Which virtual machines does Redox have integration with?](#which-virtual-machines-does-redox-have-integration-with)
 - [How do I build Redox?](#how-do-i-build-redox)
@@ -169,6 +170,22 @@ You can see all Redox components/ported programs [here](https://static.redox-os.
 Redox has a package manager similar to `apt` (Debian) and `pkg` (FreeBSD), you can see how to use it on this page:
 
 - [Redox package manager](https://doc.redox-os.org/book/ch02-08-pkg.html)
+
+## Which are  the Redox variants?
+
+Redox has some variants for each task, take a look on them below:
+
+- `server-minimal` - The most minimal variant with a basic system, aimed for embedded devices, very old computers and developers.
+
+- `desktop-minimal` - The most minimal variant with the Orbital desktop environment included, aimed for embedded devices, very old computers and developers.
+
+- `server` - The server variant with a complete system and network tools, aimed for server administrators, embedded devices, low-end computers and developers.
+
+- `desktop` - The standard variant with a complete system, Orbital desktop environment and useful tools, aimed for daily usage, producers, developers and gamers.
+
+- `dev` - The development variant with a complete system and development tools, aimed for developers.
+
+- `demo` - The demo variant with a complete system, tools, players and games, aimed for testers, gamers and developers.
 
 ## Which devices does Redox support?
 
