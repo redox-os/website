@@ -14,6 +14,7 @@ Essa página cobre as perguntas mais comuns.
 - [O que é um microkernel?](#o-que-%C3%A9-um-microkernel)
 - [Quais programas o Redox executa?](#quais-programas-o-redox-executa)
 - [Como instalar programas no Redox?](#como-instalar-programas-no-redox)
+- [Quais são os requisitos de sistema do Redox?](#quais-são-os-requisitos-de-sistema-do-redox)
 - [Quais dispositivos o Redox suporta?](#quais-dispositivos-o-redox-suporta)
 - [Quais máquinas virtuais o Redox possui integração?](#quais-m%C3%A1quinas-virtuais-o-redox-possui-integra%C3%A7%C3%A3o)
 - [Como compilar o Redox?](#como-compilar-o-redox)
@@ -166,6 +167,56 @@ Você pode ver todos os componentes do Redox/programas portados [aqui](https://s
 O Redox tem um gerenciador de pacotes similar ao `apt` (Debian) e `pkg` (FreeBSD), você pode ler como utiliza-lo nesta página:
 
 - [Gerenciador de Pacotes do Redox](https://doc.redox-os.org/book/ch02-08-pkg.html)
+
+## Quais são os requisitos de sistema do Redox?
+
+- `server-minimal`
+
+CPU - Qualquer processador i686, x86_64 ou ARM64.
+
+Memória - 64MB de RAM
+
+Armazenamento - 64MB de espaço disponível
+
+- `desktop-minimal`
+
+CPU - Qualquer processador i686, x86_64 ou ARM64.
+
+Memória - 128MB de RAM
+
+Armazenamento - 128MB of espaço disponível
+
+- `server`
+
+CPU - Qualquer processador i686, x86_64 ou ARM64.
+
+Memória - 128MB de RAM
+
+Armazenamento - 128MB de espaço disponível
+
+- `desktop`
+
+CPU - Qualquer processador i686, x86_64 ou ARM64.
+
+Memória - 300MB de RAM
+
+Armazenamento - 300MB de espaço disponível
+
+- `dev`
+
+CPU - Qualquer processador i686, x86_64 ou ARM64.
+
+Memória - 2048MB de RAM
+
+Armazenamento - 2048MB de espaço disponível
+
+- `demo`
+
+CPU - Qualquer processador i686, x86_64 ou ARM64.
+
+Memória - 1024MB de RAM
+
+Armazenamento - 1024MB de espaço disponível
 
 ## Quais dispositivos o Redox suporta?
 
