@@ -58,17 +58,17 @@ Most system components run in user-space on a microkernel system, a bug in a non
 
 #### No-reboot design
 
-The kernel changes very little (bug fixing), so you won't need to restart your system very often to update the system.
+A mature microkernel changes very little (bug fixing), so you won't need to restart your system very often to update the system.
 
-Since most of the system components are in user-space, they can be replaced on-the-fly (reducing downtime for server administrators).
+Since most of the system components are in userspace, they can be replaced on-the-fly (reducing downtime for server administrators).
 
 #### Easy to develop and debug
 
-Most of the system components run in user-space, simplifying testing/debugging.
+Most of the system components run in userspace, simplifying testing/debugging.
 
 ### Rust benefits
 
-#### No need for exploit mitigations
+#### No need for C/C++ exploit mitigations
 
 The microkernel design written in Rust protects against C/C++ memory defects.
 
@@ -76,13 +76,13 @@ By isolating the system components from the kernel, the [attack surface](https:/
 
 #### Improved security and reliability without significant performance impact
 
-As the kernel is small, it uses less memory to do its work and the limited kernel code helps keep it close to bug-free status ([KISS](https://en.wikipedia.org/wiki/KISS_principle) goal).
+As the kernel is small, it uses less memory to do its work and the limited kernel code size helps to keep it close to bug-free status ([KISS](https://en.wikipedia.org/wiki/KISS_principle) goal).
 
-Rust's safe and fast language design, combined with the small size of the kernel code base, helps ensure a reliable, performant and easy to maintain core.
+Rust's safe and fast language design, combined with the small kernel code size, helps ensure a reliable, performant and easy to maintain core.
 
 #### Rust-written drivers
 
-Drivers written in Rust are likely to have fewer bugs and better security.
+Drivers written in Rust are likely to have fewer bugs and therefore are more secure.
 
 - [Currently supported devices](#which-devices-does-redox-support)
 
