@@ -107,7 +107,7 @@ Thank you for reading. I shall be coming back in a few days with a much more _te
 
 I'd also like to thank Jeremy and Ribbon (from the Matrix chat) for engaging with me on these topics, providing ideas, suggestions and support, and Jeremy for giving me the opportunity to be an RSoC student. 
 
-Redox OS Summer of Code is funded by monetary contributions from the community. A big thank you to all of our contributors. You can help us through [donations](https://redox-os.org/donate/).
+Redox OS Summer of Code is funded by monetary contributions from the community. A big thank you to all of our contributors. You can help us through [donations](/donate/).
 
 Thank you. Bye! 💕💕💕
 
@@ -126,18 +126,7 @@ Feel free to discuss this post on social media, and follow Redox OS to keep up w
 - [Reddit]()  
 - [Twitter]()  
 
-<br/>
-
-### Connect with or follow Redox OS
-
-- Patreon : [redox_os](https://www.patreon.com/redox_os), help us by funding us!  
-- Chat on [Matrix](https://matrix.org/) using clients like [Element](https://element.io/) - follow the instructions [here](https://doc.redox-os.org/book/ch13-01-chat.html)  
-- [Redox OS - GitLab](https://gitlab.redox-os.org/)  
-- GitHub (mirror of GitLab) : [redox-os](https://github.com/redox-os/)  
-- Twitter : [redox_os](https://twitter.com/redox_os/)  
-- Mastodon (Fediverse alternative to Twitter) : [@redox@fosstodon.org](https://fosstodon.org/@redox/)  
-- Reddit : [r/redox](https://www.reddit.com/r/Redox)  
-- Lemmy (Fediverse alternative to Reddit) : [!redox@lemmy.world](https://lemmy.world/c/redox)  
+You can follow Redox OS on various social media. Refer the [Community](/community/) page.
 
 <br/>
 
