@@ -10,12 +10,6 @@ I'm back this year as part of **RSoC (Redox Summer of Code) 2023** to share with
 
 Feel free to discuss this post on social media. (links are in the Epilogue)
 
-<br/>
-
-I would also like to take this opportunity to wish all the people of this world a Happy <font color="#fe0000">P</font><font color="#fe8d00">R</font><font color="#ffee00">I</font><font color="#018113">D</font><font color="#014cff">E</font> 🏳‍🌈 (I know I'm a month late 😅).  
-Pride is a celebration of who we are, who we love, and the history of our struggle for acceptance. To all the LGBTQ+ people around the world who face many challenges everyday, I hope that one day, our fight for love and peace wins over all the hatred.  
-As a queer person myself, I have found the Redox OS ⚛ community and the Rust programming language 🦀 community to be safe spaces that are really inclusive and welcoming, where I can just be myself; and that just feels so good 🥰. Thank you all!
-
 ## The idea
 
 The availability of support for various apps and drivers (for various hardware and software) is crucial for the general adoption of any *general purpose operating system* like Redox OS. Some of us developers are working on improving the *core* of Redox OS (like the Kernel), which should create a solid base on which high quality native drivers and apps can be created with ease. Some others are working on porting (and adapting) various open source drivers and apps (written for other OSes) such that they can work with Redox OS. This work is super important and helps Redox OS progress forward.
