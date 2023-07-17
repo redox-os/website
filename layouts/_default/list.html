@@ -5,7 +5,7 @@
   <ul class="laundry-list">
     {{ range .Data.Pages }}
     <li>
-      <a href="{{ .URL }}">{{ .Title }}</a>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       <div class="meta">By {{ .Params.author }} on <time datetime="{{ .Date }}" class="date">{{ .Date.Format "Monday, January 2, 2006" }}</time></div>
     </li>
     {{ end }}
