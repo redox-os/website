@@ -117,14 +117,10 @@ Thank you. Bye! 💕💕💕
 
 Feel free to discuss this post on social media, and follow Redox OS to keep up with the updates!
 
-**TODO: links to posts need to be added**
-
-- [Patreon](), help us by providing funding!  
+- [Patreon](https://www.patreon.com/posts/86227908), help us by providing funding!  
 - Group chat on Matrix [@redox-general:matrix.org](https://matrix.to/#/#redox-general:matrix.org). For new members, follow the instructions [here](https://doc.redox-os.org/book/ch13-01-chat.html)  
-- [Lemmy (Fediverse alternative to Reddit)]()  
-- [Mastodon (Fediverse alternative to Twitter)]()  
-- [Reddit]()  
-- [Twitter]()  
+- [Mastodon (Fediverse alternative to Twitter)](https://fosstodon.org/@redox/110729753502197205)  
+- [Twitter](https://twitter.com/redox_os/status/1680938420326260736)  
 
 You can follow Redox OS on various social media. Refer the [Community](/community/) page.
 
