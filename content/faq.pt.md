@@ -156,8 +156,7 @@ Softwares importantes que o Redox suporta:
 - [LLVM](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/llvm)
 - [Mesa3D](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/mesa)
 - [OpenSSL](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/openssl)
-- [Python](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/python)
-- [SDL](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/sdl2)
+- [SDL2](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/sdl2)
 
 Você pode ver todos os componentes do Redox/programas portados [aqui](https://static.redox-os.org/pkg/x86_64-unknown-redox/)
 
