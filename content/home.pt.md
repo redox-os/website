@@ -18,7 +18,7 @@ url = "home"
 <div class="row features">
   <div class="col-md-6">
     <ul class="laundry-list" style="margin-bottom: 0px;">
-      <li>Inspirado pelo Plan 9, Minix, BSD e Linux</li>
+      <li>Inspirado pelo Plan 9, Minix, seL4, BSD e Linux</li>
       <li>Implementado em Rust</li>
       <li>Design de Microkernel</li>
       <li>Inclui uma GUI opcional - Orbital</li>
@@ -30,7 +30,8 @@ url = "home"
       <li>Licença MIT</li>
       <li>Os drivers são executados no espaço do usuário</li>
       <li>Inclui os comandos Unix mais comuns</li>
-      <li>Nova biblioteca para portar programas em C (relibc)</li>
+      <li>Compatibilidade parcial com a POSIX</li>
+      <li>Biblioteca C customizada e escrita em Rust (relibc)</li>
       <li>Veja <a href="/pt/screens/">Redox em Ação</a></li>
     </ul>
   </div>
