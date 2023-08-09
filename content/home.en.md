@@ -18,7 +18,7 @@ url = "home"
 <div class="row features">
   <div class="col-md-6">
     <ul class="laundry-list" style="margin-bottom: 0px;">
-      <li>Inspired by Plan 9, Minix, BSD and Linux</li>
+      <li>Inspired by Plan 9, Minix, seL4, BSD and Linux</li>
       <li>Implemented in Rust</li>
       <li>Microkernel Design</li>
       <li>Includes optional GUI - Orbital</li>
@@ -30,7 +30,8 @@ url = "home"
       <li>MIT Licensed</li>
       <li>Drivers run in Userspace</li>
       <li>Includes common Unix commands</li>
-      <li>Custom libc written in Rust (relibc)</li>
+      <li>Partial POSIX compatibility</li>
+      <li>Custom C library written in Rust (relibc)</li>
       <li>See <a href="/screens/">Redox in Action</a></li>
     </ul>
   </div>
