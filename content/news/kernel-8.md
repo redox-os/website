@@ -46,12 +46,13 @@ However, there are multiple downsides with this approach. First, checking page
 tables can be relatively expensive, not necessarily because tree walking is
 slow, but also since the page table needs to be locked. Secondly, one of the
 requirements for creating both `&[u8]`s and `&mut [u8]`s, is that the memory is
-not allowed to be mutated, which is not necessarily true for multithreaded
-programs, and very impractical to enforce. Worse, when such slices are
-converted to strings, they are utf8-checked once, which is valid under the
-assumption that immutable slices cannot be mutated, but if another userspace
-thread would "de-utf8-ize" the string between the time-of-check and time-of-use,
-kernel UB was theoretically possible.
+not allowed to be mutated (except when using the `&mut [u8]` itself), which is
+not necessarily true for multithreaded programs, and very impractical to
+enforce. Worse, when such slices are converted to strings, they are
+utf8-checked once, which is valid under the assumption that immutable slices
+cannot be mutated, but if another userspace thread would "de-utf8-ize" the
+string between the time-of-check and time-of-use, kernel UB was theoretically
+possible.
 
 The current post-usercopy kernel, instead uses a different API (again pseudocode):
 
