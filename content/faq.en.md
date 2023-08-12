@@ -2,7 +2,7 @@
 title = "FAQ"
 +++
 
-This page covers the most asked questions.
+This page covers questions/answers for newcomers and end-users.
 
 - [What is Redox?](#what-is-redox)
 - [What does Redox mean?](#what-does-redox-mean)
@@ -102,7 +102,7 @@ Redox aims to be an alternative to existing Unix systems (Linux/BSD), with the a
 
 ## What I can do with Redox?
 
-As a general-purpose operating system, you will be able to do almost anything on most devices with high performance/security.
+As a general-purpose operating system, you will be able to do almost any task on most devices with high performance/security.
 
 Redox is still under development, so our list of supported applications is currently limited, but growing.
 
