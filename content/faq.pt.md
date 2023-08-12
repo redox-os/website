@@ -2,7 +2,7 @@
 title = "FAQ"
 +++
 
-Essa página cobre as perguntas mais comuns.
+Essa página contém perguntas/respostas para iniciantes e usuários comuns.
 
 - [O que é o Redox?](#o-que-%C3%A9-o-redox)
 - [O que Redox significa?](#o-que-redox-significa)
@@ -98,7 +98,7 @@ O Redox pretende ser uma alternativa aos sistemas Unix (Linux/BSD) existentes ta
 
 ## O que posso fazer com o Redox?
 
-Como um sistema de propósito geral, você é capaz de fazer quase tudo na maioria dos dispositivos com alto desempenho/segurança.
+Como um sistema de propósito geral, você é capaz de realizar praticamente qualquer tarefa na maioria dos dispositivos com alto desempenho/segurança.
 
 O Redox está em desenvolvimento, portanto nossa lista de aplicações suportada é limitada atualmente, mas crescente.
 
