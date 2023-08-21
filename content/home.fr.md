@@ -21,7 +21,7 @@ url = "home"
 <div class="row features">
   <div class="col-md-6">
     <ul class="laundry-list" style="margin-bottom: 0px;">
-      <li>Inspiré de Plan 9, Minix, BSD et Linux</li>
+      <li>Inspiré de Plan 9, Minix, seL4, BSD et Linux</li>
       <li>Écrit en Rust</li>
       <li>Architecture en micro-noyau</li>
       <li>Interface graphique optionnelle incluse - Orbital</li>

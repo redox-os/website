@@ -2,7 +2,7 @@
 title = "FAQ"
 +++
 
-Cette page couvre les questions les plus courantes.
+Cette page couvre les questions/réponses pour les nouveaux arrivants et les utilisateurs.
 
 - [Qu'est-ce que Redox?](#quest-ce-que-redox)
 - [Que veut dire Redox?](#que-veut-dire-redox)
@@ -11,11 +11,17 @@ Cette page couvre les questions les plus courantes.
 - [Que peut-on faire avec Redox?](#que-peut-on-faire-avec-redox)
 - [Qu'est-ce qu'un système d'exploitation de type Unix?](#quest-ce-quun-système-dexploitation-de-type-unix)
 - [Comment Redox s'inspire d'autres systèmes d'exploitation?](#comment-redox-sinspire-dautres-systèmes-dexploitation)
+    - [Plan 9](#plan-9)
+    - [Minix](#minix)
+    - [seL4](#sel4)
+    - [BSD](#bsd)
+    - [Linux](#linux)
 - [Qu'est-ce qu'un micro noyau?](#quest-ce-quun-micro-noyau)
 - [Quels programmes peuvent tourner sur Redox?](#quels-programmes-peuvent-tourner-sur-redox)
 - [Comment installer des programmes sur Redox?](#comment-installer-des-programmes-sur-redox)
 - [Quelles sont les variantes de Redox?](#quelles-sont-les-variantes-de-redox)
 - [Quels appareils sont supportés par Redox?](#quels-appareils-sont-supportés-par-redox)
+- [J'ai un ordinateur bas de gamme, est-ce que Redox fonctionnerait dessus ?](#jai-un-ordinateur-bas-de-gamme-est-ce-que-redox-fonctionnerait-dessus)
 - [Avec quelles machines virtuelles Redox s'intègre-t-il?](#avec-quelles-machines-virtuelles-redox-sintègre-t-il)
 - [Comment compiler Redox?](#comment-compiler-redox)
  - [Comment lancer QEMU sans interface graphique?](#comment-lancer-qemu-sans-interface-graphique)
@@ -118,22 +124,36 @@ Tout système d'exploitation compatible avec [la spécification unique Unix](htt
 
 ## Comment Redox s'inspire d'autres systèmes d'exploitation?
 
-[Plan 9](http://9p.io/plan9/index.html) - Ce système d'exploitation Bell Labs amène le concept de "tout est un fichier" au plus haut niveau, en effectuant toutes les communications système à partir du système de fichiers.
+### [Plan 9](http://9p.io/plan9/index.html)
+
+Ce système d'exploitation Bell Labs amène le concept de "tout est un fichier" au plus haut niveau, en effectuant toutes les communications système à partir du système de fichiers.
 
 - [Explication de Drew DeVault de Plan 9](https://drewdevault.com/2022/11/12/In-praise-of-Plan-9.html)
 - [L'influence de Plan 9's sur Redox](https://doc.redox-os.org/book/ch05-00-urls-schemes-resources.html)
 
-[Minix](https://minix3.org/) - Le système de type Unix le plus influent avec un micro-noyau, il possède des fonctionnalités avancées telles que la modularité du système, la résistance à la [panique du noyau](https://fr.wikipedia.org/wiki/Panique_du_noyau), réincarnation du pilote, protection contre les mauvais pilotes et interfaces sécurisées pour la [communication des processus](https://en.wikipedia.org/wiki/Inter-process_communication).
+### [Minix](https://minix3.org/)
+
+Le système de type Unix le plus influent avec un micro-noyau, il possède des fonctionnalités avancées telles que la modularité du système, la résistance à la [panique du noyau](https://fr.wikipedia.org/wiki/Panique_du_noyau), réincarnation du pilote, protection contre les mauvais pilotes et interfaces sécurisées pour la [communication des processus](https://en.wikipedia.org/wiki/Inter-process_communication).
 
 Redox est largement inspiré de Minix, il a une architecture et un ensemble de fonctionnalités similaires écrits en Rust.
 
 - [Comment Minix a influence la conception de Redox](https://doc.redox-os.org/book/ch04-01-microkernels.html)
 
-[BSD](https://www.bsd.org/) - Cette [famille](https://en.wikipedia.org/wiki/Research_Unix) de systèmes d'exploitation Unix comprend plusieurs améliorations sur les systèmes Unix, la plus notable étant [les sockets BSD](https://en.wikipedia.org/wiki/Berkeley_sockets), qui apporte une communication réseau avec un fonctionnement de type fichier (avant Plan 9).
+### [seL4](https://sel4.systems/)
 
-- [Documentation de FreeBSD](https://docs.freebsd.org/en/books/developers-handbook/sockets/)
+Le micro-noyau le plus rapide et le plus simple au monde, il vise la performance et la simplicité.
 
-[Linux](https://www.kernel.org/) - le noyau monolithique le plus avancé au monde et le plus grand projet open-source au monde, il apporte plusieurs améliorations/optimisations aux systèmes de type Unix.
+Redox suit le même principe, en essayant de rendre l'espace noyau aussi petit que possible (déplacer les composants vers l'espace utilisateur et réduire le nombre d'appels système, transmettre la complexité à l'espace utilisateur) et maintenir les bonnes performances globales (réduire le coût du changement de contexte).
+
+### [BSD](https://www.bsd.org/)
+
+Cette [famille](https://en.wikipedia.org/wiki/Research_Unix) Unix  comprenait plusieurs améliorations sur les systèmes Unix, les variantes open-source de BSD ont ajouté de nombreuses améliorations au système d'origine (comme Linux).
+
+[FreeBSD](https://www.freebsd.org/) est l'exemple le plus notable, Redox s'est inspiré de [Capsicum](https://man.freebsd.org/cgi/man.cgi?capsicum(4)) (un système basé sur les capacités) et [jails](https://en.wikipedia.org/wiki/Freebsd_jail) (une technologie sandbox) pour l'implémentation des namespaces.
+
+### [Linux](https://www.kernel.org/)
+
+Le noyau monolithique le plus avancé au monde et le plus grand projet open-source au monde, il apporte plusieurs améliorations/optimisations aux systèmes de type Unix.
 
 Redox essaie d'implémenter les améliorations de performances Linux dans une conception de micro-noyau.
 
@@ -160,8 +180,7 @@ Certains logiciels importants pris en charge par Redox :
 - [LLVM](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/llvm)
 - [Mesa3D](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/mesa)
 - [OpenSSL](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/openssl)
-- [Python](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/python)
-- [SDL](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/sdl2)
+- [SDL2](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/sdl2)
 
 Vous pouvez voir tous les composants/programmes portés sur Redox [ici](https://static.redox-os.org/pkg/x86_64-unknown-redox/).
 
@@ -244,7 +263,15 @@ Jettes un coup d'oeil à [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redo
 - [Intel 10 Gigabit ethernet](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ixgbed)
 - [Realtek ethernet](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/rtl8168d)
 
-(Wi-Fi/[Atheros ethernet]((https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/alxd)) bientôt)
+(Wi-Fi/[Atheros ethernet](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/alxd) bientôt)
+
+## J'ai un ordinateur bas de gamme, est-ce que Redox fonctionnerait dessus ?
+
+Un processeur d'ordinateur est la machine la plus complexe du monde, même les processeurs les plus anciens sont puissants pour certaines tâches, cela dépend de la tâche.
+
+Le principal problème avec les anciens ordinateurs est la quantité de RAM disponible (ils étaient vendus à une époque où les puces RAM étaient chères), ainsi certains programmes modernes nécessiteront beaucoup de RAM car ils effectuent des tâches complexes.
+
+Cela dit, Redox fonctionnera normalement (si l'architecture du processeur est prise en charge par le système).
 
 ## Avec quelles machines virtuelles Redox s'intègre-t-il?
 
@@ -257,11 +284,11 @@ Un [hyperviseur](https://en.wikipedia.org/wiki/Hypervisor) est un logiciel perme
 
 ## Comment compiler Redox?
 
-Actuellement, Redox a un script d'amorçage pour Debian/Ubuntu/Pop OS ! avec un support non maintenu pour les autres distributions.
+Actuellement, Redox a un script d'amorçage pour Pop OS!, Ubuntu, Debian, Fedora, Arch Linux, openSUSE et FreeBSD avec un support non maintenu pour d'autres distributions.
 
-Nous allons utiliser Podman comme méthode de compilation principale, c'est le processus de construction recommandé pour les systèmes non-Debian car il évite les problèmes d'environnement lors de la compilation.
+Nous proposons également Podman comme méthode de compilation universelle, c'est le processus de construction recommandé pour les systèmes non-Debian car il évite les problèmes d'environnement sur le processus de construction.
 
-- [Guide de compilation du livre Redox](https://doc.redox-os.org/book/ch02-05-building-redox.html) - (Debian/Ubuntu/Pop OS!)
+- [Guide de compilation du livre Redox](https://doc.redox-os.org/book/ch02-05-building-redox.html) - (Pop OS!, Ubuntu, Debian, Fedora, Arch Linux, openSUSE et FreeBSD)
 - [Guide Podman du livre Redox](https://doc.redox-os.org/book/ch02-06-podman-build.html)
 
 ### Comment lancer QEMU sans interface graphique?
@@ -272,17 +299,13 @@ Exécutez:
 
 ### Comment dépanner un build en cas d'erreur?
 
-Reportez-vous au livre Redox pour voir si le problème vient de votre configuration de compilation ou de votre chaîne d'outils, si vous rencontrez toujours des problèmes, consultez ce qui suit ou rejoignez-nous sur le [Chat Redox](https://doc.redox-os.org/book/ch13-01-chat.html).
-
-- [Guide de dépannage du livre Redox](https://doc.redox-os.org/book/ch08-05-troubleshooting.html)
-- [Guide de dépannage GitLab](https://gitlab.redox-os.org/redox-os/redox#help-redox-wont-compile)
+Lisez [cette](https://doc.redox-os.org/book/ch08-05-troubleshooting.html) page ou rejoignez-nous sur [Redox Chat](https://doc.redox-os.org/book /ch13-01-chat.html).
 
 ### Comment rapporter des bugs de Redox?
 
 Vérifiez d'abord les problèmes de GitLab pour voir si votre problème est déjà connu.
 
 - [Guide de rapport de bogue du livre Redox](https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html)
-- [CONTRIBUER](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md)
 
 ## Comment contribuer à Redox?
 
@@ -292,6 +315,5 @@ Vous pouvez contribuer à Redox de plusieurs façons, vous pouvez les voir sur [
 
 - Jetez un oeil à la page de  [Documentation](/docs/) pour plus de détails internes de Redox.
 - Jetez un oeil au [livre Redox](https://doc.redox-os.org/book/) pour voir s'il répond à vos questions/résout votre problème.
-- Si le livre ne répond pas à votre question, posez votre question/dites votre problème dans le salon [Support de Redox](https://matrix.to/#/#redox-support:matrix.org) ou le salon de [Développement de Redox](https://matrix.to/#/#redox-dev:matrix.org
-) sur Matrix.
+- Si le livre ne répond pas à votre question, posez votre question/dites votre problème dans le [Chat](https://doc.redox-os.org/book/ch13-01-chat.html).
 
