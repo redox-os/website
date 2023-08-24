@@ -30,7 +30,7 @@ I wrote the FAQ in a way that even Unix/Linux newcomers can understand, it's sim
 
 Some parts of the book were outdated for years because the developers were busy with the code, Ron Williams improved it since the end of 2022 and I continued where he left.
 
-95% of the book was improved and new pages were crated by me to improve the organization, hundreds of hours of work and thousands of lines changed (Me and Ron are deciding how to organize it properly, we both agree that the book must hold cold information while the website hold the hot information).
+Around 95% of the book was improved and new pages were created by me to improve the organization, hundreds of hours of work and thousands of lines changed (Me and Ron are deciding how to organize it properly, we both agree that the book must hold cold information while the website hold the hot information).
 
 Like the FAQ, I decided to document the Redox in the most easy way possible with workflows/methods that cover most use cases in the development.
 
