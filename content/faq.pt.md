@@ -7,6 +7,8 @@ Essa página contém perguntas/respostas para iniciantes e usuários comuns.
 - [O que é o Redox?](#o-que-%C3%A9-o-redox)
 - [O que Redox significa?](#o-que-redox-significa)
 - [Quais funções o Redox possui?](#quais-fun%C3%A7%C3%B5es-o-redox-possui)
+    - [Benefícios do Microkernel](#benefícios-do-microkernel)
+    - [Benefícios da Rust](#benefícios-da-rust)
 - [Qual o propósito do Redox?](#qual-o-prop%C3%B3sito-do-redox)
 - [O que posso fazer com o Redox?](#o-que-posso-fazer-com-o-redox)
 - [O que é um sistema Unix-like?](#o-que-%C3%A9-um-sistema-unix-like)
@@ -68,6 +70,10 @@ O kernel é pequeno e muda muito pouco (correção de bugs), portanto você não
 
 ### Benefícios da Rust
 
+#### Menos suscetível a bugs
+
+A síntaxe restritiva e as sugestões do compilador reduz muito a probabilidade de bugs.
+
 #### Sem necessidade para mitigações de exploit das linguagens C e C++
 
 O design de um microkernel escrito em Rust protege contra as falhas de memória das linguagens C e C++, isolando o sistema do kernel a superfície de ataque é muito limitada.
@@ -83,6 +89,14 @@ Espere alto desempenho e segurança dos dados (copy-on-write, integridade de arq
 Como o kernel é pequeno, ele usa menos memória para fazer suas funções e o código limitado no kernel torna ele quase livre de bugs (objetivo do príncipio [KISS](https://en.wikipedia.org/wiki/KISS_principle)).
 
 O design seguro e veloz da linguagem Rust, combinado com a pequena quantidade de código no kernel, ajudam a garantir um núcleo fácil, confiável e veloz de manter.
+
+#### Segurança no Thread
+
+O suporte para segurança de thread nas linguagens de programmação C/C++ é frágil e muito fácil de escrever um programa que parece seguro para executar em vários threads, mas introduz bugs útis e buracos de segurança.
+
+Se um thread acessa um pedaço do estado ao mesmo tempo que outro thread está modificando, o programa todo pode exibir bugs confusos e bizarros.
+
+Mas na Rust esse tipo de bug é fácil de evitar, o mesmo sistema de escrita que nos previne de escrever de forma insegura também nos previne de escrever padrões perigosos de acesso simultâneo.
 
 #### Drivers escritos em Rust
 

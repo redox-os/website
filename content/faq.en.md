@@ -7,6 +7,8 @@ This page covers questions/answers for newcomers and end-users.
 - [What is Redox?](#what-is-redox)
 - [What does Redox mean?](#what-does-redox-mean)
 - [What features does Redox have?](#what-features-does-redox-have)
+    - [Microkernel benefits](#microkernel-benefits)
+    - [Rust benefits](#rust-benefits)
 - [What is the purpose of Redox?](#what-is-the-purpose-of-redox)
 - [What I can do with Redox?](#what-i-can-do-with-redox)
 - [What is a Unix-like OS?](#what-is-a-unix-like-os)
@@ -74,6 +76,10 @@ Most of the system components run in userspace, simplifying testing/debugging.
 
 ### Rust benefits
 
+#### Less likely to have bugs
+
+The restrictive syntax and compiler suggestions reduce the probability of bugs a lot.
+
 #### No need for C/C++ exploit mitigations
 
 The microkernel design written in Rust protects against C/C++ memory defects.
@@ -86,7 +92,13 @@ As the kernel is small, it uses less memory to do its work and the limited kerne
 
 Rust's safe and fast language design, combined with the small kernel code size, helps ensure a reliable, performant and easy to maintain core.
 
-#### Rust-written drivers
+#### Thread-safety
+
+The C/C++ support for thread-safety is quite fragile, and it is very easy to write a program that looks safe to run across multiple threads, but which introduces subtle bugs or security holes. If one thread accesses a piece of state at the same time that another thread is changing it, the whole program can exhibit some truly confusing and bizarre bugs.
+
+But in Rust this kind of bug is easy to avoid, the same type system that keeps us from writing memory unsafety prevents us from writing dangerous concurrent access patterns
+
+#### Rust-written Drivers
 
 Drivers written in Rust are likely to have fewer bugs and therefore are more secure.
 
