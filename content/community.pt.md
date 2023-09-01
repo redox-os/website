@@ -24,6 +24,8 @@ Uma forma mais formal de comunicação com os desenvolvedores do Redox, porém m
 
 Envie uma Issue se você tiver problemas compilando/testando ou apenas queira discutir algum assunto, seja funções, estilo de código, inconsistências de código, pequenas mudanças ou correções.
 
+Se você quiser criar uma conta, leia essa [página](https://doc.redox-os.org/book/ch12-01-signing-in-to-gitlab.html).
+
 ## [Lemmy](https://lemmy.world/c/redox)
 
 Nossa alternativa ao Reddit, postamos notícias e tópicos da comunidade.

@@ -22,6 +22,8 @@ Matrix has several different clients. [Element](https://element.io/) is a common
 
 A bit more formal way of communication with fellow Redox devs, but a little less quick and convenient like the chat. Submit an issue when you run into problems compiling, testing, or just would like to discuss a certain topic, be it features, code style, code inconsistencies, minor changes and fixes, etc.
 
+If you want to create an account, read this [page](https://doc.redox-os.org/book/ch12-01-signing-in-to-gitlab.html).
+
 ## [Lemmy](https://lemmy.world/c/redox)
 
 Our alternative to Reddit, we post news and community threads.
