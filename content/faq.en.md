@@ -226,9 +226,9 @@ Have a look at [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/m
 
 ### CPU
 
-- [x86_64/AMD64](https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/x86_64) - (Intel/AMD)
-- [x86/i686](https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/x86) - (Intel/AMD from Pentium II and after supported with limitations)
-- [ARM64](https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/aarch64) - (supported with limitations)
+- Intel - 64-bit (x86_64) and 32-bit (i686) from Pentium II and after with limitations.
+- AMD - 64-bit (AMD64) and 32-bit.
+- ARM - 64-bit (Aarch64) with limitations.
 
 ### Hardware Interfaces
 
@@ -281,9 +281,9 @@ Have a look at [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/m
 
 A computer processor is the most complex machine of the world, even the most old processors are powerful for some tasks, it depends on the task.
 
-The main problem with old computers is the amount of RAM available (they were sold in a epoch where RAM chips were expensive), thus some modern programs will require a lot of RAM because they do complex tasks.
+The main problem with old computers is the amount of RAM available (they were sold in a epoch where RAM chips were expensive) and lack of SSE2 (programs use it to speed up the algorithms), thus some modern programs may not work or require a lot of RAM to perform complex tasks.
 
-Said this, Redox will run normally (if the processor architecture is supported by the system).
+Redox will work normally (if the processor architecture is supported by the system) but you will need to test each program.
 
 ## Which virtual machines does Redox have integration with?
 

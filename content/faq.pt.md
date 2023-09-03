@@ -224,9 +224,9 @@ Leia o [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HA
 
 ### CPU
 
-- [x86_64/AMD64](https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/x86_64) - (Intel/AMD)
-- [x86/i686](https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/x86) - (Intel/AMD a partir do Pentium II e após, incompleto)
-- [ARM64](https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/aarch64) - (incompleto)
+- Intel - 64-bit (x86_64) e 32-bit (i686) a partir do Pentium II e após com limitações.
+- AMD - 64-bit (AMD64) e 32-bit.
+- ARM - 64-bit (Aarch64) com limitações.
 
 ### Interfaces do Hardware
 
@@ -279,9 +279,9 @@ Leia o [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HA
 
 Um processador de computador é a máquina mais complexa do mundo, até os mais antigos são poderosos para a maioria das tarefas, isso depende da tarefa.
 
-O principal problema com os computadores antigos é a quantidade de memória RAM disponível (eles foram vendidos em uma época onde pentes de memória RAM eram caros), portanto alguns programas modernos precisaram de bastante memória RAM por que eles efetuam tarefas complexas.
+O principal problema com os computadores antigos é a quantidade de memória RAM disponível (eles foram vendidos em uma época onde pentes de memória RAM eram caros) e a falta da SSE2 (os programa usam isso para acelerar os algoritmos), portanto alguns programas modernos podem não funcionar ou precisam de muita memória RAM para tarefas complexas.
 
-Dito isto, o Redox irá funcionar normalmente (se a arquitetura do processador for suportada pelo sistema).
+O Redox irá funcionar normalmente (se a arquitetura do processador for suportada pelo sistema) porém você terá que testar cada programa.
 
 ## Quais máquinas virtuais o Redox possui integração?
 
