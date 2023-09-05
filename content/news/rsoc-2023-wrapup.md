@@ -65,4 +65,12 @@ Or consider supporting one of the many Open Source projects that we depend on, e
 
 ## Find Out More
 
-If you have questions, join us on [Matrix Chat](/community)!
+If you have questions, join us on [Matrix Chat](/community)! You can see other
+discussions of this post on social media at the links below:
+
+- [Fosstodon (Mastodon)](https://fosstodon.org/@redox/111012742441776976)
+- [Hacker News](https://news.ycombinator.com/item?id=37391282)
+- [Lemmy.world](https://lemmy.world/post/4492733)
+- [Patreon](https://www.patreon.com/posts/88801964?pr=true)
+- [Reddit /r/redox](https://www.reddit.com/r/Redox/comments/16ao25r/redox_summer_of_code_2023_wrapup/)
+- [Twitter](https://twitter.com/redox_os/status/1699049750031708611)
