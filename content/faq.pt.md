@@ -279,7 +279,7 @@ Leia o [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HA
 
 Um processador de computador é a máquina mais complexa do mundo, até os mais antigos são poderosos para a maioria das tarefas, isso depende da tarefa.
 
-O principal problema com os computadores antigos é a quantidade de memória RAM disponível (eles foram vendidos em uma época onde pentes de memória RAM eram caros) e a falta da SSE2 (os programa usam isso para acelerar os algoritmos), portanto alguns programas modernos podem não funcionar ou precisam de muita memória RAM para tarefas complexas.
+O principal problema com os computadores antigos é a quantidade de memória RAM disponível (eles foram vendidos em uma época onde pentes de memória RAM eram caros) e a falta das extensões SSE/AVX (os programas usam elas para acelerar os algoritmos), portanto alguns programas modernos podem não funcionar ou precisam de muita memória RAM para tarefas complexas.
 
 O Redox irá funcionar normalmente (se a arquitetura do processador for suportada pelo sistema) porém você terá que testar cada programa.
 
