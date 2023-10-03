@@ -44,6 +44,10 @@ Nossa alternativa ao Twitter, postamos notícias e tópicos da comunidade.
 
 Notícias e tópicos da comunidade.
 
+## [YouTube](https://www.youtube.com/@RedoxOS)
+
+Demonstrações e reuniões da mesa diretora.
+
 ## [Fórum](https://discourse.redox-os.org/)
 
 Nosso fórum histórico com perguntas clássicas/antigas, está inátivo e deve ser usado para consulta histórica.
