@@ -42,6 +42,10 @@ Our alternative to Twitter, we post news and community threads.
 
 News and community threads.
 
+## [YouTube](https://www.youtube.com/@RedoxOS)
+
+Demos and board meetings.
+
 ## [Forum](https://discourse.redox-os.org/)
 
 This is our historical forum with old/classic questions, it's inactive and must be used for historical purposes, if you have a question, send on Matrix chat.
