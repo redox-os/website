@@ -94,7 +94,7 @@ La conception de langage sûre et rapide de Rust, combinée à la petite taille 
 
 #### Sécurité des threads
 
-Le support de la sécurité des threads eb C/C++ est assez fragile et il est très facile d'écrire un programme qui semble sûr à exécuter sur plusieurs threads, mais qui introduit des bugs subtils ou des failles de sécurité. Si un thread accède à un état en même temps qu'un autre thread le modifie, l'ensemble du programme peut présenter des bugs vraiment déroutants et bizarres.
+Le support de la sécurité des threads en C/C++ est assez fragile et il est très facile d'écrire un programme qui semble sûr à exécuter sur plusieurs threads, mais qui introduit des bugs subtils ou des failles de sécurité. Si un thread accède à un état en même temps qu'un autre thread le modifie, l'ensemble du programme peut présenter des bugs vraiment déroutants et bizarres.
 
 Mais en Rust, ce type de bug est facile à éviter, le même système de type qui nous empêche d'écrire des problèmes de sécurité en mémoire nous empêche d'écrire des modèles d'accès simultanés dangereux.
 
