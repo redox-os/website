@@ -24,6 +24,10 @@ A bit more formal way of communication with fellow Redox devs, but a little less
 
 If you want to create an account, read this [page](https://doc.redox-os.org/book/ch12-01-signing-in-to-gitlab.html).
 
+If you have ready MRs (merge requests) you must send the links on the [MRs](https://matrix.to/#/#redox-mrs:matrix.org) room, before you join this room a request for a Matrix space invite must be sent on the [Join Requests](https://matrix.to/#/#redox-join:matrix.org) room.
+
+That way your MR will not be forgotten or accumulate conflicts.
+
 ## [Lemmy](https://lemmy.world/c/redox)
 
 Our alternative to Reddit, we post news and community threads.
