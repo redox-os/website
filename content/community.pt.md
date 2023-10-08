@@ -26,6 +26,10 @@ Envie uma Issue se você tiver problemas compilando/testando ou apenas queira di
 
 Se você quiser criar uma conta, leia essa [página](https://doc.redox-os.org/book/ch12-01-signing-in-to-gitlab.html).
 
+Se você tiver MRs (merge requests) prontos você precisa enviar o link deles na sala [MRs](https://matrix.to/#/#redox-mrs:matrix.org), antes de entrar nesta sala você precisa solicitar um convite para o espaço Matrix na sala [Join Requests](https://matrix.to/#/#redox-join:matrix.org).
+
+Dessa forma seu MR não será esquecido, evitando conflitos.
+
 ## [Lemmy](https://lemmy.world/c/redox)
 
 Nossa alternativa ao Reddit, postamos notícias e tópicos da comunidade.
