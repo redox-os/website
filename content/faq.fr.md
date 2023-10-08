@@ -7,6 +7,8 @@ Cette page couvre les questions/réponses pour les nouveaux arrivants et les uti
 - [Qu'est-ce que Redox?](#quest-ce-que-redox)
 - [Que veut dire Redox?](#que-veut-dire-redox)
 - [Quelles fonctionnalités a Redox?](#quelles-fonctionnalités-a-redox)
+    - [Les avantages du micro noyau](#les-avantages-du-micro-noyau)
+    - [Les avantages de Rust](#les-avantages-de-rust)
 - [Quelle est l'utilité de Redox?](#quelle-est-lutilité-de-redox)
 - [Que peut-on faire avec Redox?](#que-peut-on-faire-avec-redox)
 - [Qu'est-ce qu'un système d'exploitation de type Unix?](#quest-ce-quun-système-dexploitation-de-type-unix)
@@ -52,7 +54,7 @@ Cela sonne aussi comme Minix/Linux.
 
 ## Quelles fonctionnalités a Redox?
 
-### Les bénéfices du micro noyau
+### Les avantages du micro noyau
 
 #### Vraie modularité
 
@@ -74,6 +76,10 @@ La plupart des composants du système s'exécutent dans l'espace utilisateur, ce
 
 ### Les avantages de Rust
 
+#### Moins susceptible d'avoir des bugs
+
+La syntaxe restrictive et les suggestions du compilateur réduisent considérablement la probabilité de bugs.
+
 #### Pas besoin de mesures d'atténuation des exploits de C/C++
 
 La conception du micro-noyau écrite en Rust protège contre les défauts de mémoire C/C++.
@@ -85,6 +91,12 @@ En isolant les composants du système du noyau, [la surface d'attaque](https://e
 Comme le noyau est petit, il utilise moins de mémoire pour faire son travail et la quantité de code limité du noyau l'aide à rester proche de l'objectif ([KISS](https://en.wikipedia.org/wiki/KISS_principle) sans bugs).
 
 La conception de langage sûre et rapide de Rust, combinée à la petite taille du noyau, contribue à garantir un noyau fiable, performant et facile à entretenir.
+
+#### Sécurité des threads
+
+Le support de la sécurité des threads en C/C++ est assez fragile et il est très facile d'écrire un programme qui semble sûr à exécuter sur plusieurs threads, mais qui introduit des bugs subtils ou des failles de sécurité. Si un thread accède à un état en même temps qu'un autre thread le modifie, l'ensemble du programme peut présenter des bugs vraiment déroutants et bizarres.
+
+Mais en Rust, ce type de bug est facile à éviter, le même système de type qui nous empêche d'écrire des problèmes de sécurité en mémoire nous empêche d'écrire des modèles d'accès simultanés dangereux.
 
 #### Pilotes écrits en Rust
 
@@ -214,9 +226,9 @@ Jettes un coup d'oeil à [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redo
 
 ### CPU
 
-- [x86_64/AMD64](https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/x86_64) - (Intel/AMD)
-- [x86/i686](https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/x86) - (Intel/AMD de Pentium II et après pris en charge avec des limitations)
-- [ARM64](https://gitlab.redox-os.org/redox-os/kernel/-/tree/master/src/arch/aarch64) - (pris en charge avec des limitations)
+- Intel - 64-bit (x86_64) et 32-bit (i686) à partir de Pentium II et versions ultérieures avec des limitations.
+- AMD - 64-bit (AMD64) et 32-bit.
+- ARM - 64-bit (Aarch64) avec des limitations.
 
 ### Les interfaces matérielles
 
@@ -269,9 +281,9 @@ Jettes un coup d'oeil à [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redo
 
 Un processeur d'ordinateur est la machine la plus complexe du monde, même les processeurs les plus anciens sont puissants pour certaines tâches, cela dépend de la tâche.
 
-Le principal problème avec les anciens ordinateurs est la quantité de RAM disponible (ils étaient vendus à une époque où les puces RAM étaient chères), ainsi certains programmes modernes nécessiteront beaucoup de RAM car ils effectuent des tâches complexes.
+Le principal problème avec les anciens ordinateurs est la quantité de RAM disponible (ils étaient vendus à une époque où les puces RAM étaient chères) et le manque d'extensions SSE/AVX (les programmes les utilisent pour accélérer les algorithmes), ainsi certains programmes peuvent ne pas fonctionner ou nécissitent beaucoup de RAM pour effectuer des tâches complexes.
 
-Cela dit, Redox fonctionnera normalement (si l'architecture du processeur est prise en charge par le système).
+Redox fonctionnera normalement (si l'architecture du processeur est prise en charge par le système) mais vous devrez tester chaque programme.
 
 ## Avec quelles machines virtuelles Redox s'intègre-t-il?
 

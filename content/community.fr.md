@@ -22,6 +22,12 @@ Matrix possède de multiples clients. [Element](https://element.io/) est le choi
 
 Un moyen de communication un peu plus formel avec les autres développeurs de Redox, mais un peu moins rapide et pratique que le chat. Soumettez une Issue lorsque vous rencontrez des problèmes de compilation, de tests ou si vous souhaitez simplement discuter d'un sujet en particulier, qu'il s'agisse de fonctionnalités, de style de code, d'incohérences de code, de modifications et de correctifs mineurs, etc.
 
+Si vous souhaitez créer un compte, lisez cette [page](https://doc.redox-os.org/book/ch12-01-signing-in-to-gitlab.html).
+
+Si vous avez des MRs prêts (merge requests), vous devez envoyer les liens sur le salon [MRs](https://matrix.to/#/#redox-mrs:matrix.org), avant de rejoindre ce salon, une demande d'invitation à l'espace Matrix doit être envoyée dans le salon [Join Requests](https://matrix.to/#/#redox-join:matrix.org).
+
+De cette façon, votre MR ne sera pas oublié et n’accumulera pas de conflits.
+
 ## [Lemmy](https://lemmy.world/c/redox)
 
 Notre alternative à Reddit, nous publions des actualités et des fils de discussion communautaires.
@@ -40,6 +46,10 @@ Notre alternative à Twitter, nous publions des nouvelles et des fils de discuss
 ## [Twitter](https://twitter.com/redox_os)
 
 Nouvelles et fils de la communauté.
+
+## [YouTube](https://www.youtube.com/@RedoxOS)
+
+Démos et réunions du conseil d'administration.
 
 ## [Forum](https://discourse.redox-os.org/)
 
