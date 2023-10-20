@@ -6,9 +6,6 @@
     a {
         color: #5fafff;
     }
-    .header-icon {
-        filter: invert(1);
-    }
 }
 
 @font-face {

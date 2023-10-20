@@ -3,7 +3,10 @@
     <ul class="row menu">
       <li class="col-xs-12 col-md-2">
         <a href="{{ if .Site.LanguagePrefix }}{{ .Site.LanguagePrefix }}{{ else }}/{{ end }}">
-          <img class="img-responsive header-icon" src="/img/icon.png" width="128" height="128" alt="Redox Logo"/>
+            <picture>
+                <source srcset="/img/icon-dark.png" media="(prefers-color-scheme: dark)"/>
+                <img src="/img/icon.png" width="128" height="128" alt="Redox Logo"/>
+            </picture>
         </a>
       </li>
       <li class="col-xs-12 col-md-10 menu">
