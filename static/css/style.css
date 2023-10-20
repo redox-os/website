@@ -1,3 +1,16 @@
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #202020;
+        color: #ffffff;
+    }
+    a {
+        color: #5fafff;
+    }
+    .header-icon {
+        filter: invert(1);
+    }
+}
+
 @font-face {
     font-family: 'Fira Sans';
     font-display: swap;
