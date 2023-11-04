@@ -5,7 +5,7 @@ url = "home"
 <div class="row install-row">
   <div class="col-md-8">
     <p class="pitch">
-      <b>Redox</b> is a Unix-like Operating System written in <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>,
+      <b>Redox</b> is a [Unix-like](https://en.wikipedia.org/wiki/Unix-like) Operating System written in <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>,
       aiming to bring the innovations of Rust to a modern microkernel and full set of applications.
     </p>
   </div>
@@ -18,20 +18,21 @@ url = "home"
 <div class="row features">
   <div class="col-md-6">
     <ul class="laundry-list" style="margin-bottom: 0px;">
-      <li>Inspired by Plan 9, Minix, seL4, BSD and Linux</li>
-      <li>Implemented in Rust</li>
-      <li>Microkernel Design</li>
-      <li>Includes optional GUI - Orbital</li>
-      <li>Supports Rust Standard Library</li>
+      <li>Inspired by [Plan 9](http://9p.io/plan9/index.html), [Minix](http://www.minix3.org/), [seL4](https://sel4.systems/), [BSD](http://www.bsd.org/) and [Linux](https://www.kernel.org/)</li>
+      <li>Implemented in [Rust](https://www.rust-lang.org/)</li>
+      <li>[Microkernel](https://doc.redox-os.org/book/ch04-01-microkernels.html) Design</li>
+      <li>Includes optional GUI - [Orbital](https://doc.redox-os.org/book/ch04-09-graphics-windowing.html#orbital)</li>
+      <li>Supports [Rust Standard Library](https://doc.rust-lang.org/std/)</li>
     </ul>
   </div>
   <div class="col-md-6">
     <ul class="laundry-list">
-      <li>MIT Licensed</li>
-      <li>Drivers run in Userspace</li>
-      <li>Includes common Unix commands</li>
-      <li>Partial POSIX compatibility</li>
-      <li>Custom C library written in Rust (relibc)</li>
+      <li>[MIT](https://en.wikipedia.org/wiki/MIT_License) Licensed</li>
+      <li>[Drivers](https://doc.redox-os.org/book/ch04-07-drivers.html) run in Userspace</li>
+      <li>Includes common Unix/Linux [tools](https://doc.redox-os.org/book/ch06-04-system-tools.html)</li>
+      <li>[Source compatibility](https://doc.redox-os.org/book/ch06-00-programs-libraries.html) with Linux/BSD programs</li>
+      <li>Partial [POSIX](https://en.wikipedia.org/wiki/POSIX) compatibility</li>
+      <li>Custom [C library](https://en.wikipedia.org/wiki/C_standard_library) written in Rust ([relibc](https://gitlab.redox-os.org/redox-os/relibc/))</li>
       <li>See <a href="/screens/">Redox in Action</a></li>
     </ul>
   </div>
