@@ -34,7 +34,7 @@ This page covers questions/answers for newcomers and end-users.
 
 ## What is Redox?
 
-Redox is a microkernel-based operating system, a complete, fully-functioning, general-purpose operating system with a focus on safety, freedom, reliability, correctness, and pragmatism.
+Redox is a microkernel-based, a complete, fully-functioning and general-purpose operating system created in 2015, with a focus on safety, freedom, reliability, correctness, and pragmatism.
 
 Wherever possible, the system components are written in Rust and run in user-space.
 
