@@ -2,13 +2,13 @@
 title = "Community"
 +++
 
-This page attempts to explain how the Redox OS community is organised and help you navigate it.
+This page attempts to explain how the Redox OS community is organised and helps you navigate it.
 
 We follow the [Rust Code Of Conduct](https://www.rust-lang.org/policies/code-of-conduct) for rules in all community/chat channels.
 
 ## [Chat](https://matrix.to/#/#redox-join:matrix.org)
 
-Matrix is the official way to talk with Redox OS team/community (these rooms are English-only, we don't accept other languages because we don't understand them).
+Matrix is the official way to talk with the Redox OS team/community. These rooms are English-only: we don't accept other languages because we don't understand them.
 
 - #redox-join:matrix.org
 
@@ -20,17 +20,17 @@ Matrix has several different clients. [Element](https://element.io/) is a common
 
 ## [GitLab](https://gitlab.redox-os.org/redox-os/redox)
 
-A bit more formal way of communication with fellow Redox devs, but a little less quick and convenient like the chat. Submit an issue when you run into problems compiling, testing, or just would like to discuss a certain topic, be it features, code style, code inconsistencies, minor changes and fixes, etc.
+A slightly more formal way of communication with fellow Redox devs, but a little less quick and convenient like the chat. Submit an issue when you run into problems compiling or testing. Issues can also be used if you would like to discuss a certain topic: be it features, code style, code inconsistencies, minor changes and fixes, etc.
 
 If you want to create an account, read this [page](https://doc.redox-os.org/book/ch12-01-signing-in-to-gitlab.html).
 
-If you have ready MRs (merge requests) you must send the links on the [MRs](https://matrix.to/#/#redox-mrs:matrix.org) room, before you join this room a request for a Matrix space invite must be sent on the [Join Requests](https://matrix.to/#/#redox-join:matrix.org) room.
+If you have ready MRs (merge requests) you must send the links in the [MRs](https://matrix.to/#/#redox-mrs:matrix.org) room. Before you can join this room, request an invite in the [Join Requests](https://matrix.to/#/#redox-join:matrix.org) room.
 
-That way your MR will not be forgotten or accumulate conflicts.
+By sending a message in the room, your MR will not be forgotten or accumulate conflicts.
 
 ## [Lemmy](https://lemmy.world/c/redox)
 
-Our alternative to Reddit, we post news and community threads.
+Our alternative to Reddit, where we post news and community threads.
 
 ## [Reddit](https://www.reddit.com/r/Redox/)
 
@@ -40,7 +40,7 @@ If you want a quick look at what's going on and talk about it.
 
 ## [Fosstodon](https://fosstodon.org/@redox)
 
-Our alternative to Twitter, we post news and community threads.
+Our alternative to Twitter, where we post news and community threads.
 
 ## [Twitter](https://twitter.com/redox_os)
 
@@ -52,12 +52,12 @@ Demos and board meetings.
 
 ## [Forum](https://discourse.redox-os.org/)
 
-This is our historical forum with old/classic questions, it's inactive and must be used for historical purposes, if you have a question, send on Matrix chat.
+This is our archived forum with old/classic questions, it's inactive and can only be used for archival purposes. If you have a question, send on Matrix chat.
 
 ## [Talks](/talks/)
 
 Redox talks given at various events and conferences.
 
-## Note
+## Spread the word
 
 Community outreach is an important part of Redox's success. If more people know about Redox, then more contributors are likely to step in, and everyone can benefit from their added expertise. You can make a difference by writing articles, talking to fellow OS enthusiasts, or looking for communities that would be interested in knowing more about Redox.

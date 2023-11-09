@@ -34,21 +34,21 @@ This page covers questions/answers for newcomers and end-users.
 
 ## What is Redox?
 
-Redox is a microkernel-based operating system, a complete, fully-functioning, general-purpose operating system with a focus on safety, freedom, reliability, correctness, and pragmatism.
+Redox is a microkernel-based operating system: a complete, fully-functioning, general-purpose operating system with a focus on safety, freedom, reliability, correctness, and pragmatism.
 
 Wherever possible, the system components are written in Rust and run in user-space.
 
 ### Current status
 
-Redox is a alpha/beta quality software, because we implement new features while fix the bugs.
+Redox is alpha/beta quality software, because we implement new features while fixing the bugs.
 
-Thus it's not ready for daily usage yet, feel free to test the system until its maturity and **don't store your sensitive data without a proper backup.**
+Because of this, it's not ready for daily usage yet. Feel free to test the system until its maturity and **don't store your sensitive data without a proper backup.**
 
-The version 1.0 will be released once all system APIs are considered stable.
+The 1.0 version will be released once all system APIs are considered stable.
 
 ## What does Redox mean?
 
-[Redox](https://en.wikipedia.org/wiki/Redox) is the chemical reaction (reduction–oxidation) that creates rust, as Redox is an operating system written in Rust, it makes sense.
+[Redox](https://en.wikipedia.org/wiki/Redox) is the chemical reaction (reduction–oxidation) that creates rust. As Redox is an operating system written in Rust, it makes sense.
 
 It sounds like Minix/Linux too.
 
@@ -62,13 +62,13 @@ You can modify/change many system components without a system restart, similar t
 
 #### Bug isolation
 
-Most system components run in user-space on a microkernel system, a bug in a non-kernel component won't [crash the system/kernel](https://en.wikipedia.org/wiki/Kernel_panic).
+Most system components run in user-space on a microkernel system. Because of this, bug in a non-kernel component won't [crash the system/kernel](https://en.wikipedia.org/wiki/Kernel_panic).
 
 #### No-reboot design
 
-A mature microkernel changes very little (bug fixing), so you won't need to restart your system very often to update the system.
+A mature microkernel changes very little (except for bug fixes), so you won't need to restart your system very often to update it.
 
-Since most of the system components are in userspace, they can be replaced on-the-fly (reducing downtime for server administrators).
+Since most of the system components are in userspace, they can be replaced on-the-fly, reducing downtime for server administrators.
 
 #### Easy to develop and debug
 
@@ -82,31 +82,31 @@ The restrictive syntax and compiler suggestions reduce the probability of bugs a
 
 #### No need for C/C++ exploit mitigations
 
-The microkernel design written in Rust protects against C/C++ memory defects.
+The microkernel design written in Rust protects against memory defects that one might see in C/C++ programs.
 
 By isolating the system components from the kernel, the [attack surface](https://en.wikipedia.org/wiki/Attack_surface) is very limited.
 
 #### Improved security and reliability without significant performance impact
 
-As the kernel is small, it uses less memory to do its work and the limited kernel code size helps to keep it close to bug-free status ([KISS](https://en.wikipedia.org/wiki/KISS_principle) goal).
+As the kernel is small, it uses less memory to do its work. The limited kernel code size helps to keep its close to bug-free status ([KISS](https://en.wikipedia.org/wiki/KISS_principle)).
 
 Rust's safe and fast language design, combined with the small kernel code size, helps ensure a reliable, performant and easy to maintain core.
 
 #### Thread-safety
 
-The C/C++ support for thread-safety is quite fragile, and it is very easy to write a program that looks safe to run across multiple threads, but which introduces subtle bugs or security holes. If one thread accesses a piece of state at the same time that another thread is changing it, the whole program can exhibit some truly confusing and bizarre bugs.
+The C/C++ support for thread-safety is quite fragile. As such, it is very easy to write a program that looks safe to run across multiple threads, but which introduces subtle bugs or security holes. If one thread accesses a piece of state at the same time that another thread is changing it, the whole program can exhibit some truly confusing and bizarre bugs.
 
-But in Rust this kind of bug is easy to avoid, the same type system that keeps us from writing memory unsafety prevents us from writing dangerous concurrent access patterns
+In Rust, this kind of bug is easy to avoid: the same type system that keeps us from writing memory unsafety prevents us from writing dangerous concurrent access patterns
 
 #### Rust-written Drivers
 
-Drivers written in Rust are likely to have fewer bugs and therefore are more secure.
+Drivers written in Rust are likely to have fewer bugs and are therefore more secure.
 
 - [Currently supported devices](#which-devices-does-redox-support)
 
 #### ZFS-inspired filesystem
 
-Redox uses RedoxFS as the default filesystem, it supports similar features as [ZFS](https://docs.freebsd.org/en/books/handbook/zfs/) with a written-in-Rust implementation.
+Redox uses RedoxFS as the default filesystem. It supports similar features as [ZFS](https://docs.freebsd.org/en/books/handbook/zfs/) with a written-in-Rust implementation.
 
 Expect high performance and data safety (copy-on-write, data integrity, volumes, snapshots, hardened against data loss).
 
@@ -114,7 +114,7 @@ Expect high performance and data safety (copy-on-write, data integrity, volumes,
 
 The main goal of Redox is to be a general-purpose OS, while maintaining security, reliability and correctness.
 
-Redox aims to be an alternative to existing Unix systems (Linux/BSD), with the ability to run most Unix programs with only recompilation or minimal modifications.
+Redox aims to be an alternative to existing Unix systems (Linux/BSD), with the ability to run most Unix programs with only recompilation or minimal modifications needed.
 
 - [Our Goals](https://doc.redox-os.org/book/ch01-01-our-goals.html)
 
@@ -128,7 +128,7 @@ Redox is still under development, so our list of supported applications is curre
 
 ## What is a Unix-like OS?
 
-Any OS compatible with [Single Unix Specification](https://en.wikipedia.org/wiki/Single_UNIX_Specification) and [POSIX](https://en.wikipedia.org/wiki/POSIX), expect a [shell](https://en.wikipedia.org/wiki/Unix_shell), "[everything is a file](https://en.wikipedia.org/wiki/Everything_is_a_file)" concept, multitasking and multiuser.
+Any OS compatible with the [Single Unix Specification](https://en.wikipedia.org/wiki/Single_UNIX_Specification) and [POSIX](https://en.wikipedia.org/wiki/POSIX). You can expect a [shell](https://en.wikipedia.org/wiki/Unix_shell), the "[everything is a file](https://en.wikipedia.org/wiki/Everything_is_a_file)" concept and multitasking and multiuser support.
 
 [Unix](https://en.wikipedia.org/wiki/Unix) was a highly influential multitasking system and impacted the design choices of most modern systems.
 
@@ -145,27 +145,27 @@ This Bell Labs OS brings the concept of "everything is a file" to the highest le
 
 ### [Minix](https://minix3.org/)
 
-The most influential Unix-like system with a microkernel, it has advanced features such as system modularity, [kernel panic](https://en.wikipedia.org/wiki/Kernel_panic) resistence, driver reincarnation, protection against bad drivers and secure interfaces for [process comunication](https://en.wikipedia.org/wiki/Inter-process_communication).
+The most influential Unix-like system with a microkernel. It has advanced features such as system modularity, [kernel panic](https://en.wikipedia.org/wiki/Kernel_panic) resistence, driver reincarnation, protection against bad drivers and secure interfaces for [process comunication](https://en.wikipedia.org/wiki/Inter-process_communication).
 
-Redox is largely inspired by Minix, it has a similar architecture and feature set written in Rust.
+Redox is largely inspired by Minix: it has a similar architecture and feature set written in Rust.
 
 - [How Minix influenced the Redox design](https://doc.redox-os.org/book/ch04-01-microkernels.html)
 
 ### [seL4](https://sel4.systems/)
 
-The most fast and simple microkernel of the world, it aims for performance and simplicity.
+The fastest and simplest microkernel of the world. It aims for performance and simplicity.
 
 Redox follow the same principle, trying to make the kernel-space small as possible (moving components to user-space and reducing the number of system calls, passing the complexity to user-space) and keeping the overall performance good (reducing the context switch cost).
 
 ### [BSD](https://www.bsd.org/)
 
-This Unix [family](https://en.wikipedia.org/wiki/Research_Unix) included several improvements on Unix systems, the open-source variants of BSD added many improvements to the original system (like Linux did).
+This Unix [family](https://en.wikipedia.org/wiki/Research_Unix) included several improvements on Unix systems and the open-source variants of BSD added many improvements to the original system (like Linux did).
 
 [FreeBSD](https://www.freebsd.org/) is the most notable example, Redox took inspiration from [Capsicum](https://man.freebsd.org/cgi/man.cgi?capsicum(4)) (a capability-based system) and [jails](https://en.wikipedia.org/wiki/Freebsd_jail) (a sandbox technology) for the namespaces implementation.
 
 ### [Linux](https://www.kernel.org/)
 
-The most advanced monolithic kernel and biggest open-source project of the world, it brought several improvements and optimizations to the Unix-like world.
+The most advanced monolithic kernel and biggest open-source project of the world. It brought several improvements and optimizations to the Unix-like world.
 
 Redox tries to implement the Linux performance improvements in a microkernel design.
 
@@ -179,7 +179,7 @@ This approach to OS design brings more stability and security, with a small cost
 
 ## What programs can Redox run?
 
-Redox is designed to be source-compatible with most Unix, Linux and POSIX-compilant applications, only requiring compilation.
+Redox is designed to be source-compatible with most Unix, Linux and POSIX-compliant applications, only requiring recompilation.
 
 Currently, most GUI applications require porting, as we don't support X11 or Wayland yet.
 
@@ -198,29 +198,29 @@ You can see all Redox components/ported programs [here](https://static.redox-os.
 
 ## How to install programs on Redox?
 
-Redox has a package manager similar to `apt` (Debian) and `pkg` (FreeBSD), you can see how to use it on this page:
+Redox has a package manager similar to `apt` (Debian) and `pkg` (FreeBSD). You can see how to use it on this page:
 
 - [Redox package manager](https://doc.redox-os.org/book/ch02-08-pkg.html)
 
-## Which are  the Redox variants?
+## Which are the Redox variants?
 
-Redox has some variants for each task, take a look on them below:
+Redox has some variants for each task, take a look at them below:
 
-- `server-minimal` - The most minimal variant with a basic system, aimed for embedded devices, very old computers and developers.
+- `server-minimal` - The most minimal variant with a basic system. Aimed at embedded devices, very old computers and developers.
 
-- `desktop-minimal` - The most minimal variant with the Orbital desktop environment included, aimed for embedded devices, very old computers and developers.
+- `desktop-minimal` - The most minimal variant with the Orbital desktop environment included. Aimed at embedded devices, very old computers and developers.
 
-- `server` - The server variant with a complete system and network tools, aimed for server administrators, embedded devices, low-end computers and developers.
+- `server` - The server variant with a complete system and network tools. Aimed at server administrators, embedded devices, low-end computers and developers.
 
-- `desktop` - The standard variant with a complete system, Orbital desktop environment and useful tools, aimed for daily usage, producers, developers and gamers.
+- `desktop` - The standard variant with a complete system, Orbital desktop environment and useful tools. Aimed at daily usage, producers, developers and gamers.
 
-- `dev` - The development variant with a complete system and development tools, aimed for developers.
+- `dev` - The development variant with a complete system and development tools. Aimed at developers.
 
-- `demo` - The demo variant with a complete system, tools, players and games, aimed for testers, gamers and developers.
+- `demo` - The demo variant with a complete system, tools, players and games. Aimed at testers, gamers and developers.
 
 ## Which devices does Redox support?
 
-There are billions of devices with hundreds of models/architectures in the world, we try to write drivers for the most used devices to support more people, some drivers are device-specific and others are architecture-specific.
+There are billions of devices with hundreds of models/architectures in the world. We try to write drivers for the most used devices to support more people.
 
 Have a look at [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HARDWARE.md) to see all tested computers.
 
@@ -279,11 +279,11 @@ Have a look at [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/m
 
 ## I have a low-end computer, would Redox work on it?
 
-A computer processor is the most complex machine of the world, even the most old processors are powerful for some tasks, it depends on the task.
+A computer processor is the most complex machine of the world: even the oldest processors are powerful for some tasks but not for others.
 
-The main problem with old computers is the amount of RAM available (they were sold in a epoch where RAM chips were expensive) and lack of SSE/AVX extensions (programs use them to speed up the algorithms), thus some modern programs may not work or require a lot of RAM to perform complex tasks.
+The main problem with old computers is the amount of RAM available (they were sold in a era where RAM chips were expensive) and the lack of SSE/AVX extensions (programs use them to speed up the algorithms). Because of this some modern programs may not work or require a lot of RAM to perform complex tasks.
 
-Redox will work normally (if the processor architecture is supported by the system) but you will need to test each program.
+Redox itself will work normally if the processor architecture is supported by the system, but the performance per program may vary.
 
 ## Which virtual machines does Redox have integration with?
 
@@ -292,13 +292,13 @@ Redox will work normally (if the processor architecture is supported by the syst
 
 In the future the microkernel could act as a hypervisor, similar to [Xen](https://xenproject.org/).
 
-A [hypervisor](https://en.wikipedia.org/wiki/Hypervisor) is software providing the ability to run multiple isolated operating system instances simultaneously.
+A [hypervisor](https://en.wikipedia.org/wiki/Hypervisor) is a program providing the ability to run multiple isolated operating systems instances simultaneously.
 
 ## How do I build Redox?
 
 Currently Redox has a bootstrap script for Pop OS!, Ubuntu, Debian, Fedora, Arch Linux, openSUSE and FreeBSD with unmaintained support for other distributions.
 
-We also offer Podman as our universal compilation method, it is the recommended build process for non-Debian systems because it avoids environment problems on the build process.
+We also offer Podman as our universal compilation method. It is the recommended build process for non-Debian systems because it avoids environment problems on the build process.
 
 - [Redox Book Guide](https://doc.redox-os.org/book/ch02-05-building-redox.html) - (Pop OS!, Ubuntu, Debian, Fedora, Arch Linux, openSUSE and FreeBSD)
 - [Redox Book Podman Guide](https://doc.redox-os.org/book/ch02-06-podman-build.html)
@@ -315,7 +315,7 @@ Read [this](https://doc.redox-os.org/book/ch08-05-troubleshooting.html) page or 
 
 ### How to report bugs on Redox
 
-Check GitLab Issues first to see if your problem is already known.
+Check GitLab Issues first to see if your problem has already been reported.
 
 - [Redox Book Bug Report Guide](https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html)
 

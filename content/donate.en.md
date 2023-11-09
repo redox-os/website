@@ -17,15 +17,15 @@ You can donate to Redox OS the following ways:
 ## Jeremy Soller
 
 Jeremy Soller, is the creator, maintainer, and lead developer of Redox OS.
-Donations to Jeremy Soller are treated as a taxable gift, and will be used at
+Donations to him are treated as a taxable gift, and will be used at
 his discretion.
 
-You can donate to Jeremy Soller the following ways:
+You can donate to Jeremy in the following ways:
 
 - [Liberapay](https://liberapay.com/redox_os)
 - [Paypal](https://www.paypal.me/redoxos)
-- Jeremy Soller no longer accepts Bitcoin or Ethereum donations. Do not send
+- Jeremy no longer accepts Bitcoin or Ethereum donations. Do not send
   anything to the previously listed addresses, as it will not be received.
 
-The following patrons have donated $4 or more to Jeremy Soller for use in developing Redox OS:
+The following patrons have donated $4 or more to Jeremy to develop Redox OS:
 {{% partial "donors/jackpot51.html" %}}
