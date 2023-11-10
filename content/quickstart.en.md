@@ -8,7 +8,7 @@ title = "Quickstart"
 - [Releases](https://gitlab.redox-os.org/redox-os/redox/-/releases)
 
 ## Trying out Redox OS
-- Trying out Redox is very easy: just follow the instructions in the [Redox Book](https://doc.redox-os.org/book/ch02-04-trying-out-redox.html). Running Redox on real machines is possible, but your milage may vary. Please check out [the supported machines](https://doc.redox-os.org/book/ch02-02-real-hardware.html) for more information.
+- Trying out Redox is very easy: just follow the instructions in the [Redox Book](https://doc.redox-os.org/book/ch02-04-trying-out-redox.html). Running Redox on real machines is possible, but your milage may vary. Please check out [the supported machines](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HARDWARE.md) for more information.
 
 ## Building Redox
 
