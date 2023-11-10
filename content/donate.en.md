@@ -24,8 +24,7 @@ You can donate to Jeremy in the following ways:
 
 - [Liberapay](https://liberapay.com/redox_os)
 - [Paypal](https://www.paypal.me/redoxos)
-- Jeremy no longer accepts Bitcoin or Ethereum donations. Do not send
-  anything to the previously listed addresses, as it will not be received.
+- Jeremy no longer accepts Bitcoin or Ethereum donations. Do not donate to the wallet addresses that were listed on the website in the past, as the donation will not be received.
 
 The following patrons have donated $4 or more to Jeremy to develop Redox OS:
 {{% partial "donors/jackpot51.html" %}}

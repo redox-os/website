@@ -8,7 +8,7 @@ We follow the [Rust Code Of Conduct](https://www.rust-lang.org/policies/code-of-
 
 ## [Chat](https://matrix.to/#/#redox-join:matrix.org)
 
-Matrix is the official way to talk with the Redox OS team/community. These rooms are English-only: we don't accept other languages because we don't understand them.
+Matrix is the official way to talk with the Redox OS team/community. These rooms are English-only; we don't accept other languages because we don't understand them.
 
 - #redox-join:matrix.org
 
@@ -24,7 +24,7 @@ A slightly more formal way of communication with fellow Redox devs, but a little
 
 If you want to create an account, read this [page](https://doc.redox-os.org/book/ch12-01-signing-in-to-gitlab.html).
 
-If you have ready MRs (merge requests) you must send the links in the [MRs](https://matrix.to/#/#redox-mrs:matrix.org) room. Before you can join this room, request an invite in the [Join Requests](https://matrix.to/#/#redox-join:matrix.org) room.
+If you have ready MRs (merge requests) you must send the links in the [MRs](https://matrix.to/#/#redox-mrs:matrix.org) room. To join this room, you will need to request an invite in the [Join Requests](https://matrix.to/#/#redox-join:matrix.org) room.
 
 By sending a message in the room, your MR will not be forgotten or accumulate conflicts.
 

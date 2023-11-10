@@ -8,8 +8,7 @@ We highly recommend that you start with the [Book](https://doc.redox-os.org/book
 
 ## References
 
-### The Book
-- [Book](https://doc.redox-os.org/book/) - A book describing Redox's design.
+### Cargo Docs
 
 - [redox_syscall](https://docs.rs/redox_syscall/latest/syscall/) - Documentation for the Redox system calls.
 

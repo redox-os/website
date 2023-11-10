@@ -34,7 +34,7 @@ This page covers questions/answers for newcomers and end-users.
 
 ## What is Redox?
 
-Redox is a microkernel-based operating system: a complete, fully-functioning, general-purpose operating system with a focus on safety, freedom, reliability, correctness, and pragmatism.
+Redox is a microkernel-based, complete, fully-functioning and general-purpose operating system created in 2015, with a focus on safety, freedom, reliability, correctness, and pragmatism.
 
 Wherever possible, the system components are written in Rust and run in user-space.
 
@@ -62,7 +62,7 @@ You can modify/change many system components without a system restart, similar t
 
 #### Bug isolation
 
-Most system components run in user-space on a microkernel system. Because of this, bug in a non-kernel component won't [crash the system/kernel](https://en.wikipedia.org/wiki/Kernel_panic).
+Most system components run in user-space on a microkernel system. Because of this, a bug in a non-kernel component won't [crash the system/kernel](https://en.wikipedia.org/wiki/Kernel_panic).
 
 #### No-reboot design
 
@@ -88,7 +88,7 @@ By isolating the system components from the kernel, the [attack surface](https:/
 
 #### Improved security and reliability without significant performance impact
 
-As the kernel is small, it uses less memory to do its work. The limited kernel code size helps to keep its close to bug-free status ([KISS](https://en.wikipedia.org/wiki/KISS_principle)).
+As the kernel is small, it uses less memory to do its work. The limited kernel code size helps to close in on the goal of a "bug-free" status ([KISS](https://en.wikipedia.org/wiki/KISS_principle)).
 
 Rust's safe and fast language design, combined with the small kernel code size, helps ensure a reliable, performant and easy to maintain core.
 
@@ -128,7 +128,7 @@ Redox is still under development, so our list of supported applications is curre
 
 ## What is a Unix-like OS?
 
-Any OS compatible with the [Single Unix Specification](https://en.wikipedia.org/wiki/Single_UNIX_Specification) and [POSIX](https://en.wikipedia.org/wiki/POSIX). You can expect a [shell](https://en.wikipedia.org/wiki/Unix_shell), the "[everything is a file](https://en.wikipedia.org/wiki/Everything_is_a_file)" concept and multitasking and multiuser support.
+Any OS compatible with the [Single Unix Specification](https://en.wikipedia.org/wiki/Single_UNIX_Specification) and [POSIX](https://en.wikipedia.org/wiki/POSIX). You can expect a [shell](https://en.wikipedia.org/wiki/Unix_shell), the "[Everything is a File](https://en.wikipedia.org/wiki/Everything_is_a_file)" concept, multitasking and multiuser support.
 
 [Unix](https://en.wikipedia.org/wiki/Unix) was a highly influential multitasking system and impacted the design choices of most modern systems.
 
@@ -138,7 +138,7 @@ Any OS compatible with the [Single Unix Specification](https://en.wikipedia.org/
 
 ### [Plan 9](http://9p.io/plan9/index.html)
 
-This Bell Labs OS brings the concept of "everything is a file" to the highest level, doing all the system communication from the filesystem.
+This Bell Labs OS brings the concept of "Everything is a File" to the highest level, doing all the system communication from the filesystem.
 
 - [Drew DeVault explains the Plan 9](https://drewdevault.com/2022/11/12/In-praise-of-Plan-9.html)
 - [Plan 9's influence on Redox](https://doc.redox-os.org/book/ch05-00-urls-schemes-resources.html)
@@ -220,7 +220,7 @@ Redox has some variants for each task, take a look at them below:
 
 ## Which devices does Redox support?
 
-There are billions of devices with hundreds of models/architectures in the world. We try to write drivers for the most used devices to support more people.
+There are billions of devices with hundreds of models and architectures in the world. We try to write drivers for the most used devices to support more people. Support depends on the specific hardware, since some drivers are device-specific and others are architecture-specific.
 
 Have a look at [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HARDWARE.md) to see all tested computers.
 
@@ -283,7 +283,7 @@ A computer processor is the most complex machine of the world: even the oldest p
 
 The main problem with old computers is the amount of RAM available (they were sold in a era where RAM chips were expensive) and the lack of SSE/AVX extensions (programs use them to speed up the algorithms). Because of this some modern programs may not work or require a lot of RAM to perform complex tasks.
 
-Redox itself will work normally if the processor architecture is supported by the system, but the performance per program may vary.
+Redox itself will work normally if the processor architecture is supported by the system, but the performance and stability may vary per program.
 
 ## Which virtual machines does Redox have integration with?
 
