@@ -1,5 +1,5 @@
 +++
-title = "Community"
+title = "Społeczność"
 +++
 
 This page attempts to explain how the Redox OS community is organised and help you navigate it.
