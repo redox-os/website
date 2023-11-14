@@ -10,13 +10,13 @@ Gorąco polecamy zacząć od [Książki](https://doc.redox-os.org/book/), gdyż 
 
 [Książka](https://doc.redox-os.org/book/). Książka opisująca architekturę systemu Redox.
 
-[Talks](/talks/). Redox talks given at various events and conferences.
+[Konferencje](/talks/). Przemówienia Redox wygłaszane na różnych wydarzeniach i konferencjach.
 
-[redox_syscall](https://docs.rs/redox_syscall/latest/syscall/). Documentation for the Redox system calls.
+[redox_syscall](https://docs.rs/redox_syscall/latest/syscall/). Dokumentacja wywołań systemowych Redox.
 
-[libstd](https://doc.rust-lang.org/stable/std/). Documentation for the Rust standard library.
+[libstd](https://doc.rust-lang.org/stable/std/). Dokumentacja standardowej biblioteki Rusta.
 
-[Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
+[Ion Manual](https://doc.redox-os.org/ion-manual/). Dokumentacja powłoki Ion.
 
 ## Współtworzenie systemu Redox
 
