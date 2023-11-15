@@ -6,31 +6,31 @@ Na tej stronie znajdują się pytania/odpowiedzi dla nowicjuszy i użytkowników
 
 - [Co to jest Redox?](#Co-to-jest-Redox)
 - [Co znaczy Redox?](#Co-znaczy-Redox)
-- [Jakie funkcje ma Redox?](#what-features-does-redox-have)
+- [Jakie funkcje ma Redox?](#Jakie-funkcje-ma-Redox)
     - [Microkernel benefits](#microkernel-benefits)
     - [Rust benefits](#rust-benefits)
-- [Jaki jest cel Redox?](#what-is-the-purpose-of-redox)
-- [Co mogę zrobić z Redoxem?](#what-i-can-do-with-redox)
-- [Co to jest system operacyjny typu Unix?](#what-is-a-unix-like-os)
-- [Jak Redox inspiruje się innymi systemami?](#how-redox-is-inspired-by-other-systems)
+- [Jaki jest cel Redox?](#Jaki-jest-cel-Redox)
+- [Co mogę zrobić z Redox?](#Co-mogę-zrobić-z-Redox)
+- [Co to jest system operacyjny typu Unix?](#Co-to-jest-system-operacyjny-typu-Unix)
+- [Jak Redox inspiruje się innymi systemami?](#Jak-Redox-inspiruje-się-innymi-systemami)
     - [Plan 9](#plan-9)
     - [Minix](#minix)
     - [seL4](#sel4)
     - [BSD](#bsd)
     - [Linux](#linux)
-- [Co to jest microkernel?](#what-is-a-microkernel)
-- [Jakie programy może uruchomić Redox?](#what-programs-can-redox-run)
-- [Jak zainstalować programy na Redox?](#how-to-install-programs-on-redox)
-- [Jakie są warianty Redox?](#which-are-the-redox-variants)
-- [Które urządzenia obsługuje Redox?](#which-devices-does-redox-support)
-- [Mam komputer z niższej półki, czy Redox będzie na nim działał?](#i-have-a-low-end-computer-would-redox-work-on-it)
-- [Z jakimi maszynami wirtualnymi Redox ma integrację?](#which-virtual-machines-does-redox-have-integration-with)
-- [Jak skompilować Redox OS?](#how-do-i-build-redox)
- - [Jak uruchomić QEMU bez GUI](#how-to-launch-qemu-without-gui)
- - [Jak rozwiązywać problemy z kompilacją w przypadku błędów](#how-to-troubleshoot-your-build-in-case-of-errors)
- - [Jak zgłaszać błędy w Redox](#how-to-report-bugs-on-redox)
-- [Jak mogę przyczynić się do rozwoju projektu Redox?](#how-do-i-contribute-to-redox)
-- [Mam problem/pytanie do zespołu Redox](#i-have-a-problemquestion-for-redox-team)
+- [Co to jest microkernel?](#Co-to-jest-microkernel)
+- [Jakie programy może uruchomić Redox?](#Jakie-programy-może-uruchomić-Redox)
+- [Jak zainstalować programy na Redox?](#Jak-zainstalować-programy-na-Redox)
+- [Jakie są warianty Redox?](#Jakie-są-warianty-Redox)
+- [Które urządzenia obsługuje Redox?](#Które-urządzenia-obsługuje-Redox)
+- [Mam komputer z niższej półki, czy Redox będzie na nim działał?](#Mam-komputer-z-niższej-półki-czy-Redox-będzie-na-nim-działał)
+- [Z jakimi maszynami wirtualnymi Redox ma integrację?](#Z-jakimi-maszynami-wirtualnymi-Redox-ma-integrację)
+- [Jak skompilować Redox OS?](#Jak-skompilować-Redox-OS)
+ - [Jak uruchomić QEMU bez GUI](#Jak-uruchomić-QEMU-bez-GUI)
+ - [Jak rozwiązywać problemy z kompilacją w przypadku błędów](#Jak-rozwiązywać-problemy-z-kompilacją-w-przypadku-błędów)
+ - [Jak zgłaszać błędy w Redox](#Jak-zgłaszać-błędy-w-Redox)
+- [Jak mogę przyczynić się do rozwoju projektu Redox?](#Jak-mogę-przyczynić-się-do-rozwoju-projektu-Redox)
+- [Mam problem/pytanie do zespołu Redox](#Mam-problem/pytanie-do-zespołu-Redox)
 
 ## Co to jest Redox?
 
@@ -52,7 +52,7 @@ Wersja 1.0 zostanie wydana, gdy wszystkie API systemu zostaną uznane za stabiln
 
 To też brzmi jak Minix/Linux.
 
-## What features does Redox have?
+## Jakie funkcje ma Redox?
 
 ### Microkernel benefits
 
@@ -109,7 +109,7 @@ Redox używa RedoxFS jako domyślnego systemu plików, obsługuje podobne funkcj
 
 Oczekuj wysokiej wydajności i bezpieczeństwa danych jak (kopiowanie przy zapisie, integralność danych, woluminy, migawki, zabezpieczenie przed utratą danych itd.).
 
-## Jaki jest cel Redoxu?
+## Jaki jest cel Redox?
 
 Głównym celem Redox jest bycie systemem operacyjnym ogólnego przeznaczenia, przy jednoczesnym zachowaniu bezpieczeństwa, niezawodności i poprawności.
 
@@ -117,7 +117,7 @@ Redox ma być alternatywą dla istniejących systemów uniksowych (Linux/BSD), z
 
 - [Nasze cele](https://doc.redox-os.org/book/ch01-01-our-goals.html)
 
-## Co mogę zrobić z Redoxem?
+## Co mogę zrobić z Redox?
 
 Jako system operacyjny ogólnego przeznaczenia będziesz w stanie wykonać prawie każde zadanie na większości urządzeń przy wysokiej wydajności/bezpieczeństwie.
 
@@ -125,7 +125,7 @@ Redox jest wciąż w fazie rozwoju, więc lista obsługiwanych aplikacji jest ob
 
 - [Przypadki użycia](https://doc.redox-os.org/book/ch01-04-redox-use-cases.html)
 
-## What is a Unix-like OS?
+## Co to jest system operacyjny typu Unix?
 
 Dowolny system operacyjny zgodny ze [Single Unix Specification](https://en.wikipedia.org/wiki/Single_UNIX_Specification) i [POSIX](https://en.wikipedia.org/wiki/POSIX), oczekuj [shell](https://en.wikipedia.org/wiki/Unix_shell), "[koncepcja wszytsko jest plikiem](https://en.wikipedia.org/wiki/Everything_is_a_file)" , wielozadaniowość i wielu użytkowników.
 
@@ -133,57 +133,56 @@ Dowolny system operacyjny zgodny ze [Single Unix Specification](https://en.wikip
 
 - [Artykuł na Wikipedia](https://en.wikipedia.org/wiki/Unix-like)
 
-## How Redox is inspired by other systems?
+## Jak Redox inspiruje się innymi systemami?
 
 ### [Plan 9](http://9p.io/plan9/index.html)
 
-This Bell Labs OS brings the concept of "everything is a file" to the highest level, doing all the system communication from the filesystem.
+Ten system operacyjny Bell Labs przenosi koncepcję „wszystko jest plikiem” na najwyższy poziom, realizując całą komunikację systemową z systemu plików.
 
-- [Drew DeVault explains the Plan 9](https://drewdevault.com/2022/11/12/In-praise-of-Plan-9.html)
-- [Plan 9's influence on Redox](https://doc.redox-os.org/book/ch05-00-urls-schemes-resources.html)
+- [Drew DeVault wyjaśnia Plan 9](https://drewdevault.com/2022/11/12/In-praise-of-Plan-9.html)
+- [Wpływ Planu 9 na Redox](https://doc.redox-os.org/book/ch05-00-urls-schemes-resources.html)
 
 ### [Minix](https://minix3.org/)
 
-The most influential Unix-like system with a microkernel, it has advanced features such as system modularity, [kernel panic](https://en.wikipedia.org/wiki/Kernel_panic) resistence, driver reincarnation, protection against bad drivers and secure interfaces for [process comunication](https://en.wikipedia.org/wiki/Inter-process_communication).
+Najbardziej wpływowy system uniksowy z mikrojądrem, posiadający zaawansowane funkcje, takie jak modułowość systemu, [kernel panic](https://en.wikipedia.org/wiki/Kernel_panic) rodporność, reinkarnacja sterowników, ochrona przed złymi sterownikami i bezpieczeństwo interfejsy do [komunikacji procesowej](https://en.wikipedia.org/wiki/Inter-process_communication).
 
-Redox is largely inspired by Minix, it has a similar architecture and feature set written in Rust.
+Redox jest w dużej mierze inspirowany Minixem, ma podobną architekturę i zestaw funkcji napisany w Rust.
 
-- [How Minix influenced the Redox design](https://doc.redox-os.org/book/ch04-01-microkernels.html)
+- [Jak Minix wpłynął na projekt Redox](https://doc.redox-os.org/book/ch04-01-microkernels.html)
 
 ### [seL4](https://sel4.systems/)
 
-The most fast and simple microkernel of the world, it aims for performance and simplicity.
+Najszybszy i najprostszy mikrokernel na świecie, ma na celu wydajność i prostotę.
 
-Redox follow the same principle, trying to make the kernel-space small as possible (moving components to user-space and reducing the number of system calls, passing the complexity to user-space) and keeping the overall performance good (reducing the context switch cost).
+Redox kieruje się tą samą zasadą, starając się maksymalnie zmniejszyć przestrzeń jądra (przenosząc komponenty do przestrzeni użytkownika i zmniejszając liczbę wywołań systemowych, przekazując złożoność do przestrzeni użytkownika) i utrzymując dobrą wydajność.
 
 ### [BSD](https://www.bsd.org/)
 
-This Unix [family](https://en.wikipedia.org/wiki/Research_Unix) included several improvements on Unix systems, the open-source variants of BSD added many improvements to the original system (like Linux did).
+Ta [rodzina](https://en.wikipedia.org/wiki/Research_Unix) Uniksa zawierała kilka ulepszeń systemów uniksowych, a warianty BSD o otwartym kodzie źródłowym, które dodały wiele ulepszeń do oryginalnego systemu (podobnie jak Linux).
 
-[FreeBSD](https://www.freebsd.org/) is the most notable example, Redox took inspiration from [Capsicum](https://man.freebsd.org/cgi/man.cgi?capsicum(4)) (a capability-based system) and [jails](https://en.wikipedia.org/wiki/Freebsd_jail) (a sandbox technology) for the namespaces implementation.
+[FreeBSD](https://www.freebsd.org/) jest najbardziej godnym uwagi przykładem, z którego Redox czerpał inspirację [Capsicum](https://man.freebsd.org/cgi/man.cgi?capsicum(4)) (system oparty na możliwościach) i [jails](https://en.wikipedia.org/wiki/Freebsd_jail) (technologia sandbox) do implementacji przestrzeni nazw.
 
 ### [Linux](https://www.kernel.org/)
 
-The most advanced monolithic kernel and biggest open-source project of the world, it brought several improvements and optimizations to the Unix-like world.
+Najbardziej zaawansowane monolityczne jądro i największy na świecie projekt open source, wprowadziło kilka ulepszeń i optymalizacji do świata Uniksa.
 
-Redox tries to implement the Linux performance improvements in a microkernel design.
+Redox próbuje wdrożyć ulepszenia wydajności Linuksa w projekcie mikrojądra.
 
-## What is a microkernel?
+## Co to jest microkernel?
 
-A microkernel is the near-minimum amount of software that can provide the mechanisms needed to implement an operating system, which runs on the highest privilege of the processor.
+Mikrojądro to niemal minimalna ilość oprogramowania, która może zapewnić mechanizmy potrzebne do wdrożenia systemu operacyjnego działającego na najwyższych uprawnieniach procesora.
 
-This approach to OS design brings more stability and security, with a small cost on performance.
+Takie podejście do projektowania systemu operacyjnego zapewnia większą stabilność i bezpieczeństwo przy niewielkim koszcie wydajności.
 
-- [Redox Book explanation](https://doc.redox-os.org/book/ch04-01-microkernels.html)
+- [Wiecej informacji w ksiażce Redox](https://doc.redox-os.org/book/ch04-01-microkernels.html)
 
-## What programs can Redox run?
+## Jakie programy może uruchomić Redox?
 
-Redox is designed to be source-compatible with most Unix, Linux and POSIX-compilant applications, only requiring compilation.
+Redox został zaprojektowany tak, aby był kompatybilny ze źródłami z większości aplikacji zgodnych z Unixem, Linuxem i POSIX, wymagając jedynie kompilacji.
 
-Currently, most GUI applications require porting, as we don't support X11 or Wayland yet.
+Obecnie większość aplikacji GUI wymaga przeniesienia, ponieważ nie obsługujemy jeszcze X11 ani Wayland.
 
-Some important software that Redox supports:
-
+Niektóre ważne oprogramowanie obsługiwane przez Redox:
 - [Bash](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/bash)
 - [ffmpeg](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/ffmpeg)
 - [GCC](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/gcc)
@@ -193,80 +192,80 @@ Some important software that Redox supports:
 - [OpenSSL](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/openssl)
 - [SDL2](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/sdl2)
 
-You can see all Redox components/ported programs [here](https://static.redox-os.org/pkg/x86_64-unknown-redox/).
+Możesz zobaczyć wszystkie przeniesione programy/komponenty do Redox [tutaj](https://static.redox-os.org/pkg/x86_64-unknown-redox/).
 
-## How to install programs on Redox?
+## Jak zainstalować programy na Redox?
 
-Redox has a package manager similar to `apt` (Debian) and `pkg` (FreeBSD), you can see how to use it on this page:
+Redox ma menedżera pakietów podobnego do `apt` (Debian) i `pkg` (FreeBSD), możesz zobaczyć, jak go używać na tej stronie:
 
-- [Redox package manager](https://doc.redox-os.org/book/ch02-08-pkg.html)
+- [Redox manager pakietów](https://doc.redox-os.org/book/ch02-08-pkg.html)
 
-## Which are  the Redox variants?
+## Jakie są warianty Redox?
 
-Redox has some variants for each task, take a look on them below:
+Redox OS ma kilka wariantów dla różnych zastosowań, pełna lista zastosowań i wersji poniżej:
 
-- `server-minimal` - The most minimal variant with a basic system, aimed for embedded devices, very old computers and developers.
+- `server-minimal` - Najbardziej minimalny wariant z podstawowym systemem, przeznaczony dla urządzeń wbudowanych, bardzo starych komputerów i programistów.
 
-- `desktop-minimal` - The most minimal variant with the Orbital desktop environment included, aimed for embedded devices, very old computers and developers.
+- `desktop-minimal` - Najbardziej minimalny wariant z dołączonym środowiskiem graficznym Orbital, przeznaczony dla urządzeń wbudowanych, bardzo starych komputerów i programistów.
 
-- `server` - The server variant with a complete system and network tools, aimed for server administrators, embedded devices, low-end computers and developers.
+- `server` - Wariant serwerowy z kompletnym systemem i narzędziami sieciowymi, przeznaczony dla administratorów serwerów, urządzeń wbudowanych, komputerów z niższej półki i programistów.
 
-- `desktop` - The standard variant with a complete system, Orbital desktop environment and useful tools, aimed for daily usage, producers, developers and gamers.
+- `desktop` - Wariant standardowy z kompletnym systemem, środowiskiem graficznym Orbital i przydatnymi narzędziami, przeznaczony do codziennego użytku, producentów, programistów i graczy.
 
-- `dev` - The development variant with a complete system and development tools, aimed for developers.
+- `dev` - Wariant deweloperski z kompletnym systemem i narzędziami programistycznymi, przeznaczony dla programistów.
 
-- `demo` - The demo variant with a complete system, tools, players and games, aimed for testers, gamers and developers.
+- `demo` - Wariant demo z kompletnym systemem, narzędziami, grami, przeznaczony dla testerów, graczy i programistów.
 
-## Which devices does Redox support?
+## Które urządzenia obsługuje Redox?
 
-There are billions of devices with hundreds of models/architectures in the world, we try to write drivers for the most used devices to support more people, some drivers are device-specific and others are architecture-specific.
+Na świecie istnieją miliardy urządzeń z setkami modeli/architektur, staramy się pisać sterowniki dla najczęściej używanych urządzeń, aby obsługiwać więcej osób, niektóre sterowniki są specyficzne dla urządzenia, a inne są specyficzne dla architektury.
 
-Have a look at [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HARDWARE.md) to see all tested computers.
+Zajrzyj do [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HARDWARE.md) aby zobaczyć wszystkie przetestowane komputery.
 
 ### CPU
 
-- Intel - 64-bit (x86_64) and 32-bit (i686) from Pentium II and after with limitations.
-- AMD - 64-bit (AMD64) and 32-bit.
-- ARM - 64-bit (Aarch64) with limitations.
+- Intel - 64-bit (x86_64) and 32-bit (i686) z rodziny Pentium II i nowszych z ograniczeniami.
+- AMD - 64-bit (AMD64) i 32-bit.
+- ARM - 64-bit (Aarch64) z ograniczeniami.
 
 ### Hardware Interfaces
 
 - [ACPI](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/acpid)
 - [PCI](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/pcid)
 
-(USB soon)
+(USB wkrótce)
 
 ### Video
 
 - [VGA](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/vesad) - (BIOS)
 - GOP (UEFI)
-- [LLVMpipe](https://docs.mesa3d.org/drivers/llvmpipe.html) - Software Rendering
+- [LLVMpipe](https://docs.mesa3d.org/drivers/llvmpipe.html) - Renderowanie oprogramowania
 
-(Intel/AMD and others in the future)
+(Intel/AMD i inne w przyszłości)
 
-### Sound
+### Dzwięk
 
 - [Intel chipsets](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ihdad)
 - [Realtek chipsets](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ac97d)
 - [PC speaker](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/pcspkrd)
 
-([Sound Blaster](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/sb16d) soon)
+([Sound Blaster](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/sb16d) wkrótce)
 
-### Storage
+### Przestrzeń dyskowa
 
 - [IDE](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ided) - (PATA)
 - [AHCI](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ahcid) - (SATA)
 - [NVMe](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/nvmed)
 
-(USB soon)
+(USB wkrótce)
 
-### Input
+### Wejście
 
 - [PS/2 keyboards](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d)
 - [PS/2 mouse](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d)
 - [PS/2 touchpad](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d)
 
-(USB soon)
+(USB wkrótce)
 
 ### Internet
 
@@ -274,56 +273,56 @@ Have a look at [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/m
 - [Intel 10 Gigabit ethernet](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ixgbed)
 - [Realtek ethernet](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/rtl8168d)
 
-(Wi-Fi/[Atheros ethernet](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/alxd) soon)
+(Wi-Fi/[Atheros ethernet](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/alxd) wkrótce)
 
-## I have a low-end computer, would Redox work on it?
+## Mam komputer z niższej półki czy Redox będzie na nim działał?
 
-A computer processor is the most complex machine of the world, even the most old processors are powerful for some tasks, it depends on the task.
+Procesor komputera to najbardziej złożona maszyna na świecie, nawet najstarsze procesory są w stanie wykonać niektóre zawansowana obliczenia ale zależy to też od konkretnego zadania.
 
-The main problem with old computers is the amount of RAM available (they were sold in a epoch where RAM chips were expensive) and lack of SSE/AVX extensions (programs use them to speed up the algorithms), thus some modern programs may not work or require a lot of RAM to perform complex tasks.
+Głównym problemem starych komputerów jest ilość dostępnej pamięci RAM (sprzedawane były w czasach, gdy kości RAM były drogie) i brak rozszerzeń SSE/AVX (programy wykorzystują je do przyspieszania algorytmów), przez co niektóre nowoczesne programy mogą nie działać lub wymagają dużej ilości pamięci RAM do wykonywania złożonych zadań.
 
-Redox will work normally (if the processor architecture is supported by the system) but you will need to test each program.
+Redox będzie działał normalnie (jeśli system obsługuje architekturę procesora), ale konieczne będzie przetestowanie każdego programu.
 
-## Which virtual machines does Redox have integration with?
+## Z jakimi maszynami wirtualnymi Redox ma integrację?
 
 - [QEMU](https://www.qemu.org/)
 - [VirtualBox](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/vboxd)
 
-In the future the microkernel could act as a hypervisor, similar to [Xen](https://xenproject.org/).
+W przyszłości mikrokernel mógłby pełnić funkcję hypervisora, podobnie jak [Xen](https://xenproject.org/).
 
-A [hypervisor](https://en.wikipedia.org/wiki/Hypervisor) is software providing the ability to run multiple isolated operating system instances simultaneously.
+A [hypervisor](https://en.wikipedia.org/wiki/Hypervisor) to oprogramowanie umożliwiające jednoczesne uruchomienie wielu izolowanych instancji systemu operacyjnego.
 
-## How do I build Redox?
+## Jak skompilować Redox OS?
 
-Currently Redox has a bootstrap script for Pop OS!, Ubuntu, Debian, Fedora, Arch Linux, openSUSE and FreeBSD with unmaintained support for other distributions.
+Obecnie Redox posiada skrypt startowy dla Pop OS!, Ubuntu, Debian, Fedora, Arch Linux, openSUSE i FreeBSD z nieutrzymywaną obsługą innych dystrybucji.
 
-We also offer Podman as our universal compilation method, it is the recommended build process for non-Debian systems because it avoids environment problems on the build process.
+Oferujemy również Podman jako naszą uniwersalną metodę kompilacji. Jest to zalecany proces kompilacji dla systemów innych niż Debian, ponieważ pozwala uniknąć problemów środowiskowych w procesie kompilacji.
 
-- [Redox Book Guide](https://doc.redox-os.org/book/ch02-05-building-redox.html) - (Pop OS!, Ubuntu, Debian, Fedora, Arch Linux, openSUSE and FreeBSD)
-- [Redox Book Podman Guide](https://doc.redox-os.org/book/ch02-06-podman-build.html)
+- [Redox przewodnik](https://doc.redox-os.org/book/ch02-05-building-redox.html) - (Pop OS!, Ubuntu, Debian, Fedora, Arch Linux, openSUSE and FreeBSD)
+- [Redox Podman przewodnk](https://doc.redox-os.org/book/ch02-06-podman-build.html)
 
-### How to launch QEMU without GUI
+### Jak uruchomić QEMU bez GUI
 
-Run:
+Uruchom:
 
 - `make qemu vga=no`
 
-### How to troubleshoot your build in case of errors
+### Jak rozwiązywać problemy z kompilacją w przypadku błędów
 
-Read [this](https://doc.redox-os.org/book/ch08-05-troubleshooting.html) page or join us on [Redox Chat](https://doc.redox-os.org/book/ch13-01-chat.html).
+Przeczytaj [tą](https://doc.redox-os.org/book/ch08-05-troubleshooting.html) stronę lub dołącz do nas na [Redox Chat](https://doc.redox-os.org/book/ch13-01-chat.html).
 
-### How to report bugs on Redox
+### Jak zgłaszać błędy w Redox
 
-Check GitLab Issues first to see if your problem is already known.
+Najpierw sprawdź Problemy na GitLabie, aby sprawdzić, czy Twój problem jest już znany.
 
-- [Redox Book Bug Report Guide](https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html)
+- [Redox przewodnik jak zgłaszać błedy](https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html)
 
-## How do I contribute to Redox?
+## Jak mogę przyczynić się do rozwoju projektu Redox?
 
-You can contribute to Redox in many ways, you can see them on [CONTRIBUTING](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md).
+Możesz przyczynić się na wiele sposobów do rozwoju Redox OS, wiecej informacji [CONTRIBUTING](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md).
 
-## I have a problem/question for Redox team
+## Mam problem/pytanie do zespołu Redox
 
-- Have a look at the [Documentation](/docs/) page for more details of Redox internals.
-- Have a look at the [Redox Book](https://doc.redox-os.org/book/) to see if it answers your questions/fixes your problem.
-- If the book does not answer your question, ask your question/say your problem on the [Chat](https://doc.redox-os.org/book/ch13-01-chat.html).
+- Spójrz na stronę [Dokumentacja](/docs/), aby uzyskać więcej szczegółów na temat elementów wewnętrznych Redox.
+- Spójrz na [Redox Book](https://doc.redox-os.org/book/) aby sprawdzić, czy odpowiada na Twoje pytania/rozwiązuje problem.
+- Jeśli książka nie zawiera odpowiedzi na Twoje pytanie, zadaj pytanie/przedstaw swój problem na stronie [Chat](https://doc.redox-os.org/book/ch13-01-chat.html).

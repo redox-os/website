@@ -593,7 +593,11 @@ name = "Dokumentacja"
 url = "/docs/"
 [[languages.pl.menu.main]]
 weight = 2
-name = "Community"
+name = "FAQ"
+url = "/pl/faq"
+[[languages.pl.menu.main]]
+weight = 2
+name = "Społeczność"
 url = "/community"
 [[languages.pl.menu.main]]
 weight = 3
