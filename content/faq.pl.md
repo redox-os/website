@@ -16,12 +16,6 @@ Na tej stronie znajdują się pytania/odpowiedzi dla nowicjuszy i użytkowników
 - [Co to jest system operacyjny typu Unix?](#Co-to-jest-system-operacyjny-typu-Unix)
 - [Jak Redox inspiruje się innymi systemami?](#Jak-Redox-inspiruje-się-innymi-systemami)
 =======
-=======
-<<<<<<< HEAD
->>>>>>> 75a487c (added new faq.pl.md file plus few translations in other files as well)
-=======
->>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
->>>>>>> 57b630448bb595bf81ee5ae783c297ea82690fcb
 - [Jakie funkcje ma Redox?](#what-features-does-redox-have)
     - [Microkernel benefits](#microkernel-benefits)
     - [Rust benefits](#rust-benefits)
@@ -29,12 +23,6 @@ Na tej stronie znajdują się pytania/odpowiedzi dla nowicjuszy i użytkowników
 - [Co mogę zrobić z Redoxem?](#what-i-can-do-with-redox)
 - [Co to jest system operacyjny typu Unix?](#what-is-a-unix-like-os)
 - [Jak Redox inspiruje się innymi systemami?](#how-redox-is-inspired-by-other-systems)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
-=======
->>>>>>> 57b630448bb595bf81ee5ae783c297ea82690fcb
 >>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
 =======
 >>>>>>> 75a487c (added new faq.pl.md file plus few translations in other files as well)
@@ -57,12 +45,6 @@ Na tej stronie znajdują się pytania/odpowiedzi dla nowicjuszy i użytkowników
  - [Jak zgłaszać błędy w Redox](#Jak-zgłaszać-błędy-w-Redox)
 - [Jak mogę przyczynić się do rozwoju projektu Redox?](#Jak-mogę-przyczynić-się-do-rozwoju-projektu-Redox)
 - [Mam problem/pytanie do zespołu Redox](#Mam-problem/pytanie-do-zespołu-Redox)
-=======
-<<<<<<< HEAD
->>>>>>> 75a487c (added new faq.pl.md file plus few translations in other files as well)
-=======
->>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
->>>>>>> 57b630448bb595bf81ee5ae783c297ea82690fcb
 - [Co to jest microkernel?](#what-is-a-microkernel)
 - [Jakie programy może uruchomić Redox?](#what-programs-can-redox-run)
 - [Jak zainstalować programy na Redox?](#how-to-install-programs-on-redox)
@@ -105,6 +87,9 @@ To też brzmi jak Minix/Linux.
 >>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
 =======
 ## What features does Redox have?
+>>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
+=======
+## What features does Redox have?
 <<<<<<< HEAD
 >>>>>>> 75a487c (added new faq.pl.md file plus few translations in other files as well)
 =======
@@ -123,13 +108,6 @@ Większość komponentów systemu działa w przestrzeni użytkownika w systemie 
 
 <<<<<<< HEAD
 #### Architektura No-reboot
-=======
-#### No-reboot design
-<<<<<<< HEAD
->>>>>>> 75a487c (added new faq.pl.md file plus few translations in other files as well)
-=======
->>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
->>>>>>> 57b630448bb595bf81ee5ae783c297ea82690fcb
 
 W dobrze zaprojektowanych i napisanych Microkernelach naprawianie błędów wystepuje bardzo rzadko, więc nie będziesz musiał zbyt często restartować systemu, aby go zaktualizować.
 
@@ -177,6 +155,9 @@ Oczekuj wysokiej wydajności i bezpieczeństwa danych jak (kopiowanie przy zapis
 <<<<<<< HEAD
 <<<<<<< HEAD
 ## Jaki jest cel Redox?
+=======
+## Jaki jest cel Redoxu?
+>>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
 =======
 ## Jaki jest cel Redoxu?
 >>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
@@ -271,28 +252,6 @@ Obecnie większość aplikacji GUI wymaga przeniesienia, ponieważ nie obsługuj
 
 Niektóre ważne oprogramowanie obsługiwane przez Redox:
 =======
-=======
-## Co mogę zrobić z Redoxem?
-
-Jako system operacyjny ogólnego przeznaczenia będziesz w stanie wykonać prawie każde zadanie na większości urządzeń przy wysokiej wydajności/bezpieczeństwie.
-
-Redox jest wciąż w fazie rozwoju, więc lista obsługiwanych aplikacji jest obecnie ograniczona, ale stale dodajemy nowe aplikacje i ich lista stale rośnie.
-
-- [Przypadki użycia](https://doc.redox-os.org/book/ch01-04-redox-use-cases.html)
-
-## What is a Unix-like OS?
-
-Dowolny system operacyjny zgodny ze [Single Unix Specification](https://en.wikipedia.org/wiki/Single_UNIX_Specification) i [POSIX](https://en.wikipedia.org/wiki/POSIX), oczekuj [shell](https://en.wikipedia.org/wiki/Unix_shell), "[koncepcja wszytsko jest plikiem](https://en.wikipedia.org/wiki/Everything_is_a_file)" , wielozadaniowość i wielu użytkowników.
-
-[Unix](https://en.wikipedia.org/wiki/Unix) był bardzo wpływowym systemem wielozadaniowym i miał wpływ na wybory projektowe większości nowoczesnych systemów.
-
-- [Artykuł na Wikipedia](https://en.wikipedia.org/wiki/Unix-like)
-
-<<<<<<< HEAD
->>>>>>> 75a487c (added new faq.pl.md file plus few translations in other files as well)
-=======
->>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
->>>>>>> 57b630448bb595bf81ee5ae783c297ea82690fcb
 ## How Redox is inspired by other systems?
 
 ### [Plan 9](http://9p.io/plan9/index.html)
@@ -344,12 +303,6 @@ Currently, most GUI applications require porting, as we don't support X11 or Way
 
 Some important software that Redox supports:
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
-=======
->>>>>>> 57b630448bb595bf81ee5ae783c297ea82690fcb
 >>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
 =======
 >>>>>>> 75a487c (added new faq.pl.md file plus few translations in other files as well)
@@ -400,12 +353,6 @@ Zajrzyj do [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/maste
 - AMD - 64-bit (AMD64) i 32-bit.
 - ARM - 64-bit (Aarch64) z ograniczeniami.
 =======
-=======
-<<<<<<< HEAD
->>>>>>> 75a487c (added new faq.pl.md file plus few translations in other files as well)
-=======
->>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
->>>>>>> 57b630448bb595bf81ee5ae783c297ea82690fcb
 You can see all Redox components/ported programs [here](https://static.redox-os.org/pkg/x86_64-unknown-redox/).
 
 ## How to install programs on Redox?
@@ -441,12 +388,6 @@ Have a look at [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/m
 - Intel - 64-bit (x86_64) and 32-bit (i686) from Pentium II and after with limitations.
 - AMD - 64-bit (AMD64) and 32-bit.
 - ARM - 64-bit (Aarch64) with limitations.
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
-=======
->>>>>>> 57b630448bb595bf81ee5ae783c297ea82690fcb
 >>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
 =======
 >>>>>>> 75a487c (added new faq.pl.md file plus few translations in other files as well)
@@ -459,6 +400,9 @@ Have a look at [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/m
 <<<<<<< HEAD
 <<<<<<< HEAD
 (USB wkrótce)
+=======
+(USB soon)
+>>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
 =======
 (USB soon)
 >>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
@@ -482,23 +426,11 @@ Have a look at [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/m
 
 ### Dzwięk
 =======
-=======
-<<<<<<< HEAD
->>>>>>> 75a487c (added new faq.pl.md file plus few translations in other files as well)
-=======
->>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
->>>>>>> 57b630448bb595bf81ee5ae783c297ea82690fcb
 - [LLVMpipe](https://docs.mesa3d.org/drivers/llvmpipe.html) - Software Rendering
 
 (Intel/AMD and others in the future)
 
 ### Sound
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
-=======
->>>>>>> 57b630448bb595bf81ee5ae783c297ea82690fcb
 >>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
 =======
 >>>>>>> 75a487c (added new faq.pl.md file plus few translations in other files as well)
@@ -512,6 +444,11 @@ Have a look at [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/m
 ([Sound Blaster](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/sb16d) wkrótce)
 
 ### Przestrzeń dyskowa
+=======
+([Sound Blaster](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/sb16d) soon)
+
+### Storage
+>>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
 =======
 ([Sound Blaster](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/sb16d) soon)
 
@@ -545,6 +482,11 @@ Have a look at [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/m
 (USB soon)
 
 ### Input
+>>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
+=======
+(USB soon)
+
+### Input
 <<<<<<< HEAD
 >>>>>>> 75a487c (added new faq.pl.md file plus few translations in other files as well)
 =======
@@ -558,6 +500,9 @@ Have a look at [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/m
 <<<<<<< HEAD
 <<<<<<< HEAD
 (USB wkrótce)
+=======
+(USB soon)
+>>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
 =======
 (USB soon)
 >>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
@@ -589,12 +534,6 @@ Redox będzie działał normalnie (jeśli system obsługuje architekturę proces
 
 ## Z jakimi maszynami wirtualnymi Redox ma integrację?
 =======
-=======
-<<<<<<< HEAD
->>>>>>> 75a487c (added new faq.pl.md file plus few translations in other files as well)
-=======
->>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
->>>>>>> 57b630448bb595bf81ee5ae783c297ea82690fcb
 (Wi-Fi/[Atheros ethernet](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/alxd) soon)
 
 ## I have a low-end computer, would Redox work on it?
@@ -606,12 +545,6 @@ The main problem with old computers is the amount of RAM available (they were so
 Redox will work normally (if the processor architecture is supported by the system) but you will need to test each program.
 
 ## Which virtual machines does Redox have integration with?
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
-=======
->>>>>>> 57b630448bb595bf81ee5ae783c297ea82690fcb
 >>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
 =======
 >>>>>>> 75a487c (added new faq.pl.md file plus few translations in other files as well)
@@ -660,12 +593,6 @@ Możesz przyczynić się na wiele sposobów do rozwoju Redox OS, wiecej informac
 - Spójrz na [Redox Book](https://doc.redox-os.org/book/) aby sprawdzić, czy odpowiada na Twoje pytania/rozwiązuje problem.
 - Jeśli książka nie zawiera odpowiedzi na Twoje pytanie, zadaj pytanie/przedstaw swój problem na stronie [Chat](https://doc.redox-os.org/book/ch13-01-chat.html).
 =======
-=======
-<<<<<<< HEAD
->>>>>>> 75a487c (added new faq.pl.md file plus few translations in other files as well)
-=======
->>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
->>>>>>> 57b630448bb595bf81ee5ae783c297ea82690fcb
 In the future the microkernel could act as a hypervisor, similar to [Xen](https://xenproject.org/).
 
 A [hypervisor](https://en.wikipedia.org/wiki/Hypervisor) is software providing the ability to run multiple isolated operating system instances simultaneously.
@@ -704,12 +631,6 @@ You can contribute to Redox in many ways, you can see them on [CONTRIBUTING](htt
 - Have a look at the [Documentation](/docs/) page for more details of Redox internals.
 - Have a look at the [Redox Book](https://doc.redox-os.org/book/) to see if it answers your questions/fixes your problem.
 - If the book does not answer your question, ask your question/say your problem on the [Chat](https://doc.redox-os.org/book/ch13-01-chat.html).
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
-=======
->>>>>>> 57b630448bb595bf81ee5ae783c297ea82690fcb
 >>>>>>> 75a487c467f06a14655c4150ffe0b4b939ede9d6
 =======
 >>>>>>> 75a487c (added new faq.pl.md file plus few translations in other files as well)
