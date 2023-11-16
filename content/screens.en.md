@@ -2,9 +2,6 @@
 title = "Redox in Action"
 +++
 
-## Redox OS running Doom II
- <iframe src="https://vid.puffyan.us/embed/-wwwYIqfQik" style="border:none;height:601px;width:796px;" title="Invidious video player"></iframe> 
-
 ## Redox OS playing Stargate SG-1 Season 10 intro
  <iframe src="https://vid.puffyan.us/embed/3cPekY4c9Hc" style="border:none;height:601px;width:796px;" title="Invidious video player"></iframe> 
 
