@@ -11,6 +11,9 @@ title = "Redox em Ação"
 ## Redox OS executando Mesa3D Gears com LLVMpipe
  <iframe src="https://vid.puffyan.us/embed/ADSvEA_YY7E" style="border:none;height:601px;width:796px;" title="Invidious video player"></iframe> 
 
+## Redox OS executando COSMIC Editor
+<img class="img-responsive" src="/img/screenshot/cosmic-edit-redox.png"/>
+
 ## System76 Galago Pro (galp3-c)
 <img class="img-responsive" src="/img/hardware/system76-galp3-c.jpg"/>
 
