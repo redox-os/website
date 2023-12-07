@@ -9,6 +9,7 @@ This page covers questions/answers for newcomers and end-users.
 - [What features does Redox have?](#what-features-does-redox-have)
     - [Microkernel benefits](#microkernel-benefits)
     - [Rust benefits](#rust-benefits)
+    - [Comparison with other operating systems](#comparison-with-other-operating-systems)
 - [What is the purpose of Redox?](#what-is-the-purpose-of-redox)
 - [What I can do with Redox?](#what-i-can-do-with-redox)
 - [What is a Unix-like OS?](#what-is-a-unix-like-os)
@@ -105,6 +106,10 @@ Drivers written in Rust are likely to have fewer bugs and therefore are more sec
 Redox uses RedoxFS as the default filesystem, it supports similar features as [ZFS](https://docs.freebsd.org/en/books/handbook/zfs/) with a written-in-Rust implementation.
 
 Expect high performance and data safety (copy-on-write, data integrity, volumes, snapshots, hardened against data loss).
+
+### Comparison with other operating systems
+
+You can see how Redox is compared to Linux, FreeBSD and Plan 9 on [this](https://doc.redox-os.org/book/ch04-11-features.html) page.
 
 ## What is the purpose of Redox?
 

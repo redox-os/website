@@ -9,6 +9,7 @@ Essa página contém perguntas/respostas para iniciantes e usuários comuns.
 - [Quais funções o Redox possui?](#quais-fun%C3%A7%C3%B5es-o-redox-possui)
     - [Benefícios do Microkernel](#benefícios-do-microkernel)
     - [Benefícios da Rust](#benefícios-da-rust)
+    - [Comparação com outros sistemas operacionais](#comparação-com-outros-sistemas-operacionais)
 - [Qual o propósito do Redox?](#qual-o-prop%C3%B3sito-do-redox)
 - [O que posso fazer com o Redox?](#o-que-posso-fazer-com-o-redox)
 - [O que é um sistema Unix-like?](#o-que-%C3%A9-um-sistema-unix-like)
@@ -103,6 +104,10 @@ Mas na Rust esse tipo de bug é fácil de evitar, o mesmo sistema de escrita que
 - **Drivers escritos em Rust**
 
 Drivers escritos em Rust possuem incentivos para ter menos bugs e portanto melhor segurança.
+
+### Comparação com outros sistemas operacionais
+
+Você pode ver como o Redox é em comparação com o Linux, FreeBSD e Plan 9 [nesta](https://doc.redox-os.org/book/ch04-11-features.html) página.
 
 ## Qual o propósito do Redox?
 
