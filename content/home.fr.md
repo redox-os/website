@@ -6,7 +6,7 @@ url = "home"
   <div class="col-md-8">
     <p class="pitch">
       <b>Redox</b> est un système d'exploitation dans
-      le style Unix, écrit en <a style="color: inherit;"
+      le <a style="color: inherit;" href="https://en.wikipedia.org/wiki/Unix-like"><b>style Unix</b></a>, écrit en <a style="color: inherit;"
       href="https://www.rust-lang.org/fr/"><b>Rust</b></a>, visant
       à exploiter les innovations de ce langage dans un micro-noyau
       moderne et une suite logicielle complète.
@@ -21,19 +21,21 @@ url = "home"
 <div class="row features">
   <div class="col-md-6">
     <ul class="laundry-list" style="margin-bottom: 0px;">
-      <li>Inspiré de Plan 9, Minix, seL4, BSD et Linux</li>
-      <li>Écrit en Rust</li>
-      <li>Architecture en micro-noyau</li>
-      <li>Interface graphique optionnelle incluse - Orbital</li>
-      <li>Compatible avec la bibliothèque standard de Rust</li>
+      <li>Inspiré de <a href="http://9p.io/plan9/index.html">Plan 9</a>, <a href="http://www.minix3.org/">Minix</a>, <a href="https://sel4.systems/">seL4</a>, <a href="http://www.bsd.org/">BSD</a> et <a href="https://www.kernel.org/">Linux</a></li>
+      <li>Écrit en <a href="https://www.rust-lang.org/">Rust</a></li>
+      <li>Architecture en <a href="https://doc.redox-os.org/book/ch04-01-microkernels.html">Micro-Noyau</a></li>
+      <li>Interface graphique optionnelle incluse - <a href="https://doc.redox-os.org/book/ch04-09-graphics-windowing.html#orbital">Orbital</a></li>
+      <li>Compatible avec la <a href="https://doc.rust-lang.org/std/">bibliothèque standard de Rust</a></li>
     </ul>
   </div>
   <div class="col-md-6">
     <ul class="laundry-list">
-      <li>Licence MIT</li>
-      <li>Les pilotes s'exécutent en mode utilisateur</li>
-      <li>Commandes courantes d'Unix disponibles</li>
-      <li>Relibc, une implémentation de Libc écrit en Rust</li>
+      <li>Licence <a href="https://en.wikipedia.org/wiki/MIT_License">MIT</a></li>
+      <li>Les <a href="https://doc.redox-os.org/book/ch04-07-drivers.html">Pilotes</a> s'exécutent en mode utilisateur</li>
+      <li>Les <a href="https://doc.redox-os.org/book/ch06-04-system-tools.html">Outils</a> courants d'Unix sont disponibles</li>
+      <li><a href="https://doc.redox-os.org/book/ch06-00-programs-libraries.html">Compatibilité avec le code source</a> de programmes Linux/BSD</li>
+      <li>Compatibilité partielle avec <a href="https://en.wikipedia.org/wiki/POSIX">POSIX</a></li>
+      <li>Une implémentation de la <a href="https://en.wikipedia.org/wiki/C_standard_library">bibliothèque C</a> écrit en Rust (<a href="https://gitlab.redox-os.org/redox-os/relibc/">relibc</a>)</li>
       <li>Voir <a href="/fr/screens/">Redox en fonctionnement</a></li>
     </ul>
   </div>

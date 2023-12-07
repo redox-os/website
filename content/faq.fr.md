@@ -48,7 +48,7 @@ La version 1.0 sera publiée une fois que toutes les API système seront consid�
 
 ## Que veut dire Redox?
 
-[Redox](https://en.wikipedia.org/wiki/Redox) est la réaction chimique (réduction-oxydation) qui crée la rouille, comme Redox est un système d'exploitation écrit en Rust (rouille en Anglais), cela a du sens.
+[Redox](https://en.wikipedia.org/wiki/Redox) est la réaction chimique (réduction-oxydation) qui crée la rouille. Vu que Redox est un système d'exploitation écrit en Rust (rouille en Anglais), cela a du sens.
 
 Cela sonne aussi comme Minix/Linux.
 
@@ -66,7 +66,7 @@ La plupart des composants système s'exécutent dans l'espace utilisateur sur un
 
 #### Conception sans redémarrage
 
-Un micro-noyau mature change très peu (correction de bugs), vous n'aurez donc pas besoin de redémarrer votre système très souvent pour mettre à jour le système.
+Un micro-noyau mature change très peu (sauf corrections de bugs), vous n'aurez donc pas besoin de redémarrer votre système très souvent pour mettre à jour le système.
 
 Étant donné que la plupart des composants du système se trouvent dans l'espace utilisateur, ils peuvent être remplacés à la volée (ce qui réduit les temps d'arrêt pour les administrateurs de serveur).
 
@@ -82,7 +82,7 @@ La syntaxe restrictive et les suggestions du compilateur réduisent considérabl
 
 #### Pas besoin de mesures d'atténuation des exploits de C/C++
 
-La conception du micro-noyau écrite en Rust protège contre les défauts de mémoire C/C++.
+La conception du micro-noyau écrite en Rust protège contre les défauts de mémoire que l'on peut croiser en C/C++.
 
 En isolant les composants du système du noyau, [la surface d'attaque](https://en.wikipedia.org/wiki/Attack_surface) est très limitée.
 

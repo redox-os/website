@@ -154,7 +154,7 @@ name = "Actualité"
 url = "/news/"
 [[languages.fr.menu.main]]
 weight = 5
-name = "Donner"
+name = "Donation/Marchandises"
 url = "/donate/"
 [[languages.fr.menu.main]]
 weight = 6
