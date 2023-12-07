@@ -21,7 +21,7 @@ Vous pouvez faire un don à Redox OS des manières suivantes:
 
 Nous vendons des T-shirts sur Teespring, vous pouvez les acheter [ici](https://redox-os.creator-spring.com/).
 
-Chaque vente est une donation pour l'association Redox OS à but non lucratif.
+Chaque vente est une donation pour l'association Redox OS à but non lucrative.
 
 ## Jeremy Soller
 
