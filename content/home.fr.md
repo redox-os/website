@@ -31,8 +31,8 @@ url = "home"
   <div class="col-md-6">
     <ul class="laundry-list">
       <li>Licence <a href="https://en.wikipedia.org/wiki/MIT_License">MIT</a></li>
-      <li>Les <a href="https://doc.redox-os.org/book/ch04-07-drivers.html">pilotes</a> s'exécutent en mode utilisateur</li>
-      <li><a href="https://doc.redox-os.org/book/ch06-04-system-tools.html">Outils</a> courants d'Unix disponibles</li>
+      <li>Les <a href="https://doc.redox-os.org/book/ch04-07-drivers.html">Pilotes</a> s'exécutent en mode utilisateur</li>
+      <li>Les <a href="https://doc.redox-os.org/book/ch06-04-system-tools.html">Outils</a> courants d'Unix sont disponibles</li>
       <li><a href="https://doc.redox-os.org/book/ch06-00-programs-libraries.html">Compatibilité avec le code source</a> de programmes Linux/BSD</li>
       <li>Compatibilité partielle avec <a href="https://en.wikipedia.org/wiki/POSIX">POSIX</a></li>
       <li>Une implémentation de la <a href="https://en.wikipedia.org/wiki/C_standard_library">bibliothèque C</a> écrit en Rust (<a href="https://gitlab.redox-os.org/redox-os/relibc/">relibc</a>)</li>
