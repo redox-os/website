@@ -88,7 +88,7 @@ By isolating the system components from the kernel, the [attack surface](https:/
 
 #### Improved security and reliability without significant performance impact
 
-As the kernel is small, it uses less memory to do its work. The limited kernel code size helps to close in on the goal of a "bug-free" status ([KISS](https://en.wikipedia.org/wiki/KISS_principle)).
+As the kernel is small, it uses less memory to do its work. The limited kernel code size helps us work towards "bug-free" status ([KISS](https://en.wikipedia.org/wiki/KISS_principle)).
 
 Rust's safe and fast language design, combined with the small kernel code size, helps ensure a reliable, performant and easy to maintain core.
 
