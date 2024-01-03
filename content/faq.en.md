@@ -9,15 +9,11 @@ This page covers questions/answers for newcomers and end-users.
 - [What features does Redox have?](#what-features-does-redox-have)
     - [Microkernel benefits](#microkernel-benefits)
     - [Rust benefits](#rust-benefits)
+    - [Comparison with other operating systems](#comparison-with-other-operating-systems)
 - [What is the purpose of Redox?](#what-is-the-purpose-of-redox)
 - [What I can do with Redox?](#what-i-can-do-with-redox)
 - [What is a Unix-like OS?](#what-is-a-unix-like-os)
 - [How Redox is inspired by other systems?](#how-redox-is-inspired-by-other-systems)
-    - [Plan 9](#plan-9)
-    - [Minix](#minix)
-    - [seL4](#sel4)
-    - [BSD](#bsd)
-    - [Linux](#linux)
 - [What is a microkernel?](#what-is-a-microkernel)
 - [What programs can Redox run?](#what-programs-can-redox-run)
 - [How to install programs on Redox?](#how-to-install-programs-on-redox)
@@ -26,9 +22,8 @@ This page covers questions/answers for newcomers and end-users.
 - [I have a low-end computer, would Redox work on it?](#i-have-a-low-end-computer-would-redox-work-on-it)
 - [Which virtual machines does Redox have integration with?](#which-virtual-machines-does-redox-have-integration-with)
 - [How do I build Redox?](#how-do-i-build-redox)
- - [How to launch QEMU without GUI](#how-to-launch-qemu-without-gui)
- - [How to troubleshoot your build in case of errors](#how-to-troubleshoot-your-build-in-case-of-errors)
- - [How to report bugs on Redox](#how-to-report-bugs-on-redox)
+- [How to troubleshoot your build in case of errors](#how-to-troubleshoot-your-build-in-case-of-errors)
+- [How to report bugs on Redox](#how-to-report-bugs-on-redox)
 - [How do I contribute to Redox?](#how-do-i-contribute-to-redox)
 - [I have a problem/question for Redox team](#i-have-a-problemquestion-for-redox-team)
 
@@ -50,65 +45,71 @@ The 1.0 version will be released once all system APIs are considered stable.
 
 [Redox](https://en.wikipedia.org/wiki/Redox) is the chemical reaction (reduction–oxidation) that creates rust. As Redox is an operating system written in Rust, it makes sense.
 
-It sounds like Minix/Linux too.
+It sounds like Minix and Linux too.
 
 ## What features does Redox have?
 
 ### Microkernel benefits
 
-#### True modularity
+- **True modularity**
 
 You can modify/change many system components without a system restart, similar to but safer than [livepatching](https://en.wikipedia.org/wiki/Kpatch).
 
-#### Bug isolation
+- **Bug isolation**
 
 Most system components run in user-space on a microkernel system. Because of this, a bug in a non-kernel component won't [crash the system/kernel](https://en.wikipedia.org/wiki/Kernel_panic).
 
-#### No-reboot design
+- **Restartless design**
 
 A mature microkernel changes very little (except for bug fixes), so you won't need to restart your system very often to update it.
 
 Since most of the system components are in userspace, they can be replaced on-the-fly, reducing downtime for server administrators.
 
-#### Easy to develop and debug
+- **Easy to develop and debug**
 
 Most of the system components run in userspace, simplifying testing/debugging.
 
 ### Rust benefits
 
-#### Less likely to have bugs
+- **Less likely to have bugs**
 
 The restrictive syntax and compiler suggestions reduce the probability of bugs a lot.
 
-#### No need for C/C++ exploit mitigations
+- **Less vulnerable to data corruption**
+
+The Rust compiler helps the programmer to avoid memory errors and race conditions, which reduces the probability of data corruption bugs.
+
+- **No need for C/C++ exploit mitigations**
 
 The microkernel design written in Rust protects against memory defects that one might see in C/C++ programs.
 
 By isolating the system components from the kernel, the [attack surface](https://en.wikipedia.org/wiki/Attack_surface) is very limited.
 
-#### Improved security and reliability without significant performance impact
+- **Improved security and reliability without significant performance impact**
 
 As the kernel is small, it uses less memory to do its work. The limited kernel code size helps us work towards "bug-free" status ([KISS](https://en.wikipedia.org/wiki/KISS_principle)).
 
 Rust's safe and fast language design, combined with the small kernel code size, helps ensure a reliable, performant and easy to maintain core.
 
-#### Thread-safety
+- **Thread-safety**
 
 The C/C++ support for thread-safety is quite fragile. As such, it is very easy to write a program that looks safe to run across multiple threads, but which introduces subtle bugs or security holes. If one thread accesses a piece of state at the same time that another thread is changing it, the whole program can exhibit some truly confusing and bizarre bugs.
 
 In Rust, this kind of bug is easy to avoid: the same type system that keeps us from writing memory unsafety prevents us from writing dangerous concurrent access patterns
 
-#### Rust-written Drivers
+- **Rust-written Drivers**
 
 Drivers written in Rust are likely to have fewer bugs and are therefore more secure.
 
-- [Currently supported devices](#which-devices-does-redox-support)
-
-#### ZFS-inspired filesystem
+- **ZFS-inspired filesystem**
 
 Redox uses RedoxFS as the default filesystem. It supports similar features as [ZFS](https://docs.freebsd.org/en/books/handbook/zfs/) with a written-in-Rust implementation.
 
 Expect high performance and data safety (copy-on-write, data integrity, volumes, snapshots, hardened against data loss).
+
+### Comparison with other operating systems
+
+You can see how Redox is compared to Linux, FreeBSD and Plan 9 on [this](https://doc.redox-os.org/book/ch04-11-features.html) page.
 
 ## What is the purpose of Redox?
 
@@ -175,32 +176,30 @@ A microkernel is the near-minimum amount of software that can provide the mechan
 
 This approach to OS design brings more stability and security, with a small cost on performance.
 
-- [Redox Book explanation](https://doc.redox-os.org/book/ch04-01-microkernels.html)
+You can read more about it [here](https://doc.redox-os.org/book/ch04-01-microkernels.html).
 
 ## What programs can Redox run?
 
-Redox is designed to be source-compatible with most Unix, Linux and POSIX-compliant applications, only requiring recompilation.
+Redox is designed to be source-compatible with most Unix, Linux and POSIX-compliant applications, only requiring compilation.
 
 Currently, most GUI applications require porting, as we don't support X11 or Wayland yet.
 
 Some important software that Redox supports:
 
-- [Bash](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/bash)
-- [ffmpeg](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/ffmpeg)
-- [GCC](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/gcc)
-- [Git](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/git)
-- [LLVM](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/llvm)
-- [Mesa3D](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/mesa)
-- [OpenSSL](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/openssl)
-- [SDL2](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/sdl2)
+- GNU Bash
+- FFMPEG
+- Git
+- SDL2
+- OpenSSL
+- Mesa3D
+- GCC
+- LLVM
 
-You can see all Redox components/ported programs [here](https://static.redox-os.org/pkg/x86_64-unknown-redox/).
+You can see all Redox components and ported programs [here](https://static.redox-os.org/pkg/x86_64-unknown-redox/).
 
 ## How to install programs on Redox?
 
-Redox has a package manager similar to `apt` (Debian) and `pkg` (FreeBSD). You can see how to use it on this page:
-
-- [Redox package manager](https://doc.redox-os.org/book/ch02-08-pkg.html)
+Redox has a package manager similar to `apt` (Debian) and `pkg` (FreeBSD), you can see how to use it on [this](https://doc.redox-os.org/book/ch02-08-pkg.html) page.
 
 ## Which are the Redox variants?
 
@@ -232,50 +231,48 @@ Have a look at [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/m
 
 ### Hardware Interfaces
 
-- [ACPI](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/acpid)
-- [PCI](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/pcid)
+- ACPI
+- PCI
 
 (USB soon)
 
 ### Video
 
-- [VGA](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/vesad) - (BIOS)
+- VGA - (BIOS)
 - GOP (UEFI)
-- [LLVMpipe](https://docs.mesa3d.org/drivers/llvmpipe.html) - Software Rendering
+- [LLVMpipe](https://docs.mesa3d.org/drivers/llvmpipe.html) (OpenGL CPU emulation)
 
 (Intel/AMD and others in the future)
 
 ### Sound
 
-- [Intel chipsets](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ihdad)
-- [Realtek chipsets](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ac97d)
-- [PC speaker](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/pcspkrd)
+- Intel chipsets
+- Realtek chipsets
+- PC speaker
 
-([Sound Blaster](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/sb16d) soon)
+(Sound Blaster soon)
 
 ### Storage
 
-- [IDE](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ided) - (PATA)
-- [AHCI](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ahcid) - (SATA)
-- [NVMe](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/nvmed)
+- IDE (PATA)
+- SATA (AHCI)
+- NVMe
 
 (USB soon)
 
 ### Input
 
-- [PS/2 keyboards](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d)
-- [PS/2 mouse](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d)
-- [PS/2 touchpad](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d)
+- PS/2 keyboards, mouse and touchpad
 
 (USB soon)
 
 ### Internet
 
-- [Intel Gigabit ethernet](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/e1000d)
-- [Intel 10 Gigabit ethernet](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ixgbed)
-- [Realtek ethernet](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/rtl8168d)
+- Intel Gigabit ethernet
+- Intel 10 Gigabit ethernet
+- Realtek ethernet
 
-(Wi-Fi/[Atheros ethernet](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/alxd) soon)
+(Wi-Fi and Atheros ethernet soon)
 
 ## I have a low-end computer, would Redox work on it?
 
@@ -287,8 +284,8 @@ Redox itself will work normally if the processor architecture is supported by th
 
 ## Which virtual machines does Redox have integration with?
 
-- [QEMU](https://www.qemu.org/)
-- [VirtualBox](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/vboxd)
+- QEMU
+- VirtualBox
 
 In the future the microkernel could act as a hypervisor, similar to [Xen](https://xenproject.org/).
 
@@ -303,21 +300,13 @@ We also offer Podman as our universal compilation method. It is the recommended 
 - [Redox Book Guide](https://doc.redox-os.org/book/ch02-05-building-redox.html) - (Pop OS!, Ubuntu, Debian, Fedora, Arch Linux, openSUSE and FreeBSD)
 - [Redox Book Podman Guide](https://doc.redox-os.org/book/ch02-06-podman-build.html)
 
-### How to launch QEMU without GUI
-
-Run:
-
-- `make qemu vga=no`
-
-### How to troubleshoot your build in case of errors
+## How to troubleshoot your build in case of errors
 
 Read [this](https://doc.redox-os.org/book/ch08-05-troubleshooting.html) page or join us on [Redox Chat](https://doc.redox-os.org/book/ch13-01-chat.html).
 
-### How to report bugs on Redox
+## How to report bugs on Redox
 
-Check GitLab Issues first to see if your problem has already been reported.
-
-- [Redox Book Bug Report Guide](https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html)
+Read [this](https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html) page and check the GitLab Issues to see if your problem was reported.
 
 ## How do I contribute to Redox?
 
@@ -326,5 +315,5 @@ You can contribute to Redox in many ways, you can see them on [CONTRIBUTING](htt
 ## I have a problem/question for Redox team
 
 - Have a look at the [Documentation](/docs/) page for more details of Redox internals.
-- Have a look at the [Redox Book](https://doc.redox-os.org/book/) to see if it answers your questions/fixes your problem.
-- If the book does not answer your question, ask your question/say your problem on the [Chat](https://doc.redox-os.org/book/ch13-01-chat.html).
+- Have a look at the [Redox Book](https://doc.redox-os.org/book/) to see if it answer your question or solve your problem.
+- If the documentation or the book does not answer your question, ask your question or say your problem on the [Chat](https://doc.redox-os.org/book/ch13-01-chat.html).

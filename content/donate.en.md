@@ -1,5 +1,5 @@
 +++
-title = "Donate"
+title = "Donate/Merch"
 +++
 
 ## Redox OS Nonprofit
@@ -13,6 +13,12 @@ You can donate to Redox OS the following ways:
  - [Patreon](https://www.patreon.com/redox_os)
  - [Donorbox](https://donorbox.org/redox-os)
  - For more donation options, please contact donate@redox-os.org
+
+## Merch
+
+We sell T-shirts on Teespring, you can buy them [here](https://redox-os.creator-spring.com/).
+
+Each sale is a donation to the Redox OS Nonprofit.
 
 ## Jeremy Soller
 

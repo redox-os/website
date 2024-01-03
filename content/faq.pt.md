@@ -9,26 +9,21 @@ Essa página contém perguntas/respostas para iniciantes e usuários comuns.
 - [Quais funções o Redox possui?](#quais-fun%C3%A7%C3%B5es-o-redox-possui)
     - [Benefícios do Microkernel](#benefícios-do-microkernel)
     - [Benefícios da Rust](#benefícios-da-rust)
+    - [Comparação com outros sistemas operacionais](#comparação-com-outros-sistemas-operacionais)
 - [Qual o propósito do Redox?](#qual-o-prop%C3%B3sito-do-redox)
 - [O que posso fazer com o Redox?](#o-que-posso-fazer-com-o-redox)
 - [O que é um sistema Unix-like?](#o-que-%C3%A9-um-sistema-unix-like)
 - [Como o Redox é inspirado em outros sistemas?](#como-o-redox-%C3%A9-inspirado-em-outros-sistemas)
-    - [Plan 9](#plan-9)
-    - [Minix](#minix)
-    - [seL4](#sel4)
-    - [BSD](#bsd)
-    - [Linux](#linux)
 - [O que é um microkernel?](#o-que-%C3%A9-um-microkernel)
 - [Quais programas o Redox executa?](#quais-programas-o-redox-executa)
 - [Como instalar programas no Redox?](#como-instalar-programas-no-redox)
 - [Quais são as variantes do Redox?](#quais-são-as-variantes-do-redox)
 - [Quais dispositivos o Redox suporta?](#quais-dispositivos-o-redox-suporta)
-- [Tenho um computador fraco, o Redox irá funcionar?]
+- [Tenho um computador fraco, o Redox irá funcionar?](#tenho-um-computador-fraco-o-redox-irá-funcionar)
 - [Quais máquinas virtuais o Redox possui integração?](#quais-m%C3%A1quinas-virtuais-o-redox-possui-integra%C3%A7%C3%A3o)
 - [Como compilar o Redox?](#como-compilar-o-redox)
- - [Como abrir o QEMU sem interface gráfica](#como-abrir-o-qemu-sem-interface-gr%C3%A1fica)
- - [Como diagnosticar seu Redox em caso de erros](#como-diagnosticar-seu-redox-em-caso-de-erros)
- - [Como reportar bugs para o Redox](#como-reportar-bugs-para-o-redox)
+- [Como diagnosticar seu Redox em caso de erros](#como-diagnosticar-seu-redox-em-caso-de-erros)
+- [Como reportar bugs para o Redox](#como-reportar-bugs-para-o-redox)
 - [Como contribuir para o Redox?](#como-contribuir-para-o-redox)
 - [Eu tenho um problema/pergunta para a equipe do Redox](#eu-tenho-um-problemapergunta-para-a-equipe-do-redox)
 
@@ -48,65 +43,71 @@ A versão 1.0 será lançada quando todas as APIs do sistema forem consideradas 
 
 ## O que Redox significa?
 
-[Redox](https://en.wikipedia.org/wiki/Redox) é a reação química (redução-oxidação) que cria a ferrugem, já que o Redox é um sistema operacional escrito em Rust, faz sentido.
+[Redox](https://en.wikipedia.org/wiki/Redox) é a reação química (redução-oxidação) que cria a ferrugem, sendo o Redox um sistema operacional escrito em Rust, faz sentido.
 
-Ele soa similar com Minix/Linux também.
+Ele soa similar com Minix e Linux também.
 
 ## Quais funções o Redox possui?
 
 ### Benefícios do Microkernel
 
-#### Modularidade real
+- **Modularidade real**
 
 Você pode modificar/trocar a maioria dos componentes do sistema sem reiniciar o sistema, similar ao [livepatching](https://en.wikipedia.org/wiki/Kpatch) porém mais seguro).
 
-#### Isolamento de bugs
+- **Isolamento de bugs**
 
 A maioria dos componentes do sistema executam no espaço do usuário em um sistema com microkernel, um bug em componentes do sistema fora do kernel não pode [quebrar o kernel](https://en.wikipedia.org/wiki/Kernel_panic).
 
-#### Design de não-reinicialização
+- **Design de não-reinicialização**
 
 O kernel é pequeno e muda muito pouco (correção de bugs), portanto você não precisa reiniciar seu sistema com frequência para atualizar, já que a maioria dos serviços do sistema estão no espaço do usuário, eles podem ser trocados/atualizados durante a execução (reduzindo o tempo offline de servidores).
 
+- **Fácil de desenvolver e depurar**
+
+A maioria dos componentes do sistema estão no espaço do usuário, simplificando a depuração.
+
 ### Benefícios da Rust
 
-#### Menos suscetível a bugs
+- **Menos suscetível a bugs**
 
 A síntaxe restritiva e as sugestões do compilador reduz muito a probabilidade de bugs.
 
-#### Sem necessidade para mitigações de exploit das linguagens C e C++
+- **Menos vulnerável a corrupção de dados**
+
+O compilador da Rust ajuda o programador a evitar erros de memória e bugs difíceis de examinar, o que reduz a probabilidade dos bugs de corrupção de dados.
+
+- **Sem necessidade para mitigações de exploit das linguagens C e C++**
 
 O design de um microkernel escrito em Rust protege contra as falhas de memória das linguagens C e C++, isolando o sistema do kernel a superfície de ataque é muito limitada.
 
-#### Sistema de arquivos inspirado no ZFS
+- **Sistema de arquivos inspirado no ZFS**
 
 O Redox utiliza o RedoxFS como sistema de arquivos padrão, ele suporta funções parecidas com as do [ZFS](https://docs.freebsd.org/en/books/handbook/zfs/) com uma implementação escrita em Rust.
 
 Espere alto desempenho e segurança dos dados (copy-on-write, integridade de arquivos, volumes, snapshots, endurecido contra a perda de arquivos).
 
-#### Melhorias de segurança/confiabilidade sem impacto significante no desempenho
+- **Melhorias de segurança/confiabilidade sem impacto significante no desempenho**
 
 Como o kernel é pequeno, ele usa menos memória para fazer suas funções e o código limitado no kernel torna ele quase livre de bugs (objetivo do príncipio [KISS](https://en.wikipedia.org/wiki/KISS_principle)).
 
 O design seguro e veloz da linguagem Rust, combinado com a pequena quantidade de código no kernel, ajudam a garantir um núcleo fácil, confiável e veloz de manter.
 
-#### Segurança no Thread
+- **Segurança de Concurrência**
 
-O suporte para segurança de thread nas linguagens de programmação C/C++ é frágil e muito fácil de escrever um programa que parece seguro para executar em vários threads, mas introduz bugs útis e buracos de segurança.
+O suporte para segurança de concurrência nas linguagens de programmação C/C++ é frágil e muito fácil de escrever um programa que parece seguro para executar em vários threads, mas introduz bugs útis e buracos de segurança.
 
 Se um thread acessa um pedaço do estado ao mesmo tempo que outro thread está modificando, o programa todo pode exibir bugs confusos e bizarros.
 
 Mas na Rust esse tipo de bug é fácil de evitar, o mesmo sistema de escrita que nos previne de escrever de forma insegura também nos previne de escrever padrões perigosos de acesso simultâneo.
 
-#### Drivers escritos em Rust
+- **Drivers escritos em Rust**
 
 Drivers escritos em Rust possuem incentivos para ter menos bugs e portanto melhor segurança.
 
-- [Dispositivos suportados atualmente](#quais-dispositivos-o-redox-suporta)
+### Comparação com outros sistemas operacionais
 
-#### Fácil de desenvolver e depurar
-
-A maioria dos componentes do sistema estão no espaço do usuário, simplificando a depuração.
+Você pode ver como o Redox é em comparação com o Linux, FreeBSD e Plan 9 [nesta](https://doc.redox-os.org/book/ch04-11-features.html) página.
 
 ## Qual o propósito do Redox?
 
@@ -173,7 +174,7 @@ O Redox tenta implementar as melhorias de desempenho do Linux em um design de mi
 
 Um microkernel é um modelo para núcleo de sistema operacional com uma pequena quantidade de código executando no maior privilégio do processador, este modelo melhora a estabilidade e segurança, com um pequeno custo de desempenho.
 
-- [Explicação do livro Redox](https://doc.redox-os.org/book/ch04-01-microkernels.html)
+Você pode ler mais sobre [aqui](https://doc.redox-os.org/book/ch04-01-microkernels.html).
 
 ## Quais programas o Redox executa?
 
@@ -183,22 +184,20 @@ Atualmente, a maioria das aplicações com interface gráfica requer um port, j�
 
 Softwares importantes que o Redox suporta:
 
-- [Bash](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/bash)
-- [ffmpeg](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/ffmpeg)
-- [GCC](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/gcc)
-- [Git](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/git)
-- [LLVM](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/llvm)
-- [Mesa3D](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/mesa)
-- [OpenSSL](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/openssl)
-- [SDL2](https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/sdl2)
+- GNU Bash
+- FFMPEG
+- Git
+- SDL2
+- OpenSSL
+- Mesa3D
+- GCC
+- LLVM
 
-Você pode ver todos os componentes do Redox/programas portados [aqui](https://static.redox-os.org/pkg/x86_64-unknown-redox/)
+Você pode ver todos os componentes do Redox e programas portados [aqui](https://static.redox-os.org/pkg/x86_64-unknown-redox/)
 
 ## Como instalar programs no Redox?
 
-O Redox tem um gerenciador de pacotes similar ao `apt` (Debian) e `pkg` (FreeBSD), você pode ler como utiliza-lo nesta página:
-
-- [Gerenciador de Pacotes do Redox](https://doc.redox-os.org/book/ch02-08-pkg.html)
+O Redox tem um gerenciador de pacotes similar ao `apt` (Debian) e `pkg` (FreeBSD), você pode aprender a como utiliza-lo [aqui](https://doc.redox-os.org/book/ch02-08-pkg.html).
 
 ## Quais são as variantes do Redox?
 
@@ -230,50 +229,48 @@ Leia o [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HA
 
 ### Interfaces do Hardware
 
-- [ACPI](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/acpid)
-- [PCI](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/pcid)
+- ACPI
+- PCI
 
-(USB breve)
+(USB em breve)
 
 ### Vídeo
 
-- [VGA](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/vesad) - (BIOS)
+- VGA - (BIOS)
 - GOP (UEFI)
-- [LLVMpipe](https://docs.mesa3d.org/drivers/llvmpipe.html) - Renderização de Software
+- [LLVMpipe](https://docs.mesa3d.org/drivers/llvmpipe.html) (Emulação da OpenGL na CPU)
 
 (Intel/AMD e outros no futuro)
 
 ### Som
 
-- [Intel chipsets](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ihdad)
-- [Realtek chipsets](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ac97d)
-- [PC speaker](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/pcspkrd)
+- Chipsets Intel
+- Chipsets Realtek
+- Alto-falante de PC
 
-([Sound Blaster](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/sb16d) em breve)
+(Sound Blaster em breve)
 
 ### Armazenamento
 
-- [IDE](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ided) - (PATA)
-- [AHCI](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ahcid) - (SATA)
-- [NVMe](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/nvmed)
+- IDE (PATA)
+- SATA (AHCI)
+- NVMe
 
 (USB em breve)
 
 ### Periféricos
 
-- [Teclados PS/2](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d)
-- [Mouse PS/2](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d)
-- [Touchpad PS/2](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d)
+- Teclados, mouse e touchpad PS/2
 
 (USB em breve)
 
 ### Internet
 
-- [Intel Gigabit ethernet](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/e1000d)
-- [Intel 10 Gigabit ethernet](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ixgbed)
-- [Realtek ethernet](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/rtl8168d)
+- Intel Gigabit ethernet
+- Intel 10 Gigabit ethernet
+- Realtek ethernet
 
-(Wi-Fi/[Atheros ethernet](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/alxd) em breve)
+(Wi-Fi e Atheros ethernet em breve)
 
 ## Tenho um computador fraco, o Redox irá funcionar?
 
@@ -285,8 +282,8 @@ O Redox irá funcionar normalmente (se a arquitetura do processador for suportad
 
 ## Quais máquinas virtuais o Redox possui integração?
 
-- [QEMU](https://www.qemu.org/)
-- [VirtualBox](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/vboxd)
+- QEMU
+- VirtualBox
 
 No futuro o microkernel poderia agir como um supervisor, similar ao [Xen](https://xenproject.org/).
 
@@ -301,22 +298,13 @@ Nós também oferecemos o Podman como método de compilação universal, esse é
 - [Guia no Livro do Redox](https://doc.redox-os.org/book/ch02-05-building-redox.html) - (Pop OS!, Ubuntu, Debian, Fedora, Arch Linux, openSUSE and FreeBSD)
 - [Guia do Podman no Livro do Redox](https://doc.redox-os.org/book/ch02-06-podman-build.html)
 
-### Como abrir o QEMU sem interface gráfica
-
-Execute:
-
-- `make qemu vga=no`
-
-### Como diagnosticar seu Redox em caso de erros
+## Como diagnosticar seu Redox em caso de erros
 
 Leia [essa](https://doc.redox-os.org/book/ch08-05-troubleshooting.html) página ou nos explique no [Chat](https://doc.redox-os.org/book/ch13-01-chat.html).
 
-### Como reportar bugs para o Redox?
+## Como reportar bugs para o Redox?
 
-Verifique as Issues no GitLab primeiro para ver se seu problema é conhecido.
-
-- [Guia para Relatório de Bug no Livro do Redox](https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html)
-- [CONTRIBUTING](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md)
+Leia [essa](https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html) página e verifique as Issues no GitLab para ver se seu problema foi reportado por alguém.
 
 ## Como contribuir para o Redox?
 
@@ -324,6 +312,6 @@ Você pode contribuir para o Redox de diversas formas, veja elas em [CONTRIBUTIN
 
 ## Eu tenho um pergunta/problema para a equipe do Redox
 
-- Leia a [Documentação](/docs/).
-- Leia todo o [livro do Redox](https://doc.redox-os.org/book/) para ver se isso responde sua pergunta/corrige seu problema.
-- Se a documentação/livro não resolver, diga sua pergunta/problema no [Chat](https://doc.redox-os.org/book/ch13-01-chat.html).
+- Leia a [Documentação](/docs/) para saber mais sobre partes internas do Redox.
+- Leia todo o [livro do Redox](https://doc.redox-os.org/book/) para ver se responde sua pergunta ou conserta seu problema.
+- Se a documentação e o livro não resolver, faça sua pergunta ou diga seu problema no [Chat](https://doc.redox-os.org/book/ch13-01-chat.html).

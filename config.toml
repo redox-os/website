@@ -28,7 +28,7 @@ name = "Community"
 url = "/community"
 [[languages.en.menu.main]]
 weight = 5
-name = "Donate"
+name = "Donate/Merch"
 url = "/donate/"
 [[languages.en.menu.main]]
 weight = 6
@@ -154,7 +154,7 @@ name = "Actualité"
 url = "/news/"
 [[languages.fr.menu.main]]
 weight = 5
-name = "Donner"
+name = "Donation/Marchandises"
 url = "/donate/"
 [[languages.fr.menu.main]]
 weight = 6
@@ -479,7 +479,7 @@ name = "FAQ"
 url = "/faq/"
 [[languages.pt.menu.main]]
 weight = 5
-name = "Doações"
+name = "Doar/Loja"
 url = "/donate/"
 [[languages.pt.menu.main]]
 weight = 6
@@ -593,7 +593,11 @@ name = "Dokumentacja"
 url = "/docs/"
 [[languages.pl.menu.main]]
 weight = 2
-name = "Community"
+name = "FAQ"
+url = "/pl/faq"
+[[languages.pl.menu.main]]
+weight = 2
+name = "Społeczność"
 url = "/community"
 [[languages.pl.menu.main]]
 weight = 3

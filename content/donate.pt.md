@@ -1,8 +1,8 @@
 +++
-title = "Doações"
+title = "Doar/Loja"
 +++
 
-## Redox OS Organização Sem Fins Lucrativos
+## Organização Sem Fins Lucrativos Redox OS
 
 O Redox OS tem uma organização sem fins lucrativos no Colorado (EUA) que gerencia as doações, essa organização sem fins lucrativos não está isenta de impostos.
 
@@ -14,6 +14,12 @@ Você pode doar para o Redox OS das seguintes formas:
  - [Donorbox](https://donorbox.org/redox-os)
  - Para mais opções de doações, por favor entre em contato no endereço de e-mail:
    donate@redox-os.org
+
+## Loja
+
+Nós vendemos camisetas pela Teespring, você pode comprar [aqui](https://redox-os.creator-spring.com/).
+
+Cada venda é uma doação para a Organização Sem Fins Lucrativos Redox OS.
 
 ## Jeremy Soller
 
