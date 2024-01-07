@@ -57,7 +57,7 @@ You can modify/change many system components without a system restart, similar t
 
 - **Bug isolation**
 
-Most system components run in user-space on a microkernel system. Because of this, a bug in a non-kernel component won't [crash the system/kernel](https://en.wikipedia.org/wiki/Kernel_panic).
+Most system components run in user-space on a microkernel system. Because of this, bugs in most system components won't [crash the system/kernel](https://en.wikipedia.org/wiki/Kernel_panic).
 
 - **Restartless design**
 
@@ -87,7 +87,7 @@ By isolating the system components from the kernel, the [attack surface](https:/
 
 - **Improved security and reliability without significant performance impact**
 
-As the kernel is small, it uses less memory to do its work. The limited kernel code size helps us work towards "bug-free" status ([KISS](https://en.wikipedia.org/wiki/KISS_principle)).
+As the kernel is small, it uses less memory to do its work. The limited kernel code size helps us work towards a bug-free status ([KISS](https://en.wikipedia.org/wiki/KISS_principle)).
 
 Rust's safe and fast language design, combined with the small kernel code size, helps ensure a reliable, performant and easy to maintain core.
 
@@ -115,7 +115,7 @@ You can see how Redox is compared to Linux, FreeBSD and Plan 9 on [this](https:/
 
 The main goal of Redox is to be a general-purpose OS, while maintaining security, reliability and correctness.
 
-Redox aims to be an alternative to existing Unix systems (Linux/BSD), with the ability to run most Unix programs with only recompilation or minimal modifications needed.
+Redox aims to be an alternative to existing Unix systems (Linux/BSD), with the ability to run most Unix programs with only recompilation or minimal modifications.
 
 - [Our Goals](https://doc.redox-os.org/book/ch01-01-our-goals.html)
 
@@ -148,13 +148,13 @@ This Bell Labs OS brings the concept of "Everything is a File" to the highest le
 
 The most influential Unix-like system with a microkernel. It has advanced features such as system modularity, [kernel panic](https://en.wikipedia.org/wiki/Kernel_panic) resistence, driver reincarnation, protection against bad drivers and secure interfaces for [process comunication](https://en.wikipedia.org/wiki/Inter-process_communication).
 
-Redox is largely inspired by Minix: it has a similar architecture and feature set written in Rust.
+Redox is largely inspired by Minix - it has a similar architecture but with a feature set written in Rust.
 
 - [How Minix influenced the Redox design](https://doc.redox-os.org/book/ch04-01-microkernels.html)
 
 ### [seL4](https://sel4.systems/)
 
-The fastest and simplest microkernel of the world. It aims for performance and simplicity.
+The most performant and simplest microkernel of the world.
 
 Redox follow the same principle, trying to make the kernel-space small as possible (moving components to user-space and reducing the number of system calls, passing the complexity to user-space) and keeping the overall performance good (reducing the context switch cost).
 
@@ -276,7 +276,7 @@ Have a look at [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/m
 
 ## I have a low-end computer, would Redox work on it?
 
-A computer processor is the most complex machine of the world: even the oldest processors are powerful for some tasks but not for others.
+A CPU is the most complex machine of the world: even the oldest processors are powerful for some tasks but not for others.
 
 The main problem with old computers is the amount of RAM available (they were sold in a era where RAM chips were expensive) and the lack of SSE/AVX extensions (programs use them to speed up the algorithms). Because of this some modern programs may not work or require a lot of RAM to perform complex tasks.
 
