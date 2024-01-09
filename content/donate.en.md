@@ -2,17 +2,20 @@
 title = "Donate/Merch"
 +++
 
+<a class="btn btn-default" href="https://donorbox.org/redox-os">Donorbox</a>
+<a class="btn btn-primary" href="https://www.patreon.com/redox_os">Patreon</a>
+
 ## Redox OS Nonprofit
+
+With Donorbox, you can select a one-time or monthly donation where you specify the amount.
+
+With Patreon, you can choose monthly donations in three tiers.
 
 Redox OS has a Colorado (US) incorporated 501(c)(4) nonprofit that manages
 donations. Donations to the Redox OS nonprofit will be used as determined by
 the Redox OS volunteer board of directors.
 
-You can donate to Redox OS the following ways:
-
- - [Patreon](https://www.patreon.com/redox_os)
- - [Donorbox](https://donorbox.org/redox-os)
- - For more donation options, please contact donate@redox-os.org
+For more donation options, please contact donate@redox-os.org
 
 ## Merch
 
@@ -32,6 +35,8 @@ You can donate to Jeremy Soller the following ways:
 - [Paypal](https://www.paypal.me/redoxos)
 - Jeremy Soller no longer accepts Bitcoin or Ethereum donations. Do not send
   anything to the previously listed addresses, as it will not be received.
+
+## Donors
 
 The following patrons have donated $4 or more to Jeremy Soller for use in developing Redox OS:
 {{% partial "donors/jackpot51.html" %}}
