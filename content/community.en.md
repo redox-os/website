@@ -6,17 +6,24 @@ This page attempts to explain how the Redox OS community is organised and helps 
 
 We follow the [Rust Code Of Conduct](https://www.rust-lang.org/policies/code-of-conduct) for rules in all community/chat channels.
 
+## [Announncements](https://matrix.to/#/#redox-announcements:matrix.org)
+
+We do our announcements on this Matrix room, it's public and you don't need to login on Matrix to read it.
+
+- #redox-announcements:matrix.org (Use this Matrix room address if you don't want to use the external Matrix link)
+
 ## [Chat](https://matrix.to/#/#redox-join:matrix.org)
 
-Matrix is the official way to talk with the Redox OS team/community. These rooms are English-only; we don't accept other languages because we don't understand them.
+Matrix is the official way to talk with Redox OS team and community (these rooms are English-only, we don't accept other languages because we don't understand them).
 
-- #redox-join:matrix.org
+Matrix has several different clients. [Element](https://element.io/) is a commonly used choice, it works on web browsers, Linux, MacOSX, Windows, Android and iOS.
 
-Matrix has several different clients. [Element](https://element.io/) is a commonly used choice.
-
-- Join this room and don't forget to request an invite to the Redox space.
+- Join [this](https://matrix.to/#/#redox-join:matrix.org) room and don't forget to request an invite to the Redox Matrix space.
+- #redox-join:matrix.org (Use this Matrix room address if you don't want to use the external Matrix link)
 
 (We recommend that you leave the "Join Requests" room after your entry on Redox space)
+
+If you want to have a big discussion in our rooms, you should use a Element thread, it's more organized and easy to keep track if more discussions happen on the same room.
 
 ## [GitLab](https://gitlab.redox-os.org/redox-os/redox)
 
