@@ -20,12 +20,16 @@ A rede Matrix tem diferentes clientes, sendo o [Element](https://element.io/) o 
 
 O Element funciona em navegadores web, Linux, MacOSX, Windows, Android e iOS.
 
+Caso tenha problemas com o Element, teste o [nheko](https://nheko-reborn.github.io/).
+
 - Entre [nesta](https://matrix.to/#/#redox-join:matrix.org) sala e não esqueça de solicitar um convite para o espaço do Redox.
 - #redox-join:matrix.org (Use esse endereço de sala do Matrix caso não queira utilizar o link externo do Matrix)
 
 (Nós recomendamos que você saia da sala "Join Requests" depois de entrar no espaço do Redox)
 
 Caso você tenha uma grande discussão nas nossas salas, você deve usar um thread do Element, pois é mais organizado e fácil de acompanhar caso mais discussões ocorram na mesma sala.
+
+Você pode encontrar mais informações [nesta](https://doc.redox-os.org/book/ch13-01-chat.html) página.
 
 ## [GitLab](https://gitlab.redox-os.org/redox-os/redox)
 

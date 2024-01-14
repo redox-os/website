@@ -18,12 +18,16 @@ Matrix is the official way to talk with Redox OS team and community (these rooms
 
 Matrix has several different clients. [Element](https://element.io/) is a commonly used choice, it works on web browsers, Linux, MacOSX, Windows, Android and iOS.
 
+If you have problems with Element, try [nheko](https://nheko-reborn.github.io/).
+
 - Join [this](https://matrix.to/#/#redox-join:matrix.org) room and don't forget to request an invite to the Redox Matrix space.
 - #redox-join:matrix.org (Use this Matrix room address if you don't want to use the external Matrix link)
 
 (We recommend that you leave the "Join Requests" room after your entry on Redox space)
 
 If you want to have a big discussion in our rooms, you should use a Element thread, it's more organized and easy to keep track if more discussions happen on the same room.
+
+You cand find more information on [this](https://doc.redox-os.org/book/ch13-01-chat.html) page.
 
 ## [GitLab](https://gitlab.redox-os.org/redox-os/redox)
 
