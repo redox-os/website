@@ -1,10 +1,10 @@
 +++
-title = "New T-Shirt Colors and Other Fundraising News"
+title = "Redox Merch, New T-Shirt Colors and Other Fundraising News"
 author = "Ron Williams"
 date = "2024-01-17"
 +++
 
-New T-Shirt Colors! Limited Editions! and more fundraising news!
+Shop Redox Merch! New T-Shirt Colors! Limited Editions! and more fundraising news!
 
 Redox Summer of Code (RSoC) is our annual program to fund students and other contributors for summer projects that help move Redox forward.
 
@@ -13,23 +13,20 @@ We are hoping to have a similar-sized program this year, but in order to do that
 
 ## T-Shirts! New Colors!
 
-We have added some great new T-Shirt colors.
+For those of you that were not aware, Redox has a [merch store](https://redox-os.creator-spring.com/)! And this month, we have added some great new T-Shirt colors! Approximately $14 per T-Shirt goes towards Redox development (a little less for European orders).
 
-After a poll of our community, Midnight Navy and Cardinal we chosen as our new T-Shirt colors. They are available now at our [Redox Shop](https://redox-os.creator-spring.com/). Approximately $14 per T-Shirt goes towards Redox development (a little less for European orders). Be sure to check the size guide.
+After a poll of our community, Midnight Navy and Cardinal we chosen as our new T-Shirt colors. They are available now. Plus our fantastic [black](https://redox-os.creator-spring.com/listing/redox-os-dark-tee?product=46&variation=2742&size=423), [gray](https://redox-os.creator-spring.com/listing/redox-os-light-tee?product=46&variation=2753&size=423) and  [white](https://redox-os.creator-spring.com/listing/redox-os-light-tee?product=46&variation=2739&size=423) shirts are available as always.
+Click the images below to go directly to the color you want. Be sure to check the size guide.
 
 <a href="https://redox-os.creator-spring.com/listing/redox-os-dark-tee?product=46&variation=2745&size=423"><img class="img" src="/img/tshirts/midnight-navy.png" alt="Midnight Navy" style="width: 40%; height: auto;"/></a>
 <a href="https://redox-os.creator-spring.com/listing/redox-os-dark-tee?product=46&variation=2756&size=423"><img class="img" src="/img/tshirts/cardinal.png" alt="Cardinal" style="width: 40%; height: auto;"/></a>
-
-###
 
 We also have Tahiti Blue and Dark Chocolate as a "limited edition", available until February 29.
 
 <a href="https://redox-os.creator-spring.com/listing/redox-os-light-tee?product=46&variation=2748&size=423"><img class="img" src="/img/tshirts/tahiti-blue.png" alt="Tahiti Blue" style="width: 40%; height: auto;"/></a>
 <a href="https://redox-os.creator-spring.com/listing/redox-os-dark-tee?product=46&variation=2754&size=423"><img class="img" src="/img/tshirts/dark-chocolate.png" alt="Dark Chocolate" style="width: 40%; height: auto;"/></a>
 
-###
-
-Plus our [white](https://redox-os.creator-spring.com/listing/redox-os-light-tee?product=46&variation=2739&size=423), [gray](https://redox-os.creator-spring.com/listing/redox-os-light-tee?product=46&variation=2753&size=423) and [black](https://redox-os.creator-spring.com/listing/redox-os-dark-tee?product=46&variation=2742&size=423) shirts are available as always.
+If there is some merch product that you would like to see us add, please let us know on Matrix!
 
 ## Donating to Redox
 
@@ -59,5 +56,6 @@ There are also some foundations funded by corporate donors, and they are very ac
 
 We will be pursuing donations from both of these types of organizations over the coming months.
 At the same time, we will be looking for corporate partners who are interested in Redox and have interests that mesh well with our goals.
+If you have any suggestions for a corporate partner, please contact me (rw_van) or Ribbon on Matrix.
 
 We will keep you up to date if we have any big news to share.
