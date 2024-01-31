@@ -3,12 +3,13 @@ title = "Community"
 +++
 
 This page attempts to explain how the Redox OS community is organised and helps you navigate it.
+The headings are clickable to help you get to where you need to go.
 
 We follow the [Rust Code Of Conduct](https://www.rust-lang.org/policies/code-of-conduct) for rules in all community/chat channels.
 
-## [Announncements](https://matrix.to/#/#redox-announcements:matrix.org)
+## [Announcements](https://matrix.to/#/#redox-announcements:matrix.org)
 
-We do our announcements on this Matrix room, it's public and you don't need to login on Matrix to read it.
+We do our announcements on [this](https://matrix.to/#/#redox-announcements:matrix.org) Matrix room, it's public and you don't need to login on Matrix to read it.
 
 - #redox-announcements:matrix.org (Use this Matrix room address if you don't want to use the external Matrix link)
 
@@ -28,6 +29,12 @@ If you have problems with Element, try [nheko](https://nheko-reborn.github.io/).
 If you want to have a big discussion in our rooms, you should use a Element thread, it's more organized and easy to keep track if more discussions happen on the same room.
 
 You cand find more information on [this](https://doc.redox-os.org/book/ch13-01-chat.html) page.
+
+## [Summer of Code](/rsoc)
+
+The **Redox Summer of Code** (RSoC) program runs annually when funding permits, and we may participate in other Summer of Code type programs.
+An overview of our Summer of Code programs and our plans for this year are [here](/rsoc).
+Check out our [RSoC Proposal Guide](/rsoc-proposal-how-to) and [Project Suggestions](/rsoc-project-suggestions).
 
 ## [GitLab](https://gitlab.redox-os.org/redox-os/redox)
 

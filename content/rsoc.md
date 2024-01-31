@@ -2,12 +2,22 @@
 title = "Redox OS Summer of Code"
 +++
 
-(This page was dropped because we are deciding how we will hire devs in the future, you don't need to translate it or add on config.toml)
+Our plans for Summer of Code for 2024 have not yet been announced, and applications are not yet open.
+Watch for news on our 
+[Announcements](https://matrix.to/#/#redox-announcements:matrix.org)
+room on Matrix.
 
-The Redox OS Summer of Code is the primary use of donations to the Redox OS
-project. Students are selected who have already demonstrated a desire and
+The Redox OS Summer of Code program is the primary use of donations to the Redox OS
+project. 
+
+To be eligible, you must be a student or recent graduate who has already demonstrated a desire and
 ability to contribute to Redox OS. If you are interested, you must join the
-Redox OS chat and contribute to Redox OS projects.
+Redox OS Chat and contribute to Redox OS projects.
+
+We also participate in other Summer of Code type programs, when available,
+which may have their own rules and critera.
+
+Have a look at our [Proposal Guidelines](/rsoc-proposal-how-to) and [Project Suggestions](/rsoc-project-suggestions).
 
 ## Previous contributions
 
@@ -54,3 +64,9 @@ Redox OS chat and contribute to Redox OS projects.
 - [QEMU on Redox - part 2](https://www.redox-os.org/news/bochs-qemu-2/)
 - [Revirt - part 1](https://www.redox-os.org/news/revirt-1/)
 - [Revirt - part 2](https://www.redox-os.org/news/rsoc-2022-revirt-u-1/)
+- [Summer of Code Wrap-up 2023](https://www.redox-os.org/news/rsoc-2023-wrapup/)
+- [VirtIO - part 1](https://www.redox-os.org/news/rsoc-virtio-1)
+- [VirtIO - part 2](https://www.redox-os.org/news/rsoc-virtio-2)
+- [Revirt-U](https://www.redox-os.org/news/rsoc-2023-eny-1)
+- [Memory Management - part 1](https://www.redox-os.org/news/kernel-8)
+- [Memory Management - part 2](https://www.redox-os.org/news/kernel-9)
