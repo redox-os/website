@@ -9,15 +9,11 @@ Cette page couvre les questions/réponses pour les nouveaux arrivants et les uti
 - [Quelles fonctionnalités a Redox?](#quelles-fonctionnalités-a-redox)
     - [Les avantages du micro noyau](#les-avantages-du-micro-noyau)
     - [Les avantages de Rust](#les-avantages-de-rust)
+    - [Comparaison avec d'autres systèmes d'exploitation]()
 - [Quelle est l'utilité de Redox?](#quelle-est-lutilité-de-redox)
 - [Que peut-on faire avec Redox?](#que-peut-on-faire-avec-redox)
 - [Qu'est-ce qu'un système d'exploitation de type Unix?](#quest-ce-quun-système-dexploitation-de-type-unix)
 - [Comment Redox s'inspire d'autres systèmes d'exploitation?](#comment-redox-sinspire-dautres-systèmes-dexploitation)
-    - [Plan 9](#plan-9)
-    - [Minix](#minix)
-    - [seL4](#sel4)
-    - [BSD](#bsd)
-    - [Linux](#linux)
 - [Qu'est-ce qu'un micro noyau?](#quest-ce-quun-micro-noyau)
 - [Quels programmes peuvent tourner sur Redox?](#quels-programmes-peuvent-tourner-sur-redox)
 - [Comment installer des programmes sur Redox?](#comment-installer-des-programmes-sur-redox)
@@ -82,7 +78,7 @@ La syntaxe restrictive et les suggestions du compilateur réduisent considérabl
 
 #### Pas besoin de mesures d'atténuation des exploits de C/C++
 
-La conception du micro-noyau écrite en Rust protège contre les défauts de mémoire que l'on peut croiser en C/C++.
+La conception du micro-noyau écrite en Rust protège contre les défauts de mémoire que l'on peut croiser dans des programmes en C/C++.
 
 En isolant les composants du système du noyau, [la surface d'attaque](https://en.wikipedia.org/wiki/Attack_surface) est très limitée.
 
@@ -109,6 +105,10 @@ Les pilotes écrits en Rust sont susceptibles d'avoir moins de bogues et donc un
 Redox utilise RedoxFS comme système de fichiers par défaut, il prend en charge des fonctionnalités similaires à [ZFS](https://docs.freebsd.org/en/books/handbook/zfs/) avec une implémentation écrite en Rust.
 
 Attendez-vous à des performances élevées et à la sécurité des données (copie sur écriture, intégrité des données, volumes, instantanés, protection contre la perte de données).
+
+### Comparaison avec d'autres systèmes d'exploitation
+
+Vous pouvez voir comment Redox est comparé à Linux, FreeBSD et Plan 9 sur [cette](https://doc.redox-os.org/book/ch04-11-features.html) page.
 
 ## Quelle est l'utilité de Redox?
 
@@ -292,13 +292,13 @@ Redox fonctionnera normalement (si l'architecture du processeur est prise en cha
 
 À l'avenir, le micro-noyau pourrait agir comme un hyperviseur, similaire à [Xen](https://xenproject.org/).
 
-Un [hyperviseur](https://en.wikipedia.org/wiki/Hypervisor) est un logiciel permettant d'exécuter simultanément plusieurs instances de système d'exploitation isolées.
+Un [hyperviseur](https://en.wikipedia.org/wiki/Hypervisor) est un programme permettant d'exécuter simultanément plusieurs instances de système d'exploitation isolées.
 
 ## Comment compiler Redox?
 
 Actuellement, Redox a un script d'amorçage pour Pop OS!, Ubuntu, Debian, Fedora, Arch Linux, openSUSE et FreeBSD avec un support non maintenu pour d'autres distributions.
 
-Nous proposons également Podman comme méthode de compilation universelle, c'est le processus de construction recommandé pour les systèmes non-Debian car il évite les problèmes d'environnement sur le processus de construction.
+Nous proposons également Podman comme méthode de compilation universelle. C'est le processus de construction recommandé pour les systèmes non-Debian car il évite les problèmes d'environnement sur le processus de construction.
 
 - [Guide de compilation du livre Redox](https://doc.redox-os.org/book/ch02-05-building-redox.html) - (Pop OS!, Ubuntu, Debian, Fedora, Arch Linux, openSUSE et FreeBSD)
 - [Guide Podman du livre Redox](https://doc.redox-os.org/book/ch02-06-podman-build.html)
