@@ -35,7 +35,7 @@ Jeremy created the Redox OS project in 2015, and is the Redox [BDFL](https://en.
 
 <a href="/img/board/alberto-souza.jpg"><img width=256 height=256 src="/img/board/alberto-souza.jpg"/></a>
 
-Alberto has been an open-source activist and systems researcher since 2016. He has used dozens of Unix-like systems, from mainstream to underground, and has a passion for kernel models. He has been in love with BSDs due to their maturity and simplicity, and has been following Redox OS development over the years, feeling confident to start contributing in 2023. Since starting, he has made vast improvements to the Redox OS documentation and worked on porting numerous programs.
+Alberto has been an open-source activist and amateur systems researcher since 2017. He has used dozens of Unix-like systems and thousands of free and open-source programs, from mainstream to underground. He has been following Redox OS development over the years, feeling confident to start contributing in 2023. Since starting, he has made vast improvements to the Redox OS management, documentation and worked on porting numerous programs.
 
 <hr>
 

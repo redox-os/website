@@ -8,6 +8,8 @@ for language in $(grep '^\[languages\..*\]$' config.toml | cut -d '.' -f2 | cut 
 do
     cp -v "content/rsoc.md" "build/content/rsoc.$language.md"
     cp -v "content/talks.md" "build/content/talks.$language.md"
+    cp -v "content/rsoc-project-suggestions.md" "build/content/rsoc-project-suggestions.$language.md"
+    cp -v "content/rsoc-proposal-how-to.md" "build/content/rsoc-proposal-how-to.$language.md"
     for file in content/news/*.md
     do
         cp -v "$file" "build/${file%.md}.$language.md"

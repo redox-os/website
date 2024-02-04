@@ -6,17 +6,30 @@ Essa página explica como a comunidade do Redox OS é organizada e como você po
 
 Nós seguidos o [Código de Conduta da Rust](https://www.rust-lang.org/policies/code-of-conduct) como regra em todos os nossos canais de comunidade/chats.
 
+## [Novidades](https://matrix.to/#/#redox-announcements:matrix.org)
+
+Nós anunciamos as novidades do Redox OS nesta sala do Matrix, ela é pública e você pode ler sem um login no Matrix.
+
+- #redox-announcements:matrix.org (Use esse endereço de sala do Matrix caso não queira utilizar o link externo do Matrix)
+
 ## [Chat](https://matrix.to/#/#redox-join:matrix.org)
 
 Matrix é a forma de comunicação oficial com o time/comunidade do Redox OS (aceitamos apenas o Inglês nestas salas, pois não entendemos outras linguagens).
 
-- #redox-join:matrix.org
+A rede Matrix tem diferentes clientes, sendo o [Element](https://element.io/) o mais utilizado.
 
-A rede Matrix tem diferentes clientes, [Element](https://element.io/) é o mais utilizado.
+O Element funciona em navegadores web, Linux, MacOSX, Windows, Android e iOS.
 
-- Entre na sala e não esqueça de solicitar um convite para o espaço do Redox.
+Caso tenha problemas com o Element, teste o [nheko](https://nheko-reborn.github.io/).
+
+- Entre [nesta](https://matrix.to/#/#redox-join:matrix.org) sala e não esqueça de solicitar um convite para o espaço do Redox.
+- #redox-join:matrix.org (Use esse endereço de sala do Matrix caso não queira utilizar o link externo do Matrix)
 
 (Nós recomendamos que você saia da sala "Join Requests" depois de entrar no espaço do Redox)
+
+Caso você tenha uma grande discussão nas nossas salas, você deve usar um thread do Element, pois é mais organizado e fácil de acompanhar caso mais discussões ocorram na mesma sala.
+
+Você pode encontrar mais informações [nesta](https://doc.redox-os.org/book/ch13-01-chat.html) página.
 
 ## [GitLab](https://gitlab.redox-os.org/redox-os/redox)
 
@@ -25,6 +38,10 @@ Uma forma mais formal de comunicação com os desenvolvedores do Redox, porém m
 Envie uma Issue se você tiver problemas compilando/testando ou apenas queira discutir algum assunto, seja funções, estilo de código, inconsistências de código, pequenas mudanças ou correções.
 
 Se você quiser criar uma conta, leia essa [página](https://doc.redox-os.org/book/ch12-01-signing-in-to-gitlab.html).
+
+Se você tiver MRs (merge requests) prontos você precisa enviar o link deles na sala [MRs](https://matrix.to/#/#redox-mrs:matrix.org), antes de entrar nesta sala você precisa solicitar um convite para o espaço Matrix na sala [Join Requests](https://matrix.to/#/#redox-join:matrix.org).
+
+Dessa forma seu MR não será esquecido, evitando conflitos.
 
 ## [Lemmy](https://lemmy.world/c/redox)
 

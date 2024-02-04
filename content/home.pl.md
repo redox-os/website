@@ -10,6 +10,7 @@ url = "home"
   </div>
   <div class="col-md-4 install-box">
     <br/>
+    <a class="btn btn-primary" href="/pl/quickstart/">Szybki start</a>
     <a class="btn btn-primary" href="https://gitlab.redox-os.org/redox-os/redox/-/releases">Zobacz Wydania</a>
     <a class="btn btn-default" href="https://gitlab.redox-os.org/redox-os/redox/">Pobierz z GitLaba</a>
   </div>
