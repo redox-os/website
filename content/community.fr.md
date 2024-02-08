@@ -6,17 +6,36 @@ Cette page tente d'expliquer comment la communauté Redox OS est organisée et v
 
 Nous suivons le [Code de conduite de Rust](https://www.rust-lang.org/policies/code-of-conduct) pour les règles dans tous les salons de chat/de la communauté.
 
+## [Annonces](https://matrix.to/#/#redox-announcements:matrix.org)
+
+Nous faisons nos annonces sur [ce salon](https://matrix.to/#/#redox-announcements:matrix.org) Matrix, il est publique et vous n'avez pas besoin de vous connecter à Matrix pour le lire.
+
+- #redox-announcements:matrix.org (Utilisez cette adresse de salon Matrix si vous ne souhaitez pas utiliser le lien Matrix externe)
+
+
+
 ## [Chat](https://matrix.to/#/#redox-join:matrix.org)
 
-Matrix est la plateforme officielle pour communiquer avec l'équipe et la communautée de Redox OS. Ces salons sont uniquement en anglais, nous n'acceptons pas d'autres langues car nous ne les comprenons pas.
+Matrix est la plateforme officielle pour communiquer avec l'équipe et la communautée de Redox OS (ces salons sont uniquement en anglais, nous n'acceptons pas d'autres langues car nous ne les comprenons pas).
 
-- #redox-join:matrix.org
+Matrix possède de multiples clients. [Element](https://element.io/) est le choix le plus courant, il fonctionne sur les navigateurs Web, Linux, MacOSX, Windows, Android et iOS.
 
-Matrix possède de multiples clients. [Element](https://element.io/) est le choix le plus courant.
+Si vous rencontrez des problèmes avec Element, essayez [nheko](https://nheko-reborn.github.io/).
 
-- Rejoignez ce salon et n'oubliez pas de demander une invitation à l'espace Redox.
+- Rejoignez [ce salon](https://matrix.to/#/#redox-join:matrix.org) et n'oubliez pas de demander une invitation à l'espace Redox.
+- #redox-join:matrix.org (Utilisez cette adresse de salon Matrix si vous ne souhaitez pas utiliser le lien Matrix externe)
 
 (Nous vous recommandons de quitter le salon "Join Requests" après votre entrée sur l'espace Redox)
+
+Si vous souhaitez avoir une grande discussion dans nos salons, vous devez utiliser un fil de discussion Element, il est plus organisé et plus facile à suivre si d'autres discussions ont lieu dans le même salon.
+
+Vous pouvez trouver plus d'informations sur [cette page](https://doc.redox-os.org/book/ch13-01-chat.html).
+
+## [Summer of Code](/rsoc)
+
+Le programme **Redox Summer of Code** (RSoC) se déroule chaque année lorsque le financement le permet, et nous pouvons participer à d'autres évènements similaires.
+Un aperçu de nos programmes Summer of Code et de nos projets pour cette année sont [ici](/rsoc).
+Consultez notre [Guide de proposition RSoC](/rsoc-proposal-how-to) et nos [Suggestions de projet](/rsoc-project-suggestions).
 
 ## [GitLab](https://gitlab.redox-os.org/redox-os/redox)
 
@@ -26,7 +45,7 @@ Si vous souhaitez créer un compte, lisez cette [page](https://doc.redox-os.org/
 
 Si vous avez des MRs prêts (merge requests), vous devez envoyer les liens sur le salon [MRs](https://matrix.to/#/#redox-mrs:matrix.org). Pour rejoindre ce salon, une vous aurez besoin de demander un invitation dans le salon [Join Requests](https://matrix.to/#/#redox-join:matrix.org).
 
-De cette façon, votre MR ne sera pas oublié et n’accumulera pas de conflits.
+De cette façon, en envoyant un message dans le salon, votre MR ne sera pas oublié et n’accumulera pas de conflits.
 
 ## [Lemmy](https://lemmy.world/c/redox)
 
@@ -59,6 +78,6 @@ Ceci est l'archive de notre forum avec des questions anciennes/classiques, il es
 
 Conférences de Redox réalisées à différents événements.
 
-## Note
+## Faites passer le message
 
 Développer la communauté est un élément important du succès de Redox. Si davantage de personnes connaissent Redox, davantage de contributeurs sont susceptibles d'intervenir et tout le monde peut bénéficier de leur expertise supplémentaire. Vous pouvez faire la différence en écrivant des articles, en discutant avec d'autres passionnés de système d'exploitation ou en recherchant des communautés qui souhaiteraient en savoir plus sur Redox.

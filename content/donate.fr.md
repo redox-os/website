@@ -26,7 +26,7 @@ Chaque vente est une donation pour l'association Redox OS à but non lucrative.
 ## Jeremy Soller
 
 Jeremy Soller est le créateur, le mainteneur et le développeur principal de Redox OS. 
-Les dons à Jeremy Soller sont traités comme un don imposable et seront utilisés à sa discrétion.
+Les dons à sa destination sont traités comme un don imposable et seront utilisés à sa discrétion.
 
 Vous pouvez faire un don à Jeremy Soller des manières suivantes :
 
