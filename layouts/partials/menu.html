@@ -1,15 +1,15 @@
 <header>
   <nav>
     <ul class="row menu">
-      <li class="col-xs-12 col-md-2">
+      <li class="col-xs-12 col-md-3">
         <a href="{{ if .Site.LanguagePrefix }}{{ .Site.LanguagePrefix }}{{ else }}/{{ end }}">
             <picture>
-                <source srcset="/img/icon-dark.png" media="(prefers-color-scheme: dark)"/>
-                <img src="/img/icon.png" width="128" height="128" alt="Redox Logo"/>
+                <source srcset="/img/logo-dark.png" media="(prefers-color-scheme: dark)"/>
+                <img src="/img/logo.png" width="178" height="64" alt="Redox Logo"/>
             </picture>
         </a>
       </li>
-      <li class="col-xs-12 col-md-10 menu">
+      <li class="col-xs-12 col-md-9 menu">
         {{ range .Site.Menus.main }}
           <h2><a style="color: inherit;" href="{{ .URL | relLangURL }}">{{ .Name }}</a></h2>
         {{ end }}
