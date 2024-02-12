@@ -12,7 +12,7 @@ languageName = "English"
 languageCode = "en-us"
 [[languages.en.menu.main]]
 weight = 1
-name = "Documentation"
+name = "Docs"
 url = "/docs/"
 [[languages.en.menu.main]]
 weight = 2
