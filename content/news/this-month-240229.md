@@ -23,11 +23,11 @@ and compared that against copying from the raw disk scheme, and from the disk sc
 The following results were observed.
 
 |  Block size  | `/dev/zero`  |   raw disk   |    RedoxFS   |
-| ------------ | ------------ | ------------ | ------------ |
+| :----------: | :----------: | :----------: | :----------: |
 |     4KiB     |  110 MiB/s   |   22 MiB/s   |   6 MiB/s    |
 |     4Mib     |   1.6 GiB/s  |  600 MiB/s   |  170* MiB/s  |
-*After the addition of records described below.
 
+*After the addition of records described below.
 (Some results omitted)
 
 In order to separate the size of RedoxFS read/write operations from the disk block size,
