@@ -12,6 +12,8 @@ Você pode doar para o Redox OS das seguintes formas:
 
  - [Patreon](https://www.patreon.com/redox_os)
  - [Donorbox](https://donorbox.org/redox-os)
+ - [Bitcoin](https://bitcoin.org/) - 3NhKNtLMBg7xvU3AeEQBxKii1Qm72R6pWg
+ - [Ethereum](https://ethereum.org/en/) - 0x083e29156955A4c0f7eAA406e1167Bd1bE88933E
  - Para mais opções de doações, por favor entre em contato no endereço de e-mail:
    donate@redox-os.org
 
