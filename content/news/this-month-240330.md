@@ -42,7 +42,7 @@ The [libredox](https://crates.io/crates/libredox) library was [planned](https://
 
 ## Scheme Cancellation
 
-4lDO2 implemented scheme request cancellation to mimic the POSIX signals behavior when closing file descriptors. This is one of several steps we are taking to make our signal implementation more compatible with POSIX signals.
+4lDO2 implemented scheme request cancellation on some system components to mimic the POSIX signals behavior and fix a bug when closing file descriptors. This is one of several steps we are taking to make our signal implementation more compatible with POSIX signals.
 
 ## RedoxFS
 
