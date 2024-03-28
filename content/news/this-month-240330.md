@@ -4,7 +4,7 @@ author = "Ribbon and Ron Williams"
 date = "2024-03-30"
 +++
 
-This is our third update for 2024, March was a very exciting month.
+March was a very exciting month for Redox! Here's all the latest news.
 
 ## Donate to Redox
 
@@ -38,15 +38,15 @@ The [libredox](https://crates.io/crates/libredox) library was [planned](https://
 
 4lDO2 finished the migration of all system components, only some Rust libraries are left.
 
-This achievement will help us to speed up the development with breaking changes.
+`libredox` greatly reduces the impact of breaking changes on Redox, and allows us to make improvements to core functionality more rapidly.
 
 ## Scheme Cancellation
 
-4lDO2 implemented the scheme cancellation to mimic the POSIX signals behavior when closing file descriptors, it improves the compability with POSIX programs.
+4lDO2 implemented scheme request cancellation to mimic the POSIX signals behavior when closing file descriptors. This is one of several steps we are taking to make our signal implementation more compatible with POSIX signals.
 
 ## RedoxFS
 
-Jeremy fixed a serious bug on the records, they were being deallocated on read when the size of the record doesn't match the expectations.
+Jeremy fixed a bug on his recent `records` optimization on RedoxFS, they were being deallocated on read when the size of the record doesn't match the expectations.
 
 Jeremy plans to implement safe wrappers for block allocation and deallocation that insures such things are very difficult to do.
 
@@ -56,7 +56,7 @@ Thankfully there are very few places doing raw block allocation and deallocation
 
 bjorn3 removed more duplicated code and moved more drivers to device categories.
 
-He also fixed some bugs.
+He also fixed some driver bugs during the cleanup.
 
 ## Boot Loader
 
@@ -64,13 +64,15 @@ bjorn3 implemented many changes to make our kernel "boot loader agnostic", it wi
 
 ## Build System
 
-4lDO2 improved the recipe search algorithm a lot, now it takes around 1 second (using a NVMe SSD) to verify the location and sources of all recipes on the filesystem configuration.
+4lDO2 improved the build system's recipe search algorithm a lot, now it takes around 1 second (using a NVMe SSD) to verify the location and sources of all recipes (packages) on the filesystem configuration.
 
-## Programs
+## Web Server
 
-The Apache HTTP server was ported by Chocimier to the point where it host at localhost.
+The Apache HTTP server was ported by Chocimier to the point where it can host pages using localhost.
 
-More programs compiled successfully, still need to be tested inside of Redox.
+## Packages and Porting
+
+We are continuing to add programs to our package build system. Several more programs compiled successfully, but still need to be tested on Redox.
 
 ## Python Support
 
@@ -80,13 +82,12 @@ CPython is still work-in-progress.
 
 ## Documentation
 
-Ribbon updated the [build system dependencies list](https://doc.redox-os.org/book/ch08-01-advanced-build.html#install-the-necessary-packages-and-emulators) for each supported operating system on the [bootstrap.sh](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/bootstrap.sh?ref_type=heads) script for manual configuration, now it's in pair with the script.
+Ribbon made several improvements to the book:
 
-He added [references](https://doc.redox-os.org/book/ch09-08-references.html) to help with program porting, ideas and source code documentation.
-
-He documented the method to port graphical programs to Orbital by using the [liborbital](https://gitlab.redox-os.org/redox-os/liborbital) library.
-
-He also improved the porting documentation with more accurate information, fixed some things and did cleanup.
+- added to the [references](https://doc.redox-os.org/book/ch09-08-references.html) list, including additions to the Program Porting, Ideas and Source Code sections.
+- documented the method to port graphical programs to Orbital by using the [liborbital](https://gitlab.redox-os.org/redox-os/liborbital) library.
+- updated the [build system dependencies list](https://doc.redox-os.org/book/ch08-01-advanced-build.html#install-the-necessary-packages-and-emulators) for each supported operating system in the [bootstrap.sh](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/bootstrap.sh?ref_type=heads) script for manual configuration, to make sure the documentation matches the script.
+- improved the porting documentation with more accurate information, fixed some things and did cleanup.
 
 ## Packages
 
