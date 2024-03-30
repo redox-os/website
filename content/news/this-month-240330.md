@@ -25,7 +25,7 @@ This will give our donors more choices for supporting Redox development.
 ## Performance Improvements
 
 4lDO2 replaced the Redox memory manager buddy allocator with a linked-list-based O(1) frame allocator that reduced the global memory allocation overhead from 35% to 0.9%, while the overhead reduction at boot was 95%!
-Read all about it in his excellent post "[Significant performance and correctness improvements to the kernel](/news/kernel-10.md)".
+Read all about it in his excellent post "[Significant performance and correctness improvements to the kernel](/news/kernel-10)".
 
 He also reduced the base system call overhead a lot, from 344 to 116 cycles on x86_64!
 
