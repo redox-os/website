@@ -2,16 +2,11 @@
 title = "How to Write a Summer of Code Project Proposal"
 +++
 
-Our plans for Summer of Code for 2024 have not yet been announced, and applications are not yet open.
-Watch for news on our 
-[Announcements](https://matrix.to/#/#redox-announcements:matrix.org)
-room on Matrix.
+Redox Summer of Code is now open for applications.
 
 Please check our [Summer of Code](/rsoc) announcements page for information about this year's program.
 
-If you are interested in participating in Redox Summer of Code (RSoC), you must be a current or past Redox contributor,
-or be contributing to another well-known written-in-Rust Operating System project.
-If you are a regular contributor, our application process is quite informal, but if you are newer to Redox, we may require a proposal as described below.
+Our application process for this year is informal, please keep your proposal simple and short.
 
 When we are able to participate in other programs, such as Google's Summer of Code, we will follow their rules and processes.
 Any information below that discusses those programs is not meant to imply that we are currently participating in those programs.
@@ -51,7 +46,7 @@ will go a long way toward convincing us you are the right person for us.
 
 ## The Proposal
 
-A proposal may or may not be required.
+A detailed proposal may or may not be required.
 Please ask on the [Summer of Code](https://matrix.to/#/#redox-soc:matrix.org) Matrix room if you should do one.
 
 ### Project Goals

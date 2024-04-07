@@ -2,10 +2,7 @@
 title = "Summer of Code Project Suggestions"
 +++
 
-Our plans for Summer of Code for 2024 have not yet been announced, and applications are not yet open.
-Watch for news on our 
-[Announcements](https://matrix.to/#/#redox-announcements:matrix.org)
-room on Matrix.
+The Redox Summer of Code is now open for applications.
 
 Redox supports students, recent graduates and other open source contributors through our Summer of Code programs,
 including our own **Redox Summer of Code** (RSoC) and programs sponsored by other organizations.
