@@ -2,20 +2,22 @@
 title = "Redox OS Summer of Code"
 +++
 
-Our plans for Summer of Code for 2024 have not yet been announced, and applications are not yet open.
-Watch for news on our 
-[Announcements](https://matrix.to/#/#redox-announcements:matrix.org)
-room on Matrix.
+Announcing Redox Summer of Code for 2024! This summer, we have a small number of positions open for students or recent graduates.
+To qualify, you must be a contributor to Redox or to a Redox-adjacent project, and be an experienced Rust programmer.
+
+You should propose a project that will take you approximately 8 weeks of full-time work to complete.
+You are expected to check in your code to GitLab regularly, to provide regular progress reports, and a final technical report in the form of a News post.
+Some project suggestions are included [here](/rsoc-project-suggestions/), but you can come up with your own proposal if you wish.
+
+The application process is informal.
+Please post a message in the [Summer of Code room](https://matrix.to/#/#redox-soc:matrix.org) indicating your interest and a description of what you hope to accomplish.
 
 The Redox OS Summer of Code program is the primary use of donations to the Redox OS
 project. 
 
-To be eligible, you must be a student or recent graduate who has already demonstrated a desire and
-ability to contribute to Redox OS. If you are interested, you must join the
-Redox OS Chat and contribute to Redox OS projects.
-
 We also participate in other Summer of Code type programs, when available,
 which may have their own rules and critera.
+This year, we do not have any specific plans for other Summer of Code programs.
 
 Have a look at our [Proposal Guidelines](/rsoc-proposal-how-to) and [Project Suggestions](/rsoc-project-suggestions).
 
