@@ -36,8 +36,9 @@ and Release 0.9.0 is packed with many improvements and cleanup. Here are just a 
 
 ## Discussion
 
-Links where this release is discussed will be added here. To contact me
-directly, view the links on my personal website: https://soller.dev/
+Links where this release is discussed will be added here.
+
+(To contact us, join in our Matrix space on [this](https://www.redox-os.org/community/) page)
 
 - [Hacker News]()
 - [Mastodon]()
@@ -49,64 +50,57 @@ directly, view the links on my personal website: https://soller.dev/
 
 ## Images
 
-It is recommended to try Redox OS in a VM before trying on real hardware. See
-the [supported hardware](#supported-hardware) section for details on what
-hardware to select for the best experience. For this release, only x86_64 images
-are provided, as there is still work to be done on i686 and aarch64 support.
+It is recommended to try Redox OS in a virtual machine before trying on real hardware. See
+the [supported hardware](https://www.redox-os.org/faq/#which-devices-does-redox-support) section for details on what
+hardware to select for the best experience.
 
-Remember to verify images with sha256sum: https://static.redox-os.org/releases/0.8.0/x86_64/SHA256SUM
+Remember to verify the images checksum with the `sha256sum` tool, use [this](https://static.redox-os.org/releases/0.9.0/x86_64/SHA256SUM) link for the x86_64 images.
 
 ### Demo
 
-A 768 MiB image containing the standard desktop environment as well as pre-installed
-demo applications
+A 1536 MiB image containing the Orbital desktop environment as well as pre-installed demo programs.
 
-- **Live (recommended)**: https://static.redox-os.org/releases/0.8.0/x86_64/redox_demo_x86_64_2022-11-23_638_livedisk.iso
-- Pre-installed: https://static.redox-os.org/releases/0.8.0/x86_64/redox_demo_x86_64_2022-11-23_638_harddrive.img
+- [Real Hardware Image](https://static.redox-os.org/releases/0.9.0/x86_64/redox_demo_x86_64_*_livedisk.iso)
+- [Virtual Machine Image](https://static.redox-os.org/releases/0.9.0/x86_64/redox_demo_x86_64_*_harddrive.img)
 
 The demo image includes these additional packages:
 
-- [DOSBox](https://www.dosbox.com/): A DOS emulator
+- [DOSBox](https://www.dosbox.com/) - A DOS emulator
 - Games using PrBoom:
     - DOOM (Shareware)
     - [FreeDOOM](https://freedoom.github.io/)
-- [Neverball and Neverputt](https://neverball.org/): OpenGL games using llvmpipe
-(performance may vary!)
-- [`orbclient`](https://gitlab.redox-os.org/redox-os/orbclient): demo orbital
-application
-- [Periodic Table](https://gitlab.redox-os.org/redox-os/periodictable): an app
-for viewing information about chemical elements
-- [Redox OS Games](https://gitlab.redox-os.org/redox-os/games): command line
-games for Redox OS
-- [`rodioplay`](https://gitlab.redox-os.org/redox-os/rodioplay): a music player
-capable of loading FLAC and WAV files
-- [Sodium](https://gitlab.redox-os.org/redox-os/sodium): a vi-like editor
-- [`sopwith`](http://www.sopwith.org/): a classic PC air combat game
-- `syobonaction`: a freeware platforming game
+- [Neverball and Neverputt](https://neverball.org/) - OpenGL games using LLVMPipe (performance may vary!)
+- [orbclient](https://gitlab.redox-os.org/redox-os/orbclient) - An Orbital client demo
+- [Periodic Table](https://gitlab.redox-os.org/redox-os/periodictable) - A program for viewing information about chemical elements
+- [Terminal games](https://gitlab.redox-os.org/redox-os/games) - Command-line games
+- [rodioplay](https://gitlab.redox-os.org/redox-os/rodioplay) - A FLAC/WAV music player
+- [Sodium](https://gitlab.redox-os.org/redox-os/sodium): A vi-like text editor
+- [sopwith](http://www.sopwith.org/): A classic PC air combat game
+- syobonaction - A freeware platforming game
 
 ### Desktop
 
-A 256 MiB image containing only the standard desktop environment. Use this if
-you want to download a smaller image
+A 512 MiB image containing the Orbital desktop environment and some programs for common tasks. Use this if you want to download a smaller image.
 
-- Live: https://static.redox-os.org/releases/0.8.0/x86_64/redox_desktop_x86_64_2022-11-23_638_livedisk.iso
-- Pre-installed: https://static.redox-os.org/releases/0.8.0/x86_64/redox_desktop_x86_64_2022-11-23_638_harddrive.img
+- [Real Hardware](https://static.redox-os.org/releases/0.9.0/x86_64/redox_desktop_x86_64_*_livedisk.iso)
+- [Virtual Machine Image](https://static.redox-os.org/releases/0.9.0/x86_64/redox_desktop_x86_64_*_harddrive.img)
 
 ### Server
 
-A 256 MiB image containing only the command-line environment. Use this if the
-desktop image is not working well for you
+A 512 MiB image containing only the command-line environment. Use this if the desktop image is not working well for you.
 
-- Live: https://static.redox-os.org/releases/0.8.0/x86_64/redox_server_x86_64_2022-11-23_638_livedisk.iso
-- Pre-installed: https://static.redox-os.org/releases/0.8.0/x86_64/redox_server_x86_64_2022-11-23_638_harddrive.img
+- [Real Hardware](https://static.redox-os.org/releases/0.9.0/x86_64/redox_server_x86_64_*_livedisk.iso)
+- [Virtual Machine Image](https://static.redox-os.org/releases/0.9.0/x86_64/redox_server_x86_64_*_harddrive.img)
 
 ## Changes
 
-There have been quite a lot of changes since 0.7.0. I have manually enumerated
-what I think is important in this list. Links to exhaustive source-level change
-details can be found in the [Exhaustive Details section](#exhaustive-details)
+There have been quite a lot of changes since 0.8.0. We have manually enumerated
+what we think is important in this list. Links to exhaustive source-level change
+details can be found in the [Changelog](#changelog) section.
 
 ## In Depth
+
+The most important changes are shown below.
 
 ### Kernel
 
