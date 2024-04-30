@@ -93,3 +93,13 @@ Ribbon packaged the Ubuntu and PopOS wallpapers.
 
 If you want to contribute, give feedback or just listen in to the conversation,
 join us on [Matrix Chat](https://matrix.to/#/#redox-join:matrix.org).
+
+## Discussion
+
+Here are some links to discussion about this news post:
+
+- [Fosstodon](https://fosstodon.org/@redox/112362399513362016)
+- [Patreon](https://www.patreon.com/posts/103372059?pr=true)
+- [Reddit /r/redox](https://www.reddit.com/r/Redox/comments/1ch4yvg/this_month_in_redox_april_2024/)
+- [Reddit /r/rust](https://www.reddit.com/r/rust/comments/1ch4zsd/this_month_in_redox_a_rust_operating_system_april/)
+- [Twitter](https://twitter.com/redox_os/status/1785427801127915989)
