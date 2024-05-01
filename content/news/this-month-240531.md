@@ -13,3 +13,7 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Donate](https://www.redox-os.org/donate/)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## Programs
+
+Jeremy replaced the Orbital file manager and text editor by COSMIC Files and COSMIC Editor.
+
