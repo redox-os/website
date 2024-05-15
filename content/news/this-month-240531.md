@@ -18,3 +18,12 @@ If you would like to support Redox, please consider donating or buying some merc
 Jeremy finally replaced the Orbital file manager, text editor and terminal by COSMIC Files, COSMIC Editor and COSMIC Terminal!
 
 There were some bugs blocking the COSMIC programs to work fully.
+
+## Toolchain
+
+Our Rust fork was updated to the 2024-05-11 date, it fixed many programs and crates requesting a recent Rust version.
+
+## Programs
+
+Ribbon packaged more programs as usual, many utilities and Cargo tools.
+
