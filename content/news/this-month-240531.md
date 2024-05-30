@@ -19,9 +19,19 @@ Jeremy finally replaced the Orbital file manager, text editor and terminal by CO
 
 There were some bugs blocking the COSMIC programs to work fully.
 
-## Toolchain
+## Toolchain Update
 
-Our Rust fork was updated to the 2024-05-11 date, it fixed many programs and crates requesting a recent Rust version.
+Our Rust cross-compiler fork was updated to the 2024-05-11 date, it fixed many programs and crates requesting a recent Rust version.
+
+## Self-Hosting Improvements
+
+The native Rust compiler port was updated to match our Rust cross-compiler version, improving the self-hosting support.
+
+We also updated our LLVM native port to use the LLVM version from our native Rust compiler fork (18.1.4).
+
+## Mesa3D Update
+
+Our Mesa3D fork was updated to the 24.0.8 version, the latest stable.
 
 ## Programs
 
