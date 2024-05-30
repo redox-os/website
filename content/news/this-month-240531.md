@@ -22,7 +22,7 @@ We still have a few bugs around exiting the apps, but otherwise, they are workin
 
 ## Toolchain Update
 
-Our Rust cross-compiler fork was updated to the 2024-05-11 date, it fixed many programs and crates requesting a recent Rust version.
+Our Rust fork was updated to the 2024-05-11 version; it fixed many issues with programs and crates requiring a recent Rust version.
 
 ## Self-Hosting Improvements
 
