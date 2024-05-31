@@ -11,6 +11,7 @@ May was a very exciting month for Redox! Here's all the latest news.
 If you would like to support Redox, please consider donating or buying some merch!
 
 - [Donate](https://www.redox-os.org/donate/)
+- [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
 ## COSMIC
@@ -37,4 +38,8 @@ Our Mesa3D fork was updated to the 24.0.8 version, the latest stable.
 ## Programs
 
 Ribbon packaged more programs as usual, many utilities and Cargo tools.
+## Join us on Matrix Chat
+
+If you want to contribute, give feedback or just listen in to the conversation,
+join us on [Matrix Chat](https://matrix.to/#/#redox-join:matrix.org).
 
