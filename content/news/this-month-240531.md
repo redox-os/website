@@ -38,6 +38,9 @@ Our Mesa3D fork was updated to the 24.0.8 version, the latest stable.
 ## Programs
 
 Ribbon packaged more programs as usual, many utilities and Cargo tools.
+
+He also packaged exciting projects like [Radicle](https://radicle.xyz/) and the [Sequoia-PGP](https://sequoia-pgp.org/) tools.
+
 ## Join us on Matrix Chat
 
 If you want to contribute, give feedback or just listen in to the conversation,
