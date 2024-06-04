@@ -24,7 +24,9 @@ We highly recommend that you start with the [Book](https://doc.redox-os.org/book
 
 - [Ion Manual](https://doc.redox-os.org/ion-manual/) - Documentation for the Ion shell.
 
-- [Talks](/talks/) - Redox talks given at various events and conferences.
+### Talks
+
+- [Talks](/talks/) - Redox talks given at podcasts and conferences.
 
 ## Contributing to Redox
 
