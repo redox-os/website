@@ -46,3 +46,14 @@ He also packaged exciting projects like [Radicle](https://radicle.xyz/) and the 
 If you want to contribute, give feedback or just listen in to the conversation,
 join us on [Matrix Chat](https://matrix.to/#/#redox-join:matrix.org).
 
+## Discussion
+
+Here are some links to discussion about this news post:
+
+- [Fosstodon @redox](https://fosstodon.org/@redox/112576095920118349)
+- [Fosstodon @soller](https://fosstodon.org/@soller/112576093792181983)
+- [Patreon](https://www.patreon.com/posts/105769259)
+- [Reddit /r/redox](https://www.reddit.com/r/Redox/comments/1dadyk6/this_month_in_redox_may_2024/)
+- [Reddit /r/rust](https://www.reddit.com/r/rust/comments/1dadz2w/this_month_in_redox_may_2024/)
+- [Twitter @redox\_os](https://x.com/redox_os/status/1799104686940975357)
+- [Twitter @jeremy\_soller](https://x.com/jeremy_soller/status/1799104290503668203)
