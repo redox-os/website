@@ -2,14 +2,29 @@
 title = "Redox in Action"
 +++
 
+## Redox OS running the COSMIC programs
+<img class="img-responsive" src="/img/screenshot/cosmic-programs.png"/>
+
+## Redox OS running Screenfetch
+<img class="img-responsive" src="/img/screenshot/cosmic-term-screenfetch.png"/>
+
+## Redox OS running the image viewer
+<img class="img-responsive" src="/img/screenshot/image-viewer.png"/>
+
+## Redox OS running NetSurf
+<img class="img-responsive" src="/img/screenshot/netsurf.png"/>
+
+## Redox OS running SDL2 Gears
+<img class="img-responsive" src="/img/screenshot/sdl2-gears.png"/>
+
 ## Redox OS playing Stargate SG-1 Season 10 intro
  <iframe src="https://vid.puffyan.us/embed/3cPekY4c9Hc" style="border:none;height:601px;width:796px;" title="Invidious video player"></iframe> 
 
 ## Redox OS running Mesa3D Gears with LLVMpipe
  <iframe src="https://vid.puffyan.us/embed/ADSvEA_YY7E" style="border:none;height:601px;width:796px;" title="Invidious video player"></iframe> 
 
-## Redox OS running COSMIC Editor
-<img class="img-responsive" src="/img/screenshot/cosmic-edit-redox.png"/>
+## Redox OS running Pixelcannon
+<img class="img-responsive" src="/img/screenshot/pixelcannon.png"/>
 
 ## System76 Galago Pro (galp3-c)
 <img class="img-responsive" src="/img/hardware/system76-galp3-c.jpg"/>
