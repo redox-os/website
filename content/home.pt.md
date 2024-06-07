@@ -42,7 +42,7 @@ url = "home"
     <div style="font-size: 16px; text-align: center;">
       Redox executando o Orbital
     </div>
-    <a href="/img/redox-orbital/cosmic-term-screenfetch.png">
+    <a href="/img/screenshot/cosmic-term-screenfetch.png">
       <picture>
         <source media="(min-width: 640px)" srcset="/img/redox-orbital/large.webp" type="image/webp">
         <source media="(min-width: 320px)" srcset="/img/redox-orbital/medium.webp" type="image/webp">
