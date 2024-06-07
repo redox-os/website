@@ -55,6 +55,7 @@ Here are some links to discussion about this news post:
 - [Fosstodon @redox](https://fosstodon.org/@redox/112576095920118349)
 - [Fosstodon @soller](https://fosstodon.org/@soller/112576093792181983)
 - [Patreon](https://www.patreon.com/posts/105769259)
+- [Reddit /r/pop\_os](https://www.reddit.com/r/pop_os/comments/1dae8ej/redox_os_a_rust_and_microkernel_based_os_now/)
 - [Reddit /r/redox](https://www.reddit.com/r/Redox/comments/1dadyk6/this_month_in_redox_may_2024/)
 - [Reddit /r/rust](https://www.reddit.com/r/rust/comments/1dadz2w/this_month_in_redox_may_2024/)
 - [Twitter @redox\_os](https://x.com/redox_os/status/1799104686940975357)
