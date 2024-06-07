@@ -18,10 +18,10 @@ title = "Redox in Action"
 <img class="img-responsive" src="/img/screenshot/sdl2-gears.png"/>
 
 ## Redox OS playing Stargate SG-1 Season 10 intro
- <iframe src="https://vid.puffyan.us/embed/3cPekY4c9Hc" style="border:none;height:601px;width:796px;" title="Invidious video player"></iframe> 
+ <iframe src="https://www.youtube.com/watch?v=3cPekY4c9Hc" style="border:none;height:601px;width:796px;" title="YouTube video player"></iframe> 
 
 ## Redox OS running Mesa3D Gears with LLVMpipe
- <iframe src="https://vid.puffyan.us/embed/ADSvEA_YY7E" style="border:none;height:601px;width:796px;" title="Invidious video player"></iframe> 
+ <iframe src="https://www.youtube.com/watch?v=ADSvEA_YY7E" style="border:none;height:601px;width:796px;" title="YouTube video player"></iframe> 
 
 ## Redox OS running Pixelcannon
 <img class="img-responsive" src="/img/screenshot/pixelcannon.png"/>
