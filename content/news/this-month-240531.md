@@ -16,7 +16,7 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## COSMIC
 
-<a href="/img/this-month-in-redox/2024-05.png"><img class="img-responsive" src="/img/this-month-in-redox/2024-05.png"/></a>
+<a href="/img/screenshot/cosmic-programs.png"><img class="img-responsive" src="/img/screenshot/cosmic-programs.png"/></a>
 
 COSMIC Files, COSMIC Editor and COSMIC Terminal are now a permanent part of the Redox desktop!
 Jeremy has replaced the Orbital file manager, text editor and terminal with their COSMIC counterparts!
