@@ -18,10 +18,10 @@ title = "Redox em Ação"
 <img class="img-responsive" src="/img/screenshot/sdl2-gears.png"/>
 
 ## Redox OS reproduzindo a intro da temporada 10 de Stargate SG-1
- <iframe src="https://www.youtube.com/watch?v=3cPekY4c9Hc" style="border:none;height:601px;width:796px;" title="YouTube video player"></iframe> 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3cPekY4c9Hc?si=EYuAkgpVDAKOb0jW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Redox OS executando Mesa3D Gears com LLVMpipe
- <iframe src="https://www.youtube.com/watch?v=ADSvEA_YY7E" style="border:none;height:601px;width:796px;" title="YouTube video player"></iframe> 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ADSvEA_YY7E?si=vEtlU2rGxJldIFuk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Redox OS executando Pixelcannon
 <img class="img-responsive" src="/img/screenshot/pixelcannon.png"/>
