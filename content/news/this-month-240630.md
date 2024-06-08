@@ -14,6 +14,24 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## New Orbital Visual
+
+We changed our default wallpaper, title bar and panel bar colors to make the user experience more pleasant, you can see it below:
+
+![New Orbital Visual](/static/img/screenshot/orbital-visual.png)
+
+(The wallpaper is the "Tarantula Nebula" from NASA, also available on the COSMIC desktop)
+
+## Programs
+
+Ribbon added an ABI separation on the LLVM recipe, it protect programs with a dependency on LLVM from breakage when the LLVM version is updated.
+
+(Like most Linux distributions does)
+
+## Documentation
+
+Ribbon improved the binary packages explanation and documented the "environment leakage" problem.
+
 ## Join us on Matrix Chat
 
 If you want to contribute, give feedback or just listen in to the conversation,
