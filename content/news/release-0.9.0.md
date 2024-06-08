@@ -34,6 +34,42 @@ and Release 0.9.0 is packed with many improvements and cleanup. Here are just a 
 - A [FAQ](https://www.redox-os.org/faq/) was added to the website
 - A [developer FAQ](https://doc.redox-os.org/book/ch09-07-developer-faq.html) was added to the book
 
+## Stability and Performance Improvements
+
+Jeremy Soller and 4lDO2 did massive improvements to stability and security, fixed many bugs, from easy to very hard.
+
+We would like to thank 4lDO2 a lot for his massive work to improve the kernel and user-space daemons.
+
+You can read about part of the 4lDO2 journey to improve the kernel on the following posts:
+
+- [RSoC: on-demand paging](https://www.redox-os.org/news/kernel-8/)
+- [RSoC: on-demand paging II](https://www.redox-os.org/news/kernel-9/)
+- [Significant performance and correctness improvements to the kernel](https://www.redox-os.org/news/kernel-10/)
+
+Jeremy rarely write posts and prefer to contribute in silence and report the progress later in the Matrix community.
+
+## Software Updates
+
+Our toolchains received some updates and currently our Rust, C and C++ toolchains use the latest stable versions or close to it, it's a great achievement compared to other OS projects that use very old toolchain versions (limiting the program compatibility)
+
+Beyond the toolchain updates, we also updated important cross-platform libraries used by most programs and some important programs.
+
+## Documentation
+
+Our documentation was improved massively thanks to Ron Williams and Ribbon, in 2023 we covered many missing things in the website and book, removed most of the obsolete information and documented almost all build system commands.
+
+Ron Williams and Ribbon did a hard work to make our website and book extremely rich in information for end-users, Rust programming newbies and veterans, and operating system development newbies and veterans.
+
+We are glad to say that our website and book answer most of the end-user and developer questions about Redox.
+
+You can read about the Ribbon's documentation adventure on [this](https://www.redox-os.org/news/documentation-improvements/) post and on the monthly updates.
+
+## Matrix
+
+In 2023 we migrated from Mattermost to Matrix to fix some management problems, this big change helped us to improve many aspects of our community interaction.
+
+You can read more about it on [this](https://www.redox-os.org/news/community-announcements-1/) post.
+
 ## Discussion
 
 Links where this release is discussed will be added here.
