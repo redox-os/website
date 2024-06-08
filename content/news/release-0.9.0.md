@@ -54,7 +54,7 @@ Our toolchains received some updates and currently our Rust, C and C++ toolchain
 
 Beyond the toolchain updates, we also updated important cross-platform libraries used by most programs and some important programs.
 
-## Rust-first programs!
+## Rust-first Program Porting!
 
 We focus on Rust programs as they are more easy to port, Ribbon quickly ported hundreds of emerging Rust programs in 2023.
 
@@ -63,6 +63,12 @@ We focus on Rust programs as they are more easy to port, Ribbon quickly ported h
 Ribbon also partially-ported the classic and widely-used C and C++ programs and libraries, he focused to package the most used (and best) programs of the Linux/BSD world.
 
 Currently there are 1,646 work-in-progress software ports, we need to write cross-compilation scripts and port/update some libraries to make them work.
+
+## Relibc Improvements
+
+The Redox contributors improved relibc a lot, from new functions to important bug fixes.
+
+This increased our software compatibility and fixed many programs, from Rust to C/C++
 
 ## Better ARM Support
 
@@ -91,6 +97,11 @@ Like mouse, keyboards, game controllers and other things.
 Anhad Singh from the [Aero](https://github.com/Andy-Python-Programmer/aero) project participated in our RSoC program from 2023 and implemented the VirtIO support on Redox.
 
 He wrote some VirtIO drivers and improved the VirtIO GPU 2D acceleration to speed up our QEMU performance.
+
+You can read about his work on the following posts:
+
+- [RSoC: virtio drivers - 1](https://www.redox-os.org/news/rsoc-virtio-1/)
+- [RSoC: virtio drivers - 2](https://www.redox-os.org/news/rsoc-virtio-2/)
 
 ## Build System Improvements
 
