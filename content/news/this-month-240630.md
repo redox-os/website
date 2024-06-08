@@ -30,7 +30,7 @@ Ribbon added an ABI separation on the LLVM recipe, it protect programs with a de
 
 ## Documentation
 
-Ribbon improved the binary packages explanation and documented the "environment leakage" problem.
+Ribbon improved the [binary packages explanation](https://doc.redox-os.org/book/ch02-07-configuration-settings.html#binary-packages) and documented the [environment leakage](https://doc.redox-os.org/book/ch08-05-troubleshooting.html#environment-leakage) problem.
 
 ## Join us on Matrix Chat
 
