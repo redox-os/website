@@ -54,6 +54,54 @@ Our toolchains received some updates and currently our Rust, C and C++ toolchain
 
 Beyond the toolchain updates, we also updated important cross-platform libraries used by most programs and some important programs.
 
+## Rust-first programs!
+
+We focus on Rust programs as they are more easy to port, Ribbon quickly ported hundreds of emerging Rust programs in 2023.
+
+## C/C++ Programs
+
+Ribbon also partially-ported the classic and widely-used C and C++ programs and libraries, he focused to package the most used (and best) programs of the Linux/BSD world.
+
+Currently there are 1,646 work-in-progress software ports, we need to write cross-compilation scripts and port/update some libraries to make them work.
+
+## Better ARM Support
+
+uvnn cleaned and improved our ARM support a lot, we would like to thank his massive work in 2023.
+
+We also would like to thank Ivan Tan to achieve the Redox support on the Raspberry Pi 3 B+ !
+
+Jeremy also improved the ARM support to the level where we can start the Orbital session on the QEMU emulation.
+
+## Better PCI Express Support
+
+We would like to thank bjorn3 for his excellent work to improve our PCI Express support.
+
+## Better Driver Organization and Code Cleanup
+
+bjorn3 cleaned our driver code, deduplicated some drivers and moved our driver code to category folders, like Linux and BSD.
+
+## Better USB Support!
+
+Jeremy and 4lDO2 improved our USB support to the level where most USB HID devices can work!
+
+Like mouse, keyboards, game controllers and other things.
+
+## VirtIO Support
+
+Anhad Singh from the [Aero](https://github.com/Andy-Python-Programmer/aero) project participated in our RSoC program from 2023 and implemented the VirtIO support on Redox.
+
+He wrote some VirtIO drivers and improved the VirtIO GPU 2D acceleration to speed up our QEMU performance.
+
+## Build System Improvements
+
+We would like to thank Ron Williams, bjorn3, Jeremy and 4lDO2 for their massive improvements to our build system configuration and tooling.
+
+Ron Williams and Jeremy implemented new commands to ease the life of developers, packagers and testers.
+
+bjorn3 simplified our filesystem configuration system, reducing duplication and our maintenance cost.
+
+4lDO2 improved the performance of our recipe verification and image building process.
+
 ## Documentation
 
 Our documentation was improved massively thanks to Ron Williams and Ribbon, in 2023 we covered many missing things in the website and book, removed most of the obsolete information and documented almost all build system commands.
