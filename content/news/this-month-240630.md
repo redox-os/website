@@ -22,6 +22,14 @@ We changed our default wallpaper, title bar and panel bar colors to make the use
 
 (The wallpaper is the "Tarantula Nebula" from NASA, also available on the COSMIC desktop)
 
+## User-Space Debugging From GDB
+
+Thanks to bjorn3 the GNU Debugger can read the Redox user-space now (where most of the system components run).
+
+## PCI Cleanups
+
+bjorn3 cleaned up more PCI code as usual on his series of driver cleanups and simplifications.
+
 ## Programs
 
 Ribbon added an ABI separation on the LLVM recipe, it protect programs with a dependency on LLVM from breakage when the LLVM version is updated.
