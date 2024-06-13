@@ -2,7 +2,7 @@
 title = "FAQ"
 +++
 
-Essa página contém perguntas/respostas para iniciantes e usuários comuns.
+Essa página contém perguntas e respostas para iniciantes e usuários comuns.
 
 - [O que é o Redox?](#o-que-%C3%A9-o-redox)
 - [O que Redox significa?](#o-que-redox-significa)
@@ -53,7 +53,7 @@ Ele soa similar com Minix e Linux também.
 
 - **Modularidade real**
 
-Você pode modificar/trocar a maioria dos componentes do sistema sem reiniciar o sistema, similar ao [livepatching](https://en.wikipedia.org/wiki/Kpatch) porém mais seguro).
+Você pode modificar/trocar a maioria dos componentes do sistema sem reiniciar o sistema, similar a alguns módulos de kernel e [livepatching](https://en.wikipedia.org/wiki/Kpatch) porém mais seguro.
 
 - **Isolamento de bugs**
 
@@ -61,21 +61,23 @@ A maioria dos componentes do sistema executam no espaço do usuário em um siste
 
 - **Design de não-reinicialização**
 
-O kernel é pequeno e muda muito pouco (correção de bugs), portanto você não precisa reiniciar seu sistema com frequência para atualizar, já que a maioria dos serviços do sistema estão no espaço do usuário, eles podem ser trocados/atualizados durante a execução (reduzindo o tempo offline de servidores).
+O kernel é pequeno e muda muito pouco (correção de bugs), portanto você não precisa reiniciar seu sistema com frequência para atualizar, já que a maioria dos serviços do sistema estão no espaço do usuário, eles podem ser trocados/atualizados durante a execução (reduzindo muito o tempo offline de servidores).
 
 - **Fácil de desenvolver e depurar**
 
-A maioria dos componentes do sistema estão no espaço do usuário, simplificando a depuração.
+A maioria dos componentes do sistema estão no espaço do usuário, simplificando os testes e depuração.
+
+Se você quiser ler mais sobre os benefícios citados acima, leia [esta](https://doc.redox-os.org/book/ch04-01-microkernels.html) página.
 
 ### Benefícios da Rust
 
 - **Menos suscetível a bugs**
 
-A síntaxe restritiva e as sugestões do compilador reduz muito a probabilidade de bugs.
+A síntaxe restritiva e os requisitos do compilador para compilar o código reduzem muito a probabilidade de bugs.
 
 - **Menos vulnerável a corrupção de dados**
 
-O compilador da Rust ajuda o programador a evitar erros de memória e bugs difíceis de examinar, o que reduz a probabilidade dos bugs de corrupção de dados.
+O compilador da Rust ajuda o programador a evitar erros de memória e condições de corrida, o que reduz a probabilidade dos bugs de corrupção de dados.
 
 - **Sem necessidade para mitigações de exploit das linguagens C e C++**
 
@@ -93,11 +95,13 @@ Como o kernel é pequeno, ele usa menos memória para fazer suas funções e o c
 
 O design seguro e veloz da linguagem Rust, combinado com a pequena quantidade de código no kernel, ajudam a garantir um núcleo fácil, confiável e veloz de manter.
 
-- **Segurança de Concurrência**
+- **Segurança de Concorrência**
 
-O suporte para segurança de concurrência nas linguagens de programmação C/C++ é frágil e muito fácil de escrever um programa que parece seguro para executar em vários threads, mas introduz bugs útis e buracos de segurança.
+O suporte para segurança de concorrência nas linguagens de programmação C/C++ é frágil e muito fácil de escrever um programa que parece seguro para executar em vários threads, mas introduz bugs útis e buracos de segurança.
 
 Se um thread acessa um pedaço do estado ao mesmo tempo que outro thread está modificando, o programa todo pode exibir bugs confusos e bizarros.
+
+Você pode ver [este](https://en.wikipedia.org/wiki/Time_of_check_to_time_of_use) exemplo de uma categoria séria de bugs de segurança que a segurança de concorrência corrige.
 
 Mas na Rust esse tipo de bug é fácil de evitar, o mesmo sistema de escrita que nos previne de escrever de forma insegura também nos previne de escrever padrões perigosos de acesso simultâneo.
 
@@ -107,7 +111,10 @@ Drivers escritos em Rust possuem incentivos para ter menos bugs e portanto melho
 
 ### Comparação com outros sistemas operacionais
 
-Você pode ver como o Redox é em comparação com o Linux, FreeBSD e Plan 9 [nesta](https://doc.redox-os.org/book/ch04-11-features.html) página.
+Você pode ver como o Redox é em comparação com o Linux, FreeBSD e Plan 9 nessas páginas:
+
+- [Funções do Redox OS](https://doc.redox-os.org/book/ch04-11-features.html)
+- [Comparando o Redox Com Outros Sistemas Operacionais](https://doc.redox-os.org/book/ch01-05-how-redox-compares.html)
 
 ## Qual o propósito do Redox?
 
@@ -119,7 +126,7 @@ O Redox pretende ser uma alternativa aos sistemas Unix (Linux/BSD) existentes ta
 
 ## O que posso fazer com o Redox?
 
-Como um sistema de propósito geral, você é capaz de realizar praticamente qualquer tarefa na maioria dos dispositivos com alto desempenho/segurança.
+Como um sistema de propósito geral, você é capaz de realizar praticamente qualquer tarefa na maioria dos dispositivos com alto desempenho e segurança.
 
 O Redox está em desenvolvimento, portanto nossa lista de aplicações suportada é limitada atualmente, mas crescente.
 
@@ -187,6 +194,7 @@ Softwares importantes que o Redox suporta:
 - GNU Bash
 - FFMPEG
 - Git
+- RustPython
 - SDL2
 - OpenSSL
 - Mesa3D
@@ -203,17 +211,19 @@ O Redox tem um gerenciador de pacotes similar ao `apt` (Debian) e `pkg` (FreeBSD
 
 O Redox possuí variantes para cada tarefa, leia sobre elas abaixo:
 
-- `server-minimal` - A variante mais enxuta com um sistema básico, destinada a dispositivos embarcados, computadores muito antigos e programadores.
+- `minimal` - A variante mais simples com um sistema básico sem suporte a Internet, destinada a dispositivos embarcados, computadores muito antigos e programadores.
 
-- `desktop-minimal` - A variante mais enxuta com o ambiente de desktop Orbital incluído, destinado para dispositivos embarcados, computadores muito antigos e programadores.
+- `minimal-net` - A variante mais enxuta com um sistema básico e suporte a Internet, destinada a dispositivos embarcados, computadores muito antigos e programadores.
 
-- `server` - A variante para servidores, com um sistema completo e ferramentas de rede, destinado para admnistradores de rede, dispositivos embarcados, computadores fracos e programadores.
+- `desktop-minimal` - A variante mais enxuta com o ambiente de desktop Orbital incluído, destinada para dispositivos embarcados, computadores muito antigos e programadores.
 
-- `desktop` - A variante padrão com um sistema completo, o ambiente de desktop Orbital e ferramentas úteis, destinado para o uso diário, produtores, programadores e jogadores.
+- `server` - A variante para servidores, com um sistema completo e ferramentas de rede, destinada a servidores, dispositivos embarcados, computadores fracos e programadores.
 
-- `dev` - A variante para desenvolvimento com um sistema completo e ferramentas de programação, destinado para programadores.
+- `desktop` - A variante padrão com um sistema completo, o ambiente de desktop Orbital e ferramentas úteis, destinada a usuários comuns, produtores, jogadores e programadores.
 
-- `demo` - A variante para demonstração com um sistema completo, ferramentas, reprodutores e jogos, destinado para testadores, jogadores e programadores.
+- `dev` - A variante para desenvolvimento com um sistema completo e ferramentas de programação, destinada a programadores.
+
+- `demo` - A variante para demonstração com um sistema completo, ferramentas, reprodutores e jogos, destinado a usuários comuns, jogadores e programadores.
 
 ## Quais dispositivos o Redox suporta?
 
