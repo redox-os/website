@@ -2,7 +2,7 @@
 title = "FAQ"
 +++
 
-This page covers questions/answers for newcomers and end-users.
+This page covers questions and answers for newcomers and end-users.
 
 - [What is Redox?](#what-is-redox)
 - [What does Redox mean?](#what-does-redox-mean)
@@ -12,7 +12,7 @@ This page covers questions/answers for newcomers and end-users.
     - [Comparison with other operating systems](#comparison-with-other-operating-systems)
 - [What is the purpose of Redox?](#what-is-the-purpose-of-redox)
 - [What I can do with Redox?](#what-i-can-do-with-redox)
-- [What is a Unix-like OS?](#what-is-a-unix-like-os)
+- [What is an Unix-like OS?](#what-is-an-unix-like-os)
 - [How Redox is inspired by other systems?](#how-redox-is-inspired-by-other-systems)
 - [What is a microkernel?](#what-is-a-microkernel)
 - [What programs can Redox run?](#what-programs-can-redox-run)
@@ -53,7 +53,7 @@ It sounds like Minix and Linux too.
 
 - **True modularity**
 
-You can modify/change many system components without a system restart, similar to but safer than [livepatching](https://en.wikipedia.org/wiki/Kpatch).
+You can modify/change many system components without a system restart, similar to but safer than some kernel modules and [livepatching](https://en.wikipedia.org/wiki/Kpatch).
 
 - **Bug isolation**
 
@@ -63,17 +63,19 @@ Most system components run in user-space on a microkernel system. Because of thi
 
 A mature microkernel changes very little (except for bug fixes), so you won't need to restart your system very often to update it.
 
-Since most of the system components are in userspace, they can be replaced on-the-fly, reducing downtime for server administrators.
+Since most of the system components are in userspace, they can be replaced on-the-fly, reducing downtime of servers a lot.
 
 - **Easy to develop and debug**
 
-Most of the system components run in userspace, simplifying testing/debugging.
+Most of the system components run in userspace, simplifying the testing and debugging.
+
+You can read more about the above benefits on [this](https://doc.redox-os.org/book/ch04-01-microkernels.html) page.
 
 ### Rust benefits
 
 - **Less likely to have bugs**
 
-The restrictive syntax and compiler suggestions reduce the probability of bugs a lot.
+The restrictive syntax and compiler requirements to build the code reduce the probability of bugs a lot.
 
 - **Less vulnerable to data corruption**
 
@@ -81,7 +83,7 @@ The Rust compiler helps the programmer to avoid memory errors and race condition
 
 - **No need for C/C++ exploit mitigations**
 
-The microkernel design written in Rust protects against memory defects that one might see in C/C++ programs.
+The microkernel design written in Rust protects against memory defects that one might see in software written in C/C++.
 
 By isolating the system components from the kernel, the [attack surface](https://en.wikipedia.org/wiki/Attack_surface) is very limited.
 
@@ -95,11 +97,13 @@ Rust's safe and fast language design, combined with the small kernel code size, 
 
 The C/C++ support for thread-safety is quite fragile. As such, it is very easy to write a program that looks safe to run across multiple threads, but which introduces subtle bugs or security holes. If one thread accesses a piece of state at the same time that another thread is changing it, the whole program can exhibit some truly confusing and bizarre bugs.
 
+You can see [this](https://en.wikipedia.org/wiki/Time_of_check_to_time_of_use) example of a serious class of security bugs that thread-safety fixes.
+
 In Rust, this kind of bug is easy to avoid: the same type system that keeps us from writing memory unsafety prevents us from writing dangerous concurrent access patterns
 
 - **Rust-written Drivers**
 
-Drivers written in Rust are likely to have fewer bugs and are therefore more secure.
+Drivers written in Rust are likely to have fewer bugs and are therefore more stable and secure.
 
 - **ZFS-inspired filesystem**
 
@@ -109,11 +113,14 @@ Expect high performance and data safety (copy-on-write, data integrity, volumes,
 
 ### Comparison with other operating systems
 
-You can see how Redox is compared to Linux, FreeBSD and Plan 9 on [this](https://doc.redox-os.org/book/ch04-11-features.html) page.
+You can see how Redox is compared to Linux, FreeBSD and Plan 9 on these pages:
+
+- [Redox OS Features](https://doc.redox-os.org/book/ch04-11-features.html)
+- [Comparing Redox to Other OSes](https://doc.redox-os.org/book/ch01-05-how-redox-compares.html)
 
 ## What is the purpose of Redox?
 
-The main goal of Redox is to be a general-purpose OS, while maintaining security, reliability and correctness.
+The main goal of Redox is to be a general-purpose OS, while maintaining security, stability and correctness.
 
 Redox aims to be an alternative to existing Unix systems (Linux/BSD), with the ability to run most Unix programs with only recompilation or minimal modifications.
 
@@ -121,13 +128,13 @@ Redox aims to be an alternative to existing Unix systems (Linux/BSD), with the a
 
 ## What I can do with Redox?
 
-As a general-purpose operating system, you will be able to do almost any task on most devices with high performance/security.
+As a general-purpose operating system, you will be able to do almost any task on most devices with high performance and security.
 
 Redox is still under development, so our list of supported applications is currently limited, but growing.
 
 - [Use Cases](https://doc.redox-os.org/book/ch01-04-redox-use-cases.html)
 
-## What is a Unix-like OS?
+## What is an Unix-like OS?
 
 Any OS compatible with the [Single Unix Specification](https://en.wikipedia.org/wiki/Single_UNIX_Specification) and [POSIX](https://en.wikipedia.org/wiki/POSIX). You can expect a [shell](https://en.wikipedia.org/wiki/Unix_shell), the "[Everything is a File](https://en.wikipedia.org/wiki/Everything_is_a_file)" concept, multitasking and multiuser support.
 
@@ -189,6 +196,7 @@ Some important software that Redox supports:
 - GNU Bash
 - FFMPEG
 - Git
+- RustPython
 - SDL2
 - OpenSSL
 - Mesa3D
@@ -205,17 +213,19 @@ Redox has a package manager similar to `apt` (Debian) and `pkg` (FreeBSD), you c
 
 Redox has some variants for each task, take a look at them below:
 
-- `server-minimal` - The most minimal variant with a basic system. Aimed at embedded devices, very old computers and developers.
+- `minimal` - The most minimal variant with a basic system without network support. Aimed for embedded devices, very old computers, testers and developers.
 
-- `desktop-minimal` - The most minimal variant with the Orbital desktop environment included. Aimed at embedded devices, very old computers and developers.
+- `minimal-net` - The most minimal variant with a basic system and network support. Aimed for embedded devices, very old computers, testers and developers.
 
-- `server` - The server variant with a complete system and network tools. Aimed at server administrators, embedded devices, low-end computers and developers.
+- `desktop-minimal` - The most minimal variant with the Orbital desktop environment included. Aimed for embedded devices, very old computers, testers and developers.
 
-- `desktop` - The standard variant with a complete system, Orbital desktop environment and useful tools. Aimed at daily usage, producers, developers and gamers.
+- `server` - The server variant with a complete system and network tools. Aimed for servers, embedded devices, low-end computers, testers and developers.
 
-- `dev` - The development variant with a complete system and development tools. Aimed at developers.
+- `desktop` - The standard variant with a complete system, Orbital desktop environment and useful tools. Aimed for end-users, producers, gamers, testers and developers.
 
-- `demo` - The demo variant with a complete system, tools, players and games. Aimed at testers, gamers and developers.
+- `dev` - The development variant with a complete system and development tools. Aimed for developers and testers.
+
+- `demo` - The demo variant with a complete system, tools, players and games. Aimed for end-users, gamers, testers and developers.
 
 ## Which devices does Redox support?
 
