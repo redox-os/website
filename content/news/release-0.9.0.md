@@ -154,7 +154,7 @@ Remember to verify the images checksum with the `sha256sum` tool, use [this](htt
 
 ### Demo
 
-A 1536 MiB image containing the Orbital desktop environment as well as pre-installed demo programs.
+A 1536 MiB image containing the Orbital desktop environment as well as pre-installed demonstration programs.
 
 - [Real Hardware Image](https://static.redox-os.org/releases/0.9.0/x86_64/redox_demo_x86_64_*_livedisk.iso)
 - [Virtual Machine Image](https://static.redox-os.org/releases/0.9.0/x86_64/redox_demo_x86_64_*_harddrive.img)
@@ -207,6 +207,7 @@ The most important changes are shown below.
 ### RedoxFS
 
 - The reading and writting performance was improved a lot by the introduction of the "records" concept, where RedoxFS use an optimal block size for the context switch
+- The context switch roundtrips were reduced
 - The copy-on-write reliability was improved with some bugs fixed
 
 ### System API
@@ -221,7 +222,7 @@ The most important changes are shown below.
 - A lot of new functions were added to relibc, improving the software compatibility
 - Many bugs were fixed
 - Many programs started to work
-- More than 1500 programs and libraries were packaged (work-in-progress)
+- More than 1600 programs and libraries were packaged (work-in-progress)
 
 ### Build System
 
