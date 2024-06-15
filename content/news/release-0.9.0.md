@@ -6,7 +6,8 @@ date = "2024-04-18"
 
 (The following image needs to be uploaded, like the previous release it should show the Jeremy computers running the current Redox version)
 
-<a href="/img/release/0.9.0.jpg"><img class="img-responsive" src="/img/release/0.9.0.jpg"/></a>
+![Computers running the 0.9.0 version](/static/img/release/computers-0.9.0.png)
+![Orbital in the 0.9.0 version](/static/img/screenshot/orbital-0.9.0.png)
 
 ## Overview
 
