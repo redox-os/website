@@ -273,8 +273,7 @@ Have a look at [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/m
 ### Input
 
 - PS/2 keyboards, mouse and touchpad
-
-(USB soon)
+- USB keyboards, mouse and touchpad
 
 ### Internet
 
