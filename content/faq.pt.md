@@ -271,8 +271,7 @@ Leia o [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HA
 ### Periféricos
 
 - Teclados, mouse e touchpad PS/2
-
-(USB em breve)
+- Teclados, mouse e touchpad USB
 
 ### Internet
 
