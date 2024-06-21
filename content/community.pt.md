@@ -20,7 +20,7 @@ A rede Matrix tem diferentes clientes, sendo o [Element](https://element.io/) o 
 
 O Element funciona em navegadores web, Linux, MacOSX, Windows, Android e iOS.
 
-Caso tenha problemas com o Element, teste o [nheko](https://nheko-reborn.github.io/).
+Caso tenha problemas com o Element, teste o [Fractal](https://gitlab.gnome.org/World/fractal).
 
 - Entre [nesta](https://matrix.to/#/#redox-join:matrix.org) sala e não esqueça de solicitar um convite para o espaço do Redox.
 - #redox-join:matrix.org (Use esse endereço de sala do Matrix caso não queira utilizar o link externo do Matrix)
@@ -30,6 +30,20 @@ Caso tenha problemas com o Element, teste o [nheko](https://nheko-reborn.github.
 Caso você tenha uma grande discussão nas nossas salas, você deve usar um thread do Element, pois é mais organizado e fácil de acompanhar caso mais discussões ocorram na mesma sala.
 
 Você pode encontrar mais informações [nesta](https://doc.redox-os.org/book/ch13-01-chat.html) página.
+
+## [Discord](https://discord.gg/JfggvrHGDY)
+
+Nós temos um servidor no Discord como alternativa ao Matrix.
+
+(As mensagens do Matrix são enviadas para o Discord e as mensagens do Discord são enviadas para o Matrix, utilizando um bot)
+
+## [Summer of Code](/rsoc)
+
+O programa **Redox Summer of Code** (RSoC) é relizado anualmente quando as doações permitem e nós podemos participar de outros programas do mesmo tipo.
+
+Um resumo dos nossos programas Summer of Code e nossos planos para esse ano estão [neste](/rsoc) link.
+
+Veja nosso [guia de proposta RSoC](/rsoc-proposal-how-to) e [sugestões de projeto](/rsoc-project-suggestions).
 
 ## [GitLab](https://gitlab.redox-os.org/redox-os/redox)
 
