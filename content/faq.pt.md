@@ -169,7 +169,9 @@ O Redox segue o mesmo princípio, tentando deixar o espaço do kernel o menor po
 
 Essa [família](https://en.wikipedia.org/wiki/Research_Unix) de sistemas Unix implementou diversas melhorias para os sistemas Unix, as variantes de código-aberto dos sistemas BSD adicionaram muitas melhorias no sistema original (assim como o Linux fez).
 
-[FreeBSD](https://www.freebsd.org/) é o exemplo mais notável, o Redox se inspirou no [Capsicum](https://man.freebsd.org/cgi/man.cgi?capsicum(4)) (um sistema de capacidades) e [jails](https://en.wikipedia.org/wiki/Freebsd_jail) (uma tecnologia de isolamento) para a implementação dos namespaces.
+- [FreeBSD](https://www.freebsd.org/) - O Redox se inspirou no [Capsicum](https://man.freebsd.org/cgi/man.cgi?capsicum(4)) (um sistema baseado em capacidades) e [jails](https://en.wikipedia.org/wiki/Freebsd_jail) (uma tecnologia de isolamento)) para a implementação de namespaces.
+
+- [OpenBSD](https://www.openbsd.org/) - O Redox se inspirou no isolamento de [chamadas do sistema](https://man.openbsd.org/pledge.2), [sistema de arquivos](https://man.openbsd.org/unveil.2), [servidor gráfico](https://www.xenocara.org/) e [servidor de áudio](https://man.openbsd.org/sndiod.8) e [outros](https://www.openbsd.org/innovations.html).
 
 ### [Linux](https://www.kernel.org/)
 
