@@ -48,7 +48,7 @@ written in Rust, and supporting Linux, Redox, BSD, and Mac OS X.
 
 We changed our default wallpaper, title bar and panel bar colors to make the user experience more pleasant, you can see it below:
 
-![New Orbital Visual](/static/img/screenshot/orbital-visual.png)
+<a href="/img/screenshot/orbital-visual.png"><img class="img-responsive" alt="New Orbital Visual" src="/img/screenshot/orbital-visual.png"/></a>
 
 The wallpaper is the [Tarantula Nebula](https://webbtelescope.org/contents/media/images/2022/041/01GA76MYFN0FMKNRHGCAGGYCVQ) from NASA, also available on the COSMIC desktop.
 
