@@ -1,5 +1,5 @@
 +++
-title = "Software Showcase #1"
+title = "Software Showcase 1"
 author = "Ribbon"
 date = "2024-06-19"
 +++
