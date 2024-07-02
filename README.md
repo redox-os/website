@@ -5,12 +5,13 @@ To build this site, you must install [Hugo](https://gohugo.io/) and run the `hug
 ## Install Hugo
 
 - Download the executable for your CPU architecture on [this](https://github.com/gohugoio/hugo/releases/latest) link
-- Move the extracted `hugo` file to the `.local/bin` directory on your user folder
-- If the `.local/bin` directory is not present on your `PATH` environment variable (run `echo $PATH to verify`), you must add it on the configuration file of your terminal shell
+- Move the extracted `hugo` file to the `~/.local/bin` directory on your user folder
+- Verify if the `~/.local/bin` is present on your `PATH` (run `echo $PATH` to verify)
+- If the `~/.local/bin` directory is not present on your `PATH` environment variable, you must add it on the configuration file of your terminal shell
 
 ### Bash PATH
 
-To add the `.local/bin` directory on the `PATH` of your GNU Bash, add the following text on the end of the `.bashrc` file at your user folder:
+To add the `~/.local/bin` directory on the `PATH` of your GNU Bash, add the following text on the end of the `.bashrc` file at your user folder:
 
 ```
 export PATH=$PATH:$HOME/.local/bin
