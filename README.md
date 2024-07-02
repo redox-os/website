@@ -29,3 +29,17 @@ The `hugo.sh` is a script that enables content written for the English language 
 But this results in a quirk where _hugo_ does not watch for changes in the `content/` directory when you use `./hugo.sh serve` command.  
 
 So, you can use the `hugo serve` command instead, which makes sure that `content/` directory is also watched (just for when you're writing the pages).
+
+## Verify Broken Links
+
+Use the [lychee](https://lychee.cli.rs/) tool to verify broken links, it's very advanced and fast.
+
+Read [this](https://lychee.cli.rs/installation/) page to install the tool.
+
+### Usage
+
+Run the following command inside the repository folder:
+
+```sh
+lychee content
+```
