@@ -13,7 +13,7 @@ Essa página contém perguntas e respostas para iniciantes e usuários comuns.
 - [Qual o propósito do Redox?](#qual-o-prop%C3%B3sito-do-redox)
 - [O que posso fazer com o Redox?](#o-que-posso-fazer-com-o-redox)
 - [O que é um sistema Unix-like?](#o-que-%C3%A9-um-sistema-unix-like)
-- [Como o Redox é inspirado em outros sistemas?](#como-o-redox-%C3%A9-inspirado-em-outros-sistemas)
+- [Como o Redox foi influenciado por outros sistemas?](#como-o-redox-foi-influenciado-por-outros-sistemas)
 - [O que é um microkernel?](#o-que-%C3%A9-um-microkernel)
 - [Quais programas o Redox executa?](#quais-programas-o-redox-executa)
 - [Como instalar programas no Redox?](#como-instalar-programas-no-redox)
@@ -140,7 +140,7 @@ Qualquer sistema compátivel com a [Especificação Única do Unix](https://en.w
 
 - [Artigo da Wikipedia](https://pt.wikipedia.org/wiki/Sistema_operacional_tipo_Unix)
 
-## Como o Redox é inspirado em outros sistemas?
+## Como o Redox foi influenciado por outros sistemas?
 
 ### [Plan 9](http://9p.io/plan9/index.html)
 
@@ -155,7 +155,7 @@ Você apenas precisa montar o software em algum local para obter a função dese
 
 O sistema Unix-like com microkernel mais influente, ele possuí funções avançadas tais como modularidade do sistema, resistência a [quebra do kernel](https://en.wikipedia.org/wiki/Kernel_panic), reincarnação de driver, proteção contra drivers ruins e interfaces seguras para a [comunicação dos processos](https://en.wikipedia.org/wiki/Inter-process_communication).
 
-O Redox é largamente inspirado pelo Minix, ele tem funções e arquitetura similar escrita em Rust.
+O Redox foi muito influenciado pelo Minix, ele tem funções e arquitetura similar escrita em Rust.
 
 - [Como o Redox foi influenciado pelo Minix](https://doc.redox-os.org/book/ch04-01-microkernels.html)
 
@@ -165,13 +165,13 @@ O mais veloz e simples microkernel do mundo, focado em desempenho e simplicidade
 
 O Redox segue o mesmo princípio, tentando deixar o espaço do kernel o menor possível (movendo componentes para o espaço do usuário e reduzindo a quantidade de chamadas do sistema, passando a complexidade para o espaço do usuário) e mantendo o desempenho geral bom (reduzindo o custo da troca de contexto).
 
-### [BSD](https://www.bsd.org/)
+### [BSD](https://en.wikipedia.org/wiki/Berkeley_Software_Distribution)
 
 Essa [família](https://en.wikipedia.org/wiki/Research_Unix) de sistemas Unix implementou diversas melhorias para os sistemas Unix, as variantes de código-aberto dos sistemas BSD adicionaram muitas melhorias no sistema original (assim como o Linux fez).
 
-- [FreeBSD](https://www.freebsd.org/) - O Redox se inspirou no [Capsicum](https://man.freebsd.org/cgi/man.cgi?capsicum(4)) (um sistema baseado em capacidades) e [jails](https://en.wikipedia.org/wiki/Freebsd_jail) (uma tecnologia de isolamento)) para a implementação de namespaces.
+- [FreeBSD](https://www.freebsd.org/) - O [Capsicum](https://man.freebsd.org/cgi/man.cgi?capsicum(4)) (um sistema baseado em capacidades) e [jails](https://en.wikipedia.org/wiki/Freebsd_jail) (uma tecnologia de isolamento)) influenciaram a implementação de namespaces do Redox.
 
-- [OpenBSD](https://www.openbsd.org/) - O Redox se inspirou no isolamento de [chamadas do sistema](https://man.openbsd.org/pledge.2), [sistema de arquivos](https://man.openbsd.org/unveil.2), [servidor gráfico](https://www.xenocara.org/) e [servidor de áudio](https://man.openbsd.org/sndiod.8) e [outros](https://www.openbsd.org/innovations.html).
+- [OpenBSD](https://www.openbsd.org/) - O isolamento de [chamadas do sistema](https://man.openbsd.org/pledge.2), [sistema de arquivos](https://man.openbsd.org/unveil.2), [servidor gráfico](https://www.xenocara.org/), [servidor de áudio](https://man.openbsd.org/sndiod.8) e [outros](https://www.openbsd.org/innovations.html) influenciaram a segurança do Redox.
 
 ### [Linux](https://www.kernel.org/)
 

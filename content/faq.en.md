@@ -13,7 +13,7 @@ This page covers questions and answers for newcomers and end-users.
 - [What is the purpose of Redox?](#what-is-the-purpose-of-redox)
 - [What I can do with Redox?](#what-i-can-do-with-redox)
 - [What is an Unix-like OS?](#what-is-an-unix-like-os)
-- [How Redox is inspired by other systems?](#how-redox-is-inspired-by-other-systems)
+- [How Redox was influenced by other systems?](#how-redox-was-influenced-by-other-systems)
 - [What is a microkernel?](#what-is-a-microkernel)
 - [What programs can Redox run?](#what-programs-can-redox-run)
 - [How to install programs on Redox?](#how-to-install-programs-on-redox)
@@ -142,7 +142,7 @@ Any OS compatible with the [Single Unix Specification](https://en.wikipedia.org/
 
 - [Wikipedia article](https://en.wikipedia.org/wiki/Unix-like)
 
-## How Redox is inspired by other systems?
+## How Redox was influenced by other systems?
 
 ### [Plan 9](http://9p.io/plan9/index.html)
 
@@ -155,7 +155,7 @@ This Bell Labs OS brings the concept of "Everything is a File" to the highest le
 
 The most influential Unix-like system with a microkernel. It has advanced features such as system modularity, [kernel panic](https://en.wikipedia.org/wiki/Kernel_panic) resistence, driver reincarnation, protection against bad drivers and secure interfaces for [process comunication](https://en.wikipedia.org/wiki/Inter-process_communication).
 
-Redox is largely inspired by Minix - it has a similar architecture but with a feature set written in Rust.
+Redox is largely influenced by Minix - it has a similar architecture but with a feature set written in Rust.
 
 - [How Minix influenced the Redox design](https://doc.redox-os.org/book/ch04-01-microkernels.html)
 
@@ -165,13 +165,13 @@ The most performant and simplest microkernel of the world.
 
 Redox follow the same principle, trying to make the kernel-space small as possible (moving components to user-space and reducing the number of system calls, passing the complexity to user-space) and keeping the overall performance good (reducing the context switch cost).
 
-### [BSD](https://www.bsd.org/)
+### [BSD](https://en.wikipedia.org/wiki/Berkeley_Software_Distribution)
 
 This Unix [family](https://en.wikipedia.org/wiki/Research_Unix) included several improvements on Unix systems and the open-source variants of BSD added many improvements to the original system (like Linux did).
 
-- [FreeBSD](https://www.freebsd.org/) - Redox took inspiration from [Capsicum](https://man.freebsd.org/cgi/man.cgi?capsicum(4)) (a capability-based system) and [jails](https://en.wikipedia.org/wiki/Freebsd_jail) (a sandbox technology) for the namespaces implementation.
+- [FreeBSD](https://www.freebsd.org/) - The [Capsicum](https://man.freebsd.org/cgi/man.cgi?capsicum(4)) (a capability-based system) and [jails](https://en.wikipedia.org/wiki/Freebsd_jail) (a sandbox technology) influenced the Redox namespaces implementation.
 
-- [OpenBSD](https://www.openbsd.org/) - Redox took inspiration from the [system call](https://man.openbsd.org/pledge.2), [filesystem](https://man.openbsd.org/unveil.2), [display server](https://www.xenocara.org/) and [audio server](https://man.openbsd.org/sndiod.8) sandbox and [others](https://www.openbsd.org/innovations.html).
+- [OpenBSD](https://www.openbsd.org/) - The [system call](https://man.openbsd.org/pledge.2), [filesystem](https://man.openbsd.org/unveil.2), [display server](https://www.xenocara.org/) and [audio server](https://man.openbsd.org/sndiod.8) sandbox and [others](https://www.openbsd.org/innovations.html) influenced the Redox security.
 
 ### [Linux](https://www.kernel.org/)
 
