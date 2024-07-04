@@ -9,6 +9,7 @@ Essa página contém perguntas e respostas para iniciantes e usuários comuns.
 - [Quais funções o Redox possui?](#quais-fun%C3%A7%C3%B5es-o-redox-possui)
     - [Benefícios do Microkernel](#benefícios-do-microkernel)
     - [Benefícios da Rust](#benefícios-da-rust)
+    - [Outros Benefícios](#outros-benefícios)
     - [Comparação com outros sistemas operacionais](#comparação-com-outros-sistemas-operacionais)
 - [Qual o propósito do Redox?](#qual-o-prop%C3%B3sito-do-redox)
 - [O que posso fazer com o Redox?](#o-que-posso-fazer-com-o-redox)
@@ -83,12 +84,6 @@ O compilador da Rust ajuda o programador a evitar erros de memória e condiçõe
 
 O design de um microkernel escrito em Rust protege contra as falhas de memória das linguagens C e C++, isolando o sistema do kernel a superfície de ataque é muito limitada.
 
-- **Sistema de arquivos inspirado no ZFS**
-
-O Redox utiliza o RedoxFS como sistema de arquivos padrão, ele suporta funções parecidas com as do [ZFS](https://docs.freebsd.org/en/books/handbook/zfs/) com uma implementação escrita em Rust.
-
-Espere alto desempenho e segurança dos dados (copy-on-write, integridade de arquivos, volumes, snapshots, endurecido contra a perda de arquivos).
-
 - **Melhorias de segurança/confiabilidade sem impacto significante no desempenho**
 
 Como o kernel é pequeno, ele usa menos memória para fazer suas funções e o código limitado no kernel torna ele quase livre de bugs (objetivo do príncipio [KISS](https://en.wikipedia.org/wiki/KISS_principle)).
@@ -108,6 +103,14 @@ Mas na Rust esse tipo de bug é fácil de evitar, o mesmo sistema de escrita que
 - **Drivers escritos em Rust**
 
 Drivers escritos em Rust possuem incentivos para ter menos bugs e portanto melhor segurança.
+
+### Outros Benefícios
+
+- **Sistema de arquivos inspirado no ZFS**
+
+O Redox utiliza o RedoxFS como sistema de arquivos padrão, ele suporta funções parecidas com as do [ZFS](https://docs.freebsd.org/en/books/handbook/zfs/) com uma implementação escrita em Rust.
+
+Espere alto desempenho e segurança dos dados (copy-on-write, integridade de arquivos, volumes, snapshots, endurecido contra a perda de arquivos).
 
 ### Comparação com outros sistemas operacionais
 

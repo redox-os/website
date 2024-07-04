@@ -9,6 +9,7 @@ This page covers questions and answers for newcomers and end-users.
 - [What features does Redox have?](#what-features-does-redox-have)
     - [Microkernel benefits](#microkernel-benefits)
     - [Rust benefits](#rust-benefits)
+    - [Other benefits](#other-benefits)
     - [Comparison with other operating systems](#comparison-with-other-operating-systems)
 - [What is the purpose of Redox?](#what-is-the-purpose-of-redox)
 - [What I can do with Redox?](#what-i-can-do-with-redox)
@@ -104,6 +105,8 @@ In Rust, this kind of bug is easy to avoid: the same type system that keeps us f
 - **Rust-written Drivers**
 
 Drivers written in Rust are likely to have fewer bugs and are therefore more stable and secure.
+
+### Other benefits
 
 - **ZFS-inspired filesystem**
 
