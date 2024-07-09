@@ -22,7 +22,11 @@ We successfully compiled and executed the first web server on Redox!
 
 He is also improving the Apache HTTP Server port.
 
-## Drivers Improvements
+## Relibc Improvements
+
+The contributor Derick Eddington fixed four incorrectness bugs on relibc.
+
+## Driver Improvements
 
 bjorn3 improved the driver development using our recipe system, now developers will have less problems to test their changes inside of Redox.
 
