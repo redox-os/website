@@ -14,6 +14,18 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## Massive Performance Improvements
+
+4lDO2 reduced the time to make a context switch by 60-70% !
+
+Redox is becoming faster than Linux in some workloads (with all exploit mitigations disabled), more exciting optimizations are coming.
+
+## POSIX Signals
+
+4lDO2 started to show results on his work to implement the POSIX signals on userspace.
+
+You can read his post about the work on this link.
+
 ## Web Servers
 
 We successfully compiled and executed the first web server on Redox!
@@ -28,7 +40,7 @@ The contributor Derick Eddington fixed four incorrectness bugs on relibc.
 
 ## Driver Improvements
 
-bjorn3 improved the driver development using our recipe system, now developers will have less problems to test their changes inside of Redox.
+bjorn3 improved the driver development by adding a symbolic link on the `drivers-initfs` recipe configuration to use the source code of the `drivers` recipe, now developers will have less problems to test their changes inside of Redox.
 
 ## Programs
 
