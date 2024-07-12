@@ -5,8 +5,8 @@ url = "home"
 <div class="row install-row">
   <div class="col-md-8">
     <p class="pitch">
-      O <b>Redox</b> é um sistema operacional <a style="color: inherit;" href="https://en.wikipedia.org/wiki/Unix-like"><b>Unix-like</b></a> escrito em <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>,
-      que busca trazer as inovações desta linguagem de programação para um microkernel moderno e um conjunto completo de aplicações.
+      O <b>Redox</b> é um sistema operacional <a style="color: inherit;" href="https://en.wikipedia.org/wiki/Unix-like"><b>Unix-like</b></a> de propósito geral baseado em microkernel e escrito em <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>,
+      que busca trazer as inovações desta linguagem de programação para um microkernel moderno, um conjunto completo de programas e ser uma alternativa completa ao Linux e BSD.
     </p>
   </div>
   <div class="col-md-4 install-box">

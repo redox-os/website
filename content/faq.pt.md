@@ -34,6 +34,8 @@ Redox é um sistema operacional baseado em microkernel, completo, funcional, par
 
 Onde for possível, os componentes do sistema serão escritos em Rust e executam no espaço do usuário.
 
+O Redox busca ser uma alternativa completa para o Linux e BSD.
+
 ### Estado atual
 
 O Redox está em qualidade alpha/beta, pois implementamos novas funções enquanto corrigimos bugs.
