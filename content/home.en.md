@@ -5,8 +5,8 @@ url = "home"
 <div class="row install-row">
   <div class="col-md-8">
     <p class="pitch">
-      <b>Redox</b> is a <a style="color: inherit;" href="https://en.wikipedia.org/wiki/Unix-like"><b>Unix-like</b></a> Operating System written in <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>,
-      aiming to bring the innovations of Rust to a modern microkernel and full set of applications.
+      <b>Redox</b> is a <a style="color: inherit;" href="https://en.wikipedia.org/wiki/Unix-like"><b>Unix-like</b></a> general-purpose microkernel-based operating system written in <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>,
+      aiming to bring the innovations of Rust to a modern microkernel, a full set of programs and be a complete alternative to Linux and BSD.
     </p>
   </div>
   <div class="col-md-4 install-box">
