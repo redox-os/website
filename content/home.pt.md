@@ -18,7 +18,7 @@ url = "home"
 <div class="row features">
   <div class="col-md-6">
     <ul class="laundry-list" style="margin-bottom: 0px;">
-      <li>Inspirado pelo <a href="http://9p.io/plan9/index.html">Plan 9</a>, <a href="http://www.minix3.org/">Minix</a>, <a href="https://sel4.systems/">seL4</a>, <a href="http://www.bsd.org/">BSD</a> e <a href="https://www.kernel.org/">Linux</a></li>
+      <li>Inspirado pelo <a href="http://9p.io/plan9/index.html">Plan 9</a>, <a href="http://www.minix3.org/">Minix</a>, <a href="https://sel4.systems/">seL4</a>, <a href="https://en.wikipedia.org/wiki/Berkeley_Software_Distribution">BSD</a> e <a href="https://www.kernel.org/">Linux</a></li>
       <li>Implementado em <a href="https://www.rust-lang.org/">Rust</a></li>
       <li>Design de <a href="https://doc.redox-os.org/book/ch04-01-microkernels.html">Microkernel</a></li>
       <li>Inclui uma GUI opcional - <a href="https://doc.redox-os.org/book/ch04-09-graphics-windowing.html#orbital">Orbital</a></li>
