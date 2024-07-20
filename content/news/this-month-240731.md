@@ -43,11 +43,18 @@ It's a first step to test the compilation of more complex programs.
 ## Kernel Improvements
 
 - Andrey Turkin improved the ARM64 code on the kernel.
+- Andrey Turkin fixed the debug code of the kernel.
+
+## Userspace Improvements
+
+- bjorn3 updated most system daemons to use the new scheme format.
 
 ## Driver Improvements
 
 - bjorn3 fixed an undefined bahvior bug on the ps2d driver's vmmouse implementation.
 - 4lDO2 fixed a panic on the inputd driver and updated the dependencies of all drivers.
+- The contributor Ramla Ijaz fixed some bugs.
+- bjorn3 updated most drivers to use the new scheme format.
 - bjorn3 improved the driver development by adding a symbolic link on the `drivers-initfs` recipe configuration to use the source code of the `drivers` recipe, now developers will have less problems to test their changes inside of Redox.
 - bjorn3 did a cleanup of the graphics subsystem and ran `rustfmt` on the entire code.
 
@@ -62,14 +69,16 @@ It's a first step to test the compilation of more complex programs.
 
 wget is finally working thanks to 4lDO2 and Ribbon!
 
-bjorn3 converted the Orbital recipes to TOML, fixing the "desktop-minimal" variant.
-
-Ribbon converted more recipes to TOML to remove obsolete and broken code from our package system.
+- Ron Williams fixed the Helix text editor.
+- bjorn3 converted the Orbital recipes to TOML, fixing the "desktop-minimal" variant.
+- Ribbon converted more recipes to TOML to remove obsolete and broken code from our package system.
 
 More exciting Rust programs were packaged as usual.
 
 ## Build System Improvements
 
+- bjorn3 updated the system configuration on the filesystem configuration to use the new scheme format.
+- bjorn3 converted the standalone Orbital recipes to TOML.
 - Ribbon improved the `dev.toml` filesystem configuration to improve our tests inside of Redox, like self-hosting compilation.
 - Ribbon renamed the `vga` and `efi` QEMU options to `gpu` and `uefi`, it avoid confusion with the VGA interface (the `vga` option on QEMU select the video type) and the old UEFI revision (the final revision of EFI is called UEFI)
 - Ribbon enabled the `shell` data type to easily change the default terminal shell before boot.
@@ -84,6 +93,7 @@ More exciting Rust programs were packaged as usual.
 
 A list of the improvements this month:
 
+- The contributor Deft Punk improved the wording and grammar of the book.
 - Now the book recommend the [Gentoo](https://gentoo.org) package documentation for dependency configuration on recipes and [FreeBSD](https://freebsd.org) to find C/C++ feature flags easily, the Gentoo dependency classification helps a lot with not/badly documented C/C++ programs and libraries.
 - The "Weekly Images" section was renamed "Daily Images" on the "Running Redox in a virtual machine" and "Running Redox on real hardware" pages, it was called "weekly" because breaking changes stopped the image update for weeks, but they are configured to be created daily.
 - Some sections of the website FAQ were copied to the book, it improved the reading and information distribution (more easy to find).
@@ -93,6 +103,13 @@ A list of the improvements this month:
 - Ribbon added explanation comments on most configuration files of the build system.
 - Wildan Murdock copied the instructions to build a recipe with relibc on the relibc README.
 - Ribbon did a big cleanup of the comments on the configuration files of the build system.
+- Ribbon updated the screenshots of the `redox` repository README.
+
+## Website Improvements
+
+- Now the Home page is clear that we aim to be a complete Linux/BSD alternative.
+- The RedoxFS section context on the FAQ was fixed.
+- Some sections of the FAQ were improved.
 
 ## Join us on Matrix Chat
 
