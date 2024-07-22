@@ -36,7 +36,9 @@ He is also improving the Apache HTTP Server port.
 
 ## Self-Hosting Update
 
-We finally successfully built C and C++ Hello World programs!
+We finally successfully built Rust, C and C++ Hello World programs!
+
+4lDO2 also fixed Cargo and built a Hello World program from it.
 
 It's a first step to test the compilation of more complex programs.
 
@@ -69,11 +71,16 @@ It's a first step to test the compilation of more complex programs.
 
 wget is finally working thanks to 4lDO2 and Ribbon!
 
+- 4lDO2 fixed most bugs on the COSMIC programs
 - Ron Williams fixed the Helix text editor.
 - bjorn3 converted the Orbital recipes to TOML, fixing the "desktop-minimal" variant.
 - Ribbon converted more recipes to TOML to remove obsolete and broken code from our package system.
 
 More exciting Rust programs were packaged as usual.
+
+## Orbital Improvements
+
+Ribbon configured Orbital to launch the FFMPEG media player (ffplay) when video and audio files are opened from graphical programs.
 
 ## Build System Improvements
 
