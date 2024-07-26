@@ -47,6 +47,12 @@ It's a first step to test the compilation of more complex programs.
 - Andrey Turkin improved the ARM64 code on the kernel.
 - Andrey Turkin fixed the debug code of the kernel.
 
+## UEFI Improvements
+
+bjorn3 fixed a violation of the UEFI specification (calling runtime services with interrupts enabled) and added workarounds for buggy firmware.
+
+These changes will allow more computers to boot Redox.
+
 ## Userspace Improvements
 
 - bjorn3 updated most system daemons to use the new scheme format.
