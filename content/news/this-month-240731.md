@@ -30,27 +30,33 @@ Thanks to [Igalia](https://www.igalia.com/) and the Servo team for partnering wi
 
 Redox is becoming faster than Linux in some workloads (with all exploit mitigations disabled), more exciting optimizations are coming.
 
-## POSIX Signals
+## NLnet Redox Signals project
 
-4lDO2 started to move the POSIX signals implementation from the kernel to userspace.
+The funding for the [Redox OS Unix-style Signals](https://nlnet.nl/project/RedoxOS-Signals/) project has been finalized!
+As part of the [NGI Zero Core Fund](https://nlnet.nl/core), NLnet will be donating 26,500 EUR,
+covering implementation of POSIX-style signals and process lifecycle management in userspace.
 
-You can read his post about the work on [this](https://www.redox-os.org/news/kernel-11/) link.
+4lDO2 has moved the bulk of the signal handling code into our libc alternative, `relibc`.
+He has also implemented a large chunk of process lifecycle management,
+so Redox now handles the Session/Process Group/Process/Thread hierarchy more correctly.
+One area that has shown lots of improvement is the handling of thread and process exit.
+Some programs that were hanging on exit are now exiting cleanly;
+this is most notable for build tools, including Cargo.
 
-## Process Lifecycle
-
-4lDO2 should explain this.
+You can read about some of this work in his recent news post, [Towards userspaceification of POSIX - part I](https://www.redox-os.org/news/kernel-11/).
 
 ## Web Servers
 
-We successfully compiled and executed the first web server on Redox!
+Redox now has a working web server!
 
-[Simple HTTP Server](https://github.com/TheWaWaR/simple-http-server) is an advanced HTTP web server written in Rust, the contributor lgh-127001 successfully served a website.
+[Simple HTTP Server](https://github.com/TheWaWaR/simple-http-server) is an advanced HTTP web server written in Rust.
+Contributor lgh-127001 has gotten the server to work and has successfully served a website.
 
 He is also improving the Apache HTTP Server port.
 
 ## Self-Hosting Update
 
-We finally successfully built Rust, C and C++ Hello World programs!
+We finally successfully built Hello World programs in Rust, C and C++!
 
 4lDO2 also fixed Cargo and built a Hello World program from it.
 
@@ -58,8 +64,7 @@ It's a first step to test the compilation of more complex programs.
 
 ## Kernel Improvements
 
-- Andrey Turkin improved the ARM64 code on the kernel.
-- Andrey Turkin fixed the debug code of the kernel.
+Andrey Turkin improved the ARM64 code on the kernel, and fixed some of the debug code.
 
 ## UEFI Improvements
 
@@ -77,7 +82,6 @@ These changes will allow more computers to boot Redox.
 - 4lDO2 fixed a panic on the inputd driver and updated the dependencies of all drivers.
 - The contributor Ramla Ijaz fixed some bugs.
 - bjorn3 updated most drivers to use the new scheme format.
-- bjorn3 improved the driver development by adding a symbolic link on the `drivers-initfs` recipe configuration to use the source code of the `drivers` recipe, now developers will have less problems to test their changes inside of Redox.
 - bjorn3 did a cleanup of the graphics subsystem and ran `rustfmt` on the entire code.
 
 ## Relibc Improvements
@@ -102,14 +106,17 @@ More exciting Rust programs were packaged as usual.
 
 ## Orbital Improvements
 
-Ribbon configured Orbital to launch the FFMPEG media player (ffplay) when video and audio files are opened from graphical programs.
+- Ribbon configured Orbital to launch the FFMPEG media player (ffplay) when video and audio files are opened from graphical programs.
 
 ## Build System Improvements
 
 - bjorn3 updated the system configuration on the filesystem configuration to use the new scheme format.
 - bjorn3 converted the standalone Orbital recipes to TOML.
+- bjorn3 improved the driver development experience by adding a symbolic link to the `drivers` code in the `drivers-initfs` recipe.
+This eliminates the duplication of the source tree of the `drivers` recipe,
+so any driver changes/debug code will appear in both the regular and `initfs` versions automatically.
 - Ribbon improved the `dev.toml` filesystem configuration to improve our tests inside of Redox, like self-hosting compilation.
-- Ribbon renamed the `vga` and `efi` QEMU options to `gpu` and `uefi`, it avoid confusion with the VGA interface (the `vga` option on QEMU select the video type) and the old UEFI revision (the final revision of EFI is called UEFI)
+- Ribbon renamed the `vga` and `efi` QEMU options to `gpu` and `uefi`, to avoid confusion with the VGA interface (the `vga` option on QEMU to select the video type) and the old UEFI revision (the final revision of EFI is called UEFI)
 - Ribbon enabled the `shell` data type to easily change the default terminal shell before boot.
 - Ribbon updated the GCC and LLVM package versions for the MacOSX target, GCC was updated from versions 4.9/7.x to 14.x and LLVM from 16 to 18.
 
@@ -123,10 +130,10 @@ Ribbon configured Orbital to launch the FFMPEG media player (ffplay) when video 
 A list of the improvements this month:
 
 - The contributor Deft Punk improved the wording and grammar of the book.
-- Now the book recommend the [Gentoo](https://gentoo.org) package documentation for dependency configuration on recipes and [FreeBSD](https://freebsd.org) to find C/C++ feature flags easily, the Gentoo dependency classification helps a lot with not/badly documented C/C++ programs and libraries.
+- Now the book recommends the [Gentoo](https://gentoo.org) package documentation for dependency configuration on recipes and [FreeBSD](https://freebsd.org) to find C/C++ feature flags easily. The Gentoo dependency classification helps a lot with not/poorly documented C/C++ programs and libraries.
 - The "Weekly Images" section was renamed "Daily Images" on the "Running Redox in a virtual machine" and "Running Redox on real hardware" pages, it was called "weekly" because breaking changes stopped the image update for weeks, but they are configured to be created daily.
-- Some sections of the website FAQ were copied to the book, it improved the reading and information distribution (more easy to find).
-- The "Scripts" section on the "Build System" page was improved, he added a command to sort in alpahbetical order the output of the include-recipes.sh script, it will save time from packagers adding recipes to the package build server configuration.
+- Some sections of the website FAQ were copied to the book, it improved the reading and information distribution (to make things easier to find).
+- The "Scripts" section on the "Build System" page was improved, a command was added to sort in alpahbetical order the output of the include-recipes.sh script, it will save time from packagers adding recipes to the package build server configuration.
 - Now the website and book READMEs recommend the [lychee](https://lychee.cli.rs/) tool to verify broken links
 - Now the website READMEs has instructions to install [Hugo](https://gohugo.io/)
 - Ribbon added explanation comments on most configuration files of the build system.
