@@ -24,12 +24,6 @@ The application was submitted for NGI Sargasso's Open Call 4, and we await their
 
 Thanks to [Igalia](https://www.igalia.com/) and the Servo team for partnering with us!
 
-## Massive Performance Improvements
-
-4lDO2 reduced the time to make a context switch by 60-70% !
-
-Redox is becoming faster than Linux in some workloads (with all exploit mitigations disabled), more exciting optimizations are coming.
-
 ## NLnet Redox Signals project
 
 The funding for the [Redox OS Unix-style Signals](https://nlnet.nl/project/RedoxOS-Signals/) project has been finalized!
