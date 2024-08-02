@@ -17,9 +17,11 @@ If you would like to support Redox, please consider donating or buying some merc
 ## Servo and Redox Proposal for NGI Sargasso
 
 [Servo](https://servo.org/) and Redox have partnered for a joint application for funding by [NGI Sargasso](https://ngisargasso.eu/)!
+
 The proposed project includes porting SpiderMonkey and WebRender to Redox,
 improvements to Servo's cross-compilation support, and a written-in-Rust font stack.
 The application was submitted for NGI Sargasso's Open Call 4, and we await their response.
+
 Thanks to [Igalia](https://www.igalia.com/) and the Servo team for partnering with us!
 
 ## Massive Performance Improvements
@@ -33,6 +35,10 @@ Redox is becoming faster than Linux in some workloads (with all exploit mitigati
 4lDO2 started to move the POSIX signals implementation from the kernel to userspace.
 
 You can read his post about the work on [this](https://www.redox-os.org/news/kernel-11/) link.
+
+## Process Lifecycle
+
+4lDO2 should explain this.
 
 ## Web Servers
 
@@ -84,6 +90,8 @@ These changes will allow more computers to boot Redox.
 ## Programs
 
 wget is finally working thanks to 4lDO2 and Ribbon!
+
+Now COSMIC Terminal and Nushell can exit properly.
 
 - 4lDO2 fixed most bugs on the COSMIC programs
 - Ron Williams fixed the Helix text editor.
