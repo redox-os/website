@@ -14,6 +14,14 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## Servo and Redox Proposal for NGI Sargasso
+
+[Servo](https://servo.org/) and Redox have partnered for a joint application for funding by [NGI Sargasso](https://ngisargasso.eu/)!
+The proposed project includes porting SpiderMonkey and WebRender to Redox,
+improvements to Servo's cross-compilation support, and a written-in-Rust font stack.
+The application was submitted for NGI Sargasso's Open Call 4, and we await their response.
+Thanks to [Igalia](https://www.igalia.com/) and the Servo team for partnering with us!
+
 ## Massive Performance Improvements
 
 4lDO2 reduced the time to make a context switch by 60-70% !
