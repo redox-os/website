@@ -91,7 +91,7 @@ wget is finally working thanks to 4lDO2 and Ribbon!
 
 Now COSMIC Terminal and Nushell can exit properly.
 
-- 4lDO2 fixed most bugs on the COSMIC programs
+- 4lDO2 fixed most known bugs on the COSMIC programs
 - Ron Williams fixed the Helix text editor.
 - bjorn3 converted the Orbital recipes to TOML, fixing the "desktop-minimal" variant.
 - Ribbon converted more recipes to TOML to remove obsolete and broken code from our package system.
