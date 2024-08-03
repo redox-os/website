@@ -44,7 +44,7 @@ You can read about some of this work in his recent news post, [Towards userspace
 Redox now has a working web server!
 
 [Simple HTTP Server](https://github.com/TheWaWaR/simple-http-server) is an advanced HTTP web server written in Rust.
-Contributor lgh-127001 has gotten the server to work and has successfully served a website.
+Contributor Bendeguz Pisch has gotten the server to work and has successfully served a website.
 
 He is also improving the Apache HTTP Server port.
 
