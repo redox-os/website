@@ -4,7 +4,7 @@ author = "Jeremy Soller and Ron Williams"
 date = "2024-04-18"
 +++
 
-(The following image needs to be uploaded, like the previous release it should show the Jeremy computers running the current Redox version)
+(The computers image needs to be uploaded, like the previous release it should show the Jeremy computers running the current Redox version)
 
 ![Orbital in the 0.9.0 version](/img/screenshot/orbital-0.9.0.png)
 ![Computers running the 0.9.0 version](/img/release/computers-0.9.0.png)
@@ -12,7 +12,11 @@ date = "2024-04-18"
 ## Overview
 
 It's been a while since we had our last release, but we have been heads-down working hard this whole time,
-and Release 0.9.0 is packed with many improvements and cleanup. Here are just a few of the highlights!
+and Release 0.9.0 is packed with many improvements and cleanup. 
+
+We would like to thank all maintainers and contributors a lot by their hard work that make this release possible.
+
+Here are just a few of the highlights!
 
 - Huge improvements to the portability of Linux/BSD programs
 - Phase-One of the creation of a stable API
@@ -21,19 +25,27 @@ and Release 0.9.0 is packed with many improvements and cleanup. Here are just a 
 - Wide-ranging clean-up and debugging of the kernel, drivers and PCIe support
 - Improved USB HID support
 - Improved filesystem performance
+- Our [porting strategy](https://www.redox-os.org/news/porting-strategy/) was explained
 - VirtIO drivers for better performance in virtual machines
 - Relibc (our C library implementation) is now almost 100% Rust and much more complete
 - The `libm` is now 100% written-in-Rust
 - Significant progress on the ARM64 (Aarch64) support, including partial support for Raspberry Pi 3B+
 - Contain (Redox's sandboxing driver) has been expanded and is available as a demo (`desktop-contain.toml`)
-- Slint, Iced and winit GUI libraries support the Redox Orbital Window Manager
-- Key COSMIC Desktop programs available as demos
-- GNU Nano and [Helix](https://helix-editor.com/) editors now supported
+- Slint, Iced and winit GUI libraries support the Redox's display server (Orbital)
+- Most COSMIC Desktop programs were ported
+- GNU Nano and [Helix](https://helix-editor.com/) editors were ported
 - [RustPython](https://rustpython.github.io/) is enabled by default
 - New build system options and improvements
 - Lots of new documentation, a complete book review and cleanup, almost 100% up-to-date information
 - A [FAQ](https://www.redox-os.org/faq/) was added to the website
 - A [developer FAQ](https://doc.redox-os.org/book/ch09-07-developer-faq.html) was added to the book
+- The Redox software ports system was almost completely documented
+- The [Libraries and APIs](https://doc.redox-os.org/book/ch09-06-libraries-apis.html) page documented our system APIs and libraries
+- The [Performance](https://doc.redox-os.org/book/ch09-10-performance.html) page documented how to profile Redox to improve the performance
+- Some sections of the website FAQ were copied to the book for better reading and easy to find information
+- [Feature comparison](https://doc.redox-os.org/book/ch04-11-features.html) tables were added to the book
+- The [References](https://doc.redox-os.org/book/ch09-08-references.html) page documents the best references to learn Rust, OS development and computer science
+- Now the website say that we aim to be a complete Linux/BSD alternative
 
 ## Stability and Performance Improvements
 
@@ -63,7 +75,7 @@ We focus on Rust programs as they are more easy to port, Ribbon quickly ported h
 
 Ribbon also partially-ported the classic and widely-used C and C++ programs and libraries, he focused to package the most used (and best) programs of the Linux/BSD world.
 
-Currently there are 1,646 work-in-progress software ports, we need to write cross-compilation scripts and port/update some libraries to make them work.
+Currently there are around 1,700 work-in-progress software ports, we need to write cross-compilation scripts and port/update some libraries to make them work.
 
 ## Relibc Improvements
 
@@ -123,6 +135,26 @@ Ron Williams and Ribbon did a hard work to make our website and book extremely r
 We are glad to say that our website and book answer most of the end-user and developer questions about Redox.
 
 You can read about the Ribbon's documentation adventure on [this](https://www.redox-os.org/news/documentation-improvements/) post and on the monthly updates.
+
+## This Month in Redox
+
+We started monthly updates in 2024 to improve our status report for the community and bring more excitement to Redox, these posts offer more details about the changes present on this post.
+
+You can read them on the following links:
+
+- [This Month in Redox - January 2024](https://www.redox-os.org/news/this-month-240131/)
+- [This Month in Redox - February 2024](https://www.redox-os.org/news/this-month-240229/)
+- [This Month in Redox - March 2024](https://www.redox-os.org/news/this-month-240330/)
+- [This Month in Redox - April 2024](https://www.redox-os.org/news/this-month-240430/)
+- [This Month in Redox - May 2024](https://www.redox-os.org/news/this-month-240531/)
+- [This Month in Redox - June 2024](https://www.redox-os.org/news/this-month-240630/)
+- [This Month in Redox - July 2024](https://www.redox-os.org/news/this-month-240731/)
+
+## Software Showcase
+
+We started a series of videos showing many programs running on Redox!
+
+<iframe width="800" height="640" src="https://www.youtube.com/embed/s-gxAsBTPxA?si=EbIRLwIrnuiwfvYZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Matrix
 
@@ -253,7 +285,7 @@ The most important changes are shown below.
 
 ## Changelog
 
-This section contains all commits since the 0.8.0 version, generated by the [changelog](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/changelog.sh) script:
+As many changes happened it's not possible to write everything on this post, this section contains all commits since the 0.8.0 version generated by the [changelog](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/changelog.sh) script:
 
 - [redox]
 - [cookbook]
