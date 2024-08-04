@@ -162,11 +162,10 @@ In 2023 we migrated from Mattermost to Matrix to fix some management problems, t
 
 You can read more about it on [this](https://www.redox-os.org/news/community-announcements-1/) post.
 
+<!--
 ## Discussion
 
-Links where this release is discussed will be added here.
-
-(To contact us, join in our Matrix space on [this](https://www.redox-os.org/community/) page)
+To contact us, join in our Matrix space on [this](https://www.redox-os.org/community/) page.
 
 - [Hacker News]()
 - [Mastodon]()
@@ -175,6 +174,7 @@ Links where this release is discussed will be added here.
 - [Reddit /r/rust]()
 - [Redox OS Chat]()
 - [X (previously known as Twitter)]()
+-->
 
 ## Images
 
