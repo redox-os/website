@@ -50,11 +50,11 @@ He is also improving the Apache HTTP Server port.
 
 ## Self-Hosting Update
 
-We finally successfully built Hello World programs in Rust, C and C++!
+We finally successfully built Hello World programs in Rust, C and C++ inside of Redox!
 
 4lDO2 also fixed Cargo and built a Hello World program from it.
 
-It's a first step to test the compilation of more complex programs.
+It's a first step to test the compilation of more complex programs inside of Redox.
 
 ## Kernel Improvements
 
