@@ -53,6 +53,10 @@ Envie uma Issue se você tiver problemas compilando/testando ou apenas queira di
 
 Se você quiser criar uma conta, leia essa [página](https://doc.redox-os.org/book/ch12-01-signing-in-to-gitlab.html).
 
+Assim que você criar uma issue não se esqueça de postar o link nas salas "Dev" ou "Support" do chat, por que as notificações de email do GitLab possuem distrações (mensagens de serviço e spam) e a maioria dos programadores não deixam suas páginas do GitLab abertas no navegador web (que requer uma configuração customizada para receber notificações de issues).
+
+Fazendo isso você nos ajuda a prestar atenção nas suas issues e evita que elas sejam esquecidas acidentalmente.
+
 Se você tiver MRs (merge requests) prontos você precisa enviar o link deles na sala [MRs](https://matrix.to/#/#redox-mrs:matrix.org), antes de entrar nesta sala você precisa solicitar um convite para o espaço Matrix na sala [Join Requests](https://matrix.to/#/#redox-join:matrix.org).
 
 Dessa forma seu MR não será esquecido, evitando conflitos.
