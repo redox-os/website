@@ -48,6 +48,10 @@ A slightly more formal way of communication with fellow Redox devs, but a little
 
 If you want to create an account, read this [page](https://doc.redox-os.org/book/ch12-01-signing-in-to-gitlab.html).
 
+Once you create an issue don't forget to post the link on the Dev or Support rooms of the chat, because the GitLab email notifications have distractions (service messages or spam) and most developers don't left their GitLab pages open to receive desktop notifications from the web browser (which require a custom setting to receive issue notifications).
+
+By doing this you help us to pay attention to your issues and avoid them to be accidentally forgotten.
+
 If you have ready MRs (merge requests) you must send the links in the [MRs](https://matrix.to/#/#redox-mrs:matrix.org) room. To join this room, you will need to request an invite in the [Join Requests](https://matrix.to/#/#redox-join:matrix.org) room.
 
 By sending a message in the room, your MR will not be forgotten or accumulate conflicts.
