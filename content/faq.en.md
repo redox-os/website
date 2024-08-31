@@ -216,7 +216,7 @@ Redox has a package manager similar to `apt` (Debian) and `pkg` (FreeBSD), you c
 
 ## Which are the Redox variants?
 
-Redox has some variants for each task, take a look at them below:
+Redox has some variants for a group of tasks, take a look at them below:
 
 - `minimal` - The most minimal variant with a basic system without network support. Aimed for embedded devices, very old computers, testers and developers.
 
