@@ -216,7 +216,7 @@ O Redox tem um gerenciador de pacotes similar ao `apt` (Debian) e `pkg` (FreeBSD
 
 ## Quais são as variantes do Redox?
 
-O Redox possuí variantes para cada tarefa, leia sobre elas abaixo:
+O Redox possuí variantes para um grupo de tarefas, leia sobre elas abaixo:
 
 - `minimal` - A variante mais simples com um sistema básico sem suporte a Internet, destinada a dispositivos embarcados, computadores muito antigos e programadores.
 
