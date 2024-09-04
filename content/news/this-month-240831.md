@@ -99,18 +99,15 @@ Ron will give demos of Redox as opportunity allows. Come say hi!
 If you want to contribute, give feedback or just listen in to the conversation,
 join us on [Matrix Chat](https://matrix.to/#/#redox-join:matrix.org).
 
-<!--
 ## Discussion
 
 Here are some links to discussion about this news post:
 
-- [Fosstodon @redox]()
-- [Fosstodon @soller]()
-- [Patreon]()
-- [Phoronix]()
-- [Reddit /r/pop\_os]()
-- [Reddit /r/redox]()
-- [Reddit /r/rust]()
-- [Twitter @redox\_os]()
-- [Twitter @jeremy\_soller]()
--->
+- [Fosstodon @redox](https://fosstodon.org/@redox/113080386969774301)
+- [Fosstodon @soller](https://fosstodon.org/@soller/113080386010260292)
+- [Patreon](https://www.patreon.com/posts/111421950)
+- [Reddit /r/redox](https://www.reddit.com/r/Redox/comments/1f8ynw7/this_month_in_redox_august_2024/)
+- [Reddit /r/rust](https://www.reddit.com/r/rust/comments/1f8yoqy/this_month_in_redox_os_august_2024/)
+- [X/Twitter @redox_os](https://x.com/redox_os/status/1831378079169577027)
+- [X/Twitter @jeremy_soller](https://x.com/jeremy_soller/status/1831377989646406069)
+- [Hacker News](https://news.ycombinator.com/item?id=41448078)
