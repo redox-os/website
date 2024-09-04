@@ -16,7 +16,7 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## Massive Performance Improvement On Virtual Machines
 
-Thanks to the recent kernel proflling implementation, 4lDO2 discovered that a huge bottleneck in the context switching code, was simply reading the system time. That involves reading hardware registers from the [HPET](https://en.wikipedia.org/wiki/High_Precision_Event_Timer), which although reasonably fast on real hardware, is particularly slow on VMs as it requires expensive VM exits. This cost is now avoided by using the [TSC](https://en.wikipedia.org/wiki/Time_Stamp_Counter) using [KVM's](https://en.wikipedia.org/wiki/Kernel-based_Virtual_Machine) paravirtualized system time API, resulting in a massive speedup.
+Thanks to the recent kernel profilling implementation, 4lDO2 discovered that a huge bottleneck in the context switching code, was simply reading the system time. That involves reading hardware registers from the [HPET](https://en.wikipedia.org/wiki/High_Precision_Event_Timer), which although reasonably fast on real hardware, is particularly slow on VMs as it requires expensive VM exits. This cost is now avoided by using the [TSC](https://en.wikipedia.org/wiki/Time_Stamp_Counter) using [KVM's](https://en.wikipedia.org/wiki/Kernel-based_Virtual_Machine) paravirtualized system time API, resulting in a massive speedup.
 
 Thus all system tasks have a much better performance now, from more IO throughput to network speed. We are doing benchmarks to determine the scale of this improvement.
 
