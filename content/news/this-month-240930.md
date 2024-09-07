@@ -14,6 +14,24 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## Kernel Improvements
+
+- Andrey Turkin fixed some bugs
+
+## Relibc Improvements
+
+- The `endian` function was implemented.
+
+## Programs
+
+- The `dd` tool from uutils was fixed.
+- Bendeguz Pisch fixed the Perl 5 recipe
+
+## Documentation Improvements
+
+- The boot process documentation was improved.
+- Ribbon added the "Benchmarks" section on the "Performance" page of the book to explain how to do simple benchmarks on Redox, you can read the section on [this](https://doc.redox-os.org/book/ch09-10-performance.html#benchmarks) link.
+
 ## Join us on Matrix Chat
 
 If you want to contribute, give feedback or just listen in to the conversation,
