@@ -422,21 +422,18 @@ The most important changes are shown below.
 - A moderation system was implemented
 - A nonprofit organization was created to help the donation management
 
-<!--
 ## Discussion
 
 Here are some links to discussion about this news post:
 
-- [Fosstodon @redox]()
-- [Fosstodon @soller]()
-- [Patreon]()
-- [Phoronix]()
-- [Reddit /r/redox]()
-- [Reddit /r/rust]()
-- [X/Twitter @redox_os]()
-- [X/Twitter @jeremy_soller]()
-- [Hacker News]()
--->
+- [Fosstodon @redox](https://fosstodon.org/@redox/113107759720592335)
+- [Fosstodon @soller](https://fosstodon.org/@soller/113107756394848748)
+- [Patreon](https://www.patreon.com/posts/111718989)
+- [Reddit /r/redox](https://www.reddit.com/r/Redox/comments/1fcoysh/redox_os_090_is_here/)
+- [Reddit /r/rust](https://www.reddit.com/r/rust/comments/1fcozfo/redox_os_090_new_release_of_a_rust_based/)
+- [X/Twitter @redox_os](https://x.com/redox_os/status/1833130506830917645)
+- [X/Twitter @jeremy_soller](https://x.com/jeremy_soller/status/1833130126151700751)
+- [Hacker News](https://news.ycombinator.com/item?id=41488154)
 
 ## Changelog
 
