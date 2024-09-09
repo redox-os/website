@@ -18,6 +18,10 @@ If you would like to support Redox, please consider donating or buying some merc
 
 - Andrey Turkin fixed some bugs
 
+## USB Improvements
+
+- Tim Finnegan improved our xHCI driver to be compliant with the standard.
+
 ## Relibc Improvements
 
 - The `endian` function was implemented.
@@ -29,8 +33,9 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## Documentation Improvements
 
-- The boot process documentation was improved.
-- Ribbon added the "Benchmarks" section on the "Performance" page of the book to explain how to do simple benchmarks on Redox, you can read the section on [this](https://doc.redox-os.org/book/ch09-10-performance.html#benchmarks) link.
+- The boot process documentation was improved
+- Ribbon added the "Benchmarks" section on the "Performance" page of the book to explain how to do simple benchmarks on Redox, you can read the section on [this](https://doc.redox-os.org/book/ch09-10-performance.html#benchmarks) link
+- Ribbon documented how to get the [CPU information](https://doc.redox-os.org/book/ch02-09-tasks.html#show-cpu-information) and [show the system log](https://doc.redox-os.org/book/ch02-09-tasks.html#show-the-system-log) in the [Tasks](https://doc.redox-os.org/book/ch02-09-tasks.html) page
 
 ## Join us on Matrix Chat
 
