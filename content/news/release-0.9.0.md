@@ -55,7 +55,7 @@ hardware to select for the best experience.
 - Read [this](https://doc.redox-os.org/book/ch02-02-real-hardware.html) page to learn how to run the Redox images on real hardware
 - Read [this](https://doc.redox-os.org/book/ch02-03-installing.html) page to learn how to install Redox
 
-(Currently the VirtualBox VM is not working due to a hard bug)
+(Currently the VirtualBox VM is not working due to a bug)
 
 ### Demo
 
