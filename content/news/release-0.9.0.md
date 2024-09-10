@@ -290,12 +290,6 @@ You can read them on the following links:
 - [This Month in Redox - July 2024](https://www.redox-os.org/news/this-month-240731/)
 - [This Month in Redox - August 2024](https://www.redox-os.org/news/this-month-240831/)
 
-## Software Showcase
-
-We created the first in (hopefully) a series of videos showing many programs running on Redox!
-
-<iframe width="800" height="640" src="https://www.youtube.com/embed/s-gxAsBTPxA?si=EbIRLwIrnuiwfvYZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 ## Matrix
 
 In 2023 we migrated from Mattermost to Matrix to fix some management problems, this big change helped us to improve many aspects of our community interaction.
