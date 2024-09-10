@@ -35,7 +35,7 @@ or [Donorbox](https://donorbox.org/redox-os),
 or choose one of the other methods on our [Donate](https://redox-os.org/donate/) page.
 You can also buy Redox merch (t-shirts, hoodies and mugs!) at our [Redox store](https://redox-os.creator-spring.com/).
 
-If you know an organization or foundation that may be interested in supporting Redox, please contact us at [donate@redox-os.org](donate@redox-os.org)
+If you know an organization or foundation that may be interested in supporting Redox, please contact us on the email: donate@redox-os.org
 
 ## Overview Video
 
@@ -54,6 +54,8 @@ hardware to select for the best experience.
 - Read [this](https://doc.redox-os.org/book/ch02-01-running-vm.html) page to learn how to run the Redox images in a virtual machine
 - Read [this](https://doc.redox-os.org/book/ch02-02-real-hardware.html) page to learn how to run the Redox images on real hardware
 - Read [this](https://doc.redox-os.org/book/ch02-03-installing.html) page to learn how to install Redox
+
+(Currently the VirtualBox VM is not working due to a hard bug)
 
 ### Demo
 
