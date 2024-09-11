@@ -2,14 +2,15 @@
 title = "Quickstart"
 +++
 
-- [Latest Release](https://www.redox-os.org/news/release-0.8.0/)
-- [Getting Started (Redox Book)](https://doc.redox-os.org/book/ch02-00-getting-started.html)
-- [Redox Images](https://static.redox-os.org/img/)
+- [Latest Release](https://www.redox-os.org/news/release-0.9.0/)
 - [Releases](https://gitlab.redox-os.org/redox-os/redox/-/releases)
+- [Daily Images](https://static.redox-os.org/img/)
+- [Getting Started](https://doc.redox-os.org/book/ch02-00-getting-started.html)
 
-## Trying out Redox OS
-- Trying out Redox is very easy: just follow the instructions in the [Redox Book](https://doc.redox-os.org/book/ch02-04-trying-out-redox.html). Running Redox on real machines is possible, but your milage may vary. Please check out [the supported machines](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HARDWARE.md) for more information.
+## Trying out Redox
+
+Trying out Redox is very easy: just follow the instructions in the [Redox Book](https://doc.redox-os.org/book/ch02-04-trying-out-redox.html). Running Redox on real machines is possible, but the performance may vary. Please check out the [supported machines](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HARDWARE.md) for more information.
 
 ## Building Redox
 
-- Building Redox from source code is supported on Linux, and may work on some other platforms, but is not currently supported on Windows. To build Redox, please follow the instructions in the [Redox Book](https://doc.redox-os.org/book/ch02-06-podman-build.html). If you are on Pop!_OS, Ubuntu or Debian, you can follow [these instructions](https://doc.redox-os.org/book/ch02-05-building-redox.html).
+Building Redox from source code is supported on Linux, and may work on some other platforms, but is not currently supported on Windows. To build Redox follow [these](https://doc.redox-os.org/book/ch02-05-building-redox.html) instructions.
