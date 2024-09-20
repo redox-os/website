@@ -18,6 +18,7 @@ If you would like to support Redox, please consider donating or buying some merc
 
 - Andrey Turkin fixed some bugs
 - The time precision of TSC was improved
+- 4lDO2 improved the memory performance
 
 ## Scheme Improvements
 
@@ -37,13 +38,31 @@ If you would like to support Redox, please consider donating or buying some merc
 
 Andrey Turkin started the RISC-V port and sent improvements to our toolchain.
 
+## QEMU Port
+
+Jeremy updated the QEMU updates to the latest version and is working on the remaining bugs.
+
+QEMU can be ported soon.
+
 ## Programs
 
-- The `dd` tool from uutils was fixed.
+- The `dd` tool from uutils was fixed
+- 4lDO2 fixed RustPython
 - Bendeguz Pisch fixed the Perl 5 recipe
+
+## CI Improvements
+
+4lDO2 fixed the kernel CI and added unit tests, Redoxer will be improved to support more test cases.
+
+## Podman By Default
+
+Now Podman is our default build method and was enabled in our build system, it allow us to have a reproducible environment for all developers.
+
+The Podman container environment is using Debian 12 and prevent many bugs caused by build environment differences (even kernel panics can be fixed!)
 
 ## Build System Improvements
 
+- Podman was enabled by default
 - The `path` data type was implemented on Cookbook to specify a local folder, it reduce the size of scripts
 
 ## Documentation Improvements
