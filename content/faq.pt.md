@@ -118,8 +118,8 @@ Espere alto desempenho e segurança dos dados (copy-on-write, integridade de arq
 
 Você pode ver como o Redox é em comparação com o Linux, FreeBSD e Plan 9 nessas páginas:
 
-- [Funções do Redox OS](https://doc.redox-os.org/book/ch04-11-features.html)
-- [Comparando o Redox Com Outros Sistemas Operacionais](https://doc.redox-os.org/book/ch01-05-how-redox-compares.html)
+- [Funções do Redox OS](https://doc.redox-os.org/book/features.html)
+- [Comparando o Redox Com Outros Sistemas Operacionais](https://doc.redox-os.org/book/how-redox-compares.html)
 
 ## Qual o propósito do Redox?
 
@@ -127,7 +127,7 @@ O objetivo principal do Redox é ser um sistema de propósito geral com foco em 
 
 O Redox pretende ser uma alternativa aos sistemas Unix (Linux/BSD) existentes também, podendo executar programas Unix com apenas compilação ou modificações mínimas.
 
-- [Nossos Objetivos](https://doc.redox-os.org/book/ch01-01-our-goals.html)
+- [Nossos Objetivos](https://doc.redox-os.org/book/our-goals.html)
 
 ## O que posso fazer com o Redox?
 
@@ -135,15 +135,13 @@ Como um sistema de propósito geral, você é capaz de realizar praticamente qua
 
 O Redox está em desenvolvimento, portanto nossa lista de aplicações suportada é limitada atualmente, mas crescente.
 
-- [Casos de Uso](https://doc.redox-os.org/book/ch01-04-redox-use-cases.html)
+- [Casos de Uso](https://doc.redox-os.org/book/redox-use-cases.html)
 
 ## O que é um sistema Unix-like?
 
 Qualquer sistema compátivel com a [Especificação Única do Unix](https://en.wikipedia.org/wiki/Single_UNIX_Specification) e [POSIX](https://en.wikipedia.org/wiki/POSIX), portanto com uma [Shell](https://en.wikipedia.org/wiki/Unix_shell), o conceito de "[Tudo é um arquivo](https://en.wikipedia.org/wiki/Everything_is_a_file)", multitarefa e multiusuário.
 
 [Unix](https://pt.wikipedia.org/wiki/Unix) foi um sistema operacional de multitarefa muito influente e impactou as decisões de design em diversos sistemas modernos.
-
-- [Artigo da Wikipedia](https://pt.wikipedia.org/wiki/Sistema_operacional_tipo_Unix)
 
 ## Como o Redox foi influenciado por outros sistemas?
 
@@ -162,7 +160,7 @@ O sistema Unix-like com microkernel mais influente, ele possuí funções avanç
 
 O Redox foi muito influenciado pelo Minix, ele tem funções e arquitetura similar escrita em Rust.
 
-- [Como o Redox foi influenciado pelo Minix](https://doc.redox-os.org/book/ch04-01-microkernels.html)
+- [Como o Redox foi influenciado pelo Minix](https://doc.redox-os.org/book/microkernels.html)
 
 ### [seL4](https://sel4.systems/)
 
@@ -188,7 +186,7 @@ O Redox tenta implementar as melhorias de desempenho do Linux em um design de mi
 
 Um microkernel é um modelo para núcleo de sistema operacional com uma pequena quantidade de código executando no maior privilégio do processador, este modelo melhora a estabilidade e segurança, com um pequeno custo de desempenho.
 
-Você pode ler mais sobre [aqui](https://doc.redox-os.org/book/ch04-01-microkernels.html).
+Você pode ler mais sobre [aqui](https://doc.redox-os.org/book/microkernels.html).
 
 ## Quais programas o Redox executa?
 
@@ -212,7 +210,7 @@ Você pode ver todos os componentes do Redox e programas portados [aqui](https:/
 
 ## Como instalar programs no Redox?
 
-O Redox tem um gerenciador de pacotes similar ao `apt` (Debian) e `pkg` (FreeBSD), você pode aprender a como utiliza-lo [aqui](https://doc.redox-os.org/book/ch02-08-pkg.html).
+O Redox tem um gerenciador de pacotes similar ao `apt` (Debian) e `pkg` (FreeBSD), você pode aprender a como utiliza-lo [aqui](https://doc.redox-os.org/book/pkg.html).
 
 ## Quais são as variantes do Redox?
 
@@ -307,20 +305,18 @@ Um [supervisor](https://en.wikipedia.org/wiki/Hypervisor) é um software que exe
 
 ## Como compilar o Redox?
 
-Atualmente o Redox tem um script de bootstrap para o Pop OS!, Ubuntu, Debian, Fedora, Arch Linux, openSUSE e FreeBSD com suporte não mantido para outras distribuições.
+Leia as seguintes páginas:
 
-Nós também oferecemos o Podman como método de compilação universal, esse é método de compilação recomendado para sistemas que não sejam baseados no Debian, pois ele evita problemas de ambiente durante a compilação.
-
-- [Guia no Livro do Redox](https://doc.redox-os.org/book/ch02-05-building-redox.html) - (Pop OS!, Ubuntu, Debian, Fedora, Arch Linux, openSUSE and FreeBSD)
-- [Guia do Podman no Livro do Redox](https://doc.redox-os.org/book/ch02-06-podman-build.html)
+- [Compilação Podman](https://doc.redox-os.org/book/podman-build.html)
+- [Compilação Nativa](https://doc.redox-os.org/book/building-redox.html)
 
 ## Como diagnosticar seu Redox em caso de erros
 
-Leia [essa](https://doc.redox-os.org/book/ch08-05-troubleshooting.html) página ou nos explique no [Chat](https://doc.redox-os.org/book/ch13-01-chat.html).
+Leia [essa](https://doc.redox-os.org/book/troubleshooting.html) página ou nos explique no [Chat](https://doc.redox-os.org/book/chat.html).
 
 ## Como reportar bugs para o Redox?
 
-Leia [essa](https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html) página e verifique as Issues no GitLab para ver se seu problema foi reportado por alguém.
+Leia [essa](https://doc.redox-os.org/book/creating-proper-bug-reports.html) página e verifique as Issues no GitLab para ver se seu problema foi reportado por alguém.
 
 ## Como contribuir para o Redox?
 
@@ -330,4 +326,4 @@ Você pode contribuir para o Redox de diversas formas, veja elas em [CONTRIBUTIN
 
 - Leia a [Documentação](/docs/) para saber mais sobre partes internas do Redox.
 - Leia todo o [livro do Redox](https://doc.redox-os.org/book/) para ver se responde sua pergunta ou conserta seu problema.
-- Se a documentação e o livro não resolver, faça sua pergunta ou diga seu problema no [Chat](https://doc.redox-os.org/book/ch13-01-chat.html).
+- Se a documentação e o livro não resolver, faça sua pergunta ou diga seu problema no [Chat](https://doc.redox-os.org/book/chat.html).

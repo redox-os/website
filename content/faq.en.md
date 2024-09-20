@@ -118,8 +118,8 @@ Expect high performance and data safety (copy-on-write, data integrity, volumes,
 
 You can see how Redox is compared to Linux, FreeBSD and Plan 9 on these pages:
 
-- [Redox OS Features](https://doc.redox-os.org/book/ch04-11-features.html)
-- [Comparing Redox to Other OSes](https://doc.redox-os.org/book/ch01-05-how-redox-compares.html)
+- [Redox OS Features](https://doc.redox-os.org/book/features.html)
+- [Comparing Redox to Other OSes](https://doc.redox-os.org/book/how-redox-compares.html)
 
 ## What is the purpose of Redox?
 
@@ -127,7 +127,7 @@ The main goal of Redox is to be a general-purpose OS, while maintaining security
 
 Redox aims to be an alternative to existing Unix systems (Linux/BSD), with the ability to run most Unix programs with only recompilation or minimal modifications.
 
-- [Our Goals](https://doc.redox-os.org/book/ch01-01-our-goals.html)
+- [Our Goals](https://doc.redox-os.org/book/our-goals.html)
 
 ## What I can do with Redox?
 
@@ -135,7 +135,7 @@ As a general-purpose operating system, you will be able to do almost any task on
 
 Redox is still under development, so our list of supported applications is currently limited, but growing.
 
-- [Use Cases](https://doc.redox-os.org/book/ch01-04-redox-use-cases.html)
+- [Use Cases](https://doc.redox-os.org/book/redox-use-cases.html)
 
 ## What is an Unix-like OS?
 
@@ -188,7 +188,7 @@ A microkernel is the near-minimum amount of software that can provide the mechan
 
 This approach to OS design brings more stability and security, with a small cost on performance.
 
-You can read more about it [here](https://doc.redox-os.org/book/ch04-01-microkernels.html).
+You can read more about it [here](https://doc.redox-os.org/book/microkernels.html).
 
 ## What programs can Redox run?
 
@@ -212,7 +212,7 @@ You can see all Redox components and ported programs [here](https://static.redox
 
 ## How to install programs on Redox?
 
-Redox has a package manager similar to `apt` (Debian) and `pkg` (FreeBSD), you can see how to use it on [this](https://doc.redox-os.org/book/ch02-08-pkg.html) page.
+Redox has a package manager similar to `apt` (Debian) and `pkg` (FreeBSD), you can see how to use it on [this](https://doc.redox-os.org/book/pkg.html) page.
 
 ## Which are the Redox variants?
 
@@ -307,20 +307,18 @@ A [hypervisor](https://en.wikipedia.org/wiki/Hypervisor) is a program providing 
 
 ## How do I build Redox?
 
-Currently Redox has a bootstrap script for Pop OS!, Ubuntu, Debian, Fedora, Arch Linux, openSUSE and FreeBSD with unmaintained support for other distributions.
+Read the following pages:
 
-We also offer Podman as our universal compilation method. It is the recommended build process for non-Debian systems because it avoids environment problems on the build process.
-
-- [Redox Book Guide](https://doc.redox-os.org/book/ch02-05-building-redox.html) - (Pop OS!, Ubuntu, Debian, Fedora, Arch Linux, openSUSE and FreeBSD)
-- [Redox Book Podman Guide](https://doc.redox-os.org/book/ch02-06-podman-build.html)
+- [Podman Build](https://doc.redox-os.org/book/podman-build.html)
+- [Native Build](https://doc.redox-os.org/book/building-redox.html)
 
 ## How to troubleshoot your build in case of errors
 
-Read [this](https://doc.redox-os.org/book/ch08-05-troubleshooting.html) page or join us on [Redox Chat](https://doc.redox-os.org/book/ch13-01-chat.html).
+Read [this](https://doc.redox-os.org/book/troubleshooting.html) page or join us on [Redox Chat](https://doc.redox-os.org/book/chat.html).
 
 ## How to report bugs on Redox
 
-Read [this](https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html) page and check the GitLab Issues to see if your problem was reported.
+Read [this](https://doc.redox-os.org/book/creating-proper-bug-reports.html) page and check the GitLab Issues to see if your problem was reported.
 
 ## How do I contribute to Redox?
 
@@ -330,4 +328,4 @@ You can contribute to Redox in many ways, you can see them on [CONTRIBUTING](htt
 
 - Have a look at the [Documentation](/docs/) page for more details of Redox internals.
 - Have a look at the [Redox Book](https://doc.redox-os.org/book/) to see if it answer your question or solve your problem.
-- If the documentation or the book does not answer your question, ask your question or say your problem on the [Chat](https://doc.redox-os.org/book/ch13-01-chat.html).
+- If the documentation or the book does not answer your question, ask your question or say your problem on the [Chat](https://doc.redox-os.org/book/chat.html).
