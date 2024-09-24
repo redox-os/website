@@ -42,7 +42,7 @@ bjorn3 updated most system components to use the new scheme path format, as we c
 
 ## VirtualBox
 
-Ribbon documented the instructions to run the Redox image on VirtualBox. See the [instructions in the book](https://doc.redox-os.org/book/ch02-01-running-vm.html#virtualbox-instructions) if you want to try it out.
+Ribbon documented the instructions to run the Redox image on VirtualBox. See the [instructions in the book](https://doc.redox-os.org/book/running-vm.html#virtualbox-instructions) if you want to try it out.
 
 ## Programs
 
@@ -68,7 +68,7 @@ Ribbon fixed a typo on the scripts that disabled the shebangs.
 
 ## Documentation Improvements
 
-The [scheme documentation](https://doc.redox-os.org/book/ch05-00-schemes-resources.html) (system API) is finally up-to-date! thanks to Ron Williams.
+The [scheme documentation](https://doc.redox-os.org/book/schemes-resources.html) (system API) is finally up-to-date! thanks to Ron Williams.
 
 We dropped the previous scheme path format (`scheme-name:resource-name`) to reduce the effort to port programs, now the schemes use the Unix path format (`/scheme/scheme-name/resource-name`).
 

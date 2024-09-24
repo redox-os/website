@@ -108,7 +108,7 @@ Attendez-vous à des performances élevées et à la sécurité des données (co
 
 ### Comparaison avec d'autres systèmes d'exploitation
 
-Vous pouvez voir comment Redox est comparé à Linux, FreeBSD et Plan 9 sur [cette](https://doc.redox-os.org/book/ch04-11-features.html) page.
+Vous pouvez voir comment Redox est comparé à Linux, FreeBSD et Plan 9 sur [cette](https://doc.redox-os.org/book/features.html) page.
 
 ## Quelle est l'utilité de Redox?
 
@@ -116,7 +116,7 @@ L'objectif principal de Redox est d'être un système d'exploitation à usage g�
 
 Redox vise à être une alternative aux systèmes Unix existants (Linux/BSD), avec la possibilité d'exécuter la plupart des programmes Unix avec seulement une recompilation ou des modifications minimales.
 
-- [Nos objectifs](https://doc.redox-os.org/book/ch01-01-our-goals.html)
+- [Nos objectifs](https://doc.redox-os.org/book/our-goals.html)
 
 ## Que peut-on faire avec Redox?
 
@@ -124,7 +124,7 @@ En tant que système d'exploitation à usage général, vous pourrez faire presq
 
 Redox est toujours en cours de développement, donc notre liste d'applications prises en charge est actuellement limitée, mais en croissance.
 
-- [Cas d'utilisation](https://doc.redox-os.org/book/ch01-04-redox-use-cases.html)
+- [Cas d'utilisation](https://doc.redox-os.org/book/redox-use-cases.html)
 
 ## Qu'est-ce qu'un système d'exploitation de type Unix?
 
@@ -141,7 +141,7 @@ Tout système d'exploitation compatible avec [la spécification unique Unix](htt
 Ce système d'exploitation Bell Labs amène le concept de "tout est un fichier" au plus haut niveau, en effectuant toutes les communications système à partir du système de fichiers.
 
 - [Explication de Drew DeVault de Plan 9](https://drewdevault.com/2022/11/12/In-praise-of-Plan-9.html)
-- [L'influence de Plan 9's sur Redox](https://doc.redox-os.org/book/ch05-00-urls-schemes-resources.html)
+- [L'influence de Plan 9's sur Redox](https://doc.redox-os.org/book/urls-schemes-resources.html)
 
 ### [Minix](https://minix3.org/)
 
@@ -149,7 +149,7 @@ Le système de type Unix le plus influent avec un micro-noyau, il possède des f
 
 Redox est largement inspiré de Minix, il a une architecture et un ensemble de fonctionnalités similaires écrits en Rust.
 
-- [Comment Minix a influence la conception de Redox](https://doc.redox-os.org/book/ch04-01-microkernels.html)
+- [Comment Minix a influence la conception de Redox](https://doc.redox-os.org/book/microkernels.html)
 
 ### [seL4](https://sel4.systems/)
 
@@ -175,7 +175,7 @@ Un micro-noyau est la quantité quasi minimale de logiciels pouvant fournir les 
 
 Cette approche de la conception du système d'exploitation apporte plus de stabilité et de sécurité, avec un faible coût sur les performances.
 
-- [Explications du livre de Redox](https://doc.redox-os.org/book/ch04-01-microkernels.html)
+- [Explications du livre de Redox](https://doc.redox-os.org/book/microkernels.html)
 
 ## Quels programmes peuvent tourner sur Redox?
 
@@ -200,7 +200,7 @@ Vous pouvez voir tous les composants/programmes portés sur Redox [ici](https://
 
 Redox a un gestionnaire de paquets similaire à `apt` (Debian) et `pkg` (FreeBSD), vous pouvez voir comment l'utiliser sur cette page :
 
-- [Gestionnaire de paquets de Redox](https://doc.redox-os.org/book/ch02-08-pkg.html)
+- [Gestionnaire de paquets de Redox](https://doc.redox-os.org/book/pkg.html)
 
 ## Quelles sont les variantes de Redox?
 
@@ -300,8 +300,8 @@ Actuellement, Redox a un script d'amorçage pour Pop OS!, Ubuntu, Debian, Fedora
 
 Nous proposons également Podman comme méthode de compilation universelle. C'est le processus de construction recommandé pour les systèmes non-Debian car il évite les problèmes d'environnement sur le processus de construction.
 
-- [Guide de compilation du livre Redox](https://doc.redox-os.org/book/ch02-05-building-redox.html) - (Pop OS!, Ubuntu, Debian, Fedora, Arch Linux, openSUSE et FreeBSD)
-- [Guide Podman du livre Redox](https://doc.redox-os.org/book/ch02-06-podman-build.html)
+- [Guide de compilation du livre Redox](https://doc.redox-os.org/book/building-redox.html) - (Pop OS!, Ubuntu, Debian, Fedora, Arch Linux, openSUSE et FreeBSD)
+- [Guide Podman du livre Redox](https://doc.redox-os.org/book/podman-build.html)
 
 ### Comment lancer QEMU sans interface graphique?
 
@@ -311,13 +311,13 @@ Exécutez:
 
 ### Comment dépanner un build en cas d'erreur?
 
-Lisez [cette](https://doc.redox-os.org/book/ch08-05-troubleshooting.html) page ou rejoignez-nous sur [Redox Chat](https://doc.redox-os.org/book /ch13-01-chat.html).
+Lisez [cette](https://doc.redox-os.org/book/troubleshooting.html) page ou rejoignez-nous sur [Redox Chat](https://doc.redox-os.org/book/ch13-01-chat.html).
 
 ### Comment rapporter des bugs de Redox?
 
 Vérifiez d'abord les problèmes de GitLab pour voir si votre problème est déjà connu.
 
-- [Guide de rapport de bogue du livre Redox](https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html)
+- [Guide de rapport de bogue du livre Redox](https://doc.redox-os.org/book/creating-proper-bug-reports.html)
 
 ## Comment contribuer à Redox?
 
@@ -327,5 +327,5 @@ Vous pouvez contribuer à Redox de plusieurs façons, vous pouvez les voir sur [
 
 - Jetez un oeil à la page de  [Documentation](/docs/) pour plus de détails internes de Redox.
 - Jetez un oeil au [livre Redox](https://doc.redox-os.org/book/) pour voir s'il répond à vos questions/résout votre problème.
-- Si le livre ne répond pas à votre question, posez votre question/dites votre problème dans le [Chat](https://doc.redox-os.org/book/ch13-01-chat.html).
+- Si le livre ne répond pas à votre question, posez votre question/dites votre problème dans le [Chat](https://doc.redox-os.org/book/chat.html).
 

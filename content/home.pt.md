@@ -20,17 +20,17 @@ url = "home"
     <ul class="laundry-list" style="margin-bottom: 0px;">
       <li>Inspirado pelo <a href="http://9p.io/plan9/index.html">Plan 9</a>, <a href="http://www.minix3.org/">Minix</a>, <a href="https://sel4.systems/">seL4</a>, <a href="https://en.wikipedia.org/wiki/Berkeley_Software_Distribution">BSD</a> e <a href="https://www.kernel.org/">Linux</a></li>
       <li>Implementado em <a href="https://www.rust-lang.org/">Rust</a></li>
-      <li>Design de <a href="https://doc.redox-os.org/book/ch04-01-microkernels.html">Microkernel</a></li>
-      <li>Inclui uma GUI opcional - <a href="https://doc.redox-os.org/book/ch04-09-graphics-windowing.html#orbital">Orbital</a></li>
+      <li>Design de <a href="https://doc.redox-os.org/book/microkernels.html">Microkernel</a></li>
+      <li>Inclui uma GUI opcional - <a href="https://doc.redox-os.org/book/graphics-windowing.html#orbital">Orbital</a></li>
       <li>Suporta a <a href="https://doc.rust-lang.org/std/">biblioteca padrão da Rust</a></li>
     </ul>
   </div>
   <div class="col-md-6">
     <ul class="laundry-list">
       <li>Licença <a href="https://en.wikipedia.org/wiki/MIT_License">MIT</a></li>
-      <li>Os <a href="https://doc.redox-os.org/book/ch04-07-drivers.html">Drivers</a> são executados no espaço do usuário</li>
-      <li>Inclui as <a href="https://doc.redox-os.org/book/ch06-04-system-tools.html">ferramentas</a> Unix/Linux mais comuns</li>
-      <li><a href="https://doc.redox-os.org/book/ch06-00-programs-libraries.html">Compatibilidade de código-fonte</a> com programas do Linux/BSD</li>
+      <li>Os <a href="https://doc.redox-os.org/book/drivers.html">Drivers</a> são executados no espaço do usuário</li>
+      <li>Inclui as <a href="https://doc.redox-os.org/book/system-tools.html">ferramentas</a> Unix/Linux mais comuns</li>
+      <li><a href="https://doc.redox-os.org/book/programs-libraries.html">Compatibilidade de código-fonte</a> com programas do Linux/BSD</li>
       <li>Compatibilidade parcial com a <a href="https://en.wikipedia.org/wiki/POSIX">POSIX</a></li>
       <li><a href="https://en.wikipedia.org/wiki/C_standard_library">Biblioteca C</a> customizada e escrita em Rust (<a href="https://gitlab.redox-os.org/redox-os/relibc/">relibc</a>)</li>
       <li>Veja <a href="/pt/screens/">Redox em Ação</a></li>

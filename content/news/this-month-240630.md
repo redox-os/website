@@ -159,11 +159,11 @@ but it is to be expected that some devices are not working.
 
 Our nightly images have been frozen since May 30, so if you tested after that date you would not have received the latest improvements for USB.
 
-If you want to test the latest USB improvements we recommend that you download the build system and build the Redox image, you can learn how to that on [this](https://doc.redox-os.org/book/ch02-05-building-redox.html) page.
+If you want to test the latest USB improvements we recommend that you download the build system and build the Redox image, you can learn how to that on [this](https://doc.redox-os.org/book/building-redox.html) page.
 
 ## Documentation
 
-Ribbon updated the book to say that USB input devices are supported, improved the [binary packages explanation](https://doc.redox-os.org/book/ch02-07-configuration-settings.html#binary-packages) and documented the [environment leakage](https://doc.redox-os.org/book/ch08-05-troubleshooting.html#environment-leakage) problem.
+Ribbon updated the book to say that USB input devices are supported, improved the [binary packages explanation](https://doc.redox-os.org/book/configuration-settings.html#binary-packages) and documented the [environment leakage](https://doc.redox-os.org/book/troubleshooting.html#environment-leakage) problem.
 
 He also documented how Redox took inspiration from OpenBSD on the "BSD" part of [this](https://www.redox-os.org/faq/#how-redox-is-inspired-by-other-systems) section of the website FAQ.
 

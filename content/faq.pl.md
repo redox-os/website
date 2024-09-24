@@ -116,7 +116,7 @@ Głównym celem Redox jest bycie systemem operacyjnym ogólnego przeznaczenia, p
 
 Redox ma być alternatywą dla istniejących systemów uniksowych (Linux/BSD), z możliwością uruchamiania większości programów uniksowych jedynie po rekompilacji lub minimalnych modyfikacjach.
 
-- [Nasze cele](https://doc.redox-os.org/book/ch01-01-our-goals.html)
+- [Nasze cele](https://doc.redox-os.org/book/our-goals.html)
 
 ## Co mogę zrobić z Redox?
 
@@ -124,7 +124,7 @@ Jako system operacyjny ogólnego przeznaczenia będziesz w stanie wykonać prawi
 
 Redox jest wciąż w fazie rozwoju, więc lista obsługiwanych aplikacji jest obecnie ograniczona, ale stale dodajemy nowe aplikacje i ich lista stale rośnie. 
 
-- [Przypadki użycia](https://doc.redox-os.org/book/ch01-04-redox-use-cases.html)
+- [Przypadki użycia](https://doc.redox-os.org/book/redox-use-cases.html)
 
 
 ## Co to jest system operacyjny typu Unix?
@@ -143,7 +143,7 @@ Dowolny system operacyjny zgodny ze [Single Unix Specification](https://en.wikip
 Ten system operacyjny Bell Labs przenosi koncepcję „wszystko jest plikiem” na najwyższy poziom, realizując całą komunikację systemową z systemu plików.
 
 - [Drew DeVault wyjaśnia Plan 9](https://drewdevault.com/2022/11/12/In-praise-of-Plan-9.html)
-- [Wpływ Planu 9 na Redox](https://doc.redox-os.org/book/ch05-00-urls-schemes-resources.html)
+- [Wpływ Planu 9 na Redox](https://doc.redox-os.org/book/urls-schemes-resources.html)
 
 ### [Minix](https://minix3.org/)
 
@@ -151,7 +151,7 @@ Najbardziej wpływowy system uniksowy z mikrojądrem, posiadający zaawansowane 
 
 Redox jest w dużej mierze inspirowany Minixem, ma podobną architekturę i zestaw funkcji napisany w Rust.
 
-- [Jak Minix wpłynął na projekt Redox](https://doc.redox-os.org/book/ch04-01-microkernels.html)
+- [Jak Minix wpłynął na projekt Redox](https://doc.redox-os.org/book/microkernels.html)
 
 ### [seL4](https://sel4.systems/)
 
@@ -177,7 +177,7 @@ Mikrojądro to niemal minimalna ilość oprogramowania, która może zapewnić m
 
 Takie podejście do projektowania systemu operacyjnego zapewnia większą stabilność i bezpieczeństwo przy niewielkim koszcie wydajności.
 
-- [Wiecej informacji w ksiażce Redox](https://doc.redox-os.org/book/ch04-01-microkernels.html)
+- [Wiecej informacji w ksiażce Redox](https://doc.redox-os.org/book/microkernels.html)
 
 ## Jakie programy może uruchomić Redox?
 
@@ -204,7 +204,7 @@ Możesz zobaczyć wszystkie przeniesione programy/komponenty do Redox [tutaj](ht
 
 Redox ma menedżera pakietów podobnego do `apt` (Debian) i `pkg` (FreeBSD), możesz zobaczyć, jak go używać na tej stronie:
 
-- [Redox manager pakietów](https://doc.redox-os.org/book/ch02-08-pkg.html)
+- [Redox manager pakietów](https://doc.redox-os.org/book/pkg.html)
 
 ## Jakie są warianty Redox?
 
@@ -304,8 +304,8 @@ Obecnie Redox posiada skrypt startowy dla Pop OS!, Ubuntu, Debian, Fedora, Arch 
 
 Oferujemy również Podman jako naszą uniwersalną metodę kompilacji. Jest to zalecany proces kompilacji dla systemów innych niż Debian, ponieważ pozwala uniknąć problemów środowiskowych w procesie kompilacji.
 
-- [Redox przewodnik](https://doc.redox-os.org/book/ch02-05-building-redox.html) - (Pop OS!, Ubuntu, Debian, Fedora, Arch Linux, openSUSE and FreeBSD)
-- [Redox Podman przewodnk](https://doc.redox-os.org/book/ch02-06-podman-build.html)
+- [Redox przewodnik](https://doc.redox-os.org/book/building-redox.html) - (Pop OS!, Ubuntu, Debian, Fedora, Arch Linux, openSUSE and FreeBSD)
+- [Redox Podman przewodnk](https://doc.redox-os.org/book/podman-build.html)
 
 ### Jak uruchomić QEMU bez GUI
 
@@ -315,13 +315,13 @@ Uruchom:
 
 ### Jak rozwiązywać problemy z kompilacją w przypadku błędów
 
-Przeczytaj [tą](https://doc.redox-os.org/book/ch08-05-troubleshooting.html) stronę lub dołącz do nas na [Redox Chat](https://doc.redox-os.org/book/ch13-01-chat.html).
+Przeczytaj [tą](https://doc.redox-os.org/book/troubleshooting.html) stronę lub dołącz do nas na [Redox Chat](https://doc.redox-os.org/book/chat.html).
 
 ### Jak zgłaszać błędy w Redox
 
 Najpierw sprawdź Problemy na GitLabie, aby sprawdzić, czy Twój problem jest już znany.
 
-- [Redox przewodnik jak zgłaszać błedy](https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html)
+- [Redox przewodnik jak zgłaszać błedy](https://doc.redox-os.org/book/creating-proper-bug-reports.html)
 
 ## Jak mogę przyczynić się do rozwoju projektu Redox?
 
@@ -331,5 +331,5 @@ Możesz przyczynić się na wiele sposobów do rozwoju Redox OS, wiecej informac
 
 - Spójrz na stronę [Dokumentacja](/docs/), aby uzyskać więcej szczegółów na temat elementów wewnętrznych Redox.
 - Spójrz na [Redox Book](https://doc.redox-os.org/book/) aby sprawdzić, czy odpowiada na Twoje pytania/rozwiązuje problem.
-- Jeśli książka nie zawiera odpowiedzi na Twoje pytanie, zadaj pytanie/przedstaw swój problem na stronie [Chat](https://doc.redox-os.org/book/ch13-01-chat.html).
+- Jeśli książka nie zawiera odpowiedzi na Twoje pytanie, zadaj pytanie/przedstaw swój problem na stronie [Chat](https://doc.redox-os.org/book/chat.html).
 

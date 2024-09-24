@@ -92,9 +92,9 @@ CPython is still work-in-progress.
 
 Ribbon made several improvements to the book:
 
-- added to the [references](https://doc.redox-os.org/book/ch09-08-references.html) list, including additions to the Program Porting, Ideas and Source Code sections.
+- added to the [references](https://doc.redox-os.org/book/references.html) list, including additions to the Program Porting, Ideas and Source Code sections.
 - documented the method to port graphical programs to Orbital by using the [liborbital](https://gitlab.redox-os.org/redox-os/liborbital) library.
-- updated the [build system dependencies list](https://doc.redox-os.org/book/ch08-01-advanced-build.html#install-the-necessary-packages-and-emulators) for each supported operating system in the [bootstrap.sh](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/bootstrap.sh?ref_type=heads) script for manual configuration, to make sure the documentation matches the script.
+- updated the [build system dependencies list](https://doc.redox-os.org/book/advanced-build.html#install-the-necessary-packages-and-emulators) for each supported operating system in the [bootstrap.sh](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/bootstrap.sh?ref_type=heads) script for manual configuration, to make sure the documentation matches the script.
 - improved the porting documentation with more accurate information, fixed some things and did cleanup.
 
 ## Packages

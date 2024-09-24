@@ -28,7 +28,7 @@ If you have problems with Element, try [Fractal](https://gitlab.gnome.org/World/
 
 If you want to have a big discussion in our rooms, you should use a Element thread, it's more organized and easy to keep track if more discussions happen on the same room.
 
-You cand find more information on [this](https://doc.redox-os.org/book/ch13-01-chat.html) page.
+You cand find more information on [this](https://doc.redox-os.org/book/chat.html) page.
 
 ## [Discord](https://discord.gg/JfggvrHGDY)
 
@@ -46,7 +46,7 @@ Check out our [RSoC Proposal Guide](/rsoc-proposal-how-to) and [Project Suggesti
 
 A slightly more formal way of communication with fellow Redox devs, but a little less quick and convenient like the chat. Submit an issue when you run into problems compiling or testing. Issues can also be used if you would like to discuss a certain topic: be it features, code style, code inconsistencies, minor changes and fixes, etc.
 
-If you want to create an account, read this [page](https://doc.redox-os.org/book/ch12-01-signing-in-to-gitlab.html).
+If you want to create an account, read this [page](https://doc.redox-os.org/book/signing-in-to-gitlab.html).
 
 Once you create an issue don't forget to post the link on the Dev or Support rooms of the chat, because the GitLab email notifications have distractions (service messages or spam) and most developers don't left their GitLab pages open to receive desktop notifications from the web browser (which require a custom setting to receive issue notifications).
 
