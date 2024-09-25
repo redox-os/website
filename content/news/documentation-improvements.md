@@ -26,7 +26,7 @@ I wrote the FAQ in a way that even Unix/Linux newcomers can understand, it's sim
 
 ## Book improvements
 
-(The book cover the high-level documentation and not the code APIs, read [this](https://doc.redox-os.org/book/ch11-02-writing-docs-correctly.html) page to understand)
+(The book cover the high-level documentation and not the code APIs, read [this](https://doc.redox-os.org/book/writing-docs-correctly.html) page to understand)
 
 Some parts of the book were outdated for years because the developers were busy with the code, Ron Williams improved it since the end of 2022 and I continued where he left.
 
@@ -60,29 +60,29 @@ A non-exaustive list of my improvements:
     More simple, less typos.
 
 - Several fixes on Markdown code formatting
-- [The build system was completely documented](https://doc.redox-os.org/book/ch08-06-build-system-reference.html)
-- [The package manager was documented](https://doc.redox-os.org/book/ch02-08-pkg.html)
-- [The Cookbook recipe system was completely documented](https://doc.redox-os.org/book/ch09-03-porting-applications.html)
-- [All Cookbook templates documented](https://doc.redox-os.org/book/ch09-03-porting-applications.html#templates)
-- [Most Cookbook custom template scripts documented](https://doc.redox-os.org/book/ch09-03-porting-applications.html#custom-template) - more will come.
+- [The build system was completely documented](https://doc.redox-os.org/book/build-system-reference.html)
+- [The package manager was documented](https://doc.redox-os.org/book/pkg.html)
+- [The Cookbook recipe system was completely documented](https://doc.redox-os.org/book/porting-applications.html)
+- [All Cookbook templates documented](https://doc.redox-os.org/book/porting-applications.html#templates)
+- [Most Cookbook custom template scripts documented](https://doc.redox-os.org/book/porting-applications.html#custom-template) - more will come.
 - More troubleshooting options
 - Added a way to update the toolchain
 - Software porting process was documented
 - Manual configuration of Podman was documented
-- [RedoxFS was documented](https://doc.redox-os.org/book/ch04-08-redoxfs.html)
-- [The microkernels explanation was improved a lot](https://doc.redox-os.org/book/ch04-01-microkernels.html)
-- [A high-level explanation of the kernel was created](https://doc.redox-os.org/book/ch04-02-kernel.html)
-- [A high-level explanation of the userspace was created](https://doc.redox-os.org/book/ch04-06-user-space.html)
-- [A high-level explanation of the Redox graphics/windowing system was created](https://doc.redox-os.org/book/ch04-09-graphics-windowing.html)
-- [A high-level explanation of the Redox security](https://doc.redox-os.org/book/ch04-10-security.html)
-- [More side projects were documented](https://doc.redox-os.org/book/ch01-07-side-projects.html)
-- [All crates were documented](https://doc.redox-os.org/book/ch08-06-build-system-reference.html#crates)
-- [More configuration options were documented](https://doc.redox-os.org/book/ch02-07-configuration-settings.html)
-- [Coding and building workflow documentation was improved a lot](https://doc.redox-os.org/book/ch09-02-coding-and-building.html)
-- [Bug reporting was improved a lot](https://doc.redox-os.org/book/ch12-03-creating-proper-bug-reports.html)
-- [Merge request workflow was improved](https://doc.redox-os.org/book/ch12-04-creating-proper-pull-requests.html)
-- [A branch-based workflow was documented](https://doc.redox-os.org/book/ch12-06-branch-workflow.html)
-- [The Chat page was improved](https://doc.redox-os.org/book/ch13-01-chat.html)
+- [RedoxFS was documented](https://doc.redox-os.org/book/redoxfs.html)
+- [The microkernels explanation was improved a lot](https://doc.redox-os.org/book/microkernels.html)
+- [A high-level explanation of the kernel was created](https://doc.redox-os.org/book/kernel.html)
+- [A high-level explanation of the userspace was created](https://doc.redox-os.org/book/user-space.html)
+- [A high-level explanation of the Redox graphics/windowing system was created](https://doc.redox-os.org/book/graphics-windowing.html)
+- [A high-level explanation of the Redox security](https://doc.redox-os.org/book/security.html)
+- [More side projects were documented](https://doc.redox-os.org/book/side-projects.html)
+- [All crates were documented](https://doc.redox-os.org/book/build-system-reference.html#crates)
+- [More configuration options were documented](https://doc.redox-os.org/book/configuration-settings.html)
+- [Coding and building workflow documentation was improved a lot](https://doc.redox-os.org/book/coding-and-building.html)
+- [Bug reporting was improved a lot](https://doc.redox-os.org/book/creating-proper-bug-reports.html)
+- [Merge request workflow was improved](https://doc.redox-os.org/book/creating-proper-pull-requests.html)
+- [A branch-based workflow was documented](https://doc.redox-os.org/book/branch-workflow.html)
+- [The Chat page was improved](https://doc.redox-os.org/book/chat.html)
 
 ## GitLab
 

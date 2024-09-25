@@ -165,8 +165,8 @@ We've added several new features to the build system, including:
 
 ## Documentation
 
-Ribbon continues to add to and improve the [Redox Book](https://doc.redox-os.org/book/), including a [Developer FAQ](https://doc.redox-os.org/book/ch09-07-developer-faq.html) to help guide new contributors,
-and a [comparison of Redox features](https://doc.redox-os.org/book/ch04-11-features.html) vs other Unixen.
+Ribbon continues to add to and improve the [Redox Book](https://doc.redox-os.org/book/), including a [Developer FAQ](https://doc.redox-os.org/book/developer-faq.html) to help guide new contributors,
+and a [comparison of Redox features](https://doc.redox-os.org/book/features.html) vs other Unixen.
 
 ## Looking Forward
 
@@ -181,4 +181,4 @@ Some key areas of interest for the summer are:
 - more porting of Linux apps and building out relibc and kernel compatibility features
 
 We are super appreciative for all our contributors and the hard work they are putting in.
-Consider joining in the fun on our [Matrix Chat](https://doc.redox-os.org/book/ch13-01-chat.html)!
+Consider joining in the fun on our [Matrix Chat](https://doc.redox-os.org/book/chat.html)!

@@ -70,7 +70,7 @@ O kernel é pequeno e muda muito pouco (correção de bugs), portanto você não
 
 A maioria dos componentes do sistema estão no espaço do usuário, simplificando os testes e depuração.
 
-Se você quiser ler mais sobre os benefícios citados acima, leia [esta](https://doc.redox-os.org/book/ch04-01-microkernels.html) página.
+Se você quiser ler mais sobre os benefícios citados acima, leia [esta](https://doc.redox-os.org/book/microkernels.html) página.
 
 ### Benefícios da Rust
 
@@ -152,7 +152,7 @@ Este sistema da Bell Labs trouxe o conceito de "Tudo é um arquivo" ao seu maior
 Você apenas precisa montar o software em algum local para obter a função desejada, qualquer software pode funcionar dessa forma.
 
 - [Drew DeVault explicando o Plan 9](https://drewdevault.com/2022/11/12/In-praise-of-Plan-9.html)
-- [Como o Redox foi influenciado pelo Plan 9](https://doc.redox-os.org/book/ch05-00-urls-schemes-resources.html)
+- [Como o Redox foi influenciado pelo Plan 9](https://doc.redox-os.org/book/urls-schemes-resources.html)
 
 ### [Minix](https://minix3.org/)
 

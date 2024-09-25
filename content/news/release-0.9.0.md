@@ -51,9 +51,9 @@ It is recommended to try Redox OS in a virtual machine before trying on real har
 the [supported hardware](https://www.redox-os.org/faq/#which-devices-does-redox-support) section for details on what
 hardware to select for the best experience.
 
-- Read [this](https://doc.redox-os.org/book/ch02-01-running-vm.html) page to learn how to run the Redox images in a virtual machine
-- Read [this](https://doc.redox-os.org/book/ch02-02-real-hardware.html) page to learn how to run the Redox images on real hardware
-- Read [this](https://doc.redox-os.org/book/ch02-03-installing.html) page to learn how to install Redox
+- Read [this](https://doc.redox-os.org/book/running-vm.html) page to learn how to run the Redox images in a virtual machine
+- Read [this](https://doc.redox-os.org/book/real-hardware.html) page to learn how to run the Redox images on real hardware
+- Read [this](https://doc.redox-os.org/book/installing.html) page to learn how to install Redox
 
 (Currently the VirtualBox VM is not working due to a bug)
 
@@ -116,7 +116,7 @@ improving compatibility with POSIX/Linux libraries and programs
 - Lots of new documentation, lots of updates to reflect recent changes
 - A [FAQ](https://www.redox-os.org/faq/) was added to the website
 - Lots of content was added to the [Redox Book](https://doc.redox-os.org/book/) for developers that want to help with porting,
-including a [Developer FAQ](https://doc.redox-os.org/book/ch09-07-developer-faq.html), [Libraries and APIs](https://doc.redox-os.org/book/ch09-06-libraries-apis.html), [educational content](https://doc.redox-os.org/book/ch09-08-references.html) and many other topics
+including a [Developer FAQ](https://doc.redox-os.org/book/developer-faq.html), [Libraries and APIs](https://doc.redox-os.org/book/libraries-apis.html), [educational content](https://doc.redox-os.org/book/references.html) and many other topics
 - Our [development priorities](https://www.redox-os.org/news/development-priorities-2023-09/) and [porting strategy](https://www.redox-os.org/news/porting-strategy/) were explained
 
 

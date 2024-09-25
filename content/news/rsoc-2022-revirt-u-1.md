@@ -109,7 +109,7 @@ Before I go into the "how" and the "why" of the implementation, I'd like to desc
 
 #### The API
 
-If an application (VMM) wants to start a VM, it has to be able to contact the kernel. Rather than use a new system call, currently we're exposing a scheme called `revirt:` (like `open(revirt/custom1/status)` can be used). You can read more about Redox OS schemes [here](https://doc.redox-os.org/book/ch04-06-schemes.html). But handling a scheme can be difficult at times, and so a `revirt_u` wrapper is being used around the `revirt_u` API, and this wrapper library can be used by a VMM to contact the kernel (like `revirt::vm("custom1").status` can be used).
+If an application (VMM) wants to start a VM, it has to be able to contact the kernel. Rather than use a new system call, currently we're exposing a scheme called `revirt:` (like `open(revirt/custom1/status)` can be used). You can read more about Redox OS schemes [here](https://doc.redox-os.org/book/schemes.html). But handling a scheme can be difficult at times, and so a `revirt_u` wrapper is being used around the `revirt_u` API, and this wrapper library can be used by a VMM to contact the kernel (like `revirt::vm("custom1").status` can be used).
 
 For now, the implementation is focused on Intel VT (VMX). When the VMM initiates the scheme, the kernel turns on VMX mode. The VMM then has to simply assign a name and ask Revirt-U (the backend component in the kernel) to create the necessary resources (like the VMCS structure). But one of the most important things that happens next is the mapping of the physical address space of the VM.
 

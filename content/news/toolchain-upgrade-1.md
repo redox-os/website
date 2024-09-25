@@ -21,14 +21,14 @@ As GCC is used to build all recipes (software ports) written in C and C++, many 
 
 If you are a developer/tester of Redox, we recommend that you download a new build system copy.
 
-You can do that by running the [bootstrap.sh](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/bootstrap.sh?ref_type=heads) script again or running the commands from [this](https://doc.redox-os.org/book/ch08-01-advanced-build.html#clone-the-repository) page.
+You can do that by running the [bootstrap.sh](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/bootstrap.sh?ref_type=heads) script again or running the commands from [this](https://doc.redox-os.org/book/advanced-build.html#clone-the-repository) page.
 
 Pop OS and Ubuntu are the recommended Linux distributions for development and Podman for others, there's partial support for Arch Linux, FreeBSD, MacOSX and openSUSE, but you could have problems.
 
-If you have problems with other distributions, use the Podman [method](https://doc.redox-os.org/book/ch02-06-podman-build.html).
+If you have problems with other distributions, use the Podman [method](https://doc.redox-os.org/book/podman-build.html).
 
 ### Known Issues
 
 - NetSurf compilation is not working with non-Debian distributions.
 
-To fix this you need to remove the NetSurf recipe from your build configuration file (config/$ARCH/your-config.toml) or read [this](https://doc.redox-os.org/book/ch09-05-developer-faq.html#i-tried-all-methods-of-the-troubleshooting-the-build-page-and-my-recipe-doesnt-build-what-can-i-do) section.
+To fix this you need to remove the NetSurf recipe from your build configuration file (config/$ARCH/your-config.toml) or read [this](https://doc.redox-os.org/book/developer-faq.html#i-tried-all-methods-of-the-troubleshooting-the-build-page-and-my-recipe-doesnt-build-what-can-i-do) section.

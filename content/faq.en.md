@@ -70,7 +70,7 @@ Since most of the system components are in userspace, they can be replaced on-th
 
 Most of the system components run in userspace, simplifying the testing and debugging.
 
-You can read more about the above benefits on [this](https://doc.redox-os.org/book/ch04-01-microkernels.html) page.
+You can read more about the above benefits on [this](https://doc.redox-os.org/book/microkernels.html) page.
 
 ### Rust benefits
 
@@ -152,7 +152,7 @@ Any OS compatible with the [Single Unix Specification](https://en.wikipedia.org/
 This Bell Labs OS brings the concept of "Everything is a File" to the highest level, doing all the system communication from the filesystem.
 
 - [Drew DeVault explains the Plan 9](https://drewdevault.com/2022/11/12/In-praise-of-Plan-9.html)
-- [Plan 9's influence on Redox](https://doc.redox-os.org/book/ch05-00-urls-schemes-resources.html)
+- [Plan 9's influence on Redox](https://doc.redox-os.org/book/urls-schemes-resources.html)
 
 ### [Minix](https://minix3.org/)
 
@@ -160,7 +160,7 @@ The most influential Unix-like system with a microkernel. It has advanced featur
 
 Redox is largely influenced by Minix - it has a similar architecture but with a feature set written in Rust.
 
-- [How Minix influenced the Redox design](https://doc.redox-os.org/book/ch04-01-microkernels.html)
+- [How Minix influenced the Redox design](https://doc.redox-os.org/book/microkernels.html)
 
 ### [seL4](https://sel4.systems/)
 

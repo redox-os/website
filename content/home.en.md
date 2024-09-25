@@ -20,18 +20,18 @@ url = "home"
     <ul class="laundry-list" style="margin-bottom: 0px;">
       <li>Inspired by <a href="http://9p.io/plan9/index.html">Plan 9</a>, <a href="http://www.minix3.org/">Minix</a>, <a href="https://sel4.systems/">seL4</a>, <a href="https://en.wikipedia.org/wiki/Berkeley_Software_Distribution">BSD</a> and <a href="https://www.kernel.org/">Linux</a></li>
       <li>Implemented in <a href="https://www.rust-lang.org/">Rust</a></li>
-      <li><a href="https://doc.redox-os.org/book/ch04-01-microkernels.html">Microkernel</a> Design</li>
-      <li>Includes optional GUI - <a href="https://doc.redox-os.org/book/ch04-09-graphics-windowing.html#orbital">Orbital</a></li>
+      <li><a href="https://doc.redox-os.org/book/microkernels.html">Microkernel</a> Design</li>
+      <li>Includes optional GUI - <a href="https://doc.redox-os.org/book/graphics-windowing.html#orbital">Orbital</a></li>
       <li>Partial <a href="https://en.wikipedia.org/wiki/POSIX">POSIX</a> compatibility</li>
-      <li><a href="https://doc.redox-os.org/book/ch06-00-programs-libraries.html">Source compatibility</a> with Linux/BSD programs</li>
+      <li><a href="https://doc.redox-os.org/book/programs-libraries.html">Source compatibility</a> with Linux/BSD programs</li>
     </ul>
   </div>
   <div class="col-md-6">
     <ul class="laundry-list">
       <li><a href="https://en.wikipedia.org/wiki/MIT_License">MIT</a> Licensed</li>
       <li>Supports <a href="https://doc.rust-lang.org/std/">Rust Standard Library</a></li>
-      <li><a href="https://doc.redox-os.org/book/ch04-07-drivers.html">Drivers</a> run in Userspace</li>
-      <li>Includes common Unix/Linux <a href="https://doc.redox-os.org/book/ch06-04-system-tools.html">tools</a></li>
+      <li><a href="https://doc.redox-os.org/book/drivers.html">Drivers</a> run in Userspace</li>
+      <li>Includes common Unix/Linux <a href="https://doc.redox-os.org/book/system-tools.html">tools</a></li>
       <li>Custom <a href="https://en.wikipedia.org/wiki/C_standard_library">C library</a> written in Rust (<a href="https://gitlab.redox-os.org/redox-os/relibc/">relibc</a>)</li>
       <li>See <a href="/screens/">Redox in Action</a></li>
     </ul>

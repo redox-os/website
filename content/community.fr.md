@@ -29,7 +29,7 @@ Si vous rencontrez des problèmes avec Element, essayez [nheko](https://nheko-re
 
 Si vous souhaitez avoir une grande discussion dans nos salons, vous devez utiliser un fil de discussion Element, il est plus organisé et plus facile à suivre si d'autres discussions ont lieu dans le même salon.
 
-Vous pouvez trouver plus d'informations sur [cette page](https://doc.redox-os.org/book/ch13-01-chat.html).
+Vous pouvez trouver plus d'informations sur [cette page](https://doc.redox-os.org/book/chat.html).
 
 ## [Summer of Code](/rsoc)
 
@@ -41,7 +41,7 @@ Consultez notre [Guide de proposition RSoC](/rsoc-proposal-how-to) et nos [Sugge
 
 Un moyen de communication un peu plus formel avec les autres développeurs de Redox, mais un peu moins rapide et pratique que le chat. Soumettez une Issue lorsque vous rencontrez des problèmes de compilation ou de tests. Une Issue peut aussi être ouverte si vous souhaitez simplement discuter d'un sujet en particulier, qu'il s'agisse de fonctionnalités, de style de code, d'incohérences de code, de modifications et de correctifs mineurs, etc.
 
-Si vous souhaitez créer un compte, lisez cette [page](https://doc.redox-os.org/book/ch12-01-signing-in-to-gitlab.html).
+Si vous souhaitez créer un compte, lisez cette [page](https://doc.redox-os.org/book/signing-in-to-gitlab.html).
 
 Si vous avez des MRs prêts (merge requests), vous devez envoyer les liens sur le salon [MRs](https://matrix.to/#/#redox-mrs:matrix.org). Pour rejoindre ce salon, une vous aurez besoin de demander un invitation dans le salon [Join Requests](https://matrix.to/#/#redox-join:matrix.org).
 
