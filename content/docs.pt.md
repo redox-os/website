@@ -10,7 +10,7 @@ Nós recomendamos que você comece pelo [Livro](https://doc.redox-os.org/book/),
 
 ### Cargo Docs
 
-- [redox_syscall](https://docs.rs/redox_syscall/latest/syscall/) - Documentação para as chamadas de sistema do Redox.
+- [libredox](https://docs.rs/libredox/latest/libredox/) - Documentação da biblioteca de sistema do Redox.
 
 - [libstd](https://doc.rust-lang.org/stable/std/) - Documentação para a biblioteca padrão da Rust.
 
