@@ -20,6 +20,10 @@ If you would like to support Redox, please consider donating or buying some merc
 - The time precision of TSC was improved
 - 4lDO2 improved the memory performance
 
+## Driver Improvements
+
+- Ivan Tan updated the SD card reader driver for Raspberry Pi boards to use the version 2 of the scheme protocol.
+
 ## Scheme Improvements
 
 4lDO2 implemented the `getdents` system call to simplify the scheme interface, it will speedup the scheme development and ease the bug fixing.
@@ -33,6 +37,8 @@ If you would like to support Redox, please consider donating or buying some merc
 
 - The `endian` function was implemented
 - The `poll` system call was improved to follow more the Linux behavior
+- 4lDO2 added a test for the `sigaltstack` function
+- A stub for `net/if.h` was added
 
 ## RISC-V Port
 
@@ -40,7 +46,7 @@ Andrey Turkin started the RISC-V port and sent improvements to our toolchain.
 
 ## QEMU Port
 
-Jeremy updated the QEMU updates to the latest version and is working on the remaining bugs.
+Jeremy updated the QEMU patches to the latest version and is working on the remaining bugs.
 
 QEMU can be ported soon.
 
@@ -49,6 +55,7 @@ QEMU can be ported soon.
 - The `dd` tool from uutils was fixed
 - 4lDO2 fixed RustPython
 - Bendeguz Pisch fixed the Perl 5 recipe
+- Neovim is being ported
 
 ## CI Improvements
 
@@ -64,12 +71,21 @@ The Podman container environment is using Debian 12 and prevent many bugs caused
 
 - Podman was enabled by default
 - The `path` data type was implemented on Cookbook to specify a local folder, it reduce the size of scripts
+- The `libtool` dependency on the Podman container was fixed
+- OpenSSH was installed on the Podman container for developers using SSH
 
 ## Documentation Improvements
 
 - The boot process documentation was improved
+- 4lDO2 fixed the [system call explanation](https://doc.redox-os.org/book/how-redox-compares.html#system-calls) to address the confusion with "POSIX system calls" and "Linux system calls"
+- Ribbon updated the "Documentation" page of the website to add the `libredox` documentation and remove the `redox_syscall` documentation.
 - Ribbon added the "Benchmarks" section on the "Performance" page of the book to explain how to do simple benchmarks on Redox, you can read the section on [this](https://doc.redox-os.org/book/ch09-10-performance.html#benchmarks) link
 - Ribbon documented how to get the [CPU information](https://doc.redox-os.org/book/ch02-09-tasks.html#show-cpu-information) and [show the system log](https://doc.redox-os.org/book/ch02-09-tasks.html#show-the-system-log) in the [Tasks](https://doc.redox-os.org/book/ch02-09-tasks.html) page
+- Ribbon removed the chapter numbers from the page names to remove the maintenance cost to mvoe pages on the book summary.
+
+## Organization Improvements
+
+Ribbon removed the "Tracking Issues Index" in favor of GitLab label filters to track our development priorities, reducing the maintenance cost.
 
 ## Art
 
