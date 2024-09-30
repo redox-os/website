@@ -17,11 +17,18 @@ If you would like to support Redox, please consider donating or buying some merc
 ## Kernel Improvements
 
 - Andrey Turkin fixed some bugs
+- Andrey Turkin fixed the RISC-V memory paging code on RMM
+- Andrey Turkin reduced CPU-specific code, improving the CPU portability and reducing the maintenance cost
 - The time precision of TSC was improved
 - 4lDO2 improved the memory performance
+- 4lDO2 implemented queued POSIX signals
+- 4lDO2 fixed the bump allocator initialization
+- Andrey Turkin updated the `fdt` library to the latest version
+- A panic on `dirent` was fixed
 
 ## Driver Improvements
 
+- Timothy Finnegan fixed a kernel panic due to an unitialized PCI BAR
 - Ivan Tan updated the SD card reader driver for Raspberry Pi boards to use the version 2 of the scheme protocol.
 
 ## Scheme Improvements
@@ -35,10 +42,16 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## Relibc Improvements
 
+- 4lDO2 implemented real-time POSIX signals
 - The `endian` function was implemented
 - The `poll` system call was improved to follow more the Linux behavior
+- A capability was implemented to make the `chroot` command work
+- 4lDO2 updated the PAL (POSIX Abstraction Layer) component to use a Rust-written error handling
+- 4lDO2 moved `umask` to a regular global variable
 - 4lDO2 added a test for the `sigaltstack` function
 - A stub for `net/if.h` was added
+- 4lDO2 added a hack to cope with legacy schemes until they are updated
+- plimkilde implemented a way to use Rust iterators on C-style strings
 
 ## RISC-V Port
 
@@ -56,6 +69,11 @@ QEMU can be ported soon.
 - 4lDO2 fixed RustPython
 - Bendeguz Pisch fixed the Perl 5 recipe
 - Neovim is being ported
+- Timothy Finnegan started the [Dropbear SSH](https://matt.ucc.asn.au/dropbear/dropbear.html) porting
+
+## Ion Improvements
+
+- The `$HOME` to `~` replacement was fixed
 
 ## CI Improvements
 
@@ -71,6 +89,7 @@ The Podman container environment is using Debian 12 and prevent many bugs caused
 
 - Podman was enabled by default
 - The `path` data type was implemented on Cookbook to specify a local folder, it reduce the size of scripts
+- Ribbon fixed FUSE on Podman
 - The `libtool` dependency on the Podman container was fixed
 - OpenSSH was installed on the Podman container for developers using SSH
 
