@@ -59,7 +59,7 @@ After completing the release, several pending and new kernel improvements were m
 
 ## Driver Improvements
 
-- Timothy Finnegan fixed a kernel panic due to an unitialized PCI BAR
+- Tim Finnegan fixed a kernel panic due to an unitialized PCI BAR
 - Ivan Tan updated the SD card reader driver for Raspberry Pi boards to use the version 2 of the scheme protocol.
 
 ## Scheme Improvements
@@ -100,7 +100,7 @@ The hope is that QEMU will be ported soon.
 - 4lDO2 fixed RustPython
 - Bendeguz Pisch fixed the Perl 5 recipe
 - Neovim is being ported
-- Timothy Finnegan started the [Dropbear SSH](https://matt.ucc.asn.au/dropbear/dropbear.html) porting
+- Tim Finnegan started the [Dropbear SSH](https://matt.ucc.asn.au/dropbear/dropbear.html) porting
 
 ## Ion Improvements
 
@@ -127,7 +127,7 @@ The Podman container environment is using Debian 12 and prevents many bugs cause
 ## Documentation Improvements
 
 - The boot process documentation was improved
-- 4lDO2 fixed the [system call explanation](https://doc.redox-os.org/book/how-redox-compares.html#system-calls) to address the confusion with "POSIX system calls" and "Linux system calls"
+- 4lDO2 clarified the [system call explanation](https://doc.redox-os.org/book/how-redox-compares.html#system-calls) to address the confusion with POSIX "system calls" and Linux system calls
 - Ribbon updated the "Documentation" page of the website to add the `libredox` documentation and remove the `redox_syscall` documentation.
 - Ribbon added the "Benchmarks" section on the "Performance" page of the book to explain how to do simple benchmarks on Redox, you can read the section on [this](https://doc.redox-os.org/book/ch09-10-performance.html#benchmarks) link
 - Ribbon documented how to get the [CPU information](https://doc.redox-os.org/book/ch02-09-tasks.html#show-cpu-information) and [show the system log](https://doc.redox-os.org/book/ch02-09-tasks.html#show-the-system-log) in the [Tasks](https://doc.redox-os.org/book/ch02-09-tasks.html) page
