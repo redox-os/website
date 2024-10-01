@@ -62,10 +62,6 @@ After completing the release, several pending and new kernel improvements were m
 - Tim Finnegan fixed a kernel panic due to an unitialized PCI BAR
 - Ivan Tan updated the SD card reader driver for Raspberry Pi boards to use the version 2 of the scheme protocol.
 
-## Scheme Improvements
-
-4lDO2 implemented the `getdents` system call to simplify the scheme interface, it will speedup the scheme development and ease the bug fixing.
-
 ## USB Improvements
 
 Tim Finnegan is continuing to work on USB xHCI, and trying to bring it into compliance with both the standard and the behavior of real hardware. 
@@ -114,7 +110,7 @@ The hope is that QEMU will be ported soon.
 
 Now Podman is our default build method and was enabled in our build system, it allows us to have a reproducible environment for all developers.
 
-The Podman container environment is using Debian 12 and prevents many bugs caused by build environment differences (even kernel panics can be fixed!)
+The Podman container environment is using Debian 12 and prevents many bugs caused by build environment differences.
 
 ## Build System Improvements
 
