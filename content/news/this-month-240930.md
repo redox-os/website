@@ -51,7 +51,7 @@ After completing the release, several pending and new kernel improvements were m
 - Andrey fixed the RISC-V memory paging code in the `rmm` crate
 - Andrey reduced the size of some CPU-specific code, simplifying portability to new CPU types and reducing the maintenance cost
 - The time precision and reliability of TSC was improved
-- 4lDO2 improved the memory performance
+- 4lDO2 reimplemented a scheme-related TLB optimization, that was temporarily removed as a result of [a fix](https://gitlab.redox-os.org/redox-os/kernel/-/merge_requests/333) for a scheme bug prior to 0.9.0.
 - 4lDO2's queued POSIX signals work was merged
 - 4lDO2 fixed the bump allocator initialization
 - Andrey Turkin updated the `fdt` library to the latest version
@@ -97,7 +97,7 @@ The hope is that QEMU will be ported soon.
 ## Programs
 
 - The `dd` tool from uutils was fixed
-- 4lDO2 fixed RustPython
+- 4lDO2 fixed pipe event handling, which was causing issues in RustPython
 - Bendeguz Pisch fixed the Perl 5 recipe
 - Neovim is being ported
 - Tim Finnegan started the [Dropbear SSH](https://matt.ucc.asn.au/dropbear/dropbear.html) porting
