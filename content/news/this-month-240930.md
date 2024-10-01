@@ -104,7 +104,7 @@ The hope is that QEMU will be ported soon.
 
 ## CI Improvements
 
-4lDO2 fixed the kernel CI and added unit tests, Redoxer will be improved to support more test cases.
+4lDO2 added support for kernel unit tests in CI. For real QEMU-based CI testing, Redoxer will need to be fixed.
 
 ## Podman By Default
 
