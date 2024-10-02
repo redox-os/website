@@ -142,17 +142,14 @@ Ribbon packaged the Ubuntu wallpapers from most recent versions and PopOS wallpa
 If you want to contribute, give feedback or just listen in to the conversation,
 join us on [Matrix Chat](https://matrix.to/#/#redox-join:matrix.org).
 
-<!--
 ## Discussion
 
 Here are some links to discussion about this news post:
 
-- [Fosstodon @redox]()
-- [Fosstodon @soller]()
-- [Patreon]()
-- [Phoronix]()
-- [Reddit /r/redox]()
-- [Reddit /r/rust]()
-- [Twitter @redox_os]()
-- [Twitter @jeremy_soller]()
--->
+- [Fosstodon @redox](https://fosstodon.org/@redox/113238436856184947)
+- [Fosstodon @soller](https://fosstodon.org/@soller/113238422123305113)
+- [Patreon](https://www.patreon.com/posts/113225427)
+- [Reddit /r/redox](https://www.reddit.com/r/Redox/comments/1fuid6p/this_month_in_redox_os_september_2024/)
+- [Reddit /r/rust](https://www.reddit.com/r/rust/comments/1fuiddg/this_month_in_redox_os_september_2024/)
+- [Twitter @redox_os](https://x.com/redox_os/status/1841494088912142356)
+- [Twitter @jeremy_soller](https://x.com/jeremy_soller/status/1841494050462978477)
