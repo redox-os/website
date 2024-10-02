@@ -14,6 +14,11 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## Driver Improvements
+
+- Kamil Koczurek updated the ACPI driver to serialize symbols to RON
+- Kamil Koczurek updated the ACPI driver to use the new `redox_scheme` library
+
 ## Join us on Matrix Chat
 
 If you want to contribute, give feedback or just listen in to the conversation,
