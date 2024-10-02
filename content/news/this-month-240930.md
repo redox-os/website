@@ -125,8 +125,8 @@ The Podman container environment is using Debian 12 and prevents many bugs cause
 - The boot process documentation was improved
 - 4lDO2 clarified the [system call explanation](https://doc.redox-os.org/book/how-redox-compares.html#system-calls) to address the confusion with POSIX "system calls" and Linux system calls
 - Ribbon updated the "Documentation" page of the website to add the `libredox` documentation and remove the `redox_syscall` documentation.
-- Ribbon added the "Benchmarks" section on the "Performance" page of the book to explain how to do simple benchmarks on Redox, you can read the section on [this](https://doc.redox-os.org/book/ch09-10-performance.html#benchmarks) link
-- Ribbon documented how to get the [CPU information](https://doc.redox-os.org/book/ch02-09-tasks.html#show-cpu-information) and [show the system log](https://doc.redox-os.org/book/ch02-09-tasks.html#show-the-system-log) in the [Tasks](https://doc.redox-os.org/book/ch02-09-tasks.html) page
+- Ribbon added the "Benchmarks" section on the "Performance" page of the book to explain how to do simple benchmarks on Redox, you can read the section on [this](https://doc.redox-os.org/book/performance.html#benchmarks) link
+- Ribbon documented how to get the [CPU information](https://doc.redox-os.org/book/tasks.html#show-cpu-information) and [show the system log](https://doc.redox-os.org/book/tasks.html#show-the-system-log) in the [Tasks](https://doc.redox-os.org/book/tasks.html) page
 - Ribbon removed the chapter numbers from the page names to remove the maintenance cost to move pages on the book summary.
 
 ## Organization Improvements
