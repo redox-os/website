@@ -37,7 +37,7 @@ We updated our configuration files to be compliant with the FreeDesktop standard
 ## Relibc Improvements
 
 - plimkilde refactored the `strcasecmp` and `strncasecmp` functions with iterators
-- Ron Williams fixed the `cbindgen` header building
+- Ron Williams fixed detection of errors during the `cbindgen` header building
 - Ron Williams improved the tests to make them easier to run on Redox
 
 ## ARM64 Improvements
@@ -60,7 +60,7 @@ If you want to know all features of the `pkgar` package format open [this](https
 
 ## Programs
 
-- Eva Kurchatova ported the [RVVM](https://github.com/LekKit/RVVM) emulator
+- Eva Kurchatova ported the [RVVM](https://github.com/LekKit/RVVM) RISC-V emulator
 - Josh Megnauth ported the [QuakeSpasm](https://github.com/sezero/quakespasm) engine
 - bitstr0m fixed LuaJIT
 
