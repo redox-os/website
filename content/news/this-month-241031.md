@@ -144,18 +144,14 @@ Ribbon wrote a page to explain the most quick way to test Redox and run a "Hello
 If you want to contribute, give feedback or just listen in to the conversation,
 join us on [Matrix Chat](https://matrix.to/#/#redox-join:matrix.org).
 
-<!--
 ## Discussion
 
 Here are some links to discussion about this news post:
 
-- [Fosstodon @redox]()
-- [Fosstodon @soller]()
-- [Patreon]()
-- [Phoronix]()
-- [Reddit /r/redox]()
-- [Reddit /r/rust]()
-- [X/Twitter @redox_os]()
-- [X/Twitter @jeremy_soller]()
-- [Hacker News]()
--->
+- [Fosstodon @redox](https://fosstodon.org/@redox/113419641456133383)
+- [Fosstodon @soller](https://fosstodon.org/@soller/113419640065800067)
+- [Patreon](https://www.patreon.com/posts/115280896)
+- [Reddit /r/redox](https://www.reddit.com/r/Redox/comments/1gioy0r/this_month_in_redox_os_october_2024/)
+- [Reddit /r/rust](https://www.reddit.com/r/rust/comments/1gioyq5/this_month_in_redox_os_october_2024/)
+- [X/Twitter @redox_os](https://x.com/redox_os/status/1853091214423126174)
+- [X/Twitter @jeremy_soller](https://x.com/jeremy_soller/status/1853091063981920600)
