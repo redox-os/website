@@ -98,7 +98,7 @@ Thanks for finding this Andrey!
 
 ## ARM64 Improvements
 
-Jeremy Soller enabled the ARM64 images and [packages](https://static.redox-os.org/pkg/aarch64-unknown-redox/) on the build server!!
+Jeremy Soller enabled the ARM64 [packages](https://static.redox-os.org/pkg/aarch64-unknown-redox/) on the build server!!
 
 ## RISC-V Improvements
 
