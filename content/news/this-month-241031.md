@@ -4,7 +4,9 @@ author = "Ribbon and Ron Williams"
 date = "2024-10-31"
 +++
 
-October was a very exciting month for Redox! Here's all the latest news.
+Redox OS is a Unix-like general-purpose microkernel-based operating system
+written in Rust. October was a very exciting month for Redox! Here's all the
+latest news.
 
 ## Support Redox - Merch Sale
 
