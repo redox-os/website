@@ -15,6 +15,12 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## Redox On Redox
+
+Andrey Turkin executed the RISC-V version of Redox Server from the [RVVM](https://github.com/LekKit/RVVM) RISC-V emulator running on the x86-64 version of Redox Desktop!!
+
+<a href="/img/screenshot/redox-on-redox.png"><img class="img-responsive" alt="Redox On Redox" src="/img/screenshot/redox-on-redox.png"/></a>
+
 ## Compiling Redox on WSL
 
 Charlie Philips from Georgia Tech did a video tutorial teaching how to build the Redox system on WSL, you can watch the video below:
@@ -24,6 +30,15 @@ Charlie Philips from Georgia Tech did a video tutorial teaching how to build the
 ## Kernel Improvements
 
 - Jeremy Soller fixed a bug on MSI that allowed Meteor Lake CPUs to boot with USB keyboard support
+- Arthur Paulino refactored the `switch` function for extra clarity
+
+## Driver Improvements
+
+- Tim Finnegan fixed a deadlock on the USB device initialization
+
+## Relibc Improvements
+
+- Josh Megnauth fixed a panic with programs or games using deprecated POSIX functions
 
 ## Testing Improvements
 
