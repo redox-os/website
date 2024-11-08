@@ -44,6 +44,12 @@ Charlie Philips from Georgia Tech did a video tutorial teaching how to build the
 
 Ron Williams created the [Benchmarks](https://gitlab.redox-os.org/redox-os/benchmarks) repository and recipe to store our performance data history to catch possible regressions.
 
+## Documentation Improvements
+
+- Ribbon explained the design and benefits of the Redox package management on the [Package Management](https://doc.redox-os.org/book/package-management.html) page
+- Ribbon fixed problems on the tutorial from the [From Nothing to Hello World](https://doc.redox-os.org/book/nothing-to-hello-world.html) page, please read the page again
+- Ribbon improved the documentation for accessibility
+
 ## Join us on Matrix Chat
 
 If you want to contribute, give feedback or just listen in to the conversation,
