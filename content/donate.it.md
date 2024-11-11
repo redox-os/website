@@ -14,7 +14,7 @@ Puoi donare a Redox OS nei seguenti modi:
 - [Ethereum](https://ethereum.org/en/) - 0x083e29156955A4c0f7eAA406e1167Bd1bE88933E  
 - Per ulteriori opzioni di donazione, contatta donate@redox-os.org  
 
-## merchandising
+## Merchandising
 
 Vendiamo magliette su Teespring, puoi acquistarle [qui](https://redox-os.creator-spring.com/).
 
