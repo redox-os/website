@@ -8,7 +8,7 @@ Seguiamo il [Codice di condotta di Rust](https://www.rust-lang.org/policies/code
 
 ## [Comunicazioni](https://matrix.to/#/#redox-announcements:matrix.org)
 
-Pubblichiamo le nostre comunicazioni in [questa](https://matrix.to/#/#redox-announcements:matrix.org) stanza di Matrix, è pubblica e non devi fare l'accesso per leggerla.
+Pubblichiamo le nostre comunicazioni in [questa](https://matrix.to/#/#redox-announcements:matrix.org) stanza di Matrix, è pubblica e non è necessario accedere per leggerla.
 
 - #redox-announcements:matrix.org (Usa questo indirizzo della stanza se non vuoi usare il link Matrix esterno)
 
