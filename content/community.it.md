@@ -14,7 +14,7 @@ Pubblichiamo le nostre comunicazioni in [questa](https://matrix.to/#/#redox-anno
 
 ## [Chat](https://matrix.to/#/#redox-join:matrix.org)
 
-Matrix è il metodo ufficiale per comunicare con il team si Redox OS e la comunità (queste stanze sono solo in Inglese, non sono accettati altri linguaggi perché non li conosciamo)
+Matrix è il metodo ufficiale per comunicare con il team di Redox OS e la comunità (queste stanze sono solo in Inglese, non sono accettati altre lingue perché non li conosciamo)
 
 Matrix ha diversi client. [Element](https://element.io/) è molto utilizzato, funziona sui browser, Linux, MacOSX, Windows, Android ed iOS.
 
