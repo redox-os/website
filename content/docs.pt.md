@@ -30,4 +30,4 @@ Nós recomendamos que você comece pelo [Livro](https://doc.redox-os.org/book/),
 
 ## Contribuindo pro Redox
 
-- Leia o [CONTRIBUTING.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md)
+- Leia o documento [CONTRIBUTING](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md)

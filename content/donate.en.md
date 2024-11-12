@@ -18,7 +18,7 @@ You can donate to Redox OS the following ways:
 
 ## Merch
 
-We sell T-shirts on Teespring, you can buy them [here](https://redox-os.creator-spring.com/).
+We sell T-shirts on Teespring, you can buy them in [our Teespring website](https://redox-os.creator-spring.com/).
 
 Each sale is a donation to the Redox OS Nonprofit.
 

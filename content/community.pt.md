@@ -22,14 +22,14 @@ O Element funciona em navegadores web, Linux, MacOSX, Windows, Android e iOS.
 
 Caso tenha problemas com o Element, teste o [Fractal](https://gitlab.gnome.org/World/fractal).
 
-- Entre [nesta](https://matrix.to/#/#redox-join:matrix.org) sala e não esqueça de solicitar um convite para o espaço do Redox.
+- Entre na sala [Join Requests](https://matrix.to/#/#redox-join:matrix.org) e não esqueça de solicitar um convite para o espaço do Redox.
 - #redox-join:matrix.org (Use esse endereço de sala do Matrix caso não queira utilizar o link externo do Matrix)
 
 (Nós recomendamos que você saia da sala "Join Requests" depois de entrar no espaço do Redox)
 
 Caso você tenha uma grande discussão nas nossas salas, você deve usar um thread do Element, pois é mais organizado e fácil de acompanhar caso mais discussões ocorram na mesma sala.
 
-Você pode encontrar mais informações [nesta](https://doc.redox-os.org/book/chat.html) página.
+Você pode encontrar mais informações na página [Chat](https://doc.redox-os.org/book/chat.html).
 
 ## [Discord](https://discord.gg/JfggvrHGDY)
 
@@ -41,7 +41,7 @@ Nós temos um servidor no Discord como alternativa ao Matrix.
 
 O programa **Redox Summer of Code** (RSoC) é relizado anualmente quando as doações permitem e nós podemos participar de outros programas do mesmo tipo.
 
-Um resumo dos nossos programas Summer of Code e nossos planos para esse ano estão [neste](/rsoc) link.
+Um resumo dos nossos programas Summer of Code e nossos planos para esse ano estão na página [RSoC](/rsoc).
 
 Veja nosso [guia de proposta RSoC](/rsoc-proposal-how-to) e [sugestões de projeto](/rsoc-project-suggestions).
 
@@ -51,7 +51,7 @@ Uma forma mais formal de comunicação com os desenvolvedores do Redox, porém m
 
 Envie uma Issue se você tiver problemas compilando/testando ou apenas queira discutir algum assunto, seja funções, estilo de código, inconsistências de código, pequenas mudanças ou correções.
 
-Se você quiser criar uma conta, leia essa [página](https://doc.redox-os.org/book/signing-in-to-gitlab.html).
+Se você quiser criar uma conta, leia a página [Signing in to GitLab](https://doc.redox-os.org/book/signing-in-to-gitlab.html).
 
 Assim que você criar uma issue não se esqueça de postar o link nas salas "Dev" ou "Support" do chat, por que as notificações de email do GitLab possuem distrações (mensagens de serviço e spam) e a maioria dos programadores não deixam suas páginas do GitLab abertas no navegador web (que requer uma configuração customizada para receber notificações de issues).
 

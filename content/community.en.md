@@ -9,7 +9,7 @@ We follow the [Rust Code Of Conduct](https://www.rust-lang.org/policies/code-of-
 
 ## [Announcements](https://matrix.to/#/#redox-announcements:matrix.org)
 
-We do our announcements on [this](https://matrix.to/#/#redox-announcements:matrix.org) Matrix room, it's public and you don't need to login on Matrix to read it.
+We do our announcements on the [Announcements](https://matrix.to/#/#redox-announcements:matrix.org) room, it's public and you don't need to login on Matrix to read it.
 
 - #redox-announcements:matrix.org (Use this Matrix room address if you don't want to use the external Matrix link)
 
@@ -21,14 +21,14 @@ Matrix has several different clients. [Element](https://element.io/) is a common
 
 If you have problems with Element, try [Fractal](https://gitlab.gnome.org/World/fractal).
 
-- Join [this](https://matrix.to/#/#redox-join:matrix.org) room and don't forget to request an invite to the Redox Matrix space.
+- Join the [Join Requests](https://matrix.to/#/#redox-join:matrix.org) room and don't forget to request an invite to the Redox Matrix space.
 - #redox-join:matrix.org (Use this Matrix room address if you don't want to use the external Matrix link)
 
 (We recommend that you leave the "Join Requests" room after your entry on Redox space)
 
 If you want to have a big discussion in our rooms, you should use a Element thread, it's more organized and easy to keep track if more discussions happen on the same room.
 
-You cand find more information on [this](https://doc.redox-os.org/book/chat.html) page.
+You cand find more information on the [Chat](https://doc.redox-os.org/book/chat.html) page.
 
 ## [Discord](https://discord.gg/JfggvrHGDY)
 
@@ -39,14 +39,14 @@ We have a Discord server as an alternative for Matrix.
 ## [Summer of Code](/rsoc)
 
 The **Redox Summer of Code** (RSoC) program runs annually when funding permits, and we may participate in other Summer of Code type programs.
-An overview of our Summer of Code programs and our plans for this year are [here](/rsoc).
+An overview of our Summer of Code programs and our plans for this year can be found on the [RSoC](/rsoc) page.
 Check out our [RSoC Proposal Guide](/rsoc-proposal-how-to) and [Project Suggestions](/rsoc-project-suggestions).
 
 ## [GitLab](https://gitlab.redox-os.org/redox-os/redox)
 
 A slightly more formal way of communication with fellow Redox devs, but a little less quick and convenient like the chat. Submit an issue when you run into problems compiling or testing. Issues can also be used if you would like to discuss a certain topic: be it features, code style, code inconsistencies, minor changes and fixes, etc.
 
-If you want to create an account, read this [page](https://doc.redox-os.org/book/signing-in-to-gitlab.html).
+If you want to create an account, read the [Signing in to GitLab](https://doc.redox-os.org/book/signing-in-to-gitlab.html) page.
 
 Once you create an issue don't forget to post the link on the Dev or Support rooms of the chat, because the GitLab email notifications have distractions (service messages or spam) and most developers don't left their GitLab pages open to receive desktop notifications from the web browser (which require a custom setting to receive issue notifications).
 

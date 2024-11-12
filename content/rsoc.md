@@ -7,7 +7,7 @@ To qualify, you must be a contributor to Redox or to a Redox-adjacent project, a
 
 You should propose a project that will take you approximately 8 weeks of full-time work to complete.
 You are expected to check in your code to GitLab regularly, to provide regular progress reports, and a final technical report in the form of a News post.
-Some project suggestions are included [here](/rsoc-project-suggestions/), but you can come up with your own proposal if you wish.
+Some project suggestions are included on the [RSoC Project Suggestions](/rsoc-project-suggestions/) page, but you can come up with your own proposal if you wish.
 
 The application process is informal.
 Please post a message in the [Summer of Code room](https://matrix.to/#/#redox-soc:matrix.org) indicating your interest and a description of what you hope to accomplish.

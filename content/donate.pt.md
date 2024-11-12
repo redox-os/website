@@ -19,7 +19,7 @@ Você pode doar para o Redox OS das seguintes formas:
 
 ## Loja
 
-Nós vendemos camisetas pela Teespring, você pode comprar [aqui](https://redox-os.creator-spring.com/).
+Nós vendemos camisetas pela Teespring, você pode comprar na [nossa loja na Teespring](https://redox-os.creator-spring.com/).
 
 Cada venda é uma doação para a Organização Sem Fins Lucrativos Redox OS.
 

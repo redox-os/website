@@ -6,6 +6,7 @@ Essa página contém perguntas e respostas para iniciantes e usuários comuns.
 
 - [O que é o Redox?](#o-que-%C3%A9-o-redox)
 - [O que Redox significa?](#o-que-redox-significa)
+- [O que é um microkernel?](#o-que-%C3%A9-um-microkernel)
 - [Quais funções o Redox possui?](#quais-fun%C3%A7%C3%B5es-o-redox-possui)
     - [Benefícios do Microkernel](#benefícios-do-microkernel)
     - [Benefícios da Rust](#benefícios-da-rust)
@@ -15,7 +16,7 @@ Essa página contém perguntas e respostas para iniciantes e usuários comuns.
 - [O que posso fazer com o Redox?](#o-que-posso-fazer-com-o-redox)
 - [O que é um sistema Unix-like?](#o-que-%C3%A9-um-sistema-unix-like)
 - [Como o Redox foi influenciado por outros sistemas?](#como-o-redox-foi-influenciado-por-outros-sistemas)
-- [O que é um microkernel?](#o-que-%C3%A9-um-microkernel)
+
 - [Quais programas o Redox executa?](#quais-programas-o-redox-executa)
 - [Como instalar programas no Redox?](#como-instalar-programas-no-redox)
 - [Quais são as variantes do Redox?](#quais-são-as-variantes-do-redox)
@@ -50,6 +51,12 @@ A versão 1.0 será lançada quando todas as APIs do sistema forem consideradas 
 
 Ele soa similar com Minix e Linux também.
 
+## O que é um microkernel?
+
+Um microkernel é um modelo para núcleo de sistema operacional com uma pequena quantidade de código executando no maior privilégio do processador, este modelo melhora a estabilidade e segurança, com um pequeno custo de desempenho.
+
+Você pode ler mais sobre isso na página [Microkernels](https://doc.redox-os.org/book/microkernels.html).
+
 ## Quais funções o Redox possui?
 
 ### Benefícios do Microkernel
@@ -70,7 +77,7 @@ O kernel é pequeno e muda muito pouco (correção de bugs), portanto você não
 
 A maioria dos componentes do sistema estão no espaço do usuário, simplificando os testes e depuração.
 
-Se você quiser ler mais sobre os benefícios citados acima, leia [esta](https://doc.redox-os.org/book/microkernels.html) página.
+Se você quiser ler mais sobre os benefícios citados acima, leia a página [Microkernels](https://doc.redox-os.org/book/microkernels.html).
 
 ### Benefícios da Rust
 
@@ -98,7 +105,7 @@ O suporte para segurança de concorrência nas linguagens de programmação C/C+
 
 Se um thread acessa um pedaço do estado ao mesmo tempo que outro thread está modificando, o programa todo pode exibir bugs confusos e bizarros.
 
-Você pode ver [este](https://en.wikipedia.org/wiki/Time_of_check_to_time_of_use) exemplo de uma categoria séria de bugs de segurança que a segurança de concorrência corrige.
+Você pode ver [este exemplo na Wikipedia](https://en.wikipedia.org/wiki/Time_of_check_to_time_of_use) de uma categoria séria de bugs de segurança que a segurança de concorrência corrige.
 
 Mas na Rust esse tipo de bug é fácil de evitar, o mesmo sistema de escrita que nos previne de escrever de forma insegura também nos previne de escrever padrões perigosos de acesso simultâneo.
 
@@ -182,12 +189,6 @@ O kernel monolítico mais avançado e o maior projeto de código-aberto do mundo
 
 O Redox tenta implementar as melhorias de desempenho do Linux em um design de microkernel.
 
-## O que é um microkernel?
-
-Um microkernel é um modelo para núcleo de sistema operacional com uma pequena quantidade de código executando no maior privilégio do processador, este modelo melhora a estabilidade e segurança, com um pequeno custo de desempenho.
-
-Você pode ler mais sobre [aqui](https://doc.redox-os.org/book/microkernels.html).
-
 ## Quais programas o Redox executa?
 
 O Redox é desenhado para ser compátivel-em-código com a maioria dos sistemas Unix, Linux e programas POSIX, necessitando apenas de compilação.
@@ -206,11 +207,11 @@ Softwares importantes que o Redox suporta:
 - GCC
 - LLVM
 
-Você pode ver todos os componentes do Redox e programas portados [aqui](https://static.redox-os.org/pkg/x86_64-unknown-redox/)
+Você pode ver todos os componentes do Redox e programas portados na [lista do servidor de compilação](https://static.redox-os.org/pkg/x86_64-unknown-redox/)
 
 ## Como instalar programs no Redox?
 
-O Redox tem um gerenciador de pacotes similar ao `apt` (Debian) e `pkg` (FreeBSD), você pode aprender a como utiliza-lo [aqui](https://doc.redox-os.org/book/pkg.html).
+O Redox tem um gerenciador de pacotes similar ao `apt` (Debian) e `pkg` (FreeBSD), você pode aprender a como utiliza-lo na página [Downloading packages with pkg](https://doc.redox-os.org/book/pkg.html).
 
 ## Quais são as variantes do Redox?
 
@@ -312,11 +313,11 @@ Leia as seguintes páginas:
 
 ## Como diagnosticar seu Redox em caso de erros
 
-Leia [essa](https://doc.redox-os.org/book/troubleshooting.html) página ou nos explique no [Chat](https://doc.redox-os.org/book/chat.html).
+Leia a página [Troubleshooting](https://doc.redox-os.org/book/troubleshooting.html) ou nos explique no [Chat](https://doc.redox-os.org/book/chat.html).
 
 ## Como reportar bugs para o Redox?
 
-Leia [essa](https://doc.redox-os.org/book/creating-proper-bug-reports.html) página e verifique as Issues no GitLab para ver se seu problema foi reportado por alguém.
+Leia a página [Creating Proper Bug Reports](https://doc.redox-os.org/book/creating-proper-bug-reports.html) e verifique as Issues no GitLab para ver se seu problema foi reportado por alguém.
 
 ## Como contribuir para o Redox?
 

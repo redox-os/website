@@ -13,4 +13,4 @@ Trying out Redox is very easy: just follow the instructions in the [Redox Book](
 
 ## Building Redox
 
-Building Redox from source code is supported on Linux, and may work on some other platforms, but is not currently supported on Windows. To build Redox read [this](https://doc.redox-os.org/book/podman-build.html) page.
+Building Redox from source code is supported on Linux, and may work on some other platforms, but is not currently supported on Windows. To build Redox read the [Building Redox](https://doc.redox-os.org/book/podman-build.html) page.
