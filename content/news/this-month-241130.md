@@ -43,7 +43,7 @@ Charlie Philips from Georgia Tech did a video tutorial teaching how to build the
 - Josh Megnauth fixed a multiplication overflow on the `setsockopt` function
 - Josh Megnauth fixed a buffer overrun when parsing DNS
 - Josh Megnauth removed unnecessary memory over-allocations and reallocations
-- Josh Megnauth fixed the return of exit-related functions
+- Josh Megnauth improved the generated C code for the return value of the `exit` functions
 - Josh Megnauth allowed `cbindgen` to emit C attributes
 - plimkilde implemented the `memmem()` function
 - plimkilde implemented the `iso686` function group and its tests
