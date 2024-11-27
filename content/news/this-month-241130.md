@@ -31,6 +31,7 @@ Charlie Philips from Georgia Tech did a video tutorial teaching how to build the
 
 - Jeremy Soller fixed a bug on MSI that allowed Meteor Lake CPUs to boot with USB keyboard support
 - Arthur Paulino refactored the `switch` function for extra clarity
+- Andrey Turkin changed the RISC-V PLIC compatible string from `riscv,plic0` to `sifive,plic-1.0.0`
 
 ## Driver Improvements
 
@@ -39,16 +40,47 @@ Charlie Philips from Georgia Tech did a video tutorial teaching how to build the
 ## Relibc Improvements
 
 - Josh Megnauth fixed a panic with programs or games using deprecated POSIX functions
+- Josh Megnauth fixed a multiplication overflow on the `setsockopt` function
+- Josh Megnauth fixed a buffer overrun when parsing DNS
+- Josh Megnauth removed unnecessary memory over-allocations and reallocations
+- Josh Megnauth fixed the return of exit-related functions
+- Josh Megnauth allowed `cbindgen` to emit C attributes
+- plimkilde implemented the `memmem()` function
+- plimkilde implemented the `iso686` function group and its tests
+- plimkilde added a test for errno constant macros
+- plimkilde allowed `ENOTSUP` to be available for Rust programs?
+- plimkilde added stubs for all missing functions from POSIX 2024
+- plimkilde removed an unnecessary intrinsic in calloc
+- plimkilde documented the `stdlib.h`, `crypt.h`, `elf.h`, `inttypes.h`, `pty.h`, `utmp.h`, `string.h`, `pwd.h`, `sys/random.h`, `sys/auxv.h` and `sys/file.h` function groups
+
+## Programs
+
+- bitst0rm fixed the libevent compilation
+- Josh Megnauth updated OpenJazz to the latest version and converted the recipe configuration to TOML
+- Amir Ghazanfari improved the Sodium file selection
 
 ## Testing Improvements
 
-Ron Williams created the [Benchmarks](https://gitlab.redox-os.org/redox-os/benchmarks) repository and recipe to store our performance data history to catch possible regressions.
+- Ron Williams fixed the CI of the Redox build system
+- Ron Williams created the [Benchmarks](https://gitlab.redox-os.org/redox-os/benchmarks) repository and recipe to store our performance data history to catch possible regressions
+
+## Build System Improvements
+
+- Ron Williams allowed the installer error handling to show the package name when a pre-built package can't be found on the Redox build server
+- Ron Williams added some recipes on the build server configuration to allow the `desktop` variant image to be created with downloaded pre-built packages
+- Ron Williams implemented the `source` value as an alternative for `recipe` when the `REPO_BINARY` environment variable is enabled, which removes confusion
+- Andrey Turkin fixed some linker warnings on the GCC fork
 
 ## Documentation Improvements
 
 - Ribbon explained the design and benefits of the Redox package management on the [Package Management](https://doc.redox-os.org/book/package-management.html) page
 - Ribbon fixed problems on the tutorial from the [From Nothing to Hello World](https://doc.redox-os.org/book/nothing-to-hello-world.html) page, please read the page again
+- Ribbon improved the [Security](https://doc.redox-os.org/book/security.html) page with more information
 - Ribbon improved the documentation for accessibility
+- Jeffrey Carter fixed the Raspberry Pi build instructions
+- Brandon Konkle removed all outdated references for the `vga=no` option
+- David Pfeiffer added a hardware report for the Lenovo Yoga S730-13IWL computer
+- Matthew Croughan added a hardware report for the HP Compaq NC6120 computer
 
 ## Join us on Matrix Chat
 
