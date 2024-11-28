@@ -55,7 +55,7 @@ Charlie Philips from Georgia Tech did a video tutorial teaching how to build the
 
 ## Programs
 
-- bitst0rm fixed the libevent compilation
+- bitstr0m fixed the libevent compilation
 - Ribbon successsfully compiled more Rust programs and demos
 - Josh Megnauth updated OpenJazz to the latest version and converted the recipe configuration to TOML
 - Amir Ghazanfari improved the Sodium file selection
