@@ -17,6 +17,55 @@ so consider not using the code if you are only buying one item).
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## Getting Funding to be a Redox Contributor
+
+If you are a current Redox contributor, or if you are a student who would like to contribute to Redox,
+there are opportunities for funding.
+
+[NLnet](https://nlnet.nl/) is an excellent organization, and the [NGI Zero Commons](https://nlnet.nl/commonsfund/)
+fund seems like a great fit for Redox.
+Up to 50,000 EUR is available per project.
+There should be a "European dimension" to your project,
+so if you are based in the EU, this might be a great opportunity for you.
+There's a new call for proposals on the 1st of every even numbered month.
+It takes about 5 months to get funding in place, so apply early.
+You can apply directly to the fund,
+but if you are a Redox contributor and would like our help with writing a proposal,
+please contact Ron Williams on Matrix.
+
+Redox currently has one project funded by NLnet's NGI Zero Core fund,
+and we have applied for two NGI Zero Commons projects to start this summer.
+However, if both proposals are accepted, we will need a second developer,
+so if you are a Redox kernel contributor and want to help,
+please contact Ron Williams on Matrix.
+The projects will run roughly from June 2025 to May 2026.
+
+Redox has a enough money to fund one or two projects, up to $5,000 each.
+We are looking for current Redox contributors who would like to help us with some of our priorities.
+The work can be done part-time as long as it is done in a reasonable timeframe.
+You must be eligible to receive funds from a US organization.
+Here are a few of our priorities, but we are open to anything that helps us get one step closer to a release.
+If you are already working on one of these,
+don't be afraid to ask about funding,
+or let us know if you would like to collaborate with someone who is funded.
+
+- Device drivers - ACPI, AML, GPU, USB, IOMMU, WiFi
+- Graphics and Web - Gtk, Qt, Wayland, WebKitGTK, SpiderMonkey
+- Redox as a Hypervisor - Podman, Docker, Buildah, FUSE, Linux-on-Redox
+- Database support - Filesystem improvements, MySQL, Postgres, MongoDB
+- Performance - Scheduler, Filesystem performance, Network stack performance
+
+If you are a student or new graduate, we are planning to have our Redox Summer of Code (RSoC) program again in 2025.
+It's **too early** to apply for that,
+however, if you are not able to participate in the summer but would like to do a project sooner than that,
+please let us know.
+We are looking for projects from 6 to 10 weeks in duration,
+and you must be eligible to receive funds from a US organization.
+Feel free to bring your own ideas, but here are a few suggestions.
+
+- Testing Redox - Performance, compliance, CI, test management
+- Porting Linux/POSIX programs - add more POSIX functionality, port popular libraries, write a porting guide
+- Web server support - NodeJS, Database support
 ## Redox On Redox
 
 Andrey Turkin executed the RISC-V version of Redox Server from the [RVVM](https://github.com/LekKit/RVVM) RISC-V emulator running on the x86-64 version of Redox Desktop!! And thanks again to LekKit for the awesome emulator!
