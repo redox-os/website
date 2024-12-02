@@ -10,6 +10,8 @@ written in Rust. November was a very exciting month for Redox! Here's all the la
 ## Donate to Redox
 
 If you would like to support Redox, please consider donating or buying some merch!
+Use code REDOX2025 at checkout for 15% off (it comes out of Redox's share of the profit,
+so consider not using the code if you are only buying one item).
 
 - [Donate](https://www.redox-os.org/donate/)
 - [Patreon](https://www.patreon.com/redox_os)
@@ -17,7 +19,7 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## Redox On Redox
 
-Andrey Turkin executed the RISC-V version of Redox Server from the [RVVM](https://github.com/LekKit/RVVM) RISC-V emulator running on the x86-64 version of Redox Desktop!!
+Andrey Turkin executed the RISC-V version of Redox Server from the [RVVM](https://github.com/LekKit/RVVM) RISC-V emulator running on the x86-64 version of Redox Desktop!! And thanks again to LekKit for the awesome emulator!
 
 <a href="/img/screenshot/redox-on-redox.png"><img class="img-responsive" alt="Redox On Redox" src="/img/screenshot/redox-on-redox.png"/></a>
 
@@ -63,13 +65,13 @@ Charlie Philips from Georgia Tech did a video tutorial teaching how to build the
 ## Testing Improvements
 
 - Ron Williams fixed the CI of the Redox build system
-- Ron Williams created the [Benchmarks](https://gitlab.redox-os.org/redox-os/benchmarks) repository and recipe to store our performance data history to catch possible regressions
+- Ron Williams created the [Benchmarks](https://gitlab.redox-os.org/redox-os/benchmarks) repository and recipe to measure and record our performance data history. More tests are needed, please feel free to add.
 
 ## Build System Improvements
 
 - Ron Williams allowed the installer error handling to show the package name when a pre-built package can't be found on the Redox build server
 - Ron Williams added some recipes on the build server configuration to allow the `desktop` variant image to be created with downloaded pre-built packages
-- Ron Williams implemented the `source` value as an alternative for `recipe` when the `REPO_BINARY` environment variable is enabled, which removes confusion
+- Ron Williams implemented the `"source"` value as an alternative for `"recipe"` in the filesystem config files when the `REPO_BINARY` environment variable is enabled, to reduce confusion
 - Andrey Turkin fixed some linker warnings on the GCC fork
 
 ## Documentation Improvements
