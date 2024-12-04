@@ -24,11 +24,11 @@ there are opportunities for funding.
 
 [NLnet](https://nlnet.nl/) is an excellent organization, and the [NGI Zero Commons](https://nlnet.nl/commonsfund/)
 fund seems like a great fit for Redox.
-Up to 50,000 EUR is available per project.
+Up to 50,000 EUR is available for a first project.
 There should be a "European dimension" to your project,
 so if you are based in the EU, this might be a great opportunity for you.
 There's a new call for proposals on the 1st of every even numbered month.
-It takes about 5 months to get funding in place, so apply early.
+It can take about 5 months to get funding in place, so apply early.
 You can apply directly to the fund,
 but if you are a Redox contributor and would like our help with writing a proposal,
 please contact Ron Williams on Matrix.
@@ -66,6 +66,7 @@ Feel free to bring your own ideas, but here are a few suggestions.
 - Testing Redox - Performance, compliance, CI, test management
 - Porting Linux/POSIX programs - add more POSIX functionality, port popular libraries, write a porting guide
 - Web server support - NodeJS, Database support
+
 ## Redox On Redox
 
 Andrey Turkin executed the RISC-V version of Redox Server from the [RVVM](https://github.com/LekKit/RVVM) RISC-V emulator running on the x86-64 version of Redox Desktop!! And thanks again to LekKit for the awesome emulator!
