@@ -31,7 +31,7 @@ There's a new call for proposals on the 1st of every even numbered month.
 It can take about 5 months to get funding in place, so apply early.
 You can apply directly to the fund,
 but if you are a Redox contributor and would like our help with writing a proposal,
-please contact Ron Williams on Matrix.
+please contact Ron Williams on [Matrix Chat](https://matrix.to/#/#redox-join:matrix.org).
 
 Redox currently has one project funded by NLnet's NGI Zero Core fund,
 and we have applied for two NGI Zero Commons projects to start this summer.
@@ -66,6 +66,12 @@ Feel free to bring your own ideas, but here are a few suggestions.
 - Testing Redox - Performance, compliance, CI, test management
 - Porting Linux/POSIX programs - add more POSIX functionality, port popular libraries, write a porting guide
 - Web server support - NodeJS, Database support
+
+## COSMIC Alpha 4
+
+COSMIC Desktop has just released [Alpha 4](https://blog.system76.com/post/cosmic-alpha-4)!
+Redox includes COSMIC Editor, Files, Terminal and Store,
+and the Redox nightly build has all the latest improvements.
 
 ## Redox On Redox
 
