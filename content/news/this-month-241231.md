@@ -5,7 +5,7 @@ date = "2024-12-31"
 +++
 
 Redox OS is a Unix-like general-purpose microkernel-based operating system
-written in Rust. (Month) was a very exciting month for Redox! Here's all the latest news.
+written in Rust. December was a very exciting month for Redox! Here's all the latest news.
 
 ## Donate to Redox
 
@@ -17,7 +17,7 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## Self-Hosting Improvements
 
-Anhad Sigh successfully compiled GNU Bash with dynamic linking, this is one part of the goals to allow more programs to work on Redox and dynamically link relibc to speed up the Redox development.
+Anhad Singh successfully compiled GNU Bash with dynamic linking, this is one part of the goals to allow more programs to work on Redox and dynamically link relibc to speed up the Redox development.
 
 ## Relibc Improvements
 
