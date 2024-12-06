@@ -17,7 +17,7 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## Self-Hosting Improvements
 
-Anhad Singh successfully compiled GNU Bash with dynamic linking, this is one part of the goals to allow more programs to work on Redox and dynamically link relibc to speed up the Redox development.
+Anhad Singh successfully compiled GCC, GNU Binutils, GNU Make and GNU Bash with dynamic linking, this is one part of the goals to allow more programs to work on Redox and dynamically link relibc to speed up the Redox development.
 
 ## Relibc Improvements
 
