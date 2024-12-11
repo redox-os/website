@@ -57,7 +57,7 @@ and fits within the scope of one of their funds, consider applying.
 
 For the Redox Signals project, we are re-working our implementation of
 [Signals](https://pubs.opengroup.org/onlinepubs/9799919799/basedefs/signal.h.html),
-used by [kill(2)](https://pubs.opengroup.org/onlinepubs/9799919799/functions/kill.html)
+used by [`kill()`](https://pubs.opengroup.org/onlinepubs/9799919799/functions/kill.html)
 among other things, to more closely align with Unix behavior.
 We are also reducing the kernel footprint for supporting Signals,
 moving such things as stack manipulation into userspace.
@@ -89,6 +89,8 @@ The POSIX standard has existed since 1988, and has evolved, with half a dozen or
 with (more recently) each new version including
 a suffix for the year the standard was approved.
 The most recent version is POSIX.1-2024.
+The standard is broken into sections,
+and systems may be compliant with one section of the standard but might not implement another section.
 
 The standard is maintained by the [Austin Group](https://www.opengroup.org/austin/),
 and is administered jointly by [The Open Group](https://www.opengroup.org/)
@@ -100,6 +102,7 @@ In general, as the standard evolves, some APIs, structs and constant definitions
 are first deprecated in one release of the standard,
 and then eventually removed in a subsequent release.
 POSIX.1-2024 has added new functionality in some areas,
+and made some extensions mandatory,
 but most of the changes to Signals have been deletion of obsolete and previously deprecated items.
 
 ### The Open Group Tests
@@ -193,16 +196,47 @@ Quoting from their overview:
 >- Functional tests try to use the interfaces in real-world scenarios, and cover behavior that is reasonably expected, if not specifically called out, in the POSIX spec.
 >- Stress tests put the interfaces through the paces by using large numbers of system objects, or large amounts of data, or under external conditions such as low memory or high CPU utilization.
 >- Performance tests attempt to benchmark the performance of interfaces or sets of interfaces for comparison of implementations.
->- Speculative tests arise when the POSIX spec is unclear about a certain behavior where differences in implementations can affect the application. These tests attempt to expose differences in implementations so that they can be tracked and the behaviors can be compared for consistency across revisions. 
+>- Speculative tests arise when the POSIX spec is unclear about a certain behavior where differences in implementations can affect the application. These tests attempt to expose differences in implementations so that they can be tracked and the behaviors can be compared for consistency across revisions.
 
-### Sortix Tests
+### libc-test from musl
+
+[musl](https://musl.libc.org/) is a very popular "from scratch" implementation of the C standard library,
+[libc](https://en.wikipedia.org/wiki/C_standard_library).
+It uses a permissive MIT license.
+
+Quoting from their website,
+> **musl** is *lightweight, fast, simple, free,* and strives to be *correct* in the sense of standards-conformance and safety.
+
+libc, like Unix, is governed by standards.
+There is and ISO standard for libc, and a POSIX standard for libc, and they are not the same.
+musl conforms to a combination of the ISO and the POSIX standards,
+and adds some common extensions.
+
+musl has a set of tests called [libc-test](https://wiki.musl-libc.org/libc-test).
+These tests are also MIT licensed.
+The tests cover definitions, functionality, and some regression tests.
+They are primarily a test of the library,
+and have only limited testing of runtime services
+(on Linux, these would be system calls).
+They use custom macros to reduce boilerplate code,
+but it makes the tests less obvious to someone unfamiliar with the macros.
+
+libc-test has not been updated for POSIX.1-2024 yet.
+At some point, musl will need to work with POSIX.1-2024,
+and I expect that the tests will be updated.
+I hope that they can benefit from some of the work on runtime service testing described below,
+which has compatible licensing and coverage of areas not already covered by libc-test.
+
+### os-test from Sortix
 
 [Sortix](https://sortix.org/) is a from-scratch implementation of a POSIX operating system.
 The principal developer is Jonas 'Sortie' Termansen.
 As part of the effort,
-Jonas has developed a collection of POSIX.1-2024
-[conformance tests](https://sortix.org/os-test/),
+Jonas has developed a collection of POSIX.1-2024 conformance tests called
+[os-test](https://sortix.org/os-test/),
 with coverage for `io`, `malloc`, `signal` and `udp`.
+`os-test` uses the permissive ISC license,
+which is compatible with the MIT license.
 
 The tests are nice and straightforward, with no fancy configuration or macros,
 and the tests can be run from the Makefile.
@@ -222,7 +256,7 @@ so the Redox team had already completed
 the bulk of coding our tests when that work became available.
 I have been in touch with Jonas, and we're hoping that we can collaborate in future.
 
-### What Redox is Doing
+### What Redox is doing
 
 Redox has its own implementation of `libc`, called `relibc`.
 Relibc is written primarily in Rust,
