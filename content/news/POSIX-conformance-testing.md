@@ -208,7 +208,7 @@ Quoting from their website,
 > **musl** is *lightweight, fast, simple, free,* and strives to be *correct* in the sense of standards-conformance and safety.
 
 libc, like Unix, is governed by standards.
-There is and ISO standard for libc, and a POSIX standard for libc, and they are not the same.
+There is an ISO standard for libc, and a POSIX standard for libc, and they are not the same.
 musl conforms to a combination of the ISO and the POSIX standards,
 and adds some common extensions.
 
