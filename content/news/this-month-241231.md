@@ -70,17 +70,15 @@ Read his [report on the work so far](/news/01_rsoc2024_dynamic_linker).
 
 ## VirtIO Improvements
 
-- bjorn3 improved the VirtIO-GPU driver to allow Redox guest video size to follow the QEMU window size on the host system
-- bjorn3 implemented window resizing support using VirtIO-GPU
-Bjorn3 has been working on improvements to VirtIO-GPU.
+bjorn3 has been working on improvements to the VirtIO-GPU driver.
 
-He has improved the GPU driver to allow Redox guest video size to follow the QEMU window size on the host system.
+He has improved the driver to allow Redox guest video size to follow the QEMU window size on the host system.
 
 Currently it only use the window size before boot, post-boot window resizing will be implemented soon.
 
-He fixed a crash on the VirtIO-GPU driver when multiple displays are attached.
+He fixed a crash on the driver when multiple displays are attached.
 
-He also fixed a memory bug and improved the VirtIO-GPU driver performance.
+He also fixed a memory bug and improved the driver performance.
 
 Here is his [tracking issue for the work in progress](https://gitlab.redox-os.org/redox-os/redox/-/issues/1428).
 
