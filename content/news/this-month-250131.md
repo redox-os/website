@@ -17,7 +17,7 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## LOVE on Redox
 
-Jeremy Soller ported the LOVE game engine to Redox, to achieve this he did the following tasks:
+Jeremy Soller ported the [LOVE](https://www.love2d.org/) game engine to Redox, to achieve this he did the following tasks:
 
 - Ported the libmodplug, libtheora, and openal-soft libraries
 - Fixed bugs and implemented some functions in relibc
