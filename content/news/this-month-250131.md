@@ -38,6 +38,7 @@ You can see the Balatro game running on Redox below:
 - Guillaume Gielly refactored the `strftime()` function to use the `langinfo` constants
 - Darley Barreto implemented the `tzset` function
 - Darley Barreto implemented timezone awareness
+- Jeremy Soller implemented the `setlinebuf()` function
 
 ## Programs
 
