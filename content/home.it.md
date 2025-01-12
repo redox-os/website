@@ -5,31 +5,35 @@ url = "home"
 <div class="row install-row">
   <div class="col-md-8">
     <p class="pitch">
-      <b>Redox</b> è un Sistema Operativo Unix-like scritto in <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>,
-      con l'obiettivo di portare le innovazioni di Rust in un microkernel moderno ed in un pacchetto completo di applicazioni.
+      <b>Redox</b> è un sistema operativo general-purpose <a style="color: inherit;" href="https://en.wikipedia.org/wiki/Unix-like"><b>Unix-like</b></a> basato su un microkernel scritto in <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>,
+      con l'obiettivo di portare le innovazioni di Rust in un microkernel moderno ed in un pacchetto completo di applicazioni e di essere un'alternativa completa a Linux e BSD.
     </p>
   </div>
   <div class="col-md-4 install-box">
     <br/>
-    <a class="btn btn-primary" href="https://gitlab.redox-os.org/redox-os/redox/tags">Versioni Rilasciate</a>
-    <a class="btn btn-default" href="https://gitlab.redox-os.org/redox-os/redox/">Vedi su GitLab</a>
+    <a class="btn btn-primary" href="/quickstart/">Guida rapida</a>
+    <a class="btn btn-default" href="https://gitlab.redox-os.org/redox-os/redox/">GitLab</a>
   </div>
 </div>
 <div class="row features">
   <div class="col-md-6">
     <ul class="laundry-list" style="margin-bottom: 0px;">
-      <li>Implementato in Rust</li>
-      <li>Architettura Microkernel</li>
-      <li>Include una GUI facoltativa - Orbital</li>
-      <li>Supporta la Rust Standard Library</li>
+      <li>Ispirato da <a href="http://9p.io/plan9/index.html">Plan 9</a>, <a href="http://www.minix3.org/">Minix</a>, <a href="https://sel4.systems/">seL4</a>, <a href="https://en.wikipedia.org/wiki/Berkeley_Software_Distribution">BSD</a> e <a href="https://www.kernel.org/">Linux</a></li>
+      <li>Implementato in <a href="https://www.rust-lang.org/">Rust</a></li>
+      <li>Design a <a href="https://doc.redox-os.org/book/microkernels.html">Microkernel</a></li>
+      <li>Include una GUI opzionale - <a href="https://doc.redox-os.org/book/graphics-windowing.html#orbital">Orbital</a></li>
+      <li>Compatibilità <a href="https://en.wikipedia.org/wiki/POSIX">POSIX</a> parziale</li>
+      <li><a href="https://doc.redox-os.org/book/programs-libraries.html">Compatibilità codice sorgente</a> con i programmi Linux/BSD</li>
     </ul>
   </div>
   <div class="col-md-6">
     <ul class="laundry-list">
-      <li>Sotto licenza MIT</li>
-      <li>Driver eseguiti nello spazio utente</li>
-      <li>Include i comuni comandi Unix</li>
-      <li>libc customizzata scritta in Rust (relibc)</li>
+      <li>Sotto licenza <a href="https://en.wikipedia.org/wiki/MIT_License">MIT</a></li>
+      <li>Supporta la <a href="https://doc.rust-lang.org/std/">Rust Standard Library</a></li>
+      <li>I <a href="https://doc.redox-os.org/book/drivers.html">Driver</a> sono eseguiti nello Userspace</li>
+      <li>Include <a href="https://doc.redox-os.org/book/system-tools.html">tool</a> Unix/Linux comuni</li>
+      <li><a href="https://en.wikipedia.org/wiki/C_standard_library">Libreria C</a> custom scritta in Rust (<a href="https://gitlab.redox-os.org/redox-os/relibc/">relibc</a>)</li>
+      <li>Vedi <a href="/screens/">Redox in azione</a></li>
     </ul>
   </div>
 </div>
@@ -51,3 +55,4 @@ url = "home"
     </a>
   </div>
 </div>
+<a rel="me" href="https://fosstodon.org/@redox"></a>
