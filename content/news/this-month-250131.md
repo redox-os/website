@@ -28,21 +28,41 @@ You can see the Balatro game running on Redox below:
 
 <a href="/img/screenshot/balatro-gameplay.png"><img class="img-responsive" alt="Balatro Gameplay" src="/img/screenshot/balatro-gameplay.png"/></a>
 
+## Toolchain Upgrade
+
+The Rust compiler version was updated from 1.80 to 1.86 to fix many programs.
+
+## Kernel Improvements
+
+- Anhad Singh fixed the chunk size of the `ITimer` scheme
+
+## System Improvements
+
+- Ron Williams updated the `ptyd` daemon to use the latest version of the `redox-scheme` library
+- Anhad Singh implemented dynamic linking support on the `liborbital` library
+
 ## Relibc Improvements
 
 - Anhad Singh improved the dynamic linker performance up to 1000%
 - Anhad Singh fixed undefined behavior on the error handling
+- Anhad Singh fixed the dynamic linker's copy relocations
+- Anhad Singh implemented `DT_RELR` on the dynamic linker
+- Anhad Singh fixed the dynamic linker multi-threading
 - Bendeguz Pisch implemented the `sigsetjmp` function
 - Bendeguz Pisch implemented the `siglongjmp` function
 - Guillaume Gielly implemented the `langinfo.h` function group
 - Guillaume Gielly refactored the `strftime()` function to use the `langinfo` constants
 - Darley Barreto implemented the `tzset` function
 - Darley Barreto implemented timezone awareness
+- Josh Megnauth implemented the support for arguments on shebangs
 - Jeremy Soller implemented the `setlinebuf()` function
 
-## Programs
+## Networking Improvements
 
-libmodplug, libtheora, and openal-soft
+- Guillaume Gielly fixed the DHCP server identifier
+- Guillaume Gielly fixed the time calculation of the `ping` tool
+
+## Programs
 
 - Jeremy Soller ported the LOVE game engine
 - Jeremy Soller ported the libmodplug library
@@ -50,9 +70,15 @@ libmodplug, libtheora, and openal-soft
 - Jeremy Soller ported the openal-soft library
 - Josh Megnauth improved the portability of GNU programs
 - Josh Megnauth simplified the GNU Make recipe configuration
+- Josh Megnauth partially ported the Boost library
+- Anhad Singh ported the [patchelf](https://github.com/NixOS/patchelf) tool
 
 ## Build System Improvements
 
+- Anhad Singh implemented the support for dynamic linking on Cookbook
+- Anhad Singh implemented a switch to enable/disable static linking
+- Anhad Singh implemented a recipe data type (`shared-deps`) for dynamically linked libraries
+- Ron Williams fixed a toolchain desynchronization
 - Daniel Axtens fixed the bootstrapping on Ubuntu 24.04
 
 ## Documentation Improvements
@@ -60,6 +86,7 @@ libmodplug, libtheora, and openal-soft
 - Ron Williams implemented a test for unused pages on the Redox book
 - Ron Williams improved the chat documentation
 - Ribbon added guides about how to contribute and do development on the README of the system components for people that access their repositories and forget to read the Redox book
+- Andrew Lygin fixed typos on the book
 
 ## How To Test The Changes
 
