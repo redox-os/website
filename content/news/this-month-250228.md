@@ -29,15 +29,16 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## Relibc Improvements
 
-
+- plimkilde documented the unistd.h function group
 
 ## Programs
 
-
+- Anhad Singh converted the PrBoom and terminfo recipes to TOML
 
 ## Build System Improvements
 
-
+- Anhad Singh fixed the Cookbook runtime dependencies support
+- Ron Williams updated the Cookbook dependencies to the latest version
 
 ## Documentation Improvements
 
