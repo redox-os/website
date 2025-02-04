@@ -118,6 +118,11 @@ To test the changes of this month download the `server` or `desktop` variants of
 - If you want to test in a virtual machine use the "harddrive" images
 - If you want to test on real hardware use the "livedisk" images
 
+Read the following pages to learn how to use the images in a virtual machine or real hardware:
+
+- [Running Redox in a virtual machine](https://doc.redox-os.org/book/running-vm.html)
+- [Running Redox on real hardware](https://doc.redox-os.org/book/real-hardware.html)
+
 Sometimes the daily images are outdated and you need to build Redox from source.
 For instructions on how to do this, read the [Building Redox](https://doc.redox-os.org/book/podman-build.html) page.
 
