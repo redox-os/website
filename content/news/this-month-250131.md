@@ -126,16 +126,13 @@ For instructions on how to do this, read the [Building Redox](https://doc.redox-
 If you want to contribute, give feedback or just listen in to the conversation,
 join us on [Matrix Chat](https://matrix.to/#/#redox-join:matrix.org).
 
-<!--
 ## Discussion
 
 Here are some links to discussion about this news post:
 
-- [Fosstodon @redox]()
-- [Fosstodon @soller]()
-- [Patreon]()
-- [Phoronix]()
-- [Reddit /r/redox]()
-- [Reddit /r/rust]()
-- [X/Twitter @redox_os]()
--->
+- [Fosstodon @redox](https://fosstodon.org/@redox/113946345608075943)
+- [Fosstodon @soller](https://fosstodon.org/@soller/113946343181557832)
+- [Patreon](https://www.patreon.com/posts/121495184)
+- [Reddit /r/redox](https://www.reddit.com/r/Redox/comments/1ihkan9/this_month_in_redox_os_january_2025/)
+- [Reddit /r/rust](https://www.reddit.com/r/rust/comments/1ihkbaa/this_month_in_redox_os_january_2025/)
+- [X/Twitter @redox_os](https://x.com/redox_os/status/1886800124350976067)
