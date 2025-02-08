@@ -105,8 +105,7 @@ Jeremy Soller enabled the ARM64 [packages](https://static.redox-os.org/pkg/aarch
 - Andrey Turkin sent the first batch of patches to implement the `riscv64gc-unknown-redox` triple on the Rust compiler fork of Redox
 - Andrey Turkin implemented the RISC-V target on the build system
 - Andrey Turkin added RISC-V code on most user-space components
-- Jeremy Soller enabled the [RISC-V toolchain](https://static.redox-os.org/toolchain/riscv64gc-unknown-redox/)
-- Jeremy Soller enabled [RISC-V packages](https://static.redox-os.org/pkg/riscv64gc-unknown-redox/) on the build server
+- Jeremy Soller enabled the [RISC-V toolchain](https://static.redox-os.org/toolchain/riscv64gc-unknown-redox/) and [RISC-V packages](https://static.redox-os.org/pkg/riscv64gc-unknown-redox/) on the build server
 
 ## Package Improvements
 
@@ -115,7 +114,6 @@ We finally enabled the `pkgar` package format by default and dropped the `tar.gz
 If you want to know all features of the `pkgar` package format please read the [pkgar introduction](https://www.redox-os.org/news/pkgar-introduction/) news post.
 
 ## Programs and Porting
-
 
 - LekKit ported the [RVVM](https://github.com/LekKit/RVVM) RISC-V emulator to Redox. Thanks LekKit!
 - bitstr0m ported LuaJIT

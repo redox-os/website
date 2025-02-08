@@ -58,11 +58,11 @@ It's a first step to test the compilation of more complex programs inside of Red
 
 ## Kernel Improvements
 
-Andrey Turkin improved the ARM64 code on the kernel, and fixed some of the debug code.
+- Andrey Turkin improved the ARM64 code on the kernel, and fixed some of the debug code.
 
 ## UEFI Improvements
 
-bjorn3 fixed a violation of the UEFI specification (calling runtime services with interrupts enabled) and added workarounds for buggy firmware.
+- bjorn3 fixed a violation of the UEFI specification (calling runtime services with interrupts enabled) and added workarounds for buggy firmware.
 
 These changes will allow more computers to boot Redox.
 
@@ -80,7 +80,7 @@ These changes will allow more computers to boot Redox.
 
 ## Relibc Improvements
 
-- 4lDO2 moved the POSIX singals implementation from the kernel to relibc and added stubs for the `setresuid` and `setresgid` functions.
+- 4lDO2 moved the POSIX signals implementation from the kernel to relibc and added stubs for the `setresuid` and `setresgid` functions.
 - The contributor Derick Eddington fixed four incorrectness bugs on relibc.
 - The contributor plimkilde refactored the `rand48` functions to reduce unsafe code.
 - plimkilde improved the `random_bool()` function by adding the missing modulo.

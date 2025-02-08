@@ -106,7 +106,7 @@ Charlie Philips from Georgia Tech did a video tutorial teaching how to build the
 - plimkilde implemented the `memmem()` function
 - plimkilde implemented the `iso686` function group and its tests
 - plimkilde added a test for errno constant macros
-- plimkilde allowed `ENOTSUP` to be available for Rust programs?
+- plimkilde allowed `ENOTSUP` to be available for Rust programs
 - plimkilde added stubs for all missing functions from POSIX 2024
 - plimkilde removed an unnecessary intrinsic in calloc
 - plimkilde documented the `stdlib.h`, `crypt.h`, `elf.h`, `inttypes.h`, `pty.h`, `utmp.h`, `string.h`, `pwd.h`, `sys/random.h`, `sys/auxv.h` and `sys/file.h` function groups

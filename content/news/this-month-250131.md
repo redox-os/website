@@ -61,8 +61,7 @@ The Rust compiler version was updated from 1.80 to 1.86 to fix many programs.
 - Anhad Singh fixed the dynamic linker's copy relocations
 - Anhad Singh implemented `DT_RELR` on the dynamic linker
 - Anhad Singh fixed the dynamic linker multi-threading
-- Bendeguz Pisch implemented the `sigsetjmp` function
-- Bendeguz Pisch implemented the `siglongjmp` function
+- Bendeguz Pisch implemented the `sigsetjmp` and `siglongjmp` functions
 - Guillaume Gielly implemented the `langinfo.h` function group
 - Guillaume Gielly refactored the `strftime()` function to use the `langinfo` constants
 - Darley Barreto implemented the `tzset` function

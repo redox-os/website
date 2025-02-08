@@ -158,10 +158,10 @@ and we hope to use it with our web server when we have one ready.
 
 We've added several new features to the build system, including:
 
-- speeding up cloning Redox
-- making it easier to produce either "debug" or "release" versions of Cargo programs
-- optionally making errors non-fatal when building large numbers of packages
-- making RUST_BACKTRACE more useful
+- Speeding up cloning Redox
+- Making it easier to produce either "debug" or "release" versions of Cargo programs
+- Optionally making errors non-fatal when building large numbers of packages
+- Making RUST_BACKTRACE more useful
 
 ## Documentation
 
@@ -176,9 +176,9 @@ Some key areas of interest for the summer are:
 
 - Redox as a web server
 - USB/HID support
-- performance profiling and improvement
-- more and better automated testing
-- more porting of Linux apps and building out relibc and kernel compatibility features
+- Performance profiling and improvements
+- More and better automated testing
+- More porting of Linux apps and building out relibc and kernel compatibility features
 
 We are super appreciative for all our contributors and the hard work they are putting in.
 Consider joining in the fun on our [Matrix Chat](https://doc.redox-os.org/book/chat.html)!

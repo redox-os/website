@@ -60,8 +60,7 @@ Read his [report on the work so far](/news/01_rsoc2024_dynamic_linker).
 - bjorn3 did many improvements and cleanup on video drivers
 - bjorn3 did many refactorings on the graphics and input subsystems
 - bjorn3 migrated all video drivers to the `redox-scheme` library
-- bjorn3 created the `driver-graphics` library to unify code
-- bjorn3 created the `graphics-ipc` library to unify code
+- bjorn3 created the `driver-graphics` and `graphics-ipc` libraries to unify code
 - bjorn3 reduced the `fbcond` daemon and created the `fbbootlogd` daemon to fix boot deadlocks
 - bjorn3 removed blocking on any graphics driver
 - bjorn3 updated the `redox-scheme` library version
@@ -100,12 +99,10 @@ Here is his [tracking issue for the work in progress](https://gitlab.redox-os.or
 - Josh Megnauth fixed the shebang implementation
 - Josh Megnauth implemented missing structs on `netinet.h` function group
 - Josh Megnauth implemented the `stdnoreturn.h` function group
-- bitstr0m implemented the `cpio.h` function group
-- bitstr0m implemented the `glob.h` function group
-- Guillaume Gielly implemented the `tar.h` function group
-- Guillaume Gielly implemented the `monetary.h` function group
+- bitstr0m implemented the `cpio.h` and `glob.h` function group
+- Guillaume Gielly implemented the `tar.h` and `monetary.h` function groups
 - Guillaume Gielly implemented the `strfmon()` function
-- Darley Barreto implemented the missing functions on the `string.h` function group
+- Darley Barreto implemented missing functions on the `string.h` function group
 - Ron Williams fixed the `popen()` function and fixed/improved its tests
 - plimkilde reimplemented the `memcpy()` function using slices instead of raw pointers, fixed unaligned read/write and added a test
 - plimkilde added TODOs for the remaining POSIX functions

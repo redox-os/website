@@ -33,7 +33,7 @@ First impressions are important, and we continue to do our best to improve the R
 
 ## System Improvements
 
-bjorn3 updated most system components to use the new scheme path format, as we continue to move towards POSIX-compatible paths. 
+- bjorn3 updated most system components to use the new scheme path format, as we continue to move towards POSIX-compatible paths. 
 
 ## Relibc Improvements
 

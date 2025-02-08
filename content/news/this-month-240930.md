@@ -65,14 +65,15 @@ After completing the release, several pending and new kernel improvements were m
 ## USB Improvements
 
 Tim Finnegan is continuing to work on USB xHCI, and trying to bring it into compliance with both the standard and the behavior of real hardware. 
+
 He has also improved the documentation of the xHCI driver.
 
 ## Relibc Improvements
 
 - 4lDO2 merged the support for real-time POSIX signals
 - The `endian` function was implemented
-- `poll`  was improved to follow the Linux system call behavior more accurately
-- When translating paths that don't have an explicit scheme, the ability to choose the default scheme was added (usually "/scheme/file" or "/scheme/initfs")
+- The `poll` system call was improved to follow the Linux behavior more accurately
+- The ability to choose the default scheme was implemented (when translating paths that don't have an explicit scheme, usually "/scheme/file" or "/scheme/initfs")
 - 4lDO2 changed the PAL (POSIX Abstraction Layer) component to use Rusty error handling. This means that the interface to both Redox and Linux stays in safe Rust as long as possible, pushing the C-style error handling into the interface layers.
 - 4lDO2 moved `umask` to a regular global variable
 - 4lDO2 added a test for the `sigaltstack` function
@@ -104,7 +105,7 @@ The hope is that QEMU will be ported soon.
 
 ## CI Improvements
 
-4lDO2 added support for kernel unit tests in CI. For real QEMU-based CI testing, Redoxer will need to be fixed.
+- 4lDO2 added support for kernel unit tests in CI. For real QEMU-based CI testing, Redoxer will need to be fixed.
 
 ## Podman By Default
 
