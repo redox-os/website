@@ -21,7 +21,7 @@ Matrix has several different clients. [Element](https://element.io/) is a common
 
 If you have problems with Element, try [Fractal](https://gitlab.gnome.org/World/fractal).
 
-- Join the [Join Requests](https://matrix.to/#/#redox-join:matrix.org) room and don't forget to request an invite to the Redox Matrix space.
+- Join the [Join Requests](https://matrix.to/#/#redox-join:matrix.org) room and send a message requesting for an invite to the Redox Matrix space (the purpose of this is to avoid spam and bots).
 - #redox-join:matrix.org (Use this Matrix room address if you don't want to use the external Matrix link)
 
 (We recommend that you leave the "Join Requests" room after your entry on Redox space)

@@ -22,7 +22,7 @@ O Element funciona em navegadores web, Linux, MacOSX, Windows, Android e iOS.
 
 Caso tenha problemas com o Element, teste o [Fractal](https://gitlab.gnome.org/World/fractal).
 
-- Entre na sala [Join Requests](https://matrix.to/#/#redox-join:matrix.org) e não esqueça de solicitar um convite para o espaço do Redox.
+- Entre na sala [Join Requests](https://matrix.to/#/#redox-join:matrix.org) e envie uma mensagem solicitando um convite para o espaço do Redox (o propósito disso é para evitar spam e bots).
 - #redox-join:matrix.org (Use esse endereço de sala do Matrix caso não queira utilizar o link externo do Matrix)
 
 (Nós recomendamos que você saia da sala "Join Requests" depois de entrar no espaço do Redox)
