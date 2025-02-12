@@ -32,7 +32,7 @@ You cand find more information on the [Chat](https://doc.redox-os.org/book/chat.
 
 ## [Discord](https://discord.gg/JfggvrHGDY)
 
-We have a Discord server as an alternative for Matrix.
+We have a Discord server as an alternative for Matrix, open the #join-requests channel and send a message requesting to be a member (the purpose of this is to avoid spam and bots)
 
 (The Matrix messages are sent to Discord and the Discord messages are sent to Matrix, using a bot)
 
