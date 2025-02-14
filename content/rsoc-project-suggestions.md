@@ -23,16 +23,19 @@ The large projects require full-time participation, and you must indicate your c
 
 ## Medium-to-Large Scalable Projects, good Rust knowledge
 
-- Port a written-in-Rust web server to Redox. Get Redox to run in a VM (e.g. QEMU) on a cloud server, and enable Redox's website to be self-hosted. Improve the end-to-end performance of the server.
 - Improve Redox's automated testing suite and continuous integration testing processes.
 - Port a variety of Linux applications to Redox. This involves implementing functions in our libc alternative, "relibc" and possibly porting some GUI functionality. It may require working with Makefiles and C/C++ code as well.
-- Create a System Health profiling library, a GUI and a command-line interface to display activity levels for Redox's daemons and drivers.
-- Perform a "survivability analysis" of Redox - What tasks can be killed and restarted, and still have Redox able to function? What will the effect on running applications be? What additional work needs to be done to improve survivability? Implement the proposed functionality and tooling.
+- Integrate the System Health profiling library, currently under development as a student project, to manage the restart of a variety of drivers. Extend the command line interface and GUI to provide a complete System Services Manager.
+- Perform a "survivability analysis" of Redox - What system services can be killed and restarted, and still have Redox able to function? What will the effect on running applications be? What additional work needs to be done to improve survivability? Implement the proposed functionality and tooling.
+- Improve Redox's ACPI support, including porting the Rust-OSDev ACPI crate, and completing the AML parser.
+- Begin a port of WASM Rustix to Redox's written-in-Rust libc alternative, "relibc". Refactor relibc where needed to support both libc and Rustix interfaces. Implement additional functionality where feasible.
+- Port one or more major web servers to Redox, such as nginx or Apache HTTP Server. (Requires knowledge of C)
+- Port a major JavaScript/web engine to Redox, such as SpiderMonkey or [WebView](https://github.com/webview/webview). (Requires knowledge of C, C++)
 
 ## Large Projects, Rust-heavy
 
-- Improve Redox's USB/HID support.
+- Improve the USB input and USB storage support.
 - Help improve Redox's performance by developing end-to-end profiling tools and libraries, analyzing bottlenecks and implementing optimizations.
 - Implement "io_uring" for Redox's filesystem, RamFS and NVMe driver.
-- Implement a user-space process manager that can safely modify process context information shared with the kernel. Implement the Session/Process Group/Process/Thread hierarchy.
-- Begin a port of WASM Rustix to Redox's written-in-Rust libc alternative, "relibc". Refactor relibc where needed to support both libc and Rustix interfaces. Implement additional functionality where feasible.
+- Implement various scheduling algorithms for Redox process scheduler, including prioritized round-robin, EEVDF, and context-aware scheduling.
+- Port QEMU to Redox, and implement Linux in a VM on Redox.
