@@ -15,13 +15,28 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## FOSDEM 2025
+
+The slides PDFs of the presentations are available on the following links:
+
+- [Redox OS - a Microkernel-based Unix-like OS](https://fosdem.org/2025/events/attachments/fosdem-2025-5973-redox-os-a-microkernel-based-unix-like-os/slides/237675/redoxos-a_VThTapJ.pdf)
+- [POSIX Signals in User Space on the Redox Microkernel](https://fosdem.org/2025/events/attachments/fosdem-2025-5670-posix-signals-in-user-space-on-the-redox-microkernel/slides/237172/posix-sig_whCJBqp.pdf)
+
+## GitLab Activity
+
+Now you can monitor our GitLab activity from Matrix!
+
+You can join the new room in the following link:
+
+- [Redox OS/GitLab Activity](https://matrix.to/#/#redox-gitlab-updates:matrix.org)
+
 ## Kernel Improvements
 
 
 
 ## Driver Improvements
 
-
+- Alice Shelton fixed the Intel HD Audio driver initialization
 
 ## System Improvements
 
@@ -29,20 +44,34 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## Relibc Improvements
 
-- plimkilde documented the unistd.h function group
+- plimkilde implemented the pvalloc() function
+- plimkilde documented the unistd.h, netinet/in.h, netinet/ip.h and netinet/tcp.h function groups
+- plimkilde added documentation and deprecations for the sys/time.h function group
+- plimkilde added documentation, deprecations and missing functions for the strings.h function group
+- plimkilde fixed the type of the clock_id parameter on the clock_getcpuclockid() function
+- Nicolás Antinori implemented the wscanf() and vwscanf() functions
+- Ron Williams fixed the sigqueue() function test
 
 ## Programs
 
 - Anhad Singh converted the PrBoom and terminfo recipes to TOML
+- Anhad Singh updated the Cargo, LLVM, Rust, libssh2, OpenSSL, zlib, COSMIC Terminal and NetSurf recipes to support dynamic linking
+- Anhad Singh updated the Rust and OpenSSL forks to allow dynamic linking
+- Josh Megnauth updated the libpng, bzip2 and DevilutionX recipes to support dynamic linking
 
 ## Build System Improvements
 
 - Anhad Singh fixed the Cookbook runtime dependencies support
+- Anhad Singh fixed the build server (CI) Makefile to support dynamic linking
+- Anhad Singh added the "patchelf" tool on the Podman container
+- Leandro Santiago allowed the Podman build to be used when SELinux is disabled
 - Ron Williams updated the Cookbook dependencies to the latest version
 
 ## Documentation Improvements
 
-
+- Ron Williams and Ribbon updated the [Redox Summer Of Code project suggestions](https://www.redox-os.org/rsoc-project-suggestions)
+- Ronald Weber removed a leftover from the redox repository README
+- Jesper Moller fixed a broken link on the drivers repository README
 
 ## How To Test The Changes
 
