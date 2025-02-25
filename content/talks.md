@@ -47,6 +47,8 @@ title = "Talks"
 
 <!--
 
+The following template is for YouTube videos
+
 ## Talk Event
 
 **By Presenter on Month Day, Year**
