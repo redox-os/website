@@ -2,23 +2,29 @@
 title = "Talks"
 +++
 
+## FOSDEM 2017
+
+**By David Teller on February 4, 2017**
+
+<iframe width="800" height="640" src="https://www.youtube.com/embed/TlTYWDU-mM4?si=1EdZjA-hhhpuP6Xs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## FOSDEM 2019
+
+**By Robin Randhawa on February 3, 2019**
+
+<iframe width="800" height="640" src="https://www.youtube.com/embed/qpazyDkuqLw?si=uBsSX5nGB1gRrM4j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Cyberdeck Users Weekly
 
 **By Jeremy Soller and Paul Miller on May 13, 2020**
 
 <iframe src="https://anchor.fm/futurepaul/embed/episodes/Redox-OS-with-Jeremy-Soller-ee08k2/a-a26b1ul" height="102px" width="400px" frameborder="0" scrolling="no"></iframe>
 
-## FOSDEM 2019
-
-**By Robin Randhawa on February 3, 2019**
-
- <iframe src="https://vid.puffyan.us/embed/qpazyDkuqLw" style="border:none;height:472px;width:796px;" title="Invidious video player"></iframe> 
-
 ## Linaro Connect Vancouver 2018
 
 **By Jeremy Soller and Robin Randhawa on September 21, 2018**
 
- <iframe src="https://vid.puffyan.us/embed/G4VlHzyKZeE" style="border:none;height:472px;width:796px;" title="Invidious video player"></iframe> 
+<iframe width="800" height="640" src="https://www.youtube.com/embed/G4VlHzyKZeE?si=mCC7TNO3JyMz7AO3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## The Changelog
 
@@ -33,8 +39,18 @@ title = "Talks"
 
 {{< odysee redoxos-microkernel-os-written-in-rust >}}
 
-## FOSDEM 2017
+## Tech Over Tea
 
-**By David Teller on February 4, 2017**
+**By Jeremy Soller on August 14, 2023**
 
- <iframe src="https://vid.puffyan.us/embed/TlTYWDU-mM4" style="border:none;height:472px;width:796px;" title="Invidious video player"></iframe> 
+<iframe width="800" height="640" src="https://www.youtube.com/embed/Quh3FauAaWE?si=h4t9AhoBIlI-wH0h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<!--
+
+## Talk Event
+
+**By Presenter on Month Day, Year**
+
+<iframe width="800" height="640" src="insert-the-video-embed-link-here" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+-->
