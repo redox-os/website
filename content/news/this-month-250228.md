@@ -32,15 +32,29 @@ You can join the new room in the following link:
 
 ## Kernel Improvements
 
-
+- Ron Williams improved nanosleep to return the time remaining after a software interrupt
+- Matej Bozic improved the consistency in memory page handling
 
 ## Driver Improvements
 
 - Alice Shelton fixed the Intel HD Audio driver initialization
+- Alice Shelton fixed the PS/2 touchpad support on some laptops
+- bjorn3 simplified the `fbbootlogd` daemon code
+- bjorn3 fixed the standalone compilation of the `driver-network` library
+- bjorn3 fixed the PCI/PCIe device function scanning
+- bjorn3 removed unnecessary feature gates
+- bjorn3 reduced code duplication
 
-## System Improvements
+## RedoxFS Improvements
 
+- Andrey Turkin fixed a node block leak on node remove
+- Andrey Turkin fixed a FUSE bug
+- James Matlik fixed a tree node leak on file deletion
 
+## Scheme Improvements
+
+- 4lDO2 replaced the close() scheme call by a one-way message
+- Vincent Berthier implemented the `/sys/stat` scheme resource (`/proc/stat` equivalent)
 
 ## Relibc Improvements
 
@@ -49,8 +63,15 @@ You can join the new room in the following link:
 - plimkilde added documentation and deprecations for the sys/time.h function group
 - plimkilde added documentation, deprecations and missing functions for the strings.h function group
 - plimkilde fixed the type of the clock_id parameter on the clock_getcpuclockid() function
-- Nicolás Antinori implemented the wscanf() and vwscanf() functions
+- Nicolás Antinori implemented the wscanf(), swscanf(), vswscanf() and vwscanf() functions
 - Ron Williams fixed the sigqueue() function test
+- Josh Megnauth removed an obsolete workaround for `varargs`
+- Josh Megnauth fixed the wrong signature of the vsscanf() function emitted by cbindgen
+- Darley Barreto improved the time.h function group
+
+## Terminal Improvements
+
+- Orhun Parmaksiz implemented the [NO_COLOR](https://no-color.org/) environment variable on the termion library
 
 ## Programs
 
@@ -58,6 +79,8 @@ You can join the new room in the following link:
 - Anhad Singh updated the Cargo, LLVM, Rust, libssh2, OpenSSL, zlib, COSMIC Terminal and NetSurf recipes to support dynamic linking
 - Anhad Singh updated the Rust and OpenSSL forks to allow dynamic linking
 - Josh Megnauth updated the libpng, bzip2 and DevilutionX recipes to support dynamic linking
+- Jeremy Soller converted the Git recipe to TOML
+- Leny implemented dynamic linking support on the LuaJIT recipe
 
 ## Build System Improvements
 
@@ -66,12 +89,19 @@ You can join the new room in the following link:
 - Anhad Singh added the "patchelf" tool on the Podman container
 - Leandro Santiago allowed the Podman build to be used when SELinux is disabled
 - Ron Williams updated the Cookbook dependencies to the latest version
+- bjorn3 started a build system unification for system components to allow faster contributions and more configuration flexibility
+- Vincent Berthier implemented a [Nix flake](https://nixos.wiki/wiki/flakes) for the Podman build
+- Leny implemented the GNU patch support for recipes using Git repositories
 
 ## Documentation Improvements
 
 - Ron Williams and Ribbon updated the [Redox Summer Of Code project suggestions](https://www.redox-os.org/rsoc-project-suggestions)
 - Ronald Weber removed a leftover from the redox repository README
 - Jesper Moller fixed a broken link on the drivers repository README
+- Hubert Kwitowski replaced the PeaZip recommendation by 7-Zip to extract the Redox images on Windows
+- Hubert Kwitowski documented the SHA256 checksum hashes of the Redox daily images
+- Vadim Vodopolov fixed a wrong link in the "Introduction" page of the book
+- Vincent Berthier documented the process to use the Podman build on NixOS
 
 ## How To Test The Changes
 
