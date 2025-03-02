@@ -50,7 +50,6 @@ You can join the new room in the following link:
 ## RedoxFS Improvements
 
 - Andrey Turkin fixed a node block leak on node remove
-- Andrey Turkin fixed a FUSE bug
 - James Matlik fixed a tree node leak on file deletion
 
 ## Scheme Improvements
