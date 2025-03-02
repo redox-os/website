@@ -42,7 +42,9 @@ You can join the new room in the following link:
 - bjorn3 simplified the `fbbootlogd` daemon code
 - bjorn3 fixed the standalone compilation of the `driver-network` library
 - bjorn3 fixed the PCI/PCIe device function scanning
+- bjron3 fixed potential misbehavior in future versions of the Rust compiler
 - bjorn3 removed unnecessary feature gates
+- bjorn3 did some code refactorings
 - bjorn3 reduced code duplication
 
 ## RedoxFS Improvements
