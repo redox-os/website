@@ -49,7 +49,6 @@ You can join the new room in the following link:
 
 ## RedoxFS Improvements
 
-- Andrey Turkin fixed a node block leak on node remove
 - James Matlik fixed a tree node leak on file deletion
 
 ## Scheme Improvements
