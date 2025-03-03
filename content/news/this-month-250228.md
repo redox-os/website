@@ -54,6 +54,7 @@ You can join the new room in the following link:
 ## Scheme Improvements
 
 - 4lDO2 replaced the close() scheme call by a one-way message
+- 4lDO2 implemented the `/sys/fdstat` scheme resource to know the percentage of file descriptors shared between multiple processes
 - Vincent Berthier implemented the `/sys/stat` scheme resource (`/proc/stat` equivalent)
 
 ## Relibc Improvements
