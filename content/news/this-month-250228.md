@@ -17,10 +17,25 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## FOSDEM 2025
 
+[FOSDEM 2025](https://fosdem.org/2025/) took place in Brussels on Feb. 1 and 2.
+
+Kernel maintainer Jacob Lorentzon (@4lDO2) presented his project [Redox OS Unix-Style Signals](https://nlnet.nl/project/RedoxOS-Signals/),
+which is being funded by a grant from [NLnet](https://nlnet.nl/) as part of [NGI Zero Core](https://nlnet.nl/core/).
+The presentation took place in the "Microkernel and Component-based OS" room.
+A video is not yet available but it will be posted
+[on the FOSDEM page for the talk](https://fosdem.org/2025/schedule/event/fosdem-2025-5670-posix-signals-in-user-space-on-the-redox-microkernel/)
+when it is ready (barring further technical difficulties).
+
+Jacob also presented a brief overview of Redox for those unfamiliar with the project.
+The presentation took place in the "Kernel" room.
+You can watch [the video here](https://fosdem.org/2025/schedule/event/fosdem-2025-5973-redox-os-a-microkernel-based-unix-like-os/).
+
 The slides PDFs of the presentations are available on the following links:
 
 - [Redox OS - a Microkernel-based Unix-like OS](https://fosdem.org/2025/events/attachments/fosdem-2025-5973-redox-os-a-microkernel-based-unix-like-os/slides/237675/redoxos-a_VThTapJ.pdf)
 - [POSIX Signals in User Space on the Redox Microkernel](https://fosdem.org/2025/events/attachments/fosdem-2025-5670-posix-signals-in-user-space-on-the-redox-microkernel/slides/237172/posix-sig_whCJBqp.pdf)
+
+Thanks for representing us Jacob! Great job!
 
 ## GitLab Activity
 
@@ -33,7 +48,7 @@ You can join the new room in the following link:
 ## Kernel Improvements
 
 - Ron Williams improved nanosleep to return the time remaining after a software interrupt
-- Matej Bozic improved the consistency in memory page handling
+- Matej Bozic improved the consistency in memory page representation
 
 ## Driver Improvements
 
@@ -42,7 +57,7 @@ You can join the new room in the following link:
 - bjorn3 simplified the `fbbootlogd` daemon code
 - bjorn3 fixed the standalone compilation of the `driver-network` library
 - bjorn3 fixed the PCI/PCIe device function scanning
-- bjron3 fixed potential misbehavior in future versions of the Rust compiler
+- bjorn3 fixed potential misbehavior in future versions of the Rust compiler
 - bjorn3 removed unnecessary feature gates
 - bjorn3 did some code refactorings
 - bjorn3 reduced code duplication
