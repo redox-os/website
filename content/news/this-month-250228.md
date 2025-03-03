@@ -47,7 +47,7 @@ You can join the new room in the following link:
 
 ## Kernel Improvements
 
-- Ron Williams improved nanosleep to return the time remaining after a software interrupt
+- Ron Williams improved the nanosleep() system call to return the time remaining after a software interrupt
 - Matej Bozic improved the consistency in memory page representation
 
 ## Driver Improvements
