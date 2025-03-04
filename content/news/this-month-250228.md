@@ -32,8 +32,9 @@ You can watch [the video here](https://fosdem.org/2025/schedule/event/fosdem-202
 
 The slides PDFs of the presentations are available on the following links:
 
-- [Redox OS - a Microkernel-based Unix-like OS](https://fosdem.org/2025/events/attachments/fosdem-2025-5973-redox-os-a-microkernel-based-unix-like-os/slides/237675/redoxos-a_VThTapJ.pdf)
-- [POSIX Signals in User Space on the Redox Microkernel](https://fosdem.org/2025/events/attachments/fosdem-2025-5670-posix-signals-in-user-space-on-the-redox-microkernel/slides/237172/posix-sig_whCJBqp.pdf)
+- [Redox OS - a Microkernel-based Unix-like OS](https://fosdem.org/2025/events/attachments/fosdem-2025-5973-redox-os-a-microkernel-based-unix-like-os/slides/238806/redoxos-a_VThTapJ.pdf)
+
+- [POSIX Signals in User Space on the Redox Microkernel](https://fosdem.org/2025/events/attachments/fosdem-2025-5670-posix-signals-in-user-space-on-the-redox-microkernel/slides/238302/posix-sig_whCJBqp.pdf)
 
 Thanks for representing us Jacob! Great job!
 
