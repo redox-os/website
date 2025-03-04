@@ -39,11 +39,11 @@ O Redox busca ser uma alternativa completa para o Linux e BSD.
 
 ### Estado atual
 
-O Redox está em qualidade alpha/beta, pois implementamos novas funções enquanto corrigimos bugs.
+O Redox está na fase de desenvolvimento alpha, onde novas funções são implementadas e bugs são corrigidos.
 
 Portanto, ele não está pronto para uso diário, sinta-se livre para testar o sistema até sua maturidade e **não armazene arquivos sensíveis sem o devido backup.**
 
-A versão 1.0 será lançada quando todas as APIs do sistema forem consideradas estáveis.
+A versão 1.0 será lançada quando todas as APIs do sistema sejam consideradas estáveis.
 
 ## O que Redox significa?
 
@@ -63,15 +63,15 @@ Você pode ler mais sobre isso na página [Microkernels](https://doc.redox-os.or
 
 - **Modularidade real**
 
-Você pode modificar/trocar a maioria dos componentes do sistema sem reiniciar o sistema, similar a alguns módulos de kernel e [livepatching](https://en.wikipedia.org/wiki/Kpatch) porém mais seguro.
+Você pode modificar/trocar a maioria dos componentes do sistema sem reiniciar o sistema, similar a alguns módulos em kernels monolíticos e [livepatching](https://en.wikipedia.org/wiki/Kpatch) porém mais seguro.
 
 - **Isolamento de bugs**
 
-A maioria dos componentes do sistema executam no espaço do usuário em um sistema com microkernel, um bug em componentes do sistema fora do kernel não pode [quebrar o kernel](https://en.wikipedia.org/wiki/Kernel_panic).
+A maioria dos componentes do sistema executam no espaço do usuário em um microkernel, por causa disso certos tipos de bugs na maioria dos componentes do sistema não podem [quebrar ou danificar o sistema e kernel](https://en.wikipedia.org/wiki/Kernel_panic).
 
 - **Design de não-reinicialização**
 
-O kernel é pequeno e muda muito pouco (correção de bugs), portanto você não precisa reiniciar seu sistema com frequência para atualizar, já que a maioria dos serviços do sistema estão no espaço do usuário, eles podem ser trocados/atualizados durante a execução (reduzindo muito o tempo offline de servidores).
+Um microkernel maduro muda muito pouco (exceto por correções de bugs), portanto você não precisa reiniciar seu sistema com frequência para atualizar, pois a maioria dos serviços do sistema estão no espaço do usuário, eles podem ser reiniciados/atualizados durante a execução (reduzindo o tempo offline de servidores).
 
 - **Fácil de desenvolver e depurar**
 
@@ -87,23 +87,25 @@ A síntaxe restritiva e os requisitos do compilador para compilar o código redu
 
 - **Menos vulnerável a corrupção de dados**
 
-O compilador da Rust ajuda o programador a evitar erros de memória e condições de corrida, o que reduz a probabilidade dos bugs de corrupção de dados.
+O compilador da Rust ajuda o programador a evitar erros de memória e condições de corrida, o que reduz a probabilidade dos bugs de corrupção de dados devido a erros de implementação.
 
-- **Sem necessidade para mitigações de exploit das linguagens C e C++**
+- **Sem necessidade para mitigações de exploit das linguagens C e C++ em componentes do sistema**
 
-O design de um microkernel escrito em Rust protege contra as falhas de memória das linguagens C e C++, isolando o sistema do kernel a superfície de ataque é muito limitada.
+Como o Redox é escrito em Rust nós não precisamos das mitigações de exploit das linguagens C e C++ nos componentes do sistema, diminuindo a complexidade e aumentando a compatibilidade do sistema com programas.
+
+O design de um microkernel escrito em Rust protege contra as falhas de memória presentes em sistemas operacionais escritos em C e C++, ao isolar os componentes de sistema do kernel a superfície de ataque se torna muito limitada.
 
 - **Melhorias de segurança/confiabilidade sem impacto significante no desempenho**
 
-Como o kernel é pequeno, ele usa menos memória para fazer suas funções e o código limitado no kernel torna ele quase livre de bugs (objetivo do príncipio [KISS](https://en.wikipedia.org/wiki/KISS_principle)).
+Como o kernel é pequeno menos memória é utilizada para realizar suas funções, o código limitado no kernel torna ele quase livre de bugs (objetivo do príncipio [KISS](https://en.wikipedia.org/wiki/KISS_principle)).
 
-O design seguro e veloz da linguagem Rust, combinado com a pequena quantidade de código no kernel, ajudam a garantir um núcleo fácil, confiável e veloz de manter.
+O design seguro e veloz da linguagem Rust, combinado com a pequena quantidade de código no kernel, ajudam a garantir um núcleo de sistema fácil, confiável e veloz de manter.
 
 - **Segurança de Concorrência**
 
-O suporte para segurança de concorrência nas linguagens de programmação C/C++ é frágil e muito fácil de escrever um programa que parece seguro para executar em vários threads, mas introduz bugs útis e buracos de segurança.
+O suporte para segurança de concorrência nas linguagens de programmação C/C++ é frágil e muito fácil de escrever um programa que parece seguro para executar em vários threads, mas introduz bugs sútis e buracos de segurança.
 
-Se um thread acessa um pedaço do estado ao mesmo tempo que outro thread está modificando, o programa todo pode exibir bugs confusos e bizarros.
+Se um thread acessa uma parte do estado ao mesmo tempo que outro thread está modificando, o programa todo pode exibir bugs confusos e bizarros.
 
 Você pode ver [este exemplo na Wikipedia](https://en.wikipedia.org/wiki/Time_of_check_to_time_of_use) de uma categoria séria de bugs de segurança que a segurança de concorrência corrige.
 
@@ -247,8 +249,9 @@ Leia o [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HA
 
 - ACPI
 - PCI
+- USB
 
-(USB em breve)
+(Suporte para dispositivos USB com hubs em breve)
 
 ### Vídeo
 

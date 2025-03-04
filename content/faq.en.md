@@ -36,9 +36,9 @@ It aims to be a complete alternative to Linux and BSD.
 
 ### Current status
 
-Redox is alpha/beta quality software, because we implement new features while fixing the bugs.
+Redox is in alpha development phase, we implement new features and fix bugs.
 
-Because of this, it's not ready for daily usage yet. Feel free to test the system until its maturity and **don't store your sensitive data without a proper backup.**
+Because of this it's not ready for daily usage yet. Feel free to test the system until its maturity and **don't store your sensitive data without a proper backup.**
 
 The 1.0 version will be released once all system APIs are considered stable.
 
@@ -62,21 +62,21 @@ You can read more about it on the [Microkernels](https://doc.redox-os.org/book/m
 
 - **True modularity**
 
-You can modify/change many system components without a system restart, similar to but safer than some kernel modules and [livepatching](https://en.wikipedia.org/wiki/Kpatch).
+You can modify/change many system components without a system restart, similar to but safer than some modules in monolithic kernels and [livepatching](https://en.wikipedia.org/wiki/Kpatch).
 
 - **Bug isolation**
 
-Most system components run in user-space on a microkernel system. Because of this, bugs in most system components won't [crash the system/kernel](https://en.wikipedia.org/wiki/Kernel_panic).
+Most system components run in user-space on a microkernel system. Because of this some types of bugs in most system components won't [crash or damage the system or kernel](https://en.wikipedia.org/wiki/Kernel_panic).
 
 - **Restartless design**
 
 A mature microkernel changes very little (except for bug fixes), so you won't need to restart your system very often to update it.
 
-Since most of the system components are in userspace, they can be replaced on-the-fly, reducing downtime of servers a lot.
+Since most of the system components are in user-space they can be replaced on-the-fly, reducing the downtime of servers a lot.
 
 - **Easy to develop and debug**
 
-Most of the system components run in userspace, simplifying the testing and debugging.
+Most of the system components run in user-space, simplifying the testing and debugging.
 
 You can read more about the above benefits on the [Microkernels](https://doc.redox-os.org/book/microkernels.html) page.
 
@@ -88,19 +88,21 @@ The restrictive syntax and compiler requirements to build the code reduce the pr
 
 - **Less vulnerable to data corruption**
 
-The Rust compiler helps the programmer to avoid memory errors and race conditions, which reduces the probability of data corruption bugs.
+The Rust compiler helps the programmer to avoid memory errors and race conditions, which reduces the probability of data corruption bugs due to implementation errors.
 
-- **No need for C/C++ exploit mitigations**
+- **No need for C/C++ exploit mitigations on system components**
 
-The microkernel design written in Rust protects against memory defects that one might see in software written in C/C++.
+As Redox is written in Rust we don't need C/C++ exploit mitigations for the system components, reducing the system complexity and increasing the program compatibility.
+
+The microkernel design written in Rust protects against memory defects that one might see in operating systems written in C/C++.
 
 By isolating the system components from the kernel, the [attack surface](https://en.wikipedia.org/wiki/Attack_surface) is very limited.
 
 - **Improved security and reliability without significant performance impact**
 
-As the kernel is small, it uses less memory to do its work. The limited kernel code size helps us work towards a bug-free status ([KISS](https://en.wikipedia.org/wiki/KISS_principle)).
+As the kernel is small it uses less memory to do its work. The limited kernel code size helps us work towards a bug-free status ([KISS](https://en.wikipedia.org/wiki/KISS_principle)).
 
-Rust's safe and fast language design, combined with the small kernel code size, helps ensure a reliable, performant and easy to maintain core.
+Rust's safe and fast language design, combined with the small kernel code size, helps ensure a reliable, performant and easy to maintain system core.
 
 - **Thread-safety**
 
@@ -248,8 +250,9 @@ Have a look at [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/m
 
 - ACPI
 - PCI
+- USB
 
-(USB soon)
+(Support for USB devices using hubs will come soon)
 
 ### Video
 
