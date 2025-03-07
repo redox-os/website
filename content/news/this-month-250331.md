@@ -21,7 +21,7 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## Kernel Improvements
 
-- 4lDO2 implemented the `SYS_CALL` system call to unify the logic and remove the fstat, fstatvfs, ftruncate, futimens and fsize system calls
+- 4lDO2 implemented the `SYS_CALL` system call to allow read/write buffers, simplifying scheme logic for RPC-like calls, unifying the logic, replacing the dup+read/write+close pattern, and technically all scheme calls that don't send or receive file descriptors
 
 ## Driver Improvements
 
