@@ -7,6 +7,10 @@ date = "2025-03-31"
 Redox OS is a Unix-like general-purpose microkernel-based operating system
 written in Rust. March was a very exciting month for Redox! Here's all the latest news.
 
+<a href="/img/fans/jason-bowen-coffee-mug.jpg"><img class="img-responsive" alt="Jason Bowen Coffee Mug" src="/img/fans/jason-bowen-coffee-mug.jpg"/></a>
+
+(This photo was taken by [Jason Bowen](https://mast.hpc.social/@jbowen/114060847319270451))
+
 ## Donate to Redox
 
 If you would like to support Redox, please consider donating or buying some merch!
@@ -17,14 +21,21 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## Kernel Improvements
 
-
+- 4lDO2 implemented the `SYS_CALL` system call to unify the logic and remove the fstat, fstatvfs, ftruncate, futimens and fsize system calls
 
 ## Driver Improvements
 
 - bjorn3 moved the PCI driver spawning to the pci-spawner daemon
 - bjorn3 fixed the `fbbootlogd` daemon crash preventing most system components and drivers from crashing and allows you to login on a serial console
+- bjorn3 improved the virtual terminal creation and fixed a bug where consumers couldn't get a virtual terminal because it was not available
 - bjorn3 improved the handling when the boot framebuffer is missing
 - bjorn3 did some graphics code cleanup
+- bjorn3 did some refactorings and cleanup on the `inputd` daemon
+- bjorn3 implemented a global graphics driver to replace the graphics driver on each virtual terminal on the `inputd` daemon
+- bjorn3 did a cleanup of the partitioning library
+- bjorn3 improved the graphics subsystem API
+- bjorn3 moved the aborts of drivers to the `pcid` daemon, simplifying the drivers
+- bjorn3 improved the `fmt.sh` script to apply code formatting in all drivers and libraries with Cargo
 
 ## Scheme Improvements
 
@@ -48,13 +59,20 @@ If you would like to support Redox, please consider donating or buying some merc
 
 
 
+## Packaging Improvements
+
+- Josh Megnauth updated the `pkgar` library to Rust 2021 and fixed most compilation warnings
+
 ## Programs
 
+- Josh Megnauth fixed the Vim compilation, fixed the download link, updated to the version 8.2 and converted the recipe to TOML
 - Josh Megnauth simplified the OpenTyrian recipe configuration
+- Ron Williams fixed the Git recipe
 
 ## Build System Improvements
 
-
+- Ribbon enabled the installation of GNU Debugger (with support for multiple CPU architectures in some Linux distributions and Unix-like systems) by default on the Podman and Native builds
+- bjorn3 fixed the QEMU configuration for multi-head GPU
 
 ## Documentation Improvements
 
