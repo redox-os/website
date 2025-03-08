@@ -33,6 +33,7 @@ If you would like to support Redox, please consider donating or buying some merc
 - bjorn3 did some refactorings and cleanup on the `inputd` daemon
 - bjorn3 implemented a global graphics driver to replace the graphics driver on each virtual terminal on the `inputd` daemon
 - bjorn3 did a cleanup of the MBR/GPT library
+- bjorn3 reduced the code duplication on storage drivers
 - bjorn3 improved the graphics subsystem API
 - bjorn3 moved the aborts of drivers to the `pcid` daemon, simplifying the drivers
 - bjorn3 improved the `fmt.sh` script to apply code formatting in all drivers and libraries with Cargo
