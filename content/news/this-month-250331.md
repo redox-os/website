@@ -32,7 +32,7 @@ If you would like to support Redox, please consider donating or buying some merc
 - bjorn3 did some graphics code cleanup
 - bjorn3 did some refactorings and cleanup on the `inputd` daemon
 - bjorn3 implemented a global graphics driver to replace the graphics driver on each virtual terminal on the `inputd` daemon
-- bjorn3 did a cleanup of the partitioning library
+- bjorn3 did a cleanup of the MBR/GPT library
 - bjorn3 improved the graphics subsystem API
 - bjorn3 moved the aborts of drivers to the `pcid` daemon, simplifying the drivers
 - bjorn3 improved the `fmt.sh` script to apply code formatting in all drivers and libraries with Cargo
@@ -72,7 +72,7 @@ If you would like to support Redox, please consider donating or buying some merc
 ## Build System Improvements
 
 - Ribbon enabled the installation of GNU Debugger (with support for multiple CPU architectures in some Linux distributions and Unix-like systems) by default on the Podman and Native builds
-- bjorn3 fixed the QEMU configuration for multi-head GPU
+- bjorn3 fixed the QEMU configuration for when multiple displayes are attached to the GPU
 
 ## Documentation Improvements
 
