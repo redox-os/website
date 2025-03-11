@@ -35,8 +35,13 @@ If you would like to support Redox, please consider donating or buying some merc
 - bjorn3 did a cleanup of the MBR/GPT library
 - bjorn3 reduced the code duplication on storage drivers
 - bjorn3 improved the graphics subsystem API
+- bjorn3 unified most of the scheme code on storage drivers
 - bjorn3 moved the aborts of drivers to the `pcid` daemon, simplifying the drivers
 - bjorn3 improved the `fmt.sh` script to apply code formatting in all drivers and libraries with Cargo
+
+## USB Improvements
+
+- bjorn3 fixed the USB 3.0 support for USB storage devices
 
 ## Scheme Improvements
 
@@ -54,7 +59,8 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## Networking Improvements
 
-
+- bjorn3 implemented the CUBIC congestion control which increased the performance in 35%
+- bjorn3 did a code cleanup and fixed many warnings
 
 ## Filesystem Improvements
 
@@ -69,15 +75,18 @@ If you would like to support Redox, please consider donating or buying some merc
 - Josh Megnauth fixed the Vim compilation, fixed the download link, updated to the version 8.2 and converted the recipe to TOML
 - Josh Megnauth simplified the OpenTyrian recipe configuration
 - Ron Williams fixed the Git recipe
+- Ron Williams fixed the dynamic linking of the curl recipe
 
 ## Build System Improvements
 
 - Ribbon enabled the installation of GNU Debugger (with support for multiple CPU architectures in some Linux distributions and Unix-like systems) by default on the Podman and Native builds
 - bjorn3 fixed the QEMU configuration for when multiple displayes are attached to the GPU
+- Josh Megnauth replaced the SHA256 hash by a BLAKE3 hash on the Cookbook unit tests
 
 ## Documentation Improvements
 
-
+- Ron Williams documented [how to do system call tracing on Redox](https://doc.redox-os.org/book/syscall-debug.html)
+- Ribbon documented the [system communication with programs](https://doc.redox-os.org/book/communication.html)
 
 ## How To Test The Changes
 
