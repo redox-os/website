@@ -21,7 +21,34 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## RSoC 2025
 
+It's that time of year again! Redox Summer of Code is now open for applications!
 
+We have funding for one or two people to work on some of [our priorities](https://redox-os.org/rsoc-project-suggestions/). We are also open to your ideas. If you are an undergrad, grad student or are about to graduate, and have good Rust skills and experience with open source, kernels and/or low-level software, we would love to hear from you.
+
+Join us on [Matrix Chat](https://matrix.to/#/#redox-join:matrix.org), tell us that you are interested in RSoC, and post a message in our [Summer of Code](https://matrix.to/#/#redox-soc:matrix.org) room to let us know what you want to work on, and what your skills and technical experience are. If you prefer to discuss your skills and experience privately, let us know and we will contact you by private chat.
+
+Redox OS is a US-based nonprofit, and is required to comply with US law regarding financial transactions.
+
+
+## NLnet Project - Process Manager
+
+Last summer, Redox was awarded a grant from [NLnet/NGI Zero](https://nlnet.nl/NGI0/) for our project [Redox OS Unix-style Signals](https://nlnet.nl/project/RedoxOS-Signals/). The work has been conceived and implemented by 4lDO2, with backup from the Redox team.
+
+The NGI grant is divided into (1) a signal handling and (2) a process management part. The signal handling was largely completed last summer.
+4lDO2 has recently made great progress towards re-implementing the Redox kernel/userspace runtime layer, _where the system can now start almost all daemons, and properly boot to prompt (both dynamically linked ion and static bash)_.
+This means the concept of Process IDs is now entirely a userspace thing.
+
+As well, the _process and signal services formerly accessible as specialized system calls, are now accessed via file descriptors_, using the thread and process fds which are now present in (virtually) every file table. This has allowed the removal of **close to 20** system calls from the Redox kernel, replacing them with messages to/from the process manager and other fd-based services.
+
+The major obstacles before this work can be merged are:
+
+- Signal handling. Because the procmgr does not control its clients to the same extent the kernel does, new interfaces need to be created, and while most of the code from the kernel has been moved to userspace, there is still missing logic and bugs left to be fixed.
+- Exception handling. This is important for being able to properly handle any program that crashes, or e.g. custom-userspace-handled page faults. To implement this, the state machines will need to be reworked slightly.
+- Fixing bugs and ensuring relevant tests pass.
+
+One TODO item is to separate these `proc` file descriptors (and some other file descriptors that Redox uses internally) from the POSIX file descriptor space. That work is outside the scope of this project, but it is planned as part of another proposal to [NGI Zero Commons](https://nlnet.nl/commonsfund/).
+
+Although there are some other performance bottlenecks related to process management, it is obviously preferable if this new set of changes does not significantly affect the performance of the full system. So far, no significant performance issues have been observed, but we will be doing benchmarking when the process management work is closer to completion. Eventually Redox may benefit from L4-like [synchronous IPC](https://microkerneldude.org/2019/03/07/how-to-and-how-not-to-use-sel4-ipc/), given the synchronous nature of POSIX functions in the proc category, but this is a bit farther in the future.
 
 ## Fixed USB Input Support
 
