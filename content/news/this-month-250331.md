@@ -7,10 +7,6 @@ date = "2025-03-31"
 Redox OS is a Unix-like general-purpose microkernel-based operating system
 written in Rust. March was a very exciting month for Redox! Here's all the latest news.
 
-<a href="/img/fans/jason-bowen-coffee-mug.jpg"><img class="img-responsive" alt="Jason Bowen Coffee Mug" src="/img/fans/jason-bowen-coffee-mug.jpg"/></a>
-
-(This photo was taken by [Jason Bowen](https://mast.hpc.social/@jbowen/114060847319270451))
-
 ## Donate to Redox
 
 If you would like to support Redox, please consider donating or buying some merch!
@@ -53,6 +49,12 @@ Although there are some other performance bottlenecks related to process managem
 ## Fixed USB Input Support
 
 We had a regression that broke the USB HID support since the 0.9.0 version, Jeremy Soller successfully fixed the xHCI driver, USB 3.x support and completed the USB hub driver.
+
+## Fan Photos
+
+We will showcase fan photos in the next month reports to have nice photos when we don't have screenshots to show, the following photo of the Redox OS Coffee Mug was taken by [Jason Bowen](https://mast.hpc.social/@jbowen/114060847319270451).
+
+<a href="/img/fans/jason-bowen-coffee-mug.jpg"><img class="img-responsive" alt="Jason Bowen Coffee Mug" src="/img/fans/jason-bowen-coffee-mug.jpg"/></a>
 
 ## Kernel Improvements
 
