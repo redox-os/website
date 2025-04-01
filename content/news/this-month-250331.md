@@ -70,6 +70,7 @@ We had a regression that broke the USB HID support since the 0.9.0 version, Jere
 - Ron Williams updated the `bootstrap` program to use the 0.2.3 version of the `redox-scheme` library and other new library versions
 - Ron Williams updated the libraries of the `escalated` daemon to fix bugs
 - 4lDO2 improved the logic of the `shutdown` tool
+- 4lDO2 implemented a way to install Redox in a partition instead of the entire storage device in the installer
 
 ## USB Improvements
 
@@ -91,7 +92,7 @@ We had a regression that broke the USB HID support since the 0.9.0 version, Jere
 ## Relibc Improvements
 
 - bjorn3 fixed the ARM64 and RISC-V compilation
-- bjorn3 fixed a bug where the `initialize_freestanding` function coudl accidentally close the file descriptor 0
+- bjorn3 improved the correctness of a function
 - bjorn3 fixed some warnings
 - Satoru Shimazu implemented the `%b` and `%B` formats in the printf() function
 - Satoru Shimazu documented the format of the printf() function
@@ -101,6 +102,7 @@ We had a regression that broke the USB HID support since the 0.9.0 version, Jere
 - Josh Megnauth added tests for the strptime() function
 - Josh Megnauth deprecated `c_str!`
 - Nicolás Antinori updated the `posix-regex` library to fix a bug
+- Darley Barreto implemented the `z` and `Z` timezone formats and fixed how day of the year is shown for the `j` format (which is 1 based) on the strftime() function
 
 ## Networking Improvements
 
