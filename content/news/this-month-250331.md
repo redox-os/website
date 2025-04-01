@@ -67,7 +67,7 @@ We will showcase fan photos in the next month reports to have nice photos when w
 ## Driver Improvements
 
 - 4lDO2 added the x86 real-time clock (RTC) driver in userspace, moving it out of the kernel. ARM and RISC-V RTC still need to be moved.
-- 4lDO2 started to implemented multi-threading support on the NVMe driver
+- 4lDO2 started to implement multi-threading support on the NVMe driver and improved performance in ~13-14%
 - bjorn3 updated the Bochs emulator/debugger and USB xHCI drivers to use the `redox-scheme` library
 - bjorn3 updated the `inputd` daemon to use the `redox-scheme` library
 - bjorn3 updated all drivers and daemons to the 0.4 version of the `redox-scheme` library
@@ -108,7 +108,7 @@ We will showcase fan photos in the next month reports to have nice photos when w
 - Jeremy Soller fixed the USB hub driver
 - Jeremy Soller fixed the xHCI driver
 - Jeremy Soller fixed the USB 3.x support for input devices
-- bjorn3 fixed the USB 3.x support for storage devices
+- bjorn3 fixed the USB 3.x support for storage devices (currently only tested on QEMU)
 
 ## Scheme Improvements
 
@@ -151,6 +151,7 @@ We will showcase fan photos in the next month reports to have nice photos when w
 
 ## Programs
 
+- Jeremy Soller fixed our `sudo` implementation
 - Josh Megnauth fixed the Vim compilation, fixed the download link, updated to the version 8.2 and converted the recipe to TOML
 - Josh Megnauth fixed and updated the MPFR library to the 4.2.2 version
 - Josh Megnauth fixed the `libuv` library
