@@ -31,7 +31,7 @@ Redox OS is a US-based nonprofit, and is required to comply with US law regardin
 Last summer, Redox was awarded a grant from [NLnet/NGI Zero](https://nlnet.nl/NGI0/) for our project [Redox OS Unix-style Signals](https://nlnet.nl/project/RedoxOS-Signals/). The work has been conceived and implemented by 4lDO2, with backup from the Redox team.
 
 The NGI grant is divided into (1) a signal handling part and (2) a process management part. The signal handling was largely completed last summer.
-4lDO2 has recently made great progress towards re-implementing the Redox kernel/userspace runtime layer, _where the system can now start almost all daemons, and properly boot to prompt (both dynamically linked ion and static bash)_.
+As part of the work on process management, 4lDO2 has recently made great progress towards re-implementing the Redox kernel/userspace runtime layer, _where the system can now start almost all daemons, and properly boot to prompt (both dynamically linked ion and static bash)_.
 This means the concept of Process IDs is now entirely a userspace thing.
 
 As well, the _process and signal services formerly accessible as specialized system calls, are now accessed via file descriptors_, using the thread and process fds which are now present in (virtually) every file table. This has allowed the removal of **close to 20** system calls from the Redox kernel, replacing them with messages to/from the process manager and other fd-based services.
