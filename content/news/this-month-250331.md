@@ -19,6 +19,10 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## Fixed USB Input Support
+
+We had a regression that broke the USB HID support since the 0.9.0 version, Jeremy Soller successfully fixed the xHCI driver, USB 3.x support and completed the USB hub driver.
+
 ## Kernel Improvements
 
 - 4lDO2 implemented the `SYS_CALL` system call to allow read/write buffers, simplifying scheme logic for RPC-like calls, unifying the logic, replacing the dup+read/write+close pattern, and technically all scheme calls that don't send or receive file descriptors
@@ -27,6 +31,8 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## Driver Improvements
 
+- 4lDO2 added the x86 RTC driver
+- 4lDO2 started to implemented multi-threading support on the NVMe driver
 - bjorn3 updated the Bochs emulator/debugger and USB xHCI drivers to use the `redox-scheme` library
 - bjorn3 updated the `inputd` daemon to use the `redox-scheme` library
 - bjorn3 updated all drivers and daemons to the 0.4 version of the `redox-scheme` library
@@ -54,8 +60,12 @@ If you would like to support Redox, please consider donating or buying some merc
 - bjorn3 fixed a deadlock on the `logd` daemon
 - bjorn3 updated Orbital and the audio daemon (audiod) to use the new scheme path format
 - bjorn3 unified the architecture-specific commands on the init configuration
+- bjorn3 removed a polution in the system environment from an unused environment variable on the boot loader
+- bjorn3 removed some obsolete code in the `ptyd`, `logd`, `ramfs` and, `zerod` daemons
+- bjorn3 improved error messages for the `init` command shell
 - Ron Williams updated the `bootstrap` program to use the 0.2.3 version of the `redox-scheme` library and other new library versions
 - Ron Williams updated the libraries of the `escalated` daemon to fix bugs
+- 4lDO2 improved the logic of the `shutdown` tool
 
 ## USB Improvements
 
@@ -76,21 +86,26 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## Relibc Improvements
 
+- bjorn3 fixed the ARM64 and RISC-V compilation
+- bjorn3 fixed a bug where the `initialize_freestanding` function coudl accidentally close the file descriptor 0
+- bjorn3 fixed some warnings
 - Satoru Shimazu implemented the `%b` and `%B` formats in the printf() function
 - Satoru Shimazu documented the format of the printf() function
 - Josh Megnauth implemented support for "ISO-8601 leap weeks" in the strftime() function
 - Josh Megnauth implemented the `%T` format and did cleanups in the strptime() function
 - Josh Megnauth updated the code to use C string literals
+- Josh Megnauth added tests for the strptime() function
 - Josh Megnauth deprecated `c_str!`
+- Nicolás Antinori updated the `posix-regex` library to fix a bug
 
 ## Networking Improvements
 
 - bjorn3 implemented the CUBIC congestion control which increased the performance in 35%
 - bjorn3 did a code cleanup and fixed many warnings
 
-## Filesystem Improvements
+## Terminal Improvements
 
-
+- Vlad implemented a way to get the terminal size from an alternative file descriptor
 
 ## Packaging Improvements
 
@@ -114,12 +129,15 @@ If you would like to support Redox, please consider donating or buying some merc
 - bjorn3 fixed the QEMU configuration for when multiple displayes are attached to the GPU
 - Josh Megnauth replaced the SHA256 hash by a BLAKE3 hash on the Cookbook unit tests
 - bjorn3 unified the network stack (netstack) and the audio daemon (audiod) on the `base` recipe
+- bjorn3 remove leaking to the user environment from unused environment variables
 
 ## Documentation Improvements
 
 - Ron Williams documented [how to do system call tracing on Redox](https://doc.redox-os.org/book/syscall-debug.html)
 - Ribbon documented the [system communication with programs](https://doc.redox-os.org/book/communication.html)
+- Ribbon fixed a wrong information on the "Configuration Settings" page
 - Artur Assis improved the diagram on the [Stitching it all together](https://doc.redox-os.org/book/stitching-it-all-together.html) page
+- Miles Ramage improved and did a cleanup on the "Configuration Settings" page
 
 ## How To Test The Changes
 
