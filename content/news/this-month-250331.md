@@ -19,6 +19,10 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## RSoC 2025
+
+
+
 ## Fixed USB Input Support
 
 We had a regression that broke the USB HID support since the 0.9.0 version, Jeremy Soller successfully fixed the xHCI driver, USB 3.x support and completed the USB hub driver.
