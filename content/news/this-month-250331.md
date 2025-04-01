@@ -30,7 +30,7 @@ Redox OS is a US-based nonprofit, and is required to comply with US law regardin
 
 Last summer, Redox was awarded a grant from [NLnet/NGI Zero](https://nlnet.nl/NGI0/) for our project [Redox OS Unix-style Signals](https://nlnet.nl/project/RedoxOS-Signals/). The work has been conceived and implemented by 4lDO2, with backup from the Redox team.
 
-The NGI grant is divided into (1) a signal handling and (2) a process management part. The signal handling was largely completed last summer.
+The NGI grant is divided into (1) a signal handling part and (2) a process management part. The signal handling was largely completed last summer.
 4lDO2 has recently made great progress towards re-implementing the Redox kernel/userspace runtime layer, _where the system can now start almost all daemons, and properly boot to prompt (both dynamically linked ion and static bash)_.
 This means the concept of Process IDs is now entirely a userspace thing.
 
@@ -39,7 +39,7 @@ As well, the _process and signal services formerly accessible as specialized sys
 The major obstacles before this work can be merged are:
 
 - Signal handling. Because the procmgr does not control its clients to the same extent the kernel does, new interfaces need to be created, and while most of the code from the kernel has been moved to userspace, there is still missing logic and bugs left to be fixed.
-- Exception handling. This is important for being able to properly handle any program that crashes, or e.g. custom-userspace-handled page faults. To implement this, the state machines will need to be reworked slightly.
+- Exception handling. This is important for being able to properly handle any program that crashes, custom userspace-handled page faults, and a few other situations. To implement this, the state machines will need to be reworked slightly.
 - Fixing bugs and ensuring relevant tests pass.
 
 One TODO item is to separate these `proc` file descriptors (and some other file descriptors that Redox uses internally) from the POSIX file descriptor space. That work is outside the scope of this project, but it is planned as part of another proposal to [NGI Zero Commons](https://nlnet.nl/commonsfund/).
@@ -48,7 +48,9 @@ Although there are some other performance bottlenecks related to process managem
 
 ## Fixed USB Input Support
 
-We had a regression that broke the USB HID support since the 0.9.0 version, Jeremy Soller successfully fixed the xHCI driver, USB 3.x support and completed the USB hub driver.
+Jeremy Soller has made substantial improvements to our USB xHCI driver, USB 3.x support and completed a USB hub driver. Our USB HID implementation has had some issues, and was not working in the 0.9.0 version. It is much better now, and can support more real-world hardware.
+We would love your help testing on real hardware, but you will need to [build the latest](https://doc.redox-os.org/book/podman-build.html) before testing it.
+Post a message in the [Support](https://matrix.to/#/#redox-support:matrix.org) room to let us know if it worked, or better yet, join our [GitLab](https://doc.redox-os.org/book/signing-in-to-gitlab.html) and add your computer to our [Hardware Compatibility](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HARDWARE.md?ref_type=heads) list.
 
 ## Fan Photos
 
@@ -58,24 +60,24 @@ We will showcase fan photos in the next month reports to have nice photos when w
 
 ## Kernel Improvements
 
-- 4lDO2 implemented the `SYS_CALL` system call to allow read/write buffers, simplifying scheme logic for RPC-like calls, unifying the logic, replacing the dup+read/write+close pattern, and technically all scheme calls that don't send or receive file descriptors
+- 4lDO2 implemented the `SYS_CALL` system call to unify several different means of setting or getting parameters or invoking actions on a resource. It allows read/write buffers, simplifying scheme logic for RPC-like calls, unifying the logic, replacing the dup+read/write+close pattern, and technically all scheme calls that don't send or receive file descriptors.
 - bjorn3 restored the legacy scheme path format deprecation warnings
 - bjorn3 reduced the verbosity of debug logs on boot
 
 ## Driver Improvements
 
-- 4lDO2 added the x86 RTC driver
+- 4lDO2 added the x86 real-time clock (RTC) driver in userspace, moving it out of the kernel. ARM and RISC-V RTC still need to be moved.
 - 4lDO2 started to implemented multi-threading support on the NVMe driver
 - bjorn3 updated the Bochs emulator/debugger and USB xHCI drivers to use the `redox-scheme` library
 - bjorn3 updated the `inputd` daemon to use the `redox-scheme` library
 - bjorn3 updated all drivers and daemons to the 0.4 version of the `redox-scheme` library
 - bjorn3 moved the PCI driver spawning to the pci-spawner daemon
-- bjorn3 fixed the `fbbootlogd` daemon crash preventing most system components and drivers from crashing and allows you to login on a serial console
+- bjorn3 fixed the `fbbootlogd` daemon crash which was causing occasional system components and drivers to crash, and it allows you to login on a serial console
 - bjorn3 fixed a random crash on the VirtIO-GPU driver
-- bjorn3 fixed the damage calculation on the terminal drawing
+- bjorn3 fixed the damage calculation on the display drawing
 - bjorn3 improved the virtual terminal creation and fixed a bug where consumers couldn't get a virtual terminal because it was not available
 - bjorn3 improved the handling when the boot framebuffer is missing
-- bjorn3 did many code cleanup
+- bjorn3 did lots of general code cleanup
 - bjorn3 did some refactorings and cleanup on the `inputd` daemon
 - bjorn3 did a code cleanup on the `fbbootlogd` and `fbcond` daemons
 - bjorn3 implemented a global graphics driver to replace the graphics driver on each virtual terminal on the `inputd` daemon
@@ -84,7 +86,7 @@ We will showcase fan photos in the next month reports to have nice photos when w
 - bjorn3 improved the graphics subsystem API
 - bjorn3 unified most of the scheme code on storage drivers
 - bjorn3 moved the aborts of drivers to the `pcid` daemon, simplifying the drivers
-- bjorn3 removed the IBM PC speaker driver
+- bjorn3 removed the archaic IBM PC speaker driver
 - bjorn3 reduced the verbosity of debug logs on boot
 - bjorn3 improved the `fmt.sh` script to apply code formatting in all drivers and libraries with Cargo
 
@@ -92,7 +94,7 @@ We will showcase fan photos in the next month reports to have nice photos when w
 
 - bjorn3 fixed a deadlock on the `logd` daemon
 - bjorn3 updated Orbital and the audio daemon (audiod) to use the new scheme path format
-- bjorn3 unified the architecture-specific commands on the init configuration
+- bjorn3 unified the architecture-specific commands for the init configuration
 - bjorn3 removed a polution in the system environment from an unused environment variable on the boot loader
 - bjorn3 removed some obsolete code in the `ptyd`, `logd`, `ramfs` and, `zerod` daemons
 - bjorn3 improved error messages for the `init` command shell
@@ -161,24 +163,24 @@ We will showcase fan photos in the next month reports to have nice photos when w
 ## Build System Improvements
 
 - Ribbon enabled the installation of GNU Debugger (with support for multiple CPU architectures in some Linux distributions and Unix-like systems) by default on the Podman and Native builds
-- bjorn3 fixed the QEMU configuration for when multiple displayes are attached to the GPU
+- bjorn3 fixed the QEMU configuration for when multiple displays are attached to the GPU
 - Josh Megnauth replaced the SHA256 hash by a BLAKE3 hash on the Cookbook unit tests
-- bjorn3 unified the network stack (netstack) and the audio daemon (audiod) on the `base` recipe
-- bjorn3 remove leaking to the user environment from unused environment variables
+- bjorn3 continued the migration of drivers into a unified `base` package, including the network stack (netstack) and the audio daemon (audiod). This substantially simplifies driver development and common-code improvements.
+- bjorn3 fixed the leaking of environment variables from a recipe into the overall build scope
 
 ## Documentation Improvements
 
 - Ron Williams documented [how to do system call tracing on Redox](https://doc.redox-os.org/book/syscall-debug.html)
 - Ribbon documented the [system communication with programs](https://doc.redox-os.org/book/communication.html)
-- Ribbon fixed a wrong information on the "Configuration Settings" page
 - Artur Assis improved the diagram on the [Stitching it all together](https://doc.redox-os.org/book/stitching-it-all-together.html) page
 - Miles Ramage improved and did a cleanup on the "Configuration Settings" page
+- Ribbon made a correction on the "Configuration Settings" page
 
 ## How To Test The Changes
 
 To test the changes of this month download the `server` or `desktop` variants of the [daily images](https://static.redox-os.org/img/).
 
-(Use the `server` variant for a terminal interface and the `desktop` variant for a graphical interface, if the `desktop` variant doesn't work use the `server` variant)
+Use the `server` variant for a terminal interface and the `desktop` variant for a graphical interface. If you try the `desktop` variant and it doesn't work for you, please try the `server` variant, and let us know in our [Support](https://matrix.to/#/#redox-support:matrix.org) room on Matrix.
 
 - If you want to test in a virtual machine use the "harddrive" images
 - If you want to test on real hardware use the "livedisk" images
