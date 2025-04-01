@@ -22,26 +22,47 @@ If you would like to support Redox, please consider donating or buying some merc
 ## Kernel Improvements
 
 - 4lDO2 implemented the `SYS_CALL` system call to allow read/write buffers, simplifying scheme logic for RPC-like calls, unifying the logic, replacing the dup+read/write+close pattern, and technically all scheme calls that don't send or receive file descriptors
+- bjorn3 restored the legacy scheme path format deprecation warnings
+- bjorn3 reduced the verbosity of debug logs on boot
 
 ## Driver Improvements
 
+- bjorn3 updated the Bochs emulator/debugger and USB xHCI drivers to use the `redox-scheme` library
+- bjorn3 updated the `inputd` daemon to use the `redox-scheme` library
+- bjorn3 updated all drivers and daemons to the 0.4 version of the `redox-scheme` library
 - bjorn3 moved the PCI driver spawning to the pci-spawner daemon
 - bjorn3 fixed the `fbbootlogd` daemon crash preventing most system components and drivers from crashing and allows you to login on a serial console
+- bjorn3 fixed a random crash on the VirtIO-GPU driver
+- bjorn3 fixed the damage calculation on the terminal drawing
 - bjorn3 improved the virtual terminal creation and fixed a bug where consumers couldn't get a virtual terminal because it was not available
 - bjorn3 improved the handling when the boot framebuffer is missing
-- bjorn3 did some graphics code cleanup
+- bjorn3 did many code cleanup
 - bjorn3 did some refactorings and cleanup on the `inputd` daemon
+- bjorn3 did a code cleanup on the `fbbootlogd` and `fbcond` daemons
 - bjorn3 implemented a global graphics driver to replace the graphics driver on each virtual terminal on the `inputd` daemon
 - bjorn3 did a cleanup of the MBR/GPT library
 - bjorn3 reduced the code duplication on storage drivers
 - bjorn3 improved the graphics subsystem API
 - bjorn3 unified most of the scheme code on storage drivers
 - bjorn3 moved the aborts of drivers to the `pcid` daemon, simplifying the drivers
+- bjorn3 removed the IBM PC speaker driver
+- bjorn3 reduced the verbosity of debug logs on boot
 - bjorn3 improved the `fmt.sh` script to apply code formatting in all drivers and libraries with Cargo
+
+## System Improvements
+
+- bjorn3 fixed a deadlock on the `logd` daemon
+- bjorn3 updated Orbital and the audio daemon (audiod) to use the new scheme path format
+- bjorn3 unified the architecture-specific commands on the init configuration
+- Ron Williams updated the `bootstrap` program to use the 0.2.3 version of the `redox-scheme` library and other new library versions
+- Ron Williams updated the libraries of the `escalated` daemon to fix bugs
 
 ## USB Improvements
 
-- bjorn3 fixed the USB 3.0 support for USB storage devices
+- Jeremy Soller fixed the USB hub driver
+- Jeremy Soller fixed the xHCI driver
+- Jeremy Soller fixed the USB 3.x support for input devices
+- bjorn3 fixed the USB 3.x support for storage devices
 
 ## Scheme Improvements
 
@@ -55,7 +76,12 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## Relibc Improvements
 
-
+- Satoru Shimazu implemented the `%b` and `%B` formats in the printf() function
+- Satoru Shimazu documented the format of the printf() function
+- Josh Megnauth implemented support for "ISO-8601 leap weeks" in the strftime() function
+- Josh Megnauth implemented the `%T` format and did cleanups in the strptime() function
+- Josh Megnauth updated the code to use C string literals
+- Josh Megnauth deprecated `c_str!`
 
 ## Networking Improvements
 
@@ -69,24 +95,31 @@ If you would like to support Redox, please consider donating or buying some merc
 ## Packaging Improvements
 
 - Josh Megnauth updated the `pkgar` library to Rust 2021 and fixed most compilation warnings
+- Marika added an explicit error message when some package manager command is executed with insufficient permissions
 
 ## Programs
 
 - Josh Megnauth fixed the Vim compilation, fixed the download link, updated to the version 8.2 and converted the recipe to TOML
+- Josh Megnauth fixed and updated the MPFR library to the 4.2.2 version
+- Josh Megnauth fixed the `libuv` library
 - Josh Megnauth simplified the OpenTyrian recipe configuration
 - Ron Williams fixed the Git recipe
 - Ron Williams fixed the dynamic linking of the curl recipe
+- bjorn3 did a code cleanup in our `sudo` implementation
+- bjorn3 updated our OpenSSL, libsodium forks and the Orbital utilities to use the new scheme path format
 
 ## Build System Improvements
 
 - Ribbon enabled the installation of GNU Debugger (with support for multiple CPU architectures in some Linux distributions and Unix-like systems) by default on the Podman and Native builds
 - bjorn3 fixed the QEMU configuration for when multiple displayes are attached to the GPU
 - Josh Megnauth replaced the SHA256 hash by a BLAKE3 hash on the Cookbook unit tests
+- bjorn3 unified the network stack (netstack) and the audio daemon (audiod) on the `base` recipe
 
 ## Documentation Improvements
 
 - Ron Williams documented [how to do system call tracing on Redox](https://doc.redox-os.org/book/syscall-debug.html)
 - Ribbon documented the [system communication with programs](https://doc.redox-os.org/book/communication.html)
+- Artur Assis improved the diagram on the [Stitching it all together](https://doc.redox-os.org/book/stitching-it-all-together.html) page
 
 ## How To Test The Changes
 
