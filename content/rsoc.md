@@ -3,7 +3,7 @@ title = "Redox OS Summer of Code"
 +++
 
 Announcing Redox Summer of Code for 2025! This summer, we have a small number of positions open for students or recent graduates.
-To qualify, you must be a contributor to Redox or to a Redox-adjacent project, and be an experienced Rust programmer.
+You must be a skilled Rust programmer, have experience with low-level programming and be an Open Source contributor.
 
 You should propose a project that will take you approximately 8 weeks of full-time work to complete.
 You are expected to check in your code to GitLab regularly, to provide regular progress reports, and a final technical report in the form of a News post.
@@ -16,12 +16,14 @@ The Redox OS Summer of Code program is the primary use of donations to the Redox
 project. 
 
 We also participate in other Summer of Code type programs, when available,
-which may have their own rules and critera.
+which may have their own rules and criteria.
 This year, we do not have any specific plans for other Summer of Code programs.
 
 Have a look at our [Proposal Guidelines](/rsoc-proposal-how-to) and [Project Suggestions](/rsoc-project-suggestions).
 
 ## Previous contributions
+
+(Add new project reports on the top of the following list)
 
 - [Dynamic Linking - part 2](https://www.redox-os.org/news/02_rsoc2024_dynamic_linker/)
 - [Dynamic Linking - part 1](https://www.redox-os.org/news/01_rsoc2024_dynamic_linker/)
