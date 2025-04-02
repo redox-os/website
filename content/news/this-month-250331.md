@@ -114,7 +114,7 @@ This photo of the Redox OS Coffee Mug was taken by [Jason Bowen](https://mast.hp
 
 ## Scheme Improvements
 
-- bjorn3 implemented the `/pci/` scheme, quoting him from GitLab:
+- bjorn3 implemented the `/pci/` scheme, partially based on an earlier attempt by 4lDO2. Quoting bjorn3 from GitLab:
 
 "This allows a single PCI daemon to run on the whole system, prevents multiple drivers from claiming the same PCI device and makes it possible for userspace to enumerate all available PCI devices. In the future this will enable an `lspci` tool, possibly PCIe hot plugging and more"
 
