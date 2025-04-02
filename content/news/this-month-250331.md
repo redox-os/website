@@ -54,21 +54,23 @@ Post a message in the [Support](https://matrix.to/#/#redox-support:matrix.org) r
 
 ## Fan Photos
 
-We will showcase fan photos in the next month reports to have nice photos when we don't have screenshots to show, the following photo of the Redox OS Coffee Mug was taken by [Jason Bowen](https://mast.hpc.social/@jbowen/114060847319270451).
+We will showcase some fan photos in the monthly reports when we don't have screenshots to show.
+Let us know on Matrix if you have some Redox-themed photos you want to share (send a link, don't post the photo on Matrix).
+This photo of the Redox OS Coffee Mug was taken by [Jason Bowen](https://mast.hpc.social/@jbowen/114060847319270451).
 
 <a href="/img/fans/jason-bowen-coffee-mug.jpg"><img class="img-responsive" alt="Jason Bowen Coffee Mug" src="/img/fans/jason-bowen-coffee-mug.jpg"/></a>
 
 ## Kernel Improvements
 
-- 4lDO2 implemented the `SYS_CALL` system call to unify several different means of setting or getting parameters or invoking actions on a resource. It allows read/write buffers, simplifying scheme logic for RPC-like calls, unifying the logic, replacing the dup+read/write+close pattern, and technically all scheme calls that don't send or receive file descriptors.
+- 4lDO2 implemented the `SYS_CALL` system call to unify several different means of setting or getting parameters or invoking actions on a resource. It allows bidirectional read/write buffers, simplifying scheme logic for providing RPC-like interfaces, as well as replacing the dup+read/write+close pattern, and technically all scheme calls that don't send or receive file descriptors.
 - bjorn3 restored the legacy scheme path format deprecation warnings
 - bjorn3 reduced the verbosity of debug logs on boot
 
 ## Driver Improvements
 
 - 4lDO2 added the x86 real-time clock (RTC) driver in userspace, moving it out of the kernel. ARM and RISC-V RTC still need to be moved.
-- 4lDO2 started to implement multi-threading support on the NVMe driver and improved performance in ~13-14%
-- bjorn3 updated the Bochs emulator/debugger and USB xHCI drivers to use the `redox-scheme` library
+- 4lDO2 started to implement multi-threading support on the NVMe driver and improved performance by about 13-14%
+- bjorn3 updated the USB xHCI drivers to use the `redox-scheme` library
 - bjorn3 updated the `inputd` daemon to use the `redox-scheme` library
 - bjorn3 updated all drivers and daemons to the 0.4 version of the `redox-scheme` library
 - bjorn3 moved the PCI driver spawning to the pci-spawner daemon
@@ -95,7 +97,7 @@ We will showcase fan photos in the next month reports to have nice photos when w
 - bjorn3 fixed a deadlock on the `logd` daemon
 - bjorn3 updated Orbital and the audio daemon (audiod) to use the new scheme path format
 - bjorn3 unified the architecture-specific commands for the init configuration
-- bjorn3 removed a polution in the system environment from an unused environment variable on the boot loader
+- bjorn3 removed the pollution of the system environment by an unused environment variable in the boot loader
 - bjorn3 removed some obsolete code in the `ptyd`, `logd`, `ramfs` and, `zerod` daemons
 - bjorn3 improved error messages for the `init` command shell
 - Ron Williams updated the `bootstrap` program to use the 0.2.3 version of the `redox-scheme` library and other new library versions
@@ -137,7 +139,7 @@ We will showcase fan photos in the next month reports to have nice photos when w
 
 ## Networking Improvements
 
-- bjorn3 implemented the CUBIC congestion control which increased the performance in 35%
+- bjorn3 implemented the CUBIC congestion control which improved network performance by up to 35%
 - bjorn3 did a code cleanup and fixed many warnings
 
 ## Terminal Improvements
@@ -151,7 +153,7 @@ We will showcase fan photos in the next month reports to have nice photos when w
 
 ## Programs
 
-- Jeremy Soller fixed our `sudo` implementation
+- Jeremy Soller fixed our `sudo` implementation, where the "setuid" bit was lost during package installation
 - Josh Megnauth fixed the Vim compilation, fixed the download link, updated to the version 8.2 and converted the recipe to TOML
 - Josh Megnauth fixed and updated the MPFR library to the 4.2.2 version
 - Josh Megnauth fixed the `libuv` library
@@ -163,7 +165,7 @@ We will showcase fan photos in the next month reports to have nice photos when w
 
 ## Build System Improvements
 
-- Ribbon enabled the installation of GNU Debugger (with support for multiple CPU architectures in some Linux distributions and Unix-like systems) by default on the Podman and Native builds
+- Ribbon enabled the installation of GNU Debugger by default on the Podman and Native builds, with support for multiple CPU architectures in some Linux distributions and Unix-like systems
 - bjorn3 fixed the QEMU configuration for when multiple displays are attached to the GPU
 - Josh Megnauth replaced the SHA256 hash by a BLAKE3 hash on the Cookbook unit tests
 - bjorn3 continued the migration of drivers into a unified `base` package, including the network stack (netstack) and the audio daemon (audiod). This substantially simplifies driver development and common-code improvements.
