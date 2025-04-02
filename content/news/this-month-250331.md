@@ -139,7 +139,7 @@ This photo of the Redox OS Coffee Mug was taken by [Jason Bowen](https://mast.hp
 
 ## Networking Improvements
 
-- bjorn3 implemented the CUBIC congestion control which improved network performance by up to 35%
+- bjorn3 enabled the CUBIC congestion control which improved network performance by up to 35%
 - bjorn3 did a code cleanup and fixed many warnings
 
 ## Terminal Improvements
