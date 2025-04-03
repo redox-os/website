@@ -49,7 +49,8 @@ Although there are some other performance bottlenecks related to process managem
 
 Jeremy Soller has made substantial improvements to our USB xHCI driver, USB 3.x support and completed a USB hub driver. Our USB HID implementation has had some issues, and was not working in the 0.9.0 version. It is much better now, and can support more real-world hardware.
 
-We would love your help testing USB mouse and keyboards (built-in in many laptops and used in many desktops) on real hardware, you can do this downloading the [daily images](#how-to-test-the-changes).
+We would love your help testing external USB mouse and keyboards, as well as the keyboard and touchpad on your laptop, especially if they use USB internally instead of PS/2.
+You can do this by [following the instructions below](#how-to-test-the-changes) to download the daily images.
 
 Send a message in the [Support](https://matrix.to/#/#redox-support:matrix.org) room to let us know if it worked.
 If you have problems, please provide the brand and model code, for both the computer and the device (mouse or keyboard).
