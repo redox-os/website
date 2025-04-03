@@ -51,9 +51,10 @@ Jeremy Soller has made substantial improvements to our USB xHCI driver, USB 3.x 
 
 We would love your help testing USB mouse and keyboards (built-in in many laptops and used in many desktops) on real hardware, you can do this downloading the [daily images](#how-to-test-the-changes).
 
-Send a message in the [Support](https://matrix.to/#/#redox-support:matrix.org) room to let us know if it worked, or better yet, join our [GitLab](https://doc.redox-os.org/book/signing-in-to-gitlab.html) and add your computer to our [Hardware Compatibility](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HARDWARE.md?ref_type=heads) list.
+Send a message in the [Support](https://matrix.to/#/#redox-support:matrix.org) room to let us know if it worked.
+If you have problems, please provide the brand and model code, for both the computer and the device (mouse or keyboard).
+Please join our [GitLab](https://doc.redox-os.org/book/signing-in-to-gitlab.html) and add your computer to our [Hardware Compatibility](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HARDWARE.md?ref_type=heads) list, if you have the time.
 
-If it didn't work send the USB mouse or keyboard company and model to help us to fix or add the support for your device.
 
 ## Fan Photos
 
