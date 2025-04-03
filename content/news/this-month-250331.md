@@ -69,7 +69,7 @@ This photo of the Redox OS Coffee Mug was taken by [Jason Bowen](https://mast.hp
 ## Driver Improvements
 
 - 4lDO2 added the x86 real-time clock (RTC) driver in userspace, moving it out of the kernel. ARM and RISC-V RTC still need to be moved.
-- 4lDO2 started to implement async support for the NVMe driver and improved performance by about 13-14%
+- 4lDO2 started to implement async support for the NVMe driver which improved performance by about 13-14%
 - bjorn3 updated the USB xHCI drivers to use the `redox-scheme` library
 - bjorn3 updated the `inputd` daemon to use the `redox-scheme` library
 - bjorn3 updated all drivers and daemons to the 0.4 version of the `redox-scheme` library
