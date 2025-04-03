@@ -25,7 +25,6 @@ Join us on [Matrix Chat](https://matrix.to/#/#redox-join:matrix.org), tell us th
 
 Redox OS is a US-based nonprofit, and is required to comply with US law regarding financial transactions.
 
-
 ## NLnet Project - Process Manager
 
 Last summer, Redox was awarded a grant from [NLnet/NGI Zero](https://nlnet.nl/NGI0/) for our project [Redox OS Unix-style Signals](https://nlnet.nl/project/RedoxOS-Signals/). The work has been conceived and implemented by 4lDO2, with backup from the Redox team.
@@ -49,8 +48,12 @@ Although there are some other performance bottlenecks related to process managem
 ## Fixed USB Input Support
 
 Jeremy Soller has made substantial improvements to our USB xHCI driver, USB 3.x support and completed a USB hub driver. Our USB HID implementation has had some issues, and was not working in the 0.9.0 version. It is much better now, and can support more real-world hardware.
-We would love your help testing on real hardware, but you will need to [build the latest](https://doc.redox-os.org/book/podman-build.html) before testing it.
-Post a message in the [Support](https://matrix.to/#/#redox-support:matrix.org) room to let us know if it worked, or better yet, join our [GitLab](https://doc.redox-os.org/book/signing-in-to-gitlab.html) and add your computer to our [Hardware Compatibility](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HARDWARE.md?ref_type=heads) list.
+
+We would love your help testing USB mouse and keyboards (built-in in many laptops and used in many desktops) on real hardware, you can do this downloading the [daily images](#how-to-test-the-changes).
+
+Send a message in the [Support](https://matrix.to/#/#redox-support:matrix.org) room to let us know if it worked, or better yet, join our [GitLab](https://doc.redox-os.org/book/signing-in-to-gitlab.html) and add your computer to our [Hardware Compatibility](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HARDWARE.md?ref_type=heads) list.
+
+If it didn't work send the USB mouse or keyboard company and model to help us to fix or add the support for your device.
 
 ## Fan Photos
 
