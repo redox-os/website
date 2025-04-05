@@ -1,5 +1,9 @@
+image: ubuntu/latest
+
 before_script:
-  - apt-get update -qq && apt-get install -y -qq hugo gcc pkg-config libc6-dev libssl-dev
+  - apt-get update -qq
+  - apt-get install -y -qq hugo gcc pkg-config libc6-dev libssl-dev
+  - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -y
   - cargo install lychee
 
 hugo:
