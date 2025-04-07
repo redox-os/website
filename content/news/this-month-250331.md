@@ -51,6 +51,8 @@ Jeremy Soller has made substantial improvements to our USB xHCI driver, USB 3.x 
 
 We would love your help testing external USB mouse and keyboards, as well as the keyboard and touchpad on your laptop, especially if they use USB internally instead of PS/2.
 You can do this by [following the instructions below](#how-to-test-the-changes) to download the daily images.
+Please be aware that we are bumping into a few other issues, so if the daily images don't boot for you today,
+they may work better in the next few days.
 
 Send a message in the [Support](https://matrix.to/#/#redox-support:matrix.org) room to let us know if it worked.
 If you have problems, please provide the brand and model code, for both the computer and the device (mouse or keyboard).
