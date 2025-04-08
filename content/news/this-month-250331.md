@@ -134,8 +134,8 @@ This photo of the Redox OS Coffee Mug was taken by [Jason Bowen](https://mast.hp
 - bjorn3 fixed the ARM64 and RISC-V compilation
 - bjorn3 improved the correctness of a function
 - bjorn3 fixed some warnings
-- Satoru Shimazu implemented the `%b` and `%B` formats in the printf() function
-- Satoru Shimazu documented the format of the printf() function
+- Satoru Shimizu implemented the `%b` and `%B` formats in the printf() function
+- Satoru Shimizu documented the format of the printf() function
 - Josh Megnauth implemented support for "ISO-8601 leap weeks" in the strftime() function
 - Josh Megnauth implemented the `%T` format and did cleanups in the strptime() function
 - Josh Megnauth updated the code to use C string literals
