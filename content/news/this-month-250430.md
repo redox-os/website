@@ -15,41 +15,36 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
-## Kernel Improvements
+## Improvements
 
-
-
-## Driver Improvements
-
-
-
-## System Improvements
-
-
-
-## Relibc Improvements
-
-
-
-## Networking Improvements
-
-
-
-## Filesystem Improvements
-
-
-
-## Programs
-
-
-
-## Build System Improvements
-
-
-
-## Documentation Improvements
-
-
+- (kernel) 4lDO2 fixed the cancellation of the network stack schemes
+- (kernel) 4lDO2 removed the ITimer scheme
+- (kernel) bjorn3 fixed the saving and restoring of float registers on ARM64
+- (drivers) bjorn3 updated the VESA driver (vesad) to disable the kernel graphical debugging as late as possible
+- (system) Darley Barreto implemented the openat() POSIX function which allows file locations to be isolated from the program. It will replace the "named dup" calls, which are non-standard (not POSIX or Linux) so you can access a specific resource or get/set values of a certain category for a resource 
+- (system) 4lDO2 migrated more system components and libraries to the userspace-based process manager
+- (system) 4lDO2 updated `escalated` to use the redox-scheme library and SYS_CALL system call
+- (system) 4lDO2 implemented cancellation on the Orbital scheme
+- (system) bjorn3 changed the boot order to start the `logd` daemon before the `fbbootlogd` daemon
+- (system) bjorn3 implemented the support for new sink sources on the `logd` daemon
+- (system) bjorn3 did a code cleanup on `userutils`
+- (relibc) bjorn3 added a workaround to fix an undefined behavior on ARM64
+- (relibc) Josh Megnauth fixed a clobbering on the strptime() function following the musl and glibc behavior
+- (net) 4lDO2 updated the DNS daemon (dnsd) to use the redox-scheme library
+- (redoxfs) bjorn3 fixed the RedoxFS tests
+- (redoxfs) bjorn3 did a code cleanup in RedoxFS
+- (orbital) 4lDO2 updated Orbital to use the redox-scheme library
+- (orbital) Dimitar Gjorgievski implemented GPU-based mouse cursor rendering in Orbital, improving VirtIO-GPU support
+- (orbital) bjorn3 fixed a correctness bug in Orbital
+- (orbital) bjorn3 improved the VirtIO-GPU support in Orbital
+- (orbital) bjorn3 simplified the Orbital code
+- (orbital) bjorn3 did a code cleanup on Orbital
+- (pkg) Josh Megnauth replaced the unmaintained `plain`, `error-chain` and `user_error` libraries with the `bytemuck`, `anyhow` and `thiserror` libraries on `pkgar` for better error reporting
+- (hardware) Ralen Oreti documented the status of the Samsung Series 3 and ASUS Vivobook 15 OLED laptops
+- (hardware) Collin M documented the status of the HP EliteBook Folio 9480m laptop
+- (doc) Ribbon added [advanced instructions](https://doc.redox-os.org/book/troubleshooting.html#fix-breaking-changes) to fix common types of breaking changes in the book
+- (doc) Miles Ramage did formatting improvements on the Chapter 4 of the book
+- (doc) Miles Ramage and Ribbon improved and fixed the Chapter 2 of the book
 
 ## How To Test The Changes
 
