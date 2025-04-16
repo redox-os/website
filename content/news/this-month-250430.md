@@ -22,8 +22,9 @@ If you would like to support Redox, please consider donating or buying some merc
 - (kernel) bjorn3 fixed the saving and restoring of float registers on ARM64
 - (drivers) bjorn3 updated the VESA driver (vesad) to disable the kernel graphical debugging as late as possible
 - (drivers) bjorn3 fixed the ARM64 support on the PCI driver
+- (drivers) bjorn3 improved the error message when the hardware don't support ACPI
 - (system) Jeremy Soller updated uutils to the latest commit
-- (system) Darley Barreto implemented the openat() POSIX function which allows file locations to be isolated from the program. It will replace the "named dup" calls, which are non-standard (not POSIX or Linux) so you can access a specific resource or get/set values of a certain category for a resource 
+- (system) Darley Barreto implemented the `openat()` POSIX function which allows file locations to be isolated from the program. It will replace the "named dup" calls, which are non-standard (not POSIX or Linux) so you can access a specific resource or get/set values of a certain category for a resource 
 - (system) 4lDO2 migrated more system components and libraries to the userspace-based process manager
 - (system) 4lDO2 updated `escalated` to use the `redox-scheme` library and `SYS_CALL` system call
 - (system) 4lDO2 implemented cancellation on the Orbital scheme
@@ -36,6 +37,7 @@ If you would like to support Redox, please consider donating or buying some merc
 - (system) bjorn3 did a code cleanup on `userutils`
 - (system) bjorn3 fixed warnings in some system components
 - (relibc) bjorn3 added a workaround to fix an undefined behavior on ARM64
+- (relibc) bjorn3 did minor improvements to the efficiency and code quality of the `exec` implementation
 - (relibc) Josh Megnauth fixed a clobbering on the strptime() function following the musl and glibc behavior
 - (net) 4lDO2 updated the DNS daemon (dnsd) to use the `redox-scheme` library
 - (redoxfs) bjorn3 fixed the RedoxFS tests
@@ -53,6 +55,7 @@ If you would like to support Redox, please consider donating or buying some merc
 - (programs) Jeremy Soller enabled the POSIX thread semaphores on SDL1
 - (programs) Jeremy Soller restored the PrBoom music (this bug was hard to fix...)
 - (programs) Jeremy Soller converted the FreeCiv, SDL2-ttf and ncursesw recipes to TOML
+- (programs) Jeremy Soller enabled the FreeCiv dedicated server
 - (build-system) Jeremy Soller implemented automatic shared dependency (dynamically-linked libraries) detection on Cookbook
 - (hardware) Ralen Oreti documented the status of the Samsung Series 3 and ASUS Vivobook 15 OLED laptops
 - (hardware) Collin M documented the status of the HP EliteBook Folio 9480m laptop
