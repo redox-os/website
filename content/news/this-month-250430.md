@@ -7,6 +7,10 @@ date = "2025-04-30"
 Redox OS is a Unix-like general-purpose microkernel-based operating system
 written in Rust. April was a very exciting month for Redox! Here's all the latest news.
 
+<a href="/img/screenshot/freeciv.png"><img class="img-responsive" alt="FreeCiv running on Redox" src="/img/screenshot/freeciv.png"/></a>
+
+(FreeCiv running on Redox)
+
 ## Donate to Redox
 
 If you would like to support Redox, please consider donating or buying some merch!
@@ -17,6 +21,7 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## Improvements
 
+- (kernel) Jeremy Soller fixed the ARM64 and RISC-V support
 - (kernel) 4lDO2 fixed the cancellation of the network stack schemes
 - (kernel) 4lDO2 removed the `ITimer` scheme
 - (kernel) bjorn3 fixed the saving and restoring of float registers on ARM64
@@ -26,6 +31,7 @@ If you would like to support Redox, please consider donating or buying some merc
 - (system) Jeremy Soller updated uutils to the latest commit
 - (system) Darley Barreto implemented the `openat()` POSIX function which allows file locations to be isolated from the program. It will replace the "named dup" calls, which are non-standard (not POSIX or Linux) so you can access a specific resource or get/set values of a certain category for a resource 
 - (system) 4lDO2 migrated more system components and libraries to the userspace-based process manager
+- (system) 4lDO2 implemented a readiness-based I/O model wrapper for the completion-based I/O model in the `redox-scheme` library
 - (system) 4lDO2 updated `escalated` to use the `redox-scheme` library and `SYS_CALL` system call
 - (system) 4lDO2 implemented cancellation on the Orbital scheme
 - (system) 4lDO2 implemented cancellation on the `audiod` scheme
@@ -36,6 +42,8 @@ If you would like to support Redox, please consider donating or buying some merc
 - (system) bjorn3 restored the relibc static linking on the Ion shell to improve the relibc and dynamic linker debugging
 - (system) bjorn3 did a code cleanup on `userutils`
 - (system) bjorn3 fixed warnings in some system components
+- (relibc) Jeremy Soller fixed the ARM64 and RISC-V support
+- (relibc) Jeremy Soller fixed the dynamic linker support for multiple CPU architectures
 - (relibc) bjorn3 added a workaround to fix an undefined behavior on ARM64
 - (relibc) bjorn3 did minor improvements to the efficiency and code quality of the `exec` implementation
 - (relibc) Josh Megnauth fixed a clobbering on the strptime() function following the musl and glibc behavior
@@ -56,6 +64,7 @@ If you would like to support Redox, please consider donating or buying some merc
 - (programs) Jeremy Soller restored the PrBoom music (this bug was hard to fix...)
 - (programs) Jeremy Soller converted the FreeCiv, SDL2-ttf and ncursesw recipes to TOML
 - (programs) Jeremy Soller enabled the FreeCiv dedicated server
+- (build-system) Jeremy Soller updated the Podman container configuration to use the Debian stable backports to update the build tool versions, fixing some programs
 - (build-system) Jeremy Soller implemented automatic shared dependency (dynamically-linked libraries) detection on Cookbook
 - (hardware) Ralen Oreti documented the status of the Samsung Series 3 and ASUS Vivobook 15 OLED laptops
 - (hardware) Collin M documented the status of the HP EliteBook Folio 9480m laptop
