@@ -31,7 +31,7 @@ If you would like to support Redox, please consider donating or buying some merc
 - (system) Jeremy Soller updated uutils to the latest commit
 - (system) Darley Barreto implemented the `openat()` POSIX function which allows file locations to be isolated from the program. It will replace the "named dup" calls, which are non-standard (not POSIX or Linux) so you can access a specific resource or get/set values of a certain category for a resource 
 - (system) 4lDO2 migrated more system components and libraries to the userspace-based process manager
-- (system) 4lDO2 implemented a readiness-based I/O model wrapper for the completion-based I/O model in the `redox-scheme` library
+- (system) 4lDO2 implemented a readiness-based I/O model wrapper for the completion-based I/O model to reduce boilerplate code in the `redox-scheme` library
 - (system) 4lDO2 updated `escalated` to use the `redox-scheme` library and `SYS_CALL` system call
 - (system) 4lDO2 implemented cancellation on the Orbital scheme
 - (system) 4lDO2 implemented cancellation on the `audiod` scheme
@@ -58,6 +58,7 @@ If you would like to support Redox, please consider donating or buying some merc
 - (orbital) bjorn3 did a code cleanup on Orbital
 - (pkg) Josh Megnauth replaced the unmaintained `plain`, `error-chain` and `user_error` libraries with the `bytemuck`, `anyhow` and `thiserror` libraries on `pkgar` for better error reporting
 - (programs) Jeremy Soller fixed DevilutionX, FreeCiv, libicu and fontconfig recipes
+- (programs) Jeremy Soller fixed GCC on RISC-V
 - (programs) Jeremy Soller updated GStreamer, HarfBuzz, QEMU, GLib and libffi to the latest version
 - (programs) Jeremy Soller enabled dynamic linking on the SDL2-image, SDL2-ttf, Cairo, liborbital, COSMIC Player, GStreamer, HarfBuzz, FreeType, pkg-config, Boxedwine, QEMU, GLib and libffi recipes
 - (programs) Jeremy Soller enabled the POSIX thread semaphores on SDL1
@@ -65,7 +66,9 @@ If you would like to support Redox, please consider donating or buying some merc
 - (programs) Jeremy Soller converted the FreeCiv, SDL2-ttf and ncursesw recipes to TOML
 - (programs) Jeremy Soller enabled the FreeCiv dedicated server
 - (build-system) Jeremy Soller updated the Podman container configuration to use the Debian stable backports to update the build tool versions, fixing some programs
-- (build-system) Jeremy Soller implemented automatic shared dependency (dynamically-linked libraries) detection on Cookbook
+- (build-system) Jeremy Soller implemented automatic shared dependency (dynamically-linked libraries) detection on Cookbook and deprecated the `shared-deps` data type
+- (build-system) Jeremy Soller deprecated the `COOKBOOK_PREFER_STATIC` environment variable in favor of `DYNAMIC_INIT`
+- (build-system) Jeremy Soller updated the Redox build server to use Podman (using a Debian stable container with backports) instead of Ubuntu 22.04, fixing environment problems and outdated build tools
 - (hardware) Ralen Oreti documented the status of the Samsung Series 3 and ASUS Vivobook 15 OLED laptops
 - (hardware) Collin M documented the status of the HP EliteBook Folio 9480m laptop
 - (doc) Ribbon added [advanced instructions](https://doc.redox-os.org/book/troubleshooting.html#fix-breaking-changes) to fix common types of breaking changes in the book
