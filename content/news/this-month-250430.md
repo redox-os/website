@@ -33,6 +33,10 @@ It restored my excitement with a microkernel-based operating system because Redo
 
 Redox also had more advanced system APIs and modern CPU architecture support than GNU Hurd with much less development time, thus it became my focus as the most advanced and practical open-source microkernel-based operating system available.
 
+You can see the first Redox screenshot from the [This Week in Redox 1](https://www.redox-os.org/news/this-week-in-redox-1/) post below:
+
+<a href="/img/screenshot/first-screenshot.png"><img class="img-responsive" alt="First Redox Screenshot" src="/img/screenshot/first-screenshot.png"/></a>
+
 ## Improvements
 
 - (kernel) Jeremy Soller fixed the ARM64 and RISC-V support
