@@ -1,6 +1,6 @@
 ---
 title: "Rsoc: Improving Ion's UX, week 1"
-date: 2019-07-015T17:58:24-04:00
+date: "2019-07-21"
 author: "AdminXVII"
 ---
 # Adding Nix support for Redox (not yet merged)
