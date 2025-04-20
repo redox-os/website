@@ -19,6 +19,20 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## 10 Years Of Redox
+
+The [first Redox commit](https://github.com/redox-os/redox/commit/0edea108a1d8112b3aa4e8ae7b3d8d41c5d0ed85) completed 10 years in April 20!!
+
+We would like to thank all the people that made it possible, develop an advanced general-purpose operating system from scratch is a very complex and time consuming task that wouldn't be possible without your help.
+
+These years shown us how the microkernel architrecture and the Rust programming language allow the operating system to be much more correct, secure, reliable and maintainable with less effort.
+
+- (Ribbon's opinion): I was doing a research in 2016 to discover the best operating systems technically once I discovered Redox OS and was amazed, it had all technical decisions that I wanted which other operating systems lacked.
+
+It restored my excitement with a microkernel-based operating system because Redox could run advanced FOSS programs with recent versions (which is a struggle in most new operating systems), Minix could do that using the NetBSD packages but it was unmaintained and lacked system APIs to run programs and drivers with more complexity, thus couldn't be used as a daily driver operating system.
+
+Redox also had more advanced system APIs and modern CPU architecture support than GNU Hurd with much less development time, thus it became my focus as the most advanced and practical open-source microkernel-based operating system available.
+
 ## Improvements
 
 - (kernel) Jeremy Soller fixed the ARM64 and RISC-V support
