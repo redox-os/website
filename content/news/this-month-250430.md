@@ -37,8 +37,17 @@ You can see the first Redox screenshot from the [This Week in Redox 1](https://w
 
 <a href="/img/screenshot/first-screenshot.png"><img class="img-responsive" alt="First Redox Screenshot" src="/img/screenshot/first-screenshot.png"/></a>
 
+## Complete Userspace-based Process Manager
+
+4lDO2 finished the userspace-based process manager and fixed `proc` and POSIX signals bugs in the process, the process manager does the management of processes, process groups, sessions, threads, POSIX signals and others.
+
+In monolithic kernels this process is done in the kernel, which allow the stability and security of process management to be compromised by bugs in other kernel components. While in Redox the process management is protected from bugs in other system components through memory isolation in userspace.
+
+It also allowed the removal of 20 system calls from the kernel, which decreased the kernel size in 10%
+
 ## Improvements
 
+- (bootloader) Jeremy Soller fixed the RISC-V compilation
 - (kernel) Jeremy Soller fixed the ARM64 and RISC-V support
 - (kernel) 4lDO2 fixed the cancellation of the network stack schemes
 - (kernel) 4lDO2 removed the `ITimer` scheme
@@ -46,15 +55,16 @@ You can see the first Redox screenshot from the [This Week in Redox 1](https://w
 - (drivers) bjorn3 updated the VESA driver (vesad) to disable the kernel graphical debugging as late as possible
 - (drivers) bjorn3 fixed the ARM64 support on the PCI driver
 - (drivers) bjorn3 improved the error message when the hardware don't support ACPI
+- (system) 4lDO2 finished the userspace-based process manager and migrated necessary system components to use it
 - (system) Jeremy Soller updated uutils to the latest commit
-- (system) Darley Barreto implemented the `openat()` POSIX function which allows file locations to be isolated from the program. It will replace the "named dup" calls, which are non-standard (not POSIX or Linux) so you can access a specific resource or get/set values of a certain category for a resource 
-- (system) 4lDO2 migrated more system components and libraries to the userspace-based process manager
+- (system) Darley Barreto implemented the `openat()` POSIX function which allows file locations to be isolated from the program. It will replace the "named dup" calls, which are non-standard (not POSIX or Linux) so you can access a specific resource or get/set values of a certain category for a resource
 - (system) 4lDO2 implemented a readiness-based I/O model wrapper for the completion-based I/O model to reduce boilerplate code in the `redox-scheme` library
 - (system) 4lDO2 updated `escalated` to use the `redox-scheme` library and `SYS_CALL` system call
 - (system) 4lDO2 implemented cancellation on the Orbital scheme
 - (system) 4lDO2 implemented cancellation on the `audiod` scheme
 - (system) 4lDO2 updated the `audiod` daemon to use the `redox-scheme` library
 - (system) bjorn3 fixed the ARM64 support on the `bootstrap` program
+- (system) bjorn3 implemented the `sudo` daemon to replace the `setuid()` function and the `escalated` daemon to remove a security flaw from Ancient Unix
 - (system) bjorn3 changed the boot order to start the `logd` daemon before the `fbbootlogd` daemon
 - (system) bjorn3 implemented the support for new sink sources on the `logd` daemon
 - (system) bjorn3 restored the relibc static linking on the Ion shell to improve the relibc and dynamic linker debugging
@@ -62,17 +72,21 @@ You can see the first Redox screenshot from the [This Week in Redox 1](https://w
 - (system) bjorn3 fixed warnings in some system components
 - (relibc) Jeremy Soller fixed the ARM64 and RISC-V support
 - (relibc) Jeremy Soller fixed the dynamic linker support for multiple CPU architectures
+- (relibc) Anhad Singh fixed the non-x86 CPU support on the [TCB](https://en.wikipedia.org/wiki/Thread_control_block) of the dynamic linker
 - (relibc) bjorn3 added a workaround to fix an undefined behavior on ARM64
 - (relibc) bjorn3 did minor improvements to the efficiency and code quality of the `exec` implementation
 - (relibc) Josh Megnauth fixed a clobbering on the strptime() function following the musl and glibc behavior
+- (relibc) Josh Megnauth implemented the [err.h](https://man.freebsd.org/cgi/man.cgi?err) BSD extension to simplify error messages (also supported by glibc and musl)
+- (relibc) Josh Williams added partial POSIX signals tests
 - (net) 4lDO2 updated the DNS daemon (dnsd) to use the `redox-scheme` library
 - (redoxfs) bjorn3 fixed the RedoxFS tests
 - (redoxfs) bjorn3 did a code cleanup in RedoxFS
-- (orbital) 4lDO2 updated Orbital to use the `redox-scheme` library
 - (orbital) Dimitar Gjorgievski implemented GPU-based mouse cursor rendering in Orbital, improving VirtIO-GPU support
+- (orbital) bjorn3 updated Orbital to use the `redox-scheme` library
 - (orbital) bjorn3 fixed a correctness bug in Orbital
+- (orbital) bjorn3 fixed a bug where the cursor would be hidden behind OSDs when not using an hardware mouse cursor
 - (orbital) bjorn3 improved the VirtIO-GPU support in Orbital
-- (orbital) bjorn3 simplified the Orbital code
+- (orbital) bjorn3 simplified the code
 - (orbital) bjorn3 did a code cleanup on Orbital
 - (pkg) Josh Megnauth replaced the unmaintained `plain`, `error-chain` and `user_error` libraries with the `bytemuck`, `anyhow` and `thiserror` libraries on `pkgar` for better error reporting
 - (programs) Jeremy Soller fixed DevilutionX, FreeCiv, libicu and fontconfig recipes
