@@ -45,6 +45,12 @@ In monolithic kernels this process is done in the kernel, which allow the stabil
 
 It also allowed the removal of 20 system calls from the kernel, which decreased the kernel size in 10%
 
+## Better User Authentication Security
+
+bjorn3 implemented the `sudo` daemon to replace the `setuid()` function and the `escalated` daemon to remove a security flaw from programs using `setuid()`, quoting him:
+
+"setuid is not a security issue in itself, but every setuid binary needs to be carefully written to avoid privilege escalation as it inherits an untrusted environment from the parent process. For example LD_PRELOAD needs to be ignored by the dynamic linker, PATH needs to be replaced with something trusted, and more. Containers also have bad interactions with setuid binaries. If you were to allow mount namespaces without any other isolation, you can easily trick a setuid binary into using a different config than it should. For example you could present a sudoers config to sudo that allows anyone to run any command as root without needing a password"
+
 ## Improvements
 
 - (bootloader) Jeremy Soller fixed the RISC-V compilation
@@ -64,7 +70,6 @@ It also allowed the removal of 20 system calls from the kernel, which decreased 
 - (system) 4lDO2 implemented cancellation on the `audiod` scheme
 - (system) 4lDO2 updated the `audiod` daemon to use the `redox-scheme` library
 - (system) bjorn3 fixed the ARM64 support on the `bootstrap` program
-- (system) bjorn3 implemented the `sudo` daemon to replace the `setuid()` function and the `escalated` daemon to remove a security flaw from Ancient Unix
 - (system) bjorn3 changed the boot order to start the `logd` daemon before the `fbbootlogd` daemon
 - (system) bjorn3 implemented the support for new sink sources on the `logd` daemon
 - (system) bjorn3 restored the relibc static linking on the Ion shell to improve the relibc and dynamic linker debugging
@@ -84,7 +89,7 @@ It also allowed the removal of 20 system calls from the kernel, which decreased 
 - (orbital) Dimitar Gjorgievski implemented GPU-based mouse cursor rendering in Orbital, improving VirtIO-GPU support
 - (orbital) bjorn3 updated Orbital to use the `redox-scheme` library
 - (orbital) bjorn3 fixed a correctness bug in Orbital
-- (orbital) bjorn3 fixed a bug where the cursor would be hidden behind OSDs when not using an hardware mouse cursor
+- (orbital) bjorn3 fixed a bug where the cursor would be hidden behind OSDs when not using an hardware-accelerated mouse cursor
 - (orbital) bjorn3 improved the VirtIO-GPU support in Orbital
 - (orbital) bjorn3 simplified the code
 - (orbital) bjorn3 did a code cleanup on Orbital
