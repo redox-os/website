@@ -54,6 +54,7 @@ bjorn3 implemented the `sudo` daemon to replace the `setuid()` function and the 
 ## Improvements
 
 - (bootloader) Jeremy Soller fixed the RISC-V compilation
+- (bootloader) Andrey Turkin fixed the RISC-V initialization
 - (kernel) Jeremy Soller fixed the ARM64 and RISC-V support
 - (kernel) 4lDO2 fixed the cancellation of the network stack schemes
 - (kernel) 4lDO2 removed the `ITimer` scheme
