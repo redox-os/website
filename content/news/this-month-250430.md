@@ -61,19 +61,28 @@ bjorn3 implemented the `sudo` daemon to replace the `setuid()` function and the 
 
 "setuid is not a security issue in itself, but every setuid binary needs to be carefully written to avoid privilege escalation as it inherits an untrusted environment from the parent process. For example LD_PRELOAD needs to be ignored by the dynamic linker, PATH needs to be replaced with something trusted, and more. Containers also have bad interactions with setuid binaries. If you were to allow mount namespaces without any other isolation, you can easily trick a setuid binary into using a different config than it should. For example you could present a sudoers config to sudo that allows anyone to run any command as root without needing a password"
 
-## Improvements
+## Bootloader Improvements
 
 - (bootloader) Jeremy Soller fixed the RISC-V compilation
 - (bootloader) Andrey Turkin fixed the RISC-V initialization
+
+## Kernel Improvements
+
 - (kernel) Jeremy Soller fixed the ARM64 and RISC-V support
 - (kernel) 4lDO2 fixed the cancellation of the network stack schemes
 - (kernel) 4lDO2 removed the `ITimer` scheme
 - (kernel) bjorn3 fixed the saving and restoring of float registers on ARM64
 - (kernel) bjorn3 fixed a crash on GICv3 used for ARM64 serial debugging
 - (kernel) bjorn3 improved the debugging by shpwing the PID of the process on unhandled exceptions
+
+## Driver Improvements
+
 - (drivers) bjorn3 updated the VESA driver (vesad) to disable the kernel graphical debugging as late as possible
 - (drivers) bjorn3 fixed the ARM64 support on the PCI driver
 - (drivers) bjorn3 improved the error message when the hardware don't support ACPI
+
+## System Improvements
+
 - (system) 4lDO2 finished the userspace-based process manager and migrated necessary system components to use it
 - (system) Jeremy Soller updated uutils to the latest commit
 - (system) Darley Barreto implemented the `openat()` POSIX function which allows file locations to be isolated from the program. It will replace the "named dup" calls, which are non-standard (not POSIX or Linux) so you can access a specific resource or get/set values of a certain category for a resource
@@ -89,6 +98,9 @@ bjorn3 implemented the `sudo` daemon to replace the `setuid()` function and the 
 - (system) bjorn3 moved `bootstrap` and `initfs` to the `base` repository
 - (system) bjorn3 did a code cleanup on `userutils`
 - (system) bjorn3 fixed warnings in some system components
+
+## Relibc Improvements
+
 - (relibc) Jeremy Soller fixed the ARM64 and RISC-V support
 - (relibc) Jeremy Soller fixed the dynamic linker support for multiple CPU architectures
 - (relibc) Jeremy Soller added the libstdc++ library on the `base` configuration to fix the dynamic linker and simplify the dynamically linked recipes
@@ -98,10 +110,19 @@ bjorn3 implemented the `sudo` daemon to replace the `setuid()` function and the 
 - (relibc) Josh Megnauth fixed a clobbering on the strptime() function following the musl and glibc behavior
 - (relibc) Josh Megnauth implemented the [err.h](https://man.freebsd.org/cgi/man.cgi?err) BSD extension to simplify error messages (also supported by glibc and musl)
 - (relibc) Josh Williams added partial POSIX signals tests
+
+## Networking Improvements
+
 - (net) 4lDO2 updated the DNS daemon (dnsd) to use the `redox-scheme` library
+
+## RedoxFS Improvements
+
 - (redoxfs) James Matlik fixed a regression on the allocation garbage collector
 - (redoxfs) bjorn3 fixed the RedoxFS tests
 - (redoxfs) bjorn3 did a code cleanup in RedoxFS
+
+## Orbital Improvements
+
 - (orbital) Dimitar Gjorgievski implemented GPU-based mouse cursor rendering in Orbital, improving VirtIO-GPU support
 - (orbital) bjorn3 updated Orbital to use the `redox-scheme` library
 - (orbital) bjorn3 fixed a correctness bug in Orbital
@@ -109,7 +130,13 @@ bjorn3 implemented the `sudo` daemon to replace the `setuid()` function and the 
 - (orbital) bjorn3 improved the VirtIO-GPU support in Orbital
 - (orbital) bjorn3 simplified the code
 - (orbital) bjorn3 did a code cleanup on Orbital
+
+## Packaging Improvements
+
 - (pkg) Josh Megnauth replaced the unmaintained `plain`, `error-chain` and `user_error` libraries with the `bytemuck`, `anyhow` and `thiserror` libraries on `pkgar` for better error reporting
+
+## Programs
+
 - (programs) Jeremy Soller fixed DevilutionX, FreeCiv, libicu and fontconfig recipes
 - (programs) Jeremy Soller fixed GCC on RISC-V
 - (programs) Jeremy Soller updated GStreamer, HarfBuzz, QEMU, GLib and libffi to the latest version
@@ -119,14 +146,23 @@ bjorn3 implemented the `sudo` daemon to replace the `setuid()` function and the 
 - (programs) Jeremy Soller converted the FreeCiv, SDL2-ttf and ncursesw recipes to TOML
 - (programs) Jeremy Soller enabled the FreeCiv dedicated server
 - (programs) Andrey Turkin fixed the ARM64 support from OpenSSL
+
+## Build System Improvements
+
 - (build-system) Jeremy Soller updated the Podman container configuration to use the Debian stable backports to update the build tool versions, fixing some programs
 - (build-system) Jeremy Soller implemented automatic shared dependency (dynamically-linked libraries) detection on Cookbook and deprecated the `shared-deps` data type
 - (build-system) Jeremy Soller deprecated the `COOKBOOK_PREFER_STATIC` environment variable in favor of `DYNAMIC_INIT`
 - (build-system) Jeremy Soller updated the Redox build server to use Podman (using a Debian stable container with backports) instead of Ubuntu 22.04, fixing environment problems and outdated build tools
 - (build-system) Jeremy Soller and Ron Williams improved the execution separation (host system/Podman container) of the build system tools in Podman Builds to fix bugs caused by different softwares versions between the host system and Podman container in binaries
 - (build-system) bjorn3 did a cleanup
+
+## Hardware Updates
+
 - (hardware) Ralen Oreti documented the status of the Samsung Series 3 and ASUS Vivobook 15 OLED laptops
 - (hardware) Collin M documented the status of the HP EliteBook Folio 9480m laptop
+
+## Documentation Improvements
+
 - (doc) Ribbon added [advanced instructions](https://doc.redox-os.org/book/troubleshooting.html#fix-breaking-changes) to fix common types of breaking changes in the book
 - (doc) Miles Ramage did formatting improvements on the Chapter 4 of the book
 - (doc) Miles Ramage and Ribbon improved and fixed the Chapter 2 of the book
