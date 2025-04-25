@@ -57,7 +57,7 @@ Si vous voulez un aperçu rapide de ce qui se passe et en parler.
 
 [reddit.com/r/rust](https://www.reddit.com/r/rust) pour des nouvelles et des discussions sur Rust.
 
-## [Fosstodon](https://fosstodon.org/@redox)
+## [Mastodon](https://floss.social/@redox)
 
 Notre alternative à Twitter, où nous publions des nouvelles et des fils de discussion communautaires.
 

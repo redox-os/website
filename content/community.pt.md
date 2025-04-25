@@ -71,7 +71,7 @@ Caso queira ver as novidades e discutir sobre.
 
 [reddit.com/r/rust](https://www.reddit.com/r/rust) - Para notícias relacionadas a Rust e discussões.
 
-## [Fosstodon](https://fosstodon.org/@redox)
+## [Mastodon](https://floss.social/@redox)
 
 Nossa alternativa ao Twitter, postamos notícias e tópicos da comunidade.
 

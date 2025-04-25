@@ -66,7 +66,7 @@ If you want a quick look at what's going on and talk about it.
 
 [reddit.com/r/rust](https://www.reddit.com/r/rust) for related Rust news and discussions.
 
-## [Fosstodon](https://fosstodon.org/@redox)
+## [Mastodon](https://floss.social/@redox)
 
 Our alternative to Twitter, where we post news and community threads.
 

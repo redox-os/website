@@ -55,4 +55,4 @@ url = "home"
     </a>
   </div>
 </div>
-<a rel="me" href="https://fosstodon.org/@redox"></a>
+<a rel="me" href="https://floss.social/@redox"></a>
