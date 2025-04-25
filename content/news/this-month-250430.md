@@ -37,6 +37,16 @@ You can see the first Redox screenshot from the [This Week in Redox 1](https://w
 
 <a href="/img/screenshot/first-screenshot.png"><img class="img-responsive" alt="First Redox Screenshot" src="/img/screenshot/first-screenshot.png"/></a>
 
+## All In One
+
+Jeremy Soller successfully built the build server [packages](https://static.redox-os.org/pkg/) and [images](https://static.redox-os.org/img/) of the x86-64, i686, ARM64 and RISC-V CPU architectures in one day for the first time!!
+
+Before it had bugs and flexibility problems that didn't allowed it, expect more build server package and image stability in the future.
+
+## Minimality
+
+Jeremy Soller enabled the `minimal` and `minimal-net` variants on the build server images, this allow testers and developers to easily test the most small Redox variant for computers with a small amount of resources or optimize Redox to use less resources.
+
 ## Complete Userspace-based Process Manager
 
 4lDO2 finished the userspace-based process manager and fixed `proc` and POSIX signals bugs in the process, the process manager does the management of processes, process groups, sessions, threads, POSIX signals and others.
@@ -59,6 +69,8 @@ bjorn3 implemented the `sudo` daemon to replace the `setuid()` function and the 
 - (kernel) 4lDO2 fixed the cancellation of the network stack schemes
 - (kernel) 4lDO2 removed the `ITimer` scheme
 - (kernel) bjorn3 fixed the saving and restoring of float registers on ARM64
+- (kernel) bjorn3 fixed a crash on GICv3 used for ARM64 serial debugging
+- (kernel) bjorn3 improved the debugging by shpwing the PID of the process on unhandled exceptions
 - (drivers) bjorn3 updated the VESA driver (vesad) to disable the kernel graphical debugging as late as possible
 - (drivers) bjorn3 fixed the ARM64 support on the PCI driver
 - (drivers) bjorn3 improved the error message when the hardware don't support ACPI
@@ -74,10 +86,12 @@ bjorn3 implemented the `sudo` daemon to replace the `setuid()` function and the 
 - (system) bjorn3 changed the boot order to start the `logd` daemon before the `fbbootlogd` daemon
 - (system) bjorn3 implemented the support for new sink sources on the `logd` daemon
 - (system) bjorn3 restored the relibc static linking on the Ion shell to improve the relibc and dynamic linker debugging
+- (system) bjorn3 moved `bootstrap` and `initfs` to the `base` repository
 - (system) bjorn3 did a code cleanup on `userutils`
 - (system) bjorn3 fixed warnings in some system components
 - (relibc) Jeremy Soller fixed the ARM64 and RISC-V support
 - (relibc) Jeremy Soller fixed the dynamic linker support for multiple CPU architectures
+- (relibc) Jeremy Soller added the libstdc++ library on the `base` configuration to fix the dynamic linker and simplify the dynamically linked recipes
 - (relibc) Anhad Singh fixed the non-x86 CPU support on the [TCB](https://en.wikipedia.org/wiki/Thread_control_block) of the dynamic linker
 - (relibc) bjorn3 added a workaround to fix an undefined behavior on ARM64
 - (relibc) bjorn3 did minor improvements to the efficiency and code quality of the `exec` implementation
@@ -85,6 +99,7 @@ bjorn3 implemented the `sudo` daemon to replace the `setuid()` function and the 
 - (relibc) Josh Megnauth implemented the [err.h](https://man.freebsd.org/cgi/man.cgi?err) BSD extension to simplify error messages (also supported by glibc and musl)
 - (relibc) Josh Williams added partial POSIX signals tests
 - (net) 4lDO2 updated the DNS daemon (dnsd) to use the `redox-scheme` library
+- (redoxfs) James Matlik fixed a regression on the allocation garbage collector
 - (redoxfs) bjorn3 fixed the RedoxFS tests
 - (redoxfs) bjorn3 did a code cleanup in RedoxFS
 - (orbital) Dimitar Gjorgievski implemented GPU-based mouse cursor rendering in Orbital, improving VirtIO-GPU support
@@ -103,10 +118,13 @@ bjorn3 implemented the `sudo` daemon to replace the `setuid()` function and the 
 - (programs) Jeremy Soller restored the PrBoom music (this bug was hard to fix...)
 - (programs) Jeremy Soller converted the FreeCiv, SDL2-ttf and ncursesw recipes to TOML
 - (programs) Jeremy Soller enabled the FreeCiv dedicated server
+- (programs) Andrey Turkin fixed the ARM64 support from OpenSSL
 - (build-system) Jeremy Soller updated the Podman container configuration to use the Debian stable backports to update the build tool versions, fixing some programs
 - (build-system) Jeremy Soller implemented automatic shared dependency (dynamically-linked libraries) detection on Cookbook and deprecated the `shared-deps` data type
 - (build-system) Jeremy Soller deprecated the `COOKBOOK_PREFER_STATIC` environment variable in favor of `DYNAMIC_INIT`
 - (build-system) Jeremy Soller updated the Redox build server to use Podman (using a Debian stable container with backports) instead of Ubuntu 22.04, fixing environment problems and outdated build tools
+- (build-system) Jeremy Soller and Ron Williams improved the execution separation (host system/Podman container) of the build system tools in Podman Builds to fix bugs caused by different softwares versions between the host system and Podman container in binaries
+- (build-system) bjorn3 did a cleanup
 - (hardware) Ralen Oreti documented the status of the Samsung Series 3 and ASUS Vivobook 15 OLED laptops
 - (hardware) Collin M documented the status of the HP EliteBook Folio 9480m laptop
 - (doc) Ribbon added [advanced instructions](https://doc.redox-os.org/book/troubleshooting.html#fix-breaking-changes) to fix common types of breaking changes in the book
