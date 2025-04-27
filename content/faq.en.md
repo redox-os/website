@@ -245,6 +245,7 @@ Have a look at [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/m
 - Intel - 64-bit (x86_64) and 32-bit (i686) from Pentium II and after with limitations.
 - AMD - 64-bit (AMD64) and 32-bit.
 - ARM - 64-bit (Aarch64) with limitations.
+- RISC-V - 64-bit
 
 ### Hardware Interfaces
 
