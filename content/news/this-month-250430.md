@@ -74,14 +74,14 @@ bjorn3 implemented the `sudo` daemon to replace the `setuid()` function and the 
 - (kernel) 4lDO2 removed the `ITimer` scheme
 - (kernel) bjorn3 fixed the saving and restoring of float registers on ARM64
 - (kernel) bjorn3 fixed a crash on GICv3 used for ARM64 serial debugging
-- (kernel) bjorn3 improved the debugging by shpwing the PID of the process on unhandled exceptions
+- (kernel) bjorn3 improved the debugging by showing the PID of the process on unhandled exceptions
 
 ## Driver Improvements
 
 - (drivers) Jeremy Soller implemented a timeout of 5 seconds on the NVMe driver initialization to restart the process when it fail and try to continue the boot process
 - (drivers) Jeremy Soller did a cleanup on the AML parser
 - (drivers) bjorn3 updated the VESA driver (vesad) to disable the kernel graphical debugging as late as possible
-- (drivers) bjorn3 fixed the ARM64 support on the PCI driver
+- (drivers) bjorn3 partially fixed the ARM64 support on the PCI driver, interrupts still have issues
 - (drivers) bjorn3 improved the error message when the hardware don't support ACPI
 
 ## System Improvements
@@ -108,7 +108,6 @@ bjorn3 implemented the `sudo` daemon to replace the `setuid()` function and the 
 - (relibc) Jeremy Soller fixed the dynamic linker support for multiple CPU architectures
 - (relibc) Jeremy Soller added the libstdc++ library on the `base` configuration to fix the dynamic linker and simplify the dynamically linked recipes
 - (relibc) Anhad Singh fixed the non-x86 CPU support on the [TCB](https://en.wikipedia.org/wiki/Thread_control_block) of the dynamic linker
-- (relibc) bjorn3 added a workaround to fix an undefined behavior on ARM64
 - (relibc) bjorn3 did minor improvements to the efficiency and code quality of the `exec` implementation
 - (relibc) Josh Megnauth fixed a clobbering on the strptime() function following the musl and glibc behavior
 - (relibc) Josh Megnauth implemented the [err.h](https://man.freebsd.org/cgi/man.cgi?err) BSD extension to simplify error messages (also supported by glibc and musl)
