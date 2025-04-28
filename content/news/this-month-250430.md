@@ -69,6 +69,7 @@ bjorn3 implemented the `sudo` daemon to replace the `setuid()` function and the 
 ## Kernel Improvements
 
 - (kernel) Jeremy Soller fixed the ARM64 and RISC-V support
+- (kernel) 4lDO2 fixed a same-thread scheme use-after-free bug
 - (kernel) 4lDO2 fixed the cancellation of the network stack schemes
 - (kernel) 4lDO2 removed the `ITimer` scheme
 - (kernel) bjorn3 fixed the saving and restoring of float registers on ARM64
@@ -77,6 +78,8 @@ bjorn3 implemented the `sudo` daemon to replace the `setuid()` function and the 
 
 ## Driver Improvements
 
+- (drivers) Jeremy Soller implemented a timeout of 5 seconds on the NVMe driver initialization to restart the process when it fail and try to continue the boot process
+- (drivers) Jeremy Soller did a cleanup on the AML parser
 - (drivers) bjorn3 updated the VESA driver (vesad) to disable the kernel graphical debugging as late as possible
 - (drivers) bjorn3 fixed the ARM64 support on the PCI driver
 - (drivers) bjorn3 improved the error message when the hardware don't support ACPI
@@ -117,7 +120,7 @@ bjorn3 implemented the `sudo` daemon to replace the `setuid()` function and the 
 
 ## RedoxFS Improvements
 
-- (redoxfs) James Matlik fixed a regression on the allocation garbage collector
+- (redoxfs) James Matlik fixed a regression where the filesystem couldn't write data after squashing the allocator log
 - (redoxfs) bjorn3 fixed the RedoxFS tests
 - (redoxfs) bjorn3 did a code cleanup in RedoxFS
 
@@ -154,6 +157,7 @@ bjorn3 implemented the `sudo` daemon to replace the `setuid()` function and the 
 - (build-system) Jeremy Soller deprecated the `COOKBOOK_PREFER_STATIC` environment variable in favor of `DYNAMIC_INIT`
 - (build-system) Jeremy Soller updated the Redox build server to use Podman (using a Debian stable container with backports) instead of Ubuntu 22.04, fixing environment problems and outdated build tools
 - (build-system) Jeremy Soller and Ron Williams improved the execution separation (host system/Podman container) of the build system tools in Podman Builds to fix bugs caused by different softwares versions between the host system and Podman container in binaries
+- (build-system) Jeremy Soller updated the `make clean` command to wipe the `prefix` folder, this allow breaking changes on the Redox toolchain to be easily fixed
 - (build-system) bjorn3 did a cleanup
 
 ## Hardware Updates
@@ -164,6 +168,7 @@ bjorn3 implemented the `sudo` daemon to replace the `setuid()` function and the 
 ## Documentation Improvements
 
 - (doc) Ribbon added [advanced instructions](https://doc.redox-os.org/book/troubleshooting.html#fix-breaking-changes) to fix common types of breaking changes in the book
+- (doc) Ribbon added the RISC-V support on the website FAQ
 - (doc) Miles Ramage did formatting improvements on the Chapter 4 of the book
 - (doc) Miles Ramage and Ribbon improved and fixed the Chapter 2 of the book
 
