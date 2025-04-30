@@ -49,11 +49,11 @@ Jeremy Soller enabled the `minimal` and `minimal-net` variants on the build serv
 
 ## Complete Userspace-based Process Manager
 
-4lDO2 finished the userspace-based process manager and fixed `proc` and POSIX signals bugs in the process, the process manager does the management of processes, process groups, sessions, threads, POSIX signals and others.
+4lDO2 finished the userspace process manager, fixing process and POSIX signals bugs in the process. The process manager is the backend for POSIX functions related to processes, process groups, sessions, threads, signals and similar.
 
-In monolithic kernels this process is done in the kernel, which allow the stability and security of process management to be compromised by bugs in other kernel components. While in Redox the process management is protected from bugs in other system components through memory isolation in userspace.
+In monolithic kernels this process is done in the kernel, resulting in necessary ambient authority, and possibly constrained interfaces if stable ABI is to be guaranteed. With this userspace implementation, it will be easier to manage access rights using capabilities, reduce kernel bugs by keeping it simpler, and make changes where both sides of the interface can be updated simultaneously.
 
-It also allowed the removal of 20 system calls from the kernel, which decreased the kernel size in 10%
+It also allowed the removal of 20 system calls from the kernel, and decreased the kernel binary size by 10%.
 
 ## Better User Authentication Security
 
@@ -69,9 +69,9 @@ bjorn3 implemented the `sudo` daemon to replace the `setuid()` function and the 
 ## Kernel Improvements
 
 - (kernel) Jeremy Soller fixed the ARM64 and RISC-V support
-- (kernel) 4lDO2 fixed a same-thread scheme use-after-free bug
+- (kernel) 4lDO2 fixed a use-after-free bug, for schemes served and used by the same memory address space (affecting only userspace)
 - (kernel) 4lDO2 fixed the cancellation of the network stack schemes
-- (kernel) 4lDO2 removed the `ITimer` scheme
+- (kernel) 4lDO2 removed the `ITimer` scheme, which had always been merely a stub in the kernel
 - (kernel) bjorn3 fixed the saving and restoring of float registers on ARM64
 - (kernel) bjorn3 fixed a crash on GICv3 used for ARM64 serial debugging
 - (kernel) bjorn3 improved the debugging by showing the PID of the process on unhandled exceptions
@@ -90,9 +90,9 @@ bjorn3 implemented the `sudo` daemon to replace the `setuid()` function and the 
 - (system) Jeremy Soller updated uutils to the latest commit
 - (system) Darley Barreto implemented the `openat()` POSIX function which allows file locations to be isolated from the program. It will replace the "named dup" calls, which are non-standard (not POSIX or Linux) so you can access a specific resource or get/set values of a certain category for a resource
 - (system) 4lDO2 implemented a readiness-based I/O model wrapper for the completion-based I/O model to reduce boilerplate code in the `redox-scheme` library
-- (system) 4lDO2 updated `escalated` to use the `redox-scheme` library and `SYS_CALL` system call
-- (system) 4lDO2 implemented cancellation on the Orbital scheme
-- (system) 4lDO2 implemented cancellation on the `audiod` scheme
+- (system) 4lDO2 updated `escalated` to use the `redox-scheme` library and `SYS_CALL` system call, before the `sudo` daemon made it obsolete
+- (system) 4lDO2 implemented cancellation for the Orbital scheme
+- (system) 4lDO2 implemented cancellation for the `audiod` scheme
 - (system) 4lDO2 updated the `audiod` daemon to use the `redox-scheme` library
 - (system) bjorn3 fixed the ARM64 support on the `bootstrap` program
 - (system) bjorn3 changed the boot order to start the `logd` daemon before the `fbbootlogd` daemon
