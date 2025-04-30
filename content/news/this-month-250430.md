@@ -27,6 +27,10 @@ We would like to thank all the people that made it possible, develop an advanced
 
 These years shown us how the microkernel architrecture and the Rust programming language allow the operating system to be much more correct, secure, reliable and maintainable with less effort.
 
+Keep in mind that Redox evolved together with Rust (it was created before the 1.0 compiler version), thus we didn't had a rich library ecosystem to save the development time.
+
+We were pionners on Rust operating system development and didn't had the luxury and convenience of the very rich library ecosystem of the C and C++ programming languages.
+
 - (Ribbon's opinion): I was doing a research in 2016 to discover the best operating systems technically once I discovered Redox OS and was amazed, it had all technical decisions that I wanted which other operating systems lacked.
 
 It restored my excitement with a microkernel-based operating system because Redox could run advanced FOSS programs with recent versions (which is a struggle in most new operating systems), Minix could do that using the NetBSD packages but it was unmaintained and lacked system APIs to run programs and drivers with more complexity, thus couldn't be used as a daily driver operating system.
