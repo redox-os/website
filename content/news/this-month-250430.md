@@ -29,7 +29,7 @@ These years have shown us how the microkernel architecture and the Rust programm
 
 Keep in mind that Redox evolved together with Rust (it was created before release 1.0 of the Rust compiler), so we didn't have a rich library ecosystem to build upon.
 
-We were pionners on Rust operating system development and didn't had the luxury and convenience of the very rich library ecosystem of the C and C++ programming languages.
+We were pioneers in Rust operating system development and didn't have the luxury or convenience of the very rich library ecosystem of the C and C++ programming languages.
 
 - (Ribbon's opinion): I was doing a research in 2016 to discover the best operating systems technically. Once I discovered Redox OS, I was amazed, it had all technical decisions that I wanted which other operating systems lacked.
 
@@ -101,7 +101,7 @@ This eliminates all "setuid" programs from Redox.
 ## Kernel Improvements
 
 - (kernel) Jeremy Soller fixed the ARM64 and RISC-V support
-- (kernel) 4lDO2 fixed a use-after-free bug, for schemes served and used by the same memory address space (affecting only userspace)
+- (kernel) 4lDO2 fixed a shared memory use-after-free fault, for userspace schemes both served and used in the same memory address space
 - (kernel) 4lDO2 fixed the cancellation of the network stack schemes
 - (kernel) 4lDO2 removed the `ITimer` scheme, which had always been merely a stub in the kernel
 - (kernel) bjorn3 fixed the saving and restoring of float registers on ARM64
