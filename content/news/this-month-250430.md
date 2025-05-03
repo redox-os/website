@@ -53,17 +53,24 @@ Jeremy Soller enabled the `minimal` and `minimal-net` variants on the build serv
 
 ## Complete Userspace-based Process Manager
 
-4lDO2 finished the userspace process manager, fixing process and POSIX signals bugs in the process. The process manager is the backend for POSIX functions related to processes, process groups, sessions, threads, signals and similar.
+4lDO2 finished the userspace process manager, part of the NLnet/NGI Zero project [Redox OS Unix-style Signals](https://nlnet.nl/project/RedoxOS-Signals/), fixing process and POSIX signals bugs in the process. The process manager is the backend for POSIX functions related to processes, process groups, sessions, threads, signals and similar.
 
-In monolithic kernels this process is done in the kernel, resulting in necessary ambient authority, and possibly constrained interfaces if stable ABI is to be guaranteed. With this userspace implementation, it will be easier to manage access rights using capabilities, reduce kernel bugs by keeping it simpler, and make changes where both sides of the interface can be updated simultaneously.
+In monolithic kernels this management is done in the kernel, resulting in necessary ambient authority, and possibly constrained interfaces if a stable ABI is to be guaranteed. With this userspace implementation, it will be easier to manage access rights using capabilities, reduce kernel bugs by keeping it simpler, and make changes where both sides of the interface can be updated simultaneously.
 
 It also allowed the removal of 20 system calls from the kernel, and decreased the kernel binary size by 10%.
 
+4lDO2's [FOSDEM talk on Redox Signals](https://fosdem.org/2025/schedule/event/fosdem-2025-5670-posix-signals-in-user-space-on-the-redox-microkernel/) is now online, although it is missing the first couple of minutes due to audio problems.
+Check out his [FOSDEM overview of Redox](https://fosdem.org/2025/schedule/event/fosdem-2025-5973-redox-os-a-microkernel-based-unix-like-os/).
+
 ## Better User Authentication Security
 
-bjorn3 implemented the `sudo` daemon to replace the `setuid()` function and the `escalated` daemon to remove a security flaw from programs using `setuid()`, quoting him:
+bjorn3 implemented the `sudo` daemon to replace the `setuid()` function and removed the `escalated` daemon to remove a security flaw from programs using `setuid()`, quoting him:
 
 "setuid is not a security issue in itself, but every setuid binary needs to be carefully written to avoid privilege escalation as it inherits an untrusted environment from the parent process. For example LD_PRELOAD needs to be ignored by the dynamic linker, PATH needs to be replaced with something trusted, and more. Containers also have bad interactions with setuid binaries. If you were to allow mount namespaces without any other isolation, you can easily trick a setuid binary into using a different config than it should. For example you could present a sudoers config to sudo that allows anyone to run any command as root without needing a password"
+
+`sudo` now requests the "sudo" daemon to elevate its privileges, after the daemon validates the user's credentials.
+The `passwd` command delegates setting the user's password the "sudo" daemon.
+This eliminates all "setuid" programs from Redox.
 
 ## Bootloader Improvements
 
