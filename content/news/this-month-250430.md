@@ -51,16 +51,6 @@ This year's projects are:
 
 Thank you to our generous donors, who help make Redox Summer of Code possible. Joshua "jduck" Drake of Magnetite Security, who is funding a full RSoC project, Nigel Stoppard, who has been giving generously every month to help us improve accessibility, and our many patrons on [Patreon](https://www.patreon.com/redox_os) and [Donorbox](https://donorbox.org/redox-os).
 
-## All In One
-
-Jeremy Soller successfully built the build server [packages](https://static.redox-os.org/pkg/) and [images](https://static.redox-os.org/img/) of the x86-64, i686, ARM64 and RISC-V CPU architectures in one day for the first time!!
-
-Before it had bugs and flexibility problems that didn't allowed it, expect more build server package and image stability in the future.
-
-## Minimality
-
-Jeremy Soller enabled the `minimal` and `minimal-net` variants on the build server images, this allow testers and developers to easily test the most small Redox variant for computers with a small amount of resources or optimize Redox to use less resources.
-
 ## Complete Userspace-based Process Manager
 
 4lDO2 finished the userspace process manager, part of the NLnet/NGI Zero project [Redox OS Unix-style Signals](https://nlnet.nl/project/RedoxOS-Signals/), fixing process and POSIX signals bugs in the process. The process manager is the backend for POSIX functions related to processes, process groups, sessions, threads, signals and similar.
@@ -71,6 +61,16 @@ It also allowed the removal of 20 system calls from the kernel, and decreased th
 
 4lDO2's [FOSDEM talk on Redox Signals](https://fosdem.org/2025/schedule/event/fosdem-2025-5670-posix-signals-in-user-space-on-the-redox-microkernel/) is now online, although it is missing the first couple of minutes due to audio problems.
 Check out his [FOSDEM overview of Redox](https://fosdem.org/2025/schedule/event/fosdem-2025-5973-redox-os-a-microkernel-based-unix-like-os/).
+
+## All In One
+
+Jeremy Soller successfully built the build server [packages](https://static.redox-os.org/pkg/) and [images](https://static.redox-os.org/img/) of the x86-64, i686, ARM64 and RISC-V CPU architectures in one day for the first time!!
+
+Before it had bugs and flexibility problems that didn't allowed it, expect more build server package and image stability in the future.
+
+## Minimality
+
+Jeremy Soller enabled the `minimal` and `minimal-net` variants on the build server images, this allow testers and developers to easily test the most small Redox variant for computers with a small amount of resources or optimize Redox to use less resources.
 
 ## Better User Authentication Security
 
@@ -109,7 +109,7 @@ This eliminates all "setuid" programs from Redox.
 
 - (system) 4lDO2 finished the userspace-based process manager and migrated necessary system components to use it
 - (system) Jeremy Soller updated uutils to the latest commit
-- (system) Darley Barreto implemented the `openat()` POSIX function which allows file locations to be isolated from the program. It will replace the "named dup" calls, which are non-standard (not POSIX or Linux) so you can access a specific resource or get/set values of a certain category for a resource
+- (system) Darley Barreto started to implement the `openat()` POSIX function which allows file locations to be isolated from the program. It will replace the "named dup" calls, which are non-standard (not POSIX or Linux) so you can access a specific resource or get/set values of a certain category for a resource
 - (system) 4lDO2 implemented a readiness-based I/O model wrapper for the completion-based I/O model to reduce boilerplate code in the `redox-scheme` library
 - (system) 4lDO2 updated `escalated` to use the `redox-scheme` library and `SYS_CALL` system call, before the `sudo` daemon made it obsolete
 - (system) 4lDO2 implemented cancellation for the Orbital scheme
