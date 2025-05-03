@@ -21,13 +21,13 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## 10 Years Of Redox
 
-The [first Redox commit](https://github.com/redox-os/redox/commit/0edea108a1d8112b3aa4e8ae7b3d8d41c5d0ed85) completed 10 years in April 20!!
+This month, Redox celebrated its 10th anniversary! The [first Redox commit](https://github.com/redox-os/redox/commit/0edea108a1d8112b3aa4e8ae7b3d8d41c5d0ed85) was on April 20, 2015.
 
 We would like to thank all the people that made Redox possible. Developing an advanced general-purpose operating system from scratch is a very complex and time consuming task that wouldn't be possible without your help.
 
-These years shown us how the microkernel architrecture and the Rust programming language allow the operating system to be much more correct, secure, reliable and maintainable with less effort.
+These years have shown us how the microkernel architecture and the Rust programming language enable an operating system to be much more correct, secure, reliable and maintainable, with substantially less effort.
 
-Keep in mind that Redox evolved together with Rust (it was created before the 1.0 compiler version), thus we didn't had a rich library ecosystem to save the development time.
+Keep in mind that Redox evolved together with Rust (it was created before release 1.0 of the Rust compiler), so we didn't have a rich library ecosystem to build upon.
 
 We were pionners on Rust operating system development and didn't had the luxury and convenience of the very rich library ecosystem of the C and C++ programming languages.
 
@@ -81,7 +81,7 @@ Before it had bugs and flexibility problems that didn't allow it. Expect more bu
 
 ## Minimality
 
-Jeremy Soller enabled the `minimal` and `minimal-net` variants on the build server images, this allow testers and developers to easily test the most small Redox variant for computers with a small amount of resources or optimize Redox to use less resources.
+Jeremy Soller enabled the `minimal` and `minimal-net` variants on the build server images, this allow testers and developers to easily test the smallest Redox variant for computers with a limited resources or to optimize Redox to use less resources.
 
 ## Better User Authentication Security
 
