@@ -41,6 +41,16 @@ You can see the first Redox screenshot from the [This Week in Redox 1](https://w
 
 <a href="/img/screenshot/first-screenshot.png"><img class="img-responsive" alt="First Redox Screenshot" src="/img/screenshot/first-screenshot.png"/></a>
 
+## Redox Summer of Code
+
+It's that time of year again - Redox Summer of Code (RSoC) has engaged two students and one recent graduate for some exciting projects.
+This year's projects are:
+- Unix Domain Sockets - A warm welcome to Ibuki, who will be developing Unix Domain Sockets, including the ability to send file descriptors between processes. This is a key piece of functionality to support Wayland and D-Bus, which will enable Linux desktop applications and many important accessibility features such as a screen reader.
+- System Services Manager - Welcome back to Charlie, who was part of a Georgia Tech project to develop a System Health Monitor. Charlie will be continuing that work, and taking it to the next level, looking at our initialization, hardware platform services, PCI/PCIe driver initialization, and other aspects of how Redox services and drivers are started and managed.
+- SpiderMonkey and Servo - And a warm welcome to Andrew, who will be porting SpiderMonkey and Servo to Redox. Redox's current browser is NetSurf, and it does not have full JavaScript support, so having support for SpiderMonkey and Servo will be a big step up for us.
+
+Thank you to our generous donors, who help make Redox Summer of Code possible. Joshua "jduck" Drake of Magnetite Security, who is funding a full RSoC project, Nigel Stoppard, who has been giving generously every month to help us improve accessibility, and our many patrons on [Patreon](https://www.patreon.com/redox_os) and [Donorbox](https://donorbox.org/redox-os).
+
 ## All In One
 
 Jeremy Soller successfully built the build server [packages](https://static.redox-os.org/pkg/) and [images](https://static.redox-os.org/img/) of the x86-64, i686, ARM64 and RISC-V CPU architectures in one day for the first time!!
