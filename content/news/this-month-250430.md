@@ -23,7 +23,7 @@ If you would like to support Redox, please consider donating or buying some merc
 
 The [first Redox commit](https://github.com/redox-os/redox/commit/0edea108a1d8112b3aa4e8ae7b3d8d41c5d0ed85) completed 10 years in April 20!!
 
-We would like to thank all the people that made it possible, develop an advanced general-purpose operating system from scratch is a very complex and time consuming task that wouldn't be possible without your help.
+We would like to thank all the people that made Redox possible. Developing an advanced general-purpose operating system from scratch is a very complex and time consuming task that wouldn't be possible without your help.
 
 These years shown us how the microkernel architrecture and the Rust programming language allow the operating system to be much more correct, secure, reliable and maintainable with less effort.
 
@@ -31,7 +31,7 @@ Keep in mind that Redox evolved together with Rust (it was created before the 1.
 
 We were pionners on Rust operating system development and didn't had the luxury and convenience of the very rich library ecosystem of the C and C++ programming languages.
 
-- (Ribbon's opinion): I was doing a research in 2016 to discover the best operating systems technically once I discovered Redox OS and was amazed, it had all technical decisions that I wanted which other operating systems lacked.
+- (Ribbon's opinion): I was doing a research in 2016 to discover the best operating systems technically. Once I discovered Redox OS, I was amazed, it had all technical decisions that I wanted which other operating systems lacked.
 
 It restored my excitement with a microkernel-based operating system because Redox could run advanced FOSS programs with recent versions (which is a struggle in most new operating systems), Minix could do that using the NetBSD packages but it was unmaintained and lacked system APIs to run programs and drivers with more complexity, thus couldn't be used as a daily driver operating system.
 
@@ -45,7 +45,7 @@ You can see the first Redox screenshot from the [This Week in Redox 1](https://w
 
 It's that time of year again - Redox Summer of Code (RSoC) has engaged two students and one recent graduate for some exciting projects.
 This year's projects are:
-- Unix Domain Sockets - A warm welcome to Ibuki, who will be developing Unix Domain Sockets, including the ability to send file descriptors between processes. This is a key piece of functionality to support Wayland and D-Bus, which will enable Linux desktop applications and many important accessibility features such as a screen reader.
+- Unix Domain Sockets - A warm welcome to Ibuki, who will be developing Unix Domain Sockets, including the ability to send file descriptors between processes. This is a key piece of functionality towards support for Wayland and D-Bus, which will eventually enable Linux desktop applications and many important accessibility features such as a screen reader.
 - System Services Manager - Welcome back to Charlie, who was part of a Georgia Tech project to develop a System Health Monitor. Charlie will be continuing that work, and taking it to the next level, looking at our initialization, hardware platform services, PCI/PCIe driver initialization, and other aspects of how Redox services and drivers are started and managed.
 - SpiderMonkey and Servo - And a warm welcome to Andrew, who will be porting SpiderMonkey and Servo to Redox. Redox's current browser is NetSurf, and it does not have full JavaScript support, so having support for SpiderMonkey and Servo will be a big step up for us.
 
@@ -62,11 +62,22 @@ It also allowed the removal of 20 system calls from the kernel, and decreased th
 4lDO2's [FOSDEM talk on Redox Signals](https://fosdem.org/2025/schedule/event/fosdem-2025-5670-posix-signals-in-user-space-on-the-redox-microkernel/) is now online, although it is missing the first couple of minutes due to audio problems.
 Check out his [FOSDEM overview of Redox](https://fosdem.org/2025/schedule/event/fosdem-2025-5973-redox-os-a-microkernel-based-unix-like-os/).
 
+## Georgia Tech Service Monitor
+
+This winter, a team of students from Georgia Tech has been developing a System Health Monitoring and Recovery daemon and user interface.
+This software demonstrates how a microkernel OS can detect and restart services that crash or hang.
+It also allows the configuration and disabling of system services,
+gathering operational statistics, and other essential functionality.
+
+A big thanks to Julianna, Devan, Donald, Matthew, Charlie and Thomas! Check out the video of their work.
+
+<iframe width="800" height="640" src="https://www.youtube.com/embed/lzeUhNs34CU?si=Hitd2BpKpSzQU25e" title="Georgia Tech Service Monitor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## All In One
 
 Jeremy Soller successfully built the build server [packages](https://static.redox-os.org/pkg/) and [images](https://static.redox-os.org/img/) of the x86-64, i686, ARM64 and RISC-V CPU architectures in one day for the first time!!
 
-Before it had bugs and flexibility problems that didn't allowed it, expect more build server package and image stability in the future.
+Before it had bugs and flexibility problems that didn't allow it. Expect more build server package and image stability in the future.
 
 ## Minimality
 
@@ -78,8 +89,8 @@ bjorn3 implemented the `sudo` daemon to replace the `setuid()` function and remo
 
 "setuid is not a security issue in itself, but every setuid binary needs to be carefully written to avoid privilege escalation as it inherits an untrusted environment from the parent process. For example LD_PRELOAD needs to be ignored by the dynamic linker, PATH needs to be replaced with something trusted, and more. Containers also have bad interactions with setuid binaries. If you were to allow mount namespaces without any other isolation, you can easily trick a setuid binary into using a different config than it should. For example you could present a sudoers config to sudo that allows anyone to run any command as root without needing a password"
 
-`sudo` now requests the "sudo" daemon to elevate its privileges, after the daemon validates the user's credentials.
-The `passwd` command delegates setting the user's password the "sudo" daemon.
+`sudo` and `su` now request the "sudo" daemon to elevate their privileges, after the daemon validates the user's credentials.
+The `passwd` command delegates setting the user's password to the "sudo" daemon.
 This eliminates all "setuid" programs from Redox.
 
 ## Bootloader Improvements
@@ -99,17 +110,17 @@ This eliminates all "setuid" programs from Redox.
 
 ## Driver Improvements
 
-- (drivers) Jeremy Soller implemented a timeout of 5 seconds on the NVMe driver initialization to restart the process when it fail and try to continue the boot process
-- (drivers) Jeremy Soller did a cleanup on the AML parser
+- (drivers) Jeremy Soller implemented a timeout of 5 seconds on the NVMe driver initialization to restart the process when it fails, and to try to continue the boot process
+- (drivers) Jeremy Soller did a cleanup of the memory read/write handler for the AML parser
 - (drivers) bjorn3 updated the VESA driver (vesad) to disable the kernel graphical debugging as late as possible
 - (drivers) bjorn3 partially fixed the ARM64 support on the PCI driver, interrupts still have issues
-- (drivers) bjorn3 improved the error message when the hardware don't support ACPI
+- (drivers) bjorn3 improved the error message when the hardware doesn't support ACPI
 
 ## System Improvements
 
 - (system) 4lDO2 finished the userspace-based process manager and migrated necessary system components to use it
 - (system) Jeremy Soller updated uutils to the latest commit
-- (system) Darley Barreto started to implement the `openat()` POSIX function which allows file locations to be isolated from the program. It will replace the "named dup" calls, which are non-standard (not POSIX or Linux) so you can access a specific resource or get/set values of a certain category for a resource
+- (system) Darley Barreto started to implement the `openat()` POSIX function which allows file locations to be isolated from the program. It will replace the "named dup" calls, which are non-standard (not POSIX or Linux) so you can access a specific resource or get/set values of a certain category for a resource. Eventually, it will allow more secure filesystem operations.
 - (system) 4lDO2 implemented a readiness-based I/O model wrapper for the completion-based I/O model to reduce boilerplate code in the `redox-scheme` library
 - (system) 4lDO2 updated `escalated` to use the `redox-scheme` library and `SYS_CALL` system call, before the `sudo` daemon made it obsolete
 - (system) 4lDO2 implemented cancellation for the Orbital scheme
@@ -130,7 +141,7 @@ This eliminates all "setuid" programs from Redox.
 - (relibc) Jeremy Soller added the libstdc++ library on the `base` configuration to fix the dynamic linker and simplify the dynamically linked recipes
 - (relibc) Anhad Singh fixed the non-x86 CPU support on the [TCB](https://en.wikipedia.org/wiki/Thread_control_block) of the dynamic linker
 - (relibc) bjorn3 did minor improvements to the efficiency and code quality of the `exec` implementation
-- (relibc) Josh Megnauth fixed a clobbering on the strptime() function following the musl and glibc behavior
+- (relibc) Josh Megnauth removed an unnecessary data overwrite in the strptime() function, following the musl and glibc behavior, which also fixed a bug for compound date formats
 - (relibc) Josh Megnauth implemented the [err.h](https://man.freebsd.org/cgi/man.cgi?err) BSD extension to simplify error messages (also supported by glibc and musl)
 - (relibc) Josh Williams added partial POSIX signals tests
 
@@ -176,7 +187,7 @@ This eliminates all "setuid" programs from Redox.
 - (build-system) Jeremy Soller implemented automatic shared dependency (dynamically-linked libraries) detection on Cookbook and deprecated the `shared-deps` data type
 - (build-system) Jeremy Soller deprecated the `COOKBOOK_PREFER_STATIC` environment variable in favor of `DYNAMIC_INIT`
 - (build-system) Jeremy Soller updated the Redox build server to use Podman (using a Debian stable container with backports) instead of Ubuntu 22.04, fixing environment problems and outdated build tools
-- (build-system) Jeremy Soller and Ron Williams improved the execution separation (host system/Podman container) of the build system tools in Podman Builds to fix bugs caused by different softwares versions between the host system and Podman container in binaries
+- (build-system) Jeremy Soller and Ron Williams improved the compilation and execution separation (host system vs. Podman container) of the build system tools in Podman Builds to fix bugs caused by potentially different software environments between the host system and Podman container
 - (build-system) Jeremy Soller updated the `make clean` command to wipe the `prefix` folder, this allow breaking changes on the Redox toolchain to be easily fixed
 - (build-system) bjorn3 did a cleanup
 
