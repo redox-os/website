@@ -15,17 +15,25 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## X11 on Redox
+
+Jeremy Soller implemented X11 support in the Orbital display server!!
+
+This allow programs using X11 to work on Redox without GUI porting, the process is like what XWayland does to run X11 programs above a Wayland compositor.
+
+The code will be reused once we support Wayland.
+
 ## Kernel Improvements
 
 - (kernel) 
 
 ## Driver Improvements
 
-- (drivers) 
+- (drivers) Arne de Bruijn implemented the support for the Right+Ctrl key combination on the PS/2 driver
 
 ## System Improvements
 
-- (system) 
+- (system) Jeremy Soller created the `/var` directory and its sub-directories to comply with the Linux [FHS](https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html) standard and make some programs work
 
 ## Relibc Improvements
 
@@ -45,11 +53,18 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## Programs
 
-- (programs) 
+- (programs) Jeremy Soller ported the [PCRE2](https://github.com/PCRE2Project/pcre2) library
+- (programs) Jeremy Soller updated the Pango version to 1.56.3
+- (programs) Jeremy Soller updated the Cairo version to 1.18.4
+- (programs) Jeremy Soller updated the Pixman version to 0.46
+- (programs) Jeremy Soller updated the Fontconfig version to 2.16.0
+- (programs) Jeremy Soller enabled dynamic linking on libnettle, GnuTLS, libxml2, XZ, libogg, libvorbis, libjpeg, PCRE, libexpat, gdk-pixbuf and jansson
+- (programs) Jeremy Soller enabled more features on GStreamer
+- (programs) Jeremy Soller converted the gdk-pixbuf recipe to TOML
 
 ## Build System Improvements
 
-- (build-system) 
+- (build-system) Jeremy Soller implemented a Cookbook template for Meson to simplify the recipe configuration
 
 ## Documentation Improvements
 
