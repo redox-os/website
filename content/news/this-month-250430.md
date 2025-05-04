@@ -71,7 +71,7 @@ gathering operational statistics, and other essential functionality.
 
 A big thanks to Julianna, Devan, Donald, Matthew, Charlie and Thomas! Check out the video of their work.
 
-<iframe width="800" height="640" src="https://www.youtube.com/embed/lzeUhNs34CU?si=Hitd2BpKpSzQU25e" title="Georgia Tech Service Monitor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/lzeUhNs34CU?si=Hitd2BpKpSzQU25e" title="Georgia Tech Service Monitor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## All In One
 
