@@ -53,7 +53,7 @@ A big thanks to Julianna, Devan, Donald, Matthew, Charlie and Thomas! Check out 
 
 ## All In One
 
-Jeremy Soller successfully built the build server [packages](https://static.redox-os.org/pkg/) and [images](https://static.redox-os.org/img/) of the x86-64, i686, ARM64 and RISC-V CPU architectures in one day for the first time!!
+Jeremy Soller enabled and fixed nightly builds on the build server for [packages](https://static.redox-os.org/pkg/) and [images](https://static.redox-os.org/img/) of the x86-64, i686, ARM64 and RISC-V architectures!!
 
 Before it had bugs and flexibility problems that didn't allow it. Expect more build server package and image stability in the future.
 
