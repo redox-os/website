@@ -203,21 +203,16 @@ For instructions on how to do this, read the [Building Redox](https://doc.redox-
 If you want to contribute, give feedback or just listen in to the conversation,
 join us on [Matrix Chat](https://matrix.to/#/#redox-join:matrix.org).
 
-<!--
-
 ## Discussion
 
 Here are some links to discussion about this news post:
 
-- [Fosstodon @redox]()
-- [Fosstodon @soller]()
-- [Patreon]()
-- [Phoronix]()
-- [Reddit /r/redox]()
-- [Reddit /r/rust]()
-- [X/Twitter @redox_os]()
-
--->
+- [floss.social @redox](https://floss.social/@redox/114456435875501402)
+- [X/Twitter @redox_os](https://x.com/redox_os/status/1919448941252255876)
+- [Reddit /r/redox](https://www.reddit.com/r/Redox/comments/1kfi150/this_month_in_redox_april_2025/)
+- [Reddit /r/rust](https://www.reddit.com/r/rust/comments/1kfi1k0/this_month_in_redox_april_2025/)
+- [Patreon](https://www.patreon.com/posts/128223913)
+- [Phoronix](https://www.phoronix.com/news/Redox-OS-April-2025)
 
 <!--
 
