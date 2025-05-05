@@ -63,7 +63,7 @@ Jeremy Soller enabled the `minimal` and `minimal-net` variants on the build serv
 
 ## Better User Authentication Security
 
-bjorn3 implemented the `sudo` daemon to replace the `setuid()` function and removed the `escalated` daemon to remove a security flaw from programs using `setuid()`, quoting him:
+bjorn3 implemented the `sudo` daemon to replace the setuid bit and removed the `escalated` daemon to reduce the risk of privilege escalation vulnerabilities caused by bugs in setuid programs, quoting him:
 
 "setuid is not a security issue in itself, but every setuid binary needs to be carefully written to avoid privilege escalation as it inherits an untrusted environment from the parent process. For example LD_PRELOAD needs to be ignored by the dynamic linker, PATH needs to be replaced with something trusted, and more. Containers also have bad interactions with setuid binaries. If you were to allow mount namespaces without any other isolation, you can easily trick a setuid binary into using a different config than it should. For example you could present a sudoers config to sudo that allows anyone to run any command as root without needing a password"
 
