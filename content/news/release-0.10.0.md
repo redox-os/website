@@ -266,7 +266,14 @@ The monthly reports offer more details about the changes present on this release
 
 You can read them on the following links:
 
-- [This Month in Redox - (Month) (Year)]()
+- [This Month in Redox - September 2024](https://www.redox-os.org/news/this-month-240930/)
+- [This Month in Redox - October 2024](https://www.redox-os.org/news/this-month-241031/)
+- [This Month in Redox - November 2024](https://www.redox-os.org/news/this-month-241130/)
+- [This Month in Redox - December 2024](https://www.redox-os.org/news/this-month-241231/)
+- [This Month in Redox - January 2025](https://www.redox-os.org/news/this-month-250131/)
+- [This Month in Redox - February 2025](https://www.redox-os.org/news/this-month-250228/)
+- [This Month in Redox - March 2025](https://www.redox-os.org/news/this-month-250331/)
+- [This Month in Redox - April 2025](https://www.redox-os.org/news/this-month-250430/)
 
 ## Join us on Matrix Chat
 
@@ -278,18 +285,18 @@ join us on [Matrix Chat](https://matrix.to/#/#redox-join:matrix.org).
 
 Here are some links to discussion about this news post:
 
-- [Fosstodon @redox]()
-- [Fosstodon @soller]()
-- [Patreon]()
-- [Phoronix]()
+- [floss.social @redox]()
+- [X/Twitter @redox_os]()
 - [Reddit /r/redox]()
 - [Reddit /r/rust]()
-- [X/Twitter @redox_os]()
+- [Patreon]()
+- [Phoronix]()
+
 -->
 
 ## Changes
 
-There have been quite a lot of changes since x.y.z. We have manually enumerated
+There have been quite a lot of changes since 0.10.0. We have manually enumerated
 what we think is important in this list. Links to exhaustive source-level change
 details can be found in the [Changelog](#changelog) section.
 
