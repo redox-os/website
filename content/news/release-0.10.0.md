@@ -21,9 +21,9 @@ We would like to thank all maintainers and contributors whose hard work has made
 
 Here are just a few of the highlights!
 
-- Complete dynamic linking support
+- Complete dynamic linking support and process manager
 - Better performance and stability
-- Better hardware compatiblity
+- Better hardware compatibility
 - Better software compatibility
 - More ported programs
 
@@ -49,6 +49,10 @@ they may work better in the next few days.
 Send a message in the [Support](https://matrix.to/#/#redox-support:matrix.org) room to let us know if it worked.
 If you have problems, please provide the brand and model code, for both the computer and the device (mouse or keyboard).
 Please join our [GitLab](https://doc.redox-os.org/book/signing-in-to-gitlab.html) and add your computer to our [Hardware Compatibility](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HARDWARE.md?ref_type=heads) list, if you have the time.
+
+## Fixed VirtualBox Support
+
+The execution in a VirtualBox VM was fixed on this release, please test it and report any bugs that you find in the support room of our chat.
 
 ## NLnet Project - Process Manager
 
@@ -205,6 +209,93 @@ Jeremy Soller enabled the `minimal` and `minimal-net` variants on the build serv
 ## From Nothing To Hello World
 
 Ribbon wrote a page to explain the most quick way to test Redox and run a "Hello World" program, have a look at [From Nothing To Hello World](https://doc.redox-os.org/book/nothing-to-hello-world.html) in the Redox Book.
+
+## Overview Video
+
+If you want to avoid the setup work of running Redox on real hardware or in a virtual machine, have a look at our [Software Showcase X]() where we show off programs running on Redox.
+
+## Running Redox
+
+It is recommended to try Redox OS in a virtual machine before trying on real hardware. See
+the [supported hardware](https://www.redox-os.org/faq/#which-devices-does-redox-support) section for details on what
+hardware to select for the best experience.
+
+- Read [this](https://doc.redox-os.org/book/running-vm.html) page to learn how to run the Redox images in a virtual machine
+- Read [this](https://doc.redox-os.org/book/real-hardware.html) page to learn how to run the Redox images on real hardware
+- Read [this](https://doc.redox-os.org/book/installing.html) page to learn how to install Redox
+
+### Demo
+
+A 1536 MiB image containing the Orbital desktop environment as well as pre-installed demonstration programs.
+
+- [Real Hardware Image](https://static.redox-os.org/releases/x.y.z/x86_64/redox_demo_x86_64_*_livedisk.iso.zst)
+- [Virtual Machine Image](https://static.redox-os.org/releases/x.y.z/x86_64/redox_demo_x86_64_*_harddrive.img.zst)
+
+The demo image includes these additional packages:
+
+- [DOSBox](https://www.dosbox.com/) - A DOS emulator
+- Games using PrBoom:
+    - DOOM (Shareware)
+    - [FreeDOOM](https://freedoom.github.io/)
+- [Neverball and Neverputt](https://neverball.org/) - OpenGL games using LLVMPipe (performance may vary!)
+- [orbclient](https://gitlab.redox-os.org/redox-os/orbclient) - An Orbital client demo
+- [Periodic Table](https://gitlab.redox-os.org/redox-os/periodictable) - A program for viewing information about chemical elements
+- [Terminal games](https://gitlab.redox-os.org/redox-os/games) - Command-line games
+- [rodioplay](https://gitlab.redox-os.org/redox-os/rodioplay) - A FLAC/WAV music player
+- [Sodium](https://gitlab.redox-os.org/redox-os/sodium): A vi-like text editor
+- [sopwith](http://www.sopwith.org/): A classic PC air combat game
+- syobonaction - A freeware platforming game
+
+### Desktop
+
+A 512 MiB image containing the Orbital desktop environment and some programs for common tasks. Use this if you want to download a smaller image.
+
+- [Real Hardware](https://static.redox-os.org/releases/x.y.z/x86_64/redox_desktop_x86_64_*_livedisk.iso.zst)
+- [Virtual Machine Image](https://static.redox-os.org/releases/x.y.z/x86_64/redox_desktop_x86_64_*_harddrive.img.zst)
+
+### Server
+
+A 512 MiB image containing only the command-line environment. Use this if the desktop image is not working well for you.
+
+- [Real Hardware](https://static.redox-os.org/releases/x.y.z/x86_64/redox_server_x86_64_*_livedisk.iso.zst)
+- [Virtual Machine Image](https://static.redox-os.org/releases/x.y.z/x86_64/redox_server_x86_64_*_harddrive.img.zst)
+
+## This Month in Redox
+
+The monthly reports offer more details about the changes present on this release post.
+
+You can read them on the following links:
+
+- [This Month in Redox - (Month) (Year)]()
+
+## Join us on Matrix Chat
+
+If you want to contribute, give feedback or just listen in to the conversation,
+join us on [Matrix Chat](https://matrix.to/#/#redox-join:matrix.org).
+
+<!--
+## Discussion
+
+Here are some links to discussion about this news post:
+
+- [Fosstodon @redox]()
+- [Fosstodon @soller]()
+- [Patreon]()
+- [Phoronix]()
+- [Reddit /r/redox]()
+- [Reddit /r/rust]()
+- [X/Twitter @redox_os]()
+-->
+
+## Changes
+
+There have been quite a lot of changes since x.y.z. We have manually enumerated
+what we think is important in this list. Links to exhaustive source-level change
+details can be found in the [Changelog](#changelog) section.
+
+## In Depth
+
+The most important changes are shown below.
 
 ## Bootloader Improvements
 
@@ -663,134 +754,6 @@ to encourage people to read and follow the method in the [Redox book](https://do
 ## Art
 
 Ribbon packaged the Ubuntu wallpapers from most recent versions and PopOS wallpapers.
-
-## Overview Video
-
-If you want to avoid the setup work of running Redox on real hardware or in a virtual machine, have a look at our [Software Showcase X]() where we show off programs running on Redox.
-
-## Running Redox
-
-It is recommended to try Redox OS in a virtual machine before trying on real hardware. See
-the [supported hardware](https://www.redox-os.org/faq/#which-devices-does-redox-support) section for details on what
-hardware to select for the best experience.
-
-- Read [this](https://doc.redox-os.org/book/running-vm.html) page to learn how to run the Redox images in a virtual machine
-- Read [this](https://doc.redox-os.org/book/real-hardware.html) page to learn how to run the Redox images on real hardware
-- Read [this](https://doc.redox-os.org/book/installing.html) page to learn how to install Redox
-
-### Demo
-
-A 1536 MiB image containing the Orbital desktop environment as well as pre-installed demonstration programs.
-
-- [Real Hardware Image](https://static.redox-os.org/releases/x.y.z/x86_64/redox_demo_x86_64_*_livedisk.iso.zst)
-- [Virtual Machine Image](https://static.redox-os.org/releases/x.y.z/x86_64/redox_demo_x86_64_*_harddrive.img.zst)
-
-The demo image includes these additional packages:
-
-- [DOSBox](https://www.dosbox.com/) - A DOS emulator
-- Games using PrBoom:
-    - DOOM (Shareware)
-    - [FreeDOOM](https://freedoom.github.io/)
-- [Neverball and Neverputt](https://neverball.org/) - OpenGL games using LLVMPipe (performance may vary!)
-- [orbclient](https://gitlab.redox-os.org/redox-os/orbclient) - An Orbital client demo
-- [Periodic Table](https://gitlab.redox-os.org/redox-os/periodictable) - A program for viewing information about chemical elements
-- [Terminal games](https://gitlab.redox-os.org/redox-os/games) - Command-line games
-- [rodioplay](https://gitlab.redox-os.org/redox-os/rodioplay) - A FLAC/WAV music player
-- [Sodium](https://gitlab.redox-os.org/redox-os/sodium): A vi-like text editor
-- [sopwith](http://www.sopwith.org/): A classic PC air combat game
-- syobonaction - A freeware platforming game
-
-### Desktop
-
-A 512 MiB image containing the Orbital desktop environment and some programs for common tasks. Use this if you want to download a smaller image.
-
-- [Real Hardware](https://static.redox-os.org/releases/x.y.z/x86_64/redox_desktop_x86_64_*_livedisk.iso.zst)
-- [Virtual Machine Image](https://static.redox-os.org/releases/x.y.z/x86_64/redox_desktop_x86_64_*_harddrive.img.zst)
-
-### Server
-
-A 512 MiB image containing only the command-line environment. Use this if the desktop image is not working well for you.
-
-- [Real Hardware](https://static.redox-os.org/releases/x.y.z/x86_64/redox_server_x86_64_*_livedisk.iso.zst)
-- [Virtual Machine Image](https://static.redox-os.org/releases/x.y.z/x86_64/redox_server_x86_64_*_harddrive.img.zst)
-
-## Key Improvements for Release x.y.z
-
-- Item 1
-- Item 2
-
-## This Month in Redox
-
-The monthly reports offer more details about the changes present on this release post.
-
-You can read them on the following links:
-
-- [This Month in Redox - (Month) (Year)]()
-
-## Join us on Matrix Chat
-
-If you want to contribute, give feedback or just listen in to the conversation,
-join us on [Matrix Chat](https://matrix.to/#/#redox-join:matrix.org).
-
-<!--
-## Discussion
-
-Here are some links to discussion about this news post:
-
-- [Fosstodon @redox]()
-- [Fosstodon @soller]()
-- [Patreon]()
-- [Phoronix]()
-- [Reddit /r/redox]()
-- [Reddit /r/rust]()
-- [X/Twitter @redox_os]()
--->
-
-## Changes
-
-There have been quite a lot of changes since x.y.z. We have manually enumerated
-what we think is important in this list. Links to exhaustive source-level change
-details can be found in the [Changelog](#changelog) section.
-
-## In Depth
-
-The most important changes are shown below.
-
-## Kernel Improvements
-
-
-
-## Driver Improvements
-
-
-
-## System Improvements
-
-
-
-## Relibc Improvements
-
-
-
-## Networking Improvements
-
-
-
-## Filesystem Improvements
-
-
-
-## Programs
-
-
-
-## Build System Improvements
-
-
-
-## Documentation Improvements
-
-
 
 ## Changelog
 
