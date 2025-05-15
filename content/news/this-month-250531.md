@@ -7,6 +7,10 @@ date = "2025-05-31"
 Redox OS is a Unix-like general-purpose microkernel-based operating system
 written in Rust. May was a very exciting month for Redox! Here's all the latest news.
 
+<a href="/img/screenshot/xeyes.png"><img class="img-responsive" alt="xeyes running on Redox" src="/img/screenshot/xeyes.png"/></a>
+
+(xeyes running on Redox)
+
 ## Donate to Redox
 
 If you would like to support Redox, please consider donating or buying some merch!
@@ -15,13 +19,51 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
-## X11 on Redox
+## X11 on Redox!
 
 Jeremy Soller implemented X11 support in the Orbital display server!!
 
 This allow programs using X11 to work on Redox without GUI porting, the process is like what XWayland does to run X11 programs above a Wayland compositor.
 
+He also enabled the [DRI](https://en.wikipedia.org/wiki/Direct_Rendering_Infrastructure) backend to improve the performance.
+
 The code will be reused once we support Wayland.
+
+<a href="/img/screenshot/x11.png"><img class="img-responsive" alt="X11 programs running on Redox" src="/img/screenshot/x11.png"/></a>
+
+(X11 programs running on Redox)
+
+<a href="/img/screenshot/glxgears.png"><img class="img-responsive" alt="glxgears running on Redox" src="/img/screenshot/glxgears.png"/></a>
+
+(glxgears running on Redox)
+
+<a href="/img/screenshot/xterm.png"><img class="img-responsive" alt="xterm running on Redox" src="/img/screenshot/xterm.png"/></a>
+
+(xterm running on Redox)
+
+## GTK 3 on Redox!
+
+After X11 Jeremy Soller successfully ported the GTK 3 toolkit!!
+
+<a href="/img/screenshot/gtk3.png"><img class="img-responsive" alt="GTK 3 Demo running on Redox" src="/img/screenshot/gtk3.png"/></a>
+
+(GTK 3 Demo running on Redox)
+
+## Mesa3D EGL on Redox!
+
+Jeremy Soller enabled the Mesa3D EGL!!
+
+It will improve the Orbital 2D rendering.
+
+## WebKitGTK3 on Redox!
+
+Jeremy Soller ported the WebKitGTK3 library to Redox!
+
+It will allow programs using a web interface to work.
+
+## Massive Performance Improvement on RedoxFS
+
+James Matlik
 
 ## Kernel Improvements
 
@@ -37,7 +79,17 @@ The code will be reused once we support Wayland.
 
 ## Relibc Improvements
 
-- (relibc) 
+- (relibc) Jeremy Soller fixed a deadlock when logging scopes
+- (relibc) Jeremy Soller fixed a dangling pointer with empty scandir
+- (relibc) Jeremy Soller fixed the DTPMOD and DTPOFF relocation
+- (relibc) Jeremy Soller fixed select macros
+- (relibc) Jeremy Soller fixed the `scanf()` function parsing
+- (relibc) Jeremy Soller added support for extended regex
+- (relibc) Jeremy Soller implemented the `flink()` function
+- (relibc) Jeremy Soller improved the dynamic linker debugging
+- (relibc) Jeremy Soller moved the `htonl()`, `htons()`, `ntohl()` and `ntohs()` functions to the `netinet/in.h` function group to port more programs
+- (relibc) Josh Megnauth improved the error handling for functions that make DNS requests
+- (relibc) zinzaguras improved the GNU Bash shebang in scripts
 
 ## Networking Improvements
 
@@ -53,18 +105,29 @@ The code will be reused once we support Wayland.
 
 ## Programs
 
-- (programs) Jeremy Soller ported the [PCRE2](https://github.com/PCRE2Project/pcre2) library
+- (programs) Jeremy Soller fixed the libgif, libwebp, libgcrypt and libgpg-error libraries
+- (programs) Jeremy Soller fixed the libass compilation
+- (programs) Jeremy Soller ported the [PCRE2](https://github.com/PCRE2Project/pcre2) and libtasn1 libraries
 - (programs) Jeremy Soller updated the Pango version to 1.56.3
 - (programs) Jeremy Soller updated the Cairo version to 1.18.4
 - (programs) Jeremy Soller updated the Pixman version to 0.46
 - (programs) Jeremy Soller updated the Fontconfig version to 2.16.0
-- (programs) Jeremy Soller enabled dynamic linking on libnettle, GnuTLS, libxml2, XZ, libogg, libvorbis, libjpeg, PCRE, libexpat, gdk-pixbuf and jansson
+- (programs) Jeremy Soller updated the libjpeg to version to 9f
+- (programs) Jeremy Soller updated the libass version to 0.17.3
+- (programs) Jeremy Soller updated the libxslt version to 1.1.43
+- (programs) Jeremy Soller updated the libsoup version to 3.6.5
+- (programs) Jeremy Soller updated the libwebp version to 1.5.0
+- (programs) Jeremy Soller updated the libgif version to 5.2.2
+- (programs) Jeremy Soller updated the libgcrypt version to 1.11.1
+- (programs) Jeremy Soller updated the libgpg-error version to 1.55
+- (programs) Jeremy Soller enabled dynamic linking on SQLite, curl, libnettle, GnuTLS, libxml2, XZ, libogg, libvorbis, libjpeg, PCRE, libexpat, gdk-pixbuf, libsndfile, libmodplug, libpsl and jansson
 - (programs) Jeremy Soller enabled more features on GStreamer
 - (programs) Jeremy Soller converted the gdk-pixbuf recipe to TOML
 
 ## Build System Improvements
 
 - (build-system) Jeremy Soller implemented a Cookbook template for Meson to simplify the recipe configuration
+- (build-system) zinzaguras implemented NixOS support on the Native Build
 
 ## Documentation Improvements
 
@@ -98,13 +161,12 @@ join us on [Matrix Chat](https://matrix.to/#/#redox-join:matrix.org).
 
 Here are some links to discussion about this news post:
 
-- [Fosstodon @redox]()
-- [Fosstodon @soller]()
-- [Patreon]()
-- [Phoronix]()
+- [floss.social @redox]()
+- [X/Twitter @redox_os]()
 - [Reddit /r/redox]()
 - [Reddit /r/rust]()
-- [X/Twitter @redox_os]()
+- [Patreon]()
+- [Phoronix]()
 
 -->
 
