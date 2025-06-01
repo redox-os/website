@@ -53,7 +53,7 @@ After X11 Jeremy Soller successfully ported the GTK 3 toolkit!!
 
 Jeremy Soller enabled the Mesa3D EGL!!
 
-It will improve the Orbital 2D rendering.
+It will improve the X11 2D rendering.
 
 ## WebKitGTK3 on Redox!
 
@@ -61,9 +61,11 @@ Jeremy Soller ported the WebKitGTK3 library to Redox!
 
 It will allow programs using a web interface to work.
 
-## Massive Performance Improvement on RedoxFS
+## More Boot Fixes
 
-James Matlik
+bjorn3 updated the `lived` configuration to allow the livedisk image to work when the storage drivers aren't initialized.
+
+It can allow Redox to boot successfully in many computers.
 
 ## Kernel Improvements
 
@@ -71,11 +73,13 @@ James Matlik
 
 ## Driver Improvements
 
+- (drivers) bjorn3 improved the PS/2 driver debugging by giving better panic locations
 - (drivers) Arne de Bruijn implemented the support for the Right+Ctrl key combination on the PS/2 driver
 
 ## System Improvements
 
 - (system) Jeremy Soller created the `/var` directory and its sub-directories to comply with the Linux [FHS](https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html) standard and make some programs work
+- (system) bjorn3 enabled the boot switch to VT 2 on the `minimal` variant to fix an issue where the keyboard input couldn't be used
 
 ## Relibc Improvements
 
@@ -90,18 +94,6 @@ James Matlik
 - (relibc) Jeremy Soller moved the `htonl()`, `htons()`, `ntohl()` and `ntohs()` functions to the `netinet/in.h` function group to port more programs
 - (relibc) Josh Megnauth improved the error handling for functions that make DNS requests
 - (relibc) zinzaguras improved the GNU Bash shebang in scripts
-
-## Networking Improvements
-
-- (net) 
-
-## RedoxFS Improvements
-
-- (redoxfs) 
-
-## Filesystem Improvements
-
-- (fs) 
 
 ## Programs
 
@@ -123,6 +115,10 @@ James Matlik
 - (programs) Jeremy Soller enabled dynamic linking on SQLite, curl, libnettle, GnuTLS, libxml2, XZ, libogg, libvorbis, libjpeg, PCRE, libexpat, gdk-pixbuf, libsndfile, libmodplug, libpsl and jansson
 - (programs) Jeremy Soller enabled more features on GStreamer
 - (programs) Jeremy Soller converted the gdk-pixbuf recipe to TOML
+- (programs) Josh Megnauth fixed the RustPython compilation
+- (programs) Fabio Di Francesco fixed the Gigalomania and SDL2 Gears dynamic linking
+- (programs) Ribbon packaged some programs
+- (programs) Ribbon fixed some WIP recipes and updated more TODOs
 
 ## Build System Improvements
 
@@ -131,7 +127,22 @@ James Matlik
 
 ## Documentation Improvements
 
-- (doc) 
+- (doc) Ribbon did many improvements, fixed and cleanup to the [porting documentation](https://doc.redox-os.org/book/porting-applications.html)
+- (doc) Ribbon improved the [Microkernels](https://doc.redox-os.org/book/microkernels.html) page
+- (doc) Ribbon replaced Rufus by [balenaEtcher](https://etcher.balena.io/) as the recommended method to flash the Redox image to a USB drive on Windows
+- (doc) Ribbon added the porting recomendation to use the FreeBSD dependencies of programs to avoid Linux-specific kernel features present on Linux dependencies which don't work on Redox
+- (doc) Ribbon documented `source.script` data type used for recipe source changes
+- (doc) Ron Williams wrote and Ribbon added a recipe script template for Cargo profiles
+- (doc) Ron Williams wrote and Ribbon added a recipe script template for Cargo examples with flags
+- (doc) Ribbon added links for the GCC, LLVM and Rust cross-compilers fork sources in the porting documentation
+- (doc) Ribbon improved and fixed the Cookbook template explanations
+- (doc) Ribbon fixed and improved the explanation about the new linkage system
+- (doc) Ribbon improved the explanation of recipe data types
+- (doc) Ribbon removed the wrong information about "Automagic Dependencies" (but it can be added again once we start to use Cookbook for native compilation)
+- (doc) Ribbon documented a practice of some Rust programs and libraries to use Cargo packages instead of Cargo examples for their examples
+- (doc) Ribbon fixed the explanation of the `scripts/recipe-match.sh` and `scripts/print-recipe.sh` scripts
+- (doc) Ribbon added a note on the `make r.recipe` command explanation explaining that it can't be used to replace the `make all`, `make prefix` and `make fstools` commands
+- (doc) David da Silva fixed some typos on the book
 
 ## How To Test The Changes
 
