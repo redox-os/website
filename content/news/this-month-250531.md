@@ -134,7 +134,7 @@ It can allow Redox to boot successfully in many computers.
 - (doc) Ribbon documented `source.script` data type used for recipe source changes
 - (doc) Ron Williams wrote and Ribbon added a recipe script template for Cargo profiles
 - (doc) Ron Williams wrote and Ribbon added a recipe script template for Cargo examples with flags
-- (doc) Ribbon added links for the GCC, LLVM and Rust cross-compilers fork sources in the porting documentation
+- (doc) Ribbon added links for the GCC, LLVM and Rust cross-compilers fork sources in the [porting documentation](https://doc.redox-os.org/book/porting-applications.html#cross-compiler)
 - (doc) Ribbon improved and fixed the Cookbook template explanations
 - (doc) Ribbon fixed and improved the explanation about the new linkage system
 - (doc) Ribbon improved the explanation of recipe data types
