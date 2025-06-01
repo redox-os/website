@@ -2,27 +2,47 @@
 title = "Redox in Action"
 +++
 
-## Redox OS running the COSMIC programs
+## COSMIC programs running on Redox
 
 <img class="img-responsive" src="/img/screenshot/cosmic-programs.png"/>
 
-## Redox OS running Screenfetch
+## Screenfetch running on Redox
 
 <img class="img-responsive" src="/img/screenshot/cosmic-term-screenfetch.png"/>
 
-## Redox OS running the image viewer
+## xeyes running on Redox
+
+<img class="img-responsive" src="/img/screenshot/xeyes.png"/>
+
+## X11 programs running on Redox
+
+<img class="img-responsive" src="/img/screenshot/x11.png"/>
+
+## glxgears running on Redox
+
+<img class="img-responsive" src="/img/screenshot/glxgears.png"/>
+
+## xterm running on Redox
+
+<img class="img-responsive" src="/img/screenshot/xterm.png"/>
+
+## GTK 3 Demo running on Redox
+
+<img class="img-responsive" src="/img/screenshot/gtk3.png"/>
+
+## Image viewer running on Redox
 
 <img class="img-responsive" src="/img/screenshot/image-viewer.png"/>
 
-## Redox OS running NetSurf
+## NetSurf running on Redox
 
 <img class="img-responsive" src="/img/screenshot/netsurf.png"/>
 
-## Redox OS running SDL2 Gears
+## SDL2 Gears running on Redox
 
 <img class="img-responsive" src="/img/screenshot/sdl2-gears.png"/>
 
-## Redox OS running Pixelcannon
+## Pixelcannon running on Redox
 
 <img class="img-responsive" src="/img/screenshot/pixelcannon.png"/>
 
@@ -30,19 +50,19 @@ title = "Redox in Action"
 
 <iframe width="800" height="640" src="https://www.youtube.com/embed/s-gxAsBTPxA?si=wXvO_N3PRjzjgzk6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## Redox OS playing Stargate SG-1 Season 10 intro
+## Playing Stargate SG-1 Season 10 intro on Redox
 
 <iframe width="800" height="640" src="https://www.youtube.com/embed/3cPekY4c9Hc?si=EYuAkgpVDAKOb0jW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## Redox OS running Mesa3D Gears with LLVMpipe
+## Mesa3D Gears with LLVMpipe running on Redox
 
 <iframe width="800" height="640" src="https://www.youtube.com/embed/ADSvEA_YY7E?si=vEtlU2rGxJldIFuk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## Redox OS Playing Elements by Tom Lehrer
+## Playing Elements by Tom Lehrer on Redox
 
 <iframe width="800" height="640" src="https://www.youtube.com/embed/7tyjtfdCqO8?si=FmPDg59s_QujKdNz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## Redox OS 0.8.0 running on some laptops
+## Some laptops running the version 0.8.0 of Redox
 
 <img class="img-responsive" src="/img/release/0.8.0.jpg"/>
 
