@@ -116,7 +116,7 @@ bjorn3 updated the `lived` configuration to allow the livedisk image to work whe
 ## System Improvements
 
 - (system) Jeremy Soller created the `/var` directory and its sub-directories to comply with the Linux [FHS](https://refspecs.linuxfoundation.org/FHS_3.0/fhs/index.html) standard and make some programs work
-- (system) bjorn3 enabled the boot switch to VT 2 on the `minimal` variant to fix an issue where the keyboard input couldn't be used
+- (system) bjorn3 enabled the boot switch to VT 2 on the `minimal` variant to reduce confusion about if boot was hanging or not
 
 ## Relibc Improvements
 
