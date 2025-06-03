@@ -102,9 +102,7 @@ It will allow programs using a web interface to work.
 
 ## More Boot Fixes
 
-bjorn3 updated the `lived` configuration to allow the livedisk image to work when the storage drivers aren't initialized.
-
-It can allow Redox to boot successfully in many computers.
+bjorn3 updated the `lived` configuration to allow the livedisk image to work when other storage drivers aren't initialized. If you were having problems with the daily images hanging part way through booting, consider trying again once the images are updated or build the image from source. This fix provides a workaround for some systems where the disk driver was hanging when reading a non-RedoxFS disk.
 
 ## Kernel Improvements
 
