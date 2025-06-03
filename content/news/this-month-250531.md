@@ -19,15 +19,54 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## Redox is hiring!
+
+Redox is seeking an OS/kernel developer, based in the EU, for a one year position, paid through a combination of grants and contract work, with the possibility of additional work to follow. If you are a committed FOSS developer, with expertise in Rust, device drivers and performance-optimized software, we are interested in hearing from you.
+
+This is a fully remote position, but based in the EU for the reasons described below.
+
+### Responsibilities
+
+- Implement performance improvements such as ring-buffer based device drivers and services, smart schedulers and techniques to reduce context switching
+- Implement POSIX, WASI and other OS APIs
+- Implement security and virtualization features
+- Write blog posts and other documentation describing the work
+- Participate in developer chat related to the work
+- Support applications for grants, create deliverables and report milestone completion
+
+### Qualifications
+
+- University degree in Computer Science or a related field, or self-taught equivalent
+- Demonstrated track record in operating system or low level software development
+- Rust expertise, especially in no_std and bare-metal contexts
+- Substantial body of work in open source
+- Able to work independently at a high level of productivity
+- Able to interact positively with community members of varying skills and backgrounds
+- Flexibility in how payments are received - a portion of your compensation may be in the form of grants from other foundations, and there may be some adjustments in the compensation amounts due to differences in the tax treatments for grants
+- As some of our current grants (and potential future grants) are from EU organizations, preference will be given to EU-based developers, and in particular, countries where the tax treatment of grants is advantageous; we hope to have opportunities in future that are open more broadly
+- Please see https://philea.eu/how-we-can-help/policy-and-advocacy/analysing-the-legal-environment-for-philanthropy-in-europe/ for more information about tax treatment of grants for individuals
+
+Please email your resume/CV, and a list of your most significant open source contributions, with links, to info@redox-os.org and CC president@redox-os.org
+
+## Redox is looking for new board members!
+
+Jacob Schneider, who has been a Redox director since January 2024, has resigned due to other commitments. We want to thank Jacob (JCake) for his contributions to Redox, and we wish him the best in future endeavors!
+
+Redox would like to add two volunteers to the board of directors. The board is responsible for the governance and guidance of the Redox financials, community and the Redox OS brand. We have a formal meeting every quarter, and we have a chat room where we discuss issues like fundraising and such.
+
+We are particularly looking for people who have been contributing to Redox, but we are open to volunteers from the broader FOSS community. As this is a position of trust, we will either need to know you or know someone who knows you. And you must be above the age of majority in your area.
+
+The position of director is unpaid, but there is no rule preventing you from doing paid work for Redox, if and when such an opportunity exists. However, we would very much like to add at least one board member who has no interest in being paid for work for Redox.
+
+Please contact Ron Williams on Matrix, or email president@redox-os.org
+
 ## X11 on Redox!
 
-Jeremy Soller implemented X11 support in the Orbital display server!!
+Jeremy Soller has implemented X11 support in the Orbital display server!! This allows programs using X11 to work on Redox without changes to the GUI code.
 
-This allow programs using X11 to work on Redox without GUI porting, the process is like what XWayland does to run X11 programs above a Wayland compositor.
+The mechanism for X11 support is conceptually similar to how Wayland supports X11 programs through XWayland. He also enabled the [DRI](https://en.wikipedia.org/wiki/Direct_Rendering_Infrastructure) backend to improve rendering performance, although it does not yet fully support graphics acceleration.
 
-He also enabled the [DRI](https://en.wikipedia.org/wiki/Direct_Rendering_Infrastructure) backend to improve the performance.
-
-The code will be reused once we support Wayland.
+It is expected that this code will become part of our Wayland support.
 
 <a href="/img/screenshot/x11.png"><img class="img-responsive" alt="X11 programs running on Redox" src="/img/screenshot/x11.png"/></a>
 
@@ -131,7 +170,7 @@ It can allow Redox to boot successfully in many computers.
 - (doc) Ribbon improved the [Microkernels](https://doc.redox-os.org/book/microkernels.html) page
 - (doc) Ribbon replaced Rufus by [balenaEtcher](https://etcher.balena.io/) as the recommended method to flash the Redox image to a USB drive on Windows
 - (doc) Ribbon added the porting recomendation to use the FreeBSD dependencies of programs to avoid Linux-specific kernel features present on Linux dependencies which don't work on Redox
-- (doc) Ribbon documented `source.script` data type used for recipe source changes
+- (doc) Ribbon documented `source.script` data type used for applying patches and other recipe source changes
 - (doc) Ron Williams wrote and Ribbon added a recipe script template for Cargo profiles
 - (doc) Ron Williams wrote and Ribbon added a recipe script template for Cargo examples with flags
 - (doc) Ribbon added links for the GCC, LLVM and Rust cross-compilers fork sources in the [porting documentation](https://doc.redox-os.org/book/porting-applications.html#cross-compiler)
