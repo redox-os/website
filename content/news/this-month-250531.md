@@ -198,20 +198,14 @@ For instructions on how to do this, read the [Building Redox](https://doc.redox-
 If you want to contribute, give feedback or just listen in to the conversation,
 join us on [Matrix Chat](https://matrix.to/#/#redox-join:matrix.org).
 
-<!--
-
 ## Discussion
 
 Here are some links to discussion about this news post:
 
-- [floss.social @redox]()
-- [X/Twitter @redox_os]()
-- [Reddit /r/redox]()
-- [Reddit /r/rust]()
-- [Patreon]()
-- [Phoronix]()
-
--->
+- [floss.social @redox](https://floss.social/@redox/114626030138919154)
+- [X/Twitter @redox_os](https://x.com/redox_os/status/1930299891013571008)
+- [Reddit /r/redox](https://www.reddit.com/r/Redox/comments/1l3a19n/this_month_in_redox_may_2025/)
+- [Reddit /r/rust](https://www.reddit.com/r/rust/comments/1l3a32m/this_month_in_redox_may_2025/)
 
 <!--
 
