@@ -7,9 +7,9 @@ date = "2025-05-31"
 Redox OS is a Unix-like general-purpose microkernel-based operating system
 written in Rust. May was a very exciting month for Redox! Here's all the latest news.
 
-<a href="/img/screenshot/xeyes.png"><img class="img-responsive" alt="xeyes running on Redox" src="/img/screenshot/xeyes.png"/></a>
+<a href="/img/screenshot/gtk3.png"><img class="img-responsive" alt="GTK 3 Demo running on Redox" src="/img/screenshot/gtk3.png"/></a>
 
-(xeyes running on Redox)
+(GTK 3 Demo running on Redox)
 
 ## Donate to Redox
 
@@ -68,6 +68,10 @@ The mechanism for X11 support is conceptually similar to how Wayland supports X1
 
 It is expected that this code will become part of our Wayland support.
 
+<a href="/img/screenshot/xeyes.png"><img class="img-responsive" alt="xeyes running on Redox" src="/img/screenshot/xeyes.png"/></a>
+
+(xeyes running on Redox)
+
 <a href="/img/screenshot/x11.png"><img class="img-responsive" alt="X11 programs running on Redox" src="/img/screenshot/x11.png"/></a>
 
 (X11 programs running on Redox)
@@ -83,10 +87,6 @@ It is expected that this code will become part of our Wayland support.
 ## GTK 3 on Redox!
 
 After X11 Jeremy Soller successfully ported the GTK 3 toolkit!!
-
-<a href="/img/screenshot/gtk3.png"><img class="img-responsive" alt="GTK 3 Demo running on Redox" src="/img/screenshot/gtk3.png"/></a>
-
-(GTK 3 Demo running on Redox)
 
 ## Mesa3D EGL on Redox!
 
