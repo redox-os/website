@@ -94,19 +94,13 @@ Jeremy Soller enabled the Mesa3D EGL!!
 
 It will improve the X11 2D rendering.
 
-## WebKitGTK3 on Redox!
-
-Jeremy Soller ported the WebKitGTK3 library to Redox!
-
-It will allow programs using a web interface to work.
-
 ## More Boot Fixes
 
 bjorn3 updated the `lived` configuration to allow the livedisk image to work when other storage drivers aren't initialized. If you were having problems with the daily images hanging part way through booting, consider trying again once the images are updated or build the image from source. This fix provides a workaround for some systems where the disk driver was hanging when reading a non-RedoxFS disk.
 
 ## Kernel Improvements
 
-- (kernel) 
+- (kernel) Ivan Tan fixed a problem with ARM64/Raspberry Pi 3B+ timer interrupts that was causing programs to not be correctly woken after sleep
 
 ## Driver Improvements
 
@@ -124,7 +118,7 @@ bjorn3 updated the `lived` configuration to allow the livedisk image to work whe
 - (relibc) Jeremy Soller fixed a dangling pointer with empty scandir
 - (relibc) Jeremy Soller fixed the DTPMOD and DTPOFF relocation
 - (relibc) Jeremy Soller fixed select macros
-- (relibc) Jeremy Soller fixed the `scanf()` function parsing
+- (relibc) Jeremy Soller improved the `scanf()` parsing
 - (relibc) Jeremy Soller added support for extended regex
 - (relibc) Jeremy Soller implemented the `flink()` function
 - (relibc) Jeremy Soller improved the dynamic linker debugging
@@ -152,6 +146,7 @@ bjorn3 updated the `lived` configuration to allow the livedisk image to work whe
 - (programs) Jeremy Soller enabled dynamic linking on SQLite, curl, libnettle, GnuTLS, libxml2, XZ, libogg, libvorbis, libjpeg, PCRE, libexpat, gdk-pixbuf, libsndfile, libmodplug, libpsl and jansson
 - (programs) Jeremy Soller enabled more features on GStreamer
 - (programs) Jeremy Soller converted the gdk-pixbuf recipe to TOML
+- (programs) Jeremy Soller made significant progress on porting WebKitGtk (still WIP)
 - (programs) Josh Megnauth fixed the RustPython compilation
 - (programs) Fabio Di Francesco fixed the Gigalomania and SDL2 Gears dynamic linking
 - (programs) Ribbon packaged some programs
@@ -164,7 +159,7 @@ bjorn3 updated the `lived` configuration to allow the livedisk image to work whe
 
 ## Documentation Improvements
 
-- (doc) Ribbon did many improvements, fixed and cleanup to the [porting documentation](https://doc.redox-os.org/book/porting-applications.html)
+- (doc) Ribbon applied many improvements, fixes and cleanup to the [porting documentation](https://doc.redox-os.org/book/porting-applications.html)
 - (doc) Ribbon improved the [Microkernels](https://doc.redox-os.org/book/microkernels.html) page
 - (doc) Ribbon replaced Rufus by [balenaEtcher](https://etcher.balena.io/) as the recommended method to flash the Redox image to a USB drive on Windows
 - (doc) Ribbon added the porting recomendation to use the FreeBSD dependencies of programs to avoid Linux-specific kernel features present on Linux dependencies which don't work on Redox
