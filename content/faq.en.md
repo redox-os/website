@@ -196,7 +196,7 @@ Redox tries to implement the Linux performance improvements in a microkernel des
 
 Redox is designed to be source-compatible with most Unix, Linux and POSIX-compliant applications, only requiring compilation.
 
-Currently, most GUI applications require porting, as we don't support X11 or Wayland yet.
+(Wayland will be supported soon)
 
 Some important software that Redox supports:
 
@@ -207,6 +207,7 @@ Some important software that Redox supports:
 - SDL2
 - OpenSSL
 - Mesa3D
+- X11
 - GCC
 - LLVM
 
@@ -242,22 +243,20 @@ Have a look at [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/m
 
 ### CPU
 
-- Intel - 64-bit (x86_64) and 32-bit (i686) from Pentium II and after with limitations.
-- AMD - 64-bit (AMD64) and 32-bit.
-- ARM - 64-bit (Aarch64) with limitations.
-- RISC-V - 64-bit
+- Intel: 64-bit (x86_64) and 32-bit (i686) from Pentium II and after with limitations.
+- AMD: 64-bit (AMD64) and 32-bit.
+- ARM: 64-bit (Aarch64) with limitations.
+- RISC-V: 64-bit
 
 ### Hardware Interfaces
 
 - ACPI
 - PCI
-- USB
-
-(Support for USB devices using hubs will come soon)
+- USB without/with hubs
 
 ### Video
 
-- VGA - (BIOS)
+- VGA (BIOS)
 - GOP (UEFI)
 - [LLVMpipe](https://docs.mesa3d.org/drivers/llvmpipe.html) (OpenGL CPU emulation)
 
@@ -267,7 +266,6 @@ Have a look at [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/m
 
 - Intel chipsets
 - Realtek chipsets
-- PC speaker
 
 (Sound Blaster soon)
 
@@ -283,6 +281,8 @@ Have a look at [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/m
 
 - PS/2 keyboards, mouse and touchpad
 - USB keyboards, mouse and touchpad
+
+(Some USB devices require a specific port)
 
 ### Internet
 
