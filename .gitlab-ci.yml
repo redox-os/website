@@ -1,8 +1,10 @@
-before_script:
-  - apt-get update -qq && apt-get install -y -qq hugo
-
 hugo:
-  script: "./hugo.sh"
+  image:
+    # https://docker.hugomods.com
+    name: ghcr.io/hugomods/hugo:base
+    pull_policy: always
+  script:
+    - ./hugo.sh
   artifacts:
     paths:
-    - build/public
+      - build/public
