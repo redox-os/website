@@ -19,17 +19,22 @@ If you would like to support Redox, please consider donating or buying some merc
 
 - (kernel) 
 
+## System Call Improvements
+
+- (syscall) Ron Williams fixed a regression with the file type information which broke recursive search of directories, pattern matching and some other problems
+
 ## Driver Improvements
 
 - (drivers) 
 
 ## System Improvements
 
-- (system) 
+- (system) bjorn3 implemented network boot (PXE) support for UEFI in the bootloader
+- (system) bjorn3 fixed a conflict with the `du` and `touch` tools between Rust Coreutils and uutils
 
 ## Relibc Improvements
 
-- (relibc) 
+- (relibc) James Matlik fixed a bug with the rename to relative destination
 
 ## Networking Improvements
 
@@ -39,21 +44,55 @@ If you would like to support Redox, please consider donating or buying some merc
 
 - (redoxfs) 
 
-## Filesystem Improvements
+## Packaging Improvements
 
-- (fs) 
+- (pkg) Wildan Mubarok fixed the package update logic
+- (pkg) Wildan Mubarok improved the package update performance
+- (pkg) Wildan Mubarok added a workaround to fix a symbolic link bug in pkgar
+- (pkg) Wildan Mubarok added tests for package installation
+- (pkg) Wildan Mubarok implemented support for a custom paclage repository
+- (pkg) Wildan Mubarok implemented the support for symbolic link overwrite
+
+## Terminal Improvements
+
+- (term) Petr Hrdina fixed the Ion shell prompt user type symbol
+- (term) David da Silva implemented the built-in `mapfile` command on the Ion shell, it's using the GNU Bash behavior without callbacks and file descriptors
 
 ## Programs
 
-- (programs) 
+- (programs) Jeremy Soller fixed COSMIC Files, COSMIC Store and FreeCiv
+- (programs) Jeremy Soller enabled dynamic linking on the libxkbcommon, OpenJK and Gigalomania recipes
+- (programs) Jeremy Soller converted the mgba and Neverball recipes to TOML
+- (programs) Jeremy Soller updated mgba to the 0.10.5 version
+- (programs) Jeremy Soller replaced the libjpeg library by libjpeg-turbo
+- (programs) Wildan Mubarok fixed the source download of the libgmp recipe on GitHub CI (due to blocked Microsoft IPs) by using the GNU FTP mirror
+- (programs) Ron Williams fixed GNU sed
+- (programs) Oleg Pittman converted the recipes to TOML
+- (programs) Josh Megnauth converted the powerline-rs shell to TOML
+- (programs) Ribbon fixed and packaged many tools and demos written in Rust
 
 ## Build System Improvements
 
-- (build-system) 
+- (build-system) Jeremy Soller improved the recipe scanning performance massively
+- (build-system) bjorn3 implemented a way to install the bootloader in a custom location
+- (build-system) Wildan Mubarok reduced the Git fetch time of our libtool fork
+- (build-system) Wildan Mubarok fixed the fetch of our libtool fork in older Git versions
+- (build-system) Josh Megnauth fixed the `make virtualbox` command with recent VirtualBox versions
+- (build-system) Ribbon improved the script of the `myfiles` recipe to avoid problems with bad characters on paths
+- (build-system) Wildan Mubarok updated the GitLab CI to Ubuntu 24.04 to fix the Redox toolchain
 
 ## Documentation Improvements
 
-- (doc) 
+- (doc) Ribbon did many improvements, fixes and cleanup in the [Developer FAQ](https://doc.redox-os.org/book/developer-faq.html) page
+- (doc) Ribbon improved the GDB documentation on the book thanks to bjorn3
+- (doc) Ribbon added a reference for debugging techniques on the debug methods list on the book
+- (doc) Ribbon improved the Podman documentation of the `make env` and `make container_shell` commands
+- (doc) Ribbon added a section for feature flags of C/C++ programs and libraries on the porting documentation
+- (doc) Ribbon added a benefit about the kernel simplicity on the microkernel architecture
+- (doc) Ribbon documented the Podman update process
+- (doc) Ribbon documented the practice where Rust programs use Cargo packages for examples instead of Cargo examples in the porting documentation
+- (doc) James Matlik fixed the kernel recipe source location in the "System Call Tracing" page
+- (doc) Wildan Mubarok added questions for the `REPO_BINARY` environment variable on the Developer FAQ
 
 ## How To Test The Changes
 
