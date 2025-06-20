@@ -67,7 +67,7 @@ If you would like to support Redox, please consider donating or buying some merc
 - (programs) Jeremy Soller replaced the libjpeg library by libjpeg-turbo
 - (programs) Wildan Mubarok fixed the source download of the libgmp recipe on GitHub CI (due to blocked Microsoft IPs) by using the GNU FTP mirror
 - (programs) Ron Williams fixed GNU sed
-- (programs) Oleg Pittman converted the recipes to TOML
+- (programs) Oleg Pittman converted the cmatrix, dynamic-example, Pixelcannon, patch, rustual-boy, ScummVM, ttf-hack, Gigalomania, OpenTTD, Sopwith, Duktape, SDL_gfx, SDL_image, SDL_ttf, generaluser-rs, Timidity, vttest, GNU Grep, libc-bench, Periodictable, Schismtracker and mdp recipes to TOML
 - (programs) Josh Megnauth converted the powerline-rs shell to TOML
 - (programs) Ribbon fixed and packaged many tools and demos written in Rust
 
