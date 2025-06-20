@@ -52,6 +52,7 @@ If you would like to support Redox, please consider donating or buying some merc
 - (pkg) Wildan Mubarok added tests for package installation
 - (pkg) Wildan Mubarok implemented support for a custom paclage repository
 - (pkg) Wildan Mubarok implemented the support for symbolic link overwrite
+- (pkg) Wildan Mubarok improved the package manager search by reading the package server `repo.toml` database instead of HTML package list
 
 ## Terminal Improvements
 
@@ -79,6 +80,7 @@ If you would like to support Redox, please consider donating or buying some merc
 - (build-system) Wildan Mubarok fixed the fetch of our libtool fork in older Git versions
 - (build-system) Josh Megnauth fixed the `make virtualbox` command with recent VirtualBox versions
 - (build-system) Ribbon improved the script of the `myfiles` recipe to avoid problems with bad characters on paths
+- (build-system) Wildan Mubarok updated Cookbook to build the items of the `package.dependencies` data type before their recipe instead after all recipes
 - (build-system) Wildan Mubarok updated the GitLab CI to Ubuntu 24.04 to fix the Redox toolchain
 
 ## Documentation Improvements
