@@ -241,56 +241,17 @@ There are billions of devices with hundreds of models and architectures in the w
 
 Have a look at [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HARDWARE.md) to see all tested computers.
 
-### CPU
+### Compatibility Table
 
-- Intel: 64-bit (x86_64) and 32-bit (i686) from Pentium II and after with limitations.
-- AMD: 64-bit (AMD64) and 32-bit.
-- ARM: 64-bit (Aarch64) with limitations.
-- RISC-V: 64-bit
-
-### Hardware Interfaces
-
-- ACPI
-- PCI
-- USB without/with hubs
-
-### Video
-
-- VGA (BIOS)
-- GOP (UEFI)
-- [LLVMpipe](https://docs.mesa3d.org/drivers/llvmpipe.html) (OpenGL CPU emulation)
-
-(Intel/AMD and others in the future)
-
-### Sound
-
-- Intel chipsets
-- Realtek chipsets
-
-(Sound Blaster soon)
-
-### Storage
-
-- IDE (PATA)
-- SATA (AHCI)
-- NVMe
-
-(USB soon)
-
-### Input
-
-- PS/2 keyboards, mouse and touchpad
-- USB keyboards, mouse and touchpad
-
-(Some USB devices require a specific port)
-
-### Internet
-
-- Intel Gigabit ethernet
-- Intel 10 Gigabit ethernet
-- Realtek ethernet
-
-(Wi-Fi and Atheros ethernet soon)
+| **Category**        | **Items**                                                                                                                                            |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| CPU                 | - Intel 64-bit (x86_64) <br>- Intel 32-bit (i686) from Pentium II and after with limitations <br>- AMD 32/64-bit <br>- ARM 64-bit (Aarch64) with limitations |
+| Hardware Interfaces | - ACPI, PCI, USB                                                                                                                                       |
+| Storage             | - IDE (PATA), SATA (AHCI), NVMe                                                                                                                        |
+| Video               | - BIOS VESA, UEFI GOP                                                                                                                                  |
+| Sound               | - Intel, Realtek chipsets                                                                                                                              |
+| Input               | - PS/2 keyboards, mouse and touchpad <br> - USB keyboards, mouse and touchpad                                                                          |
+| Ethernet            | - Intel Gigabit and 10 Gigabit ethernet <br>- Realtek ethernet                                                                                        |
 
 ## I have a low-end computer, would Redox work on it?
 

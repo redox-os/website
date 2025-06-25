@@ -44,7 +44,7 @@ Check out our [RSoC Proposal Guide](/rsoc-proposal-how-to) and [Project Suggesti
 
 ## [GitLab](https://gitlab.redox-os.org/redox-os/redox)
 
-A slightly more formal way of communication with fellow Redox devs, but a little less quick and convenient like the chat. Submit an issue when you run into problems compiling or testing. Issues can also be used if you would like to discuss a certain topic: be it features, code style, code inconsistencies, minor changes and fixes, etc.
+A slightly more formal way of communication with fellow Redox developers, but a little less quick and convenient like the chat. Submit an issue when you run into problems compiling or testing. Issues can also be used if you would like to discuss a certain topic: be it features, code style, code inconsistencies, minor changes and fixes, etc.
 
 If you want to create an account, read the [Signing in to GitLab](https://doc.redox-os.org/book/signing-in-to-gitlab.html) page.
 
