@@ -11,4 +11,5 @@ lychee:
   image:
     # https://lychee.cli.rs/docker
     name: docker.io/lycheeverse/lychee:latest-alpine
-  script: "./content"
+    entrypoint: [""] # force an empty entrypoint
+  script: "lychee ./content"
