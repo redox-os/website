@@ -13,5 +13,5 @@ lychee:
     name: docker.io/lycheeverse/lychee:latest-alpine
     entrypoint: [""] # force an empty entrypoint
   script: |
-    cp -a ./static/* ./content # emulate media links
-    lychee --offline --root-dir $(pwd)/content ./content
+    cp -a ./static/* . # emulate media links
+    lychee --offline --root-dir $(pwd) ./content
