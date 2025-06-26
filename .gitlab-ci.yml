@@ -10,5 +10,5 @@ hugo:
 lychee:
   image:
     # https://lychee.cli.rs/docker
-    name: docker.io/lycheeverse/lychee
+    name: docker.io/lycheeverse/lychee:latest-alpine
   script: "lychee content"
