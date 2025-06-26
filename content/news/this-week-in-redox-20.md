@@ -97,7 +97,7 @@ There has been so much work [ion shell](https://github.com/redox-os/ion) that we
 
 # TFS
 
-[TFS](github.com/redox-os/tfs) is a modular, fast, and feature rich next-gen file system, employing modern techniques for high performance, high space efficiency, and high scalability.
+[TFS](https://github.com/redox-os/tfs) is a modular, fast, and feature rich next-gen file system, employing modern techniques for high performance, high space efficiency, and high scalability.
 
 There has been enough work done in TFS that we added this section in this edition so you can have an idea about how the progress is going there.
 
