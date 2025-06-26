@@ -12,4 +12,4 @@ lychee:
     # https://lychee.cli.rs/docker
     name: docker.io/lycheeverse/lychee:latest-alpine
     entrypoint: [""] # force an empty entrypoint
-  script: "lychee ./content"
+  script: "lychee --offline ./content"
