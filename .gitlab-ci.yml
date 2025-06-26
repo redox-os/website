@@ -19,4 +19,4 @@ lychee:
     name: docker.io/lycheeverse/lychee:latest-alpine
     entrypoint: [""] # force an empty entrypoint
   script: |
-    lychee --offline --root-dir $(pwd)build/public ./build/public
+    lychee --no-progress --offline --root-dir $(pwd)/build/public ./build/public
