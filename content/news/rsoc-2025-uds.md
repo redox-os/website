@@ -76,7 +76,7 @@ Here's how it works step-by-step:
 1. The sending process calls `sendfd` syscall with the socket and the FD to send.
 2. The kernel receives the syscall and removes the FD from the sending process's FD table.
 3. The kernel sends a request to the scheme that manages the socket.
-4. The scheme handles the request and obtains the FD from the kernel.
+4. The scheme handles the request and then uses the request id to obtain the corresponding FD from the kernel.
 5. The receiving process calls `dup` on the socket with the "recvfd" argument.
 6. The scheme reports to the kernel that it is sending an already open FD.
 7. The receiving process gets a new FD from the kernel that points to the same underlying open file as the original FD.
