@@ -41,7 +41,7 @@ Creating a dedicated `uds` scheme felt more natural.
 This approach truly embraces the Redox philosophy.
 
 ## How FD passing works
-With UDS, processes can send FDs over the socket. This allows them to share resources like files or even other sockets. FD passing is a powerful feature used in many applications, such as the [wayland](https://en.wikipedia.org/wiki/Wayland_(protocol)).
+With UDS, processes can send FDs over the socket. This allows them to share resources like files or even other sockets. FD passing is a powerful feature used in many applications, such as the [Wayland protocol](https://en.wikipedia.org/wiki/Wayland_(protocol)).
 
 ### A Classic Example: The Logging Daemon
 
@@ -65,14 +65,21 @@ In Redox, FD passing is achieved through the `sendfd` syscall and a special use 
 A process can send a FD over a socket managed by a scheme.
 The receiving process can then obtain this FD.
 
+The intent of a file descriptor is to act as a reference to a resource that has been opened for use.
+An FD is an index into a process's file descriptor table, maintained in the kernel,
+and points to a "file description" that identifies the target resource.
+An FD only makes sense in the context of the process that owns it,
+so simply sending an FD number between processes would not accomplish the goal of passing a reference to a resource.
+The kernel must participate in moving the reference between processes.
+
 Here's how it works step-by-step:
 1. The sending process calls `sendfd` syscall with the socket and the FD to send.
 2. The kernel receives the syscall and removes the FD from the sending process's FD table.
 3. The kernel sends a request to the scheme that manages the socket.
 4. The scheme handles the request and obtains the FD from the kernel.
 5. The receiving process calls `dup` on the socket with the "recvfd" argument.
-6. The scheme returns the obtained FD to the receiving process.
-7. The receiving process gets a new FD that points to the same underlying open file as the original FD.
+6. The scheme reports to the kernel that it is sending an already open FD.
+7. The receiving process gets a new FD from the kernel that points to the same underlying open file as the original FD.
 
 Here's an example of fd sending:
 ```rust
@@ -90,7 +97,11 @@ This way, the receiving process can access the FD without needing to know the or
 
 ## sendmsg and recvmsg Implementation with SYS\_CALL Interface
 
-In the previous section, we introduced the concept of FD passing and the low-level `sendfd` mechanism. Now, let's dive deeper into how the standard C library functions `sendmsg` and `recvmsg`—which are crucial for this kind of advanced UDS feature—are implemented. This is where Redox's unique `SYS_CALL` interface comes into play, offering a powerful and efficient solution.
+In the previous section, we introduced the concept of FD passing and the low-level `sendfd` mechanism. Now, let's dive deeper into the standard C library functions `sendmsg` and `recvmsg`—which are crucial for this kind of advanced UDS feature—and their implementation. This is where Redox's unique `SYS_CALL` interface comes into play, offering a powerful and efficient solution.
+
+Redox's implementation of the standard C library, libc, is called `relibc`, and it includes functions, such as `sendmsg` and `recvmsg`, that provide the same API as Linux.
+But the implementation of those functions is done in a way that makes use of Redox's internal APIs.
+
 
 The `sendmsg` and `recvmsg` functions allow processes to exchange structured messages containing both a data payload and control information (known as ancillary data). They use the following standard C structures:
 ```c
@@ -175,9 +186,9 @@ Conversely, the recvmsg function works as a deserializer:
 
 1. It first makes a `SYS_CALL` to the `uds` scheme to receive the complete message stream.
 2. It parses this stream, filling the application's `iovec` buffers with the payload data.
-3. When it parses the ancillary data portion and finds an FD count for `SCM_RIGHTS`, it knows how many file descriptors are waiting in the scheme's queue. It then internally calls `syscall::dup(socket, "recvfd")` the specified number of times.
+3. When it parses the ancillary data portion and finds an FD count for `SCM_RIGHTS`, it knows how many file descriptors are waiting in the scheme's queue. It then internally calls `syscall::dup(socket, "recvfd")` the specified number of times, and uses Redox's FD sending mechanism to obtain the file descriptors.
 
-This approach encapsulates all the complexity within the C library. The application developer can use `sendmsg` and `recvmsg` in the standard way, without worrying about the underlying `sendfd`, `dup`, and `SYS_CALL` mechanics.
+This approach encapsulates all the complexity of Redox's file descriptor sending mechanism within the C library. The application developer can use `sendmsg` and `recvmsg` in the standard way, without worrying about the underlying `sendfd`, `dup`, and `SYS_CALL` mechanics.
 It takes only one syscall to send or receive a message, which is much more efficient than the "named dup" approach.
 
 This `SYS_CALL` eliminates the inefficient `dup-write/read-close` pattern, replacing multiple syscalls with just one.
