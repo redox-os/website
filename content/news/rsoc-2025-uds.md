@@ -10,14 +10,14 @@ UDS are a way for processes on the same machine to communicate with each other. 
 
 But here's the challenge: Redox OS has its own unique design **Schemes and Resources**. From files (`/scheme/file/path/to/file`) to network connections (`/scheme/tcp/127.0.0.1/3000`), every resource has its own scheme-rooted paths.
 
-So, my first big question was: how do you fit a classic Unix feature like a socket file into this elegant, URL-driven world?
+So, my first big question was: how do you fit a classic Unix feature like a socket file into this elegant, Plan 9-like with Unix-style paths world?
 
 In this post, we'll explore how I adapted UDS to the "Redox way" of thinking. Then, we'll take a deep dive into file descriptor (FD) passing, one of the most powerful features of UDS, and see how the `sendmsg` and `recvmsg` functions are implemented using the `SYS_CALL` interface.
 
 ## Design Issues: Adapting Unix Domain Sockets to Redox
 
-### Redox's Schemes and Resources
-*"An essential design choice made for Redox is to refer to resources using scheme-rooted paths."* from [Schemes and Resources](https://doc.redox-os.org/book/schemes-resources.html)
+### Schemes and Resources
+*"An essential design choice made for Redox is to refer to resources using scheme-rooted paths"* from [Schemes and Resources](https://doc.redox-os.org/book/schemes-resources.html)
 In Redox, resources are accessed by Scheme-rooted Path, for example, a file is accessed by `/scheme/file/path/to/file`, and a network connection is accessed by `/scheme/tcp/127.0.0.1/3000`.
 
 ### Question: How to express Socket in Redox?
@@ -25,7 +25,7 @@ In Linux, a socket is represented by a socket file, such as `/tmp/mysocket.sock`
 
 For Redox, we considered two main ideas: representing a socket through the existing `file` scheme or creating a new, dedicated scheme like `uds`.
 
-In the first case, the approach would be very similar to other operating systems: we would need to implement special UDS handling directly within redoxfs.
+In the first case, the approach would be very similar to other operating systems: we would need to implement special UDS handling directly within RedoxFS.
 
 In the second case, we implement a new scheme for handling sockets, which is similar to how `tcp` and `udp` schemes work. We create a new special scheme called `uds` and implement special process to handle UDS.
 
@@ -40,7 +40,7 @@ Creating a dedicated `uds` scheme felt more natural.
 
 This approach truly embraces the Redox philosophy.
 
-## How FD passing works
+## How FD (file descriptor) passing works
 With UDS, processes can send FDs over the socket. This allows them to share resources like files or even other sockets. FD passing is a powerful feature used in many applications, such as the [Wayland protocol](https://en.wikipedia.org/wiki/Wayland_(protocol)).
 
 ### A Classic Example: The Logging Daemon
@@ -95,7 +95,7 @@ syscall::close(received_fd);
 ```
 This way, the receiving process can access the FD without needing to know the original file path.
 
-## sendmsg and recvmsg Implementation with SYS\_CALL Interface
+## sendmsg and recvmsg implementation with SYS_CALL interface
 
 In the previous section, we introduced the concept of FD passing and the low-level `sendfd` mechanism. Now, let's dive deeper into the standard C library functions `sendmsg` and `recvmsg`—which are crucial for this kind of advanced UDS feature—and their implementation. This is where Redox's unique `SYS_CALL` interface comes into play, offering a powerful and efficient solution.
 
@@ -127,7 +127,7 @@ struct cmsghdr {
 ```
 The `msg_control` field is the key here; it's used to carry ancillary data like file descriptors (`SCM_RIGHTS`) and process credentials.
 
-### The SYS\_CALL Solution
+### The SYS_CALL Solution
 Redox OS has a small number of syscalls. There are several ways of sending information to or receiving information from schemes. The `read` and `write` syscalls are two of them.
 
 The `write` syscall sends information to a scheme. For the `uds` scheme, a normal `syscall::write(fd, data)` sends the data payload to a socket managed by the scheme.
