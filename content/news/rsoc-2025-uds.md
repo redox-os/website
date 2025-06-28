@@ -99,7 +99,7 @@ This way, the receiving process can access the FD without needing to know the or
 
 In the previous section, we introduced the concept of FD passing and the low-level `sendfd` mechanism. Now, let's dive deeper into the standard C library functions `sendmsg` and `recvmsg`—which are crucial for this kind of advanced UDS feature—and their implementation. This is where Redox's unique `SYS_CALL` interface comes into play, offering a powerful and efficient solution.
 
-Redox's implementation of the standard C library, libc, is called `relibc`, and it includes functions, such as `sendmsg` and `recvmsg`, that provide the same API as Linux.
+Redox's implementation of the standard C library (libc) is called `relibc`, and it includes functions, such as `sendmsg` and `recvmsg`, that provide the same API as Linux.
 But the implementation of those functions is done in a way that makes use of Redox's internal APIs.
 
 
