@@ -188,7 +188,7 @@ Conversely, the recvmsg function works as a deserializer:
 2. It parses this stream, filling the application's `iovec` buffers with the payload data.
 3. When it parses the ancillary data portion and finds an FD count for `SCM_RIGHTS`, it knows how many file descriptors are waiting in the scheme's queue. It then internally calls `syscall::dup(socket, "recvfd")` the specified number of times, and uses Redox's FD sending mechanism to obtain the file descriptors.
 
-This approach encapsulates all the complexity of Redox's file descriptor sending mechanism within the C library. The application developer can use `sendmsg` and `recvmsg` in the standard way, without worrying about the underlying `sendfd`, `dup`, and `SYS_CALL` mechanics.
+This approach encapsulates all the complexity of Redox's file descriptor sending mechanism within the standard C library. The application developer can use `sendmsg` and `recvmsg` in the standard way, without worrying about the underlying `sendfd`, `dup`, and `SYS_CALL` mechanics.
 It takes only one syscall to send or receive a message, which is much more efficient than the "named dup" approach.
 
 This `SYS_CALL` eliminates the inefficient `dup-write/read-close` pattern, replacing multiple syscalls with just one.
