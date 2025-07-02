@@ -6,7 +6,7 @@ date = "2025-06-26"
 
 Hello everyone! I'm Ibuki Omatsu, and as part of my RSoC project, I'm currently working on implementing Unix Domain Sockets (UDS) in Redox OS.
 
-UDS are a way for processes on the same machine to communicate with each other. They're similar to network sockets, but instead of using IP addresses and ports, they use the filesystem as their address space. This allows for faster communication between processes, as there is no need to go through the network stack.
+UDS are a way for processes on the same machine to communicate with each other. They're similar to network sockets, but instead of using IP addresses and ports, they use the filesystem as their connection addressing. This allows for faster communication between processes, as there is no need to go through the network stack.
 
 But here's the challenge: Redox OS has its own unique design **Schemes and Resources**. From files (`/scheme/file/path/to/file`) to network connections (`/scheme/tcp/127.0.0.1/3000`), every resource has its own scheme-rooted paths.
 
