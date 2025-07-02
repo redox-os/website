@@ -15,9 +15,15 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## Network Boot Support
+
+bjorn3 implemented network boot (PXE) support allowing Redox to be booted from the local network or Internet.
+
 ## Kernel Improvements
 
-- (kernel) 
+- (kernel) bjorn3 unified more x86-64 and i686 code
+- (kernel) bjorn3 reduced boot verbosity
+- (kernel) bjorn3 fixed some warnings
 
 ## System Call Improvements
 
@@ -25,7 +31,7 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## Driver Improvements
 
-- (drivers) 
+- (drivers) bjorn3 did many code refactorings in the graphics API
 
 ## System Improvements
 
@@ -39,21 +45,19 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## Networking Improvements
 
-- (net) voedipus fixed the `ping` tool
-
-## RedoxFS Improvements
-
-- (redoxfs) 
+- (net) voedipus fixed the `ping` tool by removing the legacy scheme path format code
+- (net) bjorn3 did a code cleanup and removed dead code on the network stack and tools
 
 ## Testing Improvements
 
 - (test) Ibuki Omatsu added Unix domain socket tests on `acid`
-- (test) Darley Barreto added a folder rename test for the `openat` API on `acid`
-- (test) Ron Williams packaged the POSIX test suite
+- (test) Darley Barreto added `openat` API tests on `acid`
+- (test) Ron Williams packaged the Open POSIX Test Suite
 
 ## Packaging Improvements
 
 - (pkg) Wildan Mubarok fixed the package update logic
+- (pkg) Wildan Mubarok fixed a bug in the package manager which caused duplicated downloads
 - (pkg) Wildan Mubarok improved the package update performance
 - (pkg) Wildan Mubarok added a workaround to fix a symbolic link bug in pkgar
 - (pkg) Wildan Mubarok added tests for package installation
@@ -77,10 +81,15 @@ If you would like to support Redox, please consider donating or buying some merc
 - (programs) Wildan Mubarok fixed the source download of the libgmp recipe on GitHub CI (due to blocked Microsoft IPs) by using the GNU FTP mirror
 - (programs) Ron Williams fixed GNU sed
 - (programs) Oleg Pittman converted the cmatrix, dynamic-example, Pixelcannon, patch, rustual-boy, ScummVM, ttf-hack, Gigalomania, OpenTTD, Sopwith, Duktape, SDL_gfx, SDL_image, SDL_ttf, generaluser-rs, Timidity, vttest, GNU Grep, libc-bench, Periodictable, Schismtracker and mdp recipes to TOML
+- (programs) bjorn3 converted the osdemo, sdl2-gears, ncdu and sdl-player recipes to TOML
+- (programs) Wildan Mubarok enabled more recipes for ARM64
+- (programs) Wildan Mubarok fixed GNU Nano by adding a missing dependency
+- (programs) Wildan Mubarok disabled the OpenSSL man pages to speedup building a lot
 - (programs) Josh Megnauth converted the powerline-rs shell to TOML
 - (programs) Ribbon fixed and packaged many tools and demos written in Rust
 - (programs) bjorn3 removed some recipes that aren't used anymore and use the deprecated `recipe.sh` format
-- (programs) David Campbell added the `BROWSER` environment variable in the `desktop` variant configuration
+- (programs) David Campbell added the `BROWSER` environment variable in the `desktop` variant configuration to fix programs that use the default web browser to do tasks
+- (programs) David Campbell packaged the [Copenhagen Hnefatafl](https://github.com/dcampbell24/hnefatafl) client
 
 ## Build System Improvements
 
@@ -93,10 +102,13 @@ If you would like to support Redox, please consider donating or buying some merc
 - (build-system) Ribbon improved the script of the `myfiles` recipe to avoid problems with bad characters on paths
 - (build-system) Wildan Mubarok updated Cookbook to build the items of the `package.dependencies` data type before their recipe instead after all recipes
 - (build-system) Wildan Mubarok implemented the `recipe = "ignore"` option to allow the CPU-specific configurations to disable recipes when a recipe breaks for some CPU architecture (reducing configuration duplication and less error-prone), before that the i686, ARM64 and RISC-V configurations couldn't disable the broken recipes from the complete/CPU-agnostic root configurations
-- (buuild-system) Wildan Mubarok fixed Redoxer on Linux and MacOSX
+- (build-system) Wildan Mubarok fixed Redoxer on Linux and MacOSX
+- (build-system) Wildan Mubarok reduced the Redoxer Docker image size
+- (build-system) Wildan Mubarok implemented dynamic search of the QEMU UEFI firmware for Linux distributions and MacOSX Brew to fix a QEMU problem with different firmware locations on package systems
+- (build-system) Wildan Mubarok disabled the Redox toolchain building if the Podman Build is used on MacOSX
 - (build-system) Wildan Mubarok updated the GitLab CI to Ubuntu 24.04 to fix the Redox toolchain
 - (build-system) Mathew John added spaces in the Podman and Native build bootstrap scripts for consistant formatting
-- (build-system) Petr Hrdina implemented more recipe commands in Cookbook and fixed the high slowness of the `scripts/category.sh` script in the Podman Build
+- (build-system) Petr Hrdina implemented support for multiple items on recipe target commands (`make r.recipe1,recipe2`) and fixed the high slowness of the `scripts/category.sh` script in the Podman Build
 
 ## Documentation Improvements
 
@@ -111,8 +123,10 @@ If you would like to support Redox, please consider donating or buying some merc
 - (doc) Ribbon documented the practice where Rust programs use Cargo packages for examples instead of Cargo examples in the porting documentation
 - (doc) James Matlik fixed the kernel recipe source location in the "System Call Tracing" page
 - (doc) Wildan Mubarok added questions for the `REPO_BINARY` environment variable on the Developer FAQ
+- (doc) Wildan Mubarok added a README in the bootloader repository
 - (doc) Wildan Mubarok added the [lychee](https://lychee.cli.rs/) tool on the book CI to verify broken links
-- (doc) Mathew John added a reference for Rust security in the book
+- (doc) Mathew John added a reference for [Rust security](https://yevh.github.io/rust-security-handbook/) in the book
+- (doc) Brooks McMillin fixed the Periodic Table executable location in the "Trying Out Redox" page
 
 ## Website Improvements
 
