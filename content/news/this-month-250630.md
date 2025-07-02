@@ -15,6 +15,47 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## NLnet/NGI Zero Grants!
+
+Redox has been awarded two new grants by the [NGI Zero Commons fund](https://nlnet.nl/commonsfund/) and [NLnet Foundation](https://nlnet.nl/).
+
+- [Capability-based security for Redox](https://nlnet.nl/project/Capability-based-RedoxOS/) is our first step to supporting [Capabilities](https://en.wikipedia.org/wiki/Capability-based_security) as the underlying mechanism for file descriptors.
+- [io_uring-like IO for Redox](https://nlnet.nl/project/RedoxOS-ringbuffer/) is intended to improve the performance of Redox internal communication by using asynchronous queues inspired by [io_uring](https://en.wikipedia.org/wiki/Io_uring) rather than synchronous messaging, while also ensuring the safety of the requests.
+
+The amounts of the grants is still to be determined, but each project should be about 2 or 3 months work.
+
+## Redox is hiring a Build Engineer!
+
+In addition to our development position announced in [last month's report](https://redox-os.org/news/this-month-250531/), Redox is looking for a part-time Build/CI Engineer. This is a remote position, and there are no geographical restrictions, other than you must be eligible to receive payment from a US-based non-profit. We have a budget of US$1,000 per month available for this position, so we are open to proposals with flexible work schedules, and are open to ideas about your responsibilities.
+
+The primary responsibility is to monitor Redox's build and CI to identify the cause of failures and repair them, either by working with the developers, applying fixes or rolling back changes to the various Redox gitlab repos.
+
+Other possible responsibilities and tasks include:
+- Monitor Redox's GitLab, website and other communication tools for problems.
+- Provide technical support to the Redox community.
+- Contribute to Redox documentation, especially with respect to the build process.
+- Improve Redox's build system, and help create a self-hosted build system, as time permits.
+- Improve Redox's website design.
+
+Qualifications include some or all of:
+- Knowledge of various Linux build systems, including Cargo, GNU Make, CMake, GNU Autotools, Meson and others
+- Knowledge of Git, GitLab, and CI configuration
+- Experience programming in Rust, C, Shell scripts and GNU Bash
+- Experience with Podman and/or Docker
+- Past contributions to open source projects
+- HTML and CSS knowledge
+- Enthusiasm for Rust, Redox and learning in general
+- Ability to communicate effectively in English
+- Ability to provide positive and friendly support for community members of varying skills and backgrounds
+
+Email president@redox-os.org, CC info@redox-os.org. Write a short proposal indicating how much time you would be available, given our budget constraints. Tell us about your build and GitLab expertise, some of the areas above where you would like to make a contribution, and the relevant skills and experience you have.
+
+## Unix Domain Sockets
+
+One of our Redox Summer of Code projects, Unix Domain Sockets, has been progressing very well.
+The ability to send file descriptors over Unix Domain Sockets is used for many purposes, including for the Wayland protocol.
+Read all about it in Ibuki's RSoC news post.
+
 ## Network Booting Support
 
 bjorn3 implemented [network booting](https://en.wikipedia.org/wiki/Network_booting) (PXE) support allowing Redox to be booted from the local network or Internet.
