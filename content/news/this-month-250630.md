@@ -31,6 +31,7 @@ If you would like to support Redox, please consider donating or buying some merc
 
 - (system) bjorn3 implemented network boot (PXE) support for UEFI in the bootloader
 - (system) bjorn3 fixed a conflict with the `du` and `touch` tools between Rust Coreutils and uutils
+- (system) James Matlik did a small dependency cleanup in `userutils`
 
 ## Relibc Improvements
 
@@ -38,11 +39,17 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## Networking Improvements
 
-- (net) 
+- (net) voedipus fixed the `ping` tool
 
 ## RedoxFS Improvements
 
 - (redoxfs) 
+
+## Testing Improvements
+
+- (test) Ibuki Omatsu added Unix domain socket tests on `acid`
+- (test) Darley Barreto added a folder rename test for the `openat` API on `acid`
+- (test) Ron Williams packaged the POSIX test suite
 
 ## Packaging Improvements
 
@@ -53,6 +60,7 @@ If you would like to support Redox, please consider donating or buying some merc
 - (pkg) Wildan Mubarok implemented support for a custom paclage repository
 - (pkg) Wildan Mubarok implemented the support for symbolic link overwrite
 - (pkg) Wildan Mubarok improved the package manager search by reading the package server `repo.toml` database instead of HTML package list
+- (pkg) Josh Megnauth added unit tests on the package manager
 
 ## Terminal Improvements
 
@@ -71,6 +79,8 @@ If you would like to support Redox, please consider donating or buying some merc
 - (programs) Oleg Pittman converted the cmatrix, dynamic-example, Pixelcannon, patch, rustual-boy, ScummVM, ttf-hack, Gigalomania, OpenTTD, Sopwith, Duktape, SDL_gfx, SDL_image, SDL_ttf, generaluser-rs, Timidity, vttest, GNU Grep, libc-bench, Periodictable, Schismtracker and mdp recipes to TOML
 - (programs) Josh Megnauth converted the powerline-rs shell to TOML
 - (programs) Ribbon fixed and packaged many tools and demos written in Rust
+- (programs) bjorn3 removed some recipes that aren't used anymore and use the deprecated `recipe.sh` format
+- (programs) David Campbell added the `BROWSER` environment variable in the `desktop` variant configuration
 
 ## Build System Improvements
 
@@ -78,13 +88,19 @@ If you would like to support Redox, please consider donating or buying some merc
 - (build-system) bjorn3 implemented a way to install the bootloader in a custom location
 - (build-system) Wildan Mubarok reduced the Git fetch time of our libtool fork
 - (build-system) Wildan Mubarok fixed the fetch of our libtool fork in older Git versions
+- (build-system) Wildan Mubarok fixed the frequent libtool-build rebuild in the Podman Build
 - (build-system) Josh Megnauth fixed the `make virtualbox` command with recent VirtualBox versions
 - (build-system) Ribbon improved the script of the `myfiles` recipe to avoid problems with bad characters on paths
 - (build-system) Wildan Mubarok updated Cookbook to build the items of the `package.dependencies` data type before their recipe instead after all recipes
+- (build-system) Wildan Mubarok implemented the `recipe = "ignore"` option to allow the CPU-specific configurations to disable recipes when a recipe breaks for some CPU architecture (reducing configuration duplication and less error-prone), before that the i686, ARM64 and RISC-V configurations couldn't disable the broken recipes from the complete/CPU-agnostic root configurations
+- (buuild-system) Wildan Mubarok fixed Redoxer on Linux and MacOSX
 - (build-system) Wildan Mubarok updated the GitLab CI to Ubuntu 24.04 to fix the Redox toolchain
+- (build-system) Mathew John added spaces in the Podman and Native build bootstrap scripts for consistant formatting
+- (build-system) Petr Hrdina implemented more recipe commands in Cookbook and fixed the high slowness of the `scripts/category.sh` script in the Podman Build
 
 ## Documentation Improvements
 
+- (doc) Ribbon added a brief explanation of the Redox's [origin story](https://doc.redox-os.org/book/#origin-story)
 - (doc) Ribbon did many improvements, fixes and cleanup in the [Developer FAQ](https://doc.redox-os.org/book/developer-faq.html) page
 - (doc) Ribbon improved the GDB documentation on the book thanks to bjorn3
 - (doc) Ribbon added a reference for debugging techniques on the debug methods list on the book
@@ -95,6 +111,12 @@ If you would like to support Redox, please consider donating or buying some merc
 - (doc) Ribbon documented the practice where Rust programs use Cargo packages for examples instead of Cargo examples in the porting documentation
 - (doc) James Matlik fixed the kernel recipe source location in the "System Call Tracing" page
 - (doc) Wildan Mubarok added questions for the `REPO_BINARY` environment variable on the Developer FAQ
+- (doc) Wildan Mubarok added the [lychee](https://lychee.cli.rs/) tool on the book CI to verify broken links
+- (doc) Mathew John added a reference for Rust security in the book
+
+## Website Improvements
+
+- (web) Wildan Mubarok fixed the repository CI
 
 ## How To Test The Changes
 
