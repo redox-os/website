@@ -107,25 +107,30 @@ bjorn3 implemented network boot (PXE) support allowing Redox to be booted from t
 - (build-system) Wildan Mubarok implemented dynamic search of the QEMU UEFI firmware for Linux distributions and MacOSX Brew to fix a QEMU problem with different firmware locations on package systems
 - (build-system) Wildan Mubarok disabled the Redox toolchain building if the Podman Build is used on MacOSX
 - (build-system) Wildan Mubarok updated the GitLab CI to Ubuntu 24.04 to fix the Redox toolchain
-- (build-system) Mathew John added spaces in the Podman and Native build bootstrap scripts for consistant formatting
+- (build-system) auronandace added spaces in the Podman and Native build bootstrap scripts for consistant formatting
 - (build-system) Petr Hrdina implemented support for multiple items on recipe target commands (`make r.recipe1,recipe2`) and fixed the high slowness of the `scripts/category.sh` script in the Podman Build
 
 ## Documentation Improvements
 
 - (doc) Ribbon added a brief explanation of the Redox's [origin story](https://doc.redox-os.org/book/#origin-story)
+- (doc) Ribbon improved the scheme documentation and fixed broken source code links of some schemes in the [scheme tables](https://doc.redox-os.org/book/schemes.html)
+- (doc) Ribbon improved the [CONTRIBUTING.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md) document with more information for Matrix/Discord/GitLab, added missing important repositories and more tasks for contributors who don't know programming
 - (doc) Ribbon did many improvements, fixes and cleanup in the [Developer FAQ](https://doc.redox-os.org/book/developer-faq.html) page
+- (doc) Ribbon added the [Documentation Questions](https://doc.redox-os.org/book/developer-faq.html#documentation-questions) with answers for contributors who want to write documentation
 - (doc) Ribbon improved the GDB documentation on the book thanks to bjorn3
 - (doc) Ribbon added a reference for debugging techniques on the debug methods list on the book
 - (doc) Ribbon improved the Podman documentation of the `make env` and `make container_shell` commands
 - (doc) Ribbon added a section for feature flags of C/C++ programs and libraries on the porting documentation
-- (doc) Ribbon added a benefit about the kernel simplicity on the microkernel architecture
+- (doc) Ribbon added the "more stable long execution" and "kernel simplicity" [microkernel benefits](https://doc.redox-os.org/book/why-a-new-os.html#benefits-1) on the book
+- (doc) Ribbon added missing important repositories in the [Ecosystem](https://gitlab.redox-os.org/redox-os/redox#ecosystem) table of the build system repository
 - (doc) Ribbon documented the Podman update process
 - (doc) Ribbon documented the practice where Rust programs use Cargo packages for examples instead of Cargo examples in the porting documentation
+- (doc) Ribbon moved the hardware compatibility list to a [table](https://doc.redox-os.org/book/hardware-support.html#compatibility-table)
 - (doc) James Matlik fixed the kernel recipe source location in the "System Call Tracing" page
 - (doc) Wildan Mubarok added questions for the `REPO_BINARY` environment variable on the Developer FAQ
 - (doc) Wildan Mubarok added a README in the bootloader repository
 - (doc) Wildan Mubarok added the [lychee](https://lychee.cli.rs/) tool on the book CI to verify broken links
-- (doc) Mathew John added a reference for [Rust security](https://yevh.github.io/rust-security-handbook/) in the book
+- (doc) auronandace added a reference for [Rust security](https://yevh.github.io/rust-security-handbook/) in the book
 - (doc) Brooks McMillin fixed the Periodic Table executable location in the "Trying Out Redox" page
 
 ## Website Improvements
