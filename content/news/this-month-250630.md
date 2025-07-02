@@ -15,9 +15,11 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
-## Network Boot Support
+## Network Booting Support
 
-bjorn3 implemented network boot (PXE) support allowing Redox to be booted from the local network or Internet.
+bjorn3 implemented [network booting](https://en.wikipedia.org/wiki/Network_booting) (PXE) support allowing Redox to be booted from the local network or Internet.
+
+Currently only UEFI is supported.
 
 ## Kernel Improvements
 
@@ -35,8 +37,7 @@ bjorn3 implemented network boot (PXE) support allowing Redox to be booted from t
 
 ## System Improvements
 
-- (system) bjorn3 implemented network boot (PXE) support for UEFI in the bootloader
-- (system) bjorn3 fixed a conflict with the `du` and `touch` tools between Rust Coreutils and uutils
+- (system) bjorn3 fixed a conflict with the `du` and `touch` tools between Redox coreutils and uutils
 - (system) James Matlik did a small dependency cleanup in `userutils`
 
 ## Relibc Improvements
@@ -105,7 +106,7 @@ bjorn3 implemented network boot (PXE) support allowing Redox to be booted from t
 - (build-system) Wildan Mubarok fixed Redoxer on Linux and MacOSX
 - (build-system) Wildan Mubarok reduced the Redoxer Docker image size
 - (build-system) Wildan Mubarok implemented dynamic search of the QEMU UEFI firmware for Linux distributions and MacOSX Brew to fix a QEMU problem with different firmware locations on package systems
-- (build-system) Wildan Mubarok disabled the Redox toolchain building if the Podman Build is used on MacOSX
+- (build-system) Wildan Mubarok improved the support for ARM64 host systems
 - (build-system) Wildan Mubarok updated the GitLab CI to Ubuntu 24.04 to fix the Redox toolchain
 - (build-system) auronandace added spaces in the Podman and Native build bootstrap scripts for consistant formatting
 - (build-system) Petr Hrdina implemented support for multiple items on recipe target commands (`make r.recipe1,recipe2`) and fixed the high slowness of the `scripts/category.sh` script in the Podman Build
