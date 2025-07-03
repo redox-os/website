@@ -50,11 +50,45 @@ Qualifications include some or all of:
 
 Email president@redox-os.org, CC info@redox-os.org. Write a short proposal indicating how much time you would be available, given our budget constraints. Tell us about your build and GitLab expertise, some of the areas above where you would like to make a contribution, and the relevant skills and experience you have.
 
-## Unix Domain Sockets
+## Wayland and Unix Domain Sockets
 
-One of our Redox Summer of Code projects, Unix Domain Sockets, has been progressing very well.
-The ability to send file descriptors over Unix Domain Sockets is used for many purposes, including for the Wayland protocol.
-Read all about it in Ibuki's RSoC news post.
+As we continue to move forward with our plans for Wayland,
+a key technology for Wayland support is the ability to send file descriptors over Unix Domain Sockets.
+File descriptor sending is also an important part of many other OS features,
+including Capability-based Security.
+
+Our Redox Summer of Code project to implement that ability has been progressing very well.
+Ibuki, a new member of the Redox team, has jumped right into the deep end,
+and implemented the [`sendmg`](https://www.man7.org/linux/man-pages/man3/sendmsg.3p.html)
+and [`recvmsg`](https://www.man7.org/linux/man-pages/man3/recvmsg.3p.html) functionality,
+and continues to move forward with work on UDS.
+
+Understanding how Redox enables sending file descriptors gives some key insights into how Redox services collaborate.
+Read all about it in Ibuki's [RSoC news post](https://redox-os.org/news/rsoc-2025-uds/).
+
+## Redox at RustConf
+
+[RustConf 2025](https://rustconf.com/) is in Seattle, September 2-5. Jeremy Soller will be presenting "10 Years of Rust and Redox",
+including our shared history with Rust, and our vision for the future of Redox.
+
+We hope to see you there!
+ 
+## Cosmic Desktop Presentation
+
+Jeremy Soller, Redox founder and architect, and principal engineer at [System76](https://system76.com/),
+along with System76 CEO Carl Richell, presented the [Cosmic Desktop Environment](https://system76.com/cosmic/) at the [Open Source Summit](https://ossna2025.sched.com/event/1zfnp/cosmic-de-the-first-modular-composable-desktop-environment-carl-richell-jeremy-soller-system76).
+
+Redox has adopted some of the main applications the Cosmic desktop, and we plan to use the Cosmic Compositor as soon as we complete our Wayland support.
+
+- [0:00](https://youtu.be/fBcfjlFX-xM?feature=shared) System76 Overview
+- [7:48](https://youtu.be/fBcfjlFX-xM?feature=shared&t=468) Cosmic DE Overview
+- [9:12](https://youtu.be/fBcfjlFX-xM?feature=shared&t=552) Live Demo
+- [26:08](https://youtu.be/fBcfjlFX-xM?feature=shared&t=1568) Modularity and Cosmic Panel
+- [28:02](https://youtu.be/fBcfjlFX-xM?feature=shared&t=1682) File-based Configuration
+- [32:48](https://youtu.be/fBcfjlFX-xM?feature=shared&t=1968) Next Steps, Platforms, Availability
+
+<iframe width="800" height="640" src="[insert-the-video-embed-link-here](https://www.youtube.com/watch?v=fBcfjlFX-xM)" title="Cosmic Desktop Environment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 ## Network Booting Support
 
