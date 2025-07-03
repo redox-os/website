@@ -22,7 +22,7 @@ Redox has been awarded two new grants by the [NGI Zero Commons fund](https://nln
 - [Capability-based security for Redox](https://nlnet.nl/project/Capability-based-RedoxOS/) is our first step to supporting [Capabilities](https://en.wikipedia.org/wiki/Capability-based_security) as the underlying mechanism for file descriptors.
 - [io_uring-like IO for Redox](https://nlnet.nl/project/RedoxOS-ringbuffer/) is intended to improve the performance of Redox internal communication by using asynchronous queues inspired by [io_uring](https://en.wikipedia.org/wiki/Io_uring) rather than synchronous messaging, while also ensuring the safety of the requests.
 
-The amounts of the grants is still to be determined, but each project should be about 2 or 3 months work.
+The amounts of the grants is still to be determined, but each project should be about 2 to 4 months work.
 
 ## Redox is hiring a Build Engineer!
 
