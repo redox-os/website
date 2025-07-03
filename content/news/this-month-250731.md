@@ -5,7 +5,7 @@ date = "2025-07-31"
 +++
 
 Redox OS is a Unix-like general-purpose microkernel-based operating system
-written in Rust. (Month) was a very exciting month for Redox! Here's all the latest news.
+written in Rust. July was a very exciting month for Redox! Here's all the latest news.
 
 ## Donate to Redox
 
@@ -15,13 +15,21 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## Secure Disk Encryption!
+
+Jeremy Soller fixed the weak encryption security on RedoxFS using AES-XTS, like [LUKS](https://en.wikipedia.org/wiki/Linux_Unified_Key_Setup) (the Linux disk encryption system) does.
+
+## Massive Performance Improvement
+
+James Matlik did a massive performance improvement to RedoxFS
+
 ## Kernel Improvements
 
 - (kernel) 
 
 ## Driver Improvements
 
-- (drivers) 
+- (drivers) bjorn3 implemented window resizing on the VirtIO-GPU driver, allowing the host system to change the virtual machine resolution in real-time
 
 ## System Improvements
 
@@ -37,19 +45,20 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## RedoxFS Improvements
 
-- (redoxfs) 
+- (redoxfs) Darley Barreto implemented the upcoming `openat` API
 
-## Filesystem Improvements
+## Orbital Improvements
 
-- (fs) 
+- bjorn3 fixed a bug in the wallpaper program which duplicated the image causing massive memory usage, reducing it from ~149 MB to ~6 MB
 
 ## Programs
 
-- (programs) 
+- (programs) Ashton Kemerling packaged the [sqllogictest-rs](https://github.com/risinglightdb/sqllogictest-rs) tool
 
 ## Build System Improvements
 
-- (build-system) 
+- (build-system) Josh Megnauth fixed a bug where some runtime dependencies of recipes weren't added to the Redox image
+- (build-system) auronandace fixed some warnings in the installer
 
 ## Documentation Improvements
 
