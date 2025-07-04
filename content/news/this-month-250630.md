@@ -112,6 +112,7 @@ Currently only UEFI is supported.
 
 ## System Improvements
 
+- (system) bjorn3 implemented an option in the bootloader to enable/disable live mode to fully load the system into RAM (if the storage drivers don't work on your computer) or load from the storage device
 - (system) bjorn3 fixed a conflict with the `du` and `touch` tools between Redox coreutils and uutils
 - (system) James Matlik did a small dependency cleanup in `userutils`
 
@@ -122,7 +123,7 @@ Currently only UEFI is supported.
 ## Networking Improvements
 
 - (net) voedipus fixed the `ping` tool by removing the legacy scheme path format code
-- (net) bjorn3 did a code cleanup and removed dead code on the network stack and tools
+- (net) bjorn3 did a code cleanup and removed dead code in the network stack and tools
 
 ## Testing Improvements
 
@@ -148,15 +149,15 @@ Currently only UEFI is supported.
 
 ## Programs
 
-- (programs) Jeremy Soller fixed COSMIC Files, COSMIC Store and FreeCiv
-- (programs) Jeremy Soller enabled dynamic linking on the libxkbcommon, OpenJK and Gigalomania recipes
+- (programs) Jeremy Soller fixed COSMIC Files, COSMIC Store, and FreeCiv
+- (programs) Jeremy Soller enabled dynamic linking on the libxkbcommon, OpenJK, and Gigalomania recipes
 - (programs) Jeremy Soller converted the mgba and Neverball recipes to TOML
 - (programs) Jeremy Soller updated mgba to the 0.10.5 version
-- (programs) Jeremy Soller replaced the libjpeg library by libjpeg-turbo
+- (programs) Jeremy Soller replaced the libjpeg library with libjpeg-turbo
 - (programs) Wildan Mubarok fixed the source download of the libgmp recipe on GitHub CI (due to blocked Microsoft IPs) by using the GNU FTP mirror
 - (programs) Ron Williams fixed GNU sed
-- (programs) Oleg Pittman converted the cmatrix, dynamic-example, Pixelcannon, patch, rustual-boy, ScummVM, ttf-hack, Gigalomania, OpenTTD, Sopwith, Duktape, SDL_gfx, SDL_image, SDL_ttf, generaluser-rs, Timidity, vttest, GNU Grep, libc-bench, Periodictable, Schismtracker and mdp recipes to TOML
-- (programs) bjorn3 converted the osdemo, sdl2-gears, ncdu and sdl-player recipes to TOML
+- (programs) Oleg Pittman converted the cmatrix, dynamic-example, Pixelcannon, patch, rustual-boy, ScummVM, ttf-hack, Gigalomania, OpenTTD, Sopwith, Duktape, SDL_gfx, SDL_image, SDL_ttf, generaluser-rs, Timidity, vttest, GNU Grep, libc-bench, Periodictable, Schismtracker, and mdp recipes to TOML
+- (programs) bjorn3 converted the osdemo, sdl2-gears, ncdu, and sdl-player recipes to TOML
 - (programs) Wildan Mubarok enabled more recipes for ARM64
 - (programs) Wildan Mubarok fixed GNU Nano by adding a missing dependency
 - (programs) Wildan Mubarok disabled the OpenSSL man pages to speedup building a lot
@@ -169,10 +170,10 @@ Currently only UEFI is supported.
 ## Build System Improvements
 
 - (build-system) Jeremy Soller improved the recipe scanning performance massively
-- (build-system) bjorn3 implemented a way to install the bootloader in a custom location
+- (build-system) bjorn3 implemented a way to install the bootloader to a custom location
 - (build-system) Wildan Mubarok reduced the Git fetch time of our libtool fork
-- (build-system) Wildan Mubarok fixed the fetch of our libtool fork in older Git versions
-- (build-system) Wildan Mubarok fixed the frequent libtool-build rebuild in the Podman Build
+- (build-system) Wildan Mubarok fixed the fetch of our libtool fork with older Git versions
+- (build-system) Wildan Mubarok fixed the frequent libtool-build rebuild when using the Podman Build
 - (build-system) Josh Megnauth fixed the `make virtualbox` command with recent VirtualBox versions
 - (build-system) Ribbon improved the script of the `myfiles` recipe to avoid problems with bad characters on paths
 - (build-system) Wildan Mubarok updated Cookbook to build the items of the `package.dependencies` data type before their recipe instead after all recipes
@@ -183,7 +184,7 @@ Currently only UEFI is supported.
 - (build-system) Wildan Mubarok improved the support for ARM64 host systems
 - (build-system) Wildan Mubarok updated the GitLab CI to Ubuntu 24.04 to fix the Redox toolchain
 - (build-system) auronandace added spaces in the Podman and Native build bootstrap scripts for consistant formatting
-- (build-system) Petr Hrdina implemented support for multiple items on recipe target commands (`make r.recipe1,recipe2`) and fixed the high slowness of the `scripts/category.sh` script in the Podman Build
+- (build-system) Petr Hrdina implemented support for multiple items on recipe target commands (`make r.recipe1,recipe2`) and fixed the slowness of the `scripts/category.sh` script in the Podman Build
 
 ## Documentation Improvements
 
@@ -193,10 +194,10 @@ Currently only UEFI is supported.
 - (doc) Ribbon did many improvements, fixes and cleanup in the [Developer FAQ](https://doc.redox-os.org/book/developer-faq.html) page
 - (doc) Ribbon added the [Documentation Questions](https://doc.redox-os.org/book/developer-faq.html#documentation-questions) with answers for contributors who want to write documentation
 - (doc) Ribbon improved the GDB documentation on the book thanks to bjorn3
-- (doc) Ribbon added a reference for debugging techniques on the debug methods list on the book
+- (doc) Ribbon added a reference for debugging techniques on the debug methods list in the book
 - (doc) Ribbon improved the Podman documentation of the `make env` and `make container_shell` commands
-- (doc) Ribbon added a section for feature flags of C/C++ programs and libraries on the porting documentation
-- (doc) Ribbon added the "more stable long execution" and "kernel simplicity" [microkernel benefits](https://doc.redox-os.org/book/why-a-new-os.html#benefits-1) on the book
+- (doc) Ribbon added a section for feature flags of C/C++ programs and libraries in the porting documentation
+- (doc) Ribbon added the "more stable long execution" and "kernel simplicity" [microkernel benefits](https://doc.redox-os.org/book/why-a-new-os.html#benefits-1) in the book
 - (doc) Ribbon added missing important repositories in the [Ecosystem](https://gitlab.redox-os.org/redox-os/redox#ecosystem) table of the build system repository
 - (doc) Ribbon documented the Podman update process
 - (doc) Ribbon documented the practice where Rust programs use Cargo packages for examples instead of Cargo examples in the porting documentation
@@ -204,7 +205,7 @@ Currently only UEFI is supported.
 - (doc) James Matlik fixed the kernel recipe source location in the "System Call Tracing" page
 - (doc) Wildan Mubarok added questions for the `REPO_BINARY` environment variable on the Developer FAQ
 - (doc) Wildan Mubarok added a README in the bootloader repository
-- (doc) Wildan Mubarok added the [lychee](https://lychee.cli.rs/) tool on the book CI to verify broken links
+- (doc) Wildan Mubarok added the [lychee](https://lychee.cli.rs/) tool in the book CI to verify broken links
 - (doc) auronandace added a reference for [Rust security](https://yevh.github.io/rust-security-handbook/) in the book
 - (doc) Brooks McMillin fixed the Periodic Table executable location in the "Trying Out Redox" page
 
