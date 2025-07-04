@@ -32,7 +32,7 @@ Last but not least the **cookbook** saw a lot of activity with a new system for 
 
 ## Kernel
 
-- [https://github.com/CWood1](CWood1) Added an HPET (High Precision Event Time) driver to the kernel and also moved the PIT (Programmable interval timer) driver from the bootloader to the kernel.
+- [CWood1](https://github.com/CWood1) Added an HPET (High Precision Event Time) driver to the kernel and also moved the PIT (Programmable interval timer) driver from the bootloader to the kernel.
 - [@ids1024](https://github.com/ids1024) Made `dup2()` work even if second file descriptor doesn't exist. Details [here](https://github.com/redox-os/kernel/pull/34).
 - [@ids1024](https://github.com/ids1024) Made a fix for `process::exec()` by stripping whitespaces after shebangs. Details [here](https://github.com/redox-os/kernel/pull/32).
 - [@ids1024](https://github.com/ids1024) Made a fix for `process::exec()` and now it passes the relative, not canonicalised, path to scripts. Details [here](https://github.com/redox-os/kernel/pull/33).
@@ -69,7 +69,7 @@ Last but not least the **cookbook** saw a lot of activity with a new system for 
 - [@mmstick](https://github.com/mmstick) Made background jobs display command arguments. Details [here](https://github.com/redox-os/ion/commit/c6f90de62a54868cbb2ec34b060cb5af6e499716).
 - [@mmstick](https://github.com/mmstick) Implement `set -x`. Details [here](https://github.com/redox-os/ion/commit/8f3df249de8b7c410c83e1574f6e1de7756212f2).
 - [@mmstick](https://github.com/mmstick) Re-enabled ability to break control flow when signalled. Details [here](https://github.com/redox-os/ion/commit/e3a519b3bcec4cf20bd247837eb46493b0133bf6).
-- [@mgmoens](https://github.com/mgmoens) Extracted `calc` to it's own crate. Details [here](github.com/redox-os/ion/pull/372).
+- [@mgmoens](https://github.com/mgmoens) Extracted `calc` to it's own crate. Details [here](https://github.com/redox-os/ion/pull/372).
 
 ## Drivers
 

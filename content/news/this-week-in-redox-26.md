@@ -60,7 +60,7 @@ Phew! That was a lot, thanks for staying tuned!
 - [@mmstick](https://github.com/mmstick) Resolved some `SIGPIPE` issues in job control. Details [here](https://github.com/redox-os/ion/commit/caf8b2f7b7ca6318833cb1475665c86aa6733eb6).
 - [@mmstick](https://github.com/mmstick) Made a fix on shell expansion: if it's not a glob then the original word is kept. Details [here](https://github.com/redox-os/ion/commit/d28f8a760cf8b85a93628c465a4f94608b47e569).
 - [@mmstick](https://github.com/mmstick) Added support to remember last background job ID. Now when the fg and bg commands are executed without arguments, the last background job ID will be used as the argument. Details [here](https://github.com/redox-os/ion/commit/1c45eef9c29c248a2cf91019baf5db2430ed3b33).
-- [@chenl](https://github.com/chenl) Fixed a typo in the README. Details [here](github.com/redox-os/ion/pull/422).
+- [@chenl](https://github.com/chenl) Fixed a typo in the README. Details [here](https://github.com/redox-os/ion/pull/422).
 - [@mmstick](https://github.com/mmstick) Made some work to only enable context with interactive sessions. This speeds up script executions. Details [here](https://github.com/redox-os/ion/commit/37dd8c8bec9dc420f298426b1bc2e506996b129e).
 - [@mmstick](https://github.com/mmstick) Extracted binary logic from the shell module. Details [here](https://github.com/redox-os/ion/commit/64dbb1119346529cebecde1ffaa02f0f7964731e).
 - [@mmstick](https://github.com/mmstick) Migrated readln prompt Into binary logic. Details [here](https://github.com/redox-os/ion/commit/f065a071f32f6189fd36a06f4799f97b72b90272).
@@ -137,7 +137,7 @@ Phew! That was a lot, thanks for staying tuned!
 ## Netstack
 
 - [@jackpot51](https://github.com/jackpot51) Trimmed the network configuration. Details [here](https://github.com/redox-os/netstack/commit/133d38ba7e41a1b61c3d95d492b9f3dd31d02d93).
-- [@ids1024](https://github.com/ids1024) Corrected `fpath()` for `tcpd`. Details [here](github.com/redox-os/netstack/pull/2).
+- [@ids1024](https://github.com/ids1024) Corrected `fpath()` for `tcpd`. Details [here](https://github.com/redox-os/netstack/pull/2).
 - [@ids1024](https://github.com/ids1024) Fixed a bug in `tcpd`s partial reads that was breaking https in `curl`. Details [here](https://github.com/redox-os/netstack/pull/3).
 
 ## Netutils
