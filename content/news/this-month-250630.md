@@ -185,7 +185,7 @@ Currently only UEFI is supported.
 - (build-system) Wildan Mubarok implemented dynamic search of the QEMU UEFI firmware for Linux distributions and MacOS Brew to fix a QEMU problem with different firmware locations on package systems
 - (build-system) Wildan Mubarok improved the support for ARM64 host systems
 - (build-system) Wildan Mubarok updated the GitLab CI to Ubuntu 24.04 to fix the Redox toolchain
-- (build-system) auronandace added spaces in the Podman and Native build bootstrap scripts for consistant formatting
+- (build-system) auronandace changed whitespace to use spaces in the Podman and Native build bootstrap scripts for consistant formatting
 - (build-system) Petr Hrdina implemented support for multiple items on recipe target commands (`make r.recipe1,recipe2`) and fixed the slowness of the `scripts/category.sh` script in the Podman Build
 - (build-system) Wildan Mubarok implemented the `recipe = "ignore"` option to allow the CPU-specific configurations to disable recipes when a recipe breaks for some CPU architecture (reducing configuration duplication and less error-prone).
 
