@@ -89,7 +89,6 @@ Redox has adopted some of the main applications from the COSMIC Desktop, and we 
 
 <iframe width="800" height="480" src="https://www.youtube.com/embed/fBcfjlFX-xM?si=I0Hv2yJo0Y0DuF59" title="COSMIC Desktop Environment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-
 ## Network Booting Support
 
 bjorn3 implemented [network booting](https://en.wikipedia.org/wiki/Network_booting) (PXE) support allowing Redox to be booted from the local network or Internet.
@@ -115,6 +114,10 @@ Currently only UEFI is supported.
 - (system) bjorn3 implemented an option in the bootloader to enable/disable live mode to fully load the system into RAM (if the storage drivers don't work on your computer) or load from the storage device
 - (system) bjorn3 fixed a conflict with the `du` and `touch` tools between Redox coreutils and uutils
 - (system) James Matlik did a small dependency cleanup in `userutils`
+
+## RedoxFS Improvements
+
+- (redoxfs) James Matlik did a massive performance improvement on file/directory creatioon and path-based lookups
 
 ## Relibc Improvements
 
