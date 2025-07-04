@@ -80,14 +80,14 @@ along with System76 CEO Carl Richell, presented the [COSMIC Desktop Environment]
 
 Redox has adopted some of the main applications from the COSMIC Desktop, and we plan to use the COSMIC Compositor as soon as we complete our Wayland support.
 
-- [0:00](https://youtu.be/fBcfjlFX-xM?feature=shared) System76 Overview
+- [0:00](https://youtu.be/fBcfjlFX-xM?feature=shared) Motivation for COSMIC DE
 - [7:48](https://youtu.be/fBcfjlFX-xM?feature=shared&t=468) COSMIC DE Overview
 - [9:12](https://youtu.be/fBcfjlFX-xM?feature=shared&t=552) Live Demo
 - [26:08](https://youtu.be/fBcfjlFX-xM?feature=shared&t=1568) Modularity and COSMIC Panel
 - [28:02](https://youtu.be/fBcfjlFX-xM?feature=shared&t=1682) File-based Configuration
 - [32:48](https://youtu.be/fBcfjlFX-xM?feature=shared&t=1968) Next Steps, Platforms, Availability
 
-<iframe width="800" height="640" src="https://www.youtube.com/embed/fBcfjlFX-xM?si=I0Hv2yJo0Y0DuF59" title="COSMIC Desktop Environment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="800" height="480" src="https://www.youtube.com/embed/fBcfjlFX-xM?si=I0Hv2yJo0Y0DuF59" title="COSMIC Desktop Environment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 ## Network Booting Support
@@ -137,7 +137,7 @@ Currently only UEFI is supported.
 - (pkg) Wildan Mubarok improved the package update performance
 - (pkg) Wildan Mubarok added a workaround to fix a symbolic link bug in pkgar
 - (pkg) Wildan Mubarok added tests for package installation
-- (pkg) Wildan Mubarok implemented support for a custom paclage repository
+- (pkg) Wildan Mubarok implemented support for a custom package repository
 - (pkg) Wildan Mubarok implemented the support for symbolic link overwrite
 - (pkg) Wildan Mubarok improved the package manager search by reading the package server `repo.toml` database instead of HTML package list
 - (pkg) Josh Megnauth added unit tests on the package manager
@@ -178,9 +178,9 @@ Currently only UEFI is supported.
 - (build-system) Ribbon improved the script of the `myfiles` recipe to avoid problems with bad characters on paths
 - (build-system) Wildan Mubarok updated Cookbook to build the items of the `package.dependencies` data type before their recipe instead after all recipes
 - (build-system) Wildan Mubarok implemented the `recipe = "ignore"` option to allow the CPU-specific configurations to disable recipes when a recipe breaks for some CPU architecture (reducing configuration duplication and less error-prone), before that the i686, ARM64 and RISC-V configurations couldn't disable the broken recipes from the complete/CPU-agnostic root configurations
-- (build-system) Wildan Mubarok fixed Redoxer on Linux and MacOSX
+- (build-system) Wildan Mubarok fixed Redoxer on Linux and MacOS
 - (build-system) Wildan Mubarok reduced the Redoxer Docker image size
-- (build-system) Wildan Mubarok implemented dynamic search of the QEMU UEFI firmware for Linux distributions and MacOSX Brew to fix a QEMU problem with different firmware locations on package systems
+- (build-system) Wildan Mubarok implemented dynamic search of the QEMU UEFI firmware for Linux distributions and MacOS Brew to fix a QEMU problem with different firmware locations on package systems
 - (build-system) Wildan Mubarok improved the support for ARM64 host systems
 - (build-system) Wildan Mubarok updated the GitLab CI to Ubuntu 24.04 to fix the Redox toolchain
 - (build-system) auronandace added spaces in the Podman and Native build bootstrap scripts for consistant formatting
