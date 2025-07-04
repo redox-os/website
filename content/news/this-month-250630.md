@@ -73,21 +73,21 @@ including our shared history with Rust, and our vision for the future of Redox.
 
 We hope to see you there!
  
-## Cosmic Desktop Presentation
+## COSMIC Desktop Presentation
 
 Jeremy Soller, Redox founder and architect, and principal engineer at [System76](https://system76.com/),
-along with System76 CEO Carl Richell, presented the [Cosmic Desktop Environment](https://system76.com/cosmic/) at the [Open Source Summit](https://ossna2025.sched.com/event/1zfnp/cosmic-de-the-first-modular-composable-desktop-environment-carl-richell-jeremy-soller-system76).
+along with System76 CEO Carl Richell, presented the [COSMIC Desktop Environment](https://system76.com/cosmic/) at the [Open Source Summit](https://ossna2025.sched.com/event/1zfnp/cosmic-de-the-first-modular-composable-desktop-environment-carl-richell-jeremy-soller-system76).
 
-Redox has adopted some of the main applications the Cosmic desktop, and we plan to use the Cosmic Compositor as soon as we complete our Wayland support.
+Redox has adopted some of the main applications from the COSMIC Desktop, and we plan to use the COSMIC Compositor as soon as we complete our Wayland support.
 
 - [0:00](https://youtu.be/fBcfjlFX-xM?feature=shared) System76 Overview
-- [7:48](https://youtu.be/fBcfjlFX-xM?feature=shared&t=468) Cosmic DE Overview
+- [7:48](https://youtu.be/fBcfjlFX-xM?feature=shared&t=468) COSMIC DE Overview
 - [9:12](https://youtu.be/fBcfjlFX-xM?feature=shared&t=552) Live Demo
-- [26:08](https://youtu.be/fBcfjlFX-xM?feature=shared&t=1568) Modularity and Cosmic Panel
+- [26:08](https://youtu.be/fBcfjlFX-xM?feature=shared&t=1568) Modularity and COSMIC Panel
 - [28:02](https://youtu.be/fBcfjlFX-xM?feature=shared&t=1682) File-based Configuration
 - [32:48](https://youtu.be/fBcfjlFX-xM?feature=shared&t=1968) Next Steps, Platforms, Availability
 
-<iframe width="800" height="640" src="[insert-the-video-embed-link-here](https://www.youtube.com/watch?v=fBcfjlFX-xM)" title="Cosmic Desktop Environment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="800" height="640" src="https://www.youtube.com/embed/fBcfjlFX-xM?si=I0Hv2yJo0Y0DuF59" title="COSMIC Desktop Environment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 ## Network Booting Support
