@@ -138,7 +138,6 @@ Currently only UEFI is supported.
 - (pkg) Wildan Mubarok added a workaround to fix a symbolic link bug in pkgar
 - (pkg) Wildan Mubarok added tests for package installation
 - (pkg) Wildan Mubarok implemented support for a custom package repository
-- (pkg) Wildan Mubarok implemented the support for symbolic link overwrite
 - (pkg) Wildan Mubarok improved the package manager search by reading the package server `repo.toml` database instead of HTML package list
 - (pkg) Josh Megnauth added unit tests on the package manager
 
