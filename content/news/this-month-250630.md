@@ -177,7 +177,6 @@ Currently only UEFI is supported.
 - (build-system) Josh Megnauth fixed the `make virtualbox` command with recent VirtualBox versions
 - (build-system) Ribbon improved the script of the `myfiles` recipe to avoid problems with bad characters on paths
 - (build-system) Wildan Mubarok updated Cookbook to build the items of the `package.dependencies` data type before their recipe instead after all recipes
-- (build-system) Wildan Mubarok implemented the `recipe = "ignore"` option to allow the CPU-specific configurations to disable recipes when a recipe breaks for some CPU architecture (reducing configuration duplication and less error-prone), before that the i686, ARM64 and RISC-V configurations couldn't disable the broken recipes from the complete/CPU-agnostic root configurations
 - (build-system) Wildan Mubarok fixed Redoxer on Linux and MacOS
 - (build-system) Wildan Mubarok reduced the Redoxer Docker image size
 - (build-system) Wildan Mubarok implemented dynamic search of the QEMU UEFI firmware for Linux distributions and MacOS Brew to fix a QEMU problem with different firmware locations on package systems
@@ -185,6 +184,9 @@ Currently only UEFI is supported.
 - (build-system) Wildan Mubarok updated the GitLab CI to Ubuntu 24.04 to fix the Redox toolchain
 - (build-system) auronandace added spaces in the Podman and Native build bootstrap scripts for consistant formatting
 - (build-system) Petr Hrdina implemented support for multiple items on recipe target commands (`make r.recipe1,recipe2`) and fixed the slowness of the `scripts/category.sh` script in the Podman Build
+- (build-system) Wildan Mubarok implemented the `recipe = "ignore"` option to allow the CPU-specific configurations to disable recipes when a recipe breaks for some CPU architecture (reducing configuration duplication and less error-prone).
+
+Before that the i686, ARM64 and RISC-V configurations couldn't disable the broken recipes from the complete/CPU-agnostic root configurations
 
 ## Documentation Improvements
 
