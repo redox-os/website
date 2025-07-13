@@ -1,8 +1,22 @@
+stages:
+  - build
+  - test
+
 hugo:
+  stage: build
   image:
-    # https://docker.hugomods.com
+      # https://docker.hugomods.com
     name: ghcr.io/hugomods/hugo:base
   script: "./hugo.sh"
   artifacts:
     paths:
-    - build/public
+      - build/public
+
+lychee:
+  stage: test
+  image:
+      # https://lychee.cli.rs/docker
+    name: docker.io/lycheeverse/lychee:latest-alpine
+    entrypoint: [""] # force an empty entrypoint
+  script: |
+    lychee --no-progress --offline --root-dir $(pwd)/build/public ./build/public
