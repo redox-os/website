@@ -39,7 +39,7 @@ If you have any questions, ideas, or are curious about Redox, we recommend joini
 
 ## TFS
 
-[TFS](github.com/redox-os/tfs) is a modular, fast, and feature rich next-gen file system, employing modern techniques for high performance, high space efficiency, and high scalability.
+[TFS](https://github.com/redox-os/tfs) is a modular, fast, and feature rich next-gen file system, employing modern techniques for high performance, high space efficiency, and high scalability.
 
 Two weeks ago TFS made its another appearance in [Reddit](https://www.reddit.com/r/programming/comments/6clnp9/tfs_nextgeneration_file_system_written_in_rust/) catching a lot of attention!
 
