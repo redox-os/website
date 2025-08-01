@@ -23,21 +23,34 @@ Jeremy Soller fixed the weak encryption security on RedoxFS using AES-XTS, like 
 
 James Matlik did a massive performance improvement to RedoxFS
 
+## First Benchmark Report
+
+Ron Williams reported a ~500-700% performance improvement between November 2024 until July 2025.
+
+## Kernel Debugger GUI
+
+Wildan Mubarok added a kernel debugger GUI for the Podman Build to ease debugging!
+
 ## Kernel Improvements
 
-- (kernel) 
+- (kernel) Darley Barreto implemented the `openat` system call
 
 ## Driver Improvements
 
 - (drivers) bjorn3 implemented window resizing on the VirtIO-GPU driver, allowing the host system to change the virtual machine resolution in real-time
+- (drivers) bjorn3 updated most libraries to redox-scheme 0.6
 
 ## System Improvements
 
-- (system) 
+- (system) Ibuki Omatsu implemented most Unix Domain Socket features
 
 ## Relibc Improvements
 
-- (relibc) 
+- (relibc) Bendeguz Pisch implemented the syslog functionality
+- (relibc) Josh Megnauth implemented Linux support in the syslog.h function group
+- (relibc) Ron Williams fixed the CI
+- (relibc) Ron Williams added signal.h constants
+- (relibc) Wildan Mubarok fixed the grp.h headers
 
 ## Networking Improvements
 
@@ -47,22 +60,52 @@ James Matlik did a massive performance improvement to RedoxFS
 
 - (redoxfs) Darley Barreto implemented the upcoming `openat` API
 
+## Packaging Improvements
+
+- (pkg) Wildan Mubarok implemented the support for meta-packages
+
 ## Orbital Improvements
 
-- bjorn3 fixed a bug in the wallpaper program which duplicated the image causing massive memory usage, reducing it from ~149 MB to ~6 MB
+- (orbital) bjorn3 fixed a bug in the wallpaper program which duplicated the image causing massive memory usage, reducing it from ~149 MB to ~6 MB
+- (orbital) Wildan Mubarok implemented mouse accessibility keys
 
 ## Programs
 
+- (programs) Wildan Mubarok fixed and enabled dynamic linking in the Rust compiler
+- (programs) Ron Williams fixed GCC
+- (programs) Wildan Mubarok fixed RustPython, **Zstd**, libuv, and libsodium
+- (programs) Wildan Mubarok fixed the LLVM 19 compilation
+- (programs) Wildan Mubarok fixed the Git recipe dynamic linking
+- (programs) Wildan Mubarok fixed and updated CMake and NetSurf
+- (programs) Josh Megnauth updated the Mesa3D, Mesa GLU, Tyrian, Quake, and Duke Nukem recipes to use dynamic linking
+- (programs) Josh Megnauth fixed the Neverball dynamic linking
+- (programs) Ribbon added the `dev-essential` (development tools, equivalent to `build-essential` in Debian/Ubuntu) and `redox-tests` (relibc, acid and resist tests) meta-packages
+- (programs) Wildan Mubarok promoted Zstd to working recipes
+- (programs) auronandace promoted the [Onefetch](https://github.com/o2sh/onefetch) and [lsd](https://github.com/lsd-rs/lsd) recipes to working recipes
+- (programs) Wildan Mubarok enabled the Onefetch recipe in the x86-64 package server
+- (programs) auronandace enabled the lsd recipe in the x86-64 package server
 - (programs) Ashton Kemerling packaged the [sqllogictest-rs](https://github.com/risinglightdb/sqllogictest-rs) tool
 
 ## Build System Improvements
 
+- (build-system) Wildan Mubarok implemented support for [sccache](https://github.com/mozilla/sccache) to speedup frequent recompilation
+- (build-system) Wildan Mubarok implemented a mechanism to trigger submodule updates from the GitLab CI
+- (build-system) Wildan Mubarok implemented an option (REPO_OFFLINE) to disable recipe updates when running the `make rebuild` command for offline compilation and testing
+- (build-system) Wildan Mubarok improved the Cookbook template for Meson
+- (build-system) Wildan Mubarok added LDFLAGS for nested library linking
+- (build-system) Wildan Mubarok fixed the downloaded package cache
 - (build-system) Josh Megnauth fixed a bug where some runtime dependencies of recipes weren't added to the Redox image
+- (build-system) Josh Megnauth implemented TOML and folder naming sanitization in recipes to avoid invalid syntax usage
 - (build-system) auronandace fixed some warnings in the installer
+
+## CI Improvements
+
+- (ci) Wildan Mubarok added tests in the installer, Cookbook, and pkgutils CI
+- (ci) Wildan Mubarok added the [Lychee](https://github.com/lycheeverse/lychee) tool in the website CI
 
 ## Documentation Improvements
 
-- (doc) 
+- (doc) Petr Hrdina documented the command used to perform actions in multiple recipes
 
 ## How To Test The Changes
 
