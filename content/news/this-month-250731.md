@@ -33,24 +33,29 @@ Wildan Mubarok added a kernel debugger GUI for the Podman Build to ease debuggin
 
 ## Kernel Improvements
 
+- (kernel) bjorn3 fixed file descriptor closing
 - (kernel) Darley Barreto implemented the `openat` system call
 
 ## Driver Improvements
 
 - (drivers) bjorn3 implemented window resizing on the VirtIO-GPU driver, allowing the host system to change the virtual machine resolution in real-time
 - (drivers) bjorn3 updated most libraries to redox-scheme 0.6
+- (drivers) Wildan Mubarok fixed the `exampled` driver
 
 ## System Improvements
 
-- (system) Ibuki Omatsu implemented most Unix Domain Socket features
+- (sys) Ibuki Omatsu implemented most Unix Domain Socket features
+- (sys) James Matlik pinned a uutils commit to keep the tools stable
 
 ## Relibc Improvements
 
 - (relibc) Bendeguz Pisch implemented the syslog functionality
 - (relibc) Josh Megnauth implemented Linux support in the syslog.h function group
+- (relibc) Josh Megnauth implemented more functions for CStr's manipulation
 - (relibc) Ron Williams fixed the CI
 - (relibc) Ron Williams added signal.h constants
 - (relibc) Wildan Mubarok fixed the grp.h headers
+- (relibc) Wildan Mubarok fixed the `pthread_attr_getstacksize` function
 
 ## Networking Improvements
 
@@ -60,9 +65,16 @@ Wildan Mubarok added a kernel debugger GUI for the Podman Build to ease debuggin
 
 - (redoxfs) Darley Barreto implemented the upcoming `openat` API
 
+## Terminal Improvements
+
+- Ellen Emilia fixed the `dmesg` log ANSI escape sequences when using the `less` tool
+
 ## Packaging Improvements
 
 - (pkg) Wildan Mubarok implemented the support for meta-packages
+- (pkg) Wildan Mubarok fixed the download length of the package manager
+- (pkg) Wildan Mubarok fixed the "Network Error" and "Package Not Found" error messages
+- (pkg) Wildan Mubarok improved the permission error message when not running as root
 
 ## Orbital Improvements
 
@@ -73,12 +85,15 @@ Wildan Mubarok added a kernel debugger GUI for the Podman Build to ease debuggin
 
 - (programs) Wildan Mubarok fixed and enabled dynamic linking in the Rust compiler
 - (programs) Ron Williams fixed GCC
+- (programs) Wildan Mubarok fixed the GCC C++ frontend (g++)
 - (programs) Wildan Mubarok fixed RustPython, **Zstd**, libuv, and libsodium
 - (programs) Wildan Mubarok fixed the LLVM 19 compilation
 - (programs) Wildan Mubarok fixed the Git recipe dynamic linking
-- (programs) Wildan Mubarok fixed and updated CMake and NetSurf
-- (programs) Josh Megnauth updated the Mesa3D, Mesa GLU, Tyrian, Quake, and Duke Nukem recipes to use dynamic linking
+- (programs) Wildan Mubarok fixed and updated CMake (4.0.3 version), NetSurf (3.11 version), and Protobuf (31.1 version)
+- (programs) Wildan Mubarok updated ncdu (1.22 version)
+- (programs) Josh Megnauth updated the Mesa3D, Mesa GLU, OpenTyrian, QuakeSpasm, and Duke Nukem recipes to use dynamic linking
 - (programs) Josh Megnauth fixed the Neverball dynamic linking
+- (programs) Josh Megnauth replaced deprecated functions in Redox binutils
 - (programs) Ribbon added the `dev-essential` (development tools, equivalent to `build-essential` in Debian/Ubuntu) and `redox-tests` (relibc, acid and resist tests) meta-packages
 - (programs) Wildan Mubarok promoted Zstd to working recipes
 - (programs) auronandace promoted the [Onefetch](https://github.com/o2sh/onefetch) and [lsd](https://github.com/lsd-rs/lsd) recipes to working recipes
@@ -89,10 +104,13 @@ Wildan Mubarok added a kernel debugger GUI for the Podman Build to ease debuggin
 ## Build System Improvements
 
 - (build-system) Wildan Mubarok implemented support for [sccache](https://github.com/mozilla/sccache) to speedup frequent recompilation
-- (build-system) Wildan Mubarok implemented a mechanism to trigger submodule updates from the GitLab CI
+- (build-system) Wildan Mubarok implemented a mechanism to sync all submodules (by updating them to their latest commits) from the GitLab CI
 - (build-system) Wildan Mubarok implemented an option (REPO_OFFLINE) to disable recipe updates when running the `make rebuild` command for offline compilation and testing
+- (build-system) Wildan Mubarok implemented support for installation of custom host toolchains on Redoxer
 - (build-system) Wildan Mubarok improved the Cookbook template for Meson
 - (build-system) Wildan Mubarok added LDFLAGS for nested library linking
+- (build-system) Wildan Mubarok fixed the Redoxer daemon
+- (build-system) Wildan Mubarok fixed the relibc sysroot folder
 - (build-system) Wildan Mubarok fixed the downloaded package cache
 - (build-system) Josh Megnauth fixed a bug where some runtime dependencies of recipes weren't added to the Redox image
 - (build-system) Josh Megnauth implemented TOML and folder naming sanitization in recipes to avoid invalid syntax usage
@@ -101,6 +119,8 @@ Wildan Mubarok added a kernel debugger GUI for the Podman Build to ease debuggin
 ## CI Improvements
 
 - (ci) Wildan Mubarok added tests in the installer, Cookbook, and pkgutils CI
+- (ci) Wildan Mubarok disabled test image creation in forks and branches to save server resources
+- (ci) Wildan Mubarok fixed the pipeline status in the build system CI
 - (ci) Wildan Mubarok added the [Lychee](https://github.com/lycheeverse/lychee) tool in the website CI
 
 ## Documentation Improvements
