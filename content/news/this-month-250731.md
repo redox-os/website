@@ -52,6 +52,8 @@ Wildan Mubarok added a kernel debugger GUI for the Podman Build to ease debuggin
 
 ## Relibc Improvements
 
+- (relibc) 4lDO2 fixed a bad POSIX signal number
+- (relibc) Jeremy Soller fixed `___tls_get_addr` on x86-64
 - (relibc) Bendeguz Pisch implemented the syslog functionality
 - (relibc) Josh Megnauth implemented Linux support in the syslog.h function group
 - (relibc) Josh Megnauth implemented more functions for CStr's manipulation
@@ -70,7 +72,7 @@ Wildan Mubarok added a kernel debugger GUI for the Podman Build to ease debuggin
 
 ## Terminal Improvements
 
-- Ellen Emilia fixed the `dmesg` log ANSI escape sequences when using the `less` tool
+- (term) Ellen Emilia fixed the `dmesg` log ANSI escape sequences when using the `less` tool
 
 ## Packaging Improvements
 
@@ -106,6 +108,7 @@ Wildan Mubarok added a kernel debugger GUI for the Podman Build to ease debuggin
 
 ## Build System Improvements
 
+- (build-system) Jeremy Soller fixed libtool-build not removing old directories
 - (build-system) Wildan Mubarok implemented support for [sccache](https://github.com/mozilla/sccache) to speedup frequent recompilation
 - (build-system) Wildan Mubarok reimplemented the recipe builder in Rust and added support for incremental compilation
 - (build-system) Wildan Mubarok implemented a mechanism to sync all submodules (by updating them to their latest commits) from the GitLab CI
@@ -129,6 +132,12 @@ Wildan Mubarok added a kernel debugger GUI for the Podman Build to ease debuggin
 
 ## Documentation Improvements
 
+- (doc) Ribbon documented the policy for [recipe naming](https://gitlab.redox-os.org/redox-os/cookbook#naming)
+- (doc) Ribbon did some improvements, cleanup and fixes to the porting documentation
+- (doc) Ribbon did some improvements and cleanup to the "Libraries and APIs" page
+- (doc) Ribbon improved the [redox_syscall crate explanation](https://doc.redox-os.org/book/libraries-apis.html#redox_syscall)
+- (doc) Ribbon documented [how to do MR reviews](https://doc.redox-os.org/book/developer-faq.html#how-to-properly-review-mrs) in the Developer FAQ
+- (doc) Ribbon added a summary in the "Configuration Settings" page
 - (doc) Petr Hrdina documented the command used to perform actions in multiple recipes
 - (doc) Rodrigo Tobar fixed the "Microkernel Benefits" section formatting
 
