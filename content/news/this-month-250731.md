@@ -31,6 +31,8 @@ Ron Williams reported a ~500-700% performance improvement between November 2024 
 
 Wildan Mubarok added a kernel debugger GUI for the Podman Build to ease debugging!
 
+<a href="/img/screenshot/kernel-debug-gui.png"><img class="img-responsive" alt="Description" src="/img/screenshot/kernel-debug-gui.png"/></a>
+
 ## Kernel Improvements
 
 - (kernel) bjorn3 fixed file descriptor closing
@@ -39,7 +41,8 @@ Wildan Mubarok added a kernel debugger GUI for the Podman Build to ease debuggin
 ## Driver Improvements
 
 - (drivers) bjorn3 implemented window resizing on the VirtIO-GPU driver, allowing the host system to change the virtual machine resolution in real-time
-- (drivers) bjorn3 updated most libraries to redox-scheme 0.6
+- (drivers) bjorn3 updated most libraries and drivers to redox-scheme 0.6
+- (drivers) bjorn3 did many code cleanups in the graphics subsystem
 - (drivers) Wildan Mubarok fixed the `exampled` driver
 
 ## System Improvements
@@ -59,7 +62,7 @@ Wildan Mubarok added a kernel debugger GUI for the Podman Build to ease debuggin
 
 ## Networking Improvements
 
-- (net) 
+- (net) auronandace improved the IPv6 support
 
 ## RedoxFS Improvements
 
@@ -104,6 +107,7 @@ Wildan Mubarok added a kernel debugger GUI for the Podman Build to ease debuggin
 ## Build System Improvements
 
 - (build-system) Wildan Mubarok implemented support for [sccache](https://github.com/mozilla/sccache) to speedup frequent recompilation
+- (build-system) Wildan Mubarok reimplemented the recipe builder in Rust and added support for incremental compilation
 - (build-system) Wildan Mubarok implemented a mechanism to sync all submodules (by updating them to their latest commits) from the GitLab CI
 - (build-system) Wildan Mubarok implemented an option (REPO_OFFLINE) to disable recipe updates when running the `make rebuild` command for offline compilation and testing
 - (build-system) Wildan Mubarok implemented support for installation of custom host toolchains on Redoxer
@@ -126,6 +130,7 @@ Wildan Mubarok added a kernel debugger GUI for the Podman Build to ease debuggin
 ## Documentation Improvements
 
 - (doc) Petr Hrdina documented the command used to perform actions in multiple recipes
+- (doc) Rodrigo Tobar fixed the "Microkernel Benefits" section formatting
 
 ## How To Test The Changes
 
