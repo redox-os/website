@@ -43,6 +43,7 @@ Wildan Mubarok added a kernel debugger GUI for the Podman Build to ease debuggin
 - (drivers) bjorn3 implemented window resizing on the VirtIO-GPU driver, allowing the host system to change the virtual machine resolution in real-time
 - (drivers) bjorn3 updated most libraries and drivers to redox-scheme 0.6
 - (drivers) bjorn3 did many code cleanups in the graphics subsystem
+- (drivers) bjorn3 improved handling of kernel logs
 - (drivers) Wildan Mubarok fixed the `exampled` driver
 
 ## System Improvements
