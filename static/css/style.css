@@ -3,7 +3,7 @@
         background-color: #202020;
         color: #ffffff;
     }
-    a {
+    .content a, .features a {
         color: #5fafff;
     }
 }

@@ -12,8 +12,11 @@
     {{ end -}}
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-
-    <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
+
+    {{ with (templates.Defer (dict "key" "global")) }}
+        {{ partial "css.html" . }}
+    {{ end }}
+
 </head>
-<body class="container">
+<body class="container mx-auto px-4">
