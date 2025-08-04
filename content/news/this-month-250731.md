@@ -19,10 +19,6 @@ If you would like to support Redox, please consider donating or buying some merc
 
 Jeremy Soller fixed the weak encryption security on RedoxFS using AES-XTS, like [LUKS](https://en.wikipedia.org/wiki/Linux_Unified_Key_Setup) (the Linux disk encryption system) does.
 
-## Massive Performance Improvement
-
-James Matlik did a massive performance improvement to RedoxFS
-
 ## First Benchmark Report
 
 Ron Williams reported a ~500-700% performance improvement between November 2024 until July 2025.
@@ -35,6 +31,7 @@ Wildan Mubarok added a kernel debugger GUI for the Podman Build to ease debuggin
 
 ## Kernel Improvements
 
+- (kernel) bjorn3 fixed the deallocation of contiguous memory pages
 - (kernel) bjorn3 fixed file descriptor closing
 - (kernel) Darley Barreto implemented the `openat` system call
 
@@ -51,8 +48,6 @@ Wildan Mubarok added a kernel debugger GUI for the Podman Build to ease debuggin
 - (sys) Ibuki Omatsu implemented most Unix Domain Socket features
 - (sys) Ibuki Omatsu implemented a new file table system, introduced bulk file descriptor passing, and add new call functions for file descriptor operations
 - (sys) Ibuki Omatsu implemented new system calls (FsCall), added features for bulk file descriptor passing, and implemented new functions (call_ro, call_wo, call_wr)
-- (relibc) Ibuki Omatsu updated get_proc_credentials function to a more secure, capability-based approach
-- (tests) Ibuki Omatsu added new file table tests to the acid test suite
 - (sys) James Matlik pinned a uutils commit to keep the tools stable
 
 ## Relibc Improvements
@@ -66,6 +61,7 @@ Wildan Mubarok added a kernel debugger GUI for the Podman Build to ease debuggin
 - (relibc) Ron Williams added signal.h constants
 - (relibc) Wildan Mubarok fixed the grp.h headers
 - (relibc) Wildan Mubarok fixed the `pthread_attr_getstacksize` function
+- (relibc) Ibuki Omatsu updated `get_proc_credentials` function to a more secure capability-based security approach
 
 ## Networking Improvements
 
@@ -74,6 +70,10 @@ Wildan Mubarok added a kernel debugger GUI for the Podman Build to ease debuggin
 ## RedoxFS Improvements
 
 - (redoxfs) Darley Barreto implemented the upcoming `openat` API
+
+## Testing Improvements
+
+- (tests) Ibuki Omatsu added new file table tests to the `acid` test suite
 
 ## Terminal Improvements
 
