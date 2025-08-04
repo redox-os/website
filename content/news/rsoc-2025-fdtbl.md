@@ -1,26 +1,27 @@
 +++
-title = "RSoC 2025: Implementing Bulk FD Passing and Separating File Tables"
+title = "RSoC 2025: Final Report: Unix Domain Sockets, Bulk FD Passing, and File Table Separation"
 author = "Ibuki Omatsu"
 date = "2025-08-04"
 +++
 
-Hello everyone! I'm Ibuki Omatsu, and as part of my RSoC project, I've worked on implementing Unix Domain Sockets (UDS) in Redox OS.
-After that implementation, I also worked on implementing bulk file descriptor (FD) passing and separating file tables, and finally, I've finished all of my project goals.
-So, in this post, first, I will talk about the update of the UDS implementation, and then I will explain bulk FD passing and the separation of file tables.
-And what do these lead to.
+Hi everyone! I'm Ibuki Omatsu, and as part of my RSoC project, I've worked on implementing Unix Domain Sockets (UDS) in Redox OS.
+Following that, I also worked on implementing bulk file descriptor (FD) passing and separating file tables.
+In this post, first, I will talk about updates of the UDS implementation, and then I will explain bulk FD passing and the separation of file tables.
 
 # Unix Domain Socket
 First, let's talk about Unix Domain Sockets (UDS).
 Unix Domain Sockets are a powerful IPC (Inter-Process Communication) mechanism that allows processes on the same host to communicate with each other using a socket interface. They are similar to network sockets but operate entirely within the local machine, providing high performance and low latency.
-In Redox OS, UDS is implemented as a special scheme called `uds`, which is managed by the Inter-Process Communication Daemon (ipcd). This scheme allows processes to create and manage UDS sockets, enabling them to communicate efficiently.
+In Redox OS, UDS is implemented as a special scheme called `uds`, which is managed by the ipcd(Inter-Process Communication Daemon). This scheme allows processes to create and manage UDS sockets, enabling them to communicate efficiently.
 Please see my previous post, [RSoC 2025: Implementing Unix Domain Sockets](https://www.redox-os.org/news/rsoc-2025-uds/), for more details about UDS.
 
 ## Update on UDS Implementation
 Since my last post, I have made several updates to the UDS implementation in Redox OS. The most significant change is `bind` and `connect` integration with RedoxFS, the Redox file system daemon.
-In the previous implementation, UDS sockets were created and managed by ipcd, and the `bind` and `connect` operations were handled by only ipcd. However, this approach had a limitaion about the permission checking for the socket file.
-In Redox, resources are accessed by Scheme-rooted Path, and the `uds` scheme is no exception. The socket are created in the `/scheme/uds/` space, and the `bind` operation was not able to check the permission of the socket, which could lead to security issues.
+In the previous implementation, UDS sockets were created and managed by ipcd, and the `bind` and `connect` operations were handled by only ipcd. However, this approach had a limitation regarding permission checks on the socket file.
+In Redox, resources are accessed by Scheme-rooted Path, and the `uds` scheme is no exception. Sockets are created in the `/scheme/uds/` space, and the `bind` operation was not able to check the permission of the socket, which could lead to security issues.
 To address this, I have integrated the `bind` and `connect` operations with RedoxFS. Now, when a process attempts to `bind` or `connect` to a UDS socket, the functions communicates not only ipcd but also RedoxFS, which performs the necessary permission checks based on the file system's access control mechanisms. This ensures that only authorized processes can create or connect to UDS sockets, enhancing the security of the IPC mechanism.
-Here is the new process of the `bind` and `connect` operation:
+Here is the new process for `bind` and `connect` operations, which now involve both ipcd and RedoxFS:
+The diagram below, Figure 1 and Figure 2, illustrates this new workflow. The `bind` operation now communicates with both ipcd to register the socket and RedoxFS to create the socket file with proper permissions. Similarly, the `connect` operation involves RedoxFS to verify permissions before retrieving the socket's token from ipcd.
+<!---
 1. The process calls the `bind` function with the socket file path.
 2. The `bind` call `Bind(SYS_CALL)`.
 3. ipcd receives the `Bind(SYS_CALL)`, names the socket, generates a permanent token for the socket and maps the socket with it.
@@ -40,6 +41,17 @@ Here is the new process of the `bind` and `connect` operation:
 6. RedoxFS receives the token and returns it to the `connect` call.
 7. The `connect` receives the token and call `Connect(SYS_CALL)` via the client socket FD with the token.
 8. ipcd receives the `Connect(SYS_CALL)` request and connects the client socket to the server socket mapped to the token.
+-->
+
+<center>
+    <img class="img-responsive" src="/img/rsoc-2025-fdtbl/bind_flow.png" width="50%" height="50%">
+    Figure 1: Bind Operation Flow.
+</center>
+<center>
+    <img class="img-responsive" src="/img/rsoc-2025-fdtbl/connect_flow.png" width="50%" height="50%">
+    Figure 2: Connect Operation Flow.
+</center>
+
 
 By this integration, the `bind` and `connect` operations now work with RedoxFS's permission checking, ensuring that only authorized processes can create or connect to UDS sockets. This enhances the security of the IPC mechanism in Redox OS.
 
@@ -50,10 +62,10 @@ There are still lacking features, such as the `sendto` and `recvfrom` functions.
 
 # Implementing Bulk FD Passing and Separating File Tables
 After the UDS implementation, I have also worked on implementing bulk FD passing and separating file tables in Redox OS.
-Bulk FD passing is a feature that allows processes to send multiple FDs in a single operation, which is particularly useful for applications like UDS that need to share multiple resources efficiently. Separating file tables means that dividing the number space of file descriptors to the upper and posix(lower) space, which allows invisible FDs such as those for redox\_rt.
+Bulk FD passing is a feature that allows processes to send multiple FDs in a single operation, which is particularly useful for applications like UDS that need to share multiple resources efficiently. Separating file tables means that separating the file descriptor number space into upper and POSIX (lower) regions, which enables invisible FDs such as those for redox\_rt.
 
 ## Bulk FD Passing
-The current `sendfd` and `named dup` mechanism in Redox OS allows processes to send a single fd to another process. However, some programs, such as UDS's `sendmsg` and `recvmsg`, need to send multiple FDs. Currently, they have to call `sendfd` multiple times, which is inefficient and can lead to performance issues.
+The current `sendfd` and `named dup` mechanism in Redox OS allows processes to send a single fd to another process. However, some programs, such as UDS's `sendmsg` and `recvmsg`, need to send multiple FDs. Currently, they have to call `sendfd` multiple times. This is inefficient and can create performance bottlenecks.
 To address this, I have implemented bulk FD passing with `SYS_CALL`.
 The `SYS_CALL` interface is a powerful mechanism in Redox OS that allows processes to communicate with schemes using a single syscall. It is flexible enough to handle bulk FD passing.
 The new `CallFlags::FD` flag allows kernel handles to distinguish between normal data and FDs. When this flag is set, the kernel knows that the request is a bulk FD passing request.
@@ -92,18 +104,18 @@ This feature could be used in various applications, such as UDS, UDS `sendmsg` a
 ## Separating File Tables
 Separating file tables is another important feature that I have implemented in Redox OS. The current file descriptor table in Redox OS is a single table that contains all FDs, including those for relibc's own purpose.
 The separation is very simple, we just need to add a new `FdTbl` struct that contains two vectors of FDs.
-The first vector is `posix_fdtbl`, which is a conventional file table that is according to the POSIX requirements. All FDs will be inserted into the lowest available slot.
-the second vector is `upper_fdtbl`, which is reserved over `1 << (usize::BITS - 2)` bits and is not according to the POSIX requirements. e.g.) Fds can be insterted contiguously.
+The first vector is `posix_fdtbl`, which is a conventional file table that is according to the POSIX requirements. FDs are inserted into the lowest available slot.
+The second vector, `upper_fdtbl`, is reserved over `1 << (usize::BITS - 2)` bits and is not according to the POSIX requirements. e.g.) Fds can be insterted contiguously.
 Currently, the bulk FD passing is supporing the `upper_fdtbl`, so you can receive the FDs to also the `upper_fdtbl` by using the `CallFlags::FD_UPPER`.
 
 ### Why do we need to separate file tables?
 Currently separating file tables is not used in Redox OS, but it is a preparation for future features.
-For example, we currently working on the namespace management in Redox OS, which will modify the `open` function to a wrapper of `openat(NAMSPACE_FD, PATH)`.
+For example, we are currently working on the namespace management in Redox OS, which will modify the `open(PATH)` function to a wrapper for `openat(NAMSPACE_FD, PATH)`.
 We can use the `upper_fdtbl` to store the namespace FDs, which is invisible from the user programs.
 
 ## Conclusion
-In conclusion, I was allowed to participate a lot of things in Redox OS as a RSoC student, and I've learned a lot about the Redox OS and microkernel internals.
-The participation in RSoC has been a great experience for me, and I am grateful for the opportunity to contribute to Redox OS.
+In conclusion, I had the opportunity to participate in many aspects of Redox OS as an RSoC student, and I've learned a lot about the Redox OS and microkernel internals.
+Participating in RSoC has been a great experience for me, and I am grateful for the opportunity to contribute to Redox OS.
 I will continue to contribute to Redox OS. I may write a post about the namespace management in Redox OS in the future, so please stay tuned!
 I would like to thank the Redox OS community for their support and guidance throughout this project!
 Thank you for reading this post, and I hope you found it informative and interesting.
