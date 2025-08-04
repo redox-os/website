@@ -62,7 +62,7 @@ There are still lacking features, such as the `sendto` and `recvfrom` functions.
 
 # Implementing Bulk FD Passing and Separating File Tables
 After the UDS implementation, I have also worked on implementing bulk FD passing and separating file tables in Redox OS.
-Bulk FD passing is a feature that allows processes to send multiple FDs in a single operation, which is particularly useful for applications like UDS that need to share multiple resources efficiently. Separating file tables means that separating the file descriptor number space into upper and POSIX (lower) regions, which enables invisible FDs such as those for redox\_rt.
+Bulk FD passing is a feature that allows processes to send multiple FDs in a single operation, which is particularly useful for applications like UDS that need to share multiple resources efficiently. Separating file tables means that separating the file descriptor number space into upper and POSIX (lower) regions, which enables invisible FDs.
 
 ## Bulk FD Passing
 The current `sendfd` and `named dup` mechanism in Redox OS allows processes to send a single fd to another process. However, some programs, such as UDS's `sendmsg` and `recvmsg`, need to send multiple FDs. Currently, they have to call `sendfd` multiple times. This is inefficient and can create performance bottlenecks.
@@ -96,6 +96,40 @@ Here is a process of bulk FD passing:
 11. The scheme places the FDs into the request buffer and returns them to the kernel.
 12. The kernel removes the FDs from the scheme's file table and adds them to the receiving process's FD table.
 13. The receiving process receives the FDs and can use them as normal file descriptors.
+
+Here is an example of how to use bulk FD passing in Rust:
+the `call_wo` function is a wrapper for the `SYS_CALL` with the `CallFlags::WRITE` flag, and the `call_ro` function is a wrapper for the `SYS_CALL` with the `CallFlags::READ` flag.
+```rust
+// Send multiple FDs to another process using bulk FD passing.
+// Assume `sender_sock` is a file descriptor to a socket,
+// and `fds_to_send` is a vector of file descriptors.
+let mut payload: Vec<u8> = Vec::with_capacity(fds_to_send.len() * mem::size_of::<usize>());
+for &fd in fds_to_send {
+    payload.extend_from_slice(&fd.to_ne_bytes());
+}
+Ok(libredox::call::call_wo(
+    sender_sock,
+    &payload,
+    CallFlags::FD,
+    &[],
+)?)
+
+// Receive multiple FDs from another process using bulk FD passing.
+// Assume `receiver_sock` is a file descriptor to a socket,
+// and `dst_fds` is a buffer to store the received file descriptors.
+let dst_fds_bytes: &mut [u8] = unsafe {
+    core::slice::from_raw_parts_mut(
+        dst_fds.as_mut_ptr() as *mut u8,
+        dst_fds.len() * mem::size_of::<usize>(),
+    )
+};
+Ok(libredox::call::call_ro(
+    receiver_sock,
+    dst_fds_bytes,
+    CallFlags::FD | flags,
+    &[],
+)?)
+```
 
 ### What does Bulk FD Passing lead to?
 Bulk FD passing is a powerful feature that enhances the efficiency of IPC in Redox OS. It allows processes to share multiple resources in a single operation, reducing the overhead of multiple syscalls and improving performance.
