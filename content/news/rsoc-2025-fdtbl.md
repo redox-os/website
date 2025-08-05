@@ -18,30 +18,27 @@ Please see my previous post, [RSoC 2025: Implementing Unix Domain Sockets](https
 Since my last post, I have made several updates to the UDS implementation in Redox OS. The most significant change is `bind` and `connect` integration with RedoxFS, the Redox file system daemon.
 In the previous implementation, UDS sockets were created and managed by ipcd, and the `bind` and `connect` operations were handled by only ipcd. However, this approach had a limitation regarding permission checks on the socket file.
 In Redox, resources are accessed by Scheme-rooted Path, and the `uds` scheme is no exception. Sockets are created in the `/scheme/uds/` space, and the `bind` operation was not able to check the permission of the socket, which could lead to security issues.
-To address this, I have integrated the `bind` and `connect` operations with RedoxFS. Now, when a process attempts to `bind` or `connect` to a UDS socket, the functions communicates not only ipcd but also RedoxFS, which performs the necessary permission checks based on the file system's access control mechanisms. This ensures that only authorized processes can create or connect to UDS sockets, enhancing the security of the IPC mechanism.
+To address this, I have integrated the `bind` and `connect` operations with RedoxFS. Now, when a process attempts to `bind` or `connect` to a UDS socket, the functions communicate not only ipcd but also RedoxFS, which performs the necessary permission checks based on the file system's access control mechanisms. This ensures that only authorized processes can create or connect to UDS sockets, enhancing the security of the IPC mechanism.
 Here is the new process for `bind` and `connect` operations, which now involve both ipcd and RedoxFS:
-The diagram below, Figure 1 and Figure 2, illustrates this new workflow. The `bind` operation now communicates with both ipcd to register the socket and RedoxFS to create the socket file with proper permissions. Similarly, the `connect` operation involves RedoxFS to verify permissions before retrieving the socket's token from ipcd.
-<!---
+### Bind Operation Flow
 1. The process calls the `bind` function with the socket file path.
 2. The `bind` call `Bind(SYS_CALL)`.
 3. ipcd receives the `Bind(SYS_CALL)`, names the socket, generates a permanent token for the socket and maps the socket with it.
 4. The `bind` opens the parent directory that the socket file will be created in, using the `open` syscall.
 5. The `bind` sends the socket FD to RedoxFS via the parent directory FD, using the `sendfd` syscall.
-6. RedoxFS receives the socket FD and creates the socket file in the directory mapped to the parent directory FD.
-7. RedoxFS maps the created socket file node to the socket FD.
-8. If the operation is failed, the `bind` call `UnBind(SYS_CALL)` to clean up the socket name in ipcd.
+6. RedoxFS receives the socket FD, creates the socket file in the specified directory, and maps the new file's node to the received socket FD.
+>If the operation is failed, the `bind` call `UnBind(SYS_CALL)` to clean up the socket name in ipcd.
 
+### Connect Operation Flow
 1. The process calls the `connect` function with the socket file path.
 2. The `connect` opens the socket file using the `open` syscall.
 3. RedoxFS receives the `open` syscall request and checks the permission of the socket file.
-4. The `connect` call `Connect(SYS_CALL)` via the socket file FD.
-5. RedoxFS receives the `Connect(SYS_CALL)` request and gets the socket FD mapped to the socket file node.
-4. RedoxFS calls the `GetToken(SYS_CALL)` to get socket's permanent token via the socket FD.
-5. ipcd receives the `GetToken(SYS_CALL)` request and returns the permanent token of the socket.
-6. RedoxFS receives the token and returns it to the `connect` call.
-7. The `connect` receives the token and call `Connect(SYS_CALL)` via the client socket FD with the token.
-8. ipcd receives the `Connect(SYS_CALL)` request and connects the client socket to the server socket mapped to the token.
--->
+4. The `connect` calls a `Connect(SYS_CALL)` to RedoxFS via the socket file FD.
+5. RedoxFS receives this Connect(SYS_CALL)request. It then callsGetToken(SYS_CALL) to retrieve the socket's permanent token from ipcd, using the socket FD.
+6. ipcd receives the `GetToken(SYS_CALL)` request and returns the permanent token of the socket.
+7. RedoxFS receives the token and returns it to the `connect` call.
+8. The `connect` receives the token and call `Connect(SYS_CALL)` via the client socket FD with the token.
+9. ipcd receives the `Connect(SYS_CALL)` request and connects the client socket to the server socket mapped to the token.
 
 <center>
     <img class="img-responsive" src="/img/rsoc-2025-fdtbl/bind_flow.png" width="50%" height="50%">
