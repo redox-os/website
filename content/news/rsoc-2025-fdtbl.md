@@ -1,5 +1,5 @@
 +++
-title = "RSoC 2025: Final Report: Unix Domain Sockets, Bulk FD Passing, and File Table Separation"
+title = "RSoC 2025: Final Report: Unix Domain Sockets, Bulk FD Passing, and Separating File Tables"
 author = "Ibuki Omatsu"
 date = "2025-08-04"
 +++
