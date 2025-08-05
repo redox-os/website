@@ -2,21 +2,21 @@
 title = "Home"
 url = "home"
 +++
-<div class="row install-row">
-  <div class="col-md-8">
+<div class="grid grid-cols-3 gap-4">
+  <div class="col-span-3 md:col-span-2">
     <p class="pitch">
-      <b>Redox</b> je Unixový operační systém napsaný v jazyce <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>.
+      <b>Redox</b> je Unixový operační systém napsaný v jazyce <a href="https://www.rust-lang.org/"><b>Rust</b></a>.
       Jeho cílem je přinést inovace jazyka Rust do moderního mikrojádra a kompletní nabídku aplikací.
     </p>
   </div>
-  <div class="col-md-4 install-box">
+  <div class="col-span-3 md:col-span-1 install-box">
     <br/>
     <a class="btn btn-primary" href="https://gitlab.redox-os.org/redox-os/redox/-/releases">Zobrazit vydání</a>
     <a class="btn btn-default" href="https://gitlab.redox-os.org/redox-os/redox/">Stáhnout z GitLabu</a>
   </div>
 </div>
-<div class="row features">
-  <div class="col-md-6">
+<div class="grid grid-cols-2 features">
+  <div class="col-span-2 md:col-span-1">
     <ul class="laundry-list" style="margin-bottom: 0px;">
       <li>Implementace v Rustu</li>
       <li>Mikrojádro</li>
@@ -24,7 +24,7 @@ url = "home"
       <li>Podporuje standardní knihovnu Rustu</li>
     </ul>
   </div>
-  <div class="col-md-6">
+  <div class="col-span-2 md:col-span-1">
     <ul class="laundry-list">
       <li>MIT Licence</li>
       <li>Ovladače běží v userspace</li>

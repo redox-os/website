@@ -6,7 +6,7 @@ hugo:
   stage: build
   image:
       # https://docker.hugomods.com
-    name: ghcr.io/hugomods/hugo:base
+    name: ghcr.io/hugomods/hugo:node
   script: "./hugo.sh"
   artifacts:
     paths:

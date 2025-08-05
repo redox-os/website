@@ -2,21 +2,21 @@
 title = "Ev"
 url = "home"
 +++
-<div class="row install-row">
-  <div class="col-md-8">
+<div class="grid grid-cols-3 gap-4">
+  <div class="col-span-3 md:col-span-2">
     <p class="pitch">
-      <b>Redox</b>,  <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>
+      <b>Redox</b>,  <a href="https://www.rust-lang.org/"><b>Rust</b></a>
       ile yazılan ve Rust dilinin yeniliklerini modern mikrokernel ve tam bir uygulama setine getirmeyi amaçlayan Unix benzeri bir işletim sistemidir.
     </p>
   </div>
-  <div class="col-md-4 install-box">
+  <div class="col-span-3 md:col-span-1 install-box">
     <br/>
     <a class="btn btn-primary" href="https://gitlab.redox-os.org/redox-os/redox/-/releases">Yayınları gör</a>
     <a class="btn btn-success" href="https://gitlab.redox-os.org/redox-os/redox/">GitLab'dan Pull et</a>
   </div>
 </div>
-<div class="row features">
-  <div class="col-md-6">
+<div class="grid grid-cols-2 features">
+  <div class="col-span-2 md:col-span-1">
     <ul class="laundry-list" style="margin-bottom: 0px;">
       <li>Rust ile yazılı</li>
       <li>Mikrokernel tasarımı</li>
@@ -24,7 +24,7 @@ url = "home"
       <li>Rust Standart Kütüphanesini destekler</li>
     </ul>
   </div>
-  <div class="col-md-6">
+  <div class="col-span-2 md:col-span-1">
     <ul class="laundry-list">
       <li>MIT Lisansı altındadır</li>
       <li>Sürücüler kullanıcı alanında çalışır</li>

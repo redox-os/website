@@ -2,24 +2,24 @@
 title = "Accueil"
 url = "home"
 +++
-<div class="row install-row">
-  <div class="col-md-8">
+<div class="grid grid-cols-3 gap-4">
+  <div class="col-span-3 md:col-span-2">
     <p class="pitch">
       <b>Redox</b> est un système d'exploitation dans
-      le <a style="color: inherit;" href="https://en.wikipedia.org/wiki/Unix-like"><b>style Unix</b></a>, écrit en <a style="color: inherit;"
+      le <a href="https://en.wikipedia.org/wiki/Unix-like"><b>style Unix</b></a>, écrit en <a class="text-current"
       href="https://www.rust-lang.org/fr/"><b>Rust</b></a>, visant
       à exploiter les innovations de ce langage dans un micro-noyau
       moderne et une suite logicielle complète.
     </p>
   </div>
-  <div class="col-md-4 install-box">
+  <div class="col-span-3 md:col-span-1 install-box">
     <br/>
     <a class="btn btn-primary" href="/fr/quickstart/">Débuter</a>
     <a class="btn btn-default" href="https://gitlab.redox-os.org/redox-os/redox/">GitLab</a>
   </div>
 </div>
-<div class="row features">
-  <div class="col-md-6">
+<div class="grid grid-cols-2 features">
+  <div class="col-span-2 md:col-span-1">
     <ul class="laundry-list" style="margin-bottom: 0px;">
       <li>Inspiré de <a href="http://9p.io/plan9/index.html">Plan 9</a>, <a href="http://www.minix3.org/">Minix</a>, <a href="https://sel4.systems/">seL4</a>, <a href="http://www.bsd.org/">BSD</a> et <a href="https://www.kernel.org/">Linux</a></li>
       <li>Écrit en <a href="https://www.rust-lang.org/">Rust</a></li>
@@ -28,7 +28,7 @@ url = "home"
       <li>Compatible avec la <a href="https://doc.rust-lang.org/std/">bibliothèque standard de Rust</a></li>
     </ul>
   </div>
-  <div class="col-md-6">
+  <div class="col-span-2 md:col-span-1">
     <ul class="laundry-list">
       <li>Licence <a href="https://en.wikipedia.org/wiki/MIT_License">MIT</a></li>
       <li>Les <a href="https://doc.redox-os.org/book/drivers.html">Pilotes</a> s'exécutent en mode utilisateur</li>

@@ -1,11 +1,40 @@
 # Website
 
-To build this site, you must install [Hugo](https://gohugo.io/) and run the `hugo.sh` file.
+This is the source for [redox-os.org](https://redox-os.org) website.
 
-## Install Hugo
+## Setup
+
+To build this site, you must install [Hugo](https://gohugo.io/) and [Nodejs](https://nodejs.org/) and run the `hugo.sh` file.
+
+### Install Hugo
+
+You can install Hugo from automated script using (webi)[https://webinstall.dev/hugo]
+
+```sh
+curl -sS https://webi.sh/hugo | sh; \
+source ~/.config/envman/PATH.env
+```
+
+Or install it manually:
 
 - Download the executable for your CPU architecture on [this](https://github.com/gohugoio/hugo/releases/latest) link
 - Move the extracted `hugo` file to the `~/.local/bin` directory on your user folder
+- Verify if the `~/.local/bin` is present on your `PATH` (run `echo $PATH` to verify)
+- If the `~/.local/bin` directory is not present on your `PATH` environment variable, you must add it on the configuration file of your terminal shell
+
+## Install Nodejs
+
+You can install Nodejs from automated script using (webi)[https://webinstall.dev/node]
+
+```sh
+curl -sS https://webi.sh/node | sh; \
+source ~/.config/envman/PATH.env
+```
+
+Or install it manually:
+
+- Download the executable for your CPU architecture on [this](https://nodejs.org/en/download#:~:text=get%20a%20prebuilt%20Node.js%C2%AE) link
+- Move the extracted `node` file to the `~/.local/bin` directory on your user folder
 - Verify if the `~/.local/bin` is present on your `PATH` (run `echo $PATH` to verify)
 - If the `~/.local/bin` directory is not present on your `PATH` environment variable, you must add it on the configuration file of your terminal shell
 
@@ -13,11 +42,17 @@ To build this site, you must install [Hugo](https://gohugo.io/) and run the `hug
 
 To add the `~/.local/bin` directory on the `PATH` of your GNU Bash, add the following text on the end of the `.bashrc` file at your user folder:
 
-```
+```sh
 export PATH=$PATH:$HOME/.local/bin
 ```
 
 ## Preview
+
+This website uses Tailwind v4 for the CSS, which requires node dependencies. Please run the following command to install it:
+
+```sh
+npm install
+```
 
 To preview the site, run the following command, wait it to finish and open the link http://localhost:1313
 
