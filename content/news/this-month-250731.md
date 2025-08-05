@@ -4,6 +4,10 @@ author = "Ribbon and Ron Williams"
 date = "2025-07-31"
 +++
 
+<a href="/img/screenshot/kernel-debug-gui.png"><img class="img-responsive" alt="Kernel Debugger GUI" src="/img/screenshot/kernel-debug-gui.png"/></a>
+
+(A screenshot of the kernel debugger GUI from Wildan Mubarok)
+
 Redox OS is a Unix-like general-purpose microkernel-based operating system
 written in Rust. July was a very exciting month for Redox! Here's all the latest news.
 
@@ -49,9 +53,11 @@ Please email your resume/CV, and a list of your most significant open source con
 
 ## New Board Member
 
-The Redox OS Nonprofit would like to welcome a new member to the board. Mathew John Roberts, a.k.a. auronandace, joins the board as a director. Welcome!
+The Redox OS Nonprofit would like to welcome a new member to the board. Mathew John Roberts (AKA auronandace), joins the board as a director. Welcome!
 
 *Mathew is an open source enthusiast who loves the colour green. He was present for the transition from Mattermost to Matrix as the primary communication platform for the Redox project where he has helped out as a moderator ever since. Mathew has learned to code in Rust in his spare time and really enjoys the benefits of working with a strong type system. He thinks a microkernel architecture provides stability and resilience and is excited to see Redox succeed. He still lurks on the #minix IRC channel on the libera.chat network hoping others are also interested in microkernels.*
+
+<a href="/img/board/auronandace.jpeg"><img class="img-responsive" style="width:256px;height:auto alt="auronandace photo" src="/img/board/auronandace.jpeg"/></a>
 
 ## os-test and POSIX compliance testing
 
@@ -66,7 +72,7 @@ And a special congratulations and thanks to Sortie on [receiving a grant](https:
 
 Ibuki's Redox Summer of Code project to implement key parts of [Unix Domain Sockets (UDS)](https://en.wikipedia.org/wiki/Unix_domain_socket) is wrapping up,
 and it has been a big step forward for Redox. You can read all about it in his latest news post.
-There are a few more TODOs to make it complete and be ready for Wayland support.
+There are a few more [TODOs](https://gitlab.redox-os.org/redox-os/redox/-/issues/1595) to make it complete and be ready for Wayland support.
 If you would like to help out, join us on [Matrix Chat](https://matrix.to/#/#redox-join:matrix.org).
 
 ## Secure Disk Encryption!
@@ -82,8 +88,6 @@ including reduced context switching times and file system improvements.
 ## Kernel Debugger GUI
 
 Wildan Mubarok added a kernel debugger GUI for the Podman Build to ease debugging!
-
-<a href="/img/screenshot/kernel-debug-gui.png"><img class="img-responsive" alt="Description" src="/img/screenshot/kernel-debug-gui.png"/></a>
 
 ## Kernel Improvements
 
@@ -118,10 +122,6 @@ Wildan Mubarok added a kernel debugger GUI for the Podman Build to ease debuggin
 - (relibc) Wildan Mubarok fixed the grp.h headers
 - (relibc) Wildan Mubarok fixed the `pthread_attr_getstacksize` function
 - (relibc) Ibuki Omatsu updated `get_proc_credentials` function to a more secure capability-based security approach
-
-## Networking Improvements
-
-- (net) auronandace improved the IPv6 support
 
 ## RedoxFS Improvements
 
