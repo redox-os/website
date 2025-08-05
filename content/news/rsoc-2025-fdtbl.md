@@ -18,7 +18,7 @@ Please see my previous post, [RSoC 2025: Implementing Unix Domain Sockets](https
 Since my last post, I have made several updates to the UDS implementation in Redox OS. The most significant change is `bind` and `connect` integration with RedoxFS, the Redox file system daemon.
 In the previous implementation, UDS sockets were created and managed by ipcd, and the `bind` and `connect` operations were handled by only ipcd. However, this approach had a limitation regarding permission checks on the socket file.
 In Redox, resources are accessed by Scheme-rooted Path, and the `uds` scheme is no exception. Sockets are created in the `/scheme/uds/` space, and the `bind` operation was not able to check the permission of the socket, which could lead to security issues.
-To address this, I have integrated the `bind` and `connect` operations with RedoxFS. Now, when a process attempts to `bind` or `connect` to a UDS socket, the functions communicate not only ipcd but also RedoxFS, which performs the necessary permission checks based on the file system's access control mechanisms. This ensures that only authorized processes can create or connect to UDS sockets, enhancing the security of the IPC mechanism.
+To address this, I have integrated the `bind` and `connect` operations with RedoxFS. Now, when a process attempts to `bind` or `connect` to a UDS socket, the functions communicate not only with ipcd but also with RedoxFS, which performs the necessary permission checks based on the file system's access control mechanisms. This ensures that only authorized processes can create or connect to UDS sockets, enhancing the security of the IPC mechanism. We may change this strategy as we move forward with capability-based security, but this was the best available approach at this time.
 Here is the new process for `bind` and `connect` operations, which now involve both ipcd and RedoxFS:
 ### Bind Operation Flow
 1. The process calls the `bind` function with the socket file path.
@@ -142,11 +142,11 @@ Currently, the bulk FD passing is supporing the `upper_fdtbl`, so you can receiv
 ### Why do we need to separate file tables?
 Currently separating file tables is not used in Redox OS, but it is a preparation for future features.
 For example, we are currently working on the namespace management in Redox OS, which will modify the `open(PATH)` function to a wrapper for `openat(NAMSPACE_FD, PATH)`.
-We can use the `upper_fdtbl` to store the namespace FDs, which is invisible from the user programs.
+We can use the `upper_fdtbl` to store the namespace FDs, CWD FD, and other file descriptors that are used internally by Redox, but which are invisible to the user programs, and don't overlap with POSIX file descriptors.
 
 ## Conclusion
-In conclusion, I had the opportunity to participate in many aspects of Redox OS as an RSoC student, and I've learned a lot about the Redox OS and microkernel internals.
-Participating in RSoC has been a great experience for me, and I am grateful for the opportunity to contribute to Redox OS.
-I will continue to contribute to Redox OS. I may write a post about the namespace management in Redox OS in the future, so please stay tuned!
+In conclusion, I had the opportunity to participate in many aspects of Redox OS as a Summer of Code student, and I've learned a lot about the Redox OS and microkernel internals.
+Participating in RSoC has been a great experience for me, and I am grateful for the opportunity to contribute to Redox.
+I will continue to contribute to Redox, and I hope to write a post about the namespace management in Redox OS in the future, so please stay tuned!
 I would like to thank the Redox OS community for their support and guidance throughout this project!
 Thank you for reading this post, and I hope you found it informative and interesting.
