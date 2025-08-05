@@ -1,5 +1,9 @@
 #!/usr/bin/env sh
 
+if [ ! -d "node_modules" ]; then
+    npm install
+fi
+
 rm -rfv build
 mkdir -pv build/content
 cp -v content/*.md build/content
