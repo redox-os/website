@@ -91,7 +91,7 @@ ul.menu li>ul {
 .menu img {
 	margin: 0 auto 20px auto;
 }
-@media (min-width: 992px) {
+@media (min-width: 48rem) {
 	ul.menu li.menu {
 		display: flex;
 		justify-content: center;
@@ -112,59 +112,9 @@ h3 {
 	font-weight: 500;
 }
 
-.table-features {
-	width: 100%;
-	margin-bottom: 18px;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	border-collapse: inherit;
-}
-.table-features td {
-	padding: 6px 12px;
-	border: none;
-}
-
 div.install {
 	margin-top: 2.5em;
 	margin-bottom: 1.5em;
-}
-
-.table-installers {
-	border-spacing: 4px;
-	border: 0px;
-	empty-cells: hide;
-}
-
-.table-installers td {
-	padding: 0px;
-}
-
-.table-installers td.inst-type {
-	border: 0px;
-	color: black;
-	text-align: left;
-	width: 13em;
-}
-
-.table-installers div.inst-button {
-	border: 1px solid #ccc;
-	text-align: center;
-	border-radius: 3px;
-	padding: 0.3em;
-}
-
-.table-installers div.inst-button:hover {
-	border-color: #428BCA;
-	color: white;
-	background-color: #428BCA;
-}
-
-.table-installers a {
-	text-decoration: none;
-}
-
-.install-row {
-	margin-bottom: 0em;
 }
 
 p.pitch {
@@ -172,7 +122,7 @@ p.pitch {
 	font-weight: 300;
 	text-align: center;
 }
-@media (min-width: 992px) {
+@media (min-width: 48rem) {
 	p.pitch {
 		font-size: 25px;
 		margin-top: 1.5em;
@@ -184,6 +134,36 @@ p.pitch {
 
 p.pitch a {
 	font-size: 80%;
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+
+.btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
 }
 
 .install-box {
@@ -239,7 +219,7 @@ ul.laundry-list {
 	display: none;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 48rem) {
 	.install-box a.btn {
 		font-size: 18px;
 		padding: 10px 15px;
@@ -582,7 +562,7 @@ ul.laundry-list {
     z-index: -1;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 48rem) {
 
     #users .fade-in {
         opacity: 1;

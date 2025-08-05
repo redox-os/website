@@ -2,20 +2,20 @@
 title = "Kezdőlap"
 url = "home"
 +++
-<div class="row install-row">
-  <div class="col-md-8">
+<div class="grid grid-cols-3 gap-4">
+  <div class="col-span-3 md:col-span-2">
     <p class="pitch">
-      A <b>Redox</b> egy <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a> nyelven írt Unix-szerű operációs rendszer, melynek célja a Rust nyelv innovációinak alkalmazása egy modern mikrokernelre és egy teljes alkalmazáskészletre.
+      A <b>Redox</b> egy <a href="https://www.rust-lang.org/"><b>Rust</b></a> nyelven írt Unix-szerű operációs rendszer, melynek célja a Rust nyelv innovációinak alkalmazása egy modern mikrokernelre és egy teljes alkalmazáskészletre.
     </p>
   </div>
-  <div class="col-md-4 install-box">
+  <div class="col-span-3 md:col-span-1 install-box">
     <br/>
     <a class="btn btn-primary" href="https://gitlab.redox-os.org/redox-os/redox/-/releases">Kiadások megtekintése</a>
     <a class="btn btn-default" href="https://gitlab.redox-os.org/redox-os/redox/">GitLab</a>
   </div>
 </div>
-<div class="row features">
-  <div class="col-md-6">
+<div class="grid grid-cols-2 features">
+  <div class="col-span-2 md:col-span-1">
     <ul class="laundry-list" style="margin-bottom: 0px;">
       <li>Rust nyelven fejlesztett</li>
       <li>Mikrokerneles felépítés</li>
@@ -23,7 +23,7 @@ url = "home"
       <li>Támogatja a Rust Standard Könyvtárat</li>
     </ul>
   </div>
-  <div class="col-md-6">
+  <div class="col-span-2 md:col-span-1">
     <ul class="laundry-list">
       <li>MIT licensz</li>
       <li>Felhasználói szinten futtatott illesztőprogramok</li>

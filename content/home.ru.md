@@ -2,21 +2,21 @@
 title = "Главная"
 url = "home"
 +++
-<div class="row install-row">
-  <div class="col-md-8">
+<div class="grid grid-cols-3 gap-4">
+  <div class="col-span-3 md:col-span-2">
     <p class="pitch">
-      <b>Redox</b> - это Unix-подобная Операционная Система, написанная на <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>,
+      <b>Redox</b> - это Unix-подобная Операционная Система, написанная на <a href="https://www.rust-lang.org/"><b>Rust</b></a>,
       которая использует инновации Rust в современном микроядре и полном наборе приложений.
     </p>
   </div>
-  <div class="col-md-4 install-box">
+  <div class="col-span-3 md:col-span-1 install-box">
     <br/>
     <a class="btn btn-primary" href="https://gitlab.redox-os.org/redox-os/redox/-/releases">Релизы</a>
     <a class="btn btn-default" href="https://gitlab.redox-os.org/redox-os/redox/">Скачать на GitLab</a>
   </div>
 </div>
-<div class="row features">
-  <div class="col-md-6">
+<div class="grid grid-cols-2 features">
+  <div class="col-span-2 md:col-span-1">
     <ul class="laundry-list" style="margin-bottom: 0px;">
       <li>Написан на Rust</li>
       <li>Собственное микроядро</li>
@@ -24,7 +24,7 @@ url = "home"
       <li>Поддерживает стандартную библиотеку Rust</li>
     </ul>
   </div>
-  <div class="col-md-6">
+  <div class="col-span-2 md:col-span-1">
     <ul class="laundry-list">
       <li>Лицензия MIT</li>
       <li>Драйвера работают в пользовательском пространстве</li>

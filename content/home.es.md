@@ -2,21 +2,21 @@
 title = "Inicio"
 url = "home"
 +++
-<div class="row install-row">
-  <div class="col-md-8">
+<div class="grid grid-cols-3 gap-4">
+  <div class="col-span-3 md:col-span-2">
     <p class="pitch">
-      <b>Redox</b> es un Sistema Operativo similar a UNIX escrito en <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>,
+      <b>Redox</b> es un Sistema Operativo similar a UNIX escrito en <a href="https://www.rust-lang.org/"><b>Rust</b></a>,
       con el objetivo de incorporar las innovaciones de Rust a un moderno micronúcleo y un completo conjunto de aplicaciones.
     </p>
   </div>
-  <div class="col-md-4 install-box">
+  <div class="col-span-3 md:col-span-1 install-box">
     <br/>
     <a class="btn btn-primary" href="https://gitlab.redox-os.org/redox-os/redox/-/releases">Ver Descargas</a>
     <a class="btn btn-default" href="https://gitlab.redox-os.org/redox-os/redox/">Descargar desde GitLab</a>
   </div>
 </div>
-<div class="row features">
-  <div class="col-md-6">
+<div class="grid grid-cols-2 features">
+  <div class="col-span-2 md:col-span-1">
     <ul class="laundry-list" style="margin-bottom: 0px;">
       <li>Implementado en Rust</li>
       <li>Diseño de Micronúcleo</li>
@@ -24,7 +24,7 @@ url = "home"
       <li>Soporta la Librería Estándar de Rust</li>
     </ul>
   </div>
-  <div class="col-md-6">
+  <div class="col-span-2 md:col-span-1">
     <ul class="laundry-list">
       <li>Licencia MIT</li>
       <li>Los drivers se ejecutan en el Espacio de Usuario</li>
