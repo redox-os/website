@@ -38,6 +38,10 @@ Here is the new process for `bind` and `connect` operations, which now involve b
 5. The `bind` sends the socket FD to RedoxFS via the parent directory FD, using the `sendfd` syscall.
 6. RedoxFS receives the socket FD, creates the socket file in the specified directory, and maps the new file's node to the received socket FD.
 >If the operation is failed, the `bind` calls `UnBind(SYS_CALL)` to clean up the socket name in ipcd.
+<center>
+    <img class="img-responsive" src="/img/rsoc-2025-fdtbl/bind_flow.png" width="50%" height="50%">
+    Figure 1: Bind Operation Flow.
+</center>
 
 ### Connect Operation Flow
 1. The process calls the `connect` function with the socket file path.
@@ -50,10 +54,6 @@ Here is the new process for `bind` and `connect` operations, which now involve b
 8. The `connect` receives the token and call `Connect(SYS_CALL)` via the client socket FD with the token.
 9. ipcd receives the `Connect(SYS_CALL)` request and connects the client socket to the server socket mapped to the token.
 
-<center>
-    <img class="img-responsive" src="/img/rsoc-2025-fdtbl/bind_flow.png" width="50%" height="50%">
-    Figure 1: Bind Operation Flow.
-</center>
 <center>
     <img class="img-responsive" src="/img/rsoc-2025-fdtbl/connect_flow.png" width="50%" height="50%">
     Figure 2: Connect Operation Flow.
