@@ -15,13 +15,69 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## Redox is hiring!
+
+Redox is seeking an OS/kernel developer, paid through a combination of grants and contract work.
+If you are a committed FOSS developer, with expertise in Rust, device drivers and performance-optimized software, we are interested in hearing from you.
+
+This is a fully remote position. There are some geographic preferences and limitations, described below.
+
+### Responsibilities
+
+- Implement performance improvements such as ring-buffer based device drivers and services, smart schedulers and techniques to reduce context switching
+- Implement POSIX, WASI and other OS APIs
+- Implement security and virtualization features
+- Improve hardware support
+- Port important applications
+- Write blog posts and other documentation describing the work
+- Participate in developer chat related to the work
+- Support applications for grants, create deliverables and report milestone completion
+
+### Qualifications
+
+- University degree in Computer Science or a related field, or self-taught equivalent
+- Demonstrated track record in operating system or low level software development
+- Rust expertise, especially in no_std and bare-metal contexts
+- Substantial body of work in open source
+- Able to work independently at a high level of productivity
+- Able to interact positively with community members of varying skills and backgrounds
+- Flexibility in how payments are received - a portion of your compensation may be in the form of grants from other foundations, and there may be some adjustments in the compensation amounts due to differences in the tax treatments for grants
+- You must be eligible for work in the region where you live, and you must be eligible for payment by a US-based organization.
+- Preference may be given to those who are eligible for EU-based grants, especially those in an area with beneficial tax treatment of grants.
+
+Please email your resume/CV, and a list of your most significant open source contributions, with links, to info@redox-os.org and president@redox-os.org
+
+## New Board Member
+
+The Redox OS Nonprofit would like to welcome a new member to the board. Mathew John Roberts, a.k.a. auronandace, joins the board as a director. Welcome!
+
+*Mathew is an open source enthusiast who loves the colour green. He was present for the transition from Mattermost to Matrix as the primary communication platform for the Redox project where he has helped out as a moderator ever since. Mathew has learned to code in Rust in his spare time and really enjoys the benefits of working with a strong type system. He thinks a microkernel architecture provides stability and resilience and is excited to see Redox succeed. He still lurks on the #minix IRC channel on the libera.chat network hoping others are also interested in microkernels.*
+
+## os-test and POSIX compliance testing
+
+Redox has added Sortix's [os-test](https://sortix.org/os-test/) suite and the [Open POSIX Test Suite](https://posixtest.sourceforge.net/)
+to its suite of correctness tests.
+Although we don't plan for 100% POSIX compliance, we would like to comply wherever it's practical.
+There's still lots of work to do, some of it easy and some of it a little harder.
+Join us on [Matrix Chat](https://matrix.to/#/#redox-join:matrix.org) if you would like to help out.
+And a special congratulations and thanks to Sortie on [receiving a grant](https://sortix.org/blog/os-test-funding/) from the [NGI Zero Commons fund](https://nlnet.nl/commonsfund/).
+
+## Unix Domain Sockets
+
+Ibuki's Redox Summer of Code project to implement key parts of [Unix Domain Sockets (UDS)](https://en.wikipedia.org/wiki/Unix_domain_socket) is wrapping up,
+and it has been a big step forward for Redox. You can read all about it in his latest news post.
+There are a few more TODOs to make it complete and be ready for Wayland support.
+If you would like to help out, join us on [Matrix Chat](https://matrix.to/#/#redox-join:matrix.org).
+
 ## Secure Disk Encryption!
 
 Jeremy Soller fixed the weak encryption security on RedoxFS using AES-XTS, like [LUKS](https://en.wikipedia.org/wiki/Linux_Unified_Key_Setup) (the Linux disk encryption system) does.
 
 ## First Benchmark Report
 
-Ron Williams reported a ~500-700% performance improvement between November 2024 until July 2025.
+Ron Williams reported a ~500-700% performance improvement of basic file copy between November 2024 and July 2025.
+Performance is increasingly becoming a focus for us, and a wide variety of work has been done to make improvements,
+including reduced context switching times and file system improvements.
 
 ## Kernel Debugger GUI
 
@@ -39,7 +95,7 @@ Wildan Mubarok added a kernel debugger GUI for the Podman Build to ease debuggin
 
 - (drivers) bjorn3 implemented window resizing on the VirtIO-GPU driver, allowing the host system to change the virtual machine resolution in real-time
 - (drivers) bjorn3 updated most libraries and drivers to redox-scheme 0.6
-- (drivers) bjorn3 did many code cleanups in the graphics subsystem
+- (drivers) bjorn3 did a general code cleanup in the graphics subsystem
 - (drivers) bjorn3 improved handling of kernel logs
 - (drivers) Wildan Mubarok fixed the `exampled` driver
 
@@ -94,7 +150,7 @@ Wildan Mubarok added a kernel debugger GUI for the Podman Build to ease debuggin
 ## Programs
 
 - (programs) Wildan Mubarok fixed and enabled dynamic linking in the Rust compiler
-- (programs) Ron Williams fixed GCC
+- (programs) Ron Williams fixed GCC, with help from 4lDO2
 - (programs) Wildan Mubarok fixed the GCC C++ frontend (g++)
 - (programs) Wildan Mubarok fixed RustPython, **Zstd**, libuv, and libsodium
 - (programs) Wildan Mubarok fixed the LLVM 19 compilation
