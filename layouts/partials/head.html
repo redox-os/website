@@ -12,7 +12,6 @@
     {{ end -}}
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link href="/css/style.css" rel="stylesheet">
 
     {{ with (templates.Defer (dict "key" "global")) }}
         {{ partial "css.html" . }}
