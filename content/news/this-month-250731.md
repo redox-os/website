@@ -57,7 +57,7 @@ The Redox OS Nonprofit would like to welcome a new member to the board. Mathew J
 
 *Mathew is an open source enthusiast who loves the colour green. He was present for the transition from Mattermost to Matrix as the primary communication platform for the Redox project where he has helped out as a moderator ever since. Mathew has learned to code in Rust in his spare time and really enjoys the benefits of working with a strong type system. He thinks a microkernel architecture provides stability and resilience and is excited to see Redox succeed. He still lurks on the #minix IRC channel on the libera.chat network hoping others are also interested in microkernels.*
 
-<a href="/img/board/auronandace.jpeg"><img class="img-responsive" style="width:256px;height:auto alt="auronandace photo" src="/img/board/auronandace.jpeg"/></a>
+<a href="/img/board/auronandace.jpeg"><img class="img-responsive" style="width:256px;height:auto" alt="auronandace photo" src="/img/board/auronandace.jpeg"/></a>
 
 ## os-test and POSIX compliance testing
 
