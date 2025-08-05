@@ -71,7 +71,7 @@ And a special congratulations and thanks to Sortie on [receiving a grant](https:
 ## Unix Domain Sockets
 
 Ibuki's Redox Summer of Code project to implement key parts of [Unix Domain Sockets (UDS)](https://en.wikipedia.org/wiki/Unix_domain_socket) is wrapping up,
-and it has been a big step forward for Redox. You can read all about it in his latest news post.
+and it has been a big step forward for Redox. You can read all about it in his [latest news post](https://www.redox-os.org/news/rsoc-2025-uds/).
 There are a few more [TODOs](https://gitlab.redox-os.org/redox-os/redox/-/issues/1595) to make it complete and be ready for Wayland support.
 If you would like to help out, join us on [Matrix Chat](https://matrix.to/#/#redox-join:matrix.org).
 
@@ -182,7 +182,7 @@ Wildan Mubarok added a kernel debugger GUI for the Podman Build to ease debuggin
 - (build-system) Wildan Mubarok fixed the downloaded package cache
 - (build-system) Josh Megnauth fixed a bug where some runtime dependencies of recipes weren't added to the Redox image
 - (build-system) Josh Megnauth implemented TOML and folder naming sanitization in recipes to avoid invalid syntax usage
-- (build-system) auronandace fixed some warnings in the installer
+- (build-system) auronandace applied some Clippy lints to the installer
 
 ## CI Improvements
 
