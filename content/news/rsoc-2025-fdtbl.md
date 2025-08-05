@@ -22,19 +22,19 @@ To address this, I have integrated the `bind` and `connect` operations with Redo
 Here is the new process for `bind` and `connect` operations, which now involve both ipcd and RedoxFS:
 ### Bind Operation Flow
 1. The process calls the `bind` function with the socket file path.
-2. The `bind` call `Bind(SYS_CALL)`.
+2. The `bind` calls `Bind(SYS_CALL)`.
 3. ipcd receives the `Bind(SYS_CALL)`, names the socket, generates a permanent token for the socket and maps the socket with it.
 4. The `bind` opens the parent directory that the socket file will be created in, using the `open` syscall.
 5. The `bind` sends the socket FD to RedoxFS via the parent directory FD, using the `sendfd` syscall.
 6. RedoxFS receives the socket FD, creates the socket file in the specified directory, and maps the new file's node to the received socket FD.
->If the operation is failed, the `bind` call `UnBind(SYS_CALL)` to clean up the socket name in ipcd.
+>If the operation is failed, the `bind` calls `UnBind(SYS_CALL)` to clean up the socket name in ipcd.
 
 ### Connect Operation Flow
 1. The process calls the `connect` function with the socket file path.
 2. The `connect` opens the socket file using the `open` syscall.
 3. RedoxFS receives the `open` syscall request and checks the permission of the socket file.
 4. The `connect` calls a `Connect(SYS_CALL)` to RedoxFS via the socket file FD.
-5. RedoxFS receives this Connect(SYS_CALL)request. It then callsGetToken(SYS_CALL) to retrieve the socket's permanent token from ipcd, using the socket FD.
+5. RedoxFS receives this Connect(SYS_CALL)request. It then calls `GetToken(SYS_CALL)` to retrieve the socket's permanent token from ipcd, using the socket FD.
 6. ipcd receives the `GetToken(SYS_CALL)` request and returns the permanent token of the socket.
 7. RedoxFS receives the token and returns it to the `connect` call.
 8. The `connect` receives the token and call `Connect(SYS_CALL)` via the client socket FD with the token.
