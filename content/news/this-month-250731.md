@@ -106,8 +106,8 @@ Wildan Mubarok added a kernel debugger GUI for the Podman Build to ease debuggin
 ## System Improvements
 
 - (sys) Ibuki Omatsu implemented most Unix Domain Socket features
-- (sys) Ibuki Omatsu implemented a new file table system, introduced bulk file descriptor passing, and add new call functions for file descriptor operations
-- (sys) Ibuki Omatsu implemented new system calls (FsCall), added features for bulk file descriptor passing, and implemented new functions (call_ro, call_wo, call_wr)
+- (sys) Ibuki Omatsu implemented a new file table system, introducing bulk file descriptor passing
+- (sys) Ibuki Omatsu implemented new functions (`call_ro`, `call_wo`, `call_rw`) to make `SYS_CALL` callable from user programs
 - (sys) James Matlik pinned a uutils commit to keep the tools stable
 
 ## Relibc Improvements
