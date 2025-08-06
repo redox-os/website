@@ -1,7 +1,7 @@
 <header>
   <nav>
-    <ul class="row menu">
-      <li class="col-xs-12 col-md-3">
+    <ul class="columns menu">
+      <li class="column is-one-quarter">
         <a href="{{ if .Site.LanguagePrefix }}{{ .Site.LanguagePrefix }}{{ else }}/{{ end }}">
             <picture>
                 <source srcset="/img/logo-dark.png" media="(prefers-color-scheme: dark)"/>
@@ -9,7 +9,7 @@
             </picture>
         </a>
       </li>
-      <li class="col-xs-12 col-md-9 menu">
+      <li class="column menu">
         {{ range .Site.Menus.main }}
           <h2><a style="color: inherit;" href="{{ .URL | relLangURL }}">{{ .Name }}</a></h2>
         {{ end }}
