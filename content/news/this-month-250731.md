@@ -81,7 +81,7 @@ Jeremy Soller fixed the weak encryption security on RedoxFS using AES-XTS, like 
 
 ## First Benchmark Report
 
-Ron Williams reported a ~500-700% performance improvement of basic file copy between November 2024 and July 2025.
+Ron Williams [reported](https://gitlab.redox-os.org/redox-os/benchmarks#tests) a ~500-700% performance improvement of basic file copy between November 2024 and July 2025.
 Performance is increasingly becoming a focus for us, and a wide variety of work has been done to make improvements,
 including reduced context switching times and file system improvements.
 
