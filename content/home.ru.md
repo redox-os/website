@@ -2,21 +2,21 @@
 title = "Главная"
 url = "home"
 +++
-<div class="row install-row">
-  <div class="col-md-8">
+<div class="columns install-row">
+  <div class="column is-two-thirds">
     <p class="pitch">
       <b>Redox</b> - это Unix-подобная Операционная Система, написанная на <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>,
       которая использует инновации Rust в современном микроядре и полном наборе приложений.
     </p>
   </div>
-  <div class="col-md-4 install-box">
+  <div class="column install-box">
     <br/>
     <a class="btn btn-primary" href="https://gitlab.redox-os.org/redox-os/redox/-/releases">Релизы</a>
     <a class="btn btn-default" href="https://gitlab.redox-os.org/redox-os/redox/">Скачать на GitLab</a>
   </div>
 </div>
-<div class="row features">
-  <div class="col-md-6">
+<div class="columns features">
+  <div class="column">
     <ul class="laundry-list" style="margin-bottom: 0px;">
       <li>Написан на Rust</li>
       <li>Собственное микроядро</li>
@@ -24,7 +24,7 @@ url = "home"
       <li>Поддерживает стандартную библиотеку Rust</li>
     </ul>
   </div>
-  <div class="col-md-6">
+  <div class="column">
     <ul class="laundry-list">
       <li>Лицензия MIT</li>
       <li>Драйвера работают в пользовательском пространстве</li>
@@ -33,7 +33,7 @@ url = "home"
     </ul>
   </div>
 </div>
-<div class="row features">
+<div class="columns features">
   <div class="col-sm-12">
     <div style="font-size: 16px; text-align: center;">
       Redox с Orbital

@@ -2,8 +2,8 @@
 title = "Accueil"
 url = "home"
 +++
-<div class="row install-row">
-  <div class="col-md-8">
+<div class="columns install-row">
+  <div class="column is-two-thirds">
     <p class="pitch">
       <b>Redox</b> est un système d'exploitation dans
       le <a style="color: inherit;" href="https://en.wikipedia.org/wiki/Unix-like"><b>style Unix</b></a>, écrit en <a style="color: inherit;"
@@ -12,14 +12,14 @@ url = "home"
       moderne et une suite logicielle complète.
     </p>
   </div>
-  <div class="col-md-4 install-box">
+  <div class="column install-box">
     <br/>
     <a class="btn btn-primary" href="/fr/quickstart/">Débuter</a>
     <a class="btn btn-default" href="https://gitlab.redox-os.org/redox-os/redox/">GitLab</a>
   </div>
 </div>
-<div class="row features">
-  <div class="col-md-6">
+<div class="columns features">
+  <div class="column">
     <ul class="laundry-list" style="margin-bottom: 0px;">
       <li>Inspiré de <a href="http://9p.io/plan9/index.html">Plan 9</a>, <a href="http://www.minix3.org/">Minix</a>, <a href="https://sel4.systems/">seL4</a>, <a href="http://www.bsd.org/">BSD</a> et <a href="https://www.kernel.org/">Linux</a></li>
       <li>Écrit en <a href="https://www.rust-lang.org/">Rust</a></li>
@@ -28,7 +28,7 @@ url = "home"
       <li>Compatible avec la <a href="https://doc.rust-lang.org/std/">bibliothèque standard de Rust</a></li>
     </ul>
   </div>
-  <div class="col-md-6">
+  <div class="column">
     <ul class="laundry-list">
       <li>Licence <a href="https://en.wikipedia.org/wiki/MIT_License">MIT</a></li>
       <li>Les <a href="https://doc.redox-os.org/book/drivers.html">Pilotes</a> s'exécutent en mode utilisateur</li>
@@ -40,7 +40,7 @@ url = "home"
     </ul>
   </div>
 </div>
-<div class="row features">
+<div class="columns features">
   <div class="col-sm-12">
     <div style="font-size: 16px; text-align: center;">
       Redox avec Orbital

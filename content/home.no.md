@@ -2,21 +2,21 @@
 title = "Hjem"
 url = "home"
 +++
-<div class="row install-row">
-  <div class="col-md-8">
+<div class="columns install-row">
+  <div class="column is-two-thirds">
     <p class="pitch">
       <b>Redox</b> er et Unix-lignende operativsystem som er skrevet i programmeringsspråket <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>,
       for å bringe innovasjoner fra Rust til en moderne mikrokjerne med et komplett sett av programmer.
     </p>
   </div>
-  <div class="col-md-4 install-box">
+  <div class="column install-box">
     <br/>
     <a class="btn btn-primary" href="https://gitlab.redox-os.org/redox-os/redox/-/releases">Vis utgivelser</a>
     <a class="btn btn-default" href="https://gitlab.redox-os.org/redox-os/redox/">Pull fra GitLab</a>
   </div>
 </div>
-<div class="row features">
-  <div class="col-md-6">
+<div class="columns features">
+  <div class="column">
     <ul class="laundry-list" style="margin-bottom: 0px;">
       <li>Skrevet i Rust</li>
       <li>Mikrokjerneutforming</li>
@@ -24,7 +24,7 @@ url = "home"
       <li>Kompatibel med Rusts Standard Library</li>
     </ul>
   </div>
-  <div class="col-md-6">
+  <div class="column">
     <ul class="laundry-list">
       <li>MIT-lisens</li>
       <li>Drivere kjøres i userspace</li>
@@ -33,7 +33,7 @@ url = "home"
     </ul>
   </div>
 </div>
-<div class="row features">
+<div class="columns features">
   <div class="col-sm-12">
     <div style="font-size: 16px; text-align: center;">
       Redox kjører Orbital

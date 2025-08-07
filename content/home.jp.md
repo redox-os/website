@@ -2,21 +2,21 @@
 title = "ホーム"
 url = "home"
 +++
-<div class="row install-row">
-  <div class="col-md-8">
+<div class="columns install-row">
+  <div class="column is-two-thirds">
     <p class="pitch">
       <b>Redox</b> は <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>で書かれたUNIXライクなオペレーティングシステムで、
       Rustという革命的手法を、モダンなマイクロカーネルおよびすべてのアプリケーションに持ち込むことを目指しています。
     </p>
   </div>
-  <div class="col-md-4 install-box">
+  <div class="column install-box">
     <br/>
     <a class="btn btn-primary" href="https://gitlab.redox-os.org/redox-os/redox/-/releases">リリース情報をみる</a>
     <a class="btn btn-default" href="https://gitlab.redox-os.org/redox-os/redox/">GitLab</a>
   </div>
 </div>
-<div class="row features">
-  <div class="col-md-6">
+<div class="columns features">
+  <div class="column">
     <ul class="laundry-list" style="margin-bottom: 0px;">
       <li>Rustでの実装</li>
       <li>マイクロカーネル設計</li>
@@ -24,7 +24,7 @@ url = "home"
       <li>Rustの標準ライブラリをサポート</li>
     </ul>
   </div>
-  <div class="col-md-6">
+  <div class="column">
     <ul class="laundry-list">
       <li>MITライセンス</li>
       <li>ドライバはユーザ空間で動作</li>
@@ -33,7 +33,7 @@ url = "home"
     </ul>
   </div>
 </div>
-<div class="row features">
+<div class="columns features">
   <div class="col-sm-12">
     <div style="font-size: 16px; text-align: center;">
       RedoxがOrbitalを実行している様子

@@ -2,21 +2,21 @@
 title = "Hejmo"
 url = "home"
 +++
-<div class="row install-row">
-  <div class="col-md-8">
+<div class="columns install-row">
+  <div class="column is-two-thirds">
     <p class="pitch">
       <b>Redox</b> estas Unikso-similaj OS skribita en <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>,
       celanta alporti la novigoj de Rust al moderna mikrokerneto kaj plena aro de aplikoj.
     </p>
   </div>
-  <div class="col-md-4 install-box">
+  <div class="column install-box">
     <br/>
     <a class="btn btn-primary" href="https://gitlab.redox-os.org/redox-os/redox/-/releases">Vido ĵetoj</a>
     <a class="btn btn-default" href="https://gitlab.redox-os.org/redox-os/redox/">Pull de GitLab</a>
   </div>
 </div>
-<div class="row features">
-  <div class="col-md-6">
+<div class="columns features">
+  <div class="column">
     <ul class="laundry-list" style="margin-bottom: 0px;">
       <li>Skribita en Rust</li>
       <li>Mikrokerneto dezajno</li>
@@ -24,7 +24,7 @@ url = "home"
       <li>Elportas Rust Standard Library</li>
     </ul>
   </div>
-  <div class="col-md-6">
+  <div class="column">
     <ul class="laundry-list">
       <li>MIT licenco</li>
       <li>Peliloj kuri en Userspace</li>
@@ -33,7 +33,7 @@ url = "home"
     </ul>
   </div>
 </div>
-<div class="row features">
+<div class="columns features">
   <div class="col-sm-12">
     <div style="font-size: 16px; text-align: center;">
       Redox kurante Orbital
