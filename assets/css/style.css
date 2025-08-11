@@ -22,8 +22,8 @@ a:focus {
 }
 
 @media (prefers-color-scheme: dark) {
-	:root {
-		--bulma-scheme-main:#202020;
+	html {
+		background-color:#202020;
 	}
 	body {
 		color: #ffffff;
