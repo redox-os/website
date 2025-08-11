@@ -2,21 +2,21 @@
 title = "Strona Główna"
 url = "home"
 +++
-<div class="row install-row">
-  <div class="col-md-8">
+<div class="columns install-row">
+  <div class="column is-two-thirds">
     <p class="pitch">
       <b>Redox</b> jest uniksopodobmym systemem operacyjnym napisanym w języku <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>, którego założeniem jest połączenie innowacji tego języka z architekturą mikrojądra i pełnym zestawem aplikacji.
     </p>
   </div>
-  <div class="col-md-4 install-box">
+  <div class="column install-box">
     <br/>
     <a class="btn btn-primary" href="/pl/quickstart/">Szybki start</a>
     <a class="btn btn-primary" href="https://gitlab.redox-os.org/redox-os/redox/-/releases">Zobacz Wydania</a>
     <a class="btn btn-default" href="https://gitlab.redox-os.org/redox-os/redox/">Pobierz z GitLaba</a>
   </div>
 </div>
-<div class="row features">
-  <div class="col-md-6">
+<div class="columns features">
+  <div class="column">
     <ul class="laundry-list" style="margin-bottom: 0px;">
       <li>Zaimplementowany w języku Rust</li>
       <li>Architektura Mikrojądra</li>
@@ -24,7 +24,7 @@ url = "home"
       <li>Wspiera Bibliotekę Standardową języka Rust</li>
     </ul>
   </div>
-  <div class="col-md-6">
+  <div class="column">
     <ul class="laundry-list">
       <li>Na Licencji MIT</li>
       <li>Sterowniki działają w przestrzeni użytkownika (userspace)</li>
@@ -33,7 +33,7 @@ url = "home"
     </ul>
   </div>
 </div>
-<div class="row features">
+<div class="columns features">
   <div class="col-sm-12">
     <div style="font-size: 16px; text-align: center;">
       Redox ze środowiskiem Orbital

@@ -2,21 +2,21 @@
 title = "Início"
 url = "home"
 +++
-<div class="row install-row">
-  <div class="col-md-8">
+<div class="columns install-row">
+  <div class="column is-two-thirds">
     <p class="pitch">
       O <b>Redox</b> é um sistema operacional <a style="color: inherit;" href="https://en.wikipedia.org/wiki/Unix-like"><b>Unix-like</b></a> de propósito geral baseado em microkernel e escrito em <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>,
       que busca trazer as inovações desta linguagem de programação para um microkernel moderno, um conjunto completo de programas e ser uma alternativa completa ao Linux e BSD.
     </p>
   </div>
-  <div class="col-md-4 install-box">
+  <div class="column install-box">
     <br/>
     <a class="btn btn-primary" href="/pt/quickstart/">Começo Rápido</a>
     <a class="btn btn-default" href="https://gitlab.redox-os.org/redox-os/redox/">GitLab</a>
   </div>
 </div>
-<div class="row features">
-  <div class="col-md-6">
+<div class="columns features">
+  <div class="column">
     <ul class="laundry-list" style="margin-bottom: 0px;">
       <li>Inspirado pelo <a href="http://9p.io/plan9/index.html">Plan 9</a>, <a href="http://www.minix3.org/">Minix</a>, <a href="https://sel4.systems/">seL4</a>, <a href="https://en.wikipedia.org/wiki/Berkeley_Software_Distribution">BSD</a> e <a href="https://www.kernel.org/">Linux</a></li>
       <li>Implementado em <a href="https://www.rust-lang.org/">Rust</a></li>
@@ -25,7 +25,7 @@ url = "home"
       <li>Suporta a <a href="https://doc.rust-lang.org/std/">biblioteca padrão da Rust</a></li>
     </ul>
   </div>
-  <div class="col-md-6">
+  <div class="column">
     <ul class="laundry-list">
       <li>Licença <a href="https://en.wikipedia.org/wiki/MIT_License">MIT</a></li>
       <li>Os <a href="https://doc.redox-os.org/book/drivers.html">Drivers</a> são executados no espaço do usuário</li>
@@ -37,7 +37,7 @@ url = "home"
     </ul>
   </div>
 </div>
-<div class="row features">
+<div class="columns features">
   <div class="col-sm-12">
     <div style="font-size: 16px; text-align: center;">
       Redox executando o Orbital

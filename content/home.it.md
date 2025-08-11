@@ -2,21 +2,21 @@
 title = "Home"
 url = "home"
 +++
-<div class="row install-row">
-  <div class="col-md-8">
+<div class="columns install-row">
+  <div class="column is-two-thirds">
     <p class="pitch">
       <b>Redox</b> è un Sistema Operativo Unix-like scritto in <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>,
       con l'obiettivo di portare le innovazioni di Rust in un microkernel moderno ed in un pacchetto completo di applicazioni.
     </p>
   </div>
-  <div class="col-md-4 install-box">
+  <div class="column install-box">
     <br/>
     <a class="btn btn-primary" href="https://gitlab.redox-os.org/redox-os/redox/tags">Versioni Rilasciate</a>
     <a class="btn btn-default" href="https://gitlab.redox-os.org/redox-os/redox/">Vedi su GitLab</a>
   </div>
 </div>
-<div class="row features">
-  <div class="col-md-6">
+<div class="columns features">
+  <div class="column">
     <ul class="laundry-list" style="margin-bottom: 0px;">
       <li>Implementato in Rust</li>
       <li>Architettura Microkernel</li>
@@ -24,7 +24,7 @@ url = "home"
       <li>Supporta la Rust Standard Library</li>
     </ul>
   </div>
-  <div class="col-md-6">
+  <div class="column">
     <ul class="laundry-list">
       <li>Sotto licenza MIT</li>
       <li>Driver eseguiti nello spazio utente</li>
@@ -33,7 +33,7 @@ url = "home"
     </ul>
   </div>
 </div>
-<div class="row features">
+<div class="columns features">
   <div class="col-sm-12">
     <div style="font-size: 16px; text-align: center;">
       Redox con Orbital

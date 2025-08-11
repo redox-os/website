@@ -1,0 +1,16 @@
+{
+  "name": "redox-website",
+  "version": "1.0.0",
+  "description": "redox-os.org Website",
+  "main": "index.js",
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^7.0.2",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "postcss-css-variables": "^0.19.0"
+  }
+}

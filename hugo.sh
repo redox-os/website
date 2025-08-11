@@ -1,5 +1,10 @@
 #!/usr/bin/env sh
 
+if [ "$1" != "serve" ] && [ ! -d "node_modules" ]; then
+    echo "Installing node_modules"
+    npm install --frozen-lockfile
+fi
+
 rm -rfv build
 mkdir -pv build/content
 cp -v content/*.md build/content

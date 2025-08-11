@@ -2,21 +2,21 @@
 title = "홈"
 url = "home"
 +++
-<div class="row install-row">
-  <div class="col-md-8">
+<div class="columns install-row">
+  <div class="column is-two-thirds">
     <p class="pitch">
       <b>Redox</b>는 <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>로 작성된 Unix-like 운영체제입니다.
       저희는 Rust의 혁신적인 기술을 최신 마이크로커널 및 모든 응용 프로그램에 적용하는 것을 목표로 하고 있습니다.
     </p>
   </div>
-  <div class="col-md-4 install-box">
+  <div class="column install-box">
     <br/>
     <a class="btn btn-primary" href="https://gitlab.redox-os.org/redox-os/redox/-/releases">릴리즈 보기</a>
     <a class="btn btn-default" href="https://gitlab.redox-os.org/redox-os/redox/">GitLab</a>
   </div>
 </div>
-<div class="row features">
-  <div class="col-md-6">
+<div class="columns features">
+  <div class="column">
     <ul class="laundry-list" style="margin-bottom: 0px;">
       <li>Rust로 작성됐습니다</li>
       <li>마이크로커널 디자인</li>
@@ -24,7 +24,7 @@ url = "home"
       <li>Rust 표준 라이브러리를 지원합니다</li>
     </ul>
   </div>
-  <div class="col-md-6">
+  <div class="column">
     <ul class="laundry-list">
       <li>MIT 라이센스</li>
       <li>드라이버가 Userspace에서 돌아갑니다</li>
@@ -33,7 +33,7 @@ url = "home"
     </ul>
   </div>
 </div>
-<div class="row features">
+<div class="columns features">
   <div class="col-sm-12">
     <div style="font-size: 16px; text-align: center;">
       Orbital을 사용중인 Redox
