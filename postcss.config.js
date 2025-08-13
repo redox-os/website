@@ -1,8 +1,8 @@
-import autoprefixer from 'autoprefixer';
-import { purgeCSSPlugin } from '@fullhuman/postcss-purgecss';
-import postcssCssVariables from 'postcss-css-variables';
+const autoprefixer = require('autoprefixer');
+const { purgeCSSPlugin } = require('@fullhuman/postcss-purgecss');
+const postcssCssVariables = require('postcss-css-variables');
 
-export default {
+module.exports = {
     plugins: [
         purgeCSSPlugin({
             content: [
