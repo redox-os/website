@@ -17,7 +17,7 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## Kernel Improvements
 
-- (kernel) 
+- (kernel) lebakassemmerl fixed the ARM64 compilation
 
 ## Driver Improvements
 
@@ -25,11 +25,15 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## System Improvements
 
-- (system) 
+- (sys) bjorn3 fixed network booting from Debian
+- (sys) Wildan Mubarok fixed the root scheme (`:`) creation in `exampled`
 
 ## Relibc Improvements
 
-- (relibc) 
+- (relibc) Josh Megnauth implemented the `paths.h` function group
+- (relibc) Wildan Mubarok fixed the `trace` feature
+- (relibc) Darley Barreto enabled some tests for Redox
+- (relibc) Josh Megnauth added the `%m` format to `printf()`, to print the correct error string for `errno`
 
 ## Networking Improvements
 
@@ -43,17 +47,37 @@ If you would like to support Redox, please consider donating or buying some merc
 
 - (fs) 
 
+## Orbital Improvements
+
+- (gui) Wildan Mubarok disabled the launcher bar overlap when maximizing a window
+- (gui) Wildan Mubarok optimized graphical debug scrolling
+
 ## Programs
 
-- (programs) 
+- (programs) Wildan Mubarok fixed and updated Vim (9.1 version)
+- (programs) Josh Megnauth fixed and updated SDL2_mixer to 2.8.1 version
+- (programs) Petr Hrdina fixed the libtool compilation by updating it to version 2.5.4
+- (programs) Ribbon enabled meta-packages in the x86-64 package server
+- (programs) Ribbon added "minimal" and "full" meta-package variants for X11
+
+## Debugging Improvements
+
+- (debug) Wildan Mubarok implemented a way to debug any recipe using QEMU
 
 ## Build System Improvements
 
-- (build-system) 
+- (build-system) Wildan Mubarok fixed the meta-packages
+- (build-system) Wildan Mubarok fixed the `make clean` command
+- (build-system) Wildan Mubarok did a cleanup on Cookbook
+- (build-system) Ribbon simplified the `dev` variant configuration with meta-packages
 
 ## Documentation Improvements
 
-- (doc) 
+- (doc) Wildan Mubarok improved the [system boot documentation](https://doc.redox-os.org/book/boot-process.html)
+
+## Website Improvements
+
+- (web) Wildan Mubarok changed the CSS framework from Bootstrap 3 to [Bulma](https://bulma.io/) to allow better design
 
 ## How To Test The Changes
 
