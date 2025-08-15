@@ -266,7 +266,7 @@ Redox itself will work normally if the processor architecture is supported by th
 - QEMU
 - VirtualBox
 
-In the future the microkernel could act as a hypervisor, similar to [Xen](https://xenproject.org/).
+We can also have a hypervisor variant in the future, similar to [Xen](https://xenproject.org/).
 
 A [hypervisor](https://en.wikipedia.org/wiki/Hypervisor) is a program providing the ability to run multiple isolated operating systems instances simultaneously.
 
