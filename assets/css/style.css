@@ -21,16 +21,29 @@ a:focus {
 	color: #428bca;
 }
 
+code {
+	background-color: inherit;
+}
+
 @media (prefers-color-scheme: dark) {
 	html {
 		background-color:#202020;
 	}
-	body {
+	a, center, code, p, strong, li, .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
 		color: #ffffff;
+	}
+	.content blockquote {
+		background-color:#202020;
 	}
 	.content a, .features a {
 		color: #5fafff;
 	}
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 @font-face {
