@@ -1,17 +1,9 @@
-/** 
- *  IMPORTANT NOTE: This is a trimmed version of Bulma CSS.
- *  If you want to add new version CSS classes, copy full Bulma CSS here
- *  and run "hugo" to generate another new trimmed CSS file by PostCSS.
- *  This was done that way because Bulma CSS Variables is too slow
- *  https://github.com/MadLittleMods/postcss-css-variables/issues/139
- */
-
-@charset "UTF-8";
-
-/*! bulma.io v1.0.4 | MIT License | github.com/jgthms/bulma */
+/*! bulma.io v0.9.4 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
 
-/* Bulma Themes */
+ .content:not(:last-child), .title:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
 
 /* Bulma Base */
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
@@ -57,8 +49,8 @@ iframe {
 }
 
 html {
-  background-color: hsl(221, 14%, 9%);
-  font-size: 1em;
+  background-color: white;
+  font-size: 16px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   min-width: 300px;
@@ -70,30 +62,6 @@ html {
           text-size-adjust: 100%;
 }
 
-@media (prefers-color-scheme: dark){
-  html{
-  background-color: hsl(221, 14%, 9%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  html{
-  background-color: hsl(221, 14%, 9%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  html{
-  background-color: hsl(221, 14%, 9%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  html{
-  background-color: hsl(221, 14%, 9%);
-  }
-}
-
 
 footer,
 header {
@@ -101,200 +69,38 @@ header {
 }
 
 body {
-  font-family: Inter, SF Pro, Segoe UI, Roboto, Oxygen, Ubuntu, Helvetica Neue, Helvetica, Arial, sans-serif;
-}
-
-@media (prefers-color-scheme: light){
-  body{
-  font-family: Inter, SF Pro, Segoe UI, Roboto, Oxygen, Ubuntu, Helvetica Neue, Helvetica, Arial, sans-serif;
-  }
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 code {
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: auto;
-  font-family: Inconsolata, Hack, SF Mono, Roboto Mono, Source Code Pro, Ubuntu Mono, monospace;
-}
-
-@media (prefers-color-scheme: light){
-  code{
-  font-family: Inconsolata, Hack, SF Mono, Roboto Mono, Source Code Pro, Ubuntu Mono, monospace;
-  }
+  font-family: monospace;
 }
 
 body {
-  color: hsl(221deg, 14%, 71%);
+  color: #4a4a4a;
   font-size: 1em;
   font-weight: 400;
   line-height: 1.5;
 }
 
-@media (prefers-color-scheme: light){
-  body{
-  font-weight: 400;
-  }
-}
-
-@media (prefers-color-scheme: dark){
-  body{
-  color: hsl(221deg, 14%, 71%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  body{
-  color: hsl(221deg, 14%, 71%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  body{
-  color: hsl(221deg, 14%, 71%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  body{
-  color: hsl(221deg, 14%, 71%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  body{
-  color: hsl(221deg, 14%, 71%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  body{
-  color: hsl(221deg, 14%, 71%);
-  }
-}
-
 a {
-  cursor: pointer;
-}
-a:focus-visible {
-  outline-color: hsl(233deg, 100%, 63%);
-  outline-offset: 1px;
-  outline-style: solid;
-  outline-width: 2px;
-}
-@media (prefers-color-scheme: light){
-  a:focus-visible{
-  outline-color: hsl(233deg, 100%, 63%);
-  }
-}
-@media (prefers-color-scheme: light){
-  a:focus-visible{
-  outline-color: hsl(233deg, 100%, 63%);
-  }
-}
-@media (prefers-color-scheme: light){
-  a:focus-visible{
-  outline-color: hsl(233deg, 100%, 63%);
-  }
-}
-a:focus-visible:active {
-  outline-width: 1px;
-}
-a:active {
-  outline-width: 1px;
-}
-
-a {
-  color: hsl(233deg, 100%, 58%);
+  color: #485fc7;
   cursor: pointer;
   text-decoration: none;
-  transition-duration: 294ms;
-  transition-property: background-color, border-color, color;
 }
 
-@media (prefers-color-scheme: light){
-  a{
-  transition-duration: 294ms;
-  }
-}
-
-@media (prefers-color-scheme: dark){
-  a{
-  color: hsl(233deg, 100%, 58%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  a{
-  color: hsl(233deg, 100%, 58%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  a{
-  color: hsl(233deg, 100%, 58%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  a{
-  color: hsl(233deg, 100%, 58%);
-  }
+a:hover {
+  color: #363636;
 }
 
 code {
-  background-color: hsl(221, 14%, 96%);
-  border-radius: 0.5em;
-  color: hsl(348deg, 100%, 40%);
+  background-color: whitesmoke;
+  color: #da1039;
   font-size: 0.875em;
   font-weight: normal;
   padding: 0.25em 0.5em 0.25em;
-}
-
-@media (prefers-color-scheme: dark){
-  code{
-  color: hsl(348deg, 100%, 40%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  code{
-  color: hsl(348deg, 100%, 40%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  code{
-  color: hsl(348deg, 100%, 40%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  code{
-  color: hsl(348deg, 100%, 40%);
-  }
-}
-
-@media (prefers-color-scheme: dark){
-  code{
-  background-color: hsl(221, 14%, 96%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  code{
-  background-color: hsl(221, 14%, 96%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  code{
-  background-color: hsl(221, 14%, 96%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  code{
-  background-color: hsl(221, 14%, 96%);
-  }
 }
 
 img {
@@ -310,177 +116,85 @@ img {
     transform: rotate(359deg);
   }
 }
-@keyframes pulsate {
-  50% {
-    opacity: 0.5;
-  }
-}
+
 /* Bulma Elements */
 
-.media:not(:last-child) {
-  margin-bottom: 1.5rem;
+.container {
+  flex-grow: 1;
+  margin: 0 auto;
+  position: relative;
+  width: auto;
 }
 
-@media (prefers-color-scheme: light){
-  .media:not(:last-child){
-  margin-bottom: 1.5rem;
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 960px;
   }
 }
 
-.title:not(:last-child) {
-  margin-bottom: 1.5rem;
-}
-
-@media (prefers-color-scheme: light){
-  .title:not(:last-child){
-  margin-bottom: 1.5rem;
+@media screen and (min-width: 1216px) {
+  .container:not(.is-max-desktop) {
+    max-width: 1152px;
   }
 }
 
-.content:not(:last-child) {
-  margin-bottom: 1.5rem;
-}
-
-@media (prefers-color-scheme: light){
-  .content:not(:last-child){
-  margin-bottom: 1.5rem;
+@media screen and (min-width: 1408px) {
+  .container:not(.is-max-desktop):not(.is-max-widescreen) {
+    max-width: 1344px;
   }
-}
-
-@media screen and (max-width: 768px) {
-}
-@media screen and (min-width: 769px) and (max-width: 1023px) {
 }
 
 .content li + li {
   margin-top: 0.25em;
 }
-.content p:not(:last-child) {
-  margin-bottom: 1em;
-}
+
+.content p:not(:last-child),
 .content ul:not(:last-child) {
   margin-bottom: 1em;
 }
-.content h1 {
-  color: hsl(221deg, 14%, 21%);
-  font-weight: 800;
-  line-height: 1.125;
-}
-@media (prefers-color-scheme: light){
-  .content h1{
-  font-weight: 800;
-  }
-}
-@media (prefers-color-scheme: dark){
-  .content h1{
-  color: hsl(221deg, 14%, 21%);
-  }
-}
-@media (prefers-color-scheme: light){
-  .content h1{
-  color: hsl(221deg, 14%, 21%);
-  }
-}
-@media (prefers-color-scheme: light){
-  .content h1{
-  color: hsl(221deg, 14%, 21%);
-  }
-}
-@media (prefers-color-scheme: light){
-  .content h1{
-  color: hsl(221deg, 14%, 21%);
-  }
-}
-.content h2 {
-  color: hsl(221deg, 14%, 21%);
-  font-weight: 800;
-  line-height: 1.125;
-}
-@media (prefers-color-scheme: light){
-  .content h2{
-  font-weight: 800;
-  }
-}
-@media (prefers-color-scheme: dark){
-  .content h2{
-  color: hsl(221deg, 14%, 21%);
-  }
-}
-@media (prefers-color-scheme: light){
-  .content h2{
-  color: hsl(221deg, 14%, 21%);
-  }
-}
-@media (prefers-color-scheme: light){
-  .content h2{
-  color: hsl(221deg, 14%, 21%);
-  }
-}
-@media (prefers-color-scheme: light){
-  .content h2{
-  color: hsl(221deg, 14%, 21%);
-  }
-}
+
+.content h1,
+.content h2,
 .content h5 {
-  color: hsl(221deg, 14%, 21%);
-  font-weight: 800;
+  color: #363636;
+  font-weight: 600;
   line-height: 1.125;
 }
-@media (prefers-color-scheme: light){
-  .content h5{
-  font-weight: 800;
-  }
-}
-@media (prefers-color-scheme: dark){
-  .content h5{
-  color: hsl(221deg, 14%, 21%);
-  }
-}
-@media (prefers-color-scheme: light){
-  .content h5{
-  color: hsl(221deg, 14%, 21%);
-  }
-}
-@media (prefers-color-scheme: light){
-  .content h5{
-  color: hsl(221deg, 14%, 21%);
-  }
-}
-@media (prefers-color-scheme: light){
-  .content h5{
-  color: hsl(221deg, 14%, 21%);
-  }
-}
+
 .content h1 {
   font-size: 2em;
   margin-bottom: 0.5em;
 }
+
 .content h1:not(:first-child) {
   margin-top: 1em;
 }
+
 .content h2 {
   font-size: 1.75em;
   margin-bottom: 0.5714em;
 }
+
 .content h2:not(:first-child) {
   margin-top: 1.1428em;
 }
+
 .content h5 {
   font-size: 1.125em;
   margin-bottom: 0.8888em;
 }
+
 .content ul {
   list-style: disc outside;
-  margin-inline-start: 2em;
-}
-.content ul:not(:first-child) {
+  margin-left: 2em;
   margin-top: 1em;
 }
+
 .content ul ul {
   list-style-type: circle;
-  margin-bottom: 0.25em;
-  margin-top: 0.25em;
+  margin-top: 0.5em;
 }
+
 .content ul ul ul {
   list-style-type: square;
 }
@@ -488,18 +202,9 @@ img {
 .icon {
   align-items: center;
   display: inline-flex;
-  flex-shrink: 0;
   justify-content: center;
   height: 1.5rem;
-  transition-duration: 294ms;
-  transition-property: color;
   width: 1.5rem;
-}
-
-@media (prefers-color-scheme: light){
-  .icon{
-  transition-duration: 294ms;
-  }
 }
 
 @keyframes moveIndeterminate {
@@ -514,144 +219,61 @@ img {
 .title {
   word-break: break-word;
 }
+
 .title em {
   font-weight: inherit;
 }
 
 .title {
-  color: hsl(221deg, 14%, 21%);
+  color: #363636;
   font-size: 2rem;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.125;
 }
 
-@media (prefers-color-scheme: light){
-  .title{
-  font-weight: 800;
-  }
-}
-
-@media (prefers-color-scheme: light){
-  .title{
-  font-size: 2rem;
-  }
-}
-
-@media (prefers-color-scheme: light){
-  .title{
-  color: hsl(221deg, 14%, 21%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  .title{
-  color: hsl(221deg, 14%, 21%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  .title{
-  color: hsl(221deg, 14%, 21%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  .title{
-  color: hsl(221deg, 14%, 21%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  .title{
-  color: hsl(221deg, 14%, 21%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  .title{
-  color: hsl(221deg, 14%, 21%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  .title{
-  color: hsl(221deg, 14%, 21%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  .title{
-  color: hsl(221deg, 14%, 21%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  .title{
-  color: hsl(221deg, 14%, 21%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  .title{
-  color: hsl(221deg, 14%, 21%);
-  }
-}
-
-@media (prefers-color-scheme: dark){
-  .title{
-  color: hsl(221deg, 14%, 21%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  .title{
-  color: hsl(221deg, 14%, 21%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  .title{
-  color: hsl(221deg, 14%, 21%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  .title{
-  color: hsl(221deg, 14%, 21%);
-  }
-}
-.title:not(.is-spaced):has(+ .subtitle) {
-  margin-bottom: 0;
-}
-
 /* Bulma Form */
-
-/* Bulma Form */
-
-/* Bulma Form */
-
-/* Bulma Form */
-
-/* Bulma Form */
-
-/* Bulma Form */
-@media screen and (min-width: 769px), print {
-}
 
 /* Bulma Components */
+
+.media {
+  align-items: flex-start;
+  display: flex;
+  text-align: inherit;
+}
+
+.media .content:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+
+.media .media {
+  border-top: 1px solid rgba(219, 219, 219, 0.5);
+  display: flex;
+  padding-top: 0.75rem;
+}
+
+.media .media .content:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.media .media .media {
+  padding-top: 0.5rem;
+}
+
+.media .media .media + .media {
+  margin-top: 0.5rem;
+}
+
+.media + .media {
+  border-top: 1px solid rgba(219, 219, 219, 0.5);
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
 
 .menu {
   font-size: 1rem;
 }
 
-@media (prefers-color-scheme: light){
-  .menu{
-  font-size: 1rem;
-  }
-}
-
 /* Bulma Grid */
-
 .column {
   display: block;
   flex-basis: 0;
@@ -659,6 +281,7 @@ img {
   flex-shrink: 1;
   padding: 0.75rem;
 }
+
 @media screen and (min-width: 769px), print {
   .column.is-two-thirds {
     flex: none;
@@ -671,175 +294,22 @@ img {
 }
 
 .columns {
-  margin-inline-start: calc(-1 * 0.75rem);
-  margin-inline-end: calc(-1 * 0.75rem);
-  margin-top: calc(-1 * 0.75rem);
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+  margin-top: -0.75rem;
 }
+
 .columns:last-child {
-  margin-bottom: calc(-1 * 0.75rem);
+  margin-bottom: -0.75rem;
 }
+
 .columns:not(:last-child) {
   margin-bottom: calc(1.5rem - 0.75rem);
 }
-@media (prefers-color-scheme: light){
-  .columns:not(:last-child){
-  margin-bottom: calc(1.5rem - 0.75rem);
-  }
-}
-@media (prefers-color-scheme: light){
-  .columns:not(:last-child){
-  margin-bottom: calc(1.5rem - 0.75rem);
-  }
-}
+
 @media screen and (min-width: 769px), print {
   .columns:not(.is-desktop) {
     display: flex;
-  }
-}
-
-/* Bulma Components */
-.container {
-  flex-grow: 1;
-  margin: 0 auto;
-  position: relative;
-  width: 100%;
-}
-@media screen and (min-width: 1024px) {
-  .container {
-    max-width: 960px;
-  }
-}
-@media screen and (min-width: 1216px) {
-  .container:not(.is-max-tablet):not(.is-max-desktop) {
-    max-width: 1152px;
-  }
-}
-@media screen and (min-width: 1408px) {
-  .container:not(.is-max-tablet):not(.is-max-desktop):not(.is-max-widescreen) {
-    max-width: 1344px;
-  }
-}
-
-.footer {
-  background-color: hsl(221, 14%, 98%);
-  padding: 3rem 1.5rem 6rem;
-}
-
-@media (prefers-color-scheme: dark){
-  .footer{
-  background-color: hsl(221, 14%, 98%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  .footer{
-  background-color: hsl(221, 14%, 98%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  .footer{
-  background-color: hsl(221, 14%, 98%);
-  }
-}
-
-@media (prefers-color-scheme: light){
-  .footer{
-  background-color: hsl(221, 14%, 98%);
-  }
-}
-@media screen and (max-width: 768px) {
-}
-@media screen and (max-width: 768px) {
-}
-@media screen and (max-width: 768px) {
-}
-@media screen and (max-width: 768px) {
-}
-@media screen and (max-width: 768px) {
-}
-@media screen and (max-width: 768px) {
-}
-@media screen and (max-width: 768px) {
-}
-@media screen and (max-width: 768px) {
-}
-@media screen and (max-width: 768px) {
-}
-@media screen and (max-width: 768px) {
-}
-@media screen and (max-width: 768px) {
-}
-
-.media {
-  align-items: flex-start;
-  display: flex;
-  text-align: inherit;
-}
-.media .content:not(:last-child) {
-  margin-bottom: 0.75rem;
-}
-.media .media {
-  border-top-color: hsla(221, 14%, 86%, 0.5);
-  border-top-style: solid;
-  border-top-width: 1px;
-  display: flex;
-  padding-top: 0.75rem;
-}
-@media (prefers-color-scheme: dark){
-  .media .media{
-  border-top-color: hsla(221, 14%, 24%, 0.5);
-  }
-}
-@media (prefers-color-scheme: light){
-  .media .media{
-  border-top-color: hsla(221, 14%, 86%, 0.5);
-  }
-}
-@media (prefers-color-scheme: light){
-  .media .media{
-  border-top-color: hsla(221, 14%, 86%, 0.5);
-  }
-}
-@media (prefers-color-scheme: light){
-  .media .media{
-  border-top-color: hsla(221, 14%, 86%, 0.5);
-  }
-}
-.media .media .content:not(:last-child) {
-  margin-bottom: 0.5rem;
-}
-.media .media .media {
-  padding-top: 0.5rem;
-}
-.media .media .media + .media {
-  margin-top: 0.5rem;
-}
-.media + .media {
-  border-top-color: hsla(221, 14%, 86%, 0.5);
-  border-top-style: solid;
-  border-top-width: 1px;
-  margin-top: 1rem;
-  padding-top: 1rem;
-}
-@media (prefers-color-scheme: dark){
-  .media + .media{
-  border-top-color: hsla(221, 14%, 24%, 0.5);
-  }
-}
-@media (prefers-color-scheme: light){
-  .media + .media{
-  border-top-color: hsla(221, 14%, 86%, 0.5);
-  }
-}
-@media (prefers-color-scheme: light){
-  .media + .media{
-  border-top-color: hsla(221, 14%, 86%, 0.5);
-  }
-}
-@media (prefers-color-scheme: light){
-  .media + .media{
-  border-top-color: hsla(221, 14%, 86%, 0.5);
   }
 }
 
@@ -848,4 +318,11 @@ img {
 .px-2 {
   padding-left: 0.5rem !important;
   padding-right: 0.5rem !important;
+}
+
+/* Bulma Layout */
+
+.footer {
+  background-color: #fafafa;
+  padding: 3rem 1.5rem 6rem;
 }

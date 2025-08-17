@@ -68,6 +68,12 @@ Use the [lychee](https://lychee.cli.rs/) tool to verify broken links, it's very 
 
 Read [this](https://lychee.cli.rs/installation/) page to install the tool.
 
+## Customizing Bulma
+
+The [bulma.css](assets/css/bulma.css) used in this page is a trimmed version from [the production CSS](https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.css). We're not using the v1 version because Netsurf can't use CSS variables which v1 is heavily using it.
+
+To add more classes from Bulma, copy the full production CSS into [bulma.css](assets/css/bulma.css) then run `hugo` to create another trimmed version of it using PostCSS, then copy the generated bulma.css back into the repository.
+
 ### Usage
 
 Run the following command inside the repository folder:
