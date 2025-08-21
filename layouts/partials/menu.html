@@ -1,6 +1,6 @@
 <header>
   <nav>
-    <ul class="columns menu">
+    <ul class="columns menu px-5">
       <li class="column is-one-quarter">
         <a href="{{ if .Site.LanguagePrefix }}{{ .Site.LanguagePrefix }}{{ else }}/{{ end }}">
             <picture>
@@ -14,6 +14,12 @@
           <h2><a style="color: inherit;" href="{{ .URL | relLangURL }}">{{ .Name }}</a></h2>
         {{ end }}
       </li>
+
+      <nav class="column columns is-align-items-center is-one-quarter is-hidden-touch is-hidden-desktop-only" id="social">
+          {{ partial "social.html" . }}
+      </nav>
+
     </ul>
   </nav>
 </header>
+<main class="container is-max-desktop px-2">
