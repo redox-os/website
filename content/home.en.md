@@ -14,7 +14,6 @@ url = "home"
           <a class="btn btn-primary my-1" href="/quickstart/">Quickstart</a>
           <a class="btn btn-default my-1" href="https://gitlab.redox-os.org/redox-os/redox/">GitLab</a>
           <a class="btn btn-default my-1" href="/news/release-0.9.0/">Release Notes</a>
-          <a class="btn btn-default my-1" href="/screens/">Gallery</a>
         </div>
       </div>
       <div class="column hero-image">
