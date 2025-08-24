@@ -1,34 +1,27 @@
 </main>
 <footer>
-  <div class="mx-auto content mt-5 px-5 container is-widescreen">
+  <div class="mx-auto mt-5 px-5 container is-widescreen">
     <nav id="footer-nav" class="columns">
-      <nav class="column columns">
+      <nav class="content column columns">
         <div class="column">
           <h3>Redox OS</h3>
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/">Documentation</a></li>
-            <li><a href="/">Contributing</a></li>
-            <li><a href="/">Comunity</a></li>
-            <li><a href="/">Merchendise</a></li>
-          </ul>
-        </div>
-        <div class="column">
-          <h3>The Nonprofit</h3>
-          <ul>
-            <li><a href="/">Bylaws</a></li>
-            <li><a href="/">Meeting Minutes</a></li>
-            <li><a href="/">Materials</a></li>
-            <li><a href="/">Partnerships</a></li>
+            <li><a href="/docs/">Documentation</a></li>
+            <li><a href="/news/">News</a></li>
+            <li><a href="/community/">Community</a></li>
+            <li><a href="/donate/">Merchandise</a></li>
+            <li><a href="/rsoc/">RSoC</a></li>
           </ul>
         </div>
         <div class="column">
           <h3>Resources</h3>
           <ul>
-            <li><a href="/">GitLab</a></li>
-            <li><a href="/">Book</a></li>
-            <li><a href="/">Materials</a></li>
-            <li><a href="/">Partnerships</a></li>
+            <li><a href="https://gitlab.redox-os.org/">GitLab</a></li>
+            <li><a href="https://doc.redox-os.org/book/">Book</a></li>
+            <li><a href="https://static.redox-os.org/">Packages</a></li>
+            <li><a href="/screens/">Gallery</a></li>
+            <li><a href="https://www.youtube.com/@RedoxOS/videos">Meeting Minutes</a></li>
           </ul>
         </div>
       </nav>
@@ -39,7 +32,7 @@
           <img src="/img/logo.png" height="120" alt="Redox Logo" />
         </picture>
 
-        <div class="is-flex">
+        <div class="is-flex is-flex-wrap-wrap socials">
           {{ partial "social.html" . }}
         </div>
 
@@ -63,14 +56,16 @@
     <div id="copyright" class="columns">
       <div class="column">
         <p>
-          Copyright &copy; 2015-2025 by <a href="https://gitlab.redox-os.org/redox-os"><b>The Redox Developers</b></a>.
+          Copyright &copy; 2015-2025 by <a href="https://gitlab.redox-os.org/redox-os"><u>The Redox Developers</u></a>.
           Redox OS is a trademark of the Redox OS nonprofit.
         </p>
       </div>
       <div class="column is-one-quarter">
-        <a>Privacy Policy</a>
-        <a>Nonprofit</a>
-        <a>Licenses</a>
+        <p>
+          <a>Privacy Policy</a> &nbsp;
+          <a>Nonprofit</a> &nbsp;
+          <a>Licenses</a>
+        </p>
       </div>
     </div>
   </div>
