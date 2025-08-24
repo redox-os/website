@@ -320,6 +320,22 @@ ul.laundry-list {
 	color: white;
 }
 
+.hero-4, .hero-6 {
+	background-color: #10101080;
+}
+
+.hero-4 a {
+	text-decoration: underline;
+}
+
+.hero-4 img {
+	background-color: white;
+	border-radius: .5em;
+	max-width: 20vw;
+	width: 30em;
+	padding: 1em;
+}
+
 
 @media (prefers-color-scheme: dark) {
 	.hero-3 p {
@@ -328,8 +344,7 @@ ul.laundry-list {
 }
 
 footer {
-	margin: 1.2em auto 0 auto;
-	padding-top: 0.6em;
+	padding-top: 1.2em;
 	/* half to accomodate p tag margin */
 }
 
