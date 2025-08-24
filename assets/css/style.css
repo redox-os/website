@@ -352,6 +352,10 @@ ul.laundry-list {
 	.hero-3 p {
 		color: #ffffff;
 	}
+	
+	.hero-4, .hero-6 {
+		background-color: #10101010;
+	}
 }
 
 footer {
