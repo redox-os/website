@@ -15,25 +15,39 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## Bootloader Improvements
+
+- (boot) Bjorn Beishline fixed DMA bugs in ARM64 virtualization
+
 ## Kernel Improvements
 
+- (kernel) Wildan Mubarok implemented the ARM virtual timer
+- (kernel) Wildan Mubarok fixed the formatting check on CI
 - (kernel) lebakassemmerl fixed the ARM64 compilation
 
 ## Driver Improvements
 
-- (drivers) 
+- (drivers) Wildan Mubarok allowed drivers to be debugged with GDB
 
 ## System Improvements
 
 - (sys) bjorn3 fixed network booting from Debian
+- (sys) Ron Williams fixed the `which` tool
 - (sys) Wildan Mubarok fixed the root scheme (`:`) creation in `exampled`
+
+## Virtualization Improvements
+
+- (virt) Wildan Mubarok enabled [HVF](https://wiki.qemu.org/Features/HVF) for QEMU on MacOS Silicon
 
 ## Relibc Improvements
 
 - (relibc) Josh Megnauth implemented the `paths.h` function group
+- (relibc) Josh Megnauth did several improvements to the `syslog` functionality
+- (relibc) Josh Megnauth added the `%m` format to `printf()`, to print the correct error string for `errno`
+- (relibc) Josh Megnauth implemented the `_POSIX_VDISABLE` extension
 - (relibc) Wildan Mubarok fixed the `trace` feature
 - (relibc) Darley Barreto enabled some tests for Redox
-- (relibc) Josh Megnauth added the `%m` format to `printf()`, to print the correct error string for `errno`
+- (relibc) Ron Williams increased the POSIX signals compliance
 
 ## Networking Improvements
 
@@ -55,6 +69,8 @@ If you would like to support Redox, please consider donating or buying some merc
 ## Programs
 
 - (programs) Wildan Mubarok fixed and updated Vim (9.1 version)
+- (programs) Wildan Mubarok added dynamic linking support to our SDL2 fork
+- (programs) Wildan Mubarok reduced the size of the terminfo dependency to speed up the Redox image creation and installation
 - (programs) Josh Megnauth fixed and updated SDL2_mixer to 2.8.1 version
 - (programs) Petr Hrdina fixed the libtool compilation by updating it to version 2.5.4
 - (programs) Ribbon enabled meta-packages in the x86-64 package server
@@ -64,12 +80,18 @@ If you would like to support Redox, please consider donating or buying some merc
 
 - (debug) Wildan Mubarok implemented a way to debug any recipe using QEMU
 
+## Testing Improvements
+
+- (tests) auronandace packaged the [os-test](https://gitlab.com/sortix/os-test) POSIX test suite
+
 ## Build System Improvements
 
-- (build-system) Wildan Mubarok fixed the meta-packages
-- (build-system) Wildan Mubarok fixed the `make clean` command
-- (build-system) Wildan Mubarok did a cleanup on Cookbook
-- (build-system) Ribbon simplified the `dev` variant configuration with meta-packages
+- (build) Wildan Mubarok updated the Podman container to Debian 13 to fix it
+- (build) Wildan Mubarok fixed the meta-packages
+- (build) Wildan Mubarok fixed the `make clean` command
+- (build) Wildan Mubarok fixed a GNU Make misconfiguration in the Podman Build on MacOS
+- (build) Wildan Mubarok did a cleanup on Cookbook
+- (build) Ribbon simplified the `dev` variant configuration with meta-packages
 
 ## Documentation Improvements
 
@@ -78,6 +100,7 @@ If you would like to support Redox, please consider donating or buying some merc
 ## Website Improvements
 
 - (web) Wildan Mubarok changed the CSS framework from Bootstrap 3 to [Bulma](https://bulma.io/) to allow better design
+- (web) Wildan Mubarok fixed the font colors of dark and light modes
 
 ## How To Test The Changes
 
