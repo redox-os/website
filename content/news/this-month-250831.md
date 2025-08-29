@@ -67,6 +67,8 @@ Jeremy Soller ported the COSMIC Reader for his upcoming presentation at RustConf
 - (relibc) Wildan Mubarok fixed the `trace` feature
 - (relibc) Darley Barreto enabled some tests for Redox
 - (relibc) Ron Williams increased the POSIX signals compliance
+- (relibc) Jeremy Soller implemented some additional basic types to improve compatibility
+- (relibc) Jeremy Soller fixed a typo that was causing the `connect()` function to fail
 
 ## Networking Improvements
 
