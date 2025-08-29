@@ -23,6 +23,10 @@ If you would like to support Redox, please consider donating or buying some merc
 
 Wildan Mubarok fixed a problem where some dynamically linked program packages were carrying static library objects making them very big in size, this fix reduced the size of [packages](https://static.redox-os.org/pkg/x86_64-unknown-redox/) and [images](https://static.redox-os.org/img/x86_64/) a lot!
 
+## COSMIC Reader on Redox!
+
+Jeremy Soller ported the COSMIC Reader for his upcoming presentation at RustConf 2025.
+
 ## Bootloader Improvements
 
 - (boot) Bjorn Beishline fixed DMA bugs in ARM64 virtualization
@@ -113,6 +117,7 @@ Wildan Mubarok fixed a problem where some dynamically linked program packages we
 ## Documentation Improvements
 
 - (doc) Wildan Mubarok improved the [system boot documentation](https://doc.redox-os.org/book/boot-process.html)
+- (doc) Ribbon added the "Easy and quick to expand" [microkernel benefit](https://doc.redox-os.org/book/why-a-new-os.html#benefits-1)
 
 ## Website Improvements
 
