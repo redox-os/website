@@ -7,6 +7,10 @@ date = "2025-08-31"
 Redox OS is a Unix-like general-purpose microkernel-based operating system
 written in Rust. August was a very exciting month for Redox! Here's all the latest news.
 
+- PDF preview on COSMIC Files
+
+<a href="/img/screenshot/cosmic-files-pdf-preview.png"><img class="img-responsive" alt="Description" src="/img/screenshot/cosmic-files-pdf-preview.png"/></a>
+
 ## Donate to Redox
 
 If you would like to support Redox, please consider donating or buying some merch!
@@ -14,6 +18,10 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Donate](https://www.redox-os.org/donate/)
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
+
+## Fixed Dynamically Linked Package Size
+
+Wildan Mubarok fixed a problem where some dynamically linked program packages were carrying static library objects making them very big in size, this fix reduced the size of [packages](https://static.redox-os.org/pkg/x86_64-unknown-redox/) and [images](https://static.redox-os.org/img/x86_64/) a lot!
 
 ## Bootloader Improvements
 
@@ -28,6 +36,7 @@ If you would like to support Redox, please consider donating or buying some merc
 ## Driver Improvements
 
 - (drivers) Wildan Mubarok allowed drivers to be debugged with GDB
+- (drivers) Wildan Mubarok fixed possible panic in device enumeration
 
 ## System Improvements
 
@@ -37,29 +46,27 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## Virtualization Improvements
 
+- (virt) bjorn3 enabled UEFI by default for x86-64
+- (virt) bjorn3 fixed the QEMU terminal mode in ARM64 and RISC-V
+- (virt) bjorn3 enabled the [ramfb](https://wiki.osdev.org/Ramfb) device on x86
 - (virt) Wildan Mubarok enabled [HVF](https://wiki.qemu.org/Features/HVF) for QEMU on MacOS Silicon
 
 ## Relibc Improvements
 
+- (relibc) Josh Megnauth implemented the `fstatat()` function
 - (relibc) Josh Megnauth implemented the `paths.h` function group
 - (relibc) Josh Megnauth did several improvements to the `syslog` functionality
 - (relibc) Josh Megnauth added the `%m` format to `printf()`, to print the correct error string for `errno`
 - (relibc) Josh Megnauth implemented the `_POSIX_VDISABLE` extension
+- (relibc) Josh Megnauth fixed the `sysconf.h` function group in Linux
+- (relibc) Wildan Mubarok implemented the `getnameinfo()`, `getaddrinfo()`, `sem_timedwait()`, and `sem_clockwait()` functions
 - (relibc) Wildan Mubarok fixed the `trace` feature
 - (relibc) Darley Barreto enabled some tests for Redox
 - (relibc) Ron Williams increased the POSIX signals compliance
 
 ## Networking Improvements
 
-- (net) 
-
-## RedoxFS Improvements
-
-- (redoxfs) 
-
-## Filesystem Improvements
-
-- (fs) 
+- (net) voedipus fixed the logic of counting received records in the `ping` tool
 
 ## Orbital Improvements
 
@@ -68,6 +75,7 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## Programs
 
+- (programs) Wildan Mubarok fixed the OpenSSH compilation
 - (programs) Wildan Mubarok fixed and updated Vim (9.1 version)
 - (programs) Wildan Mubarok added dynamic linking support to our SDL2 fork
 - (programs) Wildan Mubarok reduced the size of the terminfo dependency to speed up the Redox image creation and installation
@@ -79,6 +87,7 @@ If you would like to support Redox, please consider donating or buying some merc
 ## Debugging Improvements
 
 - (debug) Wildan Mubarok implemented a way to debug any recipe using QEMU
+- (debug) bjorn3 implemented a way to start the QEMU VM without waiting for GDB
 
 ## Testing Improvements
 
@@ -87,9 +96,17 @@ If you would like to support Redox, please consider donating or buying some merc
 ## Build System Improvements
 
 - (build) Wildan Mubarok updated the Podman container to Debian 13 to fix it
+- (build) Wildan Mubarok updated the `cbindgen` and `just` tools to fix compilation after a [recent Rust change](https://github.com/mozilla/cbindgen/issues/1040)
+- (build) Wildan Mubarok changed the Podman Rust tooling installation script to use precompiled binaries and speedup recipe compilation
+- (build) Wildan Mubarok enabled dynamic linking by default for GNU Autotools, CMake and Meson templates
+- (build) Wildan Mubarok implemented Cookbook templates for CMake and Meson
+- (build) Wildan Mubarok implemented the `configureflags`, `cmakeflags`, and `mesonflags` data types for GNU Autotools, CMake and Meson flags when using their Cookbook templates
+- (build) Wildan Mubarok added an option (QEMU_ON_WINDOWS) to run QEMU on Windows from WSL2
 - (build) Wildan Mubarok fixed the meta-packages
 - (build) Wildan Mubarok fixed the `make clean` command
 - (build) Wildan Mubarok fixed a GNU Make misconfiguration in the Podman Build on MacOS
+- (build) Wildan Mubarok improved the performance of the `make rebuild` command by 50% or more by caching automatic dependencies
+- (build) Wildan Mubarok disabled the `rustdoc` installation in Podman to reduce the setup time
 - (build) Wildan Mubarok did a cleanup on Cookbook
 - (build) Ribbon simplified the `dev` variant configuration with meta-packages
 
