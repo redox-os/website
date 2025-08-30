@@ -45,7 +45,7 @@ Jeremy Soller ported the COSMIC Reader for his upcoming presentation at RustConf
 
 ## System Improvements
 
-- (sys) bjorn3 fixed network booting from Debian
+- (sys) bjorn3 fixed network booting in QEMU with Debian 13
 - (sys) Ron Williams fixed the `which` tool
 - (sys) Wildan Mubarok fixed the root scheme (`:`) creation in `exampled`
 
@@ -54,7 +54,7 @@ Jeremy Soller ported the COSMIC Reader for his upcoming presentation at RustConf
 - (virt) bjorn3 enabled QEMU UEFI by default for x86-64
 - (virt) bjorn3 fixed the QEMU terminal mode in ARM64 and RISC-V
 - (virt) bjorn3 fixed multi-display support on QEMU BIOS
-- (virt) bjorn3 enabled the [ramfb](https://wiki.osdev.org/Ramfb) QEMU device on x86
+- (virt) bjorn3 added support for using the [ramfb](https://wiki.osdev.org/Ramfb) QEMU device on x86
 - (virt) Wildan Mubarok enabled [HVF](https://wiki.qemu.org/Features/HVF) for QEMU on MacOS Silicon
 
 ## Relibc Improvements
@@ -95,7 +95,7 @@ Jeremy Soller ported the COSMIC Reader for his upcoming presentation at RustConf
 ## Debugging Improvements
 
 - (debug) Wildan Mubarok implemented a way to debug any recipe using QEMU
-- (debug) bjorn3 implemented a way to start the QEMU VM without waiting for GDB
+- (debug) bjorn3 implemented a way to start a debuggable QEMU VM without waiting for GDB
 
 ## Testing Improvements
 
