@@ -25,10 +25,7 @@ url = "home"
 <section class="hero hero-2">
   <div class="hero-body">
     <p class="pitch">
-      <b>Redox</b> is a <u>Microkernel</u> Operating System <u>written in Rust</u> designed to be lightweight,
-      performant, and
-      secure, aiming to bring full set of <u>Unix-compatible programs</u> and be a complete alternative to Linux and
-      BSD.
+      <b>Redox</b> is a <a style="color: inherit;" href="https://en.wikipedia.org/wiki/Unix-like"><b>Unix-like</b></a> general-purpose microkernel-based operating system written in <a style="color: inherit;" href="https://www.rust-lang.org/"><b>Rust</b></a>, aiming to bring the innovations of Rust to a modern microkernel, a full set of programs and be a complete alternative to Linux and BSD.
     </p>
   </div>
 </section>
@@ -42,15 +39,15 @@ url = "home"
         <div class="subtitle mt-2">
           <ul class="laundry-list features mb-0">
             <li><a href="https://doc.redox-os.org/book/microkernels.html">Microkernel</a> design</li>
-            <li><a href="/faq/#rust-benefits">Rust-based</a> <a
+            <li><a href="/faq/#rust-benefits">Rust-written</a> <a
                 href="https://gitlab.redox-os.org/redox-os/kernel">kernel</a> and <a
                 href="https://gitlab.redox-os.org/redox-os/drivers">drivers</a></li>
             <li><a href="/faq/#how-redox-was-influenced-by-other-systems">Inspired by</a>  Plan 9, Minix, seL4, BSD and Linux</li>
-            <li>Quick <a href="https://doc.redox-os.org/book/boot-process.html">System Bootstrap</a></li>
+            <li>Fast <a href="https://doc.redox-os.org/book/boot-process.html">System Bootstrap</a></li>
             <li><a href="https://doc.redox-os.org/book/drivers.html">Drivers</a> run in userspace</li>
             <li>Programs interact via <a href="https://doc.redox-os.org/book/schemes-resources.html">Schemes</a></li>
             <li>Intel/AMD, ARM and RISC-V <a href="">chip support</a></li>
-            <li>Smaller <a href="https://en.wikipedia.org/wiki/Attack_surface" target="_blank">attack of surface</a>
+            <li>Much smaller <a href="https://en.wikipedia.org/wiki/Attack_surface" target="_blank">attack of surface</a>
               compared to Linux</li>
             <li>The <a href="https://static.redox-os.org/img/x86_64/">minimal image</a> size is under 50 MB</li>
           </ul>
@@ -75,7 +72,7 @@ url = "home"
             <li>Good <a href="/faq/#which-virtual-machines-does-redox-have-integration-with">virtualization support</a></li>
             <li>Common <a href="/faq/#which-devices-does-redox-support">hardware support</a></li>
             <li><a href="https://doc.redox-os.org/book/redoxfs.html">ZFS-Inspired</a> file system</li>
-            <li>Boot from Disk, USB and NVME</li>
+            <li>Boot from NVMe, SATA, IDE, and USB</li>
             <li>Boot with <a href="https://doc.redox-os.org/book/installing.html">full disk encryption</a></li>
             <li>See list of <a
                 href="https://gitlab.redox-os.org/redox-os/drivers#hardware-interfaces-and-devices">supported
@@ -105,10 +102,10 @@ url = "home"
             <li>Support for <a href="https://doc.rust-lang.org/std/">Rust Standard Library</a></li>
             <li>Integration with <a href="https://gitlab.redox-os.org/redox-os/gcc">forked GCC Compiler</a></li>
             <li>Many crates supports Redox</li>
-            <li>GNU-Like Coreutils support via <a href="https://github.com/uutils/coreutils/">uutils</a></li>
+            <li>Linux system tools supported via <a href="https://github.com/uutils/coreutils/">uutils</a></li>
             <li>GUI management support via <a href="https://github.com/rust-windowing/winit/">winit</a></li>
             <li>GUI apps support via <a href="/news/this-month-240531">COSMIC Apps</a></li>
-            <li>See list of <a href="https://doc.redox-os.org/book/side-projects.html"> Rust side-projects</a></li>
+            <li>See list of <a href="https://doc.redox-os.org/book/side-projects.html"> side-projects</a></li>
           </ul>
         </div>
       </div>
@@ -130,12 +127,11 @@ url = "home"
           <ul class="laundry-list features mb-0">
             <li><a href="https://doc.redox-os.org/book/programs-libraries.html">Source compatibility</a> with Linux/BSD
               programs</li>
-            <li>Many UNIX-compliant <a href="/faq/#what-programs-can-redox-run">programs ported</a></li>
+            <li>Many Linux <a href="/faq/#what-programs-can-redox-run">programs ported</a></li>
             <li>Partial <a href="https://en.wikipedia.org/wiki/POSIX">POSIX</a> compatibility</li>
-            <li>C Library is <a href="https://gitlab.redox-os.org/redox-os/relibc">written in Rust</a> </li>
-            <li>Support for <a href="/news/01_rsoc2024_dynamic_linker"> Dynamic Linker</a></li>
-            <li><a href="/news/release-0.5.0#standard-images">Pthreads</a> , <a href="/news/kernel-11">Signals</a> and <a href="/news/rsoc-2025-fdtbl">UDS</a> support</li>
-            <li>See <a href="https://doc.redox-os.org/book/features.html">feature comparison </a> between Unix systems</li>
+            <li>Custom C Standard Library is <a href="https://gitlab.redox-os.org/redox-os/relibc">written in Rust</a> </li>
+            <li>POSIX Signals/Threads and Unix Domain Sockets support</li>
+            <li>See <a href="https://doc.redox-os.org/book/features.html">feature comparison </a> between Unix-like systems</li>
           </ul>
         </div>
       </div>
@@ -155,14 +151,12 @@ url = "home"
         </p>
         <div class="subtitle mt-2">
           <ul class="laundry-list features mb-0">
-            <li>Rust-based <a href="https://gitlab.redox-os.org/redox-os/orbital/">GUI Compositor</a> </li>
-            <li>Support for <a href="/news/porting-strategy#games-and-emulators">SDL1, SDL2</a>, <a href="/news/this-month-250531/">GTK3 and Mesa3D</a> </li>
-            <li>Support for <a href="/news/this-month-250531/">X11 and X11 programs</a> </li>
-            <li>Support for OpenGL 2 via CPU Emulation</li>
-            <li>Working  <a href="https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/video">media playback</a> with SDL Player</li>
-            <li>Working <a href="https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/web">web browser</a>  with Netsurf</li>
+            <li>Rust-written <a href="https://gitlab.redox-os.org/redox-os/orbital/">windowing system and window manager</a> </li>
+            <li>Support for X11, GTK3, Iced, Slint, egui, winit, softbuffer, SDL2, SDL1 and Mesa3D OSMesa</li>
+            <li>Support for OpenGL CPU emulation via Mesa3D LLVMPipe</li>
+            <li>Working media playback with ffplay and SDL Player</li>
+            <li>Working basic web browser with NetSurf</li>
             <li>Many <a href="https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/games">games</a>  and <a href="https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/demos">demos</a> are ported</li>
-            <li>See our <a href="/news/porting-strategy/">Software Porting Strategy</a></li>
           </ul>
         </div>
       </div>
@@ -183,11 +177,10 @@ url = "home"
         <div class="subtitle mt-2">
           <ul class="laundry-list features mb-0">
             <li>Active Community since 2015</li>
-            <li>We work on <a href="https://gitlab.redox-os.org/redox-os/redox/">self-hosted GitLab</a> </li>
-            <li>Hosting <a href="/rsoc/">RSoC annually since 2018</a> </li>
-            <li>Our work are <a href="https://doc.redox-os.org/book/philosophy.html">predominately MIT Licensed</a></li>
-            <li>Backed via <a href="https://www.patreon.com/redox_os">Patreon</a>, Sponsor, <a
-                href="https://redox-os.creator-spring.com/">Swags</a>, <a href="/donate/">and many more</a></li>
+            <li> <a href="https://gitlab.redox-os.org/redox-os/redox/">Self-hosted GitLab server</a> </li>
+            <li>Hosting the <a href="/rsoc/">Redox Summer Of Code program annually since 2018</a> </li>
+            <li>Our work is <a href="https://doc.redox-os.org/book/philosophy.html">predominately MIT Licensed</a></li>
+            <li>Backed via [Donorbox](https://donorbox.org/redox-os), [Patreon](https://www.patreon.com/redox_os), [Bitcoin](https://bitcoin.org), [Ethereum](https://ethereum.org), [merch](https://redox-os.creator-spring.com/), [and many more](/donate/) </li>
             <li>Many ways to <a
                 href="https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md">support and contribute</a> </li>
             <li>Chat with us on <a
@@ -239,7 +232,7 @@ url = "home"
       <div class="subtitle mx-auto  mt-2">
         <ul class="laundry-list features mb-0">
           <li><a href="https://gitlab.redox-os.org/redox-os/redox/-/issues/1427">Wayland</a>, <a
-              href="https://gitlab.redox-os.org/redox-os/redox/-/issues/1429">GTK 4+ and Qt5+</a></li>
+              href="https://gitlab.redox-os.org/redox-os/redox/-/issues/1429">GTK4, Qt5, and Qt6+</a></li>
           <li><a href="https://nlnet.nl/project/Capability-based-RedoxOS/">Capability-based Security</a></li>
           <li><a href="https://gitlab.redox-os.org/redox-os/redox/-/issues/1412">Smaller kernel code</a> </li>
           <li><a href="https://gitlab.redox-os.org/redox-os/redox/-/issues/1390">Self-Hosting OS</a></li>
