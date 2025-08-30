@@ -19,6 +19,23 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## RustConf 2025
+
+Jeremy will be presenting at [RustConf 2025](https://rustconf.com/schedule/#1472) in Seattle!
+Jeremy Soller, the creator of Redox, will be presenting [10 Years of Redox and Rust](https://github.com/jackpot51/rustconf2025).
+His presentation is on Thursday, September 4 at 10:55am.
+
+If you can attend in person, please feel free to [DM Jeremy](https://soller.dev/) to organize a meetup.
+There are also free tickets for virtual attendees.
+
+## New Build Engineer
+
+Redox has hired a part-time build engineer.
+Wildan Mubarok (`willnode` on Matrix Chat) will be responsible for monitoring our GitLab,
+ensuring our packages and images are being built correctly, and tracking down CI problems.
+He will also be improving our build system and contributing to Redox as his time allows.
+Welcome Wildan!
+
 ## Fixed Dynamically Linked Package Size
 
 Wildan Mubarok fixed a problem where some dynamically linked program packages were carrying static library objects making them very big in size, this fix reduced the size of [packages](https://static.redox-os.org/pkg/x86_64-unknown-redox/) and [images](https://static.redox-os.org/img/x86_64/) a lot!
