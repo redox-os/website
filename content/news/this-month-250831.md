@@ -41,6 +41,7 @@ Jeremy Soller ported the COSMIC Reader for his upcoming presentation at RustConf
 
 - (drivers) Wildan Mubarok allowed drivers to be debugged with GDB
 - (drivers) Wildan Mubarok fixed possible panic in device enumeration
+- (drivers) Wildan Mubarok fixed a `fbcond` panic when `vim` quit
 
 ## System Improvements
 
@@ -50,9 +51,10 @@ Jeremy Soller ported the COSMIC Reader for his upcoming presentation at RustConf
 
 ## Virtualization Improvements
 
-- (virt) bjorn3 enabled UEFI by default for x86-64
+- (virt) bjorn3 enabled QEMU UEFI by default for x86-64
 - (virt) bjorn3 fixed the QEMU terminal mode in ARM64 and RISC-V
-- (virt) bjorn3 enabled the [ramfb](https://wiki.osdev.org/Ramfb) device on x86
+- (virt) bjorn3 fixed multi-display support on QEMU BIOS
+- (virt) bjorn3 enabled the [ramfb](https://wiki.osdev.org/Ramfb) QEMU device on x86
 - (virt) Wildan Mubarok enabled [HVF](https://wiki.qemu.org/Features/HVF) for QEMU on MacOS Silicon
 
 ## Relibc Improvements
@@ -97,6 +99,8 @@ Jeremy Soller ported the COSMIC Reader for his upcoming presentation at RustConf
 
 ## Testing Improvements
 
+- (tests) bjorn3 improved the Redoxer daemon error reporting reliability and messages
+- (tests) bjorn3 did a code cleanup in the Redoxer daemon
 - (tests) auronandace packaged the [os-test](https://gitlab.com/sortix/os-test) POSIX test suite
 
 ## Build System Improvements
@@ -111,7 +115,7 @@ Jeremy Soller ported the COSMIC Reader for his upcoming presentation at RustConf
 - (build) Wildan Mubarok fixed the meta-packages
 - (build) Wildan Mubarok fixed the `make clean` command
 - (build) Wildan Mubarok fixed a GNU Make misconfiguration in the Podman Build on MacOS
-- (build) Wildan Mubarok improved the performance of the `make rebuild` command by 50% or more by caching automatic dependencies
+- (build) Wildan Mubarok improved the performance of the `make rebuild` command by 50% or more by caching recipe dependencies
 - (build) Wildan Mubarok disabled the `rustdoc` installation in Podman to reduce the setup time
 - (build) Wildan Mubarok did a cleanup on Cookbook
 - (build) Ribbon simplified the `dev` variant configuration with meta-packages
