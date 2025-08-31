@@ -7,9 +7,9 @@ date = "2025-08-31"
 Redox OS is a Unix-like general-purpose microkernel-based operating system
 written in Rust. August was a very exciting month for Redox! Here's all the latest news.
 
-- PDF preview on COSMIC Files
+- COSMIC Reader running on Redox
 
-<a href="/img/screenshot/cosmic-files-pdf-preview.png"><img class="img-responsive" alt="Description" src="/img/screenshot/cosmic-files-pdf-preview.png"/></a>
+<a href="/img/screenshot/cosmic-reader.png"><img class="img-responsive" alt="COSMIC Reader running on Redox" src="/img/screenshot/cosmic-reader.png"/></a>
 
 ## Donate to Redox
 
@@ -59,6 +59,9 @@ Jeremy Soller ported the COSMIC Reader for his upcoming presentation at RustConf
 - (drivers) Wildan Mubarok allowed drivers to be debugged with GDB
 - (drivers) Wildan Mubarok fixed possible panic in device enumeration
 - (drivers) Wildan Mubarok fixed a `fbcond` panic when `vim` quit
+- (drivers) bjorn3 fixed the EHB flag reading for debugging logs in the xHCI driver
+- (drivers) bjorn3 did a code cleanup in the xHCI and NVMe interrupt handling
+- (drivers) bjorn3 did a code deduplication and cleanup in the MSI/MSI-X handling
 
 ## System Improvements
 
@@ -76,8 +79,7 @@ Jeremy Soller ported the COSMIC Reader for his upcoming presentation at RustConf
 
 ## Relibc Improvements
 
-- (relibc) Josh Megnauth implemented the `fstatat()` function
-- (relibc) Josh Megnauth implemented the `confstr()` function
+- (relibc) Josh Megnauth implemented the `fstatat()` and `confstr()` functions
 - (relibc) Josh Megnauth implemented the `paths.h` function group
 - (relibc) Josh Megnauth did several improvements to the `syslog` functionality
 - (relibc) Josh Megnauth added the `%m` format to `printf()`, to print the correct error string for `errno`
