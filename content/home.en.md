@@ -42,11 +42,11 @@ url = "home"
             <li><a href="/faq/#rust-benefits">Rust-written</a> <a
                 href="https://gitlab.redox-os.org/redox-os/kernel">kernel</a> and <a
                 href="https://gitlab.redox-os.org/redox-os/drivers">drivers</a></li>
-            <li><a href="/faq/#how-redox-was-influenced-by-other-systems">Inspired by</a>  Plan 9, Minix, seL4, BSD and Linux</li>
+            <li><a href="/faq/#how-redox-was-influenced-by-other-systems">Inspired by Plan 9, Minix, seL4, BSD and Linux</a></li>
             <li>Fast <a href="https://doc.redox-os.org/book/boot-process.html">System Bootstrap</a></li>
             <li><a href="https://doc.redox-os.org/book/drivers.html">Drivers</a> run in userspace</li>
             <li>Programs interact via <a href="https://doc.redox-os.org/book/schemes-resources.html">Schemes</a></li>
-            <li>Intel/AMD, ARM and RISC-V <a href="">chip support</a></li>
+            <li>Intel/AMD, ARM and RISC-V <a href="https://doc.redox-os.org/book/hardware-support.html#compatibility-table">CPU support</a></li>
             <li>Much smaller <a href="https://en.wikipedia.org/wiki/Attack_surface" target="_blank">attack of surface</a>
               compared to Linux</li>
             <li>The <a href="https://static.redox-os.org/img/x86_64/">minimal image</a> size is under 50 MB</li>
@@ -260,8 +260,10 @@ url = "home"
       <input class="input is-info bg-info is-family-monospace is-size-6  has-text-centered mx-auto" type="text" readonly
         value="curl -sSL https://gitlab.redox-os.org/redox-os/redox/-/raw/master/podman_bootstrap.sh | bash">
       <p class="mt-5  has-text-centered">
-        See our <a href="https://doc.redox-os.org/book/build-system-reference.html">Build System Guide</a> or <a
-          href="/faq">FAQ</a> and
+        Read the <a href="https://doc.redox-os.org/book/podman-build.html">Building Redox</a>, 
+        <a href="https://doc.redox-os.org/book/build-system-reference.html">Build System Guide</a>,
+        <a href="/faq">General FAQ</a>,
+        <a href="https://doc.redox-os.org/book/developer-faq.html">Developer FAQ</a>,
         <a href="https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md#matrix">join us on Matrix!
         </a>
       </p>
