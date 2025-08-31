@@ -302,7 +302,7 @@ ul.laundry-list {
 .hero-image>img {
 	border-radius: .5em;
 	box-shadow: black 0 0 5px;
-	max-height: 50vh;
+	max-height: 30rem;
 	width: 100%;
 	object-fit: cover;
 }
