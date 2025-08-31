@@ -49,7 +49,7 @@ url = "home"
             <li>Intel/AMD, ARM and RISC-V <a href="https://doc.redox-os.org/book/hardware-support.html#compatibility-table">CPU support</a></li>
             <li>Much smaller <a href="https://en.wikipedia.org/wiki/Attack_surface" target="_blank">attack of surface</a>
               compared to Linux</li>
-            <li>The <a href="https://static.redox-os.org/img/x86_64/">minimal image</a> size is under 50 MB</li>
+            <li>The <a href="https://static.redox-os.org/img/x86_64/">minimal image</a> weighs less than 50 MB</li>
           </ul>
         </div>
       </div>
@@ -103,8 +103,6 @@ url = "home"
             <li>Integration with <a href="https://gitlab.redox-os.org/redox-os/gcc">forked GCC Compiler</a></li>
             <li>Many crates supports Redox</li>
             <li>Linux system tools supported via <a href="https://github.com/uutils/coreutils/">uutils</a></li>
-            <li>GUI management support via <a href="https://github.com/rust-windowing/winit/">winit</a></li>
-            <li>GUI apps support via <a href="/news/this-month-240531">COSMIC Apps</a></li>
             <li>See list of <a href="https://doc.redox-os.org/book/side-projects.html"> side-projects</a></li>
           </ul>
         </div>
