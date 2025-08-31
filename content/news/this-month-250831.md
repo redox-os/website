@@ -77,6 +77,7 @@ Jeremy Soller ported the COSMIC Reader for his upcoming presentation at RustConf
 ## Relibc Improvements
 
 - (relibc) Josh Megnauth implemented the `fstatat()` function
+- (relibc) Josh Megnauth implemented the `confstr()` function
 - (relibc) Josh Megnauth implemented the `paths.h` function group
 - (relibc) Josh Megnauth did several improvements to the `syslog` functionality
 - (relibc) Josh Megnauth added the `%m` format to `printf()`, to print the correct error string for `errno`
@@ -95,6 +96,7 @@ Jeremy Soller ported the COSMIC Reader for his upcoming presentation at RustConf
 
 ## Orbital Improvements
 
+- (gui) Jeremy Soller implemented fullscreen support
 - (gui) Wildan Mubarok disabled the launcher bar overlap when maximizing a window
 - (gui) Wildan Mubarok optimized graphical debug scrolling
 
@@ -123,7 +125,7 @@ Jeremy Soller ported the COSMIC Reader for his upcoming presentation at RustConf
 ## Build System Improvements
 
 - (build) Wildan Mubarok updated the Podman container to Debian 13 to fix it
-- (build) Wildan Mubarok updated the `cbindgen` and `just` tools to fix compilation after a [recent Rust change](https://github.com/mozilla/cbindgen/issues/1040)
+- (build) Wildan Mubarok updated `cbindgen` in the Podman container to support [a feature for Rust 2024 edition](https://github.com/mozilla/cbindgen/issues/1040)
 - (build) Wildan Mubarok changed the Podman Rust tooling installation script to use precompiled binaries and speedup recipe compilation
 - (build) Wildan Mubarok enabled dynamic linking by default for GNU Autotools, CMake and Meson templates
 - (build) Wildan Mubarok implemented Cookbook templates for CMake and Meson
