@@ -45,7 +45,7 @@ to president@redox-os.org, cc info@redox-os.org .
 
 ## Fixed Dynamically Linked Package Size
 
-Wildan Mubarok fixed a problem where some dynamically linked program packages were carrying static library objects making them very big in size. This fix reduced the size of [packages](https://static.redox-os.org/pkg/x86_64-unknown-redox/) and [images](https://static.redox-os.org/img/x86_64/) a lot!
+Wildan Mubarok fixed a problem where some dynamically linked program packages were carrying static library objects making them very big in size. This fix reduced the size of packages and images a lot!
 
 ## COSMIC Reader on Redox!
 
