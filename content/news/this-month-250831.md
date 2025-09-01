@@ -11,6 +11,8 @@ written in Rust. August was a very exciting month for Redox! Here's all the late
 
 <a href="/img/screenshot/cosmic-reader.png"><img class="img-responsive" alt="COSMIC Reader running on Redox" src="/img/screenshot/cosmic-reader.png"/></a>
 
+<iframe width="800" height="640" src="https://www.youtube.com/embed/UQAS6i9Z9wc?si=XelYgu335XL8tPZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Donate to Redox
 
 If you would like to support Redox, please consider donating or buying some merch!
