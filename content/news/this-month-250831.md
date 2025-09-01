@@ -36,13 +36,20 @@ ensuring our packages and images are being built correctly, and tracking down CI
 He will also be improving our build system and contributing to Redox as his time allows.
 Welcome Wildan!
 
+## Redox is Hiring!
+
+We are still looking for an experienced Kernel/Core engineer.
+Please check out the [July report](/news/this-month-250731) for details.
+If you think you are a good fit, please send your resume/CV and a link to your open source projects
+to president@redox-os.org, cc info@redox-os.org .
+
 ## Fixed Dynamically Linked Package Size
 
-Wildan Mubarok fixed a problem where some dynamically linked program packages were carrying static library objects making them very big in size, this fix reduced the size of [packages](https://static.redox-os.org/pkg/x86_64-unknown-redox/) and [images](https://static.redox-os.org/img/x86_64/) a lot!
+Wildan Mubarok fixed a problem where some dynamically linked program packages were carrying static library objects making them very big in size. This fix reduced the size of [packages](https://static.redox-os.org/pkg/x86_64-unknown-redox/) and [images](https://static.redox-os.org/img/x86_64/) a lot!
 
 ## COSMIC Reader on Redox!
 
-Jeremy Soller ported the COSMIC Reader for his upcoming presentation at RustConf 2025.
+Jeremy Soller ported the COSMIC Reader (document viewer) and will be using it for his upcoming presentation at RustConf.
 
 ## Bootloader Improvements
 
@@ -66,7 +73,7 @@ Jeremy Soller ported the COSMIC Reader for his upcoming presentation at RustConf
 ## System Improvements
 
 - (sys) bjorn3 fixed network booting in QEMU with Debian 13
-- (sys) Ron Williams fixed the `which` tool
+- (sys) Ron Williams fixed the `which` tool exit code
 - (sys) Wildan Mubarok fixed the root scheme (`:`) creation in `exampled`
 
 ## Virtualization Improvements
@@ -88,7 +95,7 @@ Jeremy Soller ported the COSMIC Reader for his upcoming presentation at RustConf
 - (relibc) Wildan Mubarok implemented the `getnameinfo()`, `getaddrinfo()`, `sem_timedwait()`, and `sem_clockwait()` functions
 - (relibc) Wildan Mubarok fixed the `trace` feature
 - (relibc) Darley Barreto enabled some tests for Redox
-- (relibc) Ron Williams increased the POSIX signals compliance
+- (relibc) Ron Williams added a few constants to allow some POSIX Signals tests to pass
 - (relibc) Jeremy Soller implemented some additional basic types to improve compatibility
 - (relibc) Jeremy Soller fixed a typo that was causing the `connect()` function to fail
 
@@ -155,7 +162,8 @@ Jeremy Soller ported the COSMIC Reader for his upcoming presentation at RustConf
 
 To test the changes of this month download the `server` or `desktop` variants of the [daily images](https://static.redox-os.org/img/).
 
-(Use the `server` variant for a terminal interface and the `desktop` variant for a graphical interface, if the `desktop` variant doesn't work use the `server` variant)
+Use the `desktop` variant for a graphical interface. If you prefer a terminal-style interface,
+or if the `desktop` variant doesn't work, please try the `server` variant.
 
 - If you want to test in a virtual machine use the "harddrive" images
 - If you want to test on real hardware use the "livedisk" images
@@ -165,7 +173,7 @@ Read the following pages to learn how to use the images in a virtual machine or 
 - [Running Redox in a virtual machine](https://doc.redox-os.org/book/running-vm.html)
 - [Running Redox on real hardware](https://doc.redox-os.org/book/real-hardware.html)
 
-Sometimes the daily images are outdated and you need to build Redox from source.
+Sometimes the daily images are outdated and you may want to build Redox from source.
 For instructions on how to do this, read the [Building Redox](https://doc.redox-os.org/book/podman-build.html) page.
 
 ## Join us on Matrix Chat
