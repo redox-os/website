@@ -76,7 +76,7 @@ url = "home"
           </p>
           <div class="subtitle mt-2">
             <ul class="laundry-list features mb-0">
-              <li>Fast <a href="https://gitlab.redox-os.org/redox-os/benchmarks">I/O performance</a></li>
+              <li>Fast <a href="https://gitlab.redox-os.org/redox-os/benchmarks#tests">I/O performance</a></li>
               <li>Fast <a href="https://doc.redox-os.org/book/boot-process.html">system boot</a></li>
               <li>Less system call overhead</li>
               <li>Desktop variant using less than 512 MB of RAM</li>
@@ -305,12 +305,12 @@ url = "home"
         Get the bleeding edge
       </p>
       <input class="input is-info bg-info is-family-monospace is-size-6 has-text-centered mx-auto" type="text" readonly
-        value="curl -sSf https://gitlab.redox-os.org/redox-os/redox/raw/master/podman_bootstrap.sh -o podman_bootstrap.sh && bash -e podman_bootstrap.sh">
+        value='bash -ec "$(curl -fsSL https://gitlab.redox-os.org/redox-os/redox/raw/master/podman_bootstrap.sh)"'>
       <p class="mt-5  has-text-centered">
         Read the <a href="https://doc.redox-os.org/book/podman-build.html">Building Redox</a>,
         <a href="https://doc.redox-os.org/book/build-system-reference.html">Build System Guide</a>,
         <a href="/faq">General FAQ</a>,
-        <a href="https://doc.redox-os.org/book/developer-faq.html">Developer FAQ</a>,
+        <a href="https://doc.redox-os.org/book/developer-faq.html">Developer FAQ</a> and
         <a href="https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md#matrix">join us on Matrix!
         </a>
       </p>
