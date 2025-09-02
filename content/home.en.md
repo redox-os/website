@@ -76,12 +76,12 @@ url = "home"
           </p>
           <div class="subtitle mt-2">
             <ul class="laundry-list features mb-0">
-              <li>Fast <a href="https://gitlab.redox-os.org/redox-os/benchmarks">I/O benchmark</a></li>
-              <li>Fast <a href="https://doc.redox-os.org/book/boot-process.html">system bootstrap</a></li>
-              <li>Less overhead by syscall</li>
-              <li>Desktop boot with less than 512 MB of RAM</li>
+              <li>Fast <a href="https://gitlab.redox-os.org/redox-os/benchmarks">I/O performance</a></li>
+              <li>Fast <a href="https://doc.redox-os.org/book/boot-process.html">system boot</a></li>
+              <li>Less system call overhead</li>
+              <li>Desktop variant using less than 512 MB of RAM</li>
               <li>The <a href="https://static.redox-os.org/img/x86_64/">minimal image</a> weighs less than 50 MB</li>
-              <li>Customize more with our build system</li>
+              <li>Easy customization using the build system to save space</li>
             </ul>
           </div>
         </div>
