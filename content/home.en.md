@@ -51,8 +51,7 @@ url = "home"
               <li><a href="/faq/#rust-benefits">Rust-written</a> <a
                   href="https://gitlab.redox-os.org/redox-os/kernel">kernel</a> and <a
                   href="https://gitlab.redox-os.org/redox-os/drivers">drivers</a></li>
-              <li>Intel/AMD, ARM and RISC-V <a
-                  href="https://doc.redox-os.org/book/hardware-support.html#compatibility-table">CPU support</a></li>
+              <li>Intel/AMD, ARM and RISC-V CPU support</li>
               <li><a href="/faq/#how-redox-was-influenced-by-other-systems">Inspired by Plan 9, Minix, seL4, BSD and
                   Linux</a></li>
               <li>Much smaller <a href="https://en.wikipedia.org/wiki/Attack_surface" target="_blank">attack of
@@ -105,6 +104,7 @@ url = "home"
               <li>Good <a href="/faq/#which-virtual-machines-does-redox-have-integration-with">virtualization
                   support</a></li>
               <li>Common <a href="/faq/#which-devices-does-redox-support">hardware support</a></li>
+              <li>Support for PS/2 and USB keyboards, mouse and touchpads</li>
               <li><a href="https://doc.redox-os.org/book/redoxfs.html">ZFS-Inspired</a> file system</li>
               <li>Boot from NVMe, SATA, IDE, and USB</li>
               <li>Boot with <a href="https://doc.redox-os.org/book/installing.html">full disk encryption</a></li>
@@ -133,7 +133,6 @@ url = "home"
               <li>Tier 2 and 3 of <a href="https://doc.rust-lang.org/nightly/rustc/platform-support/redox.html">Rust
                   Platform Support</a> </li>
               <li>Support for <a href="https://doc.rust-lang.org/std/">Rust Standard Library</a></li>
-              <li>Integration with <a href="https://gitlab.redox-os.org/redox-os/gcc">forked GCC Compiler</a></li>
               <li>Many crates supports Redox</li>
               <li>Linux system tools supported via <a href="https://github.com/uutils/coreutils/">uutils</a></li>
               <li>See list of <a href="https://doc.redox-os.org/book/side-projects.html"> side-projects</a></li>
@@ -159,6 +158,7 @@ url = "home"
               <li><a href="https://doc.redox-os.org/book/programs-libraries.html">Source compatibility</a> with
                 Linux/BSD
                 programs</li>
+              <li>Integration with <a href="https://gitlab.redox-os.org/redox-os/gcc">forked GCC Compiler</a></li>
               <li>Many Linux <a href="/faq/#what-programs-can-redox-run">programs ported</a></li>
               <li>Partial <a href="https://en.wikipedia.org/wiki/POSIX">POSIX</a> compatibility</li>
               <li>Custom C Standard Library is <a href="https://gitlab.redox-os.org/redox-os/relibc">written in Rust</a>
