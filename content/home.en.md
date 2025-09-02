@@ -28,7 +28,8 @@ url = "home"
       <b>Redox</b> is a <a style="color: inherit;" href="https://en.wikipedia.org/wiki/Unix-like"><b>Unix-like</b></a>
       general-purpose microkernel-based operating system written in <a style="color: inherit;"
         href="https://www.rust-lang.org/"><b>Rust</b></a>, aiming to bring the innovations of Rust to a modern
-      microkernel, a full set of programs and be a complete alternative to Linux and BSD.
+      microkernel, a full set of programs and be a <a href="https://doc.redox-os.org/book/why-a-new-os.html">complete
+        alternative</a> to Linux and BSD.
     </p>
   </div>
 </section>
