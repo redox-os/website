@@ -19,7 +19,9 @@ Matrix is the official way to talk with Redox OS team and community (these rooms
 
 Matrix has several different clients. [Element](https://element.io/) is a commonly used choice, it works on web browsers, Linux, MacOSX, Windows, Android and iOS.
 
-If you have problems with Element, try [Fractal](https://gitlab.gnome.org/World/fractal).
+If you have problems with Element, try [Nheko](https://nheko-reborn.github.io/) or [Fractal](https://gitlab.gnome.org/World/fractal).
+
+If you have connection problems see [this](https://status.matrix.org/) website to see if the `matrix.org` homeserver is normal.
 
 - Join the [Join Requests](https://matrix.to/#/#redox-join:matrix.org) room and send a message requesting for an invite to the Redox Matrix space (the purpose of this is to avoid spam and bots).
 - #redox-join:matrix.org (Use this Matrix room address if you don't want to use the external Matrix link)
