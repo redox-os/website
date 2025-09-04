@@ -1,5 +1,5 @@
 +++
-title = "FAQ"
+title = "General FAQ"
 +++
 
 This page covers questions and answers for newcomers and end-users.
