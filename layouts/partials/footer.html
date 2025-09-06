@@ -1,15 +1,73 @@
-<footer class="copyright">
-    <p>
-        <a style="color: inherit; margin-right: 2em;" href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
-        {{ if .IsTranslated }}
-          {{ range .Translations }}
-            <a style="color: inherit; margin-right: 2em;" href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
-          {{ end}}
-        {{ end }}
-    </p>
-    <p>
-        Copyright &copy; 2015-2025 by <a style="color: inherit;" href="https://gitlab.redox-os.org/redox-os"><b>Redox Developers</b></a>. Redox OS is a trademark of the Redox OS nonprofit.
-    </p>
+</main>
+<footer>
+  <div class="mx-auto mt-5 px-5 container is-widescreen">
+    <nav id="footer-nav" class="columns">
+      <nav class="content column columns">
+        <div class="column">
+          <h3>Redox OS</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/docs/">Documentation</a></li>
+            <li><a href="/news/">News</a></li>
+            <li><a href="/community/">Community</a></li>
+            <li><a href="/donate/">Merchandise</a></li>
+            <li><a href="/rsoc/">RSoC</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="/quickstart/">Quickstart</a></li>
+            <li><a href="/screens/">Gallery</a></li>
+            <li><a href="https://gitlab.redox-os.org/">GitLab</a></li>
+            <li><a href="https://doc.redox-os.org/book/">Book</a></li>
+            <li><a href="https://static.redox-os.org/">Packages</a></li>
+            <li><a href="https://www.youtube.com/@RedoxOS/videos">Meeting Minutes</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="column is-one-quarter" id="footer-logo">
+        <picture>
+          <source srcset="/img/logo-dark.png" media="(prefers-color-scheme: dark)" />
+          <img src="/img/logo.png" height="120" alt="Redox Logo" />
+        </picture>
+
+        <div class="is-flex is-flex-wrap-wrap socials">
+          {{ partial "social.html" . }}
+        </div>
+
+        <div id="language-selector">
+          <div id="current-language" tabindex="0">
+            <!--Tabindex allows the menu to be opened by clicking on the language label-->
+            <span>{{ .Language.LanguageName }}</span>
+          </div>
+
+          {{ if .IsTranslated }}
+          <div id="language-list">
+            {{ range .Translations }}
+            <a class="language-option" href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
+            {{ end}}
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </nav>
+
+    <div id="copyright" class="columns">
+      <div class="column">
+        <p>
+          Copyright &copy; 2015-2025 by <a href="https://gitlab.redox-os.org/redox-os"><u>The Redox Developers</u></a>.
+          Redox OS is a trademark of the Redox OS nonprofit.
+        </p>
+      </div>
+      <div class="column is-one-quarter">
+        <p>
+          <a>Privacy Policy</a> &nbsp;
+          <a>Nonprofit</a> &nbsp;
+          <a>Licenses</a>
+        </p>
+      </div>
+    </div>
+  </div>
 </footer>
-</body>
-</html>
