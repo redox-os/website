@@ -1,19 +1,29 @@
 <header>
   <nav>
-    <ul class="columns menu">
-      <li class="column is-one-quarter">
-        <a href="{{ if .Site.LanguagePrefix }}{{ .Site.LanguagePrefix }}{{ else }}/{{ end }}">
+    <ul class="columns menu px-5">
+      <li class="column is-align-items-center is-flex is-one-quarter">
+        <a class="is-block" href="{{ if .Site.LanguagePrefix }}{{ .Site.LanguagePrefix }}{{ else }}/{{ end }}">
             <picture>
                 <source srcset="/img/logo-dark.png" media="(prefers-color-scheme: dark)"/>
                 <img src="/img/logo.png" width="178" height="64" alt="Redox Logo"/>
             </picture>
         </a>
       </li>
-      <li class="column menu">
+      <li class="column menu py-5">
         {{ range .Site.Menus.main }}
           <h2><a style="color: inherit;" href="{{ .URL | relLangURL }}">{{ .Name }}</a></h2>
         {{ end }}
       </li>
+
+      <nav class="column columns is-align-items-center is-one-quarter is-hidden-touch is-hidden-desktop-only" id="social">
+          {{ partial "social.html" . }}
+      </nav>
+
     </ul>
   </nav>
 </header>
+{{if .IsHome }} 
+<main>
+{{else}}
+<main class="container is-max-desktop px-2">
+{{end}}

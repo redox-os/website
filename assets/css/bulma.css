@@ -1,7 +1,38 @@
 /*! bulma.io v0.9.4 | MIT License | github.com/jgthms/bulma */
 /* Bulma Utilities */
+.button, .input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: none;
+  display: inline-flex;
+  font-size: 1rem;
+  height: 2.5em;
+  justify-content: flex-start;
+  line-height: 1.5;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: calc(0.75em - 1px);
+  padding-right: calc(0.75em - 1px);
+  padding-top: calc(0.5em - 1px);
+  position: relative;
+  vertical-align: top;
+}
 
- .content:not(:last-child), .title:not(:last-child) {
+.button:focus, .input:focus, .button:active, .input:active {
+  outline: none;
+}
+
+.button, .file {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+ .content:not(:last-child), .table:not(:last-child), .title:not(:last-child),
+.subtitle:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 
@@ -10,11 +41,17 @@
 html,
 body,
 p,
+ol,
 ul,
 li,
+blockquote,
+pre,
 iframe,
+hr,
 h1,
 h2,
+h3,
+h4,
 h5 {
   margin: 0;
   padding: 0;
@@ -22,6 +59,8 @@ h5 {
 
 h1,
 h2,
+h3,
+h4,
 h5 {
   font-size: 100%;
   font-weight: normal;
@@ -29,6 +68,11 @@ h5 {
 
 ul {
   list-style: none;
+}
+
+button,
+input {
+  margin: 0;
 }
 
 html {
@@ -48,6 +92,21 @@ iframe {
   border: 0;
 }
 
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+td:not([align]),
+th:not([align]) {
+  text-align: inherit;
+}
+
 html {
   background-color: white;
   font-size: 16px;
@@ -64,15 +123,19 @@ html {
 
 
 footer,
-header {
+header,
+section {
   display: block;
 }
 
-body {
+body,
+button,
+input {
   font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
-code {
+code,
+pre {
   -moz-osx-font-smoothing: auto;
   -webkit-font-smoothing: auto;
   font-family: monospace;
@@ -91,6 +154,10 @@ a {
   text-decoration: none;
 }
 
+a strong {
+  color: currentColor;
+}
+
 a:hover {
   color: #363636;
 }
@@ -103,9 +170,59 @@ code {
   padding: 0.25em 0.5em 0.25em;
 }
 
+hr {
+  background-color: whitesmoke;
+  border: none;
+  display: block;
+  height: 2px;
+  margin: 1.5rem 0;
+}
+
 img {
   height: auto;
   max-width: 100%;
+}
+
+span {
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+strong {
+  color: #363636;
+  font-weight: 700;
+}
+
+pre {
+  -webkit-overflow-scrolling: touch;
+  background-color: whitesmoke;
+  color: #4a4a4a;
+  font-size: 0.875em;
+  overflow-x: auto;
+  padding: 1.25rem 1.5rem;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+pre code {
+  background-color: transparent;
+  color: currentColor;
+  font-size: 1em;
+  padding: 0;
+}
+
+table td,
+table th {
+  vertical-align: top;
+}
+
+table td:not([align]),
+table th:not([align]) {
+  text-align: inherit;
+}
+
+table th {
+  color: #363636;
 }
 
 @keyframes spinAround {
@@ -119,6 +236,99 @@ img {
 
 /* Bulma Elements */
 
+.button {
+  background-color: white;
+  border-color: #dbdbdb;
+  border-width: 1px;
+  color: #363636;
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: calc(0.5em - 1px);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.button strong {
+  color: inherit;
+}
+
+.button .icon, .button .icon.is-small {
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.button .icon:first-child:not(:last-child) {
+  margin-left: calc(-0.5em - 1px);
+  margin-right: 0.25em;
+}
+
+.button .icon:last-child:not(:first-child) {
+  margin-left: 0.25em;
+  margin-right: calc(-0.5em - 1px);
+}
+
+.button .icon:first-child:last-child {
+  margin-left: calc(-0.5em - 1px);
+  margin-right: calc(-0.5em - 1px);
+}
+
+.button:hover {
+  border-color: #b5b5b5;
+  color: #363636;
+}
+
+.button:focus {
+  border-color: #485fc7;
+  color: #363636;
+}
+
+.button:focus:not(:active) {
+  box-shadow: 0 0 0 0.125em rgba(72, 95, 199, 0.25);
+}
+
+.button:active {
+  border-color: #4a4a4a;
+  color: #363636;
+}
+
+.button.is-info {
+  background-color: #3e8ed0;
+  border-color: transparent;
+  color: #fff;
+}
+
+.button.is-info:hover {
+  background-color: #3488ce;
+  border-color: transparent;
+  color: #fff;
+}
+
+.button.is-info:focus {
+  border-color: transparent;
+  color: #fff;
+}
+
+.button.is-info:focus:not(:active) {
+  box-shadow: 0 0 0 0.125em rgba(62, 142, 208, 0.25);
+}
+
+.button.is-info:active {
+  background-color: #3082c5;
+  border-color: transparent;
+  color: #fff;
+}
+
+.button.is-small {
+  font-size: 0.75rem;
+}
+
+.button.is-small:not(.is-rounded) {
+  border-radius: 2px;
+}
+
 .container {
   flex-grow: 1;
   margin: 0 auto;
@@ -129,6 +339,12 @@ img {
 @media screen and (min-width: 1024px) {
   .container {
     max-width: 960px;
+  }
+}
+
+@media screen and (max-width: 1215px) {
+  .container.is-widescreen:not(.is-max-desktop) {
+    max-width: 1152px;
   }
 }
 
@@ -149,12 +365,18 @@ img {
 }
 
 .content p:not(:last-child),
-.content ul:not(:last-child) {
+.content ol:not(:last-child),
+.content ul:not(:last-child),
+.content blockquote:not(:last-child),
+.content pre:not(:last-child),
+.content table:not(:last-child) {
   margin-bottom: 1em;
 }
 
 .content h1,
 .content h2,
+.content h3,
+.content h4,
 .content h5 {
   color: #363636;
   font-weight: 600;
@@ -179,9 +401,39 @@ img {
   margin-top: 1.1428em;
 }
 
+.content h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.6666em;
+}
+
+.content h3:not(:first-child) {
+  margin-top: 1.3333em;
+}
+
+.content h4 {
+  font-size: 1.25em;
+  margin-bottom: 0.8em;
+}
+
 .content h5 {
   font-size: 1.125em;
   margin-bottom: 0.8888em;
+}
+
+.content blockquote {
+  background-color: whitesmoke;
+  border-left: 5px solid #dbdbdb;
+  padding: 1.25em 1.5em;
+}
+
+.content ol {
+  list-style-position: outside;
+  margin-left: 2em;
+  margin-top: 1em;
+}
+
+.content ol:not([type]) {
+  list-style-type: decimal;
 }
 
 .content ul {
@@ -199,12 +451,76 @@ img {
   list-style-type: square;
 }
 
+.content pre {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  padding: 1.25em 1.5em;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+.content sup,
+.content sub {
+  font-size: 75%;
+}
+
+.content table {
+  width: 100%;
+}
+
+.content table td,
+.content table th {
+  border: 1px solid #dbdbdb;
+  border-width: 0 0 1px;
+  padding: 0.5em 0.75em;
+  vertical-align: top;
+}
+
+.content table th {
+  color: #363636;
+}
+
+.content table th:not([align]) {
+  text-align: inherit;
+}
+
+.content table thead td,
+.content table thead th {
+  border-width: 0 0 2px;
+  color: #363636;
+}
+
+.content table tbody tr:last-child td,
+.content table tbody tr:last-child th {
+  border-bottom-width: 0;
+}
+
+.content.is-small {
+  font-size: 0.75rem;
+}
+
 .icon {
   align-items: center;
   display: inline-flex;
   justify-content: center;
   height: 1.5rem;
   width: 1.5rem;
+}
+
+.icon.is-small {
+  height: 1rem;
+  width: 1rem;
+}
+
+.image {
+  display: block;
+  position: relative;
+}
+
+.image img {
+  display: block;
+  height: auto;
+  width: 100%;
 }
 
 @keyframes moveIndeterminate {
@@ -216,12 +532,88 @@ img {
   }
 }
 
-.title {
+.table {
+  background-color: white;
+  color: #363636;
+}
+
+.table td,
+.table th {
+  border: 1px solid #dbdbdb;
+  border-width: 0 0 1px;
+  padding: 0.5em 0.75em;
+  vertical-align: top;
+}
+
+.table td.is-info,
+.table th.is-info {
+  background-color: #3e8ed0;
+  border-color: #3e8ed0;
+  color: #fff;
+}
+
+.table th {
+  color: #363636;
+}
+
+.table th:not([align]) {
+  text-align: left;
+}
+
+.table thead {
+  background-color: transparent;
+}
+
+.table thead td,
+.table thead th {
+  border-width: 0 0 2px;
+  color: #363636;
+}
+
+.table tbody {
+  background-color: transparent;
+}
+
+.table tbody tr:last-child td,
+.table tbody tr:last-child th {
+  border-bottom-width: 0;
+}
+
+.tags {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.tags:last-child {
+  margin-bottom: -0.5rem;
+}
+
+.tags:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.title,
+.subtitle {
   word-break: break-word;
 }
 
-.title em {
+.title em,
+.title span,
+.subtitle em,
+.subtitle span {
   font-weight: inherit;
+}
+
+.title sub,
+.subtitle sub {
+  font-size: 0.75em;
+}
+
+.title sup,
+.subtitle sup {
+  font-size: 0.75em;
 }
 
 .title {
@@ -231,7 +623,152 @@ img {
   line-height: 1.125;
 }
 
+.title strong {
+  color: inherit;
+  font-weight: inherit;
+}
+
+.title:not(.is-spaced) + .subtitle {
+  margin-top: -1.25rem;
+}
+
+.subtitle {
+  color: #4a4a4a;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.subtitle strong {
+  color: #363636;
+  font-weight: 600;
+}
+
+.subtitle:not(.is-spaced) + .title {
+  margin-top: -1.25rem;
+}
+
 /* Bulma Form */
+.input {
+  background-color: white;
+  border-color: #dbdbdb;
+  border-radius: 4px;
+  color: #363636;
+}
+
+.input::-moz-placeholder {
+  color: rgba(54, 54, 54, 0.3);
+}
+
+.input::-webkit-input-placeholder {
+  color: rgba(54, 54, 54, 0.3);
+}
+
+.input:-moz-placeholder {
+  color: rgba(54, 54, 54, 0.3);
+}
+
+.input:-ms-input-placeholder {
+  color: rgba(54, 54, 54, 0.3);
+}
+
+.input:hover {
+  border-color: #b5b5b5;
+}
+
+.input:focus, .input:active {
+  border-color: #485fc7;
+  box-shadow: 0 0 0 0.125em rgba(72, 95, 199, 0.25);
+}
+
+.input {
+  box-shadow: inset 0 0.0625em 0.125em rgba(10, 10, 10, 0.05);
+  max-width: 100%;
+  width: 100%;
+}
+
+.input[readonly] {
+  box-shadow: none;
+}
+
+.is-info.input {
+  border-color: #3e8ed0;
+}
+
+.is-info.input:focus, .is-info.input:active {
+  box-shadow: 0 0 0 0.125em rgba(62, 142, 208, 0.25);
+}
+
+.is-small.input {
+  border-radius: 2px;
+  font-size: 0.75rem;
+}
+
+.file {
+  align-items: stretch;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.file.is-small {
+  font-size: 0.75rem;
+}
+
+.field:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+
+.field.has-addons {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.field.has-addons .control:not(:last-child) {
+  margin-right: -1px;
+}
+
+.field.has-addons .control:not(:first-child):not(:last-child) .button,
+.field.has-addons .control:not(:first-child):not(:last-child) .input {
+  border-radius: 0;
+}
+
+.field.has-addons .control:first-child:not(:only-child) .button,
+.field.has-addons .control:first-child:not(:only-child) .input {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.field.has-addons .control:last-child:not(:only-child) .button,
+.field.has-addons .control:last-child:not(:only-child) .input {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.field.has-addons .control .button:not([disabled]):hover,
+.field.has-addons .control .input:not([disabled]):hover {
+  z-index: 2;
+}
+
+.field.has-addons .control .button:not([disabled]):focus, .field.has-addons .control .button:not([disabled]):active,
+.field.has-addons .control .input:not([disabled]):focus,
+.field.has-addons .control .input:not([disabled]):active {
+  z-index: 3;
+}
+
+.field.has-addons .control .button:not([disabled]):focus:hover, .field.has-addons .control .button:not([disabled]):active:hover,
+.field.has-addons .control .input:not([disabled]):focus:hover,
+.field.has-addons .control .input:not([disabled]):active:hover {
+  z-index: 4;
+}
+
+.control {
+  box-sizing: border-box;
+  clear: both;
+  font-size: 1rem;
+  position: relative;
+  text-align: inherit;
+}
 
 /* Bulma Components */
 
@@ -251,7 +788,8 @@ img {
   padding-top: 0.75rem;
 }
 
-.media .media .content:not(:last-child) {
+.media .media .content:not(:last-child),
+.media .media .control:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
@@ -271,6 +809,10 @@ img {
 
 .menu {
   font-size: 1rem;
+}
+
+.menu.is-small {
+  font-size: 0.75rem;
 }
 
 /* Bulma Grid */
@@ -315,12 +857,159 @@ img {
 
 /* Bulma Helpers */
 
+.is-flex-direction-row-reverse {
+  flex-direction: row-reverse !important;
+}
+
+.is-flex-wrap-wrap {
+  flex-wrap: wrap !important;
+}
+
+.is-align-items-center {
+  align-items: center !important;
+}
+
+.is-flex-grow-1 {
+  flex-grow: 1 !important;
+}
+
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.my-1 {
+  margin-top: 0.25rem !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.mt-2 {
+  margin-top: 0.5rem !important;
+}
+
+.mt-5 {
+  margin-top: 1.5rem !important;
+}
+
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 .px-2 {
   padding-left: 0.5rem !important;
   padding-right: 0.5rem !important;
 }
 
+.px-5 {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+.py-5 {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+.is-size-1 {
+  font-size: 3rem !important;
+}
+
+.is-size-3 {
+  font-size: 2rem !important;
+}
+
+.is-size-6 {
+  font-size: 1rem !important;
+}
+
+.has-text-centered {
+  text-align: center !important;
+}
+
+.is-family-monospace {
+  font-family: monospace !important;
+}
+
+.is-block {
+  display: block !important;
+}
+
+.is-flex {
+  display: flex !important;
+}
+
+@media screen and (max-width: 1023px) {
+  .is-hidden-touch {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1215px) {
+  .is-hidden-desktop-only {
+    display: none !important;
+  }
+}
+
 /* Bulma Layout */
+.hero {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero.is-info {
+  background-color: #3e8ed0;
+  color: #fff;
+}
+
+.hero.is-info a:not(.button):not(.dropdown-item):not(.tag):not(.pagination-link.is-current),
+.hero.is-info strong {
+  color: inherit;
+}
+
+.hero.is-info .title {
+  color: #fff;
+}
+
+.hero.is-info .subtitle {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero.is-info .subtitle a:not(.button),
+.hero.is-info .subtitle strong {
+  color: #fff;
+}
+
+.hero.is-small .hero-body {
+  padding: 1.5rem;
+}
+
+.hero-body {
+  flex-grow: 1;
+  flex-shrink: 0;
+  padding: 3rem 1.5rem;
+}
+
+@media screen and (min-width: 769px), print {
+  .hero-body {
+    padding: 3rem 3rem;
+  }
+}
+
+.section {
+  padding: 3rem 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .section {
+    padding: 3rem 3rem;
+  }
+}
 
 .footer {
   background-color: #fafafa;
