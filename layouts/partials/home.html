@@ -1,0 +1,30 @@
+<script>
+  function doCopy(id) {
+    try {
+      const input = document.getElementById('try-input');
+      const hint = document.getElementById('try-copy-hint');
+      navigator.clipboard.writeText(input.value).then(() =>
+        hint.className = '');
+
+      setTimeout(() => hint.className = 'hide', 3000);
+    } catch (e) {
+      console.log('Hit a snag when copying to clipboard: ', e);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    let cp = document.getElementById('try-copy');
+    cp && cp.addEventListener('click', () => doCopy('try-input'))
+  });
+
+</script>
+<noscript>
+  <style>
+    #try-copy {
+      display: none;
+    }
+    #try-input {
+      border-radius: 4px;
+    }
+  </style>
+</noscript>

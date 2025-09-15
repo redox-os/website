@@ -8,6 +8,7 @@ module.exports = {
             content: [
                 './layouts/**/*.html',
                 './content/home.*.md',
+                './hugo_stats.json',
             ],
             defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
             safelist: [],
