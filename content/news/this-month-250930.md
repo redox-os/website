@@ -15,6 +15,22 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## Multi-threaded By Default!
+
+Jeremy Soller and bjorn3 fixed the remaining bugs in multi-threading and enabled it by default for x86, this can give a massive performance improvement depending on the hardware specifications.
+
+- ffplay playing a 1080p video with good CPU decoding performance after multi-core and multi-threading support was enabled
+
+<a href="/img/screenshot/ffplay-1080p-video.png"><img class="img-responsive" alt="ffplay playing a 1080p video" src="/img/screenshot/ffplay-1080p-video.png"/></a>
+
+## Redox on BlackBerry!
+
+sajattack [ported Redox to BlackBerry KEY2 LE](https://chaos.social/@sajattack/115155756125794494), currently the keyboard is not working.
+
+- Redox running on Blackberry KEY2 LE
+
+<a href="/img/hardware/blackberry-key2-le.jpg"><img class="img-responsive" alt="Redox running on Blackberry KEY2 LE" src="/img/hardware/blackberry-key2-le.jpg"/></a>
+
 ## Kernel Improvements
 
 - (kernel) 
