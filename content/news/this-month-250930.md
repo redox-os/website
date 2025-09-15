@@ -31,9 +31,28 @@ sajattack [ported Redox to BlackBerry KEY2 LE](https://chaos.social/@sajattack/1
 
 <a href="/img/hardware/blackberry-key2-le.jpg"><img class="img-responsive" alt="Redox running on Blackberry KEY2 LE" src="/img/hardware/blackberry-key2-le.jpg"/></a>
 
+## Complete TOML Migration
+
+bjorn3 finished the conversion of most important and relevant recipes to TOML, it fixed bugs and will allow our software port system to be improved, expanded and tested more easily.
+
+## New Home Page!
+
+Wildan Mubarok changed and improved the website home page layout and design with more information and items, click on the Redox logo in the website header to see.
+
 ## Kernel Improvements
 
-- (kernel) 
+- (kernel) bjorn3 fixed an interrupt race condition on ARM64 and RISC-V thanks to Andrey Turkin
+- (kernel) bjorn3 fixed and improved the debugger
+- (kernel) bjorn3 implemented partial support for RISC-V on the debugger
+- (kernel) bjorn3 unified the debugger code from all CPU architectures
+- (kernel) bjorn3 improved the debugging output handling
+- (kernel) bjorn3 updated the code to Rust 2024 edition
+- (kernel) bjorn3 reduced more code duplication between x86 and x86_64
+- (kernel) bjorn3 reduced code duplication in logging between CPU architectures
+- (kernel) bjorn3 unified the GDT handling between x86 and x86_64
+- (kernel) bjorn3 simplified the panic backtrace code
+- (kernel) bjorn3 fixed `rust-analyzer` on disabled code
+- (kernel) Elle Rhumssa reduced unsafe Rust code
 
 ## Driver Improvements
 
@@ -45,7 +64,13 @@ sajattack [ported Redox to BlackBerry KEY2 LE](https://chaos.social/@sajattack/1
 
 ## Relibc Improvements
 
-- (relibc) 
+- (relibc) Ibuki Omatsu implemented the `getens()` function
+- (relibc) Wildan Mubarok exposed the CPU count to programs
+- (relibc) Wildan Mubarok fixed the `relibc-tests` recipe
+- (relibc) Josh Megnauth fixed a bug that prevented symbolic link renaming
+- (relibc) Josh Megnauth added a test for the `lstat()` function
+- (relibc) Elle Rhumssa improved stability and security
+- (relibc) Elle Rhumssa removed the usage of the `array_chunks` Rust nightly feature
 
 ## Networking Improvements
 
@@ -59,17 +84,27 @@ sajattack [ported Redox to BlackBerry KEY2 LE](https://chaos.social/@sajattack/1
 
 - (fs) 
 
+## Packaging Improvements
+
+- (pkg) Wildan Mubarok fixed the cache of downloaded packages to avoid unnecessary downloads
+- (pkg) Wildan Mubarok properly implemented the offline mode of the installer
+- (pkg) Wildan Mubarok implemented a plain progress bar
+
 ## Programs
 
-- (programs) 
+- (programs) Wildan Mubarok partially ported the OpenSSH daemon
+- (programs) Wildan Mubarok ported rsync
+- (programs) Josh Megnauth partially ported the **Fish shell**
 
 ## Build System Improvements
 
-- (build-system) 
+- (build) Wildan Mubarok implemented a method to add new recipe binaries in the existing QEMU image using the `make p.recipe-name` command
+- (build) Wildan Mubarok created a recipe for Cookbook to ease self-hosting
+- (build) Wildan Mubarok implemented partial self-hosting support
 
 ## Documentation Improvements
 
-- (doc) 
+- (doc) Wildan Mubarok documented [how to create and mount a RedoxFS partition](https://doc.redox-os.org/book/redoxfs.html#tooling)
 
 ## How To Test The Changes
 
