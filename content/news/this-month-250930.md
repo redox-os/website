@@ -31,6 +31,10 @@ sajattack [ported Redox to BlackBerry KEY2 LE](https://chaos.social/@sajattack/1
 
 <a href="/img/hardware/blackberry-key2-le.jpg"><img class="img-responsive" alt="Redox running on Blackberry KEY2 LE" src="/img/hardware/blackberry-key2-le.jpg"/></a>
 
+## Nginx and PHP on Redox!
+
+Wildan Mubarok successfully ported Nginx and PHP to Redox.
+
 ## Complete TOML Migration
 
 bjorn3 finished the conversion of most important and relevant recipes to TOML, it fixed bugs and will allow our software port system to be improved, expanded and tested more easily.
@@ -52,11 +56,14 @@ Wildan Mubarok changed and improved the website home page layout and design with
 - (kernel) bjorn3 unified the GDT handling between x86 and x86_64
 - (kernel) bjorn3 simplified the panic backtrace code
 - (kernel) bjorn3 fixed `rust-analyzer` on disabled code
+- (kernel) bjorn3 did many code cleanups
 - (kernel) Elle Rhumssa reduced unsafe Rust code
 
 ## Driver Improvements
 
-- (drivers) 
+- (drivers) Jeremy Soller fixed the xHCI driver in x86
+- (drivers) Jeremy Soller fixed USB hot plugging
+- (drivers) Jeremy Soller fixed some USB hubs
 
 ## System Improvements
 
@@ -64,6 +71,8 @@ Wildan Mubarok changed and improved the website home page layout and design with
 
 ## Relibc Improvements
 
+- (relibc) Jeremy Soller fixed RISC-V
+- (relibc) 4lDO2 fixed a panic
 - (relibc) Ibuki Omatsu implemented the `getens()` function
 - (relibc) Wildan Mubarok exposed the CPU count to programs
 - (relibc) Wildan Mubarok fixed the `relibc-tests` recipe
@@ -95,12 +104,16 @@ Wildan Mubarok changed and improved the website home page layout and design with
 - (programs) Wildan Mubarok partially ported the OpenSSH daemon
 - (programs) Wildan Mubarok ported rsync
 - (programs) Josh Megnauth partially ported the **Fish shell**
+- (programs) Jeremy Soller updated the `mpg123` (1.33.2), `libogg` (1.3.4) and `libtheora` (1.2.0) library versions
+- (programs) Jeremy Soller fixed the dynamic linking of OpenAL, `mpg123` and `libtheora` libraries
 
 ## Build System Improvements
 
 - (build) Wildan Mubarok implemented a method to add new recipe binaries in the existing QEMU image using the `make p.recipe-name` command
 - (build) Wildan Mubarok created a recipe for Cookbook to ease self-hosting
 - (build) Wildan Mubarok implemented partial self-hosting support
+- (build) Jeremy Soller simplified CMake dynamic linking
+- (build) Jeremy Soller did a recipe cleanup
 
 ## Documentation Improvements
 
