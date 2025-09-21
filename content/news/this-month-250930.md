@@ -35,6 +35,16 @@ sajattack [ported Redox to BlackBerry KEY2 LE](https://chaos.social/@sajattack/1
 
 Wildan Mubarok successfully ported Nginx and PHP to Redox.
 
+## OpenSSL 3.x on Redox!
+
+Wildan Mubarok successfully ported the 3.x version of OpenSSL to allow more programs or their recent/latest stable versions to work
+
+## Deadlock Prevention and Detection at Compile-Time
+
+Jeremy Soller started to adopt the concept of [ordered locks](https://docs.rs/ordered-locks/latest/ordered_locks/) to assign tokens to locks, it allows use to use the Rust type system to prevent and detect deadlocks before execution.
+
+Some deadlocks were fixed using this! making the Redox multi-threading more reliable.
+
 ## Complete TOML Migration
 
 bjorn3 finished the conversion of most important and relevant recipes to TOML, it fixed bugs and will allow our software port system to be improved, expanded and tested more easily.
