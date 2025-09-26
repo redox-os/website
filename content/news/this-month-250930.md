@@ -23,9 +23,21 @@ Jeremy Soller and bjorn3 fixed the remaining bugs in multi-threading and enabled
 
 <a href="/img/screenshot/ffplay-1080p-video.png"><img class="img-responsive" alt="ffplay playing a 1080p video" src="/img/screenshot/ffplay-1080p-video.png"/></a>
 
+## Redox on Google Pixel!
+
+Jeremy Soller successfully ported Redox to Google Pixel 3! currently only the screen is working.
+
+- Redox running on Google Pixel 3
+
+<a href="/img/hardware/google-pixel3.jpg"><img class="img-responsive" alt="Redox running on Google Pixel 3" src="/img/hardware/google-pixel3.jpg"/></a>
+
 ## Redox on BlackBerry!
 
-sajattack [ported Redox to BlackBerry KEY2 LE](https://chaos.social/@sajattack/115155756125794494), currently the keyboard is not working.
+Paul Sajna (sajattack) [ported Redox to BlackBerry KEY2 LE](https://chaos.social/@sajattack/115155756125794494), currently the keyboard is not working.
+
+He wrote an article about the achievement:
+
+https://blog.paulsajna.com/redox-in-your-pocket/
 
 - Redox running on Blackberry KEY2 LE
 
@@ -48,6 +60,12 @@ Some deadlocks were fixed using this! making the Redox multi-threading more reli
 ## Complete TOML Migration
 
 bjorn3 finished the conversion of most important and relevant recipes to TOML, it fixed bugs and will allow our software port system to be improved, expanded and tested more easily.
+
+## Redox on Hackaday!
+
+Tyler August wrote an article about Redox on BlackBerry in Hackaday, maybe it's the first Redox OS article there.
+
+https://hackaday.com/2025/09/24/who-wants-a-rusty-old-smartphone/
 
 ## New Home Page!
 
