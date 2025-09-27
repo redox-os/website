@@ -23,6 +23,16 @@ Jeremy Soller and bjorn3 fixed the remaining bugs in multi-threading and enabled
 
 <a href="/img/screenshot/ffplay-1080p-video.png"><img class="img-responsive" alt="ffplay playing a 1080p video" src="/img/screenshot/ffplay-1080p-video.png"/></a>
 
+## Massive Performance Improvement On RedoxFS
+
+Jeremy Soller implemented inode inlining for small files which resulted in a massive performance improvement and a reduction of context switches by a factor of 2 in all operation types.
+
+Wildan Mubarok measured that a benchmark to add packages to an existing QEMU image became 7.5 times faster!
+
+## LZ4 Compression On RedoxFS
+
+Jeremy Soller implemented LZ4 compression which saved storage space and improved performance.
+
 ## Redox on Google Pixel!
 
 Jeremy Soller successfully ported Redox to Google Pixel 3! currently only the screen is working.
@@ -43,6 +53,12 @@ https://blog.paulsajna.com/redox-in-your-pocket/
 
 <a href="/img/hardware/blackberry-key2-le.jpg"><img class="img-responsive" alt="Redox running on Blackberry KEY2 LE" src="/img/hardware/blackberry-key2-le.jpg"/></a>
 
+## OpenSSH on Redox!
+
+The moment finnaly came, Wildan Mubarok successfully ported OpenSSH to Redox.
+
+It will allow us to remotely control the system on both QEMU and real hardware.
+
 ## Nginx and PHP on Redox!
 
 Wildan Mubarok successfully ported Nginx and PHP to Redox.
@@ -56,6 +72,16 @@ Wildan Mubarok successfully ported the 3.x version of OpenSSL to allow more prog
 Jeremy Soller started to adopt the concept of [ordered locks](https://docs.rs/ordered-locks/latest/ordered_locks/) to assign tokens to locks, it allows use to use the Rust type system to prevent and detect deadlocks before execution.
 
 Some deadlocks were fixed using this! making the Redox multi-threading more reliable.
+
+## Expanded Redoxer
+
+Wildan Mubarok expanded/improved Redoxer to allow it to build and test changes on Redox system components, important for CI and developers that can't or don't wnat to use the Redox build system.
+
+## Test Reports
+
+Ron Williams created a repository to store the results of our test suites (currently [os-test](https://sortix.org/os-test/) and [Open POSIX Test Suite](https://posixtest.sourceforge.net/)).
+
+- https://gitlab.redox-os.org/redox-os/test-results
 
 ## Complete TOML Migration
 
@@ -71,16 +97,24 @@ https://hackaday.com/2025/09/24/who-wants-a-rusty-old-smartphone/
 
 Wildan Mubarok changed and improved the website home page layout and design with more information and items, click on the Redox logo in the website header to see.
 
+## Bootloader Improvements
+
+- (boot) bjorn3 updated the code to Rust 2024 edition
+- (boot) bjorn3 did a code cleanup
+
 ## Kernel Improvements
 
 - (kernel) bjorn3 fixed an interrupt race condition on ARM64 and RISC-V thanks to Andrey Turkin
+- (kernel) bjorn3 fixed a memory leak
 - (kernel) bjorn3 fixed and improved the debugger
+- (kernel) bjorn3 fixed false positives in the debugger
 - (kernel) bjorn3 implemented partial support for RISC-V on the debugger
 - (kernel) bjorn3 unified the debugger code from all CPU architectures
 - (kernel) bjorn3 improved the debugging output handling
 - (kernel) bjorn3 updated the code to Rust 2024 edition
 - (kernel) bjorn3 reduced more code duplication between x86 and x86_64
 - (kernel) bjorn3 reduced code duplication in logging between CPU architectures
+- (kernel) bjorn3 unified the arguments code between CPU architectures
 - (kernel) bjorn3 unified the GDT handling between x86 and x86_64
 - (kernel) bjorn3 simplified the panic backtrace code
 - (kernel) bjorn3 fixed `rust-analyzer` on disabled code
@@ -92,6 +126,7 @@ Wildan Mubarok changed and improved the website home page layout and design with
 - (drivers) Jeremy Soller fixed the xHCI driver in x86
 - (drivers) Jeremy Soller fixed USB hot plugging
 - (drivers) Jeremy Soller fixed some USB hubs
+- (drivers) bjorn3 fixed a panic in video drivers on 4K displays
 
 ## System Improvements
 
@@ -102,8 +137,12 @@ Wildan Mubarok changed and improved the website home page layout and design with
 - (relibc) Jeremy Soller fixed RISC-V
 - (relibc) 4lDO2 fixed a panic
 - (relibc) Ibuki Omatsu implemented the `getens()` function
+- (relibc) Wildan Mubarok implemented the `posix_getdents()` function
 - (relibc) Wildan Mubarok exposed the CPU count to programs
+- (relibc) Wildan Mubarok fixed a panic in the `getpeername()` function
 - (relibc) Wildan Mubarok fixed the `relibc-tests` recipe
+- (relibc) Wildan Mubarok fixed the `PATH` environment variable
+- (relibc) Josh Megnauth implemented the `readlinkat()`, `fdopendir()`, `fdclosedir()`, and `fchmodat()` functions
 - (relibc) Josh Megnauth fixed a bug that prevented symbolic link renaming
 - (relibc) Josh Megnauth added a test for the `lstat()` function
 - (relibc) Elle Rhumssa improved stability and security
@@ -129,8 +168,8 @@ Wildan Mubarok changed and improved the website home page layout and design with
 
 ## Programs
 
-- (programs) Wildan Mubarok partially ported the OpenSSH daemon
 - (programs) Wildan Mubarok ported rsync
+- (programs) Wildan Mubarok fixed the GNU Bash and Git `PATH` environment variable
 - (programs) Josh Megnauth partially ported the **Fish shell**
 - (programs) Jeremy Soller updated the `mpg123` (1.33.2), `libogg` (1.3.4) and `libtheora` (1.2.0) library versions
 - (programs) Jeremy Soller fixed the dynamic linking of OpenAL, `mpg123` and `libtheora` libraries
@@ -140,6 +179,7 @@ Wildan Mubarok changed and improved the website home page layout and design with
 - (build) Wildan Mubarok implemented a method to add new recipe binaries in the existing QEMU image using the `make p.recipe-name` command
 - (build) Wildan Mubarok created a recipe for Cookbook to ease self-hosting
 - (build) Wildan Mubarok implemented partial self-hosting support
+- (build) Wildan Mubarok implemented an environment variable to set the number of CPU threads (COOKBOOK_MAKE_JOBS) for recipe build systems to avoid the compilation to run out of memory
 - (build) Jeremy Soller simplified CMake dynamic linking
 - (build) Jeremy Soller did a recipe cleanup
 
