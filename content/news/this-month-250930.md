@@ -133,13 +133,16 @@ Wildan Mubarok changed and improved the website home page layout and design with
 - (kernel) bjorn3 simplified the panic backtrace code
 - (kernel) bjorn3 fixed `rust-analyzer` on disabled code
 - (kernel) bjorn3 did many code cleanups
+- (kernel) Elle Rhumssa removed an unnecessary memory allocation on DTB
 - (kernel) Elle Rhumssa reduced unsafe Rust code
+- (kernel) Elle Rhumssa improved documentation
 
 ## Driver Improvements
 
 - (drivers) Jeremy Soller fixed the xHCI driver in x86
 - (drivers) Jeremy Soller fixed USB hot plugging
 - (drivers) Jeremy Soller fixed some USB hubs
+- (drivers) Jeremy Soller added the Thinkpad T60 PCI ID on the Intel Gigabit ethernet driver configuration
 - (drivers) bjorn3 fixed a panic in video drivers on 4K displays
 
 ## System Improvements
@@ -150,10 +153,12 @@ Wildan Mubarok changed and improved the website home page layout and design with
 
 - (relibc) Jeremy Soller fixed RISC-V
 - (relibc) 4lDO2 fixed a panic
+- (relibc) 4lDO2 applied more fixes to POSIX signals
 - (relibc) 4lDO2 improved the safety of C pointers
+- (relibc) 4lDO2 improved the [redox-rt explanation](https://gitlab.redox-os.org/redox-os/relibc#redox-rt)
 - (relibc) Ibuki Omatsu implemented the `getens()` function
 - (relibc) Wildan Mubarok implemented the `posix_getdents()` function
-- (relbic) Wildan Mubarok implemented the `shadow.h` function group
+- (relibc) Wildan Mubarok implemented the `shadow.h` function group
 - (relbic) Wildan Mubarok implemented argon2 algorithm
 - (relibc) Wildan Mubarok exposed the CPU count to programs
 - (relibc) Wildan Mubarok fixed a panic in the `getpeername()` function
@@ -163,7 +168,7 @@ Wildan Mubarok changed and improved the website home page layout and design with
 - (relibc) Josh Megnauth fixed a bug that prevented symbolic link renaming
 - (relibc) Josh Megnauth added a test for the `lstat()` function
 - (relibc) Elle Rhumssa improved stability and security
-- (relibc) Elle Rhumssa removed the usage of the `array_chunks` Rust nightly feature
+- (relibc) Elle Rhumssa did code cleanups
 
 ## Networking Improvements
 
@@ -189,12 +194,19 @@ Wildan Mubarok changed and improved the website home page layout and design with
 - (programs) Wildan Mubarok fixed the GNU Bash and Git `PATH` environment variable
 - (programs) Wildan Mubarok fixed the `ncurses` and `ncursesw` dynamic liking
 - (programs) Josh Megnauth partially ported the **Fish shell**
-- (programs) Jeremy Soller updated the `mpg123` (1.33.2), `libogg` (1.3.4) and `libtheora` (1.2.0) library versions
-- (programs) Jeremy Soller fixed the dynamic linking of OpenAL, `mpg123` and `libtheora` libraries
+- (programs) Jeremy Soller updated the `mpg123` (1.33.2), `libogg` (1.3.4), and `libtheora` (1.2.0) library versions
+- (programs) Jeremy Soller fixed the dynamic linking of OpenAL, `mpg123`, and `libtheora` libraries
+- (programs) Jeremy Soller fixed the `ncurses` static linking
+
+## Debugging Improvements
+
+- (debug) Wildan Mubarok enabled [stepping](https://en.wikipedia.org/wiki/Stepping_%28debugging%29) on GCC
+- (debug) Jeremy Soller fixed the `iostat` tool
 
 ## Build System Improvements
 
 - (build) Wildan Mubarok implemented a method to add new recipe binaries in the existing QEMU image using the `make p.recipe-name` command
+- (build) Wildan Mubarok implemented the support to overwrite package files using the filesystem configuration after their installation for more flexibility and better customization
 - (build) Wildan Mubarok created a recipe for Cookbook to ease self-hosting
 - (build) Wildan Mubarok implemented partial self-hosting support
 - (build) Wildan Mubarok implemented an environment variable to set the number of CPU threads (COOKBOOK_MAKE_JOBS) for recipe build systems to avoid the compilation to run out of memory
@@ -203,6 +215,11 @@ Wildan Mubarok changed and improved the website home page layout and design with
 
 ## Documentation Improvements
 
+- (doc) Ribbon added a [issue label filter](https://gitlab.redox-os.org/groups/redox-os/-/issues/?label_name%5B%5D=tracking%20issue) for tracking issues to help developers to find our development priorities and roadmap
+- (doc) Ribbon improved the [build system breaking change prevention and fixing guide](https://doc.redox-os.org/book/troubleshooting.html#prevent-and-fix-breaking-changes) to cover more scenarios
+- (doc) Ribbon fixed and improved the [microkernel advantages](https://doc.redox-os.org/book/microkernels.html#advantages-of-microkernels) explanation
+- (doc) Ribbon added the [Better Expansion](https://doc.redox-os.org/book/microkernels.html#better-expansion) microkernel advantage
+- (doc) Ribbon fixed and improved the [microkernel benefits](https://doc.redox-os.org/book/why-a-new-os.html#benefits-1) in the "Why a New OS?" page
 - (doc) Wildan Mubarok documented [how to create and mount a RedoxFS partition](https://doc.redox-os.org/book/redoxfs.html#tooling)
 
 ## How To Test The Changes
