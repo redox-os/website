@@ -77,7 +77,7 @@ Wildan Mubarok successfully ported the 3.x version of OpenSSL to allow more prog
 
 ## Deadlock Prevention and Detection at Compile-Time
 
-Jeremy Soller started to adopt the concept of [ordered locks](https://docs.rs/ordered-locks/latest/ordered_locks/) to assign tokens to locks, it allows use to use the Rust type system to prevent and detect deadlocks before execution.
+Jeremy Soller started to adopt the concept of [ordered locks](https://docs.rs/ordered-locks/latest/ordered_locks/) to assign tokens to locks, it uses the Rust type system to prevent and detect deadlocks before execution.
 
 Some deadlocks were fixed using this! making the Redox multi-threading more reliable.
 
@@ -87,7 +87,7 @@ Wildan Mubarok created the `server-demo` variant with OpenSSH, Nginx, PHP, CPyth
 
 ## Expanded Redoxer
 
-Wildan Mubarok expanded/improved Redoxer to allow it to build and test changes on Redox system components, important for CI and developers that can't or don't wnat to use the Redox build system.
+Wildan Mubarok expanded/improved Redoxer to allow it to build and test changes on Redox system components, important for CI and developers that can't or don't want to use the Redox build system.
 
 ## Test Reports
 
