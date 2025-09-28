@@ -63,6 +63,14 @@ It will allow us to remotely control the system on both QEMU and real hardware.
 
 Wildan Mubarok successfully ported Nginx and PHP to Redox.
 
+## Neovim on Redox!
+
+Wildan Mubarok successfully ported Neovim.
+
+## CPython 3.12 on Redox!
+
+A recent version of CPython is finally working on Redox, thanks to the amazing work of Wildan Mubarok!
+
 ## OpenSSL 3.x on Redox!
 
 Wildan Mubarok successfully ported the 3.x version of OpenSSL to allow more programs or their recent/latest stable versions to work
@@ -72,6 +80,10 @@ Wildan Mubarok successfully ported the 3.x version of OpenSSL to allow more prog
 Jeremy Soller started to adopt the concept of [ordered locks](https://docs.rs/ordered-locks/latest/ordered_locks/) to assign tokens to locks, it allows use to use the Rust type system to prevent and detect deadlocks before execution.
 
 Some deadlocks were fixed using this! making the Redox multi-threading more reliable.
+
+## Server Demo Variant
+
+Wildan Mubarok created the `server-demo` variant with OpenSSH, Nginx, PHP, CPython, SQLite 3.x, Rsync, Neovim and others included.
 
 ## Expanded Redoxer
 
@@ -104,6 +116,7 @@ Wildan Mubarok changed and improved the website home page layout and design with
 
 ## Kernel Improvements
 
+- (kernel) bjorn3 fixed Intel Meteor Lake CPUs
 - (kernel) bjorn3 fixed an interrupt race condition on ARM64 and RISC-V thanks to Andrey Turkin
 - (kernel) bjorn3 fixed a memory leak
 - (kernel) bjorn3 fixed and improved the debugger
@@ -111,6 +124,7 @@ Wildan Mubarok changed and improved the website home page layout and design with
 - (kernel) bjorn3 implemented partial support for RISC-V on the debugger
 - (kernel) bjorn3 unified the debugger code from all CPU architectures
 - (kernel) bjorn3 improved the debugging output handling
+- (kernel) bjorn3 replaced scrolling with wraparound on graphical debug to improve performance
 - (kernel) bjorn3 updated the code to Rust 2024 edition
 - (kernel) bjorn3 reduced more code duplication between x86 and x86_64
 - (kernel) bjorn3 reduced code duplication in logging between CPU architectures
@@ -136,8 +150,11 @@ Wildan Mubarok changed and improved the website home page layout and design with
 
 - (relibc) Jeremy Soller fixed RISC-V
 - (relibc) 4lDO2 fixed a panic
+- (relibc) 4lDO2 improved the safety of C pointers
 - (relibc) Ibuki Omatsu implemented the `getens()` function
 - (relibc) Wildan Mubarok implemented the `posix_getdents()` function
+- (relbic) Wildan Mubarok implemented the `shadow.h` function group
+- (relbic) Wildan Mubarok implemented argon2 algorithm
 - (relibc) Wildan Mubarok exposed the CPU count to programs
 - (relibc) Wildan Mubarok fixed a panic in the `getpeername()` function
 - (relibc) Wildan Mubarok fixed the `relibc-tests` recipe
@@ -170,6 +187,7 @@ Wildan Mubarok changed and improved the website home page layout and design with
 
 - (programs) Wildan Mubarok ported rsync
 - (programs) Wildan Mubarok fixed the GNU Bash and Git `PATH` environment variable
+- (programs) Wildan Mubarok fixed the `ncurses` and `ncursesw` dynamic liking
 - (programs) Josh Megnauth partially ported the **Fish shell**
 - (programs) Jeremy Soller updated the `mpg123` (1.33.2), `libogg` (1.3.4) and `libtheora` (1.2.0) library versions
 - (programs) Jeremy Soller fixed the dynamic linking of OpenAL, `mpg123` and `libtheora` libraries
