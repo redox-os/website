@@ -53,6 +53,12 @@ https://blog.paulsajna.com/redox-in-your-pocket/
 
 <a href="/img/hardware/blackberry-key2-le.jpg"><img class="img-responsive" alt="Redox running on Blackberry KEY2 LE" src="/img/hardware/blackberry-key2-le.jpg"/></a>
 
+## Redox on Hackaday!
+
+Tyler August wrote an article about Redox on BlackBerry in Hackaday, maybe it's the first Redox OS article there.
+
+https://hackaday.com/2025/09/24/who-wants-a-rusty-old-smartphone/
+
 ## OpenSSH on Redox!
 
 The moment finnaly came, Wildan Mubarok successfully ported OpenSSH to Redox.
@@ -98,12 +104,6 @@ Ron Williams created a repository to store the results of our test suites (curre
 ## Complete TOML Migration
 
 bjorn3 finished the conversion of most important and relevant recipes to TOML, it fixed bugs and will allow our software port system to be improved, expanded and tested more easily.
-
-## Redox on Hackaday!
-
-Tyler August wrote an article about Redox on BlackBerry in Hackaday, maybe it's the first Redox OS article there.
-
-https://hackaday.com/2025/09/24/who-wants-a-rusty-old-smartphone/
 
 ## New Home Page!
 
