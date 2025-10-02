@@ -21,7 +21,7 @@ Jeremy Soller and bjorn3 fixed the remaining bugs in multi-threading and enabled
 
 - ffplay playing a 1080p video with good CPU decoding performance after multi-core and multi-threading support was enabled
 
-<a href="/img/screenshot/ffplay-1080p-video.png"><img class="img-responsive" alt="ffplay playing a 1080p video" src="/img/screenshot/ffplay-1080p-video.png"/></a>
+<a href="/img/screenshot/ffplay-1080p-video.jpg"><img class="img-responsive" alt="ffplay playing a 1080p video" src="/img/screenshot/ffplay-1080p-video.jpg"/></a>
 
 ## Massive Performance Improvement On RedoxFS
 
