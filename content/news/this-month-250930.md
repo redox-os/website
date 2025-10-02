@@ -85,7 +85,7 @@ Wildan Mubarok successfully ported the 3.x version of OpenSSL to allow more prog
 
 Jeremy Soller started to adopt the concept of [ordered locks](https://docs.rs/ordered-locks/latest/ordered_locks/) to assign tokens to locks, it uses the Rust type system to prevent and detect deadlocks before execution.
 
-Some deadlocks were fixed using this! making the Redox multi-threading more reliable.
+Some deadlocks were fixed using this, making the Redox multi-threading more reliable.
 
 ## Server Demo Variant
 
