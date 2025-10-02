@@ -143,11 +143,8 @@ Wildan Mubarok changed and improved the website home page layout and design with
 - (drivers) Jeremy Soller fixed USB hot plugging
 - (drivers) Jeremy Soller fixed some USB hubs
 - (drivers) Jeremy Soller added the Thinkpad T60 PCI ID on the Intel Gigabit ethernet driver configuration
+- (drivers) Jeremy Soller updated the ACPI driver to use the latest version of the `acpi` crate
 - (drivers) bjorn3 fixed a panic in video drivers on 4K displays
-
-## System Improvements
-
-- (system) 
 
 ## Relibc Improvements
 
@@ -170,33 +167,30 @@ Wildan Mubarok changed and improved the website home page layout and design with
 - (relibc) Elle Rhumssa improved stability and security
 - (relibc) Elle Rhumssa did code cleanups
 
-## Networking Improvements
-
-- (net) 
-
-## RedoxFS Improvements
-
-- (redoxfs) 
-
-## Filesystem Improvements
-
-- (fs) 
-
 ## Packaging Improvements
 
 - (pkg) Wildan Mubarok fixed the cache of downloaded packages to avoid unnecessary downloads
 - (pkg) Wildan Mubarok properly implemented the offline mode of the installer
 - (pkg) Wildan Mubarok implemented a plain progress bar
 
+## Orbital Improvements
+
+- (orb) Wildan Mubarok fixed C/C++ programs running on ARM64 and RISC-V
+
 ## Programs
 
 - (programs) Wildan Mubarok ported rsync
+- (programs) Wildan Mubarok fixed Cargo
 - (programs) Wildan Mubarok fixed the GNU Bash and Git `PATH` environment variable
 - (programs) Wildan Mubarok fixed the `ncurses` and `ncursesw` dynamic liking
 - (programs) Josh Megnauth partially ported the **Fish shell**
 - (programs) Jeremy Soller updated the `mpg123` (1.33.2), `libogg` (1.3.4), and `libtheora` (1.2.0) library versions
 - (programs) Jeremy Soller fixed the dynamic linking of OpenAL, `mpg123`, and `libtheora` libraries
 - (programs) Jeremy Soller fixed the `ncurses` static linking
+
+## Testing Improvements
+
+- (tests) Joshua Williams added many [POSIX signals tests](https://gitlab.redox-os.org/redox-os/redox-posix-tests)
 
 ## Debugging Improvements
 
@@ -210,6 +204,9 @@ Wildan Mubarok changed and improved the website home page layout and design with
 - (build) Wildan Mubarok created a recipe for Cookbook to ease self-hosting
 - (build) Wildan Mubarok implemented partial self-hosting support
 - (build) Wildan Mubarok implemented an environment variable to set the number of CPU threads (COOKBOOK_MAKE_JOBS) for recipe build systems to avoid the compilation to run out of memory
+- (build) Wildan Mubarok fixed local compilation of meta-packages
+- (build) Wildan Maubarok fixed the option to change the build method of recipes in meta-packages, like local and remote packages in the same meta-package
+- (build) Wildan Mubarok reduced the recipe rebuild time
 - (build) Jeremy Soller simplified CMake dynamic linking
 - (build) Jeremy Soller did a recipe cleanup
 
@@ -220,6 +217,7 @@ Wildan Mubarok changed and improved the website home page layout and design with
 - (doc) Ribbon fixed and improved the [microkernel advantages](https://doc.redox-os.org/book/microkernels.html#advantages-of-microkernels) explanation
 - (doc) Ribbon added the [Better Expansion](https://doc.redox-os.org/book/microkernels.html#better-expansion) microkernel advantage
 - (doc) Ribbon fixed and improved the [microkernel benefits](https://doc.redox-os.org/book/why-a-new-os.html#benefits-1) in the "Why a New OS?" page
+- (doc) Wildan Mubarok did some improvements and cleanup to the porting documentation
 - (doc) Wildan Mubarok documented [how to create and mount a RedoxFS partition](https://doc.redox-os.org/book/redoxfs.html#tooling)
 
 ## How To Test The Changes
