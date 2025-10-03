@@ -93,7 +93,9 @@ Wildan Mubarok created the `server-demo` variant with OpenSSH, Nginx, PHP, CPyth
 
 ## Expanded Redoxer
 
-Wildan Mubarok expanded/improved Redoxer to allow it to build and test changes on Redox system components, important for CI and developers that can't or don't want to use the Redox build system.
+Wildan Mubarok improved the Redoxer Docker container to use local packages inside the container instead of downloading new one each time it runs, important for CI to avoid random errors caused by new packages.
+
+Wildan Mubarok expanded Redoxer to allow Rust programs using C libraries compiled to Redox to work.
 
 ## Test Reports
 
