@@ -93,7 +93,7 @@ Wildan Mubarok created the `server-demo` variant with OpenSSH, Nginx, PHP, CPyth
 
 ## Expanded Redoxer
 
-Wildan Mubarok improved the Redoxer Docker container to use local packages inside the container instead of downloading new one each time it runs, important for CI to avoid random errors caused by new packages.
+Wildan Mubarok improved the Redoxer Docker container to use local packages inside the container instead of downloading a new one each time it runs, which is important for the CI to avoid random errors caused by new packages.
 
 Wildan Mubarok expanded Redoxer to allow Rust programs using C libraries compiled to Redox to work.
 
@@ -158,7 +158,7 @@ Wildan Mubarok changed and improved the website home page layout and design with
 - (relibc) Ibuki Omatsu implemented the `getens()` function
 - (relibc) Wildan Mubarok implemented the `posix_getdents()` function
 - (relibc) Wildan Mubarok implemented the `shadow.h` function group
-- (relibc) Wildan Mubarok implemented the argon2 algorithm to the `crypt()` function
+- (relibc) Wildan Mubarok implemented the argon2 algorithm in the `crypt()` function
 - (relibc) Wildan Mubarok exposed the CPU count to programs
 - (relibc) Wildan Mubarok fixed a panic in the `getpeername()` function
 - (relibc) Wildan Mubarok fixed the `relibc-tests` recipe
