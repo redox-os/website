@@ -25,7 +25,7 @@ Jeremy Soller and bjorn3 fixed the remaining bugs in multi-threading and enabled
 
 ## Massive Performance Improvement On RedoxFS
 
-Jeremy Soller implemented inode inlining for small files which resulted in a massive performance improvement and a reduction of context switches by a factor of 2 in all operation types.
+Jeremy Soller implemented [inode inlining](https://en.wikipedia.org/wiki/Inode#Inlining) for small files which resulted in a massive performance improvement, a reduction of disk I/O operations, size of file caching and context switches by a factor of 2 in all operation types.
 
 Wildan Mubarok measured that a benchmark to add packages to an existing QEMU image became 7.5 times faster!
 
@@ -79,11 +79,11 @@ A recent version of CPython is finally working on Redox, thanks to the amazing w
 
 ## OpenSSL 3.x on Redox!
 
-Wildan Mubarok successfully ported the 3.x version of OpenSSL to allow more programs or their recent/latest stable versions to work
+Wildan Mubarok successfully ported the 3.x version of OpenSSL to allow more programs or their recent/latest stable versions to work.
 
 ## Deadlock Prevention and Detection at Compile-Time
 
-Jeremy Soller started to adopt the concept of [ordered locks](https://docs.rs/ordered-locks/latest/ordered_locks/) to assign tokens to locks, it uses the Rust type system to prevent and detect deadlocks before execution.
+Jeremy Soller started to adopt the concept of [ordered locks](https://docs.rs/ordered-locks/latest/ordered_locks/) to assign tokens to locks, it uses the Rust type system to prevent and detect deadlocks at compile-time.
 
 Some deadlocks were fixed using this, making the Redox multi-threading more reliable.
 
@@ -97,7 +97,7 @@ Wildan Mubarok expanded/improved Redoxer to allow it to build and test changes o
 
 ## Test Reports
 
-Ron Williams created a repository to store the results of our test suites (currently [os-test](https://sortix.org/os-test/) and [Open POSIX Test Suite](https://posixtest.sourceforge.net/)).
+Ron Williams created a repository to store the results of test suites that we can run (currently [os-test](https://sortix.org/os-test/) and [Open POSIX Test Suite](https://posixtest.sourceforge.net/)).
 
 - https://gitlab.redox-os.org/redox-os/test-results
 
@@ -116,7 +116,7 @@ Wildan Mubarok changed and improved the website home page layout and design with
 
 ## Kernel Improvements
 
-- (kernel) bjorn3 fixed Intel Meteor Lake CPUs
+- (kernel) bjorn3 fixed booting on Intel Meteor Lake CPUs
 - (kernel) bjorn3 fixed an interrupt race condition on ARM64 and RISC-V thanks to Andrey Turkin
 - (kernel) bjorn3 fixed a memory leak
 - (kernel) bjorn3 fixed and improved the debugger
@@ -139,7 +139,7 @@ Wildan Mubarok changed and improved the website home page layout and design with
 
 ## Driver Improvements
 
-- (drivers) Jeremy Soller fixed the xHCI driver in x86
+- (drivers) Jeremy Soller fixed the xHCI driver in x86 on real hardware
 - (drivers) Jeremy Soller fixed USB hot plugging
 - (drivers) Jeremy Soller fixed some USB hubs
 - (drivers) Jeremy Soller added the Thinkpad T60 PCI ID on the Intel Gigabit ethernet driver configuration
@@ -156,7 +156,7 @@ Wildan Mubarok changed and improved the website home page layout and design with
 - (relibc) Ibuki Omatsu implemented the `getens()` function
 - (relibc) Wildan Mubarok implemented the `posix_getdents()` function
 - (relibc) Wildan Mubarok implemented the `shadow.h` function group
-- (relbic) Wildan Mubarok implemented argon2 algorithm
+- (relibc) Wildan Mubarok implemented the argon2 algorithm to the `crypt()` function
 - (relibc) Wildan Mubarok exposed the CPU count to programs
 - (relibc) Wildan Mubarok fixed a panic in the `getpeername()` function
 - (relibc) Wildan Mubarok fixed the `relibc-tests` recipe
@@ -182,8 +182,9 @@ Wildan Mubarok changed and improved the website home page layout and design with
 - (programs) Wildan Mubarok ported rsync
 - (programs) Wildan Mubarok fixed Cargo
 - (programs) Wildan Mubarok fixed the GNU Bash and Git `PATH` environment variable
-- (programs) Wildan Mubarok fixed the `ncurses` and `ncursesw` dynamic liking
+- (programs) Wildan Mubarok fixed the `ncurses` and `ncursesw` dynamic linking
 - (programs) Josh Megnauth partially ported the **Fish shell**
+- (programs) Jeremy Soller fixed many programs by compiling it as statically linked for ARM64 and RISC-V
 - (programs) Jeremy Soller updated the `mpg123` (1.33.2), `libogg` (1.3.4), and `libtheora` (1.2.0) library versions
 - (programs) Jeremy Soller fixed the dynamic linking of OpenAL, `mpg123`, and `libtheora` libraries
 - (programs) Jeremy Soller fixed the `ncurses` static linking
