@@ -15,17 +15,28 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## RustConf Presentation
+
+Jeremy Soller presented "10 Years of Rust and Redox" at RustConf this year,
+with some great stories about the history of Redox,
+and some awesome insights into Redox's future.
+Jeremy's talk was one of the Marquee presentations, on the main stage to all RustConf attendees.
+Many people felt it was one of the most enjoyable and informative sessions at the conference.
+Grab some popcorn and enjoy an entertaining presentation with a surprise ending!
+
+<iframe width="800" height="640" src="https://www.youtube.com/embed/xlccq9EbXGA?si=ETYWSkPUVK35Gm97" title="10 Years of Rust and Redox" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Multi-threaded By Default!
 
-Jeremy Soller and bjorn3 fixed the remaining bugs in multi-threading and enabled it by default for x86, this can give a massive performance improvement depending on the hardware specifications.
+Jeremy Soller and bjorn3 fixed some key bugs in multi-threading and enabled it by default for x86. This can give a massive performance improvement depending on the hardware specifications.
 
 - ffplay playing a 1080p video with good CPU decoding performance after multi-core and multi-threading support was enabled
 
 <a href="/img/screenshot/ffplay-1080p-video.jpg"><img class="img-responsive" alt="ffplay playing a 1080p video" src="/img/screenshot/ffplay-1080p-video.jpg"/></a>
 
-## Massive Performance Improvement On RedoxFS
+## Massive Small File Performance Improvement On RedoxFS
 
-Jeremy Soller implemented [inode inlining](https://en.wikipedia.org/wiki/Inode#Inlining) for small files which resulted in a massive performance improvement, a reduction of disk I/O operations, size of file caching and context switches by a factor of 2 in all operation types.
+Jeremy Soller implemented [inode data inlining](https://en.wikipedia.org/wiki/Inode#Inlining) for small files which resulted in a massive performance improvement, a reduction of storage I/O operations, size of file caching and frequency of context switches by a factor of 2 in all small file operation types.
 
 Wildan Mubarok measured that a benchmark to add packages to an existing QEMU image became 7.5 times faster!
 
@@ -55,7 +66,7 @@ https://blog.paulsajna.com/redox-in-your-pocket/
 
 ## Redox on Hackaday!
 
-Tyler August wrote an article about Redox on BlackBerry in Hackaday, maybe it's the first Redox OS article there.
+Tyler August wrote an article about Redox on BlackBerry in Hackaday, quite possibly the first Redox OS article there.
 
 https://hackaday.com/2025/09/24/who-wants-a-rusty-old-smartphone/
 
@@ -83,9 +94,13 @@ Wildan Mubarok successfully ported the 3.x version of OpenSSL to allow more prog
 
 ## Deadlock Prevention and Detection at Compile-Time
 
-Jeremy Soller started to adopt the concept of [ordered locks](https://docs.rs/ordered-locks/latest/ordered_locks/) to assign tokens to locks, it uses the Rust type system to prevent and detect deadlocks at compile-time.
+Jeremy Soller implemented Ordered Locks in the kernel,
+based on the [ordered_locks crate](https://docs.rs/ordered-locks/latest/ordered_locks/), to assign tokens to locks.
+It uses the Rust type system and [typestates](https://en.wikipedia.org/wiki/Typestate_analysis) to detect potential deadlocks at compile-time.
+We weren't able to use the `ordered_locks` crate directly due to dependencies,
+but we are happy to share ideas or [implementation](https://gitlab.redox-os.org/redox-os/kernel/-/blob/master/src/sync/ordered.rs?ref_type=heads).
 
-Some deadlocks were fixed using this, making the Redox multi-threading more reliable.
+Some potential deadlocks were fixed using this, making Redox's multi-threading more reliable.
 
 ## Server Demo Variant
 
@@ -103,13 +118,14 @@ Ron Williams created a repository to store the results of test suites that we ca
 
 - https://gitlab.redox-os.org/redox-os/test-results
 
-## Complete TOML Migration
+## Complete TOML Migration of Recipes
 
-bjorn3 finished the conversion of most important and relevant recipes to TOML, it fixed bugs and will allow our software port system to be improved, expanded and tested more easily.
+bjorn3 finished the conversion of the most important and relevant remaining recipes from shell scripts to TOML.
+It fixed some bugs and will allow our build system and software porting to be improved, expanded and tested more easily.
 
 ## New Home Page!
 
-Wildan Mubarok changed and improved the website home page layout and design with more information and items, click on the Redox logo in the website header to see.
+Wildan Mubarok improved the Redox website home page with a responsive design, more information and additional links. Click on the Redox logo in the header of this article to see the new layout.
 
 ## Bootloader Improvements
 
