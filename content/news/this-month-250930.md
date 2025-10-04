@@ -167,7 +167,7 @@ Wildan Mubarok improved the Redox website home page with a responsive design, mo
 ## Relibc Improvements
 
 - (relibc) Jeremy Soller fixed RISC-V
-- (relibc) Jeremy Soller implemented the `pthread_getattr_np` function
+- (relibc) Jeremy Soller implemented the `pthread_getattr_np()` function
 - (relibc) 4lDO2 fixed a panic
 - (relibc) 4lDO2 applied more fixes to POSIX signals
 - (relibc) 4lDO2 improved the safety of C pointers
@@ -195,6 +195,7 @@ Wildan Mubarok improved the Redox website home page with a responsive design, mo
 ## Orbital Improvements
 
 - (orb) Wildan Mubarok fixed C/C++ programs running on ARM64 and RISC-V
+- (orb) Jeremy Soller added a shortcut for the GUI installer in the app menu
 
 ## Programs
 
