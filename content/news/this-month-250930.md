@@ -161,7 +161,7 @@ Wildan Mubarok improved the Redox website home page with a responsive design, mo
 - (drivers) Jeremy Soller fixed USB hot plugging
 - (drivers) Jeremy Soller fixed some USB hubs
 - (drivers) Jeremy Soller added the Thinkpad T60 PCI ID on the Intel Gigabit ethernet driver configuration
-- (drivers) Jeremy Soller updated the ACPI driver to use the latest version of the `acpi` crate
+- (drivers) Jeremy Soller updated the ACPI driver to use the latest version of [Rust-OSDev](https://rust-osdev.com/)'s [`acpi`](https://github.com/rust-osdev/acpi/) crate, led by Isaac Woods. Isaac has rewritten the AML support and improved ACPI in general. Please show Isaac some love if you can.
 - (drivers) bjorn3 fixed a panic in video drivers on 4K displays
 
 ## Relibc Improvements
