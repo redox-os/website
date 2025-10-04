@@ -69,6 +69,7 @@ code {
 
 iframe {
   max-width: 100%;
+  max-height: 80vw;
   margin: auto;
   display: block;
 }
