@@ -67,6 +67,12 @@ code {
 	height: auto;
 }
 
+iframe {
+  max-width: 100%;
+  margin: auto;
+  display: block;
+}
+
 @font-face {
 	font-family: 'Fira Sans';
 	font-display: swap;
