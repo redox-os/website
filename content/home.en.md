@@ -287,10 +287,9 @@ url = "home"
           <li><a href="https://gitlab.redox-os.org/redox-os/redox/-/issues/1412">Smaller kernel code</a> </li>
           <li><a href="https://gitlab.redox-os.org/redox-os/redox/-/issues/1390">Self-Hosting OS</a></li>
           <li><a href="https://gitlab.redox-os.org/redox-os/redox/-/issues/1553">Native Linux VM</a> </li>
-          <li><a href="https://gitlab.redox-os.org/redox-os/redoxfs/-/merge_requests/95">File system compression</a>
+          <li><a href="https://gitlab.redox-os.org/redox-os/redoxfs/-/merge_requests/95">File system compression</a></li>
           <li><a href="https://gitlab.redox-os.org/redox-os/redox/-/issues/1710">Accessibility Improvements</a> </li>
-          <li>and [more](https://gitlab.redox-os.org/groups/redox-os/-/issues/?label_name[]=tracking%20issue) </li>
-          </li>
+          <li>and <a href="https://gitlab.redox-os.org/groups/redox-os/-/issues/?label_name[]=tracking%20issue">more</a> </li>
         </ul>
       </div>
       <p class="mt-2  has-text-centered">
