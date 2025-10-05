@@ -8,7 +8,7 @@ To build this site, you must install [Hugo](https://gohugo.io/) and [Nodejs](htt
 
 ### Install Hugo
 
-You can install Hugo from automated script using (webi)[https://webinstall.dev/hugo]
+You can install Hugo from automated script using [webi](https://webinstall.dev/hugo)
 
 ```sh
 curl -sS https://webi.sh/hugo | sh; \
@@ -25,7 +25,7 @@ Or install it manually:
 
 NOTE: Nodejs is only needed for PostCSS during building the site. You can skip Node.js if you only want to preview the site.
 
-You can install Nodejs from automated script using (webi)[https://webinstall.dev/node]
+You can install Nodejs from automated script using [webi](https://webinstall.dev/node)
 
 ```sh
 curl -sS https://webi.sh/node | sh; \
