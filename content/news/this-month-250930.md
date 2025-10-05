@@ -40,6 +40,14 @@ Jeremy Soller implemented [inode data inlining](https://en.wikipedia.org/wiki/In
 
 Wildan Mubarok measured that a benchmark to add packages to an existing QEMU image became 7.5 times faster!
 
+## Massive Installation Performance Improvement
+
+Jeremy Soller improved `lived` to preserve the original live disk data in memory (writes go to temporary memory), the installer can find this and use a new clone feature in RedoxFS to quickly clone the filesystem to a new disk (potentially the new disk also has encryption).
+
+This prevents having to run a thread for the new RedoxFS and context switch to the original RedoxFS and also `lived`, the whole clone is done in a single transaction with a large write cache, meaning it also has much fewer switches to the storage driver.
+
+Including the inode data inlining the benchmark is 10 times faster than before!
+
 ## LZ4 Compression On RedoxFS
 
 Jeremy Soller implemented LZ4 compression which saved storage space and improved performance.
@@ -72,7 +80,7 @@ https://hackaday.com/2025/09/24/who-wants-a-rusty-old-smartphone/
 
 ## OpenSSH on Redox!
 
-The moment finnaly came, Wildan Mubarok successfully ported OpenSSH to Redox.
+The moment finally came, Wildan Mubarok successfully ported OpenSSH to Redox.
 
 It will allow us to remotely control the system on both QEMU and real hardware.
 
