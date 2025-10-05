@@ -46,7 +46,7 @@ Jeremy Soller improved `lived` to preserve the original live disk data in memory
 
 This prevents having to run a thread for the new RedoxFS and context switch to the original RedoxFS and also `lived`, the whole clone is done in a single transaction with a large write cache, meaning it also has much fewer switches to the storage driver.
 
-Including the inode data inlining the benchmark is 10 times faster than before!
+Including the inode data inlining optimization the benchmark is 10 times faster than before!
 
 ## LZ4 Compression On RedoxFS
 
