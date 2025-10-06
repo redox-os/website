@@ -24,6 +24,8 @@ Jeremy's talk was one of the Marquee presentations, on the main stage to all Rus
 Many people felt it was one of the most enjoyable and informative sessions at the conference.
 Grab some popcorn and enjoy an entertaining presentation with a surprise ending!
 
+You can see the slides on [this](https://github.com/jackpot51/rustconf2025/blob/main/10%20Years%20of%20Redox%20and%20Rust.pdf) link.
+
 <iframe width="800" height="640" src="https://www.youtube.com/embed/xlccq9EbXGA?si=ETYWSkPUVK35Gm97" title="10 Years of Rust and Redox" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Multi-threaded By Default!
