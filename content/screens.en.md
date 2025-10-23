@@ -54,7 +54,7 @@ title = "Redox in Action"
 
 ## Playing 1080p video in the ffplay player
 
-<img class="img-responsive" src="/img/screenshot/ffplay-1080p-video.png"/>
+<img class="img-responsive" src="/img/screenshot/ffplay-1080p-video.jpg"/>
 
 ## NetSurf
 
