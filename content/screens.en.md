@@ -128,10 +128,6 @@ title = "Redox in Action"
 
 <img class="img-responsive" src="/img/screenshot/pixelcannon.png"/>
 
-## Game Showcase 1
-
-<img class="img-responsive" src="/img/screenshot/games1.png"/>
-
 # Laptops
 
 ## Some laptops running Redox 0.8.0
