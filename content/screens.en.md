@@ -2,67 +2,139 @@
 title = "Redox in Action"
 +++
 
-## COSMIC programs running on Redox
+- [Programs](#programs)
+- [System](#system)
+- [Games](#games)
+- [Laptops](#laptops)
+- [Desktops](#Desktops)
+- [Smartphones](#smartphones)
+- [Videos](#videos)
+
+# Programs
+
+## COSMIC Files, COSMIC Editor and COSMIC Terminal
 
 <img class="img-responsive" src="/img/screenshot/cosmic-programs.png"/>
 
-## Screenfetch running on Redox
+## COSMIC Store
+
+<img class="img-responsive" src="/img/screenshot/cosmic-store.png"/>
+
+## COSMIC Reader
+
+<img class="img-responsive" src="/img/screenshot/cosmic-reader.png"/>
+
+## Screenfetch
 
 <img class="img-responsive" src="/img/screenshot/cosmic-term-screenfetch.png"/>
 
-## xeyes running on Redox
+## X11 xeyes
 
 <img class="img-responsive" src="/img/screenshot/xeyes.png"/>
 
-## X11 programs running on Redox
+## X11 xterm, xeyes, glxgears and Event Tester
 
 <img class="img-responsive" src="/img/screenshot/x11.png"/>
 
-## glxgears running on Redox
+## X11 glxgears
 
 <img class="img-responsive" src="/img/screenshot/glxgears.png"/>
 
-## xterm running on Redox
+## X11 xterm
 
 <img class="img-responsive" src="/img/screenshot/xterm.png"/>
 
-## GTK 3 Demo running on Redox
+## GTK 3 Demo
 
 <img class="img-responsive" src="/img/screenshot/gtk3.png"/>
 
-## Image viewer running on Redox
+## Orbital image viewer
 
 <img class="img-responsive" src="/img/screenshot/image-viewer.png"/>
 
-## NetSurf running on Redox
+## Playing 1080p video in the ffplay player
+
+<img class="img-responsive" src="/img/screenshot/ffplay-1080p-video.png"/>
+
+## NetSurf
 
 <img class="img-responsive" src="/img/screenshot/netsurf.png"/>
 
-## SDL2 Gears running on Redox
+## htop
+
+<img class="img-responsive" src="/img/screenshot/htop.png"/>
+
+## Running htop and ffplay
+
+<img class="img-responsive" src="/img/screenshot/htop-ffplay.jpg"/>
+
+## SDL2 Gears
 
 <img class="img-responsive" src="/img/screenshot/sdl2-gears.png"/>
 
-## Pixelcannon running on Redox
+## Software Showcase 1
+
+<img class="img-responsive" src="/img/screenshot/programs1.png"/>
+
+## Software Showcase 2
+
+<img class="img-responsive" src="/img/screenshot/programs2.png"/>
+
+# System
+
+## Default Wallpaper
+
+<img class="img-responsive" src="/img/screenshot/orbital-visual.png"/>
+
+## Installer GUI
+
+<img class="img-responsive" src="/img/screenshot/installer-gui.png"/>
+
+## Redox running in the [RVVM](https://github.com/LekKit/RVVM) emulator
+
+<img class="img-responsive" src="/img/screenshot/rvvm.png"/>
+
+## Redox running in the [v86](https://github.com/copy/v86) emulator
+
+<img class="img-responsive" src="/img/screenshot/v86.png"/>
+
+## Redox RISC-V running in Redox x86-64
+
+<img class="img-responsive" src="/img/screenshot/redox-on-redox.png"/>
+
+## First Screenshot (2015)
+
+<img class="img-responsive" src="/img/screenshot/first-screenshot.png"/>
+
+# Games
+
+## Balatro
+
+<img class="img-responsive" src="/img/screenshot/balatro-redox.png"/>
+
+## Playing Diablo in the DevilutionX engine
+
+<img class="img-responsive" src="/img/screenshot/devilutionx.png"/>
+
+## Freeciv
+
+<img class="img-responsive" src="/img/screenshot/freeciv.png"/>
+
+## Playing Star Wars Jedi Knight: Jedi Academy in the OpenJK engine
+
+<img class="img-responsive" src="/img/screenshot/openjk.png"/>
+
+## Pixelcannon
 
 <img class="img-responsive" src="/img/screenshot/pixelcannon.png"/>
 
-## Software Showcase 1
+## Game Showcase 1
 
-<iframe width="800" height="640" src="https://www.youtube.com/embed/s-gxAsBTPxA?si=wXvO_N3PRjzjgzk6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<img class="img-responsive" src="/img/screenshot/games1.png"/>
 
-## Playing Stargate SG-1 Season 10 intro on Redox
+# Laptops
 
-<iframe width="800" height="640" src="https://www.youtube.com/embed/3cPekY4c9Hc?si=EYuAkgpVDAKOb0jW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-## Mesa3D Gears with LLVMpipe running on Redox
-
-<iframe width="800" height="640" src="https://www.youtube.com/embed/ADSvEA_YY7E?si=vEtlU2rGxJldIFuk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-## Playing Elements by Tom Lehrer on Redox
-
-<iframe width="800" height="640" src="https://www.youtube.com/embed/7tyjtfdCqO8?si=FmPDg59s_QujKdNz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-## Some laptops running the version 0.8.0 of Redox
+## Some laptops running Redox 0.8.0
 
 <img class="img-responsive" src="/img/release/0.8.0.jpg"/>
 
@@ -85,6 +157,40 @@ title = "Redox in Action"
 ## ThinkPad T520, ThinkPad P50 and Asus P7P55D-E Pro Desktop
 
 <img class="img-responsive" src="/img/hardware/T520-P50-Asus-Desktop.jpg"/>
+
+# Desktops
+
+## Custom Intel Pentium II Desktop
+
+<img class="img-responsive" src="/img/hardware/pentium-ii-desktop.jpg"/>
+
+# Smartphones
+
+## Google Pixel 3
+
+<img class="img-responsive" src="/img/hardware/google-pixel3.jpg"/>
+
+## BlackBerry KEY2 LE
+
+<img class="img-responsive" src="/img/hardware/blackberry-key2-le.jpg"/>
+
+# Videos
+
+## Playing Stargate SG-1 Season 10 intro in FFMPEG ffplay
+
+<iframe width="800" height="640" src="https://www.youtube.com/embed/3cPekY4c9Hc?si=EYuAkgpVDAKOb0jW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## SDL2 Gears
+
+<iframe width="800" height="640" src="https://www.youtube.com/embed/ADSvEA_YY7E?si=vEtlU2rGxJldIFuk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Playing Elements by Tom Lehrer
+
+<iframe width="800" height="640" src="https://www.youtube.com/embed/7tyjtfdCqO8?si=FmPDg59s_QujKdNz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Software Showcase 1
+
+<iframe width="800" height="640" src="https://www.youtube.com/embed/s-gxAsBTPxA?si=wXvO_N3PRjzjgzk6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <!--
 
