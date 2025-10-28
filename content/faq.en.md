@@ -162,7 +162,7 @@ Any OS compatible with the [Single Unix Specification](https://en.wikipedia.org/
 This Bell Labs OS brings the concept of "Everything is a File" to the highest level, doing all the system communication from the filesystem.
 
 - [Drew DeVault explains the Plan 9](https://drewdevault.com/2022/11/12/In-praise-of-Plan-9.html)
-- [Plan 9's influence on Redox](https://doc.redox-os.org/book/urls-schemes-resources.html)
+- [Plan 9's influence on Redox](https://doc.redox-os.org/book/schemes-resources.html)
 
 ### [Minix](https://minix3.org/)
 
