@@ -39,12 +39,6 @@ title = "Talks"
 <audio data-theme="day" data-src="https://changelog.com/podcast/280/embed" src="https://cdn.changelog.com/uploads/podcast/280/the-changelog-280.mp3" preload="none" class="changelog-episode" controls></audio>
 <script async src="//cdn.changelog.com/embed.js"></script>
 
-## Lunduke Hour
-
-**By Jeremy Soller and Bryan Lunduke on March 13, 2017**
-
-{{< odysee redoxos-microkernel-os-written-in-rust >}}
-
 ## FOSDEM 2017
 
 **By David Teller on February 4, 2017**
