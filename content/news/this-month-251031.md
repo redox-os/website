@@ -142,6 +142,7 @@ Wildan Mubarok reimplemented the Cookbook scripts in Rust with better performanc
 - (libc) Wildan Mubarok exposed PIE information to ease dynamic linker debugging
 - (libc) Josh Megnauth implemented the `renameat()` and `renameat2()` functions
 - (libc) 4lDO2 implemented Rust newtype wrappers to allow nul-terminated strings to be handled in safer code
+- (libc) 4lDO2 implemented a wrapper to improve the C FFI safety with input and output data distinction
 - (libc) 4lDO2 mostly unified the `printf()` and `wprintf()` functions code
 - (libc) Jeremy Soller implemented the `NAME_MAX` limit
 - (libc) auronandace did small code cleanups
@@ -158,7 +159,7 @@ Wildan Mubarok reimplemented the Cookbook scripts in Rust with better performanc
 
 ## Terminal Improvements
 
-- (term) Stephen Seo implemented the support for temporary environment variables (`ENVIVAR=some-value command) in the Ion shell
+- (term) Stephen Seo implemented the support for temporary environment variables (`ENVIVAR=some-value` command) in the Ion shell
 
 ## Programs
 
@@ -189,7 +190,7 @@ Wildan Mubarok reimplemented the Cookbook scripts in Rust with better performanc
 
 - (doc) Ribbon [documented the method](https://doc.redox-os.org/book/troubleshooting.html#debug-methods) to verify if Orbital or system hangs with a bug
 - (doc) Ribbon added the [Harvard CS50](https://www.youtube.com/watch?v=8mAITcNt710) 24-hour course from freeCodeCamp in the "References" page, thanks to Ron Williams
-- (doc) Ribbon explained [why C/C++ programs and libraries are hard and time consuming to port](https://doc.redox-os.org/book/developer-faq.html#why-cc-programs-and-libraries-are-hard-and-time-consuming-to-port) in the Developer FAQ
+- (doc) Ribbon explained [why C/C++ programs and libraries can be hard and time consuming to port](https://doc.redox-os.org/book/developer-faq.html#why-cc-programs-and-libraries-are-hard-and-time-consuming-to-port) in the Developer FAQ
 - (doc) Ribbon did many improvements, fixes and cleanup in the porting documentation
 
 ## Website Improvements
