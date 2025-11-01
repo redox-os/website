@@ -127,8 +127,9 @@ Wildan Mubarok reimplemented the Cookbook scripts in Rust with better performanc
 ## System Improvements
 
 - (sys) Wildan Mubarok bumped uutils to 0.3 version
+- (sys) Wildan Mubarok fixed shared memory read/write operation
 - (sys) Wildan Mubarok fixed an Unix Domain Sockets race condition
-- (sys) Wildan Mubarok implemented scrolling in the boot log using Page Up/Down keys (it has a limit of 1000 lines)
+- (sys) Wildan Mubarok implemented scrolling in the boot log using Shift+Up/Down keys (it has a limit of 1000 lines)
 
 ## Relibc Improvements
 
@@ -137,7 +138,6 @@ Wildan Mubarok reimplemented the Cookbook scripts in Rust with better performanc
 - (libc) Wildan Mubarok fixed ARM64 and RISC-V compilation
 - (libc) Wildan Mubarok fixed a panic in the `strlen()` function due to an uninitialized string
 - (libc) Wildan Mubarok fixed a dynamic linker bug where multiple objects were loading the same object
-- (libc) Wildan Mubarok fixed a symbol conflict in compiler builtins
 - (libc) Wildan Mubarok exposed memory information for programs
 - (libc) Wildan Mubarok exposed PIE information to ease dynamic linker debugging
 - (libc) Josh Megnauth implemented the `renameat()` and `renameat2()` functions
@@ -172,6 +172,7 @@ Wildan Mubarok reimplemented the Cookbook scripts in Rust with better performanc
 - (build) Wildan Mubarok implemented the `make push` command to install recipe packages with new changes in an existing Redox image for faster testing
 - (build) Wildan Mubarok implemented the `remote` Cookbook template to allow recipes to use pre-compiled library objects downloaded from Redox package server
 - (build) Wildan Mubarok implemented a way to disable the recipe source update from filesystem configuration (`recipe-name = "local"`) to easily avoid upstream breaking changes in local development
+- (build) Wildan Mubarok implemented automatic tarball update when BLAKE3 hashes change
 - (build) Wildan Mubarok implemented offline mode in the installer when remote packages aren't used
 - (build) Wildan Mubarok implemented a filesystem configuration recipe and recipe dependency tree to help the investigation of problems and bugs (`make tree` command)
 - (build) Wildan Mubarok implemented tarball mirror configuration in Cookbook
@@ -188,6 +189,8 @@ Wildan Mubarok reimplemented the Cookbook scripts in Rust with better performanc
 
 - (doc) Ribbon [documented the method](https://doc.redox-os.org/book/troubleshooting.html#debug-methods) to verify if Orbital or system hangs with a bug
 - (doc) Ribbon added the [Harvard CS50](https://www.youtube.com/watch?v=8mAITcNt710) 24-hour course from freeCodeCamp in the "References" page, thanks to Ron Williams
+- (doc) Ribbon explained [why C/C++ programs and libraries are hard and time consuming to port](https://doc.redox-os.org/book/developer-faq.html#why-cc-programs-and-libraries-are-hard-and-time-consuming-to-port) in the Developer FAQ
+- (doc) Ribbon did many improvements, fixes and cleanup in the porting documentation
 
 ## Website Improvements
 
