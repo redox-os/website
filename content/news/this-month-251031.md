@@ -4,6 +4,10 @@ author = "Ribbon and Ron Williams"
 date = "2025-10-31"
 +++
 
+- Servo on Redox
+
+<img src="/img/screenshot/servo.png" class="img-responsive"/>
+
 Redox OS is a Unix-like general-purpose microkernel-based operating system
 written in Rust. October was a very exciting month for Redox! Here's all the latest news.
 
@@ -23,9 +27,9 @@ This daemon fixed our problems with DeviceTree computers and improved the ARM64 
 
 ## Servo on Redox!
 
-Wildan Mubarok successfully ported Servo after some effort to fix bugs and missing functionality, thanks for all contributors that made it possible.
+Wildan Mubarok successfully ported Servo after some effort to fix bugs and missing functionality, unfortunately it crashes if another website is loaded and don't respond to keyboard input (these bugs will be fixed soon)
 
-<img src="/img/screenshot/servo.png" class="img-responsive"/>
+Thanks for all contributors that made it possible.
 
 ## htop on Redox!
 
@@ -58,6 +62,20 @@ Wildan Mubarok successfully ported the [rustysd](https://github.com/KillingSpark
 The rsm92 (Rafael) contributor ported [GoAccess](https://goaccess.io/), it's the first web analytics program to work on Redox.
 
 <img src="/img/screenshot/goaccess.jpg" class="img-responsive"/>
+
+## Cookbook in Rust
+
+Wildan Mubarok reimplemented the Cookbook scripts in Rust with better performance and more features, he implemented the following items:
+
+- A TUI to monitor and manage the build process
+- Options to skip, retry or cancel the build process when an error happens
+- Parallel recipe source fetch
+- Log scrolling with arrow keys
+- Unique screen for fetch and compilation logs (use the "1" and "2" keys to switch)
+- Option to disable recipe logs
+- Option to do an operation in a recipe category (free space by cleaning all recipe sources/binaries of a WIP category, for example)
+
+<img src="/img/screenshot/cookbook-tui.png" class="img-responsive"/>
 
 ## Kernel Improvements
 
@@ -108,8 +126,6 @@ The rsm92 (Rafael) contributor ported [GoAccess](https://goaccess.io/), it's the
 ## Build System Improvements
 
 - (build) Wildan Mubarok installed C++ headers in the toolchain to fix C++ programs and libraries
-- (build) Wildan Mubarok reimplemented the Cookbook scripts in Rust with better performance and more features
-- (build) Wildan Mubarok implemented parallel recipe source fetch and compilation
 - (build) Wildan Mubarok implemented the `make push` command to install recipe packages with new changes in an existing Redox image for faster testing
 - (build) Wildan Mubarok implemented the `remote` Cookbook template to allow recipes to use pre-compiled library objects downloaded from Redox package server
 - (build) Wildan Mubarok implemented a way to disable the recipe source update from filesystem configuration (`recipe-name = "local"`) to easily avoid upstream breaking changes in local development
@@ -132,6 +148,7 @@ The rsm92 (Rafael) contributor ported [GoAccess](https://goaccess.io/), it's the
 
 - (web) Wildan Mubarok fixed the YouTube embedded player width on mobile devices
 - (web) Ribbon added more screenshots and hardware photos in the [Redox in Action](https://www.redox-os.org/screens/) page
+- (web) The deck1 contributor fixed a broken link in the Plan 9's influence section of General FAQ
 
 ## How To Test The Changes
 
