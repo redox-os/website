@@ -53,6 +53,37 @@ Jeremy Soller ported the [bottom](https://github.com/ClementTsang/bottom) system
 
 Jeremy Soller updated our Rust nightly fork to the 03/10/2025 date equivalent to 1.90.x version, this fixed some programs and crates.
 
+## Initial Keyboard Layout Configuration
+
+Wildan Mubarok implemented a scheme in the PS/2 driver to allow the PS/2 keyboard layout to be easily changed (it was hardcoded before), the following keyboard layouts are supported for a long time but were hardcoded:
+
+- dvorak
+- us
+- gb
+- azerty
+- bepo
+- it
+
+The keyboard layout resources are available at `/scheme/ps2`, see the example usage below:
+
+```
+user:~$ ls -1 /scheme/ps2
+keymap
+keymap_list
+user:~$ cat /scheme/ps2/keymap
+us
+user:~$ cat /scheme/ps2/keymap_list
+dvorak
+us
+gb
+azerty
+bepo
+it
+user:~$ sudo echo "azerty" > /scheme/ps2/keymap
+2025-10-20T16-38-39.045Z [@ps2d:154 INFO] ps2d: updating to new keymap '"azerty"'
+user:~$
+```
+
 ## Partial systemd Service Configuration Compatibility
 
 Wildan Mubarok successfully ported the [rustysd](https://github.com/KillingSpark/rustysd) portable systemd service manager written in Rust and started nginx at boot using a systemd service.
@@ -91,23 +122,34 @@ Wildan Mubarok reimplemented the Cookbook scripts in Rust with better performanc
 - (drivers) Wildan Mubarok updated the example driver to use the `redox-scheme`, `redox-daemon` and `redox-event` libraries (up-to-date driver)
 - (drivers) Jeremy Soller implemented timeouts in the AHCI driver to ignore infinite loop bugs and allow boot to continue
 - (drivers) Jeremy Soller implemented an unique log file per-driver
+- (drivers) AArch Angel implemented AML evaluation exposure in the ACPI scheme to allow interaction with AML methods
 
 ## System Improvements
 
 - (sys) Wildan Mubarok bumped uutils to 0.3 version
 - (sys) Wildan Mubarok fixed an Unix Domain Sockets race condition
+- (sys) Wildan Mubarok implemented scrolling in the boot log using Page Up/Down keys (it has a limit of 1000 lines)
 
 ## Relibc Improvements
 
 - (libc) bjorn3 fixed ARM64 compilation
+- (libc) Wildan Mubarok implemented POSIX timer functions
+- (libc) Wildan Mubarok fixed ARM64 and RISC-V compilation
 - (libc) Wildan Mubarok fixed a panic in the `strlen()` function due to an uninitialized string
 - (libc) Wildan Mubarok fixed a dynamic linker bug where multiple objects were loading the same object
+- (libc) Wildan Mubarok fixed a symbol conflict in compiler builtins
+- (libc) Wildan Mubarok exposed memory information for programs
+- (libc) Wildan Mubarok exposed PIE information to ease dynamic linker debugging
 - (libc) Josh Megnauth implemented the `renameat()` and `renameat2()` functions
+- (libc) 4lDO2 implemented wrappers to allow nul-terminated strings to be handled in safe code
 - (libc) 4lDO2 mostly unified the `printf()` and `wprintf()` functions code
 - (libc) Jeremy Soller implemented the `NAME_MAX` limit
+- (libc) auronandace did small code cleanups
+- (libc) auronandace improved code documentation
 
 ## Networking Improvements
 
+- (net) Wildan Mubarok updated the configuration to support IPv4 loopback address and allow `localhost` usage
 - (net) Jeremy Soller updated the configuration to use [Quad9](https://quad9.net/) DNS
 
 ## RedoxFS Improvements
@@ -121,6 +163,7 @@ Wildan Mubarok reimplemented the Cookbook scripts in Rust with better performanc
 ## Programs
 
 - (programs) Wildan Mubarok ported [GitUI](https://github.com/gitui-org/gitui)
+- (programs) Wildan Mubarok fixed NodeJS 21.x compilation
 - (programs) Jeremy Soller fixed Love2D compilation
 
 ## Build System Improvements
@@ -131,9 +174,11 @@ Wildan Mubarok reimplemented the Cookbook scripts in Rust with better performanc
 - (build) Wildan Mubarok implemented a way to disable the recipe source update from filesystem configuration (`recipe-name = "local"`) to easily avoid upstream breaking changes in local development
 - (build) Wildan Mubarok implemented offline mode in the installer when remote packages aren't used
 - (build) Wildan Mubarok implemented a filesystem configuration recipe and recipe dependency tree to help the investigation of problems and bugs (`make tree` command)
+- (build) Wildan Mubarok implemented tarball mirror configuration in Cookbook
 - (build) Jeremy Soller implemented the `make mount_live` command to mount the ISO file (live disk)
 - (build) Timmy Douglas updated the Podman container image reference to use a fully qualified domain name and improve compatibility
 - (build) Ribbon added a [filesystem configuration for testing](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/config/tests.toml)
+- (build) Zhiwei Liang fixed the Podman Build in Fedora
 
 ## Testing Improvements
 
@@ -149,6 +194,7 @@ Wildan Mubarok reimplemented the Cookbook scripts in Rust with better performanc
 - (web) Wildan Mubarok fixed the YouTube embedded player width on mobile devices
 - (web) Ribbon added more screenshots and hardware photos in the [Redox in Action](https://www.redox-os.org/screens/) page
 - (web) The deck1 contributor fixed a broken link in the Plan 9's influence section of General FAQ
+- (web) Angel Cervera fixed a hyperlink in the homepage roadmap
 
 ## How To Test The Changes
 
