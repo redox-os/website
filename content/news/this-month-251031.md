@@ -142,7 +142,7 @@ Wildan Mubarok reimplemented the Cookbook scripts in Rust with better performanc
 - (libc) Wildan Mubarok exposed PIE information to ease dynamic linker debugging
 - (libc) Josh Megnauth implemented the `renameat()` and `renameat2()` functions
 - (libc) 4lDO2 implemented Rust newtype wrappers to allow nul-terminated strings to be handled in safer code
-- (libc) 4lDO2 implemented a wrapper to improve the C FFI safety with input and output data distinction
+- (libc) 4lDO2 implemented a Rust newtype wrapper to improve the C FFI safety with input and output data distinction
 - (libc) 4lDO2 mostly unified the `printf()` and `wprintf()` functions code
 - (libc) Jeremy Soller implemented the `NAME_MAX` limit
 - (libc) auronandace did small code cleanups
