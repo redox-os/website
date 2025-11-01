@@ -122,7 +122,7 @@ Wildan Mubarok reimplemented the Cookbook scripts in Rust with better performanc
 - (drivers) Wildan Mubarok updated the example driver to use the `redox-scheme`, `redox-daemon` and `redox-event` libraries (up-to-date driver)
 - (drivers) Jeremy Soller implemented timeouts in the AHCI driver to ignore infinite loop bugs and allow boot to continue
 - (drivers) Jeremy Soller implemented an unique log file per-driver
-- (drivers) AArch Angel implemented AML evaluation exposure in the ACPI scheme to allow interaction with AML methods
+- (drivers) AArch Angel implemented AML evaluation exposure in the ACPI scheme to allow drivers to use AML functions
 
 ## System Improvements
 
@@ -141,7 +141,7 @@ Wildan Mubarok reimplemented the Cookbook scripts in Rust with better performanc
 - (libc) Wildan Mubarok exposed memory information for programs
 - (libc) Wildan Mubarok exposed PIE information to ease dynamic linker debugging
 - (libc) Josh Megnauth implemented the `renameat()` and `renameat2()` functions
-- (libc) 4lDO2 implemented wrappers to allow nul-terminated strings to be handled in safe code
+- (libc) 4lDO2 implemented Rust newtype wrappers to allow nul-terminated strings to be handled in safer code
 - (libc) 4lDO2 mostly unified the `printf()` and `wprintf()` functions code
 - (libc) Jeremy Soller implemented the `NAME_MAX` limit
 - (libc) auronandace did small code cleanups
