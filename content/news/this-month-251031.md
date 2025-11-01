@@ -25,6 +25,8 @@ Wildan Mubarok successfully ported Servo after some effort to fix bugs and missi
 
 Wildan Mubarok successfully ported htop with help from Jeremy Soller to improve the port, it's the first advanced system monitor to work on Redox.
 
+(CPU graphs are incorrect in the moment)
+
 <img src="/img/screenshot/htop.png" class="img-responsive"/>
 
 - htop and ffplay
@@ -37,6 +39,14 @@ Jeremy Soller ported the [bottom](https://github.com/ClementTsang/bottom) system
 
 <img src="/img/screenshot/bottom.jpg" class="img-responsive"/>
 
+## Upgrade to Rust 1.90.x
+
+Jeremy Soller updated our Rust nightly fork to the 03/10/2025 date equivalent to 1.90.x version, this fixed some programs and crates.
+
+## Partial systemd Service Configuration Compatibility
+
+Wildan Mubarok successfully ported the [rustysd](https://github.com/KillingSpark/rustysd) portable systemd service manager written in Rust and started nginx at boot using a systemd service.
+
 ## GoAccess on Redox
 
 The rsm92 (Rafael) contributor ported [GoAccess](https://goaccess.io/), it's the first web analytics program to work on Redox.
@@ -45,19 +55,27 @@ The rsm92 (Rafael) contributor ported [GoAccess](https://goaccess.io/), it's the
 
 ## Kernel Improvements
 
-- (kernel) 
+- (kernel) Speedy_Lex fixed many code warnings
+- (kernel) bjorn3 reduced unsafe code in naked functions
+- (kernel) bjorn3 did some code cleanups
+- (kernel) bjorn3 fixed some code warnings
 
 ## Driver Improvements
 
-- (drivers) 
+- (drivers) bjorn3 fixed a boot hang by removing an useless loop in the `driver-block` library
+- (drivers) Wildan Mubarok updated the example driver to use the `redox-scheme`, `redox-daemon` and `redox-event` libraries (up-to-date driver)
 
 ## System Improvements
 
-- (system) 
+- (sys) Wildan Mubarok bumped uutils to 0.3 version
+- (sys) Wildan Mubarok fixed an Unix Domain Sockets race condition
 
 ## Relibc Improvements
 
-- (relibc) 
+- (libc) bjorn3 fixed ARM64 compilation
+- (libc) Wildan Mubarok fixed a panic in the `strlen()` function due to an uninitialized string
+- (libc) Wildan Mubarok fixed a dynamic linker bug where multiple objects were loading the same object
+- (libc) Josh Megnauth implemented the `renameat()` and `renameat2()` functions
 
 ## Networking Improvements
 
@@ -77,16 +95,28 @@ The rsm92 (Rafael) contributor ported [GoAccess](https://goaccess.io/), it's the
 
 ## Programs
 
-- (programs) 
+- (programs) Wildan Mubarok ported [GitUI](https://github.com/gitui-org/gitui)
 
 ## Build System Improvements
 
 - (build) Wildan Mubarok installed C++ headers in the toolchain to fix C++ programs and libraries
+- (build) Wildan Mubarok implemented parallel recipe source fetch and compilation
+- (build) Wildan Mubarok implemented the `make push` command to install recipe packages with new changes in an existing Redox image for faster testing
+- (build) Wildan Mubarok implemented the `remote` Cookbook template to allow recipes to use pre-compiled library objects downloaded from Redox package server
 - (build) Wildan Mubarok implemented offline mode in the installer when remote packages aren't used
+- (build) Ribbon added a [filesystem configuration for testing](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/config/tests.toml)
+
+## Testing Improvements
+
+- (tests) Joshua Williams added more POSIX signals tests
 
 ## Documentation Improvements
 
 - (doc) 
+
+## Website Improvements
+
+- (web) Wildan Mubarok fixed the YouTube embedded player width on mobile devices
 
 ## How To Test The Changes
 
