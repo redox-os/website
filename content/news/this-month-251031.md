@@ -15,6 +15,34 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## Servo on Redox!
+
+Wildan Mubarok successfully ported Servo after some effort to fix bugs and missing functionality, thanks for all contributors that made it possible.
+
+<img src="/img/screenshot/servo.png" class="img-responsive"/>
+
+## htop on Redox!
+
+Wildan Mubarok successfully ported htop with help from Jeremy Soller to improve the port, it's the first advanced system monitor to work on Redox.
+
+<img src="/img/screenshot/htop.png" class="img-responsive"/>
+
+- htop and ffplay
+
+<img src="/img/screenshot/htop-ffplay.jpg" class="img-responsive"/>
+
+## bottom on Redox!
+
+Jeremy Soller ported the [bottom](https://github.com/ClementTsang/bottom) system monitor.
+
+<img src="/img/screenshot/bottom.jpg" class="img-responsive"/>
+
+## GoAccess on Redox
+
+The rsm92 (Rafael) contributor ported [GoAccess](https://goaccess.io/), it's the first web analytics program to work on Redox.
+
+<img src="/img/screenshot/goaccess.jpg" class="img-responsive"/>
+
 ## Kernel Improvements
 
 - (kernel) 
