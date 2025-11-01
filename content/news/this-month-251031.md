@@ -57,6 +57,7 @@ The rsm92 (Rafael) contributor ported [GoAccess](https://goaccess.io/), it's the
 
 - (kernel) Speedy_Lex fixed many code warnings
 - (kernel) bjorn3 reduced unsafe code in naked functions
+- (kernel) bjorn3 unified the generic IRQ handling code between x86_64 and i686
 - (kernel) bjorn3 did some code cleanups
 - (kernel) bjorn3 fixed some code warnings
 
@@ -76,18 +77,16 @@ The rsm92 (Rafael) contributor ported [GoAccess](https://goaccess.io/), it's the
 - (libc) Wildan Mubarok fixed a panic in the `strlen()` function due to an uninitialized string
 - (libc) Wildan Mubarok fixed a dynamic linker bug where multiple objects were loading the same object
 - (libc) Josh Megnauth implemented the `renameat()` and `renameat2()` functions
+- (libc) 4lDO2 mostly unified the `printf()` and `wprintf()` functions code
+- (libc) Jeremy Soller implemented the `NAME_MAX` limit
 
 ## Networking Improvements
 
-- (net) 
+- (net) Jeremy Soller updated the configuration to use [Quad9](https://quad9.net/) DNS
 
 ## RedoxFS Improvements
 
-- (redoxfs) 
-
-## Filesystem Improvements
-
-- (fs) 
+- (redoxfs) Jeremy Soller implemented partition resizing support
 
 ## Terminal Improvements
 
@@ -100,10 +99,13 @@ The rsm92 (Rafael) contributor ported [GoAccess](https://goaccess.io/), it's the
 ## Build System Improvements
 
 - (build) Wildan Mubarok installed C++ headers in the toolchain to fix C++ programs and libraries
+- (build) Wildan Mubarok reimplemented the Cookbook scripts in Rust with better performance and more features
 - (build) Wildan Mubarok implemented parallel recipe source fetch and compilation
 - (build) Wildan Mubarok implemented the `make push` command to install recipe packages with new changes in an existing Redox image for faster testing
 - (build) Wildan Mubarok implemented the `remote` Cookbook template to allow recipes to use pre-compiled library objects downloaded from Redox package server
 - (build) Wildan Mubarok implemented offline mode in the installer when remote packages aren't used
+- (build) Jeremy Soller implemented the `make mount_live` command to mount the ISO file (live disk)
+- (build) Timmy Douglas updated the Podman container image reference to use a fully qualified domain name
 - (build) Ribbon added a [filesystem configuration for testing](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/config/tests.toml)
 
 ## Testing Improvements
