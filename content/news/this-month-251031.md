@@ -15,6 +15,12 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## Flexible Device Detection
+
+Jeremy Soller was improving the upcoming `hwd` daemon to make it usable and finally enabled it to detect and configure ACPI or DeviceTree computers.
+
+This daemon fixed our problems with DeviceTree computers and improved the ARM64 hardware support.
+
 ## Servo on Redox!
 
 Wildan Mubarok successfully ported Servo after some effort to fix bugs and missing functionality, thanks for all contributors that made it possible.
@@ -65,6 +71,8 @@ The rsm92 (Rafael) contributor ported [GoAccess](https://goaccess.io/), it's the
 
 - (drivers) bjorn3 fixed a boot hang by removing an useless loop in the `driver-block` library
 - (drivers) Wildan Mubarok updated the example driver to use the `redox-scheme`, `redox-daemon` and `redox-event` libraries (up-to-date driver)
+- (drivers) Jeremy Soller implemented timeouts in the AHCI driver to ignore infinite loop bugs and allow boot to continue
+- (drivers) Jeremy Soller implemented an unique log file per-driver
 
 ## System Improvements
 
@@ -95,6 +103,7 @@ The rsm92 (Rafael) contributor ported [GoAccess](https://goaccess.io/), it's the
 ## Programs
 
 - (programs) Wildan Mubarok ported [GitUI](https://github.com/gitui-org/gitui)
+- (programs) Jeremy Soller fixed Love2D compilation
 
 ## Build System Improvements
 
@@ -103,9 +112,11 @@ The rsm92 (Rafael) contributor ported [GoAccess](https://goaccess.io/), it's the
 - (build) Wildan Mubarok implemented parallel recipe source fetch and compilation
 - (build) Wildan Mubarok implemented the `make push` command to install recipe packages with new changes in an existing Redox image for faster testing
 - (build) Wildan Mubarok implemented the `remote` Cookbook template to allow recipes to use pre-compiled library objects downloaded from Redox package server
+- (build) Wildan Mubarok implemented a way to disable the recipe source update from filesystem configuration (`recipe-name = "local"`) to easily avoid upstream breaking changes in local development
 - (build) Wildan Mubarok implemented offline mode in the installer when remote packages aren't used
+- (build) Wildan Mubarok implemented a filesystem configuration recipe and recipe dependency tree to help the investigation of problems and bugs (`make tree` command)
 - (build) Jeremy Soller implemented the `make mount_live` command to mount the ISO file (live disk)
-- (build) Timmy Douglas updated the Podman container image reference to use a fully qualified domain name
+- (build) Timmy Douglas updated the Podman container image reference to use a fully qualified domain name and improve compatibility
 - (build) Ribbon added a [filesystem configuration for testing](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/config/tests.toml)
 
 ## Testing Improvements
@@ -114,11 +125,13 @@ The rsm92 (Rafael) contributor ported [GoAccess](https://goaccess.io/), it's the
 
 ## Documentation Improvements
 
-- (doc) 
+- (doc) Ribbon [documented the method](https://doc.redox-os.org/book/troubleshooting.html#debug-methods) to verify if Orbital or system hangs with a bug
+- (doc) Ribbon added the [Harvard CS50](https://www.youtube.com/watch?v=8mAITcNt710) 24-hour course from freeCodeCamp in the "References" page, thanks to Ron Williams
 
 ## Website Improvements
 
 - (web) Wildan Mubarok fixed the YouTube embedded player width on mobile devices
+- (web) Ribbon added more screenshots and hardware photos in the [Redox in Action](https://www.redox-os.org/screens/) page
 
 ## How To Test The Changes
 
