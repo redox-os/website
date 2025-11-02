@@ -51,7 +51,11 @@ Jeremy Soller ported the [bottom](https://github.com/ClementTsang/bottom) system
 
 ## Upgrade to Rust 1.90.x
 
-Jeremy Soller updated our Rust nightly fork to the 03/10/2025 date equivalent to 1.90.x version, this fixed some programs and crates.
+Jeremy Soller updated our Rust nightly fork to the 03/10/2025 date equivalent to 1.90.x version, this fixed some programs and crates and allows us to upgrade our Rust codebase to 2024 edition.
+
+## RISC-V Platform Target Tier 3
+
+bjorn3 sent most of RISC-V changes in our Rust fork to upstream. The platform support for [Redox](https://doc.rust-lang.org/nightly/rustc/platform-support/redox.html) now listed `riscv64gc-unknown-redox` as platform target tier 3.
 
 ## Initial Keyboard Layout Configuration
 
@@ -86,7 +90,7 @@ user:~$
 
 ## Partial systemd Service Configuration Compatibility
 
-Wildan Mubarok successfully ported the [rustysd](https://github.com/KillingSpark/rustysd) portable systemd service manager written in Rust and started nginx at boot using a systemd service.
+Wildan Mubarok successfully ported the [rustysd](https://github.com/KillingSpark/rustysd) portable systemd-like service manager written in Rust and started nginx and OpenSSH daemon at boot using systemd-like configuration files in the `server-demo` variant.
 
 ## GoAccess on Redox
 
@@ -141,6 +145,7 @@ Wildan Mubarok reimplemented the Cookbook scripts in Rust with better performanc
 - (libc) Wildan Mubarok exposed memory information for programs
 - (libc) Wildan Mubarok exposed PIE information to ease dynamic linker debugging
 - (libc) Josh Megnauth implemented the `renameat()` and `renameat2()` functions
+- (libc) Josh Megnauth added unsafe scope in unsafe functions for Rust 2024 edition
 - (libc) 4lDO2 implemented Rust newtype wrappers to allow nul-terminated strings to be handled in safer code
 - (libc) 4lDO2 implemented a Rust newtype wrapper to improve the C FFI safety with input and output data distinction
 - (libc) 4lDO2 mostly unified the `printf()` and `wprintf()` functions code
@@ -165,7 +170,10 @@ Wildan Mubarok reimplemented the Cookbook scripts in Rust with better performanc
 
 - (programs) Wildan Mubarok ported [GitUI](https://github.com/gitui-org/gitui)
 - (programs) Wildan Mubarok fixed NodeJS 21.x compilation
+- (programs) Wildan Mubarok reduced gettext package size by ignoring tests and docs
 - (programs) Jeremy Soller fixed Love2D compilation
+- (programs) Jeremy Soller fixed the compilation of many X11 programs and libraries
+- (programs) Ribbon fixed and simplified the configuration of many CMake-based and Meson-based WIP recipes
 
 ## Build System Improvements
 
