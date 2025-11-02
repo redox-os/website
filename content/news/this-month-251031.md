@@ -55,7 +55,7 @@ Jeremy Soller updated our Rust nightly fork to the 03/10/2025 date equivalent to
 
 ## RISC-V Platform Target Tier 3
 
-bjorn3 sent most of RISC-V changes in our Rust fork to upstream. The platform support for [Redox](https://doc.rust-lang.org/nightly/rustc/platform-support/redox.html) now listed `riscv64gc-unknown-redox` as platform target tier 3.
+bjorn3 sent all RISC-V changes in our Rust fork to upstream. The platform support for [Redox](https://doc.rust-lang.org/nightly/rustc/platform-support/redox.html) now listed `riscv64gc-unknown-redox` as platform target tier 3.
 
 ## Initial Keyboard Layout Configuration
 
