@@ -59,7 +59,7 @@ bjorn3 sent most of RISC-V changes in our Rust fork to upstream. The platform su
 
 ## Initial Keyboard Layout Configuration
 
-Wildan Mubarok implemented a scheme in the PS/2 driver to allow the PS/2 keyboard layout to be easily changed (it was hardcoded before), the following keyboard layouts are supported for a long time but were hardcoded:
+Wildan Mubarok implemented a scheme in the PS/2 driver to allow the PS/2 keyboard layout to be easily changed (it was hardcoded before), the following keyboard layouts has been supported for a long time but were hardcoded:
 
 - dvorak
 - us
@@ -83,9 +83,11 @@ gb
 azerty
 bepo
 it
-user:~$ sudo echo "azerty" > /scheme/ps2/keymap
+user:~$ sudo ion
+[sudo] password for user:
+root:~# echo "azerty" > /scheme/ps2/keymap
 2025-10-20T16-38-39.045Z [@ps2d:154 INFO] ps2d: updating to new keymap '"azerty"'
-user:~$
+root:~#
 ```
 
 ## Partial systemd Service Configuration Compatibility
@@ -140,12 +142,12 @@ Wildan Mubarok reimplemented the Cookbook scripts in Rust with better performanc
 - (libc) bjorn3 fixed ARM64 compilation
 - (libc) Wildan Mubarok implemented POSIX timer functions
 - (libc) Wildan Mubarok fixed ARM64 and RISC-V compilation
-- (libc) Wildan Mubarok fixed a panic in the `strlen()` function due to an uninitialized string
 - (libc) Wildan Mubarok fixed a dynamic linker bug where multiple objects were loading the same object
 - (libc) Wildan Mubarok exposed memory information for programs
 - (libc) Wildan Mubarok exposed PIE information to ease dynamic linker debugging
 - (libc) Josh Megnauth implemented the `renameat()` and `renameat2()` functions
 - (libc) Josh Megnauth added unsafe scope in unsafe functions for Rust 2024 edition
+- (libc) Josh Megnauth fixed some code warnings
 - (libc) 4lDO2 implemented Rust newtype wrappers to allow nul-terminated strings to be handled in safer code
 - (libc) 4lDO2 implemented a Rust newtype wrapper to improve the C FFI safety with input and output data distinction
 - (libc) 4lDO2 mostly unified the `printf()` and `wprintf()` functions code
