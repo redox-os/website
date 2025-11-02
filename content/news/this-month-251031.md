@@ -27,9 +27,9 @@ This daemon fixed our problems with DeviceTree computers and improved the ARM64 
 
 ## Servo on Redox!
 
-Wildan Mubarok successfully ported Servo after some effort to fix bugs and missing functionality, unfortunately it crashes if another website is loaded and don't respond to keyboard input (these bugs will be fixed soon)
+Wildan Mubarok successfully launched Servo after some effort to fix bugs and missing functionality, unfortunately it crashes if another website is loaded and don't respond to keyboard input (these bugs will be fixed soon)
 
-Thanks for all contributors that made it possible.
+Thanks for Jeremy Soller, Andrzej J. Skalski and other contributors that made it possible.
 
 ## htop on Redox!
 
