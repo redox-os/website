@@ -4,9 +4,9 @@ author = "Ribbon and Ron Williams"
 date = "2025-10-31"
 +++
 
-- Servo on Redox
-
 <img src="/img/screenshot/servo.png" class="img-responsive"/>
+
+- Servo on Redox
 
 Redox OS is a Unix-like general-purpose microkernel-based operating system
 written in Rust. October was a very exciting month for Redox! Here's all the latest news.
