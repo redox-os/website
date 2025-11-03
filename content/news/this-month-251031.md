@@ -21,21 +21,24 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## Flexible Device Detection
 
-Jeremy Soller was improving the upcoming `hwd` daemon to make it usable and finally enabled it to detect and configure ACPI or DeviceTree computers.
+Jeremy Soller has improved the upcoming `hwd` daemon to detect and configure either ACPI or DeviceTree computers.
 
-This daemon fixed our problems with DeviceTree computers and improved the ARM64 hardware support.
+This addresses some of our problems with DeviceTree computers, and improves the ARM64 hardware support.
 
 ## Servo on Redox!
 
-Wildan Mubarok successfully launched Servo after some effort to fix bugs and missing functionality, unfortunately it crashes if another website is loaded and don't respond to keyboard input (these bugs will be fixed soon)
+Wildan Mubarok successfully launched [Servo](https://servo.org/) after some effort to fix bugs and add missing functionality.
+Thanks also to Jeremy Soller, Andrzej J. Skalski, and other contributors that helped move it forward.
 
-Thanks for Jeremy Soller, Andrzej J. Skalski and other contributors that made it possible.
+Unfortunately, it crashes if a second website is loaded and it doesn't respond to keyboard input yet.
+We hope to make more progress in the near future.
 
 ## htop on Redox!
 
-Wildan Mubarok successfully ported htop with help from Jeremy Soller to improve the port, it's the first advanced system monitor to work on Redox.
+Wildan Mubarok successfully ported [htop](https://htop.dev/) with help from Jeremy Soller.
+It provides Redox with an advanced system monitor which is helping us to detect and measure performance bottlenecks.
 
-(CPU graphs are incorrect in the moment)
+CPU graphs are incorrect in the moment.
 
 <img src="/img/screenshot/htop.png" class="img-responsive"/>
 
@@ -45,21 +48,28 @@ Wildan Mubarok successfully ported htop with help from Jeremy Soller to improve 
 
 ## bottom on Redox!
 
+Leveraging the work done for `htop`,
 Jeremy Soller ported the [bottom](https://github.com/ClementTsang/bottom) system monitor.
+As a microkernel OS, Redox has many system processes to monitor, `htop` and `bottom` will help significantly,
+especially during development.
 
 <img src="/img/screenshot/bottom.jpg" class="img-responsive"/>
 
 ## Upgrade to Rust 1.90.x
 
-Jeremy Soller updated our Rust nightly fork to the 03/10/2025 date equivalent to 1.90.x version, this fixed some programs and crates and allows us to upgrade our Rust codebase to 2024 edition.
+Jeremy Soller updated our Rust nightly fork to the 03/10/2025 date equivalent to 1.90.x stable version, this fixed some programs and crates and allows us to upgrade our Rust codebase to 2024 edition.
+This is another step forward as we work incrementally to get onto the upstream Rust compiler.
 
 ## RISC-V Platform Target Tier 3
 
-bjorn3 sent all RISC-V changes in our Rust fork to upstream. The platform support for [Redox](https://doc.rust-lang.org/nightly/rustc/platform-support/redox.html) now listed `riscv64gc-unknown-redox` as platform target tier 3.
+bjorn3 sent all RISC-V changes in our Rust fork to upstream Rust.
+The RISC-V target triple for [Redox](https://doc.rust-lang.org/nightly/rustc/platform-support/redox.html) is `riscv64gc-unknown-redox`. It is a tier 3 platform: source available but not automatically tested.
 
 ## Initial Keyboard Layout Configuration
 
-Wildan Mubarok implemented a scheme in the PS/2 driver to allow the PS/2 keyboard layout to be easily changed (it was hardcoded before), the following keyboard layouts has been supported for a long time but were hardcoded:
+Wildan Mubarok implemented a system service (scheme) in the PS/2 driver to allow the PS/2 keyboard layout to be easily changed (it was hardcoded before).
+The following keyboard layouts were previously supported but hardcoded, now they can be configured dynamically.
+We will be improving the configuration mechanism in the future and adding configuration of USB keyboards, but for now, this will help developers with non-US PS/2 keyboards.
 
 - dvorak
 - us
@@ -92,17 +102,17 @@ root:~#
 
 ## Partial systemd Service Configuration Compatibility
 
-Wildan Mubarok successfully ported the [rustysd](https://github.com/KillingSpark/rustysd) portable systemd-like service manager written in Rust and started nginx and OpenSSH daemon at boot using systemd-like configuration files in the `server-demo` variant.
+Wildan Mubarok successfully ported the [rustysd](https://github.com/KillingSpark/rustysd) written-in-Rust portable systemd-like service manager, and started nginx and OpenSSH daemon at boot using systemd-like configuration files in the `server-demo` variant.
 
 ## GoAccess on Redox
 
-The rsm92 (Rafael) contributor ported [GoAccess](https://goaccess.io/), it's the first web analytics program to work on Redox.
+The rsm92 (Rafael) contributor ported [GoAccess](https://goaccess.io/), a powerful web log analyzer for monitoring web traffic.
 
 <img src="/img/screenshot/goaccess.jpg" class="img-responsive"/>
 
 ## Cookbook in Rust
 
-Wildan Mubarok reimplemented the Cookbook scripts in Rust with better performance and more features, he implemented the following items:
+Wildan Mubarok reimplemented the Cookbook (package system) scripts in Rust with better performance and more features. He implemented the following items:
 
 - A TUI to monitor and manage the build process
 - Options to skip, retry or cancel the build process when an error happens
@@ -117,24 +127,24 @@ Wildan Mubarok reimplemented the Cookbook scripts in Rust with better performanc
 ## Kernel Improvements
 
 - (kernel) Speedy_Lex fixed many code warnings
-- (kernel) bjorn3 reduced unsafe code in naked functions
+- (kernel) bjorn3 reduced unsafe code in naked Assembly functions
 - (kernel) bjorn3 unified the generic IRQ handling code between x86_64 and i686
 - (kernel) bjorn3 did some code cleanups
 - (kernel) bjorn3 fixed some code warnings
 
 ## Driver Improvements
 
-- (drivers) bjorn3 fixed a boot hang by removing an useless loop in the `driver-block` library
+- (drivers) bjorn3 fixed a boot hang by removing a useless loop in the `driver-block` library
 - (drivers) Wildan Mubarok updated the example driver to use the `redox-scheme`, `redox-daemon` and `redox-event` libraries (up-to-date driver)
 - (drivers) Jeremy Soller implemented timeouts in the AHCI driver to ignore infinite loop bugs and allow boot to continue
-- (drivers) Jeremy Soller implemented an unique log file per-driver
+- (drivers) Jeremy Soller implemented separate log files per driver
 - (drivers) AArch Angel implemented AML evaluation exposure in the ACPI scheme to allow drivers to use AML functions
 
 ## System Improvements
 
 - (sys) Wildan Mubarok bumped uutils to 0.3 version
 - (sys) Wildan Mubarok fixed shared memory read/write operation
-- (sys) Wildan Mubarok fixed an Unix Domain Sockets race condition
+- (sys) Wildan Mubarok fixed a Unix Domain Sockets race condition
 - (sys) Wildan Mubarok implemented scrolling in the boot log using Shift+Up/Down keys (it has a limit of 1000 lines)
 
 ## Relibc Improvements
