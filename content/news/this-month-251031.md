@@ -102,7 +102,7 @@ root:~#
 
 ## Partial systemd Service Configuration Compatibility
 
-Wildan Mubarok successfully ported the [rustysd](https://github.com/KillingSpark/rustysd) written-in-Rust portable systemd-like service manager, and started nginx and OpenSSH daemon at boot using systemd-like configuration files in the `server-demo` variant.
+Wildan Mubarok created a fork and successfully ported the [rustysd](https://github.com/KillingSpark/rustysd) written-in-Rust portable systemd-like service manager, and started nginx and OpenSSH daemon at boot using systemd-like configuration files in the `server-demo` variant.
 
 ## GoAccess on Redox
 
