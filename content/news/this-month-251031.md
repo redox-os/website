@@ -57,7 +57,7 @@ especially during development.
 
 ## Upgrade to Rust 1.90.x
 
-Jeremy Soller updated our Rust nightly fork to the 03/10/2025 date equivalent to 1.90.x stable version, this fixed some programs and crates and allows us to upgrade our Rust codebase to 2024 edition.
+Jeremy Soller updated our Rust nightly fork to the 2025-10-03 date equivalent to 1.90.x stable version, this fixed some programs and crates and allows us to upgrade our Rust codebase to 2024 edition.
 This is another step forward as we work incrementally to get onto the upstream Rust compiler.
 
 ## RISC-V Platform Target Tier 3
