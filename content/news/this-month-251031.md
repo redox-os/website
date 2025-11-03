@@ -176,7 +176,7 @@ Wildan Mubarok reimplemented the Cookbook (package system) scripts in Rust with 
 
 ## Terminal Improvements
 
-- (term) Stephen Seo implemented the support for temporary environment variables (`ENVIVAR=some-value` command) in the Ion shell
+- (term) Stephen Seo implemented the support for temporary environment variables (`ENVIVAR=some-value command`) in the Ion shell
 
 ## Programs
 
@@ -195,7 +195,7 @@ Wildan Mubarok reimplemented the Cookbook (package system) scripts in Rust with 
 - (build) Wildan Mubarok implemented a way to disable the recipe source update from filesystem configuration (`recipe-name = "local"`) to easily avoid upstream breaking changes in local development
 - (build) Wildan Mubarok implemented automatic tarball update when BLAKE3 hashes change
 - (build) Wildan Mubarok implemented offline mode in the installer when remote packages aren't used
-- (build) Wildan Mubarok implemented a filesystem configuration recipe and recipe dependency tree to help the investigation of problems and bugs (`make tree` command)
+- (build) Wildan Mubarok implemented a filesystem configuration recipe and recipe dependency tree (`make tree` command) to help the investigation of problems and bugs
 - (build) Wildan Mubarok implemented tarball mirror configuration in Cookbook
 - (build) Jeremy Soller implemented the `make mount_live` command to mount the ISO file (live disk)
 - (build) Timmy Douglas updated the Podman container image reference to use a fully qualified domain name and improve compatibility
