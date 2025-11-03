@@ -23,7 +23,7 @@ If you would like to support Redox, please consider donating or buying some merc
 
 Jeremy Soller has improved the upcoming `hwd` daemon to detect and configure either ACPI or DeviceTree computers.
 
-This addresses some of our problems with DeviceTree computers, and improves the ARM64 hardware support.
+This addresses some of our problems with DeviceTree computers, and improves the ARM64 and RISC-V hardware support.
 
 ## Servo on Redox!
 
@@ -53,7 +53,7 @@ Jeremy Soller ported the [bottom](https://github.com/ClementTsang/bottom) system
 As a microkernel OS, Redox has many system processes to monitor, `htop` and `bottom` will help significantly,
 especially during development.
 
-<img src="/img/screenshot/bottom.jpg" class="img-responsive"/>
+<img src="/img/screenshot/bottom.png" class="img-responsive"/>
 
 ## Upgrade to Rust 1.90.x
 
