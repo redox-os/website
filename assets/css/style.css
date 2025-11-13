@@ -2,12 +2,17 @@
 	CSS Variables and theme configuration
 */
 :root {
+	/* Typography */
 	--font-family-primary: 'Fira Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+	/* Colors - Light mode defaults */
 	--color-link: #428bca;
 	--color-link-hover: #357ebd;
 	--color-text-secondary: #777;
 	--color-border: #ccc;
 	--color-border-light: #dedede;
+
+	/* Spacing scale - Based on 1rem (16px) increments */
 	--spacing-xs: 0.25rem;
 	--spacing-sm: 0.5rem;
 	--spacing-md: 1rem;
@@ -15,6 +20,10 @@
 	--spacing-xl: 2rem;
 }
 
+/* Dark Mode
+   When user's system is set to dark mode, override color variables.
+   All components using these variables will automatically adapt.
+	*/
 @media (prefers-color-scheme: dark) {
 	:root {
 		--color-bg-primary: #202020;
@@ -33,6 +42,7 @@
 		background-color: var(--color-bg-footer);
 	}
 
+	/* Apply light text color to all text elements in dark mode */
 	a,
 	center,
 	code,
@@ -65,11 +75,14 @@
 	}
 }
 
-/* Base styles */
+/* Base Styles
+   Foundation styles that apply site-wide */
 body {
 	font-family: var(--font-family-primary);
 }
 
+/* Link behavior
+   underline only on hover/focus for cleaner look */
 a {
 	text-decoration: none;
 }
@@ -79,6 +92,7 @@ a:focus {
 	text-decoration: underline;
 }
 
+/* Focus ring for keyboard navigation accessibility */
 a:focus {
 	outline: thin dotted;
 	outline: 0.3125rem auto -webkit-focus-ring-color;
@@ -90,16 +104,20 @@ a:focus {
 	color: var(--color-link);
 }
 
+/* Inherit background for inline code to work in both light/dark modes */
 code {
 	background-color: inherit;
 }
 
+/* Responsive Images
+   Images scale down to fit their container but never scale up */
 .img-responsive {
 	display: block;
 	max-width: 100%;
 	height: auto;
 }
 
+/* Responsive embeds (videos, etc) */
 iframe {
 	max-width: 100%;
 	max-height: 80vw;
@@ -107,7 +125,9 @@ iframe {
 	display: block;
 }
 
-/* Font faces */
+/* Custom Font Faces
+   Fira Sans is loaded in three weights for optimal typography.
+   font-display: swap ensures text remains visible during font loading. */
 @font-face {
 	font-family: 'Fira Sans';
 	font-display: swap;
@@ -132,6 +152,10 @@ iframe {
 	src: local('Fira Sans Medium'), url("/fonts/FiraSans-Medium.woff") format('woff');
 }
 
+
+/* Icon Font (Fontello)
+   Data URIs embed the font directly in CSS for faster loading.
+   Two formats provided for browser compatibility: woff (modern) and truetype (fallback). */
 @font-face {
 	font-family: 'fontello';
 	font-display: swap;
