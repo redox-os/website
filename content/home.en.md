@@ -25,7 +25,7 @@ url = "home"
 <section class="hero hero-2">
   <div class="hero-body">
     <p class="pitch">
-      <b>Redox</b> is a <a style="color: inherit;" href="https://en.wikipedia.org/wiki/Unix-like"><b>Unix-like</b></a>
+      <b>Redox</b> is a complete <a style="color: inherit;" href="https://en.wikipedia.org/wiki/Unix-like"><b>Unix-like</b></a>
       microkernel-based operating system written in <a style="color: inherit;"
         href="https://www.rust-lang.org/"><b>Rust</b></a>, with a focus on security, reliability and safety.
       Offering source compatibility and a full set of programs, Redox is intended to be a complete

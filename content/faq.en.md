@@ -12,6 +12,7 @@ This page covers questions and answers for newcomers and end-users.
     - [Rust benefits](#rust-benefits)
     - [Other benefits](#other-benefits)
     - [Comparison with other operating systems](#comparison-with-other-operating-systems)
+    - [Comparison with other microkernel projects](#comparison-with-other-microkernel-projects)
 - [What is the purpose of Redox?](#what-is-the-purpose-of-redox)
 - [What I can do with Redox?](#what-i-can-do-with-redox)
 - [What is an Unix-like OS?](#what-is-an-unix-like-os)
@@ -30,13 +31,13 @@ This page covers questions and answers for newcomers and end-users.
 
 ## What is Redox?
 
-Redox is a microkernel-based, complete, fully-functioning and general-purpose operating system created in 2015, with a focus on safety, freedom, reliability, correctness, and pragmatism. Wherever possible, the system components are written in Rust and run in user-space.
+Redox is a complete Unix-like microkernel-based general-purpose operating system created in 2015, with a focus on safety, reliability, correctness, completeness, freedom and pragmatism. Wherever possible the system components are written in Rust and run in user-space.
 
-It aims to be a complete alternative to Linux and BSD.
+We aim to be a complete alternative to Linux and BSD.
 
 ### Current status
 
-Redox is in alpha development phase, we implement new features and fix bugs.
+Redox is in alpha development phase, thus we are still implementing new features and fixing bugs.
 
 Because of this it's not ready for daily usage yet. Feel free to test the system until its maturity and **don't store your sensitive data without a proper backup.**
 
@@ -130,6 +131,38 @@ You can see how Redox is compared to Linux, FreeBSD and Plan 9 on these pages:
 
 - [Redox OS Features](https://doc.redox-os.org/book/features.html)
 - [Comparing Redox to Other OSes](https://doc.redox-os.org/book/how-redox-compares.html)
+
+### Comparison with other microkernel projects
+
+The main difference is that Redox is a **complete operating system** like Linux and BSD distributions, thus you don't need to write all drivers and most system components.
+
+The following list gives a quick comparison:
+
+- [Minix](https://www.minix3.org/)
+
+A microkernel-based research OS written in C, not aimed for production and unmaintained.
+
+Before Redox it was the most mature microkernel-based operating system supporting relatively recent software versions using [NetBSD](https://www.netbsd.org/) packages.
+
+- [GNU Hurd](https://www.gnu.org/software/hurd/)
+
+A microkernel written in C, very slow development focused on maintenance and small/old device support.
+
+Debian created a [port](https://www.debian.org/ports/hurd/) for it.
+
+- [Fuchsia](https://fuchsia.dev/)
+
+A microkernel-based OS framework written in C++, lacking drivers (like [AOSP](https://source.android.com/)).
+
+- [seL4](https://sel4.systems/)
+
+A microkernel-based OS framework written in C with formal verification, lacking most system components and drivers.
+
+- [Asterinas](https://asterinas.github.io/)
+
+A hybrid microkernel OS framework written in Rust with formal verification, lacking most system components and drivers.
+
+It has less performance cost than a microkernel but reduces the microkernel's stability and security by not having a separated memory address space for each system component.
 
 ## What is the purpose of Redox?
 
