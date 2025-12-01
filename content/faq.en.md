@@ -134,35 +134,7 @@ You can see how Redox is compared to Linux, FreeBSD and Plan 9 on these pages:
 
 ### Comparison with other microkernel projects
 
-The main difference is that Redox is a **complete operating system** like Linux and BSD distributions with pre-configured system components, drivers ,and applications, thus you don't need to write all drivers and most system components (most microkernel projects were hobbies created for learning, research and experimentation)
-
-The following list gives a quick comparison:
-
-- [Minix](https://www.minix3.org/)
-
-A microkernel-based research OS written in C, not aimed for production and unmaintained.
-
-Before Redox it was the most mature microkernel-based operating system supporting relatively recent software versions using [NetBSD](https://www.netbsd.org/) packages.
-
-- [GNU Hurd](https://www.gnu.org/software/hurd/)
-
-A microkernel written in C, very slow development focused on maintenance and small/old device support.
-
-Debian created a [port](https://www.debian.org/ports/hurd/) for it.
-
-- [Fuchsia](https://fuchsia.dev/)
-
-A microkernel-based OS framework written in C++, lacking drivers (like [AOSP](https://source.android.com/)).
-
-- [seL4](https://sel4.systems/)
-
-A microkernel-based OS framework written in C with formal verification, lacking most system components and drivers.
-
-- [Asterinas](https://asterinas.github.io/)
-
-A hybrid microkernel OS framework written in Rust with formal verification, lacking most system components and drivers.
-
-It has less performance cost than a microkernel but reduces the microkernel's stability and security by not having a separated memory address space for each system component.
+The main difference is that Redox is a **complete operating system** like Linux and BSD distributions with pre-configured system components, drivers ,and applications, thus you don't need to implement most system components or all drivers (most microkernel projects were hobbies created for learning, research and experimentation).
 
 ## What is the purpose of Redox?
 
