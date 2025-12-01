@@ -64,8 +64,11 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 
 ## Kernel Improvements
 
+- (kernel) 4lDO2 fixed a memory allocator panic and data corruption bug
+- (kernel) Jeremy Soller improved the futex lockup performance
 - (kernel) Anhad Singh fixed some deadlocks
 - (kernel) bjorn3 did some code cleanups
+- (kernel) AArch Angel implemented `fpath` on DTB scheme
 
 ## Driver Improvements
 
@@ -97,6 +100,8 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 ## Orbital Improvements
 
 - (gui) bjorn3 did some code refactorings
+- (gui) Wildan Mubarok fixed the `orbclient` example
+- (gui) Wildan Mubarok optimized the `orbclient` gradient calculation
 
 ## Programs
 
@@ -106,6 +111,7 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 ## Packaging Improvements
 
 - (pkg) Wildan Mubarok started to implement recipe features which will allow more flexibility with software options
+- (pkg) Wildan Mubarok implemented package size and BLAKE3 hash on package information, which allow accurate download progress bar and package update verification
 
 ## Build System Improvements
 
@@ -126,14 +132,14 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 - (doc) Ribbon updated and improved the [Coding and Building](https://doc.redox-os.org/book/coding-and-building.html) page, now it has fully up-to-date information
 - (doc) Ribbon explained [how to write book documentation](https://doc.redox-os.org/book/developer-faq.html#how-can-i-write-book-documentation-properly) and improved [how to review MRs](https://doc.redox-os.org/book/developer-faq.html#how-to-properly-review-mrs) in the Developer FAQ
 - (doc) Ribbon documented [how to create diagrams for Hugo](https://doc.redox-os.org/book/developer-faq.html#how-can-i-create-diagrams) in the Developer FAQ
-- (doc) Wildan Mubarok expanded the [Important Programs](https://doc.redox-os.org/book/important-programs.html) page
+- (doc) Wildan Mubarok expanded and improved the [Important Programs](https://doc.redox-os.org/book/important-programs.html) and [Our Goals](https://doc.redox-os.org/book/our-goals.html) pages
 - (doc) Wildan Mubarok updated and improved the [Configuration Settings](https://doc.redox-os.org/book/configuration-settings.html) page
 - (doc) Timmy Douglas documented [how to build Redox on GuixSD](https://doc.redox-os.org/book/advanced-build.html#gnu-guix-users)
 - (doc) Jonathan McCormick applied alphabetical order in the [hardware compatibility](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HARDWARE.md) tables and improved grammar
 
 ## Hardware Updates
 
-- (hw) Jonathan McCormick tested Lenovo M83
+- (hw) Jonathan McCormick tested Lenovo ThinkCentre M83 and reported the "Broken" status using an image from 2025-11-09
 
 ## Website Improvements
 
