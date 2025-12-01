@@ -15,6 +15,12 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## More Boot Fixes
+
+Jeremy Soller added and fixed many driver timeouts to block more infinite loop bugs and continue booting.
+
+If you have a computer that hangs on Redox boot we recommend that you test again with the latest daily image.
+
 ## Wayland on Redox!
 
 Jeremy Soller successfully ported the [Smallvil](https://github.com/Smithay/smithay/tree/master/smallvil) Wayland compositor example from the [Smithay](https://github.com/Smithay/smithay) framework and GTK3 Wayland to Redox, thanks Ibuki Omatsu (Unix Domain Socket implementation and bug fixing), Wildan Mubarok (bug fixing and implementation of missing functions), and other contributors for making it possible.
@@ -72,6 +78,8 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 
 ## Driver Improvements
 
+- (drivers) Jeremy Soller improved the PS/2 driver stability
+- (drivers) Jeremy Soller implemented unaligned access on the PCI driver
 - (drivers) Ibuki Omatsu updated the `alxd`, `ihdad`, `ac97d`, and `sb16d` drivers to use the `redox-scheme` library, which makes them up-to-date
 - (drivers) bjorn3 updated the Bochs emulator graphics driver (bgad) to use a memory-mapped based IO interface instead of a port-mapped based IO interface
 - (drivers) bjorn3 did a code unification
@@ -79,11 +87,18 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 
 ## System Improvements
 
+- (sys) Jeremy Soller implemented `SO_PEERCRED` in Unix streams
+- (sys) Jeremy Soller implemented the `fpath()` function in the `proc` scheme
+- (sys) Jeremy Soller implemented the `fstat()` function in the IPC daemon
+- (sys) Jeremy Soller did a refactor of `fevent()` function handling
+- (sys) Jeremy Soller fixed `SO_SNDBUF`
 - (sys) bjorn3 reduced the uutils compilation time in half (2m50s to 1m56s on his computer) by using [ThinLTO](https://clang.llvm.org/docs/ThinLTO.html) instead of [FatLTO](https://llvm.org/docs/FatLTO.html)
 - (sys) bjorn3 fixed some code warnings
 
 ## Relibc Improvements
 
+- (libc) 4lDO2 implemented a macro to verify if the relibc internal definitions match the Rust libc crate definitions
+- (libc) Jeremy Soller fixed the `ai_addrlen()` function
 - (libc) Josh Megnauth implemented the `posix_fallocate()` function
 - (libc) Ibuki Omatsu fixed the `getpeername()` function
 - (libc) Wildan Mubarok fixed the `getsubopt()` function
@@ -95,7 +110,7 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 
 ## RedoxFS Improvements
 
-- (redoxfs) 
+- (redoxfs) Jeremy Soller updated the `fpath()` function to use the new scheme format
 
 ## Orbital Improvements
 
