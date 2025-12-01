@@ -4,7 +4,7 @@ author = "Ribbon and Ron Williams"
 date = "2025-11-30"
 +++
 
-Redox OS is a Unix-like general-purpose microkernel-based operating system
+Redox OS is an complete Unix-like general-purpose microkernel-based operating system
 written in Rust. November was a very exciting month for Redox! Here's all the latest news.
 
 ## Donate to Redox
@@ -14,6 +14,32 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Donate](https://www.redox-os.org/donate/)
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
+
+## Wayland on Redox!
+
+Jeremy Soller successfully ported the [Smallvil](https://github.com/Smithay/smithay/tree/master/smallvil) Wayland compositor example from the [Smithay](https://github.com/Smithay/smithay) framework and GTK3 Wayland to Redox, thanks Ibuki Omatsu (Unix Domain Socket implementation and bug fixing), Wildan Mubarok (bug fixing and implementation of missing functions), and other contributors for making it possible.
+
+<img src="/img/screenshot/gtk3-wayland.png" class="img-responsive"/>
+
+## WebKitGTK on Redox!
+
+Jeremy Soller and Wildan Mubarok successfully ported and fixed the WebKitGTK (GTK 3.x frontend) and the web browser example on Redox, also thanks to other contributors which helped us to achieve this.
+
+This is the first mature and advanced web browser to work on Redox, which allow most types of websites to be used.
+
+<img src="/img/screenshot/webkitgtk3.png" class="img-responsive"/>
+
+<img src="/img/screenshot/bottom-webkitgtk3.png" class="img-responsive"/>
+
+## MATE Desktop on Redox!
+
+Jeremy Soller was porting MATE Marco for a better X11 window manager and decided to port a basic MATE desktop.
+
+<img src="/img/screenshot/mate-desktop.png" class="img-responsive"/>
+
+## Migration to i586
+
+The Rust upstream migrated the i686 targets to i586.
 
 ## Kernel Improvements
 
