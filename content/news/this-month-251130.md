@@ -41,9 +41,22 @@ Jeremy Soller was porting MATE Marco for a better X11 window manager and decided
 
 The Rust upstream migrated the i686 targets to i586.
 
+## Build System Submodule Removal
+
+Jeremy Soller moved the submodules to the build system repository to allow faster development and testing, who didn't updated the build system yet should backup your changes and run the `make distclean pull container_clean all` command or download a new build system copy and build from scratch.
+
+## More GitLab Protection
+
+After frequent GtiLab slowdowns we discovered that bots were using our CI for cryptomining (again) and AI scrapers consuming the server resources making it very slow, thus we increased our protection which cnaged some things:
+
+- Only maintainers can run CI jobs
+- Git code push using SSH was disabled, now all contributors need to use HTTPS with a PAT (Personal Access Token)
+
+Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-pat) section to learn how to configure your PAT on Git.
+
 ## Kernel Improvements
 
-- (kernel) 
+- (kernel) bjorn3 did some code cleanups
 
 ## Driver Improvements
 
@@ -55,7 +68,7 @@ The Rust upstream migrated the i686 targets to i586.
 
 ## Relibc Improvements
 
-- (libc) 
+- (libc) Ibuki Omatsu fixed the `getpeername()` function
 
 ## Networking Improvements
 
@@ -67,15 +80,29 @@ The Rust upstream migrated the i686 targets to i586.
 
 ## Programs
 
-- (programs) 
+- (programs) Wildan Mubarok ported the EGL code from Mesa3D
 
 ## Build System Improvements
 
-- (build) 
+- (build) Wildan Mubarok implemented an option (`FSTOOLS_IN_PODMAN` environment variable) to build and run the filesystem tools in the Podman container, it fixes a problem with FUSE on MacOS, NixOS and GuixSD
+- (build) Wildan Mubarok fixed some breaking changes after the Rust implementation of Cookbook
 
 ## Documentation Improvements
 
-- (doc) 
+- (doc) Ribbon updated and improved the [Coding and Building](https://doc.redox-os.org/book/coding-and-building.html) page, now it has fully up-to-date information
+- (doc) Ribbon explained [how to write book documentation](https://doc.redox-os.org/book/developer-faq.html#how-can-i-write-book-documentation-properly) and improved [how to review MRs](https://doc.redox-os.org/book/developer-faq.html#how-to-properly-review-mrs) in the Developer FAQ
+- (doc) Ribbon documented [how to create diagrams for Hugo](https://doc.redox-os.org/book/developer-faq.html#how-can-i-create-diagrams) in the Developer FAQ
+- (doc) Wildan Mubarok expanded the [Important Programs](https://doc.redox-os.org/book/important-programs.html) page
+- (doc) Wildan Mubarok updated and improved the [Configuration Settings](https://doc.redox-os.org/book/configuration-settings.html) page
+- (doc) Jonathan McCormick applied alphabetical order in the [hardware compatibility](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HARDWARE.md) tables and improved grammar
+
+## Hardware Updates
+
+- (hw) Jonathan McCormick tested Lenovo M83
+
+## Website Improvements
+
+- (web) Ribbon added a basic [comparison with other microkernel projects](https://www.redox-os.org/faq/#comparison-with-other-microkernel-projects)
 
 ## How To Test The Changes
 
