@@ -51,7 +51,7 @@ Jeremy Soller and Wildan Mubarok started to migrate the build configuration of r
 
 ## Build System Submodule Removal
 
-Jeremy Soller moved the submodules to the build system repository to allow faster development and testing, who didn't updated the build system yet should backup your changes and run the `make distclean pull container_clean all` command or download a new build system copy and build from scratch.
+Jeremy Soller merged the submodules into the build system repository to allow faster development and testing, who didn't updated the build system yet should backup your changes and run the `make distclean pull container_clean all` command or download a new build system copy and build from scratch.
 
 ## More GitLab Protection
 
@@ -69,34 +69,57 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 
 ## Driver Improvements
 
+- (drivers) Ibuki Omatsu updated the `alxd`, `ihdad`, `ac97d`, and `sb16d` drivers to use the `redox-scheme` library, which makes them up-to-date
 - (drivers) bjorn3 updated the Bochs emulator graphics driver (bgad) to use a memory-mapped based IO interface instead of a port-mapped based IO interface
+- (drivers) bjorn3 did a code unification
+- (drivers) bjorn3 merged the `drivers` repository into the `base` repository, it will allow faster development/testing and configuration simplification
 
 ## System Improvements
 
-- (sys) bjorn3 reduced the uutils compilation time by using [ThinLTO](https://clang.llvm.org/docs/ThinLTO.html) instead of [FatLTO](https://llvm.org/docs/FatLTO.html)
+- (sys) bjorn3 reduced the uutils compilation time in half (2m50s to 1m56s on his computer) by using [ThinLTO](https://clang.llvm.org/docs/ThinLTO.html) instead of [FatLTO](https://llvm.org/docs/FatLTO.html)
+- (sys) bjorn3 fixed some code warnings
 
 ## Relibc Improvements
 
 - (libc) Josh Megnauth implemented the `posix_fallocate()` function
 - (libc) Ibuki Omatsu fixed the `getpeername()` function
+- (libc) Wildan Mubarok fixed the `getsubopt()` function
+- (libc) auronandace improved the documentation of some POSIX functions
 
 ## Networking Improvements
 
-- (net) 
+- (net) Wildan Mubarok improved the network stack error handling
 
 ## RedoxFS Improvements
 
 - (redoxfs) 
 
+## Orbital Improvements
+
+- (gui) bjorn3 did some code refactorings
+
 ## Programs
 
 - (programs) Wildan Mubarok ported the EGL code from Mesa3D
+- (programs) Anhad Singh fixed the Fish shell execution
+
+## Packaging Improvements
+
+- (pkg) Wildan Mubarok started to implement recipe features which will allow more flexibility with software options
 
 ## Build System Improvements
 
 - (build) Wildan Mubarok implemented an option (`FSTOOLS_IN_PODMAN` environment variable) to build and run the filesystem tools in the Podman container, it fixes a problem with FUSE on MacOS, NixOS and GuixSD
+- (build) Wildan Mubarok did a code simplification in Cookbook which reduced dependencies
+- (build) Wildan Mubarok did a code simplification in the installer which reduced most dependencies
 - (build) Wildan Mubarok fixed some breaking changes after the Rust implementation of Cookbook
+- (build) Wildan Mubarok fixed the Nix flake (not tested on NixOS, only the package manager on Debian)
 - (build) Ribbon fixed missing ARM64 and RISC-V emulators and reduced the QEMU installation time and size by only installing the emulators for the CPU architectures supported by Redox
+
+## Redoxer Improvements
+
+- (redoxer) Wildan Mubarok fixed the toolchain downloading for Linux ARM64 distributions
+- (redoxer) Wildan Mubarok did a code simplification in Redoxer which reduced dependencies by half
 
 ## Documentation Improvements
 
@@ -105,6 +128,7 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 - (doc) Ribbon documented [how to create diagrams for Hugo](https://doc.redox-os.org/book/developer-faq.html#how-can-i-create-diagrams) in the Developer FAQ
 - (doc) Wildan Mubarok expanded the [Important Programs](https://doc.redox-os.org/book/important-programs.html) page
 - (doc) Wildan Mubarok updated and improved the [Configuration Settings](https://doc.redox-os.org/book/configuration-settings.html) page
+- (doc) Timmy Douglas documented [how to build Redox on GuixSD](https://doc.redox-os.org/book/advanced-build.html#gnu-guix-users)
 - (doc) Jonathan McCormick applied alphabetical order in the [hardware compatibility](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HARDWARE.md) tables and improved grammar
 
 ## Hardware Updates
