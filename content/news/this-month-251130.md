@@ -41,6 +41,14 @@ Jeremy Soller was porting MATE Marco for a better X11 window manager and decided
 
 The Rust upstream migrated the i686 targets to i586.
 
+## Self Build Tooling Bootstraping
+
+Jeremy Soller and Wildan Mubarok started to migrate the build configuration of recipes to use build tools in recipes, it will allow the following benefits:
+
+- Simplify the Redox build system as applications, libraries, and build tools use the same build environment and packaging system
+- Big reduction of build system dependency installation time and maintenance cost as contributors will only install the build tools from the recipes that they are using and we don't need to search equivalent package for multiple Unix-like system as new build tools are added
+- Allow the future implementation of [full source bootstraping](https://en.wikipedia.org/wiki/Bootstrapable_builds) to avoid compilation backdoors, like [Guix](https://guix.gnu.org/)
+
 ## Build System Submodule Removal
 
 Jeremy Soller moved the submodules to the build system repository to allow faster development and testing, who didn't updated the build system yet should backup your changes and run the `make distclean pull container_clean all` command or download a new build system copy and build from scratch.
@@ -56,18 +64,20 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 
 ## Kernel Improvements
 
+- (kernel) Anhad Singh fixed some deadlocks
 - (kernel) bjorn3 did some code cleanups
 
 ## Driver Improvements
 
-- (drivers) 
+- (drivers) bjorn3 updated the Bochs emulator graphics driver (bgad) to use a memory-mapped based IO interface instead of a port-mapped based IO interface
 
 ## System Improvements
 
-- (sys) 
+- (sys) bjorn3 reduced the uutils compilation time by using [ThinLTO](https://clang.llvm.org/docs/ThinLTO.html) instead of [FatLTO](https://llvm.org/docs/FatLTO.html)
 
 ## Relibc Improvements
 
+- (libc) Josh Megnauth implemented the `posix_fallocate()` function
 - (libc) Ibuki Omatsu fixed the `getpeername()` function
 
 ## Networking Improvements
@@ -86,6 +96,7 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 
 - (build) Wildan Mubarok implemented an option (`FSTOOLS_IN_PODMAN` environment variable) to build and run the filesystem tools in the Podman container, it fixes a problem with FUSE on MacOS, NixOS and GuixSD
 - (build) Wildan Mubarok fixed some breaking changes after the Rust implementation of Cookbook
+- (build) Ribbon fixed missing ARM64 and RISC-V emulators and reduced the QEMU installation time and size by only installing the emulators for the CPU architectures supported by Redox
 
 ## Documentation Improvements
 
