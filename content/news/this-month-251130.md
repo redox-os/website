@@ -53,6 +53,7 @@ Jeremy Soller and Wildan Mubarok started to migrate the build configuration of r
 
 - Simplify the Redox build system as applications, libraries, and build tools use the same build environment and packaging system
 - Big reduction of build system dependency installation time and maintenance cost as contributors will only install the build tools from the recipes that they are using and we don't need to search equivalent package for multiple Unix-like system as new build tools are added
+- Ease relibc testing on Linux
 - Allow the future implementation of [full source bootstraping](https://en.wikipedia.org/wiki/Bootstrapable_builds) to avoid compilation backdoors, like [Guix](https://guix.gnu.org/)
 
 ## Build System Submodule Removal
@@ -78,6 +79,7 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 
 ## Driver Improvements
 
+- (drivers) Jeremy Soller fixed missing PCI devices in Intel Arrow Lake computers
 - (drivers) Jeremy Soller improved the PS/2 driver stability
 - (drivers) Jeremy Soller implemented unaligned access on the PCI driver
 - (drivers) Ibuki Omatsu updated the `alxd`, `ihdad`, `ac97d`, and `sb16d` drivers to use the `redox-scheme` library, which makes them up-to-date
@@ -92,13 +94,19 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 - (sys) Jeremy Soller implemented the `fstat()` function in the IPC daemon
 - (sys) Jeremy Soller did a refactor of `fevent()` function handling
 - (sys) Jeremy Soller fixed `SO_SNDBUF`
+- (sys) Jeremy Soller replaced the Smith text editor by Kibi in the `minimal` variants
 - (sys) bjorn3 reduced the uutils compilation time in half (2m50s to 1m56s on his computer) by using [ThinLTO](https://clang.llvm.org/docs/ThinLTO.html) instead of [FatLTO](https://llvm.org/docs/FatLTO.html)
 - (sys) bjorn3 fixed some code warnings
 
 ## Relibc Improvements
 
 - (libc) 4lDO2 implemented a macro to verify if the relibc internal definitions match the Rust libc crate definitions
-- (libc) Jeremy Soller fixed the `ai_addrlen()` function
+- (libc) Jeremy Soller implemented the `sys/queue.h` function group
+- (libc) Jeremy Soller implemented `F_DUPFD_CLOEXEC`
+- (libc) Jeremy Soller improved the TLS alignment reliability
+- (libc) Jeremy Soller implemented the `ppoll()` function
+- (libc) Jeremy Soller fixed a POSIX thread key collision
+- (libc) Jeremy Soller fixed the `ai_addrlen()` and `socklen_t()` functions
 - (libc) Josh Megnauth implemented the `posix_fallocate()` function
 - (libc) Ibuki Omatsu fixed the `getpeername()` function
 - (libc) Wildan Mubarok fixed the `getsubopt()` function
@@ -120,7 +128,12 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 
 ## Programs
 
+- (programs) Jeremy Soller updated the Rust recipe version to match the Redox cross-compiler on Linux
+- (programs) Jeremy Soller enabled DRI3 on Mesa3D and X11
+- (programs) Jeremy Soller updated GnuTLS to use dynamic linking
+- (programs) Jeremy Soller fixed the Luanti and `librsvg` compilation
 - (programs) Wildan Mubarok ported the EGL code from Mesa3D
+- (programs) Wildan Mubarok fixed OpenLara compilation
 - (programs) Anhad Singh fixed the Fish shell execution
 
 ## Packaging Improvements
@@ -131,6 +144,7 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 ## Build System Improvements
 
 - (build) Wildan Mubarok implemented an option (`FSTOOLS_IN_PODMAN` environment variable) to build and run the filesystem tools in the Podman container, it fixes a problem with FUSE on MacOS, NixOS and GuixSD
+- (build) Wildan Mubarok updated the Cargo recipe template to use dynamic linking
 - (build) Wildan Mubarok did a code simplification in Cookbook which reduced dependencies
 - (build) Wildan Mubarok did a code simplification in the installer which reduced most dependencies
 - (build) Wildan Mubarok fixed some breaking changes after the Rust implementation of Cookbook
