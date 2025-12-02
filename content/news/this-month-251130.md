@@ -178,10 +178,12 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 - (doc) Ribbon explained [how to write book documentation](https://doc.redox-os.org/book/developer-faq.html#how-can-i-write-book-documentation-properly) and improved [how to review MRs](https://doc.redox-os.org/book/developer-faq.html#how-to-properly-review-mrs) in the Developer FAQ
 - (doc) Ribbon documented [how to create diagrams for Hugo](https://doc.redox-os.org/book/developer-faq.html#how-can-i-create-diagrams) in the Developer FAQ
 - (doc) Wildan Mubarok expanded and improved the [Important Programs](https://doc.redox-os.org/book/important-programs.html) and [Our Goals](https://doc.redox-os.org/book/our-goals.html) pages
-- (doc) Wildan Mubarok updated and improved the [Configuration Settings](https://doc.redox-os.org/book/configuration-settings.html) page with new options and Cookbook recipe tarball mirror documentation
+- (doc) Wildan Mubarok updated and improved the [Configuration Settings](https://doc.redox-os.org/book/configuration-settings.html) page with new options
 - (doc) Wildan Mubarok documented the new/better method to [prevent breakage of local recipe changes](https://doc.redox-os.org/book/configuration-settings.html#local-recipe-changes)
 - (doc) Wildan Mubarok documented the [Cookbook offline mode](https://doc.redox-os.org/book/configuration-settings.html#cookbook-offline-mode)
+- (doc) Wildan Mubarok documented the [Cookbook configuration](https://doc.redox-os.org/book/configuration-settings.html#cookbook-configuration)
 - (doc) Wildan Mubarok documented the `CI` (disable parallel recipe fetch/build and Cookbook TUI), `COOKBOOK_MAKE_JOBS` (set the number of CPU threads for recipe compilation), `COOKBOOK_VERBOSE` (enable more recipe log information) and `COOKBOOK_LOGS` (option to save recipe logs at `build/logs/$TARGET`) environment variables
+- (doc) Wildan Mubarok moved the Cookbook recipe tarball mirror documentation to the "Configuration Settings" page
 - (doc) Timmy Douglas documented [how to build Redox on GuixSD](https://doc.redox-os.org/book/advanced-build.html#gnu-guix-users)
 - (doc) Jonathan McCormick applied alphabetical order in the [hardware compatibility](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HARDWARE.md) tables and improved grammar
 
