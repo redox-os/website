@@ -45,7 +45,7 @@ Jeremy Soller was porting MATE Marco for a better X11 window manager and decided
 
 ## Migration to i586
 
-The Rust upstream migrated the i686 targets to i586.
+The Rust upstream migrated the i686 CPU targets to i586, the Redox build system and documentation has been updated to use `i586` as the CPU architecture target name for 32-bit x86 computers.
 
 ## Self Build Tooling Bootstraping
 
@@ -73,6 +73,8 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 
 - (kernel) 4lDO2 fixed a memory allocator panic and data corruption bug
 - (kernel) Jeremy Soller improved the futex lockup performance
+- (kernel) Jeremy Soller improved CPU stat accuracy
+- (kernel) Jeremy Soller reduced warnings for legacy scheme path on GUI applications
 - (kernel) Anhad Singh fixed some deadlocks
 - (kernel) bjorn3 did some code cleanups
 - (kernel) AArch Angel implemented `fpath` on DTB scheme
@@ -89,11 +91,12 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 
 ## System Improvements
 
+- (sys) Jeremy Soller improved log verbosity on system bootstrap
 - (sys) Jeremy Soller implemented `SO_PEERCRED` in Unix streams
 - (sys) Jeremy Soller implemented the `fpath()` function in the `proc` scheme
 - (sys) Jeremy Soller implemented the `fstat()` function in the IPC daemon
 - (sys) Jeremy Soller did a refactor of `fevent()` function handling
-- (sys) Jeremy Soller fixed `SO_SNDBUF`
+- (sys) Jeremy Soller fixed `SO_SNDBUF` in IPC daemon
 - (sys) Jeremy Soller replaced the Smith text editor by Kibi in the `minimal` variants
 - (sys) bjorn3 reduced the uutils compilation time in half (2m50s to 1m56s on his computer) by using [ThinLTO](https://clang.llvm.org/docs/ThinLTO.html) instead of [FatLTO](https://llvm.org/docs/FatLTO.html)
 - (sys) bjorn3 fixed some code warnings
@@ -106,10 +109,10 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 - (libc) Jeremy Soller improved the TLS alignment reliability
 - (libc) Jeremy Soller improved the safety of programs that close file descriptors in a range
 - (libc) Jeremy Soller implemented the `ppoll()` function
-- (libc) Jeremy Soller fixed a POSIX thread key collision
-- (libc) Jeremy Soller fixed the `ai_addrlen()` and `socklen_t()` functions
+- (libc) Jeremy Soller fixed a possible POSIX thread key collision
+- (libc) Jeremy Soller fixed the `ai_addrlen` and `socklen_t` type definitions
 - (libc) Josh Megnauth implemented the `posix_fallocate()` function
-- (libc) Ibuki Omatsu fixed the `getpeername()` function
+- (libc) Ibuki Omatsu fixed the `getpeername()` function in Unix Streams
 - (libc) Wildan Mubarok fixed the `getsubopt()` function
 - (libc) auronandace improved the documentation of some POSIX functions
 
@@ -135,7 +138,7 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 - (programs) Jeremy Soller updated GnuTLS to use dynamic linking
 - (programs) Jeremy Soller fixed the Luanti and `librsvg` compilation
 - (programs) Wildan Mubarok ported the EGL code from Mesa3D
-- (programs) Wildan Mubarok fixed OpenLara compilation
+- (programs) Wildan Mubarok fixed OpenLara and Rustual Boy compilation
 - (programs) Anhad Singh fixed the Fish shell execution
 
 ## Packaging Improvements
@@ -143,11 +146,13 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 - (pkg) Wildan Mubarok started to implement recipe features which will allow more flexibility with software options
 - (pkg) Wildan Mubarok implemented recursive recipe dependencies which will allow us to use implicit dependencies (remove duplicated dependencies) and reduce maintenance cost
 - (pkg) Wildan Mubarok implemented package size and BLAKE3 hash on package information, which allow accurate download progress bar and package update verification
+- (pkg) Wildan Mubarok fixed the package manager not detecting installed packages from the build system
 
 ## Build System Improvements
 
 - (build) Wildan Mubarok implemented an option (`FSTOOLS_IN_PODMAN` environment variable) to build and run the filesystem tools in the Podman container, it fixes a problem with FUSE on MacOS, NixOS and GuixSD
 - (build) Wildan Mubarok updated the Cargo recipe template to use dynamic linking
+- (build) Wildan Mubarok improved `REPO_BINARY` option to cache downloaded packages between image rebuilds
 - (build) Wildan Mubarok updated Cookbook unfetch to also clean recipe binaries, removing the need to use the `uc.recipe` recipe target
 - (build) Wildan Mubarok did a code simplification in Cookbook which reduced dependencies
 - (build) Wildan Mubarok did a code simplification in the installer which reduced most dependencies
