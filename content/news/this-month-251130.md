@@ -21,7 +21,7 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## More Boot Fixes
 
-Jeremy Soller added and fixed many driver timeouts to block more infinite loop bugs and continue booting, he also updated drivers to deamonize after starting and moved the hardware initialization to their child process to fix hangs and allow the boot to continue in more hardware.
+Jeremy Soller added and fixed many driver timeouts to block more infinite loop bugs and continue booting, he also updated system components and drivers to deamonize after starting and moved the hardware initialization to their child process to fix hangs and allow the boot to continue in more hardware.
 
 If you have a computer that hangs on Redox boot we recommend that you test again with the latest daily image.
 
@@ -80,17 +80,22 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 ## Kernel Improvements
 
 - (kernel) 4lDO2 fixed a memory allocator panic and data corruption bug
+- (kernel) Jeremy Soller enabled serial interrupts in ARM64 ACPI
+- (kernel) Jeremy Soller implemented `kfpath` in some schemes
+- (kernel) Jeremy Soller implemented `F_DUPFD_CLOEXEC`
 - (kernel) Jeremy Soller improved the futex lockup performance
 - (kernel) Jeremy Soller improved CPU stat accuracy
+- (kernel) Jeremy Soller fixed an event queue race condition with pipes
 - (kernel) Jeremy Soller reduced warnings for legacy scheme path on GUI applications
 - (kernel) Anhad Singh fixed some deadlocks
 - (kernel) bjorn3 did some code cleanups
-- (kernel) AArch Angel implemented `fpath` on DTB scheme
+- (kernel) AArch Angel implemented `kfpath` on DTB scheme
 
 ## Driver Improvements
 
 - (drivers) Jeremy Soller fixed missing PCI devices in Intel Arrow Lake computers
 - (drivers) Jeremy Soller improved the PS/2 driver stability
+- (drivers) Jeremy Soller improved the Intel HD Audio driver error handling
 - (drivers) Jeremy Soller implemented unaligned access on the PCI driver
 - (drivers) Ibuki Omatsu updated the `alxd`, `ihdad`, `ac97d`, and `sb16d` drivers to use the `redox-scheme` library, which makes them up-to-date
 - (drivers) bjorn3 updated the Bochs emulator graphics driver (bgad) to use a memory-mapped based IO interface instead of a port-mapped based IO interface
@@ -114,7 +119,6 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 
 - (libc) 4lDO2 implemented a macro to verify if the relibc internal definitions match the Rust libc crate definitions
 - (libc) Jeremy Soller implemented the `sys/queue.h` function group
-- (libc) Jeremy Soller implemented `F_DUPFD_CLOEXEC`
 - (libc) Jeremy Soller improved the TLS alignment reliability
 - (libc) Jeremy Soller improved the safety of programs that close file descriptors in a range
 - (libc) Jeremy Soller implemented the `ppoll()` function
@@ -156,6 +160,11 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 - (pkg) Wildan Mubarok implemented recursive recipe dependencies which will allow us to use implicit dependencies (remove duplicated dependencies) and reduce maintenance cost
 - (pkg) Wildan Mubarok implemented package size and BLAKE3 hash on package information, which allow accurate download progress bar and package update verification
 - (pkg) Wildan Mubarok fixed the package manager not detecting installed packages from the build system
+
+## Debugging Improvements
+
+- (debug) Jeremy Soller implemented the support for userspace stack traces
+- (debug) Jeremy Soller reduced unnecessary logging on system components and drivers to ease boot problem reporting
 
 ## Build System Improvements
 
