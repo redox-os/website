@@ -167,16 +167,21 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 
 - (doc) Ribbon updated and improved the [Coding and Building](https://doc.redox-os.org/book/coding-and-building.html) page, now it has fully up-to-date information
 - (doc) Ribbon updated and improved some book pages to use the new recipe push feature to save development time
-- (doc) Ribbon documented the `make cook` (Build the filesystem enabled recipes), `make tree` (show the filesystem configuration recipes and recipe dependencies tree
+- (doc) Ribbon documented the `REPO_OFFLINE` (offline mode) environment variable
+- (doc) Ribbon documented the `make cook` (Build the filesystem enabled recipes), `make push` (only install recipe packages with changes in an existing QEMU image), `make tree` (show the filesystem configuration recipes and recipe dependencies tree
 ), `make find` (show recipe packages location), and `make mount_live` (mount the live disk ISO) commands
 - (doc) Ribbon documented the `make x.--all` (run a recipe option in all recipes) and `make x.--category-category-name` (run a recipe option in a recipe category folder) commands
 - (doc) Ribbon documented the `source.shallow_clone` data type (to enable Git shallow clone in recipes)
+- (doc) Ribbon moved the Cookbook package policy to the [Application Porting](https://doc.redox-os.org/book/porting-applications.html#package-policy) page and improved the recipe TODO suggestions
 - (doc) Ribbon updated and fixed the [Build Process](https://doc.redox-os.org/book/build-phases.html) page
 - (doc) Ribbon updated [how to contribute using the GitLab web interface](https://doc.redox-os.org/book/creating-proper-pull-requests.html#using-gitlab-web-interface)
 - (doc) Ribbon explained [how to write book documentation](https://doc.redox-os.org/book/developer-faq.html#how-can-i-write-book-documentation-properly) and improved [how to review MRs](https://doc.redox-os.org/book/developer-faq.html#how-to-properly-review-mrs) in the Developer FAQ
 - (doc) Ribbon documented [how to create diagrams for Hugo](https://doc.redox-os.org/book/developer-faq.html#how-can-i-create-diagrams) in the Developer FAQ
 - (doc) Wildan Mubarok expanded and improved the [Important Programs](https://doc.redox-os.org/book/important-programs.html) and [Our Goals](https://doc.redox-os.org/book/our-goals.html) pages
-- (doc) Wildan Mubarok updated and improved the [Configuration Settings](https://doc.redox-os.org/book/configuration-settings.html) page
+- (doc) Wildan Mubarok updated and improved the [Configuration Settings](https://doc.redox-os.org/book/configuration-settings.html) page with new options and Cookbook recipe tarball mirror documentation
+- (doc) Wildan Mubarok documented the new/better method to [prevent breakage of local recipe changes](https://doc.redox-os.org/book/configuration-settings.html#local-recipe-changes)
+- (doc) Wildan Mubarok documented the [Cookbook offline mode](https://doc.redox-os.org/book/configuration-settings.html#cookbook-offline-mode)
+- (doc) Wildan Mubarok documented the `CI` (disable parallel recipe fetch/build and Cookbook TUI), `COOKBOOK_MAKE_JOBS` (set the number of CPU threads for recipe compilation), `COOKBOOK_VERBOSE` (enable more recipe log information) and `COOKBOOK_LOGS` (option to save recipe logs at `build/logs/$TARGET`) environment variables
 - (doc) Timmy Douglas documented [how to build Redox on GuixSD](https://doc.redox-os.org/book/advanced-build.html#gnu-guix-users)
 - (doc) Jonathan McCormick applied alphabetical order in the [hardware compatibility](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HARDWARE.md) tables and improved grammar
 
