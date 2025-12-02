@@ -17,13 +17,13 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## More Boot Fixes
 
-Jeremy Soller added and fixed many driver timeouts to block more infinite loop bugs and continue booting.
+Jeremy Soller added and fixed many driver timeouts to block more infinite loop bugs and continue booting, he also updated drivers to deamonize after starting and moved the hardware initialization to the child process to fix hangs and allow the boot to continue in more hardware.
 
 If you have a computer that hangs on Redox boot we recommend that you test again with the latest daily image.
 
 ## Wayland on Redox!
 
-Jeremy Soller successfully ported the [Smallvil](https://github.com/Smithay/smithay/tree/master/smallvil) Wayland compositor example from the [Smithay](https://github.com/Smithay/smithay) framework and GTK3 Wayland to Redox, thanks Ibuki Omatsu (Unix Domain Socket implementation and bug fixing), Wildan Mubarok (bug fixing and implementation of missing functions), and other contributors for making it possible.
+Jeremy Soller successfully ported the [Smallvil](https://github.com/Smithay/smithay/tree/master/smallvil) Wayland compositor example from the [Smithay](https://github.com/Smithay/smithay) framework and GTK3 Wayland to Redox, thanks Ibuki Omatsu (Unix Domain Socket implementation and bug fixing), Wildan Mubarok (bug fixing and implementation of missing functions), and other contributors for making it possible. Unfortunately the performance in Smallvil is not acceptable and was not fixed yet.
 
 <img src="/img/screenshot/gtk3-wayland.png" class="img-responsive"/>
 
@@ -104,6 +104,7 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 - (libc) Jeremy Soller implemented the `sys/queue.h` function group
 - (libc) Jeremy Soller implemented `F_DUPFD_CLOEXEC`
 - (libc) Jeremy Soller improved the TLS alignment reliability
+- (libc) Jeremy Soller improved the safety of programs that close file descriptors in a range
 - (libc) Jeremy Soller implemented the `ppoll()` function
 - (libc) Jeremy Soller fixed a POSIX thread key collision
 - (libc) Jeremy Soller fixed the `ai_addrlen()` and `socklen_t()` functions
@@ -119,12 +120,13 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 ## RedoxFS Improvements
 
 - (redoxfs) Jeremy Soller updated the `fpath()` function to use the new scheme format
+- (redoxfs) Jeremy Soller fixed a panic due to inline data overflow
 
 ## Orbital Improvements
 
 - (gui) bjorn3 did some code refactorings
 - (gui) Wildan Mubarok fixed the `orbclient` example
-- (gui) Wildan Mubarok optimized the `orbclient` gradient calculation
+- (gui) Wildan Mubarok optimized the `orbclient` library gradient calculation
 
 ## Programs
 
@@ -139,26 +141,38 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 ## Packaging Improvements
 
 - (pkg) Wildan Mubarok started to implement recipe features which will allow more flexibility with software options
+- (pkg) Wildan Mubarok implemented recursive recipe dependencies which will allow us to use implicit dependencies (remove duplicated dependencies) and reduce maintenance cost
 - (pkg) Wildan Mubarok implemented package size and BLAKE3 hash on package information, which allow accurate download progress bar and package update verification
 
 ## Build System Improvements
 
 - (build) Wildan Mubarok implemented an option (`FSTOOLS_IN_PODMAN` environment variable) to build and run the filesystem tools in the Podman container, it fixes a problem with FUSE on MacOS, NixOS and GuixSD
 - (build) Wildan Mubarok updated the Cargo recipe template to use dynamic linking
+- (build) Wildan Mubarok updated Cookbook unfetch to also clean recipe binaries, removing the need to use the `uc.recipe` recipe target
 - (build) Wildan Mubarok did a code simplification in Cookbook which reduced dependencies
 - (build) Wildan Mubarok did a code simplification in the installer which reduced most dependencies
 - (build) Wildan Mubarok fixed some breaking changes after the Rust implementation of Cookbook
 - (build) Wildan Mubarok fixed the Nix flake (not tested on NixOS, only the package manager on Debian)
+- (build) Wildan Mubarok fixed the MacOS support on Apple Silicon
+- (build) Wildan Mubarok configured the default GNU FTP mirror as Berkeley university to fix very slow download speed when downloading source tarballs sometimes
 - (build) Ribbon fixed missing ARM64 and RISC-V emulators and reduced the QEMU installation time and size by only installing the emulators for the CPU architectures supported by Redox
 
 ## Redoxer Improvements
 
+- (redoxer) Wildan Mubarok implemented a way to build and run tests from C/C++ programs
 - (redoxer) Wildan Mubarok fixed the toolchain downloading for Linux ARM64 distributions
 - (redoxer) Wildan Mubarok did a code simplification in Redoxer which reduced dependencies by half
 
 ## Documentation Improvements
 
 - (doc) Ribbon updated and improved the [Coding and Building](https://doc.redox-os.org/book/coding-and-building.html) page, now it has fully up-to-date information
+- (doc) Ribbon updated and improved some book pages to use the new recipe push feature to save development time
+- (doc) Ribbon documented the `make cook` (Build the filesystem enabled recipes), `make tree` (show the filesystem configuration recipes and recipe dependencies tree
+), `make find` (show recipe packages location), and `make mount_live` (mount the live disk ISO) commands
+- (doc) Ribbon documented the `make x.--all` (run a recipe option in all recipes) and `make x.--category-category-name` (run a recipe option in a recipe category folder) commands
+- (doc) Ribbon documented the `source.shallow_clone` data type (to enable Git shallow clone in recipes)
+- (doc) Ribbon updated and fixed the [Build Process](https://doc.redox-os.org/book/build-phases.html) page
+- (doc) Ribbon updated [how to contribute using the GitLab web interface](https://doc.redox-os.org/book/creating-proper-pull-requests.html#using-gitlab-web-interface)
 - (doc) Ribbon explained [how to write book documentation](https://doc.redox-os.org/book/developer-faq.html#how-can-i-write-book-documentation-properly) and improved [how to review MRs](https://doc.redox-os.org/book/developer-faq.html#how-to-properly-review-mrs) in the Developer FAQ
 - (doc) Ribbon documented [how to create diagrams for Hugo](https://doc.redox-os.org/book/developer-faq.html#how-can-i-create-diagrams) in the Developer FAQ
 - (doc) Wildan Mubarok expanded and improved the [Important Programs](https://doc.redox-os.org/book/important-programs.html) and [Our Goals](https://doc.redox-os.org/book/our-goals.html) pages
