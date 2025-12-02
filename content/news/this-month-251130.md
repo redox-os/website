@@ -4,7 +4,11 @@ author = "Ribbon and Ron Williams"
 date = "2025-11-30"
 +++
 
-Redox OS is an complete Unix-like general-purpose microkernel-based operating system
+<img src="/img/screenshot/servo-orbital.png" class="img-responsive"/>
+
+- Redox website on Servo
+
+Redox OS is a complete Unix-like general-purpose microkernel-based operating system
 written in Rust. November was a very exciting month for Redox! Here's all the latest news.
 
 ## Donate to Redox
@@ -17,7 +21,7 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## More Boot Fixes
 
-Jeremy Soller added and fixed many driver timeouts to block more infinite loop bugs and continue booting, he also updated drivers to deamonize after starting and moved the hardware initialization to the child process to fix hangs and allow the boot to continue in more hardware.
+Jeremy Soller added and fixed many driver timeouts to block more infinite loop bugs and continue booting, he also updated drivers to deamonize after starting and moved the hardware initialization to their child process to fix hangs and allow the boot to continue in more hardware.
 
 If you have a computer that hangs on Redox boot we recommend that you test again with the latest daily image.
 
@@ -26,6 +30,8 @@ If you have a computer that hangs on Redox boot we recommend that you test again
 Jeremy Soller successfully ported the [Smallvil](https://github.com/Smithay/smithay/tree/master/smallvil) Wayland compositor example from the [Smithay](https://github.com/Smithay/smithay) framework and GTK3 Wayland to Redox, thanks Ibuki Omatsu (Unix Domain Socket implementation and bug fixing), Wildan Mubarok (bug fixing and implementation of missing functions), and other contributors for making it possible. Unfortunately the performance in Smallvil is not acceptable and was not fixed yet.
 
 <img src="/img/screenshot/gtk3-wayland.png" class="img-responsive"/>
+
+- GTK3 Wayland Demo running on Smallvil compositor
 
 ## WebKitGTK on Redox!
 
@@ -36,6 +42,8 @@ This is the first mature and advanced web browser to work on Redox, which allow 
 <img src="/img/screenshot/webkitgtk3.png" class="img-responsive"/>
 
 <img src="/img/screenshot/bottom-webkitgtk3.png" class="img-responsive"/>
+
+- WebKitGTK3 web browser example and bottom system monitor
 
 ## MATE Desktop on Redox!
 
@@ -92,6 +100,7 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 ## System Improvements
 
 - (sys) Jeremy Soller improved log verbosity on system bootstrap
+- (sys) Jeremy Soller implemented support for `MSG_DONTWAIT` in Unix Domain Sockets
 - (sys) Jeremy Soller implemented `SO_PEERCRED` in Unix streams
 - (sys) Jeremy Soller implemented the `fpath()` function in the `proc` scheme
 - (sys) Jeremy Soller implemented the `fstat()` function in the IPC daemon
@@ -183,6 +192,7 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 - (doc) Ribbon explained [how to write book documentation](https://doc.redox-os.org/book/developer-faq.html#how-can-i-write-book-documentation-properly) and improved [how to review MRs](https://doc.redox-os.org/book/developer-faq.html#how-to-properly-review-mrs) in the Developer FAQ
 - (doc) Ribbon documented [how to create diagrams for Hugo](https://doc.redox-os.org/book/developer-faq.html#how-can-i-create-diagrams) in the Developer FAQ
 - (doc) Wildan Mubarok expanded and improved the [Important Programs](https://doc.redox-os.org/book/important-programs.html) and [Our Goals](https://doc.redox-os.org/book/our-goals.html) pages
+- (doc) Wildan Mubarok improved the [pre-i586 CPU support](https://doc.redox-os.org/book/hardware-support.html#why-choosing-i586-as-the-minimal-supported-x86-cpu) information with more details
 - (doc) Wildan Mubarok updated and improved the [Configuration Settings](https://doc.redox-os.org/book/configuration-settings.html) page with new options
 - (doc) Wildan Mubarok documented the new/better method to [prevent breakage of local recipe changes](https://doc.redox-os.org/book/configuration-settings.html#local-recipe-changes)
 - (doc) Wildan Mubarok documented the [Cookbook offline mode](https://doc.redox-os.org/book/configuration-settings.html#cookbook-offline-mode)
