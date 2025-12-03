@@ -19,15 +19,15 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
-## More Boot Fixes
-
-Jeremy Soller added and fixed many driver timeouts to block more infinite loop bugs and continue booting, he also updated system components and drivers to deamonize after starting and moved the hardware initialization to their child process to fix hangs and allow the boot to continue in more hardware.
-
-If you have a computer that hangs on Redox boot we recommend that you test again with the latest daily image.
-
 ## Wayland on Redox!
 
-Jeremy Soller successfully ported the [Smallvil](https://github.com/Smithay/smithay/tree/master/smallvil) Wayland compositor example from the [Smithay](https://github.com/Smithay/smithay) framework and GTK3 Wayland to Redox, thanks Ibuki Omatsu (Unix Domain Socket implementation and bug fixing), Wildan Mubarok (bug fixing and implementation of missing functions), and other contributors for making it possible. Unfortunately the performance in Smallvil is not acceptable and was not fixed yet.
+Jeremy Soller successfully ported the [Smallvil](https://github.com/Smithay/smithay/tree/master/smallvil)
+Wayland compositor example from the [Smithay](https://github.com/Smithay/smithay) framework and GTK3 Wayland to Redox.
+Special thanks to Ibuki Omatsu (Unix Domain Socket implementation and bug fixing),
+Wildan Mubarok (bug fixing and implementation of missing functions),
+and other contributors for making it possible.
+Smallvil performance on Redox is not adequate, so we still have work to do on Wayland support,
+but this represents a huge step forward.
 
 <img src="/img/screenshot/gtk3-wayland.png" class="img-responsive"/>
 
@@ -35,7 +35,7 @@ Jeremy Soller successfully ported the [Smallvil](https://github.com/Smithay/smit
 
 ## WebKitGTK on Redox!
 
-Jeremy Soller and Wildan Mubarok successfully ported and fixed the WebKitGTK (GTK 3.x frontend) and the web browser example on Redox, also thanks to other contributors which helped us to achieve this.
+Jeremy Soller and Wildan Mubarok successfully ported and fixed WebKitGTK (GTK 3.x frontend) and its web browser example on Redox. Thanks again to other contributors which helped us to achieve this.
 
 This is the first mature and advanced web browser to work on Redox, which allow most types of websites to be used.
 
@@ -51,9 +51,15 @@ Jeremy Soller was porting MATE Marco for a better X11 window manager and decided
 
 <img src="/img/screenshot/mate-desktop.png" class="img-responsive"/>
 
+## More Boot Fixes
+
+Jeremy Soller added and fixed many driver timeouts to block more infinite loop bugs and continue booting, he also updated system components and drivers to deamonize after starting and moved the hardware initialization to their child process to fix hangs and allow the boot to continue in more hardware.
+
+If you have a computer that hangs on Redox boot we recommend that you test again with the latest daily image.
+
 ## Migration to i586
 
-The Rust upstream migrated the i686 CPU targets to i586, the Redox build system and documentation has been updated to use `i586` as the CPU architecture target name for 32-bit x86 computers.
+The Rust upstream migrated the i686 CPU targets to i586. The Redox build system and documentation have been updated to use `i586` as the CPU architecture target name for 32-bit x86 computers.
 
 ## Self Build Tooling Bootstraping
 
@@ -66,16 +72,26 @@ Jeremy Soller and Wildan Mubarok started to migrate the build configuration of r
 
 ## Build System Submodule Removal
 
-Jeremy Soller merged the submodules into the build system repository to allow faster development and testing, who didn't updated the build system yet should backup your changes and run the `make distclean pull container_clean all` command or download a new build system copy and build from scratch.
+Jeremy Soller unified the build system repositories,
+merging the submodules into the [main build system repository](https://gitlab.redox-os.org/redox-os/redox).
+This will help to simplify build system improvements, keep everything synchronized, and allow faster development and testing.
+
+If you haven't updated your build system yet, you should backup your changes,
+and either run the `make distclean pull container_clean all` command, or download a new build system copy (`git clone https://gitlab.redox-os.org/redox-os/redox.git`)
+and build from scratch.
 
 ## More GitLab Protection
 
-After frequent GtiLab slowdowns we discovered that bots were using our CI for cryptomining (again) and AI scrapers consuming the server resources making it very slow, thus we increased our protection which cnaged some things:
+After suffering frequent GitLab slowdowns, we discovered that bots were using our CI for cryptomining (again)
+and AI scrapers were consuming the server resources making it very slow.
+As a consequence, we increased our protection, which changed some things:
 
-- Only maintainers can run CI jobs
-- Git code push using SSH was disabled, now all contributors need to use HTTPS with a PAT (Personal Access Token)
+- By default, only maintainers can run CI jobs.
+If you are working on solving CI problems, let us know and we can discuss temporary access to CI.
+- Git code push using SSH has been disabled until we find a way to fix it.
+All contributors will need to use HTTPS with a PAT (Personal Access Token) for `git push` usage.
 
-Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-pat) section to learn how to configure your PAT on Git.
+The book has been updated with instructions on [how to configure your PAT](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-pat).
 
 ## Kernel Improvements
 
@@ -100,7 +116,7 @@ Read [this](https://doc.redox-os.org/book/signing-in-to-gitlab.html#setting-up-p
 - (drivers) Ibuki Omatsu updated the `alxd`, `ihdad`, `ac97d`, and `sb16d` drivers to use the `redox-scheme` library, which makes them up-to-date
 - (drivers) bjorn3 updated the Bochs emulator graphics driver (bgad) to use a memory-mapped based IO interface instead of a port-mapped based IO interface
 - (drivers) bjorn3 did a code unification
-- (drivers) bjorn3 merged the `drivers` repository into the `base` repository, it will allow faster development/testing and configuration simplification
+- (drivers) bjorn3 merged the `drivers` repository into the `base` repository. It will allow faster development and testing, especially for driver initialization, and simplify configuration.
 
 ## System Improvements
 
