@@ -4,10 +4,6 @@ author = "Ribbon and Ron Williams"
 date = "2025-11-30"
 +++
 
-<img src="/img/screenshot/servo-orbital.png" class="img-responsive"/>
-
-- Redox website on Servo
-
 Redox OS is a complete Unix-like general-purpose microkernel-based operating system
 written in Rust. November was a very exciting month for Redox! Here's all the latest news.
 
@@ -37,7 +33,7 @@ but this represents a huge step forward.
 
 Jeremy Soller and Wildan Mubarok successfully ported and fixed WebKitGTK (GTK 3.x frontend) and its web browser example on Redox. Thanks again to other contributors which helped us to achieve this.
 
-This is the first mature and advanced web browser to work on Redox, which allow most types of websites to be used.
+This is the first mature and advanced web browser to work on Redox (compared to NetSurf and Servo), which allow most types of websites to be used.
 
 <img src="/img/screenshot/webkitgtk3.png" class="img-responsive"/>
 
@@ -97,10 +93,12 @@ The book has been updated with instructions on [how to configure your PAT](https
 
 - (kernel) 4lDO2 fixed a memory allocator panic and data corruption bug
 - (kernel) Jeremy Soller enabled serial interrupts in ARM64 ACPI
+- (kernel) Jeremy Soller implemented nested event queues
 - (kernel) Jeremy Soller implemented `kfpath` in some schemes
 - (kernel) Jeremy Soller implemented `F_DUPFD_CLOEXEC`
 - (kernel) Jeremy Soller improved the futex lockup performance
 - (kernel) Jeremy Soller improved CPU stat accuracy
+- (kernel) Jeremy Soller improved the i586 CPU stats
 - (kernel) Jeremy Soller fixed an event queue race condition with pipes
 - (kernel) Jeremy Soller reduced warnings for legacy scheme path on GUI applications
 - (kernel) Anhad Singh fixed some deadlocks
@@ -115,7 +113,7 @@ The book has been updated with instructions on [how to configure your PAT](https
 - (drivers) Jeremy Soller implemented unaligned access on the PCI driver
 - (drivers) Ibuki Omatsu updated the `alxd`, `ihdad`, `ac97d`, and `sb16d` drivers to use the `redox-scheme` library, which makes them up-to-date
 - (drivers) bjorn3 updated the Bochs emulator graphics driver (bgad) to use a memory-mapped based IO interface instead of a port-mapped based IO interface
-- (drivers) bjorn3 did a code unification
+- (drivers) bjorn3 unified the integer vector handling code between the Intel HD Audio and Realtek ethernet drivers
 - (drivers) bjorn3 merged the `drivers` repository into the `base` repository. It will allow faster development and testing, especially for driver initialization, and simplify configuration.
 
 ## System Improvements
