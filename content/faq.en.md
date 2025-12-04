@@ -134,7 +134,7 @@ You can see how Redox is compared to Linux, FreeBSD and Plan 9 on these pages:
 
 ### Comparison with other microkernel projects
 
-The main difference is that Redox is a **complete operating system** like Linux and BSD distributions with pre-configured system components, drivers ,and applications, thus you don't need to implement most system components or all drivers (most microkernel projects were hobbies created for learning, research and experimentation).
+The main difference is that Redox is a **complete Unix-like operating system** like Linux and BSD distributions with pre-configured system components, drivers ,and applications, thus you don't need to implement most system components, most/all drivers or need a high effort to port programs (most microkernel projects were hobbies created for learning, research and experimentation).
 
 ## What is the purpose of Redox?
 
