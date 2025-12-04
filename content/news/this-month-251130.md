@@ -4,6 +4,10 @@ author = "Ribbon and Ron Williams"
 date = "2025-11-30"
 +++
 
+<img src="/img/screenshot/bottom-webkitgtk3.png" class="img-responsive"/>
+
+- WebKitGTK3 web browser example and bottom system monitor
+
 Redox OS is a complete Unix-like general-purpose microkernel-based operating system
 written in Rust. November was a very exciting month for Redox! Here's all the latest news.
 
@@ -33,13 +37,9 @@ but this represents a huge step forward.
 
 Jeremy Soller and Wildan Mubarok successfully ported and fixed WebKitGTK (GTK 3.x frontend) and its web browser example on Redox. Thanks again to other contributors which helped us to achieve this.
 
-This is the first mature and advanced web browser to work on Redox (compared to NetSurf and Servo), which allow most types of websites to be used.
+This is first full-featured browser engine ported to Redox, allowing most websites to work.
 
 <img src="/img/screenshot/webkitgtk3.png" class="img-responsive"/>
-
-<img src="/img/screenshot/bottom-webkitgtk3.png" class="img-responsive"/>
-
-- WebKitGTK3 web browser example and bottom system monitor
 
 ## MATE Desktop on Redox!
 
@@ -59,12 +59,15 @@ The Rust upstream migrated the i686 CPU targets to i586. The Redox build system 
 
 ## Self Build Tooling Bootstraping
 
-Jeremy Soller and Wildan Mubarok started to migrate the build configuration of recipes to use build tools in recipes, it will allow the following benefits:
+Jeremy Soller and Wildan Mubarok implemented a feature to allow recipes to configure what build tools they need,
+and these build tools being available as recipes. It will allow the following benefits:
 
-- Simplify the Redox build system as applications, libraries, and build tools use the same build environment and packaging system
-- Big reduction of build system dependency installation time and maintenance cost as contributors will only install the build tools from the recipes that they are using and we don't need to search equivalent package for multiple Unix-like system as new build tools are added
-- Ease relibc testing on Linux
-- Allow the future implementation of [full source bootstraping](https://en.wikipedia.org/wiki/Bootstrapable_builds) to avoid compilation backdoors, like [Guix](https://guix.gnu.org/)
+- Simplifies the Redox build system, so applications, libraries, and build tools use the same build environment and packaging system
+- Greatly reduces build system configuration time in both Podman and Native builds,
+as developers will only install the build tools for the recipes that they are using
+- Removes the maintenance effort of updating the list of build tool packages required for each Unix-like platform whenever a build tool package is added for the Native Build
+- Eases relibc testing on Linux
+- Allows the future implementation of [full source bootstraping](https://en.wikipedia.org/wiki/Bootstrapable_builds) to avoid compiler backdoors, like [Guix](https://guix.gnu.org/)
 
 ## Build System Submodule Removal
 
