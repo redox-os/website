@@ -112,8 +112,7 @@ The book has been updated with instructions on [how to configure your PAT](https
 - (drivers) Jeremy Soller improved the Intel HD Audio driver error handling
 - (drivers) Jeremy Soller implemented unaligned access on the PCI driver
 - (drivers) Ibuki Omatsu updated the `alxd`, `ihdad`, `ac97d`, and `sb16d` drivers to use the `redox-scheme` library, which makes them up-to-date
-- (drivers) bjorn3 updated the Bochs emulator graphics driver (bgad) to use a memory-mapped based IO interface instead of a port-mapped based IO interface
-- (drivers) bjorn3 unified the integer vector handling code between the Intel HD Audio and Realtek ethernet drivers
+- (drivers) bjorn3 unified the interrupt vector handling code between the Intel HD Audio and Realtek ethernet drivers
 - (drivers) bjorn3 merged the `drivers` repository into the `base` repository. It will allow faster development and testing, especially for driver initialization, and simplify configuration.
 
 ## System Improvements
