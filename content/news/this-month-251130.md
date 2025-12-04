@@ -126,7 +126,7 @@ The book has been updated with instructions on [how to configure your PAT](https
 - (sys) Jeremy Soller did a refactor of `fevent()` function handling
 - (sys) Jeremy Soller fixed `SO_SNDBUF` in IPC daemon
 - (sys) Jeremy Soller replaced the Smith text editor by Kibi in the `minimal` variants
-- (sys) bjorn3 reduced the uutils compilation time in half (2m50s to 1m56s on his computer) by using [ThinLTO](https://clang.llvm.org/docs/ThinLTO.html) instead of [FatLTO](https://llvm.org/docs/FatLTO.html)
+- (sys) bjorn3 reduced the uutils compilation time by a third (2m50s to 1m56s on his computer) by using [ThinLTO](https://clang.llvm.org/docs/ThinLTO.html) instead of [FatLTO](https://llvm.org/docs/FatLTO.html)
 - (sys) bjorn3 fixed some code warnings
 
 ## Relibc Improvements
