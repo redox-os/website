@@ -37,7 +37,7 @@ but this represents a huge step forward.
 
 Jeremy Soller and Wildan Mubarok successfully ported and fixed WebKitGTK (GTK 3.x frontend) and its web browser example on Redox. Thanks again to other contributors which helped us to achieve this.
 
-This is first full-featured browser engine ported to Redox, allowing most websites to work.
+This is the first full-featured browser engine ported to Redox, allowing most websites to work.
 
 <img src="/img/screenshot/webkitgtk3.png" class="img-responsive"/>
 
@@ -49,7 +49,7 @@ Jeremy Soller was porting MATE Marco for a better X11 window manager and decided
 
 ## More Boot Fixes
 
-Jeremy Soller added and fixed many driver timeouts to block more infinite loop bugs and continue booting, he also updated system components and drivers to deamonize after starting and moved the hardware initialization to their child process to fix hangs and allow the boot to continue in more hardware.
+Jeremy Soller added and fixed many driver timeouts to block more infinite loop bugs and continue booting, he also updated system components and drivers to daemonize after starting and moved the hardware initialization to their child process to fix hangs and allow the boot to continue in more hardware.
 
 If you have a computer that hangs on Redox boot we recommend that you test again with the latest daily image.
 
