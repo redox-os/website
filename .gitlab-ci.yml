@@ -1,22 +1,17 @@
 stages:
   - build
-  - test
+
+workflow:
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master" && $CI_PROJECT_NAMESPACE == "redox-os"'
+    - if: '$CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "master"'
 
 hugo:
   stage: build
   image:
       # https://docker.hugomods.com
     name: ghcr.io/hugomods/hugo:node
-  script: "./hugo.sh"
-  artifacts:
-    paths:
-      - build/public
-
-lychee:
-  stage: test
-  image:
-      # https://lychee.cli.rs/docker
-    name: docker.io/lycheeverse/lychee:latest-alpine
-    entrypoint: [""] # force an empty entrypoint
-  script: |
-    lychee --no-progress --offline --root-dir $(pwd)/build/public ./build/public
+  script: | 
+    ./hugo.sh
+    wget -qO- https://github.com/lycheeverse/lychee/releases/download/lychee-v0.22.0/lychee-$(uname -m)-unknown-linux-musl.tar.gz | tar -xvzf -
+    ./lychee --no-progress --offline --root-dir $(pwd)/build/public ./build/public
