@@ -35,9 +35,34 @@ Anhad Singh and Wildan Mubarok implemented ARM64 support on dynamic linker and C
 
 bjorn3 and Ibuki Omatsu finished the system components and drivers migration to the new scheme packet protocol which allows much more flexibility.
 
+## Optional Package Features
+
+Wildan Mubarok implemented the support for optional package features, it allows the same package configuration to be customized and built into multiple compilation options.
+
+The `recipe.toml` syntax is the following:
+
+```
+[[optional-packages]]
+name = "cxx"
+dependencies = []
+files = [
+    # ...files in glob pattern...
+]
+```
+
+For example: the `gcc13` recipe configuration has the `cxx` optional feature which can be compiled with the `make r.gcc13.cxx` command and will create the `gcc13.cxx` package which depends on the `gcc13` primary package. It allows users and developers to only install the features that they need, saving storage space and Internet usage.
+
+In this example the primary `gcc13` package was reduced from 892MB to 597MB.
+
+The optional feature packages can be installed in the Redox image by using a different syntax with quotation marks for TOML correctness, for example: `"gcc13.cxx" = {}`
+
 ## Many Correctness Improvemens and More POSIX Conformance
 
 Multiple contributors helped to fix the `os-test` tests and system bugs, which made many tests pass which improved the Redox OS score in the [os-test list](https://sortix.org/os-test/#results)
+
+## Linux Binaries On Cookbook!
+
+Wildan Mubarok implemented the `make r.host:recipe-name` command to build recipes for Linux to quickly test relibc and their cross-compilation configuration, this is also part of the migration to build the recipe build tools from source using our package system.
 
 ## Many CI Fixes
 
@@ -98,6 +123,7 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 - (libc) Anhad Singh fixed a TLS (Thread Local Storage) overallocation
 - (libc) Anhad Singh fixed a bug where the dynamic linker could fail to allocate non-PIE objects at their desired memory locations
 - (libc) bjorn3 did a code cleanup on `redox-rt`
+- (libc) Landon Propes implemented precision modifiers and negative value precision handling
 - (libc) auronandace fixed the `memccpy()`, `strlcpy()` and `strlcat()` functions
 - (libc) auronandace improved coding style by making imports more explicit
 - (libc) auronandace did a code cleanup in `timespec_get` and `timespec_getres` functions
@@ -115,6 +141,8 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 ## Programs
 
 - (programs) Jeremy Soller fixed `PATH_SEPARATOR` on GCC
+- (programs) Wildan Mubarok reduced the Rust compiler compilation time significantly
+- (programs) Wildan Mubarok updated Mesa3D to use LLVM 21
 - (programs) Wildan Mubarok fixed the LLVM benchmark tools compilation
 - (programs) Wildan Mubarok fixed Neovim compilation
 - (programs) Wildan Mubarok fixed GNU Make recompilation
@@ -138,14 +166,18 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 - (build) Wildan Mubarok migrated the GCC prefix bootstrap to the Cookbook recipe, simplifyng configuration and updates to new GCC versions
 - (build) Wildan Mubarok migrated the statically linked relibc compilation to the Cookbook recipe, avoiding conflicts and simplifyng configuration
 - (build) Wildan Mubarok updated the Podman configuration to preserve the `sccache` objects in container rebuilds
+- (build) Wildan Mubarok added tags to `sysroot` to make the recipe dependencies reliable and avoid unnecessary recipe recompilation (`make cr.recipe`) to update dependencies
 - (build) Wildan Mubarok updated the `make c.relibc` and `make r.relibc` commands to also clean the relibc static objects and rebuild them to fix breaking changes on statically linked recipes
 - (build) Wildan Mubarok implemented the `make repo_clean` (clean all recipe binaries) and `make fetch_clean` (clean all recipe binaries and sources) commands as an alternative to `make c.--all` and `make u.--all`
+- (build) Wildan Mubarok implemented filesystem support for pre-compiled packages on meta-packages
 - (build) Wildan Mubarok improved the FreeBSD and MacOS support
 - (build) Wildan Mubarok removed `cargo-binstall` in favor of manual downloads for simplicity and avoid possible missing binaries
-- (build) Wildan Mubarok fixed the Cookbook TUI not updating with recipe changes
+- (build) Wildan Mubarok fixed the Cookbook TUI not updating after recipe changes when retrying compilation
 - (build) Wildan Mubarok fixed the `recipe = "binary"` configuration being ignore in the Cookbook TUI
+- (build) Wildan Mubarok fixed a bug where the Cookbook TUI compilation couldn't be stopped due to keyboard key clobbering
 - (build) Wildan Mubarok fixed a bug where rustup had repeated downloading
 - (build) Wildan Mubarok fixed a limitation were the RustPython recipe were always recompiling because of patching on Git source
+- (build) Wildan Mubarok simplified the Cookbook code
 - (build) Wildan Mubarok did a cleanup in the Makefile configuration
 - (build) Ojus Chugh added a script to mount RedoxFS partitions from dual-boot, as requested by Ribbon
 
