@@ -21,7 +21,15 @@ Jeremy Soller created the first GPU driver for Intel Tiger Lake and Kaby Lake in
 
 It's probably the first Intel GPU driver written in Rust.
 
+(This shouldn't be confused with video drivers for BIOS VESA and UEFI GOP, which are necessary to show any video after bootloader kernel bootstraping in a personal computer and are supported by Redox for years)
+
 <img src="/img/hardware/intel-graphics.jpg" class="img-responsive"/>
+
+## RISC-V UART Serial Input On Redox
+
+AArch Angel fixed the [BeagleBoard BeagleV-Fire](https://www.beagleboard.org/boards/beaglev-fire) UART serial input on Redox.
+
+<img src="/img/hardware/serial-input-riscv.jpg" class="img-responsive"/>
 
 ## Linux DRM On Redox OS!
 
@@ -85,13 +93,15 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 ## Kernel Improvements
 
 - (kernel) Ibuki Omatsu implemented the `syscall6` system call to support system calls with up to 6 arguments
-- (kernel) bjorn3 enabled the compiler builtins for the `memcpy()` functions to improve performance
+- (kernel) bjorn3 enabled the compiler builtins for the `memcpy` functions to improve performance
 - (kernel) bjorn3 fixed `MAP_FIXED` behavior
 - (kernel) Anhad Singh implemented error handling for the `futex_wait` function interruption which had `EINTR` before
+- (kernel) Anhad Singh fixed a context switch race condition and deadlock
 - (kernel) AArch Angel enabled RISC-V MMU marker flags to ease booting on real hardware
 
 ## Driver Improvements
 
+- (drivers) Jeremy Soller disabled the USB SCSI driver until it's more reliable
 - (drivers) AArch Angel implemented initial ACPI embedded controller support
 - (drivers) bjorn3 did many graphics infrastructure code refactorings and reduced code duplication
 - (drivers) bjorn3 fixed some code warnings
@@ -107,19 +117,26 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 - (sys) bjorn3 merged the `redox-daemon` library code into the `base` repository for simplification
 - (sys) bjorn3 reduced the boot drawing and logging code duplication
 - (sys) Wildan Mubarok merged the `redoxerd` daemon into the `base` repository for simplification
-- (sys) Ibuki Omatsu implemented the `unlinkat()` function for system components
+- (sys) Ibuki Omatsu implemented the `unlinkat` function for system components
 - (sys) Ibuki Omatsu replaced the `unlink` and `rmdir` functions with the `unlinkat` function
+- (sys) bjorn3 and Ibuki Omatsu updated all system components and drivers to use the `redox-scheme` library, which makes the whole system up-to-date with latest scheme improvements and fixes
 
 ## Relibc Improvements
 
-- (libc) Josh Megnauth implemented the `timespect_get()` and `timespec_getres()` functions
+- (libc) Jeremy Soller implemented the `tcgetwinsize`, `tcgetsid`, `locale_t`, `fwscanf`, `vfwscanf` functions
+- (libc) Jeremy Soller implemented the `fexecve` function for Linux
+- (libc) Jeremy Soller implemented `_Fork` (fork without `pthread_atfork` hooks)
+- (libc) Jeremy Soller implemented POSIX limits
+- (libc) Jeremy Soller fixed the `tcsetwinsize` function
+- (libc) Jeremy Soller fixed `chown` on Linux
+- (libc) Josh Megnauth implemented the `timespect_get` and `timespec_getres` functions
 - (libc) Wildan Mubarok implemented the `clock_getres` function
 - (libc) Wildan Mubarok implemented more locale functions
-- (libc) Wildan Mubarok reimplemented the `strtold()` function from C to Rust
+- (libc) Wildan Mubarok reimplemented the `strtold` function from C to Rust
 - (libc) Wildan Mubarok enabled dynamic linking on tests, which reduced the storage usage from around ~900MB to ~5MB
 - (libc) Wildan Mubarok enabled multi-threading on tests
 - (libc) Wildan Mubarok improved the test runner to be almost hang-proof and report hanging tests
-- (libc) Wildan Mubarok fixed the `fstatat()` function tests
+- (libc) Wildan Mubarok fixed the `fstatat` function tests
 - (libc) Wildan Mubarok fixed tests hanging the x86_64 CI jobs by using a timeout
 - (libc) Anhad Singh implemented error handling for missing libraries on dynamic linker to fix a page fault
 - (libc) Anhad Singh fixed a register corruption in POSIX signals
@@ -127,10 +144,10 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 - (libc) Anhad Singh fixed a TLS (Thread Local Storage) overallocation
 - (libc) Anhad Singh fixed a bug where the dynamic linker could fail to allocate non-PIE objects at their desired memory locations
 - (libc) Anahd Singh fixed a hang in the process group killing
-- (libc) Anhad Singh fixed the `fstatat()` function
+- (libc) Anhad Singh fixed the `fstatat` function
 - (libc) bjorn3 did a code simplification and cleanup on `redox-rt`
 - (libc) Landon Propes implemented precision modifiers and negative value precision handling
-- (libc) auronandace fixed the `memccpy()`, `strlcpy()`, `strlcat()` and `dlfcn()` functions
+- (libc) auronandace fixed the `memccpy`, `strlcpy`, `strlcat` and `dlfcn` functions
 - (libc) auronandace improved coding style by making imports more explicit
 - (libc) auronandace did a code cleanup in `timespec_get` and `timespec_getres` functions
 - (libc) auronandace improved the documentation of the `locale`, `sched`, `sysstat`, `syssocket`, `netdb`, `poll`, `regex`, `grp`, `pthread`, `stdio`, `wchar`, `signal`, `float`, `fenv`, `setjmp`, `glob` and other functions
@@ -163,10 +180,6 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 - (test) Wildan Mubarok implemented a [quick way](https://gitlab.redox-os.org/redox-os/redox/-/merge_requests/1775) to run each test from `os-test` on Redoxer
 - (test) Josh Williams added more POSIX signals tests
 
-## Debugging Improvements
-
-- (debug) AArch Angel fixed UART serial input on RISC-V
-
 ## Build System Improvements
 
 - (build) Wildan Mubarok migrated the GCC prefix bootstrap to the Cookbook recipe, simplifyng configuration and updates to new GCC versions
@@ -197,6 +210,11 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 ## Documentation Improvements
 
 - (doc) Wildan Mubarok documented [how to use the RedoxFS tooling](https://doc.redox-os.org/book/redoxfs.html#tooling) to create a non-bootable/bootable disk, mount/unmount a disk and expand/shrink the disk capacity
+- (doc) Ribbon fixed and updated [how to update initfs](https://doc.redox-os.org/book/coding-and-building.html#how-to-update-initfs) with your changes
+- (doc) Ribbon improved the [drivers README](https://gitlab.redox-os.org/redox-os/base/-/blob/main/drivers/README.md?ref_type=heads) information and updated the drivers list with new drivers and locations
+- (doc) Ribbon documented that comments are supported in the `.config` file using the `#` character
+- (doc) Ribbon improved the [book documentation rules](https://doc.redox-os.org/book/developer-faq.html#how-can-i-write-book-documentation-properly)
+- (doc) Ribbon did a cleanup in the book
 
 ## How To Test The Changes
 
@@ -226,13 +244,13 @@ join us on [Matrix Chat](https://matrix.to/#/#redox-join:matrix.org).
 
 Here are some links to discussion about this news post:
 
-- [floss.social @redox]()
-- [floss.social @soller]()
-- [Patreon]()
-- [Phoronix]()
-- [Reddit /r/redox]()
-- [Reddit /r/rust]()
-- [X/Twitter @redox_os]()
+- [floss.social @redox]
+- [floss.social @soller]
+- [Patreon]
+- [Phoronix]
+- [Reddit /r/redox]
+- [Reddit /r/rust]
+- [X/Twitter @redox_os]
 
 -->
 
