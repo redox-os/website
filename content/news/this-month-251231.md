@@ -15,21 +15,68 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## First GPU Driver!
+
+Jeremy Soller created the first GPU driver for Intel Tiger Lake and Kaby Lake integrated GPUs after reading massive documentation, currently the driver only support [mode setting](https://en.wikipedia.org/wiki/Mode_setting)
+
+It's probably the first Intel GPU driver written in Rust.
+
+<img src="/img/hardware/intel-graphics.jpg" class="img-responsive"/>
+
+## Linux DRM On Redox OS!
+
+Jeremy Soller and bjorn3 implemented the ioctls from the Linux DRM API to ease software porting and graphics drivers usage.
+
+## Dynamic Linking On ARM64!
+
+Anhad Singh and Wildan Mubarok implemented ARM64 support on dynamic linker and Cookbook which reduces memory usage, increase storage space and allow the ARM64 programs to scale with less effort.
+
+## End Of Scheme Packet Protocol Migration
+
+bjorn3 and Ibuki Omatsu finished the system components migration to the new scheme packet protocol which allows much more flexibility.
+
+## Many Correctness Improvemens and More POSIX Conformance
+
+Multiple contributors helped to fix the `os-test` tests and system bugs, which made many tests pass which improved the Redox OS score in the [os-test list](https://sortix.org/os-test/#results)
+
+## Many CI Fixes
+
+Wildan Mubarok and Anhad Singh fixed some things which made the GitLab CI jobs get success status instead of hangs or false errors.
+
+Wildan Mubarok expanded Redoxer to test more things and is enabling ARM64 and RISC-V CI testing.
+
+## Redox OS Trademark
+
+The board of directors adopted a trademark for the "Redox OS" name which protect our name from abuse and misinformation, it was inspired by the COSMIC Desktop trademark policy.
+
+You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/TRADEMARK.md?ref_type=heads) link.
+
 ## Kernel Improvements
 
-- (kernel) 
+- (kernel) Ibuki Omatsu implemented the `syscall6` system call to support system calls with up to 6 arguments
+- (kernel) bjorn3 enabled the compiler builtins for the `memcpy()` functions to improve performance
 
 ## Driver Improvements
 
-- (drivers) 
+- (drivers) AArch Angel implemented initial embedded controller support
+- (drivers) bjorn3 fixed some code warnings
 
 ## System Improvements
 
-- (sys) 
+- (sys) bjorn3 merged the `redox-daemon` library code into the `base` repository for simplification
+- (sys) Wildan Mubarok merged the `redoxerd` daemon into the `base` repository for simplification
+- (sys) Ibuki Omatsu replaced the `unlink` and `rmdir` functions with the `unlinkat` function
 
 ## Relibc Improvements
 
-- (libc) 
+- (libc) Josh Megnauth implemented the `timespect_get()` and `timespec_getres()` functions
+- (libc) Wildan Mubarok implemented the `clock_getres` function
+- (libc) Anhad Singh implemented error handling for missing libraries on dynamic linker to fix a page fault
+- (libc) bjorn3 did a code cleanup on `redox-rt`
+- (libc) auronandace fixed the `memccpy()`, `strlcpy()` and `strlcat()` functions
+- (libc) auronandace did a code cleanup in `timespec_get` and `timespec_getres` functions
+- (libc) auronandace improved the code documentation of the `locale`, `sched`, `sysstat`, `syssocket`, `netdb`, `poll`, `regex`, `grp`, `pthread`, `stdio`, `wchar`, `signal`, `float`, `fenv`
+- (libc) auronandace did a code documentation cleanup
 
 ## Networking Improvements
 
@@ -37,19 +84,40 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## RedoxFS Improvements
 
-- (redoxfs) 
+- (redoxfs) Josh Megnauth implemented `RENAME_NO_REPLACE`
 
 ## Programs
 
-- (programs) 
+- (programs) Jeremy Soller fixed `PATH_SEPARATOR` on GCC
+- (programs) Wildan Mubarok fixed the LLVM benchmark tools compilation
+- (programs) bjorn3 fixed `liburcu`
+
+## Testing Improvements
+
+- (test) Wildan Mubarok created a Docker container for ARM64 and i586 testing on Redoxer
+- (test) Wildan Mubarok installed GNU Make and GNU Sed on the Redoxer image
+- (test) Josh Williams added more POSIX signals tests
+
+## Debugging Improvements
+
+- (debug) AArch Angel fixed UART serial input on RISC-V
 
 ## Build System Improvements
 
-- (build) 
+- (build) Wildan Mubarok update the Podman configuration to preserve the `sccache` objects in container rebuilds
+- (build) Wildan Mubarok implemented the `make repo_clean` (clean all recipe binaries) and `make fetch_clean` (clean all recipe binaries and sources) commands as an alternative to `make c.--all` and `make u.--all`
+- (build) Wildan Mubarok fixed the Cookbook TUI not updating with recipe changes
+- (build) Wildan Mubarok did a cleanup in the Makefile configuration
+- (build) Ojus Chugh added a script to mount RedoxFS partitions from dual-boot, as requested by Ribbon
+
+## CI Improvements
+
+- (ci) Petar Yordanov fixed the book CI
+- (ci) Wildan Mubarok fixed the website CI
 
 ## Documentation Improvements
 
-- (doc) 
+- (doc) Wildan Mubarok documented [how to use the RedoxFS tooling](https://doc.redox-os.org/book/redoxfs.html#tooling) to create a non-bootable/bootable disk, mount/unmount a disk and expand/shrink the disk capacity
 
 ## How To Test The Changes
 
