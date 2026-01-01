@@ -33,7 +33,7 @@ Anhad Singh and Wildan Mubarok implemented ARM64 support on dynamic linker and C
 
 ## End Of Scheme Packet Protocol Migration
 
-bjorn3 and Ibuki Omatsu finished the system components migration to the new scheme packet protocol which allows much more flexibility.
+bjorn3 and Ibuki Omatsu finished the system components and drivers migration to the new scheme packet protocol which allows much more flexibility.
 
 ## Many Correctness Improvemens and More POSIX Conformance
 
@@ -45,6 +45,12 @@ Wildan Mubarok and Anhad Singh fixed some things which made the GitLab CI jobs g
 
 Wildan Mubarok expanded Redoxer to test more things and is enabling ARM64 and RISC-V CI testing.
 
+## Autonomous Build Server Compilation
+
+Wildan Mubarok enabled the `REPO_NONSTOP` environment variable which allows the recipe compilation to continue by ignoring errors to fix them later, it keeps the pre-compiled packages and images up-to-date with much less effort.
+
+He also improved Cookbook before to prepare for this, like a log file for each recipe and improve the outdated packages and images detection/information.
+
 ## Redox OS Trademark
 
 The board of directors adopted a trademark for the "Redox OS" name which protect our name from abuse and misinformation, it was inspired by the COSMIC Desktop trademark policy.
@@ -55,16 +61,22 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 
 - (kernel) Ibuki Omatsu implemented the `syscall6` system call to support system calls with up to 6 arguments
 - (kernel) bjorn3 enabled the compiler builtins for the `memcpy()` functions to improve performance
+- (kernel) Anhad Singh implemented error handling for the `futex_wait` function interruption which had `EINTR` before
 
 ## Driver Improvements
 
 - (drivers) AArch Angel implemented initial embedded controller support
+- (drivers) bjorn3 did many graphics infrastructure code refactorings and reduced code duplication
 - (drivers) bjorn3 fixed some code warnings
 
 ## System Improvements
 
+- (sys) Anhad Singh implemented error handling for zero-byte payload on Unix Domain Socket stream
+- (sys) bjorn3 reduced the boot log flickering when scrolling
 - (sys) bjorn3 merged the `redox-daemon` library code into the `base` repository for simplification
+- (sys) bjorn3 reduced the boot drawing and logging code duplication
 - (sys) Wildan Mubarok merged the `redoxerd` daemon into the `base` repository for simplification
+- (sys) Ibuki Omatsu implemented the `unlinkat()` function for system components
 - (sys) Ibuki Omatsu replaced the `unlink` and `rmdir` functions with the `unlinkat` function
 
 ## Relibc Improvements
@@ -73,14 +85,20 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 - (libc) Wildan Mubarok implemented the `clock_getres` function
 - (libc) Wildan Mubarok implemented more locale functions
 - (libc) Wildan Mubarok reimplemented the `strtold()` function from C to Rust
+- (libc) Wildan Mubarok enabled dynamic linking on tests, which reduced the storage usage from around ~900MB to ~5MB
+- (libc) Wildan Mubarok enabled multi-threading on tests
+- (libc) Wildan Mubarok improved the test runner to be almost hang-proof and report hanging tests
 - (libc) Wildan Mubarok fixed the `fstatat()` tests
+- (libc) Wildan Mubarok fixed tests hanging the x86_64 CI jobs by using a timeout
 - (libc) Anhad Singh implemented error handling for missing libraries on dynamic linker to fix a page fault
+- (libc) Anhad Singh fixed the futex wake interruption error handling
 - (libc) Anhad Singh fixed a TLS (Thread Local Storage) overallocation
 - (libc) bjorn3 did a code cleanup on `redox-rt`
 - (libc) auronandace fixed the `memccpy()`, `strlcpy()` and `strlcat()` functions
+- (libc) auronandace improved the imports of some Rust types
 - (libc) auronandace did a code cleanup in `timespec_get` and `timespec_getres` functions
-- (libc) auronandace documented the `locale`, `sched`, `sysstat`, `syssocket`, `netdb`, `poll`, `regex`, `grp`, `pthread`, `stdio`, `wchar`, `signal`, `float`, `fenv`, `setjmp`, `glob`
-- (libc) auronandace improved the `monetary` function documentation
+- (libc) auronandace documented the `locale`, `sched`, `sysstat`, `syssocket`, `netdb`, `poll`, `regex`, `grp`, `pthread`, `stdio`, `wchar`, `signal`, `float`, `fenv`, `setjmp` and `glob` functions
+- (libc) auronandace improved the documentation of some functions
 - (libc) auronandace did a code documentation cleanup
 
 ## Networking Improvements
@@ -103,6 +121,8 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 - (test) Wildan Mubarok created a Docker container for ARM64 and i586 testing on Redoxer
 - (test) Wildan Mubarok installed GNU Make and GNU Sed on the Redoxer image
 - (test) Wildan Mubarok used RedoxFS resizing to reduce the Redoxer disk setup time
+- (test) Wildan Mubarok created the [os-test-result](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/recipes/tests/os-test-result/recipe.toml) recipe to run the `os-test` tests on Linux (using relibc) and Redox (using Redoxer) to quickly get the results
+- (test) Wildan Mubarok implemented a [quick way](https://gitlab.redox-os.org/redox-os/redox/-/merge_requests/1775) to run one test from `os-test` on Redoxer
 - (test) Josh Williams added more POSIX signals tests
 
 ## Debugging Improvements
@@ -112,17 +132,22 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 ## Build System Improvements
 
 - (build) Wildan Mubarok migrated the GCC prefix bootstrap to the Cookbook recipe, simplifyng configuration and updates to new GCC versions
-- (build) Wildan Mubarok update the Podman configuration to preserve the `sccache` objects in container rebuilds
+- (build) Wildan Mubarok migrated the statically linked relibc compilation to the Cookbook recipe, avoiding conflicts and simplifyng configuration
+- (build) Wildan Mubarok updated the Podman configuration to preserve the `sccache` objects in container rebuilds
+- (build) Wildan Mubarok updated the `make c.relibc` and `make r.relibc` commands to also clean the relibc static objects and rebuild them to fix breaking changes on statically linked recipes
 - (build) Wildan Mubarok implemented the `make repo_clean` (clean all recipe binaries) and `make fetch_clean` (clean all recipe binaries and sources) commands as an alternative to `make c.--all` and `make u.--all`
+- (build) Wildan Mubarok improved the FreeBSD and MacOS support
+- (build) Wildan Mubarok removed `cargo-binstall` in favor of manual downloads for simplicity and avoid possible missing binaries
 - (build) Wildan Mubarok fixed the Cookbook TUI not updating with recipe changes
 - (build) Wildan Mubarok fixed a bug where rustup had repeated downloading
+- (build) Wildan Mubarok fixed a limitation were the RustPython recipe were always recompiling because of patching on Git source
 - (build) Wildan Mubarok did a cleanup in the Makefile configuration
 - (build) Ojus Chugh added a script to mount RedoxFS partitions from dual-boot, as requested by Ribbon
 
 ## CI Improvements
 
-- (ci) Petar Yordanov fixed the book CI
 - (ci) Wildan Mubarok fixed the website CI
+- (ci) Petar Yordanov fixed the book CI
 
 ## Documentation Improvements
 
