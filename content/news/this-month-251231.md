@@ -41,7 +41,7 @@ Wildan Mubarok implemented the support for optional package features, it allows 
 
 The `recipe.toml` syntax is the following:
 
-```
+```toml
 [[optional-packages]]
 name = "cxx"
 dependencies = []
@@ -86,6 +86,7 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 
 - (kernel) Ibuki Omatsu implemented the `syscall6` system call to support system calls with up to 6 arguments
 - (kernel) bjorn3 enabled the compiler builtins for the `memcpy()` functions to improve performance
+- (kernel) bjorn3 fixed `MAP_FIXED` behavior
 - (kernel) Anhad Singh implemented error handling for the `futex_wait` function interruption which had `EINTR` before
 - (kernel) AArch Angel enabled RISC-V MMU marker flags to ease booting on real hardware
 
@@ -97,8 +98,11 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 
 ## System Improvements
 
+- (sys) Anhad Singh implemented error handling in process group killing
+- (sys) Anhad Singh fixed the child process exit behavior
 - (sys) Anhad Singh fixed a bug where `SIGCHLD` was not being sent under some circumstances
 - (sys) Anhad Singh fixed the `sendmsg` zero-length payload behavior
+- (sys) bjorn3 fixed a possible file descriptor leak to init
 - (sys) bjorn3 reduced the boot log flickering when scrolling
 - (sys) bjorn3 merged the `redox-daemon` library code into the `base` repository for simplification
 - (sys) bjorn3 reduced the boot drawing and logging code duplication
@@ -115,16 +119,18 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 - (libc) Wildan Mubarok enabled dynamic linking on tests, which reduced the storage usage from around ~900MB to ~5MB
 - (libc) Wildan Mubarok enabled multi-threading on tests
 - (libc) Wildan Mubarok improved the test runner to be almost hang-proof and report hanging tests
-- (libc) Wildan Mubarok fixed the `fstatat()` tests
+- (libc) Wildan Mubarok fixed the `fstatat()` function tests
 - (libc) Wildan Mubarok fixed tests hanging the x86_64 CI jobs by using a timeout
 - (libc) Anhad Singh implemented error handling for missing libraries on dynamic linker to fix a page fault
 - (libc) Anhad Singh fixed a register corruption in POSIX signals
 - (libc) Anhad Singh fixed the futex wake interruption error handling
 - (libc) Anhad Singh fixed a TLS (Thread Local Storage) overallocation
 - (libc) Anhad Singh fixed a bug where the dynamic linker could fail to allocate non-PIE objects at their desired memory locations
-- (libc) bjorn3 did a code cleanup on `redox-rt`
+- (libc) Anahd Singh fixed a hang in the process group killing
+- (libc) Anhad Singh fixed the `fstatat()` function
+- (libc) bjorn3 did a code simplification and cleanup on `redox-rt`
 - (libc) Landon Propes implemented precision modifiers and negative value precision handling
-- (libc) auronandace fixed the `memccpy()`, `strlcpy()` and `strlcat()` functions
+- (libc) auronandace fixed the `memccpy()`, `strlcpy()`, `strlcat()` and `dlfcn()` functions
 - (libc) auronandace improved coding style by making imports more explicit
 - (libc) auronandace did a code cleanup in `timespec_get` and `timespec_getres` functions
 - (libc) auronandace improved the documentation of the `locale`, `sched`, `sysstat`, `syssocket`, `netdb`, `poll`, `regex`, `grp`, `pthread`, `stdio`, `wchar`, `signal`, `float`, `fenv`, `setjmp`, `glob` and other functions
@@ -153,8 +159,8 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 - (test) Wildan Mubarok created a Docker container for ARM64 and i586 testing on Redoxer
 - (test) Wildan Mubarok installed GNU Make and GNU Sed on the Redoxer image
 - (test) Wildan Mubarok used RedoxFS resizing to reduce the Redoxer disk setup time
-- (test) Wildan Mubarok created the [os-test-result](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/recipes/tests/os-test-result/recipe.toml) recipe to run the `os-test` tests on Linux (using relibc) and Redox (using Redoxer) to quickly get the results
-- (test) Wildan Mubarok implemented a [quick way](https://gitlab.redox-os.org/redox-os/redox/-/merge_requests/1775) to run one test from `os-test` on Redoxer
+- (test) Wildan Mubarok created the [os-test-result](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/recipes/tests/os-test-result/recipe.toml) recipe to run the `os-test` tests on Linux using relibc (`make r.host:os-test-result` command) and Redox using Redoxer (`make r.os-test-result` command) to quickly get the results
+- (test) Wildan Mubarok implemented a [quick way](https://gitlab.redox-os.org/redox-os/redox/-/merge_requests/1775) to run each test from `os-test` on Redoxer
 - (test) Josh Williams added more POSIX signals tests
 
 ## Debugging Improvements
@@ -177,9 +183,11 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 - (build) Wildan Mubarok fixed a bug where the Cookbook TUI compilation couldn't be stopped due to keyboard key clobbering
 - (build) Wildan Mubarok fixed a bug where rustup had repeated downloading
 - (build) Wildan Mubarok fixed a limitation were the RustPython recipe were always recompiling because of patching on Git source
+- (build) Wildan Mubarok fixed Git shallow clone for recipes using tags, pinned commit hashes or when their branch is changed
 - (build) Wildan Mubarok simplified the Cookbook code
 - (build) Wildan Mubarok did a cleanup in the Makefile configuration
 - (build) Ojus Chugh added a script to mount RedoxFS partitions from dual-boot, as requested by Ribbon
+- (build) Ribbon reduced the source code download size of some heavy recipes
 
 ## CI Improvements
 
