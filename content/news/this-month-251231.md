@@ -71,11 +71,16 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 
 - (libc) Josh Megnauth implemented the `timespect_get()` and `timespec_getres()` functions
 - (libc) Wildan Mubarok implemented the `clock_getres` function
+- (libc) Wildan Mubarok implemented more locale functions
+- (libc) Wildan Mubarok reimplemented the `strtold()` function from C to Rust
+- (libc) Wildan Mubarok fixed the `fstatat()` tests
 - (libc) Anhad Singh implemented error handling for missing libraries on dynamic linker to fix a page fault
+- (libc) Anhad Singh fixed a TLS (Thread Local Storage) overallocation
 - (libc) bjorn3 did a code cleanup on `redox-rt`
 - (libc) auronandace fixed the `memccpy()`, `strlcpy()` and `strlcat()` functions
 - (libc) auronandace did a code cleanup in `timespec_get` and `timespec_getres` functions
-- (libc) auronandace improved the code documentation of the `locale`, `sched`, `sysstat`, `syssocket`, `netdb`, `poll`, `regex`, `grp`, `pthread`, `stdio`, `wchar`, `signal`, `float`, `fenv`
+- (libc) auronandace documented the `locale`, `sched`, `sysstat`, `syssocket`, `netdb`, `poll`, `regex`, `grp`, `pthread`, `stdio`, `wchar`, `signal`, `float`, `fenv`, `setjmp`, `glob`
+- (libc) auronandace improved the `monetary` function documentation
 - (libc) auronandace did a code documentation cleanup
 
 ## Networking Improvements
@@ -90,12 +95,14 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 
 - (programs) Jeremy Soller fixed `PATH_SEPARATOR` on GCC
 - (programs) Wildan Mubarok fixed the LLVM benchmark tools compilation
+- (programs) Wildan Mubarok fixed Neovim compilation
 - (programs) bjorn3 fixed `liburcu`
 
 ## Testing Improvements
 
 - (test) Wildan Mubarok created a Docker container for ARM64 and i586 testing on Redoxer
 - (test) Wildan Mubarok installed GNU Make and GNU Sed on the Redoxer image
+- (test) Wildan Mubarok used RedoxFS resizing to reduce the Redoxer disk setup time
 - (test) Josh Williams added more POSIX signals tests
 
 ## Debugging Improvements
@@ -104,9 +111,11 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 
 ## Build System Improvements
 
+- (build) Wildan Mubarok migrated the GCC prefix bootstrap to the Cookbook recipe, simplifyng configuration and updates to new GCC versions
 - (build) Wildan Mubarok update the Podman configuration to preserve the `sccache` objects in container rebuilds
 - (build) Wildan Mubarok implemented the `make repo_clean` (clean all recipe binaries) and `make fetch_clean` (clean all recipe binaries and sources) commands as an alternative to `make c.--all` and `make u.--all`
 - (build) Wildan Mubarok fixed the Cookbook TUI not updating with recipe changes
+- (build) Wildan Mubarok fixed a bug where rustup had repeated downloading
 - (build) Wildan Mubarok did a cleanup in the Makefile configuration
 - (build) Ojus Chugh added a script to mount RedoxFS partitions from dual-boot, as requested by Ribbon
 
