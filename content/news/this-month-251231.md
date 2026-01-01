@@ -25,7 +25,7 @@ It's probably the first Intel GPU driver written in Rust.
 
 ## Linux DRM On Redox OS!
 
-Jeremy Soller and bjorn3 implemented the ioctls from the Linux DRM API to ease software porting and graphics drivers usage.
+Jeremy Soller and bjorn3 started to implement some basic read-only APIs from Linux DRM to ease software porting and graphics drivers usage.
 
 ## Dynamic Linking On ARM64!
 
@@ -62,16 +62,18 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 - (kernel) Ibuki Omatsu implemented the `syscall6` system call to support system calls with up to 6 arguments
 - (kernel) bjorn3 enabled the compiler builtins for the `memcpy()` functions to improve performance
 - (kernel) Anhad Singh implemented error handling for the `futex_wait` function interruption which had `EINTR` before
+- (kernel) AArch Angel enabled RISC-V MMU marker flags to ease booting on real hardware
 
 ## Driver Improvements
 
-- (drivers) AArch Angel implemented initial embedded controller support
+- (drivers) AArch Angel implemented initial ACPI embedded controller support
 - (drivers) bjorn3 did many graphics infrastructure code refactorings and reduced code duplication
 - (drivers) bjorn3 fixed some code warnings
 
 ## System Improvements
 
-- (sys) Anhad Singh implemented error handling for zero-byte payload on Unix Domain Socket stream
+- (sys) Anhad Singh fixed a bug where `SIGCHLD` was not being sent under some circumstances
+- (sys) Anhad Singh fixed the `sendmsg` zero-length payload behavior
 - (sys) bjorn3 reduced the boot log flickering when scrolling
 - (sys) bjorn3 merged the `redox-daemon` library code into the `base` repository for simplification
 - (sys) bjorn3 reduced the boot drawing and logging code duplication
@@ -91,15 +93,16 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 - (libc) Wildan Mubarok fixed the `fstatat()` tests
 - (libc) Wildan Mubarok fixed tests hanging the x86_64 CI jobs by using a timeout
 - (libc) Anhad Singh implemented error handling for missing libraries on dynamic linker to fix a page fault
+- (libc) Anhad Singh fixed a register corruption in POSIX signals
 - (libc) Anhad Singh fixed the futex wake interruption error handling
 - (libc) Anhad Singh fixed a TLS (Thread Local Storage) overallocation
+- (libc) Anhad Singh fixed a bug where the dynamic linker could fail to allocate non-PIE objects at their desired memory locations
 - (libc) bjorn3 did a code cleanup on `redox-rt`
 - (libc) auronandace fixed the `memccpy()`, `strlcpy()` and `strlcat()` functions
-- (libc) auronandace improved the imports of some Rust types
+- (libc) auronandace improved coding style by making imports more explicit
 - (libc) auronandace did a code cleanup in `timespec_get` and `timespec_getres` functions
-- (libc) auronandace documented the `locale`, `sched`, `sysstat`, `syssocket`, `netdb`, `poll`, `regex`, `grp`, `pthread`, `stdio`, `wchar`, `signal`, `float`, `fenv`, `setjmp` and `glob` functions
-- (libc) auronandace improved the documentation of some functions
-- (libc) auronandace did a code documentation cleanup
+- (libc) auronandace improved the documentation of the `locale`, `sched`, `sysstat`, `syssocket`, `netdb`, `poll`, `regex`, `grp`, `pthread`, `stdio`, `wchar`, `signal`, `float`, `fenv`, `setjmp`, `glob` and other functions
+- (libc) auronandace did a documentation cleanup
 
 ## Networking Improvements
 
@@ -114,6 +117,7 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 - (programs) Jeremy Soller fixed `PATH_SEPARATOR` on GCC
 - (programs) Wildan Mubarok fixed the LLVM benchmark tools compilation
 - (programs) Wildan Mubarok fixed Neovim compilation
+- (programs) Wildan Mubarok fixed GNU Make recompilation
 - (programs) bjorn3 fixed `liburcu`
 
 ## Testing Improvements
@@ -139,6 +143,7 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 - (build) Wildan Mubarok improved the FreeBSD and MacOS support
 - (build) Wildan Mubarok removed `cargo-binstall` in favor of manual downloads for simplicity and avoid possible missing binaries
 - (build) Wildan Mubarok fixed the Cookbook TUI not updating with recipe changes
+- (build) Wildan Mubarok fixed the `recipe = "binary"` configuration being ignore in the Cookbook TUI
 - (build) Wildan Mubarok fixed a bug where rustup had repeated downloading
 - (build) Wildan Mubarok fixed a limitation were the RustPython recipe were always recompiling because of patching on Git source
 - (build) Wildan Mubarok did a cleanup in the Makefile configuration
