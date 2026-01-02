@@ -92,7 +92,7 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 - (kernel) bjorn3 enabled the compiler builtins for the `memcpy` functions to improve performance
 - (kernel) bjorn3 fixed `MAP_FIXED` behavior
 - (kernel) Anhad Singh implemented error handling for the `futex_wait` function interruption which had `EINTR` before
-- (kernel) Anhad Singh fixed a context switch race condition and deadlock
+- (kernel) Anhad Singh fixed a thread context race condition
 - (kernel) AArch Angel enabled RISC-V MMU marker flags to ease booting on real hardware
 
 ## Driver Improvements
@@ -119,10 +119,11 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 
 ## Relibc Improvements
 
-- (libc) Jeremy Soller implemented the `tcgetwinsize`, `tcgetsid`, `locale_t`, `fwscanf`, `vfwscanf` functions
+- (libc) Jeremy Soller implemented the `tcgetwinsize`, `tcgetsid`, `fwscanf`, and `vfwscanf` functions
 - (libc) Jeremy Soller implemented the `fexecve` function for Linux
 - (libc) Jeremy Soller implemented `_Fork` (fork without `pthread_atfork` hooks)
 - (libc) Jeremy Soller implemented POSIX limits
+- (libc) Jeremy Soller did some POSIX compatibility fixes
 - (libc) Jeremy Soller fixed the `tcsetwinsize` function
 - (libc) Jeremy Soller fixed `chown` on Linux
 - (libc) Josh Megnauth implemented the `timespec_get` and `timespec_getres` functions
@@ -141,12 +142,14 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 - (libc) Anhad Singh fixed a bug where the dynamic linker could fail to allocate non-PIE objects at their desired memory locations
 - (libc) Anahd Singh fixed a hang in the process group killing
 - (libc) Anhad Singh fixed the `fstatat` function
+- (libc) Anhad Singh fixed ARM64 compilation for Linux
+- (libc) Bendeguz Pisch fixed the `getopt_long` function
 - (libc) bjorn3 did a code simplification and cleanup on `redox-rt`
 - (libc) Landon Propes implemented precision modifiers and negative value precision handling
 - (libc) auronandace fixed the `memccpy`, `strlcpy`, `strlcat` and `dlfcn` functions
 - (libc) auronandace improved coding style by making imports more explicit
 - (libc) auronandace did a code cleanup in `timespec_get` and `timespec_getres` functions
-- (libc) auronandace improved the documentation of the `locale`, `sched`, `sysstat`, `syssocket`, `netdb`, `poll`, `regex`, `grp`, `pthread`, `stdio`, `wchar`, `signal`, `float`, `fenv`, `setjmp`, `glob` and other functions
+- (libc) auronandace improved the documentation of the `locale`, `sched`, `sysstat`, `syssocket`, `netdb`, `poll`, `regex`, `grp`, `pthread`, `stdio`, `wchar`, `signal`, `float`, `fenv`, `setjmp`, `glob`, and other functions
 - (libc) auronandace did a documentation cleanup
 
 ## RedoxFS Improvements
