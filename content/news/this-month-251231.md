@@ -23,13 +23,9 @@ It's probably the first Intel GPU driver written in Rust.
 
 (This shouldn't be confused with video drivers for BIOS VESA and UEFI GOP, which are necessary to show any video after bootloader kernel bootstraping in a personal computer and are supported by Redox for years)
 
+- Intel GPU driver running in a System76 Galago Pro with an external monitor
+
 <img src="/img/hardware/intel-graphics.jpg" class="img-responsive"/>
-
-## RISC-V UART Serial Input On Redox
-
-AArch Angel fixed the [BeagleBoard BeagleV-Fire](https://www.beagleboard.org/boards/beaglev-fire) UART serial input on Redox.
-
-<img src="/img/hardware/serial-input-riscv.jpg" class="img-responsive"/>
 
 ## Linux DRM On Redox OS!
 
@@ -129,7 +125,7 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 - (libc) Jeremy Soller implemented POSIX limits
 - (libc) Jeremy Soller fixed the `tcsetwinsize` function
 - (libc) Jeremy Soller fixed `chown` on Linux
-- (libc) Josh Megnauth implemented the `timespect_get` and `timespec_getres` functions
+- (libc) Josh Megnauth implemented the `timespec_get` and `timespec_getres` functions
 - (libc) Wildan Mubarok implemented the `clock_getres` function
 - (libc) Wildan Mubarok implemented more locale functions
 - (libc) Wildan Mubarok reimplemented the `strtold` function from C to Rust
@@ -153,10 +149,6 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 - (libc) auronandace improved the documentation of the `locale`, `sched`, `sysstat`, `syssocket`, `netdb`, `poll`, `regex`, `grp`, `pthread`, `stdio`, `wchar`, `signal`, `float`, `fenv`, `setjmp`, `glob` and other functions
 - (libc) auronandace did a documentation cleanup
 
-## Networking Improvements
-
-- (net) 
-
 ## RedoxFS Improvements
 
 - (redoxfs) Josh Megnauth implemented `RENAME_NO_REPLACE`
@@ -165,7 +157,7 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 
 - (programs) Jeremy Soller fixed `PATH_SEPARATOR` on GCC
 - (programs) Wildan Mubarok reduced the Rust compiler compilation time significantly
-- (programs) Wildan Mubarok updated Mesa3D to use LLVM 21
+- (programs) Wildan Mubarok updated Mesa3D to use LLVM 21 which improves LLVMPipe performance
 - (programs) Wildan Mubarok fixed the LLVM benchmark tools compilation
 - (programs) Wildan Mubarok fixed Neovim compilation
 - (programs) Wildan Mubarok fixed GNU Make recompilation
