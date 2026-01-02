@@ -17,7 +17,7 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## First GPU Driver!
 
-Jeremy Soller created the first GPU driver for Intel Tiger Lake and Kaby Lake integrated GPUs after reading massive documentation, currently the driver only support [mode setting](https://en.wikipedia.org/wiki/Mode_setting)
+Jeremy Soller created the first GPU driver for Intel Tiger Lake and Kaby Lake integrated GPUs after reading massive documentation, currently the driver only supports [mode setting](https://en.wikipedia.org/wiki/Mode_setting)
 
 It's probably the first Intel GPU driver written in Rust.
 
@@ -33,7 +33,7 @@ Jeremy Soller and bjorn3 started to implement some basic read-only APIs from Lin
 
 ## Dynamic Linking On ARM64!
 
-Anhad Singh and Wildan Mubarok implemented ARM64 support on dynamic linker and Cookbook which reduces memory usage, increase storage space and allow the ARM64 programs to scale with less effort.
+Anhad Singh and Wildan Mubarok implemented ARM64 support in the dynamic linker and Cookbook which reduces memory usage, increase storage space and allow the ARM64 programs to scale with less effort.
 
 ## End Of Scheme Packet Protocol Migration
 
@@ -41,7 +41,7 @@ bjorn3 and Ibuki Omatsu finished the system components and drivers migration to 
 
 ## Optional Package Features
 
-Wildan Mubarok implemented the support for optional package features, it allows the same package configuration to be customized and built into multiple compilation options.
+Wildan Mubarok implemented the support for optional package features which allows the same package configuration to be customized and built into multiple compilation options.
 
 The `recipe.toml` syntax is the following:
 
@@ -82,7 +82,7 @@ He also improved Cookbook before to prepare for this, like a log file for each r
 
 ## Redox OS Trademark
 
-The board of directors adopted a trademark for the "Redox OS" name which protect our name from abuse and misinformation, it was inspired by the COSMIC Desktop trademark policy.
+The board of directors adopted a trademark for the "Redox OS" name which protects our project name from abuse and misinformation. It was inspired by the COSMIC Desktop trademark policy.
 
 You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/TRADEMARK.md?ref_type=heads) link.
 
@@ -144,12 +144,12 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 - (libc) Anhad Singh fixed the `fstatat` function
 - (libc) Anhad Singh fixed ARM64 compilation for Linux
 - (libc) Bendeguz Pisch fixed the `getopt_long` function
-- (libc) bjorn3 did a code simplification and cleanup on `redox-rt`
+- (libc) bjorn3 did some code simplification and cleanup on `redox-rt`
 - (libc) Landon Propes implemented precision modifiers and negative value precision handling
 - (libc) auronandace fixed the `memccpy`, `strlcpy`, `strlcat` and `dlfcn` functions
 - (libc) auronandace improved coding style by making imports more explicit
-- (libc) auronandace did a code cleanup in `timespec_get` and `timespec_getres` functions
-- (libc) auronandace improved the documentation of the `locale`, `sched`, `sysstat`, `syssocket`, `netdb`, `poll`, `regex`, `grp`, `pthread`, `stdio`, `wchar`, `signal`, `float`, `fenv`, `setjmp`, `glob`, and other functions
+- (libc) auronandace did some code cleanup in `timespec_get` and `timespec_getres` functions
+- (libc) auronandace improved the documentation of the `locale`, `sched`, `sysstat`, `syssocket`, `netdb`, `poll`, `regex`, `grp`, `pthread`, `stdio`, `wchar`, `signal`, `float`, `fenv`, `setjmp`, `glob`, and other headers
 - (libc) auronandace did a documentation cleanup
 
 ## RedoxFS Improvements
@@ -190,7 +190,7 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 - (build) Wildan Mubarok fixed the `recipe = "binary"` configuration being ignore in the Cookbook TUI
 - (build) Wildan Mubarok fixed a bug where the Cookbook TUI compilation couldn't be stopped due to keyboard key clobbering
 - (build) Wildan Mubarok fixed a bug where rustup had repeated downloading
-- (build) Wildan Mubarok fixed a limitation were the RustPython recipe were always recompiling because of patching on Git source
+- (build) Wildan Mubarok fixed a limitation where the RustPython recipe was always recompiling because of patching on Git source
 - (build) Wildan Mubarok fixed Git shallow clone for recipes using tags, pinned commit hashes or when their branch is changed
 - (build) Wildan Mubarok simplified the Cookbook code
 - (build) Wildan Mubarok did a cleanup in the Makefile configuration
