@@ -150,7 +150,6 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 - (libc) auronandace improved coding style by making imports more explicit
 - (libc) auronandace did some code cleanup in `timespec_get` and `timespec_getres` functions
 - (libc) auronandace improved the documentation of the `locale`, `sched`, `sysstat`, `syssocket`, `netdb`, `poll`, `regex`, `grp`, `pthread`, `stdio`, `wchar`, `signal`, `float`, `fenv`, `setjmp`, `glob`, and other headers
-- (libc) auronandace did a documentation cleanup
 
 ## RedoxFS Improvements
 
