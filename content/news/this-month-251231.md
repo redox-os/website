@@ -27,7 +27,7 @@ It's probably the first Intel GPU driver written in Rust.
 
 <img src="/img/hardware/intel-graphics.jpg" class="img-responsive"/>
 
-## Linux DRM On Redox OS!
+## First steps for Linux DRM support
 
 Jeremy Soller and bjorn3 started to implement some basic read-only APIs from Linux DRM to ease software porting and graphics drivers usage.
 
