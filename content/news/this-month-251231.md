@@ -60,7 +60,7 @@ In this example the primary `gcc13` package was reduced from 892MB to 597MB.
 
 The optional feature packages can be installed in the Redox image by using a different syntax with quotation marks for TOML correctness, for example: `"gcc13.cxx" = {}`
 
-## Many Correctness Improvemens and More POSIX Conformance
+## Many Correctness Improvements and More POSIX Conformance
 
 Multiple contributors helped to fix the `os-test` tests and system bugs, which made many tests pass which improved the Redox OS score in the [os-test list](https://sortix.org/os-test/#results)
 
@@ -131,7 +131,6 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 - (libc) Wildan Mubarok implemented more locale functions
 - (libc) Wildan Mubarok reimplemented the `strtold` function from C to Rust
 - (libc) Wildan Mubarok enabled dynamic linking on tests, which reduced the storage usage from around ~900MB to ~5MB
-- (libc) Wildan Mubarok enabled multi-threading on tests
 - (libc) Wildan Mubarok improved the test runner to be almost hang-proof and report hanging tests
 - (libc) Wildan Mubarok fixed the `fstatat` function tests
 - (libc) Wildan Mubarok fixed tests hanging the x86_64 CI jobs by using a timeout
@@ -171,12 +170,13 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 - (test) Wildan Mubarok installed GNU Make and GNU Sed on the Redoxer image
 - (test) Wildan Mubarok used RedoxFS resizing to reduce the Redoxer disk setup time
 - (test) Wildan Mubarok created the [os-test-result](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/recipes/tests/os-test-result/recipe.toml) recipe to run the `os-test` tests on Linux using relibc (`make r.host:os-test-result` command) and Redox using Redoxer (`make r.os-test-result` command) to quickly get the results
-- (test) Wildan Mubarok implemented a [quick way](https://gitlab.redox-os.org/redox-os/redox/-/merge_requests/1775) to run each test from `os-test` on Redoxer
+- (test) Wildan Mubarok implemented a quick way to run each test from [`os-test`](https://gitlab.redox-os.org/redox-os/redox/-/merge_requests/1775) and [relibc](https://gitlab.redox-os.org/redox-os/relibc/-/merge_requests/841) on Redoxer
 - (test) Josh Williams added more POSIX signals tests
 
 ## Build System Improvements
 
-- (build) Wildan Mubarok migrated the GCC prefix bootstrap to the Cookbook recipe, simplifyng configuration and updates to new GCC versions
+- (build) Wildan Mubarok added an option to allow installing Rust pre-compiled prefix from rustup (upstream Rust binaries) using the `PREFIX_USE_UPSTREAM_RUST_COMPILER` environment variable
+- (build) Wildan Mubarok migrated the GCC prefix bootstrap to the Cookbook recipe, simplifying configuration and updates to new GCC versions
 - (build) Wildan Mubarok migrated the statically linked relibc compilation to the Cookbook recipe, avoiding conflicts and simplifyng configuration
 - (build) Wildan Mubarok updated the Podman configuration to preserve the `sccache` objects in container rebuilds
 - (build) Wildan Mubarok added tags to `sysroot` to make the recipe dependencies reliable and avoid unnecessary recipe recompilation (`make cr.recipe`) to update dependencies
@@ -188,7 +188,6 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 - (build) Wildan Mubarok fixed the Cookbook TUI not updating after recipe changes when retrying compilation
 - (build) Wildan Mubarok fixed the `recipe = "binary"` configuration being ignore in the Cookbook TUI
 - (build) Wildan Mubarok fixed a bug where the Cookbook TUI compilation couldn't be stopped due to keyboard key clobbering
-- (build) Wildan Mubarok fixed a bug where rustup had repeated downloading
 - (build) Wildan Mubarok fixed a limitation where the RustPython recipe was always recompiling because of patching on Git source
 - (build) Wildan Mubarok fixed Git shallow clone for recipes using tags, pinned commit hashes or when their branch is changed
 - (build) Wildan Mubarok simplified the Cookbook code
