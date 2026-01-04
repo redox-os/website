@@ -183,7 +183,9 @@ You can read the trademark policy on [this](https://gitlab.redox-os.org/redox-os
 - (build) Wildan Mubarok updated the `make c.relibc` and `make r.relibc` commands to also clean the relibc static objects and rebuild them to fix breaking changes on statically linked recipes
 - (build) Wildan Mubarok implemented the `make repo_clean` (clean all recipe binaries) and `make fetch_clean` (clean all recipe binaries and sources) commands as an alternative to `make c.--all` and `make u.--all`
 - (build) Wildan Mubarok implemented filesystem support for pre-compiled packages on meta-packages
-- (build) Wildan Mubarok improved the FreeBSD and MacOS support
+- (build) Wildan Mubarok improved the FreeBSD and MacOS build support
+- (build) Wildan Mubarok added an option to customize the GCC path used to build the prefix toolchain
+- (build) Wildan Mubarok added an option to not compile FUSE in the build system installer
 - (build) Wildan Mubarok removed `cargo-binstall` in favor of manual downloads for simplicity and avoid possible missing binaries
 - (build) Wildan Mubarok fixed the Cookbook TUI not updating after recipe changes when retrying compilation
 - (build) Wildan Mubarok fixed the `recipe = "binary"` configuration being ignore in the Cookbook TUI
