@@ -81,7 +81,8 @@ Jeremy Soller and bjorn3 implemented some basic read-only APIs from Linux DRM, t
 
 ## Dynamic Linking On ARM64!
 
-Anhad Singh and Wildan Mubarok implemented ARM64 support in the dynamic linker and Cookbook which reduces memory usage, increase storage space and allow the ARM64 programs to scale with less effort.
+Anhad Singh and Wildan Mubarok implemented ARM64 support in the dynamic linker and Cookbook.
+This reduces memory and storage space requirements, allows ARM64 packages to not require recompilation when changes are made to `relibc`, and simplifies recipes by not requiring static linking configuration.
 
 ## Completion Of Scheme Packet Protocol Migration
 
