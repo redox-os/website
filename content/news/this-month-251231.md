@@ -69,8 +69,6 @@ Currently the driver only supports [mode setting](https://en.wikipedia.org/wiki/
 Jeremy Soller and bjorn3 have begun creating `ioctl` support for hardware-accelerated rendering,
 but no graphics acceleration is supported yet.
 
-It's probably the first Intel GPU driver written in Rust.
-
 (This shouldn't be confused with video drivers for BIOS VESA and UEFI GOP, which we use to show video after bootloader kernel bootstraping, and has been used as the back-end for the Redox desktop for several years.)
 
 - Intel GPU driver running in a System76 Galago Pro with an external monitor
