@@ -147,14 +147,12 @@ while identifying which packages have failed to build and need to be fixed.
 Building a recipe now results in an individual log file, to identify the cause of the error.
 And Wildan has created a dashboard to help maintainers identify which packages and images are out of date.
 
-
-
 ## Kernel Improvements
 
 - (kernel) Ibuki Omatsu implemented the `syscall6` system call to support system calls with up to 6 arguments, as part of the Capability-based Security work but with more use cases.
 - (kernel) bjorn3 enabled the compiler builtins for the `memcpy` functions to improve performance
 - (kernel) bjorn3 fixed `MAP_FIXED` behavior
-- (kernel) Anhad Singh fixed a thread context race condition
+- (kernel) Anhad Singh fixed a process hanging race condition when a context switch would happen between a thread marking itself blocked and registering for wake-up
 - (kernel) AArch Angel enabled RISC-V MMU marker flags to ease booting on real hardware
 
 ## Driver Improvements
@@ -200,7 +198,7 @@ which makes the whole system up-to-date with latest scheme API improvements and 
 - (libc) Anhad Singh implemented error handling for missing libraries on dynamic linker to fix a page fault
 - (libc) Anhad Singh fixed a register corruption in POSIX signals
 - (libc) Anhad Singh fixed the futex wake interruption error handling
-- (libc) Anhad Singh implemented restart-on-interrupt for `futex_wait` to fix a hang, which previously returned `EINTR`
+- (libc) Anhad Singh fixed `futex_wait` by adding a restart on `EINTR` instead of treating it as a hard error
 - (libc) Anhad Singh fixed TLS (Thread Local Storage) overallocation
 - (libc) Anhad Singh fixed a bug where the dynamic linker could fail to allocate non-PIE objects at their desired memory locations
 - (libc) Anahd Singh fixed a hang in the process group killing
