@@ -25,8 +25,8 @@ url = "home"
 <section class="hero hero-2">
   <div class="hero-body">
     <p class="pitch">
-      <b>Redox OS<a style="color: inherit;" href="https://gitlab.redox-os.org/redox-os/redox/-/blob/master/TRADEMARK.md"><sup>TM</sup></a></b> is a complete <a style="color: inherit;" href="https://en.wikipedia.org/wiki/Unix-like"><b>Unix-like</b></a>
-      microkernel-based operating system written in <a style="color: inherit;"
+      <b>Redox OS<a href="https://gitlab.redox-os.org/redox-os/redox/-/blob/master/TRADEMARK.md"><sup>TM</sup></a></b> is a complete <a href="https://en.wikipedia.org/wiki/Unix-like"><b>Unix-like</b></a>
+      microkernel-based operating system written in <a
         href="https://www.rust-lang.org/"><b>Rust</b></a>, with a focus on security, reliability and safety.
       Offering source compatibility and a full set of programs, Redox is intended to be a complete
       alternative to Linux and BSD, in the cloud and on the desktop.

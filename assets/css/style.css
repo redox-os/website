@@ -18,7 +18,10 @@ a:focus {
 }
 
 .content a,
-.features a {
+.features a,
+.hero a:not(.btn), 
+a.social:hover,
+footer a:hover {
 	color: #428bca;
 }
 
@@ -56,7 +59,10 @@ code {
 	}
 
 	.content a,
-	.features a {
+	.features a,
+	.hero a:not(.btn),
+	a.social:hover,
+	footer a:hover {
 		color: #5fafff;
 	}
 }
@@ -202,11 +208,6 @@ p.pitch {
 	}
 }
 
-p.pitch a {
-	font-size: 80%;
-}
-
-
 .btn {
 	display: inline-block;
 	padding: 6px 12px;
@@ -226,7 +227,7 @@ p.pitch a {
 }
 
 .btn-primary {
-	color: #fff;
+	color: #fff !important;
 	background-color: #428bca;
 	border-color: #357ebd;
 }
@@ -394,8 +395,14 @@ footer {
 	/* half to accomodate p tag margin */
 }
 
+#footer-logo img {
+	max-width: 80vw;
+	width: 100%;
+}
+
 footer .socials {
-	max-width: 20em;
+	max-width: 60vw;
+	width: 100%;
 }
 
 .language-option {
