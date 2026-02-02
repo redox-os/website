@@ -59,7 +59,7 @@ Wildan Mubarok implemented a boot environment text editor in the bootloader to i
 
 ## Kernel Improvements
 
-- (kernel) 
+- (kernel) Anhad Singh fixed the `mremap` mapping size behavior which was causing a panic when Cargo was running
 
 ## Driver Improvements
 
@@ -71,7 +71,12 @@ Wildan Mubarok implemented a boot environment text editor in the bootloader to i
 
 ## Relibc Improvements
 
-- (libc) 
+- (libc) Anhad Singh fixed the `memcmp()` function alignment
+- (libc) Wildan Mubarok implemented `malloc_usable_size()` function to allow efficient pointer mmeory allocation and improve `malloc` leaks debugging
+- (libc) Wildan Mubarok added tests for the `putc_unlocked()` function
+- (libc) Wildan Mubarok improved single test execution
+- (libc) Wildan Mubarok documented the `check.sh` script usage in the README
+- (libc) auronandace did some code cleanups
 
 ## Networking Improvements
 
@@ -85,13 +90,23 @@ Wildan Mubarok implemented a boot environment text editor in the bootloader to i
 
 - (programs) 
 
+## Ion Improvements
+
+- (ion) David Campbell fixed code warnings
+
+## Testing Improvements
+
+- (tests) Josh Williams fixed some POSIX signals tests
+
 ## Build System Improvements
 
-- (build) 
+- (build) Wildan Mubarok enabled `sccache` build status log to improve recipe debugging
 
 ## Documentation Improvements
 
-- (doc) 
+- (doc) Ribbon documented the [hardware and software requirements] for Redox development in the Developer FAQ
+- (doc) Ribbon improved the book summary order to better separate pages for end-users and testers/developers
+- (doc) Wildan Mubarok did many improvements and fixes to the Advanced Build, Advanced Podman Build, Native Build and Configuration Settings pages
 
 ## How To Test The Changes
 
