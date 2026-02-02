@@ -49,6 +49,12 @@ Wildan Mubarok successfully [hosted a Redox VM](https://gist.github.com/willnode
 
 <img src="/img/screenshot/vultr.png" class="img-responsive"/>
 
+## Redox on Web Browser!
+
+Our [v86 web demo] finally reached acceptable performance in terminal mode!
+
+Wildan Mubarok also improved it to increase performance and UI.
+
 ## Bootloader Environment Editor
 
 Wildan Mubarok implemented a boot environment text editor in the bootloader to insert environment variables and options to change the boot environment.
@@ -57,38 +63,59 @@ Wildan Mubarok implemented a boot environment text editor in the bootloader to i
 
 <img src="/img/screenshot/bootloader-editor.png" class="img-responsive"/>
 
+## Login Manager Options
+
+Wildan Mubarok implemented a power menu (reboot/shutdown) and a keyboard layout menu in the Orbital login manager (orblogin).
+
+## Cargo Workspace Unification
+
+Jeremy Soller added all system components and drivers to a Cargo workspace to unify the version management of libraries in one place, which allow faster development and less breakage.
+
 ## Kernel Improvements
 
 - (kernel) Anhad Singh fixed the `mremap` mapping size behavior which was causing a panic when Cargo was running
+- (kernel) Pascal Reich improved the code documentation
 
 ## Driver Improvements
 
-- (drivers) 
+- (drivers) Wildan Mubarok moved the keyboard layout handling from the PS/2 driver to the `inputd` daemon to share code with the USB HID driver
+- (drivers) Wildan Mubarok improved the PS/2 driver init logging
 
 ## System Improvements
 
-- (sys) 
+- (sys) Wildan Mubarok added a temporary workaround to fix `EBADF` in the `setsockopt()` function
 
 ## Relibc Improvements
 
+- (libc) Jeremy Soller implemented signal mask handling in the `epoll_pwait()` function
 - (libc) Anhad Singh fixed the `memcmp()` function alignment
-- (libc) Wildan Mubarok implemented `malloc_usable_size()` function to allow efficient pointer mmeory allocation and improve `malloc` leaks debugging
-- (libc) Wildan Mubarok added tests for the `putc_unlocked()` function
+- (libc) Wildan Mubarok implemented `malloc_usable_size()` function to allow efficient pointer memory allocation and improve `malloc` leaks debugging
+- (libc) Wildan Mubarok added tests for the `sys_socket()` and `putc_unlocked()` functions
 - (libc) Wildan Mubarok improved single test execution
 - (libc) Wildan Mubarok documented the `check.sh` script usage in the README
+- (libc) Josh Megnauth added more tests for the `open()` function
+- (libc) Landon Propes implemented the `mkfifoat()`, `mkdirat()`, `posix_close()`, `strxfrm_l()`, `strcoll_l()`, and `strerror_l()` functions
+- (libc) Landon Propes fixed some namespace pollution
+- (libc) Pascal Reich implemented mathematical constants
 - (libc) auronandace did some code cleanups
 
 ## Networking Improvements
 
-- (net) 
+- (net) Akshit Gaur implemented UDP Packet Filtering
+- (net) Wildan Mubarok fixed UDP resolving connection
 
 ## RedoxFS Improvements
 
 - (redoxfs) 
 
+## Packaging Improvements
+
+- (pkg) Mustafa Oz expanded the package manager library and tool error handling
+
 ## Programs
 
-- (programs) 
+- (programs) Petr Hrdina confirmed that the [hf] recipe is working
+- (programs) Benton60 confirmed that the [pls] recipe is working
 
 ## Ion Improvements
 
@@ -96,11 +123,13 @@ Wildan Mubarok implemented a boot environment text editor in the bootloader to i
 
 ## Testing Improvements
 
-- (tests) Josh Williams fixed some POSIX signals tests
+- (tests) Josh Williams finished the [POSIX signals test suite](https://gitlab.redox-os.org/redox-os/redox-posix-tests) and fixed some tests
 
 ## Build System Improvements
 
+- (build) Wildan Mubarok improved the recipe push reliability
 - (build) Wildan Mubarok enabled `sccache` build status log to improve recipe debugging
+- (build) Wildan Mubarok renamed the `prefix_clean` target to `static_clean` to avoid confusion
 
 ## Documentation Improvements
 
