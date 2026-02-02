@@ -15,6 +15,48 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## Cargo Project Compilation in Redox!
+
+Anhad Singh successfully applied enough fixes to allow the Cargo project compilation in Redox to work!
+
+This is the third attempt to run the Rust compiler (rustc) and Cargo on Redox, the [first attempt](https://www.redox-os.org/news/gsoc-self-hosting-final/) did many progress but didn't finished due to many work still needed and the [second attempt](https://www.redox-os.org/news/focusing-on-rustc/) fixed the `rustc` compilation but didn't work in Redox yet.
+
+He successfully built GNU nano, [ripgrep](https://github.com/BurntSushi/ripgrep), [cbindgen](https://github.com/mozilla/cbindgen) and [acid](https://gitlab.redox-os.org/redox-os/acid)
+
+- ripgrep compilation in Redox
+
+<img src="/img/screenshot/cargo-ripgrep.png" class="img-responsive"/>
+
+## First Contribution From Redox!
+
+Anhad Singh wrote (using the [COSMIC Edit](https://github.com/pop-os/cosmic-edit) text editor) and pushed the first relibc contribution from the Redox QEMU VM!
+
+- Development in Redox
+
+<img src="/img/screenshot/dev-on-redox.png" class="img-responsive"/>
+
+## Capabilties on Redox!
+
+Ibuki Omatsu successfully implemented the initial capability-based security infrastructure which allows our permission and sandbox system to be much more granular and secure.
+
+It will be extended to other system interfaces in next months.
+
+## Redox on VPS!
+
+Wildan Mubarok successfully [hosted a Redox VM](https://gist.github.com/willnode/468f961602d96bef507e9f672250c7cc) in the [Vultr](https://www.vultr.com/) VPS with some tweaks.
+
+- Redox running in a Vultr VM
+
+<img src="/img/screenshot/vultr.png" class="img-responsive"/>
+
+## Bootloader Environment Editor
+
+Wildan Mubarok implemented a boot environment text editor in the bootloader to insert environment variables and options to change the boot environment.
+
+- Bootloader environment editor with debug environment variables
+
+<img src="/img/screenshot/bootloader-editor.png" class="img-responsive"/>
+
 ## Kernel Improvements
 
 - (kernel) 
