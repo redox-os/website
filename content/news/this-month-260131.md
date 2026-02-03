@@ -71,6 +71,10 @@ Wildan Mubarok implemented a power menu (reboot/shutdown) and a keyboard layout 
 
 Jeremy Soller added all system components and drivers to a Cargo workspace to unify the version management of libraries in one place, which allow faster development and less breakage.
 
+## os-test in FOSDEM 2026
+
+Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedule/event/CMCWY9-os-test_measuring_posix_compliance_on_every_single_os/) at FOSDEM and mentioned Redox, this test suite allowed us to find and fix many bugs (from easy to hard).
+
 ## Kernel Improvements
 
 - (kernel) Anhad Singh fixed the `mremap` mapping size behavior which was causing a panic when Cargo was running
@@ -83,6 +87,7 @@ Jeremy Soller added all system components and drivers to a Cargo workspace to un
 
 ## System Improvements
 
+- (sys) bjorn3 implemented dynamic linking support on `initfs`
 - (sys) Wildan Mubarok added a temporary workaround to fix `EBADF` in the `setsockopt()` function
 
 ## Relibc Improvements
@@ -97,16 +102,23 @@ Jeremy Soller added all system components and drivers to a Cargo workspace to un
 - (libc) Landon Propes implemented the `mkfifoat()`, `mkdirat()`, `posix_close()`, `strxfrm_l()`, `strcoll_l()`, and `strerror_l()` functions
 - (libc) Landon Propes fixed some namespace pollution
 - (libc) Pascal Reich implemented mathematical constants
+- (libc) auronandace fixed some tests
 - (libc) auronandace did some code cleanups
 
 ## Networking Improvements
 
 - (net) Akshit Gaur implemented UDP Packet Filtering
+- (net) Akshit Gaur implemented `GetSockOpt`
 - (net) Wildan Mubarok fixed UDP resolving connection
 
 ## RedoxFS Improvements
 
 - (redoxfs) 
+
+## Orbital Improvements
+
+- (gui) bjorn3 moved the Orbital data to the `/usr/share/ui` directory
+- (gui) bjorn3 simplified Orbital utilities recipe source fetch
 
 ## Packaging Improvements
 
@@ -124,16 +136,18 @@ Jeremy Soller added all system components and drivers to a Cargo workspace to un
 ## Testing Improvements
 
 - (tests) Josh Williams finished the [POSIX signals test suite](https://gitlab.redox-os.org/redox-os/redox-posix-tests) and fixed some tests
+- (tests) Wildan Mubarok updated the `acid` test suite to allow the usage of `cargo test` to run all correctness tests and `cargo bench` to run all stress tests.
 
 ## Build System Improvements
 
 - (build) Wildan Mubarok improved the recipe push reliability
 - (build) Wildan Mubarok enabled `sccache` build status log to improve recipe debugging
 - (build) Wildan Mubarok renamed the `prefix_clean` target to `static_clean` to avoid confusion
+- (build) Ojus Chugh the source dependency propagation in the `REPO_BINARY` environment variable
 
 ## Documentation Improvements
 
-- (doc) Ribbon documented the [hardware and software requirements] for Redox development in the Developer FAQ
+- (doc) Ribbon documented the [hardware and software requirements](https://doc.redox-os.org/book/developer-faq.html#what-is-the-software-and-hardware-requirements-for-development) for Redox development in the Developer FAQ
 - (doc) Ribbon improved the book summary order to better separate pages for end-users and testers/developers
 - (doc) Wildan Mubarok did many improvements and fixes to the Advanced Build, Advanced Podman Build, Native Build and Configuration Settings pages
 
