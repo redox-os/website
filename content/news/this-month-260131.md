@@ -55,6 +55,14 @@ Our [v86 web demo] finally reached acceptable performance in terminal mode!
 
 Wildan Mubarok also improved it to increase performance and UI.
 
+<img src="/img/screenshot/online-demo.png" class="img-responsive"/>
+
+## Proper Keyboard Layout (Map) Management
+
+Wildan Mubarok moved the keyboard layout handling from the PS/2 driver to the `inputd` daemon to share code with the USB HID driver and allow rootless usage.
+
+The `/scheme/ps2` scheme-based configuration was replaced by the `inputd -K <name>` command, where `<name>` is the keyboard layout code.
+
 ## Bootloader Environment Editor
 
 Wildan Mubarok implemented a boot environment text editor in the bootloader to insert environment variables and options to change the boot environment.
@@ -62,6 +70,22 @@ Wildan Mubarok implemented a boot environment text editor in the bootloader to i
 - Bootloader environment editor with debug environment variables
 
 <img src="/img/screenshot/bootloader-editor.png" class="img-responsive"/>
+
+## More Bootloader Debugging Information
+
+Wildan Mubarok implemented the `INIT_LOG_LEVEL` (init logging verbosity) and `DRIVER_LOG_LEVEL` (driver logging verbosity) bootloader environment variables to easily show more information in boot problems like hangs or errors, he implemented the following options:
+
+- `WARN` value: TODO
+- `ERROR` value: TODO
+- `DEBUG` value: TODO
+- `TRACE` value: TODO
+
+You can see an example output below:
+
+```
+2026-01-12T22-27-51.758Z [@ps2d::controller:468 WARN] ps2d: post-test unexpected value: 9C
+2026-01-12T22-27-51.760Z [@ps2d::controller:337 ERROR] ps2d: keyboard failed to reset: 55
+```
 
 ## Login Manager Options
 
@@ -82,12 +106,12 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 ## Kernel Improvements
 
 - (kernel) Anhad Singh fixed the `mremap` mapping size behavior which was causing a panic when Cargo was running
+- (kernel) Anhad Singh fixed futex timeout behavior
 - (kernel) Pascal Reich improved the code documentation
 
 ## Driver Improvements
 
-- (drivers) Wildan Mubarok moved the keyboard layout handling from the PS/2 driver to the `inputd` daemon to share code with the USB HID driver
-- (drivers) Wildan Mubarok improved the PS/2 driver init logging
+- (drivers) Wildan Mubarok exposed error reasons in the PS/2 driver initialization logging to improve debugging and save time
 
 ## System Improvements
 
@@ -100,10 +124,13 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 - (libc) Anhad Singh fixed undefinied symbol index in `TPOFF` which fixed random errors/page faults in `rustc`
 - (libc) Anhad Singh fixed the `memcmp()` function alignment
 - (libc) Anhad Singh fixed the `make all` command not triggering a rebuild when the dynamic linker, `redoxt-rt` and `redox-ioctl` sources changed
+- (libc) Anhad Singh fixed log message colours
 - (libc) Wildan Mubarok implemented `malloc_usable_size()` function to allow efficient pointer memory allocation and improve `malloc` leaks debugging
 - (libc) Wildan Mubarok improved `inet` socket performance using `SYS_CALL`
+- (libc) Wildan Mubarok fixed the `pthread_cond_timedwait()` function futex behavior
 - (libc) Wildan Mubarok fixed an endianess hang in the UDP `accept()` function
 - (libc) Wildan Mubarok fixed the UDP `accept()` function behavior in the `recvfrom()` function
+- (libc) Wildan Mubarok fixed the `putc_unlocked()`,`pthread_cond_clockwait()` , and `pthread_mutex_timedlock()` functions
 - (libc) Wildan Mubarok added tests for the `sys_socket()` and `putc_unlocked()` functions
 - (libc) Wildan Mubarok improved single test execution
 - (libc) Wildan Mubarok documented the `check.sh` script usage in the README
@@ -126,6 +153,9 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 
 ## Orbital Improvements
 
+- (gui) Wildan Mubarok exposed numbad, arrow and media keyboard keys to `orbclient` library
+- (gui) Wildan Mubarok implemented scrolling and numpad lock keys handling in `orbclient` library
+- (gui) Wildan Mubarok improved the wallpaper processing performance 4 times (400%) by caching the first image decoding to a BMP file for fastest CPU performance, in a QEMU benchmark without KVM acceleration he reported the processing time being reduced from almost 10 seconds to around ~350ms (in a hot cache)
 - (gui) bjorn3 did some code cleanups in the `orbclient` library
 - (gui) bjorn3 moved the Orbital data to the `/usr/share/ui` directory
 - (gui) bjorn3 simplified Orbital utilities recipe source fetch
@@ -152,11 +182,15 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 ## Build System Improvements
 
 - (build) Wildan Mubarok added a feature flag in the installer to disable FUSE
+- (build) Wildan Mubarok implemented the `COOKBOOK_CLEAN_BUILD` (clean previous recipe binaries before compilation) and `COOKBOOK_CLEAN_TARGET` (clean previous recipe binaries after compilation) boolean environment variables
+- (build) Wildan Mubarok implemented the `make cook.clean_target` recipe target to clean previous binaries before compilation
 - (build) Wildan Mubarok improved Redoxer to support [compilation with `musl` and compiler customization](https://gitlab.redox-os.org/redox-os/redoxer#host-specific-customizations)
+- (build) Wildan Mubarok added CPU-specific filesystem configurations for Redoxer to allow its image to be updated from the build system
 - (build) Wildan Mubarok improved the recipe push reliability
 - (build) Wildan Mubarok simplified and reduced the filesystem tooling setup time by not compiling Cookbook twice to download their sources
+- (build) Wildan Mubarok reduced the `make rebuild` command processing time
 - (build) Wildan Mubarok enabled `sccache` build status log to say if compilation is using outdated cached library objects and improve debugging
-- (build) Wildan Mubarok renamed the `prefix_clean` target to `static_clean` to avoid confusion
+- (build) Wildan Mubarok moved the `prefix_clean` target relibc logic to the `static_clean` target to avoid confusion between `prefix` and relibc/statically linked recipes cleanup
 - (build) Ojus Chugh the source dependency propagation in the `REPO_BINARY` environment variable
 
 ## Documentation Improvements
