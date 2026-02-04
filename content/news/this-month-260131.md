@@ -73,7 +73,7 @@ Wildan Mubarok implemented a boot environment text editor in the bootloader to i
 
 ## More Bootloader Debugging Information
 
-Wildan Mubarok implemented the `INIT_LOG_LEVEL` (init logging verbosity) and `DRIVER_LOG_LEVEL` (driver logging verbosity) bootloader environment variables to easily show more information in boot problems like hangs or errors, he implemented the following options:
+Wildan Mubarok implemented the `BOOTSTRAP_LOG_LEVEL` (bootstrap and process manager logging verbosity), `INIT_LOG_LEVEL` (init logging verbosity), `DRIVER_LOG_LEVEL` (driver logging verbosity), `DRIVER_*_LOG_LEVEL` (driver-specific logging verbosity), and `RELIBC_LOG_LEVEL` (relibc logging verbosity) bootloader environment variables to easily show more information in boot problems like hangs or errors, he implemented the following options:
 
 - `WARN` value: TODO
 - `ERROR` value: TODO
@@ -138,6 +138,7 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 - (libc) Landon Propes implemented the `mkfifoat()`, `mkdirat()`, `posix_close()`, `strxfrm_l()`, `strcoll_l()`, and `strerror_l()` functions
 - (libc) Landon Propes fixed some namespace pollution
 - (libc) Pascal Reich implemented mathematical constants
+- (libc) Akshit Gaur fixed the `printf()` function floating number format handling
 - (libc) auronandace fixed some tests
 - (libc) auronandace did some code cleanups
 
@@ -166,9 +167,10 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 
 ## Programs
 
-- (programs) Bendeguz Pusch confirmed that [file](https://www.darwinsys.com/file/) and [jq](https://jqlang.org/) are working
-- (programs) Petr Hrdina confirmed that the [hf](https://github.com/sorairolake/hf) recipe is working
-- (programs) Benton60 confirmed that the [pls](https://github.com/pls-rs/pls) recipe is working
+- (app) Wildan Mubarok fixed the OpenSSH session exit
+- (app) Bendeguz Pusch confirmed that [file](https://www.darwinsys.com/file/) and [jq](https://jqlang.org/) are working
+- (app) Petr Hrdina confirmed that the [hf](https://github.com/sorairolake/hf) recipe is working
+- (app) Benton60 confirmed that the [pls](https://github.com/pls-rs/pls) recipe is working
 
 ## Ion Improvements
 
