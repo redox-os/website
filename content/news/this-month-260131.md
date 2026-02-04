@@ -29,7 +29,7 @@ He successfully built GNU nano, [ripgrep](https://github.com/BurntSushi/ripgrep)
 
 ## First Contribution From Redox!
 
-Anhad Singh wrote (using the [COSMIC Edit](https://github.com/pop-os/cosmic-edit) text editor) and pushed the first relibc contribution from the Redox QEMU VM!
+Anhad Singh wrote (using the [COSMIC Edit](https://github.com/pop-os/cosmic-edit) text editor), tested and pushed the [first relibc contribution] from the Redox QEMU VM!
 
 - Development in Redox
 
@@ -71,6 +71,10 @@ Wildan Mubarok implemented a power menu (reboot/shutdown) and a keyboard layout 
 
 Jeremy Soller added all system components and drivers to a Cargo workspace to unify the version management of libraries in one place, which allow faster development and less breakage.
 
+## Redox Capabilities in FOSDEM 2026
+
+Ibuki Omatsu [presented the Capability-based security project](https://fosdem.org/2026/schedule/event/KSK9RB-capability-based-redox-os/) at FOSDEM, thanks a lot for your help and dedication Ibuki!
+
 ## os-test in FOSDEM 2026
 
 Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedule/event/CMCWY9-os-test_measuring_posix_compliance_on_every_single_os/) at FOSDEM and mentioned Redox, this test suite allowed us to find and fix many bugs (from easy to hard).
@@ -93,8 +97,13 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 ## Relibc Improvements
 
 - (libc) Jeremy Soller implemented signal mask handling in the `epoll_pwait()` function
+- (libc) Anhad Singh fixed undefinied symbol index in `TPOFF` which fixed random errors/page faults in `rustc`
 - (libc) Anhad Singh fixed the `memcmp()` function alignment
+- (libc) Anhad Singh fixed the `make all` command not triggering a rebuild when the dynamic linker, `redoxt-rt` and `redox-ioctl` sources changed
 - (libc) Wildan Mubarok implemented `malloc_usable_size()` function to allow efficient pointer memory allocation and improve `malloc` leaks debugging
+- (libc) Wildan Mubarok improved `inet` socket performance using `SYS_CALL`
+- (libc) Wildan Mubarok fixed an endianess hang in the UDP `accept()` function
+- (libc) Wildan Mubarok fixed the UDP `accept()` function behavior in the `recvfrom()` function
 - (libc) Wildan Mubarok added tests for the `sys_socket()` and `putc_unlocked()` functions
 - (libc) Wildan Mubarok improved single test execution
 - (libc) Wildan Mubarok documented the `check.sh` script usage in the README
@@ -109,14 +118,15 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 
 - (net) Akshit Gaur implemented UDP Packet Filtering
 - (net) Akshit Gaur implemented `GetSockOpt`
-- (net) Wildan Mubarok fixed UDP resolving connection
+- (net) Wildan Mubarok fixed UDP `localhost` connection resolving
 
 ## RedoxFS Improvements
 
-- (redoxfs) 
+- (redoxfs) Jeremy Soller delayed the deletion of an unlinked file until all open file descriptors are closed to improve POSIX anonymous file compatibility
 
 ## Orbital Improvements
 
+- (gui) bjorn3 did some code cleanups in the `orbclient` library
 - (gui) bjorn3 moved the Orbital data to the `/usr/share/ui` directory
 - (gui) bjorn3 simplified Orbital utilities recipe source fetch
 
@@ -126,12 +136,13 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 
 ## Programs
 
-- (programs) Petr Hrdina confirmed that the [hf] recipe is working
-- (programs) Benton60 confirmed that the [pls] recipe is working
+- (programs) Bendeguz Pusch confirmed that [file](https://www.darwinsys.com/file/) and [jq](https://jqlang.org/) are working
+- (programs) Petr Hrdina confirmed that the [hf](https://github.com/sorairolake/hf) recipe is working
+- (programs) Benton60 confirmed that the [pls](https://github.com/pls-rs/pls) recipe is working
 
 ## Ion Improvements
 
-- (ion) David Campbell fixed code warnings
+- (ion) David Campbell fixed some code warnings
 
 ## Testing Improvements
 
@@ -140,8 +151,11 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 
 ## Build System Improvements
 
+- (build) Wildan Mubarok added a feature flag in the installer to disable FUSE
+- (build) Wildan Mubarok improved Redoxer to support [compilation with `musl` and compiler customization](https://gitlab.redox-os.org/redox-os/redoxer#host-specific-customizations)
 - (build) Wildan Mubarok improved the recipe push reliability
-- (build) Wildan Mubarok enabled `sccache` build status log to improve recipe debugging
+- (build) Wildan Mubarok simplified and reduced the filesystem tooling setup time by not compiling Cookbook twice to download their sources
+- (build) Wildan Mubarok enabled `sccache` build status log to say if compilation is using outdated cached library objects and improve debugging
 - (build) Wildan Mubarok renamed the `prefix_clean` target to `static_clean` to avoid confusion
 - (build) Ojus Chugh the source dependency propagation in the `REPO_BINARY` environment variable
 
@@ -149,7 +163,10 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 
 - (doc) Ribbon documented the [hardware and software requirements](https://doc.redox-os.org/book/developer-faq.html#what-is-the-software-and-hardware-requirements-for-development) for Redox development in the Developer FAQ
 - (doc) Ribbon improved the book summary order to better separate pages for end-users and testers/developers
-- (doc) Wildan Mubarok did many improvements and fixes to the Advanced Build, Advanced Podman Build, Native Build and Configuration Settings pages
+- (doc) Wildan Mubarok did many improvements and fixes (such as documentation of [new build system filesystem tooling options](https://doc.redox-os.org/book/configuration-settings.html#environment-variables), minimum host system tools and toolchain prefix behavior/new configuration) to the Advanced Build, Advanced Podman Build, Native Build and Configuration Settings pages
+- (doc) Wildan Mubarok documented [how to use the Podman Build without FUSE](https://doc.redox-os.org/book/advanced-podman-build.html#installing-without-fuse) to fix problems
+- (doc) Wildan Mubarok documented [how to customize the C/C++ compiler](https://doc.redox-os.org/book/advanced-build.html#customizing-c-compiler) used in recipes
+- (doc) Wildan Mubarok documented [how to use the upstream Rust binaries](https://doc.redox-os.org/book/advanced-build.html#prefix-rust) to build Redox (experimental)
 
 ## How To Test The Changes
 
