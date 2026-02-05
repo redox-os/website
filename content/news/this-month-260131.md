@@ -29,17 +29,29 @@ He successfully built GNU nano, [ripgrep](https://github.com/BurntSushi/ripgrep)
 
 ## First Contribution From Redox!
 
-Anhad Singh wrote (using the [COSMIC Edit](https://github.com/pop-os/cosmic-edit) text editor), tested and pushed the [first relibc contribution] from the Redox QEMU VM!
+Anhad Singh wrote (using the [COSMIC Edit](https://github.com/pop-os/cosmic-edit) text editor), tested and pushed the [first relibc contribution](https://gitlab.redox-os.org/redox-os/relibc/-/merge_requests/891) from the Redox QEMU VM!
 
 - Development in Redox
 
 <img src="/img/screenshot/dev-on-redox.png" class="img-responsive"/>
 
-## Capabilties on Redox!
+## Capabilities on Redox!
 
 Ibuki Omatsu successfully implemented the initial capability-based security infrastructure which allows our permission and sandbox system to be much more granular and secure.
 
 It will be extended to other system interfaces in next months.
+
+## Proper SSH Support!
+
+Wildan Mubarok fixed the OpenSSH session exit which fixed the remote access that don't need manual exists to workaround a bug where SSH sessions weren't exitting.
+
+Now we can access Redox in QEMU or real hardware without manual intervention!
+
+## Massive Input Latency Reduction
+
+Wildan Mubarok reduced the PS/2 and USB input latency by removing heap allocation in the `rehid` library.
+
+In a QEMU benchmark without KVM acceleration he reported an USB input latency reduction of 100ms to 30ms, a 70% latency reduction.
 
 ## Redox on VPS!
 
@@ -71,7 +83,7 @@ Wildan Mubarok implemented a boot environment text editor in the bootloader to i
 
 <img src="/img/screenshot/bootloader-editor.png" class="img-responsive"/>
 
-## More Bootloader Debugging Information
+## More Boot Debugging Information and Handling
 
 Wildan Mubarok implemented the `BOOTSTRAP_LOG_LEVEL` (bootstrap and process manager logging verbosity), `INIT_LOG_LEVEL` (init logging verbosity), `DRIVER_LOG_LEVEL` (driver logging verbosity), `DRIVER_*_LOG_LEVEL` (driver-specific logging verbosity), and `RELIBC_LOG_LEVEL` (relibc logging verbosity) bootloader environment variables to easily show more information in boot problems like hangs or errors, he implemented the following options:
 
@@ -86,6 +98,8 @@ You can see an example output below:
 2026-01-12T22-27-51.758Z [@ps2d::controller:468 WARN] ps2d: post-test unexpected value: 9C
 2026-01-12T22-27-51.760Z [@ps2d::controller:337 ERROR] ps2d: keyboard failed to reset: 55
 ```
+
+He also implemented the `INIT_SKIP` environment variable to skip process hangs, the syntax is: `INIT_SKIP=executable-name` (commas are supported for multiple executable processes)
 
 ## Login Manager Options
 
@@ -105,6 +119,7 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 
 ## Kernel Improvements
 
+- (kernel) Anhad Singh fixed a context switch deadlock
 - (kernel) Anhad Singh fixed the `mremap` mapping size behavior which was causing a panic when Cargo was running
 - (kernel) Anhad Singh fixed futex timeout behavior
 - (kernel) Pascal Reich improved the code documentation
@@ -121,24 +136,31 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 ## Relibc Improvements
 
 - (libc) Jeremy Soller implemented signal mask handling in the `epoll_pwait()` function
-- (libc) Anhad Singh fixed undefinied symbol index in `TPOFF` which fixed random errors/page faults in `rustc`
+- (libc) 4lDO2 fixed some POSIX signals bugs
+- (libc) Anahd Singh fixed and enabled the dynamic linker allocator
+- (libc) Anhad Singh fixed undefined symbol index in `TPOFF` which fixed random errors/page faults in `rustc`
+- (libc) Anhad Singh fixed some missing `unsafe` declarations
 - (libc) Anhad Singh fixed the `memcmp()` function alignment
-- (libc) Anhad Singh fixed the `make all` command not triggering a rebuild when the dynamic linker, `redoxt-rt` and `redox-ioctl` sources changed
+- (libc) Anhad Singh fixed the `make all` command not triggering a rebuild when the dynamic linker, `redoxt-rt`, and `redox-ioctl` sources changed
 - (libc) Anhad Singh fixed log message colours
 - (libc) Wildan Mubarok implemented `malloc_usable_size()` function to allow efficient pointer memory allocation and improve `malloc` leaks debugging
 - (libc) Wildan Mubarok improved `inet` socket performance using `SYS_CALL`
 - (libc) Wildan Mubarok fixed the `pthread_cond_timedwait()` function futex behavior
 - (libc) Wildan Mubarok fixed an endianess hang in the UDP `accept()` function
 - (libc) Wildan Mubarok fixed the UDP `accept()` function behavior in the `recvfrom()` function
-- (libc) Wildan Mubarok fixed the `putc_unlocked()`,`pthread_cond_clockwait()` , and `pthread_mutex_timedlock()` functions
+- (libc) Wildan Mubarok fixed the `getpeername()`, `putc_unlocked()`, `pthread_cond_clockwait()`, and `pthread_mutex_timedlock()` functions
+- (libc) Wildan Mubarok fixed the pthread `thread_fork` test
 - (libc) Wildan Mubarok added tests for the `sys_socket()` and `putc_unlocked()` functions
 - (libc) Wildan Mubarok improved single test execution
 - (libc) Wildan Mubarok documented the `check.sh` script usage in the README
 - (libc) Josh Megnauth added more tests for the `open()` function
 - (libc) Landon Propes implemented the `mkfifoat()`, `mkdirat()`, `posix_close()`, `strxfrm_l()`, `strcoll_l()`, and `strerror_l()` functions
+- (libc) Landon Propes implemented all locale-based versions of the `ctype` functions
+- (libc) Landon Propes improved the `psiginfo()` function performance by removing memory allocations
 - (libc) Landon Propes fixed some namespace pollution
 - (libc) Pascal Reich implemented mathematical constants
-- (libc) Akshit Gaur fixed the `printf()` function floating number format handling
+- (libc) sourceturner migrated the code of some functions to use the new unsafe Rust syntax which allow safe Rust syntax usage
+- (libc) Akshit Gaur fixed the `%g` number modifier in the `printf()` function
 - (libc) auronandace fixed some tests
 - (libc) auronandace did some code cleanups
 
@@ -167,7 +189,6 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 
 ## Programs
 
-- (app) Wildan Mubarok fixed the OpenSSH session exit
 - (app) Bendeguz Pusch confirmed that [file](https://www.darwinsys.com/file/) and [jq](https://jqlang.org/) are working
 - (app) Petr Hrdina confirmed that the [hf](https://github.com/sorairolake/hf) recipe is working
 - (app) Benton60 confirmed that the [pls](https://github.com/pls-rs/pls) recipe is working
