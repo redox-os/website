@@ -21,7 +21,7 @@ Anhad Singh successfully applied enough fixes to allow Cargo project compilation
 
 This is the third attempt to run the Rust compiler (rustc) and Cargo on Redox, the [first attempt](https://www.redox-os.org/news/gsoc-self-hosting-final/) did many progress but didn't finished due to many work still needed and the [second attempt](https://www.redox-os.org/news/focusing-on-rustc/) fixed the `rustc` compilation but didn't work in Redox yet.
 
-He successfully built GNU nano, [ripgrep](https://github.com/BurntSushi/ripgrep), [cbindgen](https://github.com/mozilla/cbindgen), and [acid](https://gitlab.redox-os.org/redox-os/acid)
+He successfully built GNU nano, [ripgrep](https://github.com/BurntSushi/ripgrep), [cbindgen](https://github.com/mozilla/cbindgen), and [acid](https://gitlab.redox-os.org/redox-os/acid).
 
 - ripgrep compilation in Redox
 
@@ -39,7 +39,7 @@ Anhad Singh wrote (using the [COSMIC Edit](https://github.com/pop-os/cosmic-edit
 
 Ibuki Omatsu successfully implemented the initial capability-based security infrastructure which allows our permission and sandbox system to be much more granular and secure.
 
-It will be extended to other system interfaces in next months.
+The capability-based system has been implemented for scheme visibility which is configurable per-user, through the concept of Namespaces. There is work to do as many system services and drivers uses effective UID and GID as the only mechanism for security. Migration into Capability-based security will be gradually implemented to more system services in upcoming months.
 
 ## Proper SSH Support!
 
@@ -73,7 +73,7 @@ Wildan Mubarok also improved it to increase performance and improved UI.
 
 Wildan Mubarok moved the keyboard layout handling from the PS/2 driver to the `inputd` daemon to share code with the USB HID driver and allow rootless usage.
 
-The `/scheme/ps2` scheme-based configuration was replaced by the `inputd -K <name>` command, where `<name>` is the keyboard layout code.
+The `/scheme/ps2` scheme-based configuration was replaced by the `inputd -K <name>` command, where `<name>` is the keyboard layout code. The keyboard layout names can be seen by running the `inputd --keymaps` command.
 
 ## Bootloader Environment Editor
 
@@ -85,12 +85,13 @@ Wildan Mubarok implemented a boot environment text editor in the bootloader to i
 
 ## More Boot Debugging Information and Handling
 
-Wildan Mubarok implemented the `BOOTSTRAP_LOG_LEVEL` (bootstrap and process manager logging verbosity), `INIT_LOG_LEVEL` (init logging verbosity), `DRIVER_LOG_LEVEL` (driver logging verbosity), `DRIVER_*_LOG_LEVEL` (driver-specific logging verbosity), and `RELIBC_LOG_LEVEL` (relibc logging verbosity, require a debug build) bootloader environment variables to easily show more information in boot problems like hangs or errors, he implemented the following options:
+Wildan Mubarok implemented the `BOOTSTRAP_LOG_LEVEL` (bootstrap and process manager logging verbosity), `INIT_LOG_LEVEL` (init logging verbosity), `DRIVER_LOG_LEVEL` (driver logging verbosity), `DRIVER_*_LOG_LEVEL` (driver-specific logging verbosity), and `RELIBC_LOG_LEVEL` (relibc logging verbosity, require a debug build) bootloader environment variables to easily show more information in boot problems like hangs or errors, he implemented these log levels using the [log](https://docs.rs/log/latest/log/enum.LevelFilter.html) library:
 
-- `WARN` value: TODO
-- `ERROR` value: TODO
-- `DEBUG` value: TODO
-- `TRACE` value: TODO
+- `ERROR` value: Known event that is a fatal error but recoverable.
+- `WARN` value: Unexpected event coming from unexpected condition.
+- `INFO` value: Significant event mostly useful for developer.
+- `DEBUG` value: Detailed event monitoring to show how the service is being used.
+- `TRACE` value: Very verbose information which is only useful when debugging.
 
 You can see an example output below:
 
@@ -151,6 +152,8 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 - (sys) bjorn3 implemented dynamic linking support on `initfs`
 - (sys) Wildan Mubarok fixed `fbcond` error handling by not panicking when a display is not used
 - (sys) Wildan Mubarok added a temporary workaround to fix `EBADF` in the `setsockopt()` function
+- (sys) Wildan Mubarok enabled the `nproc` tool from `uutils` implementation.
+- (sys) Wildan Mubarok fixed `uutils` localization init for ARM64.
 
 ## Relibc Improvements
 
@@ -163,13 +166,13 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 - (libc) Anhad Singh fixed some missing `unsafe` declarations
 - (libc) Anhad Singh fixed the `memcmp()` function alignment
 - (libc) Anhad Singh fixed the `make all` command not triggering a rebuild when the dynamic linker, `redoxt-rt`, and `redox-ioctl` sources changed
-- (libc) Anhad Singh fixed log message colours
+- (libc) Anhad Singh fixed build log message colours
 - (libc) Anhad Singh did a cleanup in POSIX threads mutex code
 - (libc) Wildan Mubarok implemented the `malloc_usable_size()` function to allow efficient pointer memory allocation and improve `malloc` leaks debugging
-- (libc) Wildan Mubarok improved the `inet` socket performance using `SYS_CALL`
+- (libc) Wildan Mubarok improved the inet `setsockopt()` function performance using `SYS_CALL`
 - (libc) Wildan Mubarok fixed the `pthread_cond_timedwait()` function futex behavior
 - (libc) Wildan Mubarok fixed a hang in the UDS `connect()` function
-- (libc) Wildan Mubarok fixed an CPU endianess hang in the UDP `accept()` function
+- (libc) Wildan Mubarok fixed an CPU endianness hang in the UDP `accept()` function
 - (libc) Wildan Mubarok fixed the UDP `accept()` function behavior in the `recvfrom()` function
 - (libc) Wildan Mubarok fixed the `getpeername()`, `putc_unlocked()`, `pthread_cond_clockwait()`, and `pthread_mutex_timedlock()` functions
 - (libc) Wildan Mubarok fixed the pthread `thread_fork` test
@@ -185,14 +188,14 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 - (libc) sourceturner migrated the code of many functions to use the new unsafe Rust syntax which allow safe Rust syntax usage, which help to prevent more bugs and ease bug hunt due to less places to suspect
 - (libc) Akshit Gaur fixed the `%g` number modifier in the `printf()` function
 - (libc) Mustafa Oz fixed an error when the `ppoll` timeout number overflow
-- (libc) auronandace fixed some tests
-- (libc) auronandace did some code cleanups
+- (libc) auronandace fixed some regressions in tests
+- (libc) auronandace did some header cleanups
 
 ## Networking Improvements
 
 - (net) Akshit Gaur implemented socket shutdown
 - (net) Akshit Gaur implemented UDP Packet Filtering
-- (net) Akshit Gaur implemented `GetSockOpt`
+- (net) Akshit Gaur implemented inet `getsockopt()` function via `SYS_CALL`
 - (net) Wildan Mubarok fixed UDP `localhost` connection resolving
 
 ## RedoxFS Improvements
