@@ -47,11 +47,11 @@ Wildan Mubarok fixed the OpenSSH session exit which fixed the remote access that
 
 Now we can access Redox in QEMU or real hardware without manual intervention!
 
-## Massive Input Latency Reduction
+## Massive USB Input Latency Reduction
 
-Wildan Mubarok reduced the PS/2 and USB input latency by removing heap allocation in the `rehid` library.
+Wildan Mubarok reduced the USB input latency by removing heap allocation in the `rehid` library.
 
-In a QEMU benchmark without KVM acceleration he reported an USB input latency reduction of 100ms to 30ms, a 70% latency reduction.
+In a QEMU benchmark without KVM acceleration he reported an input latency reduction of 100ms to 30ms, a 70% latency reduction.
 
 ## Redox on VPS!
 
@@ -105,6 +105,8 @@ He also implemented the `INIT_SKIP` environment variable to skip process hangs, 
 
 Wildan Mubarok implemented a power menu (reboot/shutdown) and a keyboard layout menu in the Orbital login manager (orblogin).
 
+<img src="/img/screenshot/orblogin-keymap-menu.png" class="img-responsive"/>
+
 ## Cargo Workspace Unification
 
 Jeremy Soller added all system components and drivers to a Cargo workspace to unify the version management of libraries in one place, which allow faster development and less breakage.
@@ -126,10 +128,14 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 
 ## Driver Improvements
 
+- (drivers) Jeremy Soller temporarily enabled interrupt-driven initialization in the PS/2 driver to improve reliability and not delay keyboard handling
 - (drivers) Wildan Mubarok exposed error reasons in the PS/2 driver initialization logging to improve debugging and save time
+- (drivers) Wildan Mubarok fixed mouse pointer warping bug when using the QEMU GTK frontend with USB relative mouse
+- (drivers) bjorn3 unified the common PCI-based device drivers initialization code into the PCI driver
 
 ## System Improvements
 
+- (sys) 4lDO2 replaced [our `kill` implementation](https://gitlab.redox-os.org/redox-os/coreutils/-/merge_requests/221) with the `uutils` implementation, which allow the command syntax to be the same of GNU/Linux and avoid confusion with a different syntax
 - (sys) bjorn3 implemented dynamic linking support on `initfs`
 - (sys) Wildan Mubarok added a temporary workaround to fix `EBADF` in the `setsockopt()` function
 
@@ -137,16 +143,20 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 
 - (libc) Jeremy Soller implemented signal mask handling in the `epoll_pwait()` function
 - (libc) 4lDO2 fixed some POSIX signals bugs
-- (libc) Anahd Singh fixed and enabled the dynamic linker allocator
+- (libc) Anhad Singh improved POSIX threads destructor compliance
+- (libc) Anahd Singh fixed an allocator difference between relibc and dynamic linker which caused undefined behavior
 - (libc) Anhad Singh fixed undefined symbol index in `TPOFF` which fixed random errors/page faults in `rustc`
+- (libc) Anhad Singh fixed a thread creation race condition which caused a panic in programs
 - (libc) Anhad Singh fixed some missing `unsafe` declarations
 - (libc) Anhad Singh fixed the `memcmp()` function alignment
 - (libc) Anhad Singh fixed the `make all` command not triggering a rebuild when the dynamic linker, `redoxt-rt`, and `redox-ioctl` sources changed
 - (libc) Anhad Singh fixed log message colours
+- (libc) Anhad Singh did a cleanup in POSIX threads mutex code
 - (libc) Wildan Mubarok implemented `malloc_usable_size()` function to allow efficient pointer memory allocation and improve `malloc` leaks debugging
 - (libc) Wildan Mubarok improved `inet` socket performance using `SYS_CALL`
 - (libc) Wildan Mubarok fixed the `pthread_cond_timedwait()` function futex behavior
-- (libc) Wildan Mubarok fixed an endianess hang in the UDP `accept()` function
+- (libc) Wildan Mubarok fixed a hang in the UDS `connect()` function
+- (libc) Wildan Mubarok fixed an CPU endianess hang in the UDP `accept()` function
 - (libc) Wildan Mubarok fixed the UDP `accept()` function behavior in the `recvfrom()` function
 - (libc) Wildan Mubarok fixed the `getpeername()`, `putc_unlocked()`, `pthread_cond_clockwait()`, and `pthread_mutex_timedlock()` functions
 - (libc) Wildan Mubarok fixed the pthread `thread_fork` test
@@ -161,6 +171,7 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 - (libc) Pascal Reich implemented mathematical constants
 - (libc) sourceturner migrated the code of some functions to use the new unsafe Rust syntax which allow safe Rust syntax usage
 - (libc) Akshit Gaur fixed the `%g` number modifier in the `printf()` function
+- (libc) Mustafa Oz fixed an error when `ppoll` timeout number overflow
 - (libc) auronandace fixed some tests
 - (libc) auronandace did some code cleanups
 
@@ -181,7 +192,7 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 - (gui) Wildan Mubarok improved the wallpaper processing performance 4 times (400%) by caching the first image decoding to a BMP file for fastest CPU performance, in a QEMU benchmark without KVM acceleration he reported the processing time being reduced from almost 10 seconds to around ~350ms (in a hot cache)
 - (gui) bjorn3 did some code cleanups in the `orbclient` library
 - (gui) bjorn3 moved the Orbital data to the `/usr/share/ui` directory
-- (gui) bjorn3 simplified Orbital utilities recipe source fetch
+- (gui) bjorn3 simplified Orbital utilities recipe source fetch which reduced their build time
 
 ## Packaging Improvements
 
@@ -189,9 +200,12 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 
 ## Programs
 
-- (app) Bendeguz Pusch confirmed that [file](https://www.darwinsys.com/file/) and [jq](https://jqlang.org/) are working
+- (app) Anhad Singh fixed the GNU Awk compilation
+- (app) Wildan Mubarok enabled wide character support in the `libstdc++` library to help Firefox porting
+- (app) Bendeguz Pisch confirmed that [file](https://www.darwinsys.com/file/) and [jq](https://jqlang.org/) are working
 - (app) Petr Hrdina confirmed that the [hf](https://github.com/sorairolake/hf) recipe is working
 - (app) Benton60 confirmed that the [pls](https://github.com/pls-rs/pls) recipe is working
+- (app) Akshit Gaur ported [iPerf](https://iperf.fr/)
 
 ## Ion Improvements
 
@@ -214,7 +228,11 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 - (build) Wildan Mubarok reduced the `make rebuild` command processing time
 - (build) Wildan Mubarok enabled `sccache` build status log to say if compilation is using outdated cached library objects and improve debugging
 - (build) Wildan Mubarok moved the `prefix_clean` target relibc logic to the `static_clean` target to avoid confusion between `prefix` and relibc/statically linked recipes cleanup
-- (build) Ojus Chugh the source dependency propagation in the `REPO_BINARY` environment variable
+- (build) Wildan Mubarok fixed unnecessary compilation in `recipe = "binary"` when the `dev-dependencies` data type was used
+- (build) Wildan Mubarok fixed the `make r.recipe-dependency` command not ignoring when used in recipe dependencies when `recipe = "binary"` was used
+- (build) Wildan Mubarok fixing `recipe "ignore"` and `recipe = "local"` also applying to their recipe dependencies
+- (build) Wildan Mubarok fixed `recipe = "ignore"` when used for recipes from meta-packages
+- (build) Ojus Chugh fixed the source dependency propagation in the `REPO_BINARY` environment variable
 
 ## Documentation Improvements
 
