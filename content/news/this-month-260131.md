@@ -17,11 +17,11 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## Cargo Project Compilation in Redox!
 
-Anhad Singh successfully applied enough fixes to allow the Cargo project compilation in Redox to work!
+Anhad Singh successfully applied enough fixes to allow Cargo project compilation in Redox to work!
 
 This is the third attempt to run the Rust compiler (rustc) and Cargo on Redox, the [first attempt](https://www.redox-os.org/news/gsoc-self-hosting-final/) did many progress but didn't finished due to many work still needed and the [second attempt](https://www.redox-os.org/news/focusing-on-rustc/) fixed the `rustc` compilation but didn't work in Redox yet.
 
-He successfully built GNU nano, [ripgrep](https://github.com/BurntSushi/ripgrep), [cbindgen](https://github.com/mozilla/cbindgen) and [acid](https://gitlab.redox-os.org/redox-os/acid)
+He successfully built GNU nano, [ripgrep](https://github.com/BurntSushi/ripgrep), [cbindgen](https://github.com/mozilla/cbindgen), and [acid](https://gitlab.redox-os.org/redox-os/acid)
 
 - ripgrep compilation in Redox
 
@@ -43,9 +43,9 @@ It will be extended to other system interfaces in next months.
 
 ## Proper SSH Support!
 
-Wildan Mubarok fixed the OpenSSH session exit which fixed the remote access that don't need manual exists to workaround a bug where SSH sessions weren't exitting.
+Wildan Mubarok fixed the OpenSSH session exit which allow exit in remote control without manual intervention to workaround a bug where SSH sessions weren't exitting.
 
-Now we can access Redox in QEMU or real hardware without manual intervention!
+Now we can remotely control Redox in QEMU or real hardware without manual intervention!
 
 ## Massive USB Input Latency Reduction
 
@@ -63,9 +63,9 @@ Wildan Mubarok successfully [hosted a Redox VM](https://gist.github.com/willnode
 
 ## Redox on Web Browser!
 
-Our [v86 web demo] finally reached acceptable performance in terminal mode!
+Our [v86 web demo](https://static.redox-os.org/online-demo/) finally reached acceptable performance in terminal mode!
 
-Wildan Mubarok also improved it to increase performance and UI.
+Wildan Mubarok also improved it to increase performance and improved UI.
 
 <img src="/img/screenshot/online-demo.png" class="img-responsive"/>
 
@@ -85,7 +85,7 @@ Wildan Mubarok implemented a boot environment text editor in the bootloader to i
 
 ## More Boot Debugging Information and Handling
 
-Wildan Mubarok implemented the `BOOTSTRAP_LOG_LEVEL` (bootstrap and process manager logging verbosity), `INIT_LOG_LEVEL` (init logging verbosity), `DRIVER_LOG_LEVEL` (driver logging verbosity), `DRIVER_*_LOG_LEVEL` (driver-specific logging verbosity), and `RELIBC_LOG_LEVEL` (relibc logging verbosity) bootloader environment variables to easily show more information in boot problems like hangs or errors, he implemented the following options:
+Wildan Mubarok implemented the `BOOTSTRAP_LOG_LEVEL` (bootstrap and process manager logging verbosity), `INIT_LOG_LEVEL` (init logging verbosity), `DRIVER_LOG_LEVEL` (driver logging verbosity), `DRIVER_*_LOG_LEVEL` (driver-specific logging verbosity), and `RELIBC_LOG_LEVEL` (relibc logging verbosity, require a debug build) bootloader environment variables to easily show more information in boot problems like hangs or errors, he implemented the following options:
 
 - `WARN` value: TODO
 - `ERROR` value: TODO
@@ -103,7 +103,9 @@ He also implemented the `INIT_SKIP` environment variable to skip process hangs, 
 
 ## Login Manager Options
 
-Wildan Mubarok implemented a power menu (reboot/shutdown) and a keyboard layout menu in the Orbital login manager (orblogin).
+Wildan Mubarok implemented a power menu (reboot/shutdown options) and a keyboard layout menu in the Orbital login manager (orblogin).
+
+- Orbital login manager keyboard layout menu
 
 <img src="/img/screenshot/orblogin-keymap-menu.png" class="img-responsive"/>
 
@@ -121,22 +123,33 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 
 ## Kernel Improvements
 
+- (kernel) Jeremy Soller reduced the context switch cost by only reading the system time once
+- (kernel) Jeremy Soller fixed a potential preemption guard deadlock
+- (kernel) Jeremy Soller improved the error handling to disable event queue recursive registering in the same queue to fix X11 and D-Bus bugs
+- (kernel) Jeremy Soller removed the legacy scheme path warning
 - (kernel) Anhad Singh fixed a context switch deadlock
 - (kernel) Anhad Singh fixed the `mremap` mapping size behavior which was causing a panic when Cargo was running
 - (kernel) Anhad Singh fixed futex timeout behavior
-- (kernel) Pascal Reich improved the code documentation
+- (kernel) Pascal Reich improved and fixed typos in the documentation
 
 ## Driver Improvements
 
+- (drivers) Jeremy Soller implemented the support for more PS/2 devices
+- (drivers) Jeremy Soller implemented initial PS/2 touchpad support
+- (drivers) Jeremy Soller reduced the USB HID input latency by temporarily using spinloops instead of sleep until sleep accuracy is better
 - (drivers) Jeremy Soller temporarily enabled interrupt-driven initialization in the PS/2 driver to improve reliability and not delay keyboard handling
+- (drivers) Jeremy Soller updated the USB HID driver to use the `anyhow` library for better error handling
+- (drivers) Jeremy Soller fixed a xHCI error message typo in USB drivers
+- (drivers) Jeremy Soller reduced unnecessary logging in xHCI driver by default
 - (drivers) Wildan Mubarok exposed error reasons in the PS/2 driver initialization logging to improve debugging and save time
-- (drivers) Wildan Mubarok fixed mouse pointer warping bug when using the QEMU GTK frontend with USB relative mouse
+- (drivers) Wildan Mubarok fixed a mouse pointer warping bug when using the QEMU GTK frontend with USB relative mouse
 - (drivers) bjorn3 unified the common PCI-based device drivers initialization code into the PCI driver
 
 ## System Improvements
 
-- (sys) 4lDO2 replaced [our `kill` implementation](https://gitlab.redox-os.org/redox-os/coreutils/-/merge_requests/221) with the `uutils` implementation, which allow the command syntax to be the same of GNU/Linux and avoid confusion with a different syntax
+- (sys) 4lDO2 replaced [our `kill` implementation](https://gitlab.redox-os.org/redox-os/coreutils/-/merge_requests/221) with the [`uutils` implementation](https://github.com/uutils/coreutils), which has the GNU/Linux command syntax and avoid confusion with a different syntax
 - (sys) bjorn3 implemented dynamic linking support on `initfs`
+- (sys) Wildan Mubarok fixed `fbcond` error handling by not panicking when a display is not used
 - (sys) Wildan Mubarok added a temporary workaround to fix `EBADF` in the `setsockopt()` function
 
 ## Relibc Improvements
@@ -152,8 +165,8 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 - (libc) Anhad Singh fixed the `make all` command not triggering a rebuild when the dynamic linker, `redoxt-rt`, and `redox-ioctl` sources changed
 - (libc) Anhad Singh fixed log message colours
 - (libc) Anhad Singh did a cleanup in POSIX threads mutex code
-- (libc) Wildan Mubarok implemented `malloc_usable_size()` function to allow efficient pointer memory allocation and improve `malloc` leaks debugging
-- (libc) Wildan Mubarok improved `inet` socket performance using `SYS_CALL`
+- (libc) Wildan Mubarok implemented the `malloc_usable_size()` function to allow efficient pointer memory allocation and improve `malloc` leaks debugging
+- (libc) Wildan Mubarok improved the `inet` socket performance using `SYS_CALL`
 - (libc) Wildan Mubarok fixed the `pthread_cond_timedwait()` function futex behavior
 - (libc) Wildan Mubarok fixed a hang in the UDS `connect()` function
 - (libc) Wildan Mubarok fixed an CPU endianess hang in the UDP `accept()` function
@@ -169,14 +182,15 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 - (libc) Landon Propes improved the `psiginfo()` function performance by removing memory allocations
 - (libc) Landon Propes fixed some namespace pollution
 - (libc) Pascal Reich implemented mathematical constants
-- (libc) sourceturner migrated the code of some functions to use the new unsafe Rust syntax which allow safe Rust syntax usage
+- (libc) sourceturner migrated the code of many functions to use the new unsafe Rust syntax which allow safe Rust syntax usage, which help to prevent more bugs and ease bug hunt due to less places to suspect
 - (libc) Akshit Gaur fixed the `%g` number modifier in the `printf()` function
-- (libc) Mustafa Oz fixed an error when `ppoll` timeout number overflow
+- (libc) Mustafa Oz fixed an error when the `ppoll` timeout number overflow
 - (libc) auronandace fixed some tests
 - (libc) auronandace did some code cleanups
 
 ## Networking Improvements
 
+- (net) Akshit Gaur implemented socket shutdown
 - (net) Akshit Gaur implemented UDP Packet Filtering
 - (net) Akshit Gaur implemented `GetSockOpt`
 - (net) Wildan Mubarok fixed UDP `localhost` connection resolving
@@ -184,14 +198,15 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 ## RedoxFS Improvements
 
 - (redoxfs) Jeremy Soller delayed the deletion of an unlinked file until all open file descriptors are closed to improve POSIX anonymous file compatibility
+- (redoxfs) Jeremy Soller added a workaround to partially fix memory leaks
 
 ## Orbital Improvements
 
-- (gui) Wildan Mubarok exposed numbad, arrow and media keyboard keys to `orbclient` library
+- (gui) Wildan Mubarok exposed numpad, arrow and media keyboard keys to `orbclient` library
 - (gui) Wildan Mubarok implemented scrolling and numpad lock keys handling in `orbclient` library
-- (gui) Wildan Mubarok improved the wallpaper processing performance 4 times (400%) by caching the first image decoding to a BMP file for fastest CPU performance, in a QEMU benchmark without KVM acceleration he reported the processing time being reduced from almost 10 seconds to around ~350ms (in a hot cache)
+- (gui) Wildan Mubarok improved the wallpaper processing performance 4 times (400%) by caching the first image decoding to a BMP file for fastest CPU performance, in a QEMU benchmark without KVM acceleration he reported the processing time being reduced from almost 10 seconds (in a cold cache) to around ~350ms (in a hot cache)
 - (gui) bjorn3 did some code cleanups in the `orbclient` library
-- (gui) bjorn3 moved the Orbital data to the `/usr/share/ui` directory
+- (gui) bjorn3 moved the Orbital data to the `/usr/share/ui` directory to comply with Linux FHS
 - (gui) bjorn3 simplified Orbital utilities recipe source fetch which reduced their build time
 
 ## Packaging Improvements
@@ -200,11 +215,15 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 
 ## Programs
 
+- (app) Jeremy Soller fixed the `mdp`, Gigalomania and `vvvvvv` compilation
+- (app) Jeremy Soller moved all recipe fonts and icons to `/usr/share` to comply with Linux FHS
 - (app) Anhad Singh fixed the GNU Awk compilation
 - (app) Wildan Mubarok enabled wide character support in the `libstdc++` library to help Firefox porting
+- (app) Wildan Mubarok removed the `epoch-update` branch pin from COSMIC programs to quickly get improvements and fixes
 - (app) Bendeguz Pisch confirmed that [file](https://www.darwinsys.com/file/) and [jq](https://jqlang.org/) are working
-- (app) Petr Hrdina confirmed that the [hf](https://github.com/sorairolake/hf) recipe is working
-- (app) Benton60 confirmed that the [pls](https://github.com/pls-rs/pls) recipe is working
+- (app) Bendeguz Pisch ported [espeak-ng](https://github.com/espeak-ng/espeak-ng)
+- (app) Petr Hrdina confirmed that [hf](https://github.com/sorairolake/hf) is working
+- (app) Benton60 confirmed that [pls](https://github.com/pls-rs/pls) is working
 - (app) Akshit Gaur ported [iPerf](https://iperf.fr/)
 
 ## Ion Improvements
@@ -213,12 +232,14 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 
 ## Testing Improvements
 
-- (tests) Josh Williams finished the [POSIX signals test suite](https://gitlab.redox-os.org/redox-os/redox-posix-tests) and fixed some tests
+- (tests) Josh Williams finished our [POSIX signals test suite](https://gitlab.redox-os.org/redox-os/redox-posix-tests) and fixed some tests
 - (tests) Wildan Mubarok updated the `acid` test suite to allow the usage of `cargo test` to run all correctness tests and `cargo bench` to run all stress tests.
 
 ## Build System Improvements
 
-- (build) Wildan Mubarok added a feature flag in the installer to disable FUSE
+- (build) Jeremy Soller implemented the `make setenv` command to allow scripts to read the `ARCH`, `BOARD`, and `CONFIG_NAME` environment variables
+- (build) Jeremy Soller added the [network-boot.sh](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/scripts/network-boot.sh) script to ease and automate network booting
+- (build) Wildan Mubarok added a feature flag in the installer to disable FUSE for systems with problems
 - (build) Wildan Mubarok implemented the `COOKBOOK_CLEAN_BUILD` (clean previous recipe binaries before compilation) and `COOKBOOK_CLEAN_TARGET` (clean previous recipe binaries after compilation) boolean environment variables
 - (build) Wildan Mubarok implemented the `make cook.clean_target` recipe target to clean previous binaries before compilation
 - (build) Wildan Mubarok improved Redoxer to support [compilation with `musl` and compiler customization](https://gitlab.redox-os.org/redox-os/redoxer#host-specific-customizations)
@@ -233,12 +254,26 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 - (build) Wildan Mubarok fixing `recipe "ignore"` and `recipe = "local"` also applying to their recipe dependencies
 - (build) Wildan Mubarok fixed `recipe = "ignore"` when used for recipes from meta-packages
 - (build) Ojus Chugh fixed the source dependency propagation in the `REPO_BINARY` environment variable
+- (build) Ribbon fixed the QEMU RISC-V firmware location in Fedora
 
 ## Documentation Improvements
 
+- (doc) Ribbon documented the [CPU requirements](https://doc.redox-os.org/book/hardware-support.html#cpu-requirements) to allow Redox to work
+- (doc) Ribbon documented how to find and open the GUI system installer in the [Installing Redox in a Drive](https://doc.redox-os.org/book/installing.html) page
+- (doc) Ribbon did some improvements and fixes to the [Hardware Compatibility document](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HARDWARE.md)
+- (doc) Ribbon added [quick notes](https://doc.redox-os.org/book/troubleshooting.html#notes) to help with troubleshooting and save time
 - (doc) Ribbon documented the [hardware and software requirements](https://doc.redox-os.org/book/developer-faq.html#what-is-the-software-and-hardware-requirements-for-development) for Redox development in the Developer FAQ
+- (doc) Ribbon moved the development tips from the book to the [CONTRIBUTING.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md#development-recommendations-and-tips) document to be more easy to find
+- (doc) Ribbon added questions about how to [update initfs](https://doc.redox-os.org/book/developer-faq.html#how-to-update-initfs) and [disable the automatic recipe source update](https://doc.redox-os.org/book/developer-faq.html#how-to-disable-the-automatic-recipe-source-update)
+- (doc) Ribbon enabled dynamic linking in all Cargo example commands in the porting documentation
+- (doc) Ribbon added more data types to speedup the Quick Recipe Template usage
+- (doc) Ribbon documented the `build.dev-dependencies` recipe data type
+- (doc) Ribbon added the [POSIX errors](https://en.wikipedia.org/wiki/Errno.h#POSIX_errors) and [Linux FHS Directory Structure](https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard#Directory_structure) references in the References book page
 - (doc) Ribbon improved the book summary order to better separate pages for end-users and testers/developers
-- (doc) Wildan Mubarok did many improvements and fixes (such as documentation of [new build system filesystem tooling options](https://doc.redox-os.org/book/configuration-settings.html#environment-variables), minimum host system tools and toolchain prefix behavior/new configuration) to the Advanced Build, Advanced Podman Build, Native Build and Configuration Settings pages
+- (doc) Ribbon fixed a regression in the QEMU commands to load x86-64 images
+- (doc) Ribbon did some improvements in command examples and removed deprecated information
+- (doc) Ribbon documented that [kibi](https://github.com/ilai-deutel/kibi) is the new default terminal text editor
+- (doc) Wildan Mubarok did many improvements and fixes (such as documentation of [new build system filesystem tooling options](https://doc.redox-os.org/book/configuration-settings.html#environment-variables), minimum host system tools and toolchain prefix behavior/new configuration) to the Advanced Native Build, Advanced Podman Build, Native Build and Configuration Settings pages
 - (doc) Wildan Mubarok documented [how to use the Podman Build without FUSE](https://doc.redox-os.org/book/advanced-podman-build.html#installing-without-fuse) to fix problems
 - (doc) Wildan Mubarok documented [how to customize the C/C++ compiler](https://doc.redox-os.org/book/advanced-build.html#customizing-c-compiler) used in recipes
 - (doc) Wildan Mubarok documented [how to use the upstream Rust binaries](https://doc.redox-os.org/book/advanced-build.html#prefix-rust) to build Redox (experimental)
