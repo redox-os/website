@@ -43,7 +43,7 @@ The capability-based system has been implemented for scheme visibility which is 
 
 ## Proper SSH Support!
 
-Wildan Mubarok fixed the OpenSSH session exit which allow exit in remote control without manual intervention to workaround a bug where SSH sessions weren't exitting.
+Anhad Singh fixed (and Wildan Mubarok confirmed) the OpenSSH session exit which allow exit in remote control without manual intervention to workaround a bug where SSH sessions weren't exitting.
 
 Now we can remotely control Redox in QEMU or real hardware without manual intervention!
 
@@ -52,6 +52,8 @@ Now we can remotely control Redox in QEMU or real hardware without manual interv
 Wildan Mubarok reduced the USB input latency by removing heap allocation in the `rehid` library.
 
 In a QEMU benchmark without KVM acceleration he reported an input latency reduction of 100ms to 30ms, a 70% latency reduction.
+
+QEMU with KVM acceleration or real hardware has much lower input latency thus their reduction is much higher.
 
 ## Redox on VPS!
 
@@ -66,6 +68,8 @@ Wildan Mubarok successfully [hosted a Redox VM](https://gist.github.com/willnode
 Our [v86 web demo](https://static.redox-os.org/online-demo/) finally reached acceptable performance in terminal mode!
 
 Wildan Mubarok also improved it to increase performance and improved UI.
+
+(Keep in mind that the QEMU KVM or real hardware performance is much better)
 
 <img src="/img/screenshot/online-demo.png" class="img-responsive"/>
 
@@ -138,7 +142,7 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 - (drivers) Jeremy Soller implemented the support for more PS/2 devices
 - (drivers) Jeremy Soller implemented initial PS/2 touchpad support
 - (drivers) Jeremy Soller reduced the USB HID input latency by temporarily using spinloops instead of sleep until sleep accuracy is better
-- (drivers) Jeremy Soller temporarily enabled interrupt-driven initialization in the PS/2 driver to improve reliability and not delay keyboard handling
+- (drivers) Jeremy Soller enabled interrupt-driven initialization in the PS/2 driver to improve reliability and not delay keyboard handling
 - (drivers) Jeremy Soller updated the USB HID driver to use the `anyhow` library for better error handling
 - (drivers) Jeremy Soller fixed a xHCI error message typo in USB drivers
 - (drivers) Jeremy Soller reduced unnecessary logging in xHCI driver by default
@@ -150,10 +154,11 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 
 - (sys) 4lDO2 replaced [our `kill` implementation](https://gitlab.redox-os.org/redox-os/coreutils/-/merge_requests/221) with the [`uutils` implementation](https://github.com/uutils/coreutils), which has the GNU/Linux command syntax and avoid confusion with a different syntax
 - (sys) bjorn3 implemented dynamic linking support on `initfs`
+- (sys) Wildan Mubarok enabled the `nproc` tool from `uutils` implementation
 - (sys) Wildan Mubarok fixed `fbcond` error handling by not panicking when a display is not used
 - (sys) Wildan Mubarok added a temporary workaround to fix `EBADF` in the `setsockopt()` function
-- (sys) Wildan Mubarok enabled the `nproc` tool from `uutils` implementation.
-- (sys) Wildan Mubarok fixed `uutils` localization init for ARM64.
+- (sys) Wildan Mubarok fixed `uutils` localization init for ARM64
+- (sys) Wildan Mubarok fixed a problem in `rustysd` where it was only been able to spawn one program, and updating `server-demo` variant to spawn NGINX, OpenSSH and PHP built-in server from `rustysd` service files.
 
 ## Relibc Improvements
 
