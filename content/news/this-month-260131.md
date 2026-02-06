@@ -163,7 +163,8 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 ## Relibc Improvements
 
 - (libc) Jeremy Soller implemented signal mask handling in the `epoll_pwait()` function
-- (libc) 4lDO2 fixed some POSIX signals bugs
+- (libc) 4lDO2 fixed POSIX signals compliance where specific signals were ignored
+- (libc) 4lDO2 improved `sigtimedwait()`, `sigprocmask()`, and `pthread_sigmask()` functions
 - (libc) Anhad Singh improved POSIX threads destructor compliance
 - (libc) Anhad Singh fixed an allocator difference between relibc and the dynamic linker which caused undefined behavior
 - (libc) Anhad Singh implemented handling of undefined symbol index in the `TPOFF` relocation to fix random `rustc` errors/page faults
