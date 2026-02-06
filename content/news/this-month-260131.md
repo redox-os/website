@@ -17,21 +17,21 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## Cargo Project Compilation in Redox!
 
-Anhad Singh successfully applied enough fixes to allow Cargo project compilation in Redox to work!
+Anhad Singh successfully implemented the necessary fixes for compiling Cargo projects on Redox!
 
-This is the third attempt to run the Rust compiler (rustc) and Cargo on Redox, the [first attempt](https://www.redox-os.org/news/gsoc-self-hosting-final/) did many progress but didn't finished due to many work still needed and the [second attempt](https://www.redox-os.org/news/focusing-on-rustc/) fixed the `rustc` compilation but didn't work in Redox yet.
+This is the third attempt to run the Rust compiler (`rustc`) and Cargo on Redox and the first focused on stable execution in single-core or multi-core CPUs. The [first attempt](https://www.redox-os.org/news/gsoc-self-hosting-final/) made significant progress but wasn't completed due to the amount of work remaining. The [second attempt](https://www.redox-os.org/news/focusing-on-rustc/) fixed `rustc` compilation but did not run on Redox yet.
 
-He successfully built GNU nano, [ripgrep](https://github.com/BurntSushi/ripgrep), [cbindgen](https://github.com/mozilla/cbindgen), and [acid](https://gitlab.redox-os.org/redox-os/acid).
+He successfully built [relibc](https://gitlab.redox-os.org/redox-os/relibc), [ripgrep](https://github.com/BurntSushi/ripgrep), [cbindgen](https://github.com/mozilla/cbindgen), and [acid](https://gitlab.redox-os.org/redox-os/acid) on Redox.
 
-- ripgrep compilation in Redox
+- `ripgrep` compilation on Redox
 
 <img src="/img/screenshot/cargo-ripgrep.png" class="img-responsive"/>
 
 ## First Contribution From Redox!
 
-Anhad Singh wrote (using the [COSMIC Edit](https://github.com/pop-os/cosmic-edit) text editor), tested and pushed the [first relibc contribution](https://gitlab.redox-os.org/redox-os/relibc/-/merge_requests/891) from the Redox QEMU VM!
+Using the [COSMIC Edit](https://github.com/pop-os/cosmic-edit) text editor, Anhad Singh wrote, tested, and pushed the [first relibc contribution](https://gitlab.redox-os.org/redox-os/relibc/-/merge_requests/891) entirely on Redox running in QEMU!
 
-- Development in Redox
+- Development on Redox
 
 <img src="/img/screenshot/dev-on-redox.png" class="img-responsive"/>
 
@@ -129,8 +129,8 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 - (kernel) Jeremy Soller improved the error handling to disable event queue recursive registering in the same queue to fix X11 and D-Bus bugs
 - (kernel) Jeremy Soller removed the legacy scheme path warning
 - (kernel) Anhad Singh fixed a context switch deadlock
-- (kernel) Anhad Singh fixed the `mremap` mapping size behavior which was causing a panic when Cargo was running
-- (kernel) Anhad Singh fixed futex timeout behavior
+- (kernel) Anhad Singh fixed the `mremap` system call mapping size behavior causing a panic when running Cargo
+- (kernel) Anhad Singh fixed the `futex` syscall behaviour where spurious wake-ups were incorrectly treated as timeout expirations
 - (kernel) Pascal Reich improved and fixed typos in the documentation
 
 ## Driver Improvements
@@ -160,12 +160,12 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 - (libc) Jeremy Soller implemented signal mask handling in the `epoll_pwait()` function
 - (libc) 4lDO2 fixed some POSIX signals bugs
 - (libc) Anhad Singh improved POSIX threads destructor compliance
-- (libc) Anahd Singh fixed an allocator difference between relibc and dynamic linker which caused undefined behavior
-- (libc) Anhad Singh fixed undefined symbol index in `TPOFF` which fixed random errors/page faults in `rustc`
+- (libc) Anhad Singh fixed an allocator difference between relibc and the dynamic linker which caused undefined behavior
+- (libc) Anhad Singh implemented handling of undefined symbol index in the `TPOFF` relocation to fix random `rustc` errors/page faults
 - (libc) Anhad Singh fixed a thread creation race condition which caused a panic in programs
 - (libc) Anhad Singh fixed some missing `unsafe` declarations
-- (libc) Anhad Singh fixed the `memcmp()` function alignment
-- (libc) Anhad Singh fixed the `make all` command not triggering a rebuild when the dynamic linker, `redoxt-rt`, and `redox-ioctl` sources changed
+- (libc) Anhad Singh fixed `memcmp()` to use `read_unaligned` where alignment is not guaranteed
+- (libc) Anhad Singh fixed the `make all` command not triggering a rebuild when the dynamic linker, `redox-rt`, and `redox-ioctl` sources changed
 - (libc) Anhad Singh fixed build log message colours
 - (libc) Anhad Singh did a cleanup in POSIX threads mutex code
 - (libc) Wildan Mubarok implemented the `malloc_usable_size()` function to allow efficient pointer memory allocation and improve `malloc` leaks debugging
@@ -220,7 +220,7 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 
 - (app) Jeremy Soller fixed the `mdp`, Gigalomania and `vvvvvv` compilation
 - (app) Jeremy Soller moved all recipe fonts and icons to `/usr/share` to comply with Linux FHS
-- (app) Anhad Singh fixed the GNU Awk compilation
+- (app) Anhad Singh fixed the [GNU Awk](https://www.gnu.org/software/gawk/) compilation
 - (app) Wildan Mubarok enabled wide character support in the `libstdc++` library to help Firefox porting
 - (app) Wildan Mubarok removed the `epoch-update` branch pin from COSMIC programs to quickly get improvements and fixes
 - (app) Bendeguz Pisch confirmed that [file](https://www.darwinsys.com/file/) and [jq](https://jqlang.org/) are working
