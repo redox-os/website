@@ -7,6 +7,10 @@ date = "2026-01-31"
 Redox OS is a complete Unix-like general-purpose microkernel-based operating system
 written in Rust. January was a very exciting month for Redox! Here's all the latest news.
 
+- Development on Redox
+
+<img src="/img/screenshot/dev-on-redox.png" class="img-responsive"/>
+
 ## Donate to Redox
 
 If you would like to support Redox, please consider donating or buying some merch!
@@ -24,34 +28,34 @@ Thanks a lot for your help and dedication Ibuki!
 
 ## os-test in FOSDEM 2026
 
-Sortix creator Jonas 'Sortie' Termansen [presented the `os-test` test suite](https://fosdem.org/2026/schedule/event/CMCWY9-os-test_measuring_posix_compliance_on_every_single_os/) at FOSDEM.
+[Sortix](https://sortix.org/) creator Jonas 'Sortie' Termansen [presented the `os-test` test suite](https://fosdem.org/2026/schedule/event/CMCWY9-os-test_measuring_posix_compliance_on_every_single_os/) at FOSDEM.
 [`os-test`](https://nlnet.nl/project/Sortix/) is another project supported by NGI Zero Commons and NLnet.
 This test suite has allowed us to find and fix many (from easy to hard) bugs,
 and to increase our confidence in our compliance to the POSIX standard.
 
 ## Cargo Project Compilation in Redox!
 
-Cargo and Rustc are now working on Redox! Thanks to Anhad Singh and his southern-hemisphere Redox Summer of Code project,
+Cargo and `rustc` are now working on Redox! Thanks to Anhad Singh and his southern-hemisphere Redox Summer of Code project,
 we are now able to compile your favorite Rust CLI and TUI programs on Redox.
-Build systems are often one of the most challenging things for an operating system to support,
+Compilers are often one of the most challenging things for a new operating system to support,
 because of the intensive and somewhat scattershot use of resources.
 
 This is our third major push to get the Rust compiler (`rustc`) and Cargo running on Redox,
-and this time we were able to address the Redox side of stable execution on single-core and multi-core CPUs.
+and this time we were able to ahieve relatively stable execution on single-core and multi-core CPUs.
 The [first attempt](https://www.redox-os.org/news/gsoc-self-hosting-final/),
-which was focused on porting Cargo and Rustc, made significant progress,
+which was focused on porting Cargo and `rustc`, made significant progress,
 but wasn't completed due to the amount of system-level work remaining (dynamic linking, better thread support, interruptable system calls).
 The [second attempt](https://www.redox-os.org/news/focusing-on-rustc/) got the compilation of `rustc` for Redox working,
-but Redox was not yet up to running rustc, and Cargo was yet another story.
+but Redox was not yet up to running `rustc`, and Cargo was yet another story.
 
 Having worked through many of the more challenging parts
 of POSIX-compliant support for threads, signals, dynamic linking, and general system stability,
 we were finally ready to try again.
 
 Over the last 3 months, Anhad has tackled a wide range of kernel, signals and networking problems,
-with support from Jeremy Soller and 4lDO2, and has gotten Cargo and rustc to the point of running successfully on Redox.
+with support from Jeremy Soller and 4lDO2, and has gotten Cargo and `rustc` to the point of running successfully on Redox.
 He successfully built [relibc](https://gitlab.redox-os.org/redox-os/relibc), [ripgrep](https://github.com/BurntSushi/ripgrep),
-[cbindgen](https://github.com/mozilla/cbindgen), and the [Redox test suite acid](https://gitlab.redox-os.org/redox-os/acid).
+[cbindgen](https://github.com/mozilla/cbindgen), and the [acid](https://gitlab.redox-os.org/redox-os/acid) (Redox test suite).
 
 Thanks very much to Anhad for making this happen!
 
@@ -62,10 +66,6 @@ Thanks very much to Anhad for making this happen!
 ## First Contribution From Redox!
 
 Using the [COSMIC Edit](https://github.com/pop-os/cosmic-edit) text editor, Anhad Singh wrote, tested, and pushed the [first relibc contribution](https://gitlab.redox-os.org/redox-os/relibc/-/merge_requests/891) entirely on Redox running in QEMU!
-
-- Development on Redox
-
-<img src="/img/screenshot/dev-on-redox.png" class="img-responsive"/>
 
 ## Capabilities on Redox!
 
@@ -122,14 +122,14 @@ Wildan Mubarok implemented a boot environment text editor in the bootloader to i
 
 ## More Boot Debugging Information and Handling
 
-Wildan Mubarok implemented a consistent set of environment variables, settable during boot, to increase logging and help diagnose driver hangs and other errors. Support for logging is through the [log](https://docs.rs/log/latest/log/enum.LevelFilter.html) crate. Redox now supports setting the following variables through the boot text editor:
-- `BOOTSTRAP_LOG_LEVEL` - bootstrap and process manager logging verbosity
+Wildan Mubarok implemented a consistent set of environment variables, configured during boot, to increase logging and help diagnose driver or system component hangs and other errors. Support for logging is through the [log](https://docs.rs/log/latest/log/enum.LevelFilter.html) crate. Redox now supports setting the following variables through the boot environment editor:
+- `BOOTSTRAP_LOG_LEVEL` - Bootstrap and process manager logging verbosity
 - `INIT_LOG_LEVEL` - `init` logging verbosity
-- `DRIVER_LOG_LEVEL` - logging verbosity for all drivers
-- `DRIVER_*_LOG_LEVEL` - driver-specific logging verbosity
-- `RELIBC_LOG_LEVEL` - relibc logging verbosity, requires a debug build of relibc
+- `DRIVER_LOG_LEVEL` - Logging verbosity for all drivers
+- `DRIVER_*_LOG_LEVEL` - Driver-specific logging verbosity
+- `RELIBC_LOG_LEVEL` - `relibc` logging verbosity (the `no_trace` feature flag need to be disabled)
 
-Recognized settings for the log levels are:
+Supported settings for the log levels are:
 - `ERROR` - Condition that prevents normal operation of a service or driver. Not fatal unless a critical service is affected.
 - `WARN` - Unexpected condition, usually recoverable.
 - `INFO` - Normal condition, useful for monitoring the service or driver.
@@ -143,7 +143,7 @@ You can see an example output below:
 2026-01-12T22-27-51.760Z [@ps2d::controller:337 ERROR] ps2d: keyboard failed to reset: 55
 ```
 
-He also implemented the `INIT_SKIP` environment variable to bypass process hangs during init.
+He also implemented the `INIT_SKIP` environment variable to bypass process hangs during initialization.
 The syntax is `INIT_SKIP=executable1-name,executable2-name,...`
 
 ## Login Manager Options
@@ -159,7 +159,6 @@ Wildan Mubarok implemented a power menu (reboot/shutdown options) and a keyboard
 Jeremy Soller converted the `base` repo into a Cargo workspace,
 to unify the version management of libraries for all core system components and drivers.
 This should help reduce errors and duplicated effort when upgrading crates.
-
 
 ## Kernel Improvements
 
@@ -226,7 +225,7 @@ This should help reduce errors and duplicated effort when upgrading crates.
 - (libc) Landon Propes improved the `psiginfo()` function performance by removing memory allocations
 - (libc) Landon Propes fixed some namespace pollution
 - (libc) Pascal Reich implemented mathematical constants
-- (libc) sourceturner migrated many functions to use `#!\[deny(unsafe_op_in_unsafe_fn)\]`, which helps reduce the amount of unsafe code in relibc, and documents the specific sections that are required to be unsafe
+- (libc) sourceturner migrated many functions to use `#!\[deny(unsafe_op_in_unsafe_fn)\]`, which helps reduce the amount of unsafe code, and documents the specific sections that are required to be unsafe
 - (libc) Akshit Gaur fixed the `%g` number modifier in the `printf()` function
 - (libc) Mustafa Oz fixed an error when the `ppoll` timeout number overflow
 - (libc) auronandace fixed some regressions in tests
@@ -248,7 +247,7 @@ This should help reduce errors and duplicated effort when upgrading crates.
 
 - (gui) Wildan Mubarok exposed numpad, arrow and media keyboard keys to `orbclient` library
 - (gui) Wildan Mubarok implemented scrolling and numpad lock keys handling in `orbclient` library
-- (gui) Wildan Mubarok improved the wallpaper processing performance 4 times (400%) by caching the first image decoding to a BMP file for fastest CPU performance, in a QEMU benchmark without KVM acceleration he reported the processing time being reduced from almost 10 seconds (in a cold cache) to around ~350ms (in a hot cache)
+- (gui) Wildan Mubarok improved the wallpaper processing performance 4 times (400%) by caching the first image decoding to a BMP file for fastest CPU performance, in a QEMU benchmark (without KVM acceleration) he reported the processing time being reduced from almost 10 seconds (in a cold cache) to around ~350ms (in a hot cache)
 - (gui) bjorn3 did some code cleanups in the `orbclient` library
 - (gui) bjorn3 moved the Orbital data to the `/usr/share/ui` directory to comply with Linux FHS
 - (gui) bjorn3 simplified Orbital utilities recipe source fetch which reduced their build time
@@ -294,7 +293,7 @@ This should help reduce errors and duplicated effort when upgrading crates.
 - (build) Wildan Mubarok enabled `sccache` build status log to say if compilation is using outdated cached library objects and improve debugging
 - (build) Wildan Mubarok moved the `prefix_clean` target relibc logic to the `static_clean` target to avoid confusion between `prefix` and relibc/statically linked recipes cleanup
 - (build) Wildan Mubarok fixed unnecessary compilation in `recipe = "binary"` when the `dev-dependencies` data type was used
-- (build) Wildan Mubarok fixed the `make r.recipe-dependency` command to more correctly handle file system config entries of the form `recipe = "binary"`
+- (build) Wildan Mubarok fixed the `make r.recipe-dependency` command to more correctly handle file system configuration entries of the form `recipe = "binary"`
 - (build) Wildan Mubarok fixed `recipe = "ignore"` and `recipe = "local"` to also apply to their recipe dependencies
 - (build) Wildan Mubarok fixed `recipe = "ignore"` when used for recipes from meta-packages
 - (build) Ojus Chugh fixed the source dependency propagation in the `REPO_BINARY` environment variable
