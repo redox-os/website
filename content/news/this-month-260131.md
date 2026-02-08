@@ -55,7 +55,7 @@ we were finally ready to try again.
 Over the last 3 months, Anhad has tackled a wide range of kernel, signals and networking problems,
 with support from Jeremy Soller and 4lDO2, and has gotten Cargo and `rustc` to the point of running successfully on Redox.
 He successfully built [relibc](https://gitlab.redox-os.org/redox-os/relibc), [ripgrep](https://github.com/BurntSushi/ripgrep),
-[cbindgen](https://github.com/mozilla/cbindgen), and the [acid](https://gitlab.redox-os.org/redox-os/acid) (Redox test suite).
+[cbindgen](https://github.com/mozilla/cbindgen), and the [Redox test suite (acid)](https://gitlab.redox-os.org/redox-os/acid).
 
 Thanks very much to Anhad for making this happen!
 
@@ -63,7 +63,7 @@ Thanks very much to Anhad for making this happen!
 
 <img src="/img/screenshot/cargo-ripgrep.png" class="img-responsive"/>
 
-## First Contribution From Redox!
+## First Merge Request Submitted From Redox OS!
 
 Using the [COSMIC Edit](https://github.com/pop-os/cosmic-edit) text editor, Anhad Singh wrote, tested, and pushed the [first relibc contribution](https://gitlab.redox-os.org/redox-os/relibc/-/merge_requests/891) entirely on Redox running in QEMU!
 
