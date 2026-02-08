@@ -15,13 +15,45 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## Redox at FOSDEM 2026!
+
+Redox contributor Ibuki Omatsu presented on [Capability-based security for Redox](https://fosdem.org/2026/schedule/event/KSK9RB-capability-based-redox-os/) at FOSDEM.
+This is an overview of our [Capability-based Security project for Redox](https://nlnet.nl/project/Capability-based-RedoxOS/),
+which is funded by [NGI Zero Commons and NLnet](https://nlnet.nl/commonsfund/).
+Thanks a lot for your help and dedication Ibuki!
+
+## os-test in FOSDEM 2026
+
+Sortix creator Jonas 'Sortie' Termansen [presented the `os-test` test suite](https://fosdem.org/2026/schedule/event/CMCWY9-os-test_measuring_posix_compliance_on_every_single_os/) at FOSDEM.
+[`os-test`](https://nlnet.nl/project/Sortix/) is another project supported by NGI Zero Commons and NLnet.
+This test suite has allowed us to find and fix many (from easy to hard) bugs,
+and to increase our confidence in our compliance to the POSIX standard.
+
 ## Cargo Project Compilation in Redox!
 
-Anhad Singh successfully implemented the necessary fixes for compiling Cargo projects on Redox!
+Cargo and Rustc are now working on Redox! Thanks to Anhad Singh and his southern-hemisphere Redox Summer of Code project,
+we are now able to compile your favorite Rust CLI and TUI programs on Redox.
+Build systems are often one of the most challenging things for an operating system to support,
+because of the intensive and somewhat scattershot use of resources.
 
-This is the third attempt to run the Rust compiler (`rustc`) and Cargo on Redox and the first focused on stable execution in single-core or multi-core CPUs. The [first attempt](https://www.redox-os.org/news/gsoc-self-hosting-final/) made significant progress but wasn't completed due to the amount of work remaining. The [second attempt](https://www.redox-os.org/news/focusing-on-rustc/) fixed `rustc` compilation but did not run on Redox yet.
+This is our third major push to get the Rust compiler (`rustc`) and Cargo running on Redox,
+and this time we were able to address the Redox side of stable execution on single-core and multi-core CPUs.
+The [first attempt](https://www.redox-os.org/news/gsoc-self-hosting-final/),
+which was focused on porting Cargo and Rustc, made significant progress,
+but wasn't completed due to the amount of system-level work remaining (dynamic linking, better thread support, interruptable system calls).
+The [second attempt](https://www.redox-os.org/news/focusing-on-rustc/) got the compilation of `rustc` for Redox working,
+but Redox was not yet up to running rustc, and Cargo was yet another story.
 
-He successfully built [relibc](https://gitlab.redox-os.org/redox-os/relibc), [ripgrep](https://github.com/BurntSushi/ripgrep), [cbindgen](https://github.com/mozilla/cbindgen), and [acid](https://gitlab.redox-os.org/redox-os/acid) on Redox.
+Having worked through many of the more challenging parts
+of POSIX-compliant support for threads, signals, dynamic linking, and general system stability,
+we were finally ready to try again.
+
+Over the last 3 months, Anhad has tackled a wide range of kernel, signals and networking problems,
+with support from Jeremy Soller and 4lDO2, and has gotten Cargo and rustc to the point of running successfully on Redox.
+He successfully built [relibc](https://gitlab.redox-os.org/redox-os/relibc), [ripgrep](https://github.com/BurntSushi/ripgrep),
+[cbindgen](https://github.com/mozilla/cbindgen), and the [Redox test suite acid](https://gitlab.redox-os.org/redox-os/acid).
+
+Thanks very much to Anhad for making this happen!
 
 - `ripgrep` compilation on Redox
 
@@ -39,13 +71,13 @@ Using the [COSMIC Edit](https://github.com/pop-os/cosmic-edit) text editor, Anha
 
 Ibuki Omatsu successfully implemented the initial capability-based security infrastructure which allows our permission and sandbox system to be much more granular and secure.
 
-The capability-based system has been implemented for scheme visibility which is configurable per-user, through the concept of Namespaces. There is work to do as many system services and drivers uses effective UID and GID as the only mechanism for security. Migration into Capability-based security will be gradually implemented to more system services in upcoming months.
+The capability-based system has been implemented for scheme visibility, which is now configurable per-user, through the concept of Namespaces. There is still work to do as many system services and drivers use effective UID and GID as the primary mechanism for security. Migration into Capability-based security will be gradually implemented to more system services in upcoming months.
 
 ## Proper SSH Support!
 
-Anhad Singh fixed (and Wildan Mubarok confirmed) the OpenSSH session exit which allow exit in remote control without manual intervention to workaround a bug where SSH sessions weren't exitting.
+Anhad Singh fixed (and Wildan Mubarok confirmed) OpenSSH session exit, which allows exit without manual intervention, to workaround a bug where SSH sessions weren't exiting.
 
-Now we can remotely control Redox in QEMU or real hardware without manual intervention!
+Now we can remotely control Redox in QEMU or real hardware through an automated interface!
 
 ## Massive USB Input Latency Reduction
 
@@ -67,9 +99,10 @@ Wildan Mubarok successfully [hosted a Redox VM](https://gist.github.com/willnode
 
 Our [v86 web demo](https://static.redox-os.org/online-demo/) finally reached acceptable performance in terminal mode!
 
-Wildan Mubarok also improved it to increase performance and improved UI.
+Wildan Mubarok also made improvements to performance and the UI.
+It should be noted, however, that the performance of the web demo
+is far below the performance of Redox running on QEMU with KVM, or on real hardware.
 
-(Keep in mind that the QEMU KVM or real hardware performance is much better)
 
 <img src="/img/screenshot/online-demo.png" class="img-responsive"/>
 
@@ -89,13 +122,19 @@ Wildan Mubarok implemented a boot environment text editor in the bootloader to i
 
 ## More Boot Debugging Information and Handling
 
-Wildan Mubarok implemented the `BOOTSTRAP_LOG_LEVEL` (bootstrap and process manager logging verbosity), `INIT_LOG_LEVEL` (init logging verbosity), `DRIVER_LOG_LEVEL` (driver logging verbosity), `DRIVER_*_LOG_LEVEL` (driver-specific logging verbosity), and `RELIBC_LOG_LEVEL` (relibc logging verbosity, require a debug build) bootloader environment variables to easily show more information in boot problems like hangs or errors, he implemented these log levels using the [log](https://docs.rs/log/latest/log/enum.LevelFilter.html) library:
+Wildan Mubarok implemented a consistent set of environment variables, settable during boot, to increase logging and help diagnose driver hangs and other errors. Support for logging is through the [log](https://docs.rs/log/latest/log/enum.LevelFilter.html) crate. Redox now supports setting the following variables through the boot text editor:
+- `BOOTSTRAP_LOG_LEVEL` - bootstrap and process manager logging verbosity
+- `INIT_LOG_LEVEL` - `init` logging verbosity
+- `DRIVER_LOG_LEVEL` - logging verbosity for all drivers
+- `DRIVER_*_LOG_LEVEL` - driver-specific logging verbosity
+- `RELIBC_LOG_LEVEL` - relibc logging verbosity, requires a debug build of relibc
 
-- `ERROR` value: Known event that is a fatal error but recoverable.
-- `WARN` value: Unexpected event coming from unexpected condition.
-- `INFO` value: Significant event mostly useful for developer.
-- `DEBUG` value: Detailed event monitoring to show how the service is being used.
-- `TRACE` value: Very verbose information which is only useful when debugging.
+Recognized settings for the log levels are:
+- `ERROR` - Condition that prevents normal operation of a service or driver. Not fatal unless a critical service is affected.
+- `WARN` - Unexpected condition, usually recoverable.
+- `INFO` - Normal condition, useful for monitoring the service or driver.
+- `DEBUG` - Detailed event monitoring to help analyze problems.
+- `TRACE` - Very verbose information which is only useful when debugging.
 
 You can see an example output below:
 
@@ -104,7 +143,8 @@ You can see an example output below:
 2026-01-12T22-27-51.760Z [@ps2d::controller:337 ERROR] ps2d: keyboard failed to reset: 55
 ```
 
-He also implemented the `INIT_SKIP` environment variable to skip process hangs, the syntax is: `INIT_SKIP=executable-name` (commas are supported for multiple executable processes)
+He also implemented the `INIT_SKIP` environment variable to bypass process hangs during init.
+The syntax is `INIT_SKIP=executable1-name,executable2-name,...`
 
 ## Login Manager Options
 
@@ -116,24 +156,19 @@ Wildan Mubarok implemented a power menu (reboot/shutdown options) and a keyboard
 
 ## Cargo Workspace Unification
 
-Jeremy Soller added all system components and drivers to a Cargo workspace to unify the version management of libraries in one place, which allow faster development and less breakage.
+Jeremy Soller converted the `base` repo into a Cargo workspace,
+to unify the version management of libraries for all core system components and drivers.
+This should help reduce errors and duplicated effort when upgrading crates.
 
-## Redox Capabilities in FOSDEM 2026
-
-Ibuki Omatsu [presented the Capability-based security project](https://fosdem.org/2026/schedule/event/KSK9RB-capability-based-redox-os/) at FOSDEM, thanks a lot for your help and dedication Ibuki!
-
-## os-test in FOSDEM 2026
-
-Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedule/event/CMCWY9-os-test_measuring_posix_compliance_on_every_single_os/) at FOSDEM and mentioned Redox, this test suite allowed us to find and fix many bugs (from easy to hard).
 
 ## Kernel Improvements
 
 - (kernel) Jeremy Soller reduced the context switch cost by only reading the system time once
 - (kernel) Jeremy Soller fixed a potential preemption guard deadlock
-- (kernel) Jeremy Soller improved the error handling to disable event queue recursive registering in the same queue to fix X11 and D-Bus bugs
+- (kernel) Jeremy Soller improved error handling to prevent recursive registering in the same event queue, to fix X11 and D-Bus bugs
 - (kernel) Jeremy Soller removed the legacy scheme path warning
 - (kernel) Anhad Singh fixed a context switch deadlock
-- (kernel) Anhad Singh fixed the `mremap` system call mapping size behavior causing a panic when running Cargo
+- (kernel) Anhad Singh fixed the `mremap` system call, which was causing a panic when running Cargo
 - (kernel) Anhad Singh fixed the `futex` syscall behaviour where spurious wake-ups were incorrectly treated as timeout expirations
 - (kernel) Pascal Reich improved and fixed typos in the documentation
 
@@ -141,24 +176,24 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 
 - (drivers) Jeremy Soller implemented the support for more PS/2 devices
 - (drivers) Jeremy Soller implemented initial PS/2 touchpad support
-- (drivers) Jeremy Soller reduced the USB HID input latency by temporarily using spinloops instead of sleep until sleep accuracy is better
 - (drivers) Jeremy Soller enabled interrupt-driven initialization in the PS/2 driver to improve reliability and not delay keyboard handling
+- (drivers) Jeremy Soller reduced the USB HID input latency by temporarily using spinloops instead of sleep, until sleep accuracy is better
 - (drivers) Jeremy Soller updated the USB HID driver to use the `anyhow` library for better error handling
 - (drivers) Jeremy Soller fixed a xHCI error message typo in USB drivers
 - (drivers) Jeremy Soller reduced unnecessary logging in xHCI driver by default
-- (drivers) Wildan Mubarok exposed error reasons in the PS/2 driver initialization logging to improve debugging and save time
+- (drivers) Wildan Mubarok improved the PS/2 driver initialization logging to report error causes
 - (drivers) Wildan Mubarok fixed a mouse pointer warping bug when using the QEMU GTK frontend with USB relative mouse
 - (drivers) bjorn3 unified the common PCI-based device drivers initialization code into the PCI driver
 
 ## System Improvements
 
-- (sys) 4lDO2 replaced [our `kill` implementation](https://gitlab.redox-os.org/redox-os/coreutils/-/merge_requests/221) with the [`uutils` implementation](https://github.com/uutils/coreutils), which has the GNU/Linux command syntax and avoid confusion with a different syntax
+- (sys) 4lDO2 replaced [our `kill` implementation](https://gitlab.redox-os.org/redox-os/coreutils/-/merge_requests/221) with the [`uutils` implementation](https://github.com/uutils/coreutils), which has the familiar GNU/Linux command syntax, reducing confusion
 - (sys) bjorn3 implemented dynamic linking support on `initfs`
 - (sys) Wildan Mubarok enabled the `nproc` tool from `uutils` implementation
 - (sys) Wildan Mubarok fixed `fbcond` error handling by not panicking when a display is not used
 - (sys) Wildan Mubarok added a temporary workaround to fix `EBADF` in the `setsockopt()` function
 - (sys) Wildan Mubarok fixed `uutils` localization init for ARM64
-- (sys) Wildan Mubarok fixed a problem in `rustysd` where it was only been able to spawn one program, and updating `server-demo` variant to spawn NGINX, OpenSSH and PHP built-in server from `rustysd` service files.
+- (sys) Wildan Mubarok fixed a problem in `rustysd` where it was only able to spawn one program, and updated the `server-demo` variant to spawn NGINX, OpenSSH and the PHP built-in server from `rustysd` service files.
 
 ## Relibc Improvements
 
@@ -191,7 +226,7 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 - (libc) Landon Propes improved the `psiginfo()` function performance by removing memory allocations
 - (libc) Landon Propes fixed some namespace pollution
 - (libc) Pascal Reich implemented mathematical constants
-- (libc) sourceturner migrated the code of many functions to use the new unsafe Rust syntax which allow safe Rust syntax usage, which help to prevent more bugs and ease bug hunt due to less places to suspect
+- (libc) sourceturner migrated many functions to use `#!\[deny(unsafe_op_in_unsafe_fn)\]`, which helps reduce the amount of unsafe code in relibc, and documents the specific sections that are required to be unsafe
 - (libc) Akshit Gaur fixed the `%g` number modifier in the `printf()` function
 - (libc) Mustafa Oz fixed an error when the `ppoll` timeout number overflow
 - (libc) auronandace fixed some regressions in tests
@@ -206,7 +241,7 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 
 ## RedoxFS Improvements
 
-- (redoxfs) Jeremy Soller delayed the deletion of an unlinked file until all open file descriptors are closed to improve POSIX anonymous file compatibility
+- (redoxfs) Jeremy Soller delayed the deletion of an unlinked file until all open file descriptors are closed to improve POSIX anonymous file and delete-on-close compatibility
 - (redoxfs) Jeremy Soller added a workaround to partially fix memory leaks
 
 ## Orbital Improvements
@@ -259,8 +294,8 @@ Jonas Sortie [presented the `os-test` test suite](https://fosdem.org/2026/schedu
 - (build) Wildan Mubarok enabled `sccache` build status log to say if compilation is using outdated cached library objects and improve debugging
 - (build) Wildan Mubarok moved the `prefix_clean` target relibc logic to the `static_clean` target to avoid confusion between `prefix` and relibc/statically linked recipes cleanup
 - (build) Wildan Mubarok fixed unnecessary compilation in `recipe = "binary"` when the `dev-dependencies` data type was used
-- (build) Wildan Mubarok fixed the `make r.recipe-dependency` command not ignoring when used in recipe dependencies when `recipe = "binary"` was used
-- (build) Wildan Mubarok fixing `recipe "ignore"` and `recipe = "local"` also applying to their recipe dependencies
+- (build) Wildan Mubarok fixed the `make r.recipe-dependency` command to more correctly handle file system config entries of the form `recipe = "binary"`
+- (build) Wildan Mubarok fixed `recipe = "ignore"` and `recipe = "local"` to also apply to their recipe dependencies
 - (build) Wildan Mubarok fixed `recipe = "ignore"` when used for recipes from meta-packages
 - (build) Ojus Chugh fixed the source dependency propagation in the `REPO_BINARY` environment variable
 - (build) Ribbon fixed the QEMU RISC-V firmware location in Fedora
