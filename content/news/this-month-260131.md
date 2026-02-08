@@ -41,7 +41,7 @@ Compilers are often one of the most challenging things for a new operating syste
 because of the intensive and somewhat scattershot use of resources.
 
 This is our third major push to get the Rust compiler (`rustc`) and Cargo running on Redox,
-and this time we were able to ahieve relatively stable execution on single-core and multi-core CPUs.
+and this time we were able to achieve relatively stable execution on single-core and multi-core CPUs.
 The [first attempt](https://www.redox-os.org/news/gsoc-self-hosting-final/),
 which was focused on porting Cargo and `rustc`, made significant progress,
 but wasn't completed due to the amount of system-level work remaining (dynamic linking, better thread support, interruptable system calls).
