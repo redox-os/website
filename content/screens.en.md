@@ -64,6 +64,10 @@ title = "Redox in Action"
 
 <img class="img-responsive" src="/img/screenshot/htop.png"/>
 
+## bottom
+
+<img class="img-responsive" src="/img/screenshot/bottom.png"/>
+
 ## Running htop and ffplay
 
 <img class="img-responsive" src="/img/screenshot/htop-ffplay.jpg"/>
@@ -71,6 +75,18 @@ title = "Redox in Action"
 ## SDL2 Gears
 
 <img class="img-responsive" src="/img/screenshot/sdl2-gears.png"/>
+
+## MATE Desktop
+
+<img class="img-responsive" src="/img/screenshot/mate-desktop.png"/>
+
+## Cargo compilation
+
+<img class="img-responsive" src="/img/screenshot/cargo-ripgrep.png"/>
+
+## Development
+
+<img class="img-responsive" src="/img/screenshot/dev-on-redox.png"/>
 
 ## Software Showcase 1
 
@@ -90,17 +106,25 @@ title = "Redox in Action"
 
 <img class="img-responsive" src="/img/screenshot/installer-gui.png"/>
 
+## Redox running in the [Vultr](https://www.vultr.com/) VPS
+
+<img class="img-responsive" src="/img/screenshot/vultr.png"/>
+
 ## Redox running in the [RVVM](https://github.com/LekKit/RVVM) emulator
 
 <img class="img-responsive" src="/img/screenshot/rvvm.png"/>
 
-## Redox running in the [v86](https://github.com/copy/v86) emulator
+## Redox running in the web browser using the [v86](https://github.com/copy/v86) emulator
 
-<img class="img-responsive" src="/img/screenshot/v86.png"/>
+<img class="img-responsive" src="/img/screenshot/online-demo.png"/>
 
 ## Redox RISC-V running in Redox x86-64
 
 <img class="img-responsive" src="/img/screenshot/redox-on-redox.png"/>
+
+## Boot loader environment editor
+
+<img class="img-responsive" src="/img/screenshot/bootloader-editor.png"/>
 
 ## First Screenshot (2015)
 
@@ -153,6 +177,10 @@ title = "Redox in Action"
 ## ThinkPad T520, ThinkPad P50 and Asus P7P55D-E Pro Desktop
 
 <img class="img-responsive" src="/img/hardware/T520-P50-Asus-Desktop.jpg"/>
+
+## Intel GPU driver running on System76 Galago Pro
+
+<img class="img-responsive" src="/img/hardware/intel-graphics.jpg"/>
 
 # Desktops
 

@@ -2,11 +2,25 @@
 title = "Talks"
 +++
 
+(Using newest-to-oldest order)
+
+## FOSDEM 2026
+
+**By Ibuki Omatsu on February 1, 2026**
+
+- https://fosdem.org/2026/schedule/event/KSK9RB-capability-based-redox-os/
+
 ## RustConf 2025
 
 **By Jeremy Soller on September 4, 2025**
 
 <iframe width="800" height="640" src="https://www.youtube.com/embed/xlccq9EbXGA?si=ETYWSkPUVK35Gm97" title="10 Years of Rust and Redox" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## FOSDEM 2025
+
+**By Jacob Lorentzon on February 1, 2025**
+
+- https://archive.fosdem.org/2025/schedule/event/fosdem-2025-5670-posix-signals-in-user-space-on-the-redox-microkernel/
 
 ## Tech Over Tea
 
