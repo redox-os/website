@@ -54,8 +54,8 @@ url = "home"
                   href="https://gitlab.redox-os.org/redox-os/drivers">drivers</a></li>
               <li><a href="/faq/#how-redox-was-influenced-by-other-systems">Inspired by Plan 9, Minix, seL4, BSD and
                   Linux</a></li>
-              <li>Much smaller <a href="https://en.wikipedia.org/wiki/Attack_surface" target="_blank">attack of
-                  surface</a>
+              <li>Much smaller <a href="https://en.wikipedia.org/wiki/Attack_surface" target="_blank">surface of
+                  attack</a>
                 compared to Linux</li>
               <li>See our <a href="https://doc.redox-os.org/book/security.html">security features</a></li>
             </ul>
