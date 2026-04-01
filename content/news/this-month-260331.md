@@ -33,6 +33,12 @@ Wildan Mubarok updated GNU Bash and other programs to use the `ncurses` library 
 
 <img src="/img/screenshot/shell-unicode.png" class="img-responsive"/>
 
+## Faster Recipe Push
+
+Wildan Mubarok implemented the support for partial updates based on package checksum changes which reduced the recipe push and testing time in development.
+
+Partial updates based on package file checksum changes (like in Fedora DNF and Flatpak) will be implemented soon.
+
 ## AI Policy and Contribution Terms
 
 We adopted a [AI policy](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md#ai-policy) and [Contribution Terms](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md#contribution-terms) :
@@ -50,19 +56,31 @@ When making a contribution you agree to the following terms:
 
 ## Kernel Improvements
 
-- (kernel) 
+- (kernel) bjorn3 did some fixes to the debugger
+- (kernel) Wildan Mubarok improved performance by removing a unnecessary `Vec` memory allocation and a heap memory allocation
+- (kernel) Wildan Mubarok improved the system stats performance
+- (kernel) auronandace did some code cleanup
+- (kernel) auronandace enabled some Clippy lints
 
 ## Driver Improvements
 
-- (drivers) 
+- (drivers) bjorn3 implemented page flipping in the Intel graphics driver
+- (drivers) bjorn3 implemented more Linux DRM APIs, custom ioctls aren't needed anymore
+- (drivers) bjorn3 did many code cleanups
 
 ## System Improvements
 
-- (sys) 
+- (sys) bjorn3 moved the bootloader, kernel, and `initfs` directories to `/usr/lib/boot` to allow the bootloader to be updated from the package manager in the future
+- (sys) bjorn3 moved the `root` user directory to `/home/root`
+- (sys) auronandace enabled some Clippy lints
 
 ## Relibc Improvements
 
+- (libc) Ibuki Omatsu fixed a possible deadlock in `chdir`
+- (libc) Wildan Mubarok implemented long double support in the `printf()` function
 - (libc) auronandace fixed a namespace pollution
+- (libc) auronandace did many header and code cleanups
+- (libc) auronandace enabled some Clippy lints
 
 ## Networking Improvements
 
@@ -72,17 +90,28 @@ When making a contribution you agree to the following terms:
 
 - (redoxfs) 
 
+## Orbital Improvements
+
+- (gui) bjorn3 fixed a crash in the launcher (dock bar) when no child processes are running
+- (gui) bjorn3 unified all `orbutils` recipes
+- (gui) bjorn3 removed the abandoned `calculator`, `calendar`, and `character_map` programs from the `orbutils` suite
+
 ## Programs
 
 - (app) 
 
 ## Build System Improvements
 
-- (build) 
+- (build) Wildan Mubarok updated the `PREFIX_BINARY` environment variable to allow the x86-64 toolchain to be used in ARM64 Linux
+- (build) Wildan Mubarok implemented the `cargopackages` (Cargo packages to be built), `cargoexamples` (Cargo examples to be built) and `cargo_path` (The path of a Cargo package not declared in the `Cargo.toml` configuration) recipe data types to improve and simplify configuration
+- (build) bjorn3 enabled networking in all Redox variants to unify configurations
+- (build) bjorn3 removed unnecessary software-specific and CPU-specific filesystem configurations
+- (build) bjorn3 did a code deduplication and cleanup
+- (build) Zhiwei Liang removed duplicated dependencies from Podman and Native builds
 
 ## Documentation Improvements
 
-- (doc) 
+- (doc) Anthony Tacquet did many grammar fixes to the book
 
 ## How To Test The Changes
 
