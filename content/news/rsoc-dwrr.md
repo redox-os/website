@@ -17,6 +17,8 @@ RedoxOS currently uses a simple [Round Robin Scheduler](https://osdev.wiki/wiki/
 
 Imagine you are sitting at a bar with a few of your friends, the bar has all drinks free for tonight, and as a result the bar is understaffed with the number of bartenders significantly less than the customers. The bartenders start from the left, serve the customer, and move to their right.
 
+Some patrons drink slowly and may still have a drink when the bartender returns. As a result, even though not everyone needs a new drink each time, bartenders must still check with them, which introduces inefficiency into the system.
+
 This system works well enough, customers wait for a while, but everybody waits for the same time, and everyone is happy, or at least equally unhappy.
 
 Unfortunately for these bartenders, a local politician, with quite a short temper and a very large ego, happens to be one of the customers today. If these poor batenders follow their usual protocol and treat the VIP same as the rest, he will sigterm their employment, but bound by the protocol they have no choice but move in a loop seeing the VIP boil in rage.
@@ -28,7 +30,7 @@ Enter..
 
 # [Deficit Weighted Round Robin Scheduler](https://en.wikipedia.org/wiki/Deficit_round_robin)
 
-Following the debacle at the bar, the offer for free drinks is now over, but the bartenders REALLY like to give free drinks, so they come up with a solution, a stone to kill two birds!
+Following the debacle at the bar, the offer for free drinks is now over, but the bartenders REALLY like to give free drinks, so they come up with a solution!
 
 They set up 3 token dispensers, each giving out tokens at different speeds, 1, 2, and 4 tokens per second. Three queues form along these dispensers, with a bouncer assigning each customer to a row. The price for a beer has been decided as two tokens, so customer standing in queue A waits two ticks before leaving, while the customer in queue C can afford two beers in just one tick. The customer then leaves the queue and "purchases" the beer!
 
@@ -127,6 +129,8 @@ For comparing the different schedulers, I built an [isolated testing harness](ht
     ```
     
     As this is a very idealised workflow, the only important metric to note here is Avg Response Time, as we will see further, the response time for RR is the lowest, but as discussed previously, we have no way of assigning different priorities to our tasks.
+    
+    Response Time is how long it takes a task to start running (time of first execution - time of arrival)
 
 2.  Deficit Weighted Round Robin
 
@@ -196,6 +200,14 @@ For comparing the different schedulers, I built an [isolated testing harness](ht
         38 |         56843 |         255.79 |      99744.21 |        274.55 |    1000
         39 |         71053 |         319.73 |      99680.27 |        294.75 |    1000
     ```
+    
+    Let's clarify the columns first-
+        i. Prio - The Priority of the task
+        ii. Theor. Weight - Its Theoretical Weight.
+        iii. Avg Execs/Task - How many times on average, a task in this priority queue was executed (Should be higher for higher priorities)
+        iv. Avg Wait/Task - How much time a task spends sitting in the run_queue waiting for a CPU to pick it up. (It is nearly same for the idealised workflows because of the sheer number of tasks vs only 16 cores)
+        v. Avg Resp/Task - The time from when a task first arrives to the very first time it gets to execute on the CPU.
+        vi. Samples - Number of tasks in this priority queue.
     
     As can be seen, the avg response time has shot up from 1249 to 34459, a 27x increase!
     But the story changes when we look at Avg Execs/Task and Avg Resp/Task, a task with prio 39 has seen a significant increase in its execs, and decrease in its Resp. time!
@@ -271,7 +283,7 @@ For comparing the different schedulers, I built an [isolated testing harness](ht
         39 |         71053 |          80.69 |      99919.31 |        619.84 |    1000
     ```
     
-    The avg response time is significantly less than the non-interleaved one.
+    The avg response time is significantly less than the non-interleaved one, but on the other hand Avg Execs/Task are no longer as extreme as DWRR. The difference in Execs in any two adjacent priorities is now quite small, especially at the extremes.
     
     As can be seen the interleaved scheduler is a lot more fair while still giving us a method to prioritise some tasks.
 
@@ -461,6 +473,7 @@ for _ in 0..self.cores.len() {
         38 |         56843 |        1866.29 |      44897.07 |         25.55 |      42
         39 |         71053 |        1871.83 |      46633.38 |         26.17 |      42
     ```
+    The Avg Response Time is now 11x lower than standard DWRR while the highes priority queues have gone from 6 ticks to 26 in response time. Avg Execs show do show a large reduction for higher priorities from ~7000 ticks to ~1800 ticks.
     
     I think I have convinced you by this point that interleaved DWRR is a good middle ground between the fairness of the simple RR and the performance in DWRR (for high priority tasks)!
 
@@ -469,7 +482,7 @@ for _ in 0..self.cores.len() {
 
 1.  PixelCannon
 
-    The current simple Round Robin gives ~1000 fps with two CPU hogging (while true) programs running in the background.
+    The current simple Round Robin gives ~1000 fps with two CPU hogging (`while true; do :; done` in bash, or `while (1) printf("Hello!\n");` in C) programs running in the background.
     
     On the other hand, the new scheduler with 0 prio for all, gives ~1000 fps too with some margin of error.
     
@@ -492,7 +505,7 @@ for _ in 0..self.cores.len() {
 
 While the simulator showed us the theoretical limits, the bare-metal tests prove the architecture works as intended under contention.
 
-By running two aggressive background \`while(true)\` CPU hogs, we forced the system into a high-contention state:
+By running two aggressive background \`while(true)\` CPU hogs, we forced the system into a high-contention state, allowing us to compare behaviour under load:
 
 1.  ****Interactive Workloads (Pixelcannon):**** By \`renice\`-ing pixelcannon to a higher priority, boosting framerates from ~1000 FPS to ~1150 FPS (a 15% gain in interactive responsiveness).
 2.  ****Context-Switch Latency (Schedrs):**** The most dramatic improvement was in pure scheduling overhead. Ops/sec jumped from 243 to 360 (a 48% increase), and median wakeup latencies dropped massively.
