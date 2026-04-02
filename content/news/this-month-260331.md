@@ -27,11 +27,23 @@ This is the first advanced window content to be drawed in the compositor.
 
 Ibuki Omatsu migrated the namespace and process CWD to capabilities which improved their security strength, you can read his report on [this](https://www.redox-os.org/news/nlnet-cap-nsmgr-cwd/) page.
 
+## Kernel Deadlock Detection
+
+Wildan Mubarok implement a method to tune kernel components to trigger deadlocks and detect them more easily.
+
+This and ordered locks being added in more parts of the kernel are helping us to be almost deadlock-free in the kernel, which will eliminate userspace hangs and ease testing/debugging.
+
+Thanks Wildan for moving forward this difficult and time consuming effort.
+
 ## Unicode Everywhere
 
 Wildan Mubarok updated GNU Bash and other programs to use the `ncurses` library variant with Unicode support (ncursesw).
 
 <img src="/img/screenshot/shell-unicode.png" class="img-responsive"/>
+
+## pkgar Compression!
+
+Wildan Mubarok implemented compression in `pkgar` packages and enabled in the package server, it will help to download and install packages faster by reducing the network stack slowness impact.
 
 ## Faster Recipe Push
 
@@ -57,28 +69,61 @@ When making a contribution you agree to the following terms:
 ## Kernel Improvements
 
 - (kernel) bjorn3 did some fixes to the debugger
+- (kernel) bjorn3 unified the Redox memory manager submodule in the kernel
+- (kernel) bjorn3 fixed many code warnings
+- (kernel) bjorn3 did many code cleanups
+- (kernel) Wildan Mubarok added more ordered locks
 - (kernel) Wildan Mubarok improved performance by removing a unnecessary `Vec` memory allocation and a heap memory allocation
 - (kernel) Wildan Mubarok improved the system stats performance
+- (kernel) Wildan Mubarok added more information context in deadlock debugging messages
+- (kernel) Philipp Bartsch implemented ARM64 CPU feature detection
+- (kernel) Philipp Bartsch updated the ARM64 implementers list
+- (kernel) Landon Propes replaced the build time in `uname` log with commit hash to improve bug reproduction
 - (kernel) auronandace did some code cleanup
 - (kernel) auronandace enabled some Clippy lints
 
 ## Driver Improvements
 
+- (drivers) bjorn3 implemented GPU memory mapping support in the Intel graphics driver
 - (drivers) bjorn3 implemented page flipping in the Intel graphics driver
+- (drivers) bjorn3 implemented VirtIO-GPU display resize after boot
 - (drivers) bjorn3 implemented more Linux DRM APIs, custom ioctls aren't needed anymore
+- (drivers) bjorn3 reduced code duplication in graphics drivers
 - (drivers) bjorn3 did many code cleanups
+- (drivers) Wildan Mubarok disabled panic on AML failure to allow more computers to boot
 
 ## System Improvements
 
+- (sys) bjorn3 implemented the support for scheme removal from a namespace
+- (sys) bjorn3 did some fixes in shared memory to help Wayland
 - (sys) bjorn3 moved the bootloader, kernel, and `initfs` directories to `/usr/lib/boot` to allow the bootloader to be updated from the package manager in the future
 - (sys) bjorn3 moved the `root` user directory to `/home/root`
+- (sys) bjorn3 fixed some code warnings
+- (sys) Philipp Bartsch implemented hardware-based randomness source in ARM64 random number generation
+- (sys) Wildan Mubarok updated `uutils` version to 0.7
+- (sys) Landon Propes replaced the Redox `uname` implementation with the `uutils` implementation
+- (sys) auronandace unified the version management of more libraries
 - (sys) auronandace enabled some Clippy lints
+- (sys) auronandace documented the `daemon` library code
+- (sys) auronandace documented the public functions in shared library code
 
 ## Relibc Improvements
 
 - (libc) Ibuki Omatsu fixed a possible deadlock in `chdir`
+- (libc) bjorn3 fixed the `setjmp` and `sigsetjmp` functions in ARM64
 - (libc) Wildan Mubarok implemented long double support in the `printf()` function
+- (libc) Wildan Mubarok implemented `pthread_rwlock_clock[rd/rw]lock`
+- (libc) Wildan Mubarok implemented cache in dynamic linker using shared memory
+- (libc) Wildan Mubarok added more `sysconf` POSIX constants to fix `wget` compilation
+- (libc) Wildan Mubarok reduced the dynamic linker initialization time
+- (libc) Wildan Mubarok fixed `pthread_rwlock` function timeout handling
+- (libc) Wildan Mubarok fixed `pthread_rwlock_timed[rd/rw]lock` by using real-time clock
+- (libc) Wildan Mubarok fixed a memory overflow bug in `fnmatch`
+- (libc) Wildan Mubarok updated the tests to build with `glibc` for comparisons
+- (libc) Landon Propes fixed a bug that caused many false test errors due to `fgetws` always returning `NULL` in `EOF`, now it only return `NULL` in errors
+- (libc) auronandace moved some headers to their `cbindgen` configuration
 - (libc) auronandace fixed a namespace pollution
+- (libc) auronandace reduced code duplication
 - (libc) auronandace did many header and code cleanups
 - (libc) auronandace enabled some Clippy lints
 
@@ -95,23 +140,35 @@ When making a contribution you agree to the following terms:
 - (gui) bjorn3 fixed a crash in the launcher (dock bar) when no child processes are running
 - (gui) bjorn3 unified all `orbutils` recipes
 - (gui) bjorn3 removed the abandoned `calculator`, `calendar`, and `character_map` programs from the `orbutils` suite
+- (gui) bjorn3 did some code cleanups
+
+## Packaging Improvements
+
+- (pkg) Mustafa Oz replaced some package manager panics with exit codes
+- (pkg) Wildan Mubarok did a code simplification
 
 ## Programs
 
-- (app) 
+- (app) Wildan Mubarok replaced RustPython with CPython 3.12 to avoid AI-generated code
+- (app) Wildan Mubarok reduced the CPython and NodeJS compilation time
 
 ## Build System Improvements
 
 - (build) Wildan Mubarok updated the `PREFIX_BINARY` environment variable to allow the x86-64 toolchain to be used in ARM64 Linux
 - (build) Wildan Mubarok implemented the `cargopackages` (Cargo packages to be built), `cargoexamples` (Cargo examples to be built) and `cargo_path` (The path of a Cargo package not declared in the `Cargo.toml` configuration) recipe data types to improve and simplify configuration
+- (build) Wildan Mubarok implemented the automatic update of downloaded packages when `REPO_BINARY` is enabled
+- (build) Wildan Mubarok fixed a crash when fetching recipe source without the Cookbook TUI
 - (build) bjorn3 enabled networking in all Redox variants to unify configurations
 - (build) bjorn3 removed unnecessary software-specific and CPU-specific filesystem configurations
 - (build) bjorn3 did a code deduplication and cleanup
+- (build) Philipp Bartsch added the QEMU UEFI firmware locations in NixOS
 - (build) Zhiwei Liang removed duplicated dependencies from Podman and Native builds
 
 ## Documentation Improvements
 
+- (doc) Ribbon added missing `description` fields in the Cargo projects of system components and drivers
 - (doc) Anthony Tacquet did many grammar fixes to the book
+- (doc) Hamish McIntyre-Bhatty did many grammar fixes to the book
 
 ## How To Test The Changes
 
