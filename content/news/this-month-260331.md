@@ -221,9 +221,29 @@ When making a contribution you agree to the following terms:
 
 ## Documentation Improvements
 
+- (doc) Ribbon did some improvements and fixes to the [Why a New OS?](https://doc.redox-os.org/book/why-a-new-os.html) and [Why Rust?](https://doc.redox-os.org/book/why-rust.html) pages
+- (doc) Ribbon improved the build system update instructions
+- (doc) Ribbon documented [how to only update the system in the build system](https://doc.redox-os.org/book/build-system-reference.html#update-redox)
+- (doc) Ribbon improved the [build system and system breaking change prevention and fixing](https://doc.redox-os.org/book/troubleshooting.html#prevent-and-fix-breaking-changes)
+- (doc) Ribbon used the `sys` (system recipes group) and `sys-gui` (Orbital recipes group) meta-packages to simplify the system update and troubleshooting commands in the book
+- (doc) Ribbon splitted the [automatic and manual execution of test suites](https://doc.redox-os.org/book/testing-practices.html) documentation
+- (doc) Ribbon updated and improved the Quick Workflow page
 - (doc) Ribbon added the "Copy-paste prevent and reduce typos" tip in the [Development Tips](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md#development-recommendations-and-tips) section
-- (doc) Ribbon added the "Comment out configuration or code while testing is better than removal, to remember the testing conditions and prevent mistakes from forgotten logic" tip in the Development Tips section
+- (doc) Ribbon added the "Comment out configuration or code while testing is better than removal, to remember the testing conditions and prevent mistakes from forgotten logic" tip in the "Development Tips" section
+- (doc) Ribbon documented the "Sometimes you need to rebase your MR to fix the CI testing" rule
+- (doc) Ribbon created the [Notes](https://doc.redox-os.org/book/porting-applications.html#notes) section for quick attention of the most important details in application porting
+- (doc) Ribbon improved and moved the [Packaging Policy](https://doc.redox-os.org/book/porting-applications.html#packaging-policy) section to the beginning of the Application Porting page
+- (doc) Ribbon documented the command to push meta-package recipes: `make r.meta-package,--with-package-deps`
+- (doc) Ribbon documented the `SCCACHE_BUILD` (disable/enable `sccache`) environment variable
 - (doc) Ribbon added missing `description` fields in the Cargo projects of system components and drivers
+- (doc) Ribbon used the [Learn Rust](https://rust-lang.org/learn/) reference to unify other official Rust references in the References page
+- (doc) Ribbon added the [Rust Playground](https://play.rust-lang.org/) tool in the References page
+- (doc) Wildan Mubarok created the [Advanced Cookbook Options](https://doc.redox-os.org/book/configuration-settings.html#advanced-cookbook-options) section and documented all Cookbook options
+- (doc) Wildan Mubarok created the [Cookbook Envornment Variables](https://doc.redox-os.org/book/configuration-settings.html#cookbook-environment-variables) section and documented all Cookbook environment variables
+- (doc) Wildan Mubarok improved the [Continuous Integration](https://doc.redox-os.org/book/ci.html) page a lot, if you are a Rust library or application maintainer consider to read it again
+- (doc) Wildan Mubarok documented the [`recipes/recipe-name/target/${TARGET}/toolchain` directory](https://doc.redox-os.org/book/build-system-reference.html#cookbook)
+- (doc) Wildan Mubarok documented the `PODMAN_CACHE_PULL` (disable/enable the Podman container cache download) environment variable
+- (doc) Wildan Mubarok documented the [sccache configuration](https://doc.redox-os.org/book/advanced-build.html#sccache) for Native Build
 - (doc) Anthony Tacquet did many grammar fixes to the book
 - (doc) Hamish McIntyre-Bhatty did many grammar fixes to the book
 
