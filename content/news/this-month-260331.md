@@ -68,7 +68,8 @@ When making a contribution you agree to the following terms:
 
 ## Boot Improvements
 
-- (drivers) Wildan Mubarok disabled panic on AML failure to allow more computers to boot
+- (boot) Wildan Mubarok disabled panic on AML failure to allow more computers to boot
+- (boot) Wildan Mubarok fixed `INIT_SKIP`
 - (boot) bjorn3 reduced the `initfs` size
 
 ## Kernel Improvements
@@ -77,10 +78,12 @@ When making a contribution you agree to the following terms:
 - (kernel) bjorn3 unified the Redox memory manager submodule in the kernel
 - (kernel) bjorn3 fixed many code warnings
 - (kernel) bjorn3 did many code cleanups
+- (kernel) Wildan Mubarok enabled CPU context spawn and destruction on multiple threads to fix context switch freezes
 - (kernel) Wildan Mubarok added more ordered locks
 - (kernel) Wildan Mubarok improved performance by removing a unnecessary `Vec` memory allocation and a heap memory allocation
 - (kernel) Wildan Mubarok improved the system stats performance
 - (kernel) Wildan Mubarok added more information context in deadlock debugging messages
+- (kernel) Wildan Mubarok reduced the thread lock contention in CPU context spawn
 - (kernel) Philipp Bartsch implemented ARM64 CPU feature detection
 - (kernel) Philipp Bartsch updated the ARM64 implementers list
 - (kernel) Landon Propes replaced the build time in `uname` log with commit hash to improve bug reproduction
@@ -122,16 +125,18 @@ When making a contribution you agree to the following terms:
 - (libc) Wildan Mubarok implemented long double support in the `printf()` function
 - (libc) Wildan Mubarok implemented `pthread_rwlock_clock[rd/rw]lock`
 - (libc) Wildan Mubarok implemented cache in dynamic linker using shared memory
+- (libc) Wildan Mubarok implemented cache on `exec` reusing the dynamic linker cache
 - (libc) Wildan Mubarok added more `sysconf` POSIX constants to fix `wget` compilation
 - (libc) Wildan Mubarok defined more feature macros in `unistd` to fix `boost` compilation
 - (libc) Wildan Mubarok reduced the dynamic linker initialization time
+- (libc) Wildan Mubarok fixed a dynamic linker crash due to cyclic dependencies
 - (libc) Wildan Mubarok fixed a static linker error caused by `setjmp` in ARM64
 - (libc) Wildan Mubarok fixed `pthread_rwlock` function timeout handling
 - (libc) Wildan Mubarok fixed `pthread_rwlock_timed[rd/rw]lock` by using real-time clock
 - (libc) Wildan Mubarok fixed a memory overflow bug in `fnmatch`
 - (libc) Wildan Mubarok updated the tests to build with `glibc` for comparisons
 - (libc) Landon Propes fixed a bug that caused many false test errors due to `fgetws` always returning `NULL` in `EOF`, now it only return `NULL` in errors
-- (libc) Mustafa Oz implemented integer overflow handling in the `sys_select` function
+- (libc) Mustafa Oz implemented integer overflow handling in the `select()` function
 - (libc) auronandace moved some headers to their `cbindgen` configuration
 - (libc) auronandace fixed a bug in `inet_pton` when there are too many leading zeros in an octet
 - (libc) auronandace fixed the `strncmp` checking in `getgrnam_r`
@@ -143,11 +148,12 @@ When making a contribution you agree to the following terms:
 
 ## Networking Improvements
 
-- (net) 
+- (net) Benton60 fixed the IP retrieve from a UDP socket
 
 ## RedoxFS Improvements
 
 - (redoxfs) Ibuki Omatsu fixed `fpath` in root directories
+- (redoxfs) Wildan Mubarok added a workaround to a `getdents` race condition with unknown cause
 
 ## Security Improvements
 
@@ -170,7 +176,9 @@ When making a contribution you agree to the following terms:
 ## Packaging Improvements
 
 - (pkg) Mustafa Oz replaced some package manager panics with exit codes
+- (pkg) Wildan Mubarok extended the `pkgar` API to allow customized installation and handle extraction file conflicts better
 - (pkg) Wildan Mubarok fixed the temporary file clash detection in `pkgar` extraction
+- (pkg) Wildan Mubarok fixed the package manager error messages
 - (pkg) Wildan Mubarok did a code simplification
 
 ## Programs
@@ -191,20 +199,30 @@ When making a contribution you agree to the following terms:
 
 - (build) Wildan Mubarok updated the `PREFIX_BINARY` environment variable to allow the x86-64 toolchain to be used in ARM64 Linux
 - (build) Wildan Mubarok implemented the `cargopackages` (Cargo packages to be built), `cargoexamples` (Cargo examples to be built) and `cargopath` (The path of a Cargo package not declared in the `Cargo.toml` configuration) recipe data types to improve/simplify configuration and fix the offline mode in Rust programs with Cargo packages and examples
+- (build) Wildan Mubarok implemented the `make repo_clean_target` command to only clean recipes binaries of a specific CPU architecture
 - (build) Wildan Mubarok implemented the automatic update of downloaded packages when `REPO_BINARY` is enabled
-- (build) Wildan Mubarok expanded the recipe version detection by reading numbers from tarball URLs, Git repository tags or branches, and Cargo packages or workspaces projects
+- (build) Wildan Mubarok updated the `make prefix_clean` command to remove outdated tarballs and avoid confusion
+- (build) Wildan Mubarok updated the `auto_deps` cache to use the recipe build cache for invalidation to fix cache conflicts
+- (build) Wildan Mubarok disabled the Cookbook offline mode when Cargo is used in the `build.script` data type to fix a error
+- (build) Wildan Mubarok enabled the cached recipe build hint color in the `fetch`, `repo`, and `push` steps of the Cookbook TUI
+- (build) Wildan Mubarok extended the recipe version detection by reading numbers from tarball URLs, Git repository tags or branches, and Cargo packages or workspaces projects
 - (build) Wildan Mubarok exported recipe source identifiers to the recipe build script
 - (build) Wildan Mubarok removed the recipe build time identifier in favor of recipe source commit hash identifier to improve bug reproduction
 - (build) Wildan Mubarok reduced the local package installation time
 - (build) Wildan Mubarok reduced the Podman container setup time by moving build tools to Cookbook
+- (build) Wildan Mubarok fixed a error when a recipe using a Git repository with patch files changes its `rev` data type
 - (build) bjorn3 enabled networking in all Redox variants to unify configurations
+- (build) bjorn3 replaced SATA with NVMe in QEMU where possible
+- (build) bjorn3 enabled xHCI by default in QEMU x86-64 USB
 - (build) bjorn3 removed unnecessary software-specific and CPU-specific filesystem configurations
 - (build) bjorn3 did a code deduplication and cleanup
 - (build) Philipp Bartsch added the QEMU UEFI firmware locations in NixOS
-- (build) Zhiwei Liang removed duplicated dependencies from Podman and Native builds
+- (build) Zhiwei Liang removed duplicated dependencies from Podman Build
 
 ## Documentation Improvements
 
+- (doc) Ribbon added the "Copy-paste prevent and reduce typos" tip in the [Development Tips](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md#development-recommendations-and-tips) section
+- (doc) Ribbon added the "Comment out configuration or code while testing is better than removal, to remember the testing conditions and prevent mistakes from forgotten logic" tip in the Development Tips section
 - (doc) Ribbon added missing `description` fields in the Cargo projects of system components and drivers
 - (doc) Anthony Tacquet did many grammar fixes to the book
 - (doc) Hamish McIntyre-Bhatty did many grammar fixes to the book
