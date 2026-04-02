@@ -19,9 +19,15 @@ If you would like to support Redox, please consider donating or buying some merc
 
 Jeremy Soller successfully executed the [libcosmic](https://github.com/pop-os/libcosmic) demo in the COSMIC compositor!
 
-This is the first advanced window content to be drawed in the compositor.
+This is the first advanced window content to be drawn in the compositor.
 
 <img src="/img/screenshot/cosmic-comp-libcosmic.png" class="img-responsive"/>
+
+## Deficit Weighted Round Robin Scheduler
+
+Akshit Gaur implemented a new CPU scheduler to fix idle processes stealing most of the CPU time from active processes and improving system performance with better CPU time distribution.
+
+He wrote a article about his work, you can read on [this] page.
 
 ## Namespace and Process CWD As Capabilities
 
@@ -29,7 +35,7 @@ Ibuki Omatsu migrated the namespace and process CWD to capabilities which improv
 
 ## Kernel Deadlock Detection
 
-Wildan Mubarok implement a method to tune the spinning mutex/rwlock counters to trigger deadlocks and detect them more easily.
+Wildan Mubarok implemented a method to tune the spinning mutex/rwlock counters to trigger deadlocks and detect them more easily.
 
 This and ordered locks being added in more parts of the kernel are helping us to be almost deadlock-free in the kernel, which will eliminate userspace hangs and ease testing/debugging.
 
@@ -47,7 +53,7 @@ Wildan Mubarok implemented compression in `pkgar` packages and enabled in the pa
 
 ## Checksum-based Package Updates and Faster Recipe Push
 
-Wildan Mubarok implemented the support for package updates based on package checksum changes which reduced package update time and recipe push and testing time in development.
+Wildan Mubarok implemented the support for package updates based on package checksum changes which reduced package update time and recipe push/testing time in development.
 
 Package updates based on package file checksum changes (like in Fedora DNF and Flatpak) will be implemented soon.
 
@@ -75,7 +81,7 @@ When making a contribution you agree to the following terms:
 ## Kernel Improvements
 
 - (kernel) bjorn3 fixed granted flags in the debugger
-- (kernel) bjorn3 unified the Redox memory manager submodule in the kernel
+- (kernel) bjorn3 unified the memory manager submodule in the kernel
 - (kernel) bjorn3 fixed many code warnings
 - (kernel) bjorn3 did many code cleanups
 - (kernel) Wildan Mubarok enabled CPU context spawn and destruction on multiple threads to fix context switch freezes
@@ -92,6 +98,7 @@ When making a contribution you agree to the following terms:
 
 ## Driver Improvements
 
+- (drivers) Jeremy Soller fixed a infinite mouse reset loop in the PS/2 driver when a mouse is not connected
 - (drivers) bjorn3 implemented GPU memory mapping support in the Intel graphics driver
 - (drivers) bjorn3 implemented page flipping in the Intel graphics driver
 - (drivers) bjorn3 implemented VirtIO-GPU display resize after boot
@@ -119,6 +126,7 @@ When making a contribution you agree to the following terms:
 
 ## Relibc Improvements
 
+- (libc) Ibuki Omatsu reimplemented the `fstat*`, `fchmod`, `getdents`, `ftruncate`, and `futimens` functions using the `stdfscall` system call to unify code
 - (libc) Ibuki Omatsu fixed a possible deadlock in `chdir`
 - (libc) bjorn3 fixed the `setjmp` and `sigsetjmp` functions in ARM64
 - (libc) Wildan Mubarok implemented the `getgroups()` function
@@ -137,7 +145,7 @@ When making a contribution you agree to the following terms:
 - (libc) Wildan Mubarok updated the tests to build with `glibc` for comparisons
 - (libc) Landon Propes fixed a bug that caused many false test errors due to `fgetws` always returning `NULL` in `EOF`, now it only return `NULL` in errors
 - (libc) Mustafa Oz implemented integer overflow handling in the `select()` function
-- (libc) auronandace moved some headers to their `cbindgen` configuration
+- (libc) auronandace migrated some header files to their `cbindgen` configuration
 - (libc) auronandace fixed a bug in `inet_pton` when there are too many leading zeros in an octet
 - (libc) auronandace fixed the `strncmp` checking in `getgrnam_r`
 - (libc) auronandace fixed a namespace pollution
@@ -178,15 +186,15 @@ When making a contribution you agree to the following terms:
 - (pkg) Mustafa Oz replaced some package manager panics with exit codes
 - (pkg) Wildan Mubarok extended the `pkgar` API to allow customized installation and handle extraction file conflicts better
 - (pkg) Wildan Mubarok fixed the temporary file clash detection in `pkgar` extraction
-- (pkg) Wildan Mubarok fixed the package manager error messages
+- (pkg) Wildan Mubarok improved the package manager error messages
 - (pkg) Wildan Mubarok did a code simplification
 
 ## Programs
 
 - (app) Wildan Mubarok ported [Boost](https://www.boost.org/) and [ruff](https://github.com/astral-sh/ruff)
 - (app) Wildan Mubarok enabled dynamic linking in Lua and `libevent`
-- (app) Wildan Mubarok replaced RustPython with CPython 3.12 to avoid AI-generated code
-- (app) Wildan Mubarok improved GCC performance
+- (app) Wildan Mubarok replaced RustPython with CPython 3.12 in the `desktop` variant to avoid AI-generated code
+- (app) Wildan Mubarok improved the GCC performance
 - (app) Wildan Mubarok fixed zola, miniserve, lighttpd, Valkey, and binaryen compilation
 - (app) Wildan Mubarok reduced the GCC and G++ package size from 587MB and 306MB to 127MB and 63MB
 - (app) Wildan Mubarok reduced the CPython and NodeJS compilation time
@@ -199,24 +207,25 @@ When making a contribution you agree to the following terms:
 
 - (build) Wildan Mubarok updated the `PREFIX_BINARY` environment variable to allow the x86-64 toolchain to be used in ARM64 Linux
 - (build) Wildan Mubarok implemented the `cargopackages` (Cargo packages to be built), `cargoexamples` (Cargo examples to be built) and `cargopath` (The path of a Cargo package not declared in the `Cargo.toml` configuration) recipe data types to improve/simplify configuration and fix the offline mode in Rust programs with Cargo packages and examples
-- (build) Wildan Mubarok implemented the `make repo_clean_target` command to only clean recipes binaries of a specific CPU architecture
+- (build) Wildan Mubarok implemented the `cookbook_cargo_build` Bash function for more Cargo customization and flexibility
+- (build) Wildan Mubarok implemented the `make repo_clean_target` command to only clean recipe binaries of a specific CPU architecture
 - (build) Wildan Mubarok implemented the automatic update of downloaded packages when `REPO_BINARY` is enabled
-- (build) Wildan Mubarok updated the `make prefix_clean` command to remove outdated tarballs and avoid confusion
+- (build) Wildan Mubarok updated the `make prefix_clean` command to remove outdated toolchain tarballs and avoid confusion
 - (build) Wildan Mubarok updated the `auto_deps` cache to use the recipe build cache for invalidation to fix cache conflicts
 - (build) Wildan Mubarok disabled the Cookbook offline mode when Cargo is used in the `build.script` data type to fix a error
-- (build) Wildan Mubarok enabled the cached recipe build hint color in the `fetch`, `repo`, and `push` steps of the Cookbook TUI
+- (build) Wildan Mubarok enabled the cached recipe build hint color (sea blue) in the `fetch`, `repo`, and `push` steps of the Cookbook TUI
 - (build) Wildan Mubarok extended the recipe version detection by reading numbers from tarball URLs, Git repository tags or branches, and Cargo packages or workspaces projects
 - (build) Wildan Mubarok exported recipe source identifiers to the recipe build script
 - (build) Wildan Mubarok removed the recipe build time identifier in favor of recipe source commit hash identifier to improve bug reproduction
 - (build) Wildan Mubarok reduced the local package installation time
-- (build) Wildan Mubarok reduced the Podman container setup time by moving build tools to Cookbook
-- (build) Wildan Mubarok fixed a error when a recipe using a Git repository with patch files changes its `rev` data type
+- (build) Wildan Mubarok reduced the Podman container setup time by moving more build tools to Cookbook
+- (build) Wildan Mubarok fixed a error when a recipe is using a Git repository with patch files, changes its `rev` data type
 - (build) bjorn3 enabled networking in all Redox variants to unify configurations
 - (build) bjorn3 replaced SATA with NVMe in QEMU where possible
 - (build) bjorn3 enabled xHCI by default in QEMU x86-64 USB
 - (build) bjorn3 removed unnecessary software-specific and CPU-specific filesystem configurations
 - (build) bjorn3 did a code deduplication and cleanup
-- (build) Philipp Bartsch added the QEMU UEFI firmware locations in NixOS
+- (build) Philipp Bartsch added the QEMU UEFI firmware locations for NixOS
 - (build) Zhiwei Liang removed duplicated dependencies from Podman Build
 
 ## Documentation Improvements
@@ -226,12 +235,12 @@ When making a contribution you agree to the following terms:
 - (doc) Ribbon documented [how to only update the system in the build system](https://doc.redox-os.org/book/build-system-reference.html#update-redox)
 - (doc) Ribbon improved the [build system and system breaking change prevention and fixing](https://doc.redox-os.org/book/troubleshooting.html#prevent-and-fix-breaking-changes)
 - (doc) Ribbon used the `sys` (system recipes group) and `sys-gui` (Orbital recipes group) meta-packages to simplify the system update and troubleshooting commands in the book
-- (doc) Ribbon splitted the [automatic and manual execution of test suites](https://doc.redox-os.org/book/testing-practices.html) documentation
+- (doc) Ribbon splitted the [test suites documentation](https://doc.redox-os.org/book/testing-practices.html) in automatic and manual execution
 - (doc) Ribbon updated and improved the Quick Workflow page
 - (doc) Ribbon added the "Copy-paste prevent and reduce typos" tip in the [Development Tips](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md#development-recommendations-and-tips) section
 - (doc) Ribbon added the "Comment out configuration or code while testing is better than removal, to remember the testing conditions and prevent mistakes from forgotten logic" tip in the "Development Tips" section
 - (doc) Ribbon documented the "Sometimes you need to rebase your MR to fix the CI testing" rule
-- (doc) Ribbon created the [Notes](https://doc.redox-os.org/book/porting-applications.html#notes) section for quick attention of the most important details in application porting
+- (doc) Ribbon created the [Notes](https://doc.redox-os.org/book/porting-applications.html#notes) section for quick attention of the most important details in Application Porting page
 - (doc) Ribbon improved and moved the [Packaging Policy](https://doc.redox-os.org/book/porting-applications.html#packaging-policy) section to the beginning of the Application Porting page
 - (doc) Ribbon documented the command to push meta-package recipes: `make r.meta-package,--with-package-deps`
 - (doc) Ribbon documented the `SCCACHE_BUILD` (disable/enable `sccache`) environment variable
@@ -239,7 +248,7 @@ When making a contribution you agree to the following terms:
 - (doc) Ribbon used the [Learn Rust](https://rust-lang.org/learn/) reference to unify other official Rust references in the References page
 - (doc) Ribbon added the [Rust Playground](https://play.rust-lang.org/) tool in the References page
 - (doc) Wildan Mubarok created the [Advanced Cookbook Options](https://doc.redox-os.org/book/configuration-settings.html#advanced-cookbook-options) section and documented all Cookbook options
-- (doc) Wildan Mubarok created the [Cookbook Envornment Variables](https://doc.redox-os.org/book/configuration-settings.html#cookbook-environment-variables) section and documented all Cookbook environment variables
+- (doc) Wildan Mubarok created the [Cookbook Environment Variables](https://doc.redox-os.org/book/configuration-settings.html#cookbook-environment-variables) section and documented all Cookbook environment variables
 - (doc) Wildan Mubarok improved the [Continuous Integration](https://doc.redox-os.org/book/ci.html) page a lot, if you are a Rust library or application maintainer consider to read it again
 - (doc) Wildan Mubarok documented the [`recipes/recipe-name/target/${TARGET}/toolchain` directory](https://doc.redox-os.org/book/build-system-reference.html#cookbook)
 - (doc) Wildan Mubarok documented the `PODMAN_CACHE_PULL` (disable/enable the Podman container cache download) environment variable
