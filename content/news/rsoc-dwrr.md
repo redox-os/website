@@ -13,15 +13,15 @@ We have replaced the legacy Round Robin scheduler with Deficit Weighted Round Ro
 
 # Round Robin Scheduler
 
-RedoxOS currently uses a simple [Round Robin Scheduler](https://osdev.wiki/wiki/Scheduling_Algorithms#Round_Robin).
+RedoxOS currently uses a simple [Round Robin Scheduler](https://osdev.wiki/wiki/Scheduling_Algorithms#Round_Robin) (RR).
 
 Imagine you are sitting at a bar with a few of your friends, the bar has all drinks free for tonight, and as a result the bar is understaffed with the number of bartenders significantly less than the customers. The bartenders start from the left, serve the customer, and move to their right.
 
-This system works well enough, customers wait for a while, but everybody waits for the same time, and everyone is happy, or atleast equally unhappy.
+This system works well enough, customers wait for a while, but everybody waits for the same time, and everyone is happy, or at least equally unhappy.
 
 Unfortunately for these bartenders, a local politician, with quite a short temper and a very large ego, happens to be one of the customers today. If these poor batenders follow their usual protocol and treat the VIP same as the rest, he will sigterm their employment, but bound by the protocol they have no choice but move in a loop seeing the VIP boil in rage.
 
-In an Operating System, that VIP customer is a high priority I/O bound interactive process (like your audio stack, where even the slightest delay can cause audible artifacts). If it waits in a RR queue behind a CPU-hogging background task. The system feels unresponsive and user sigkills many children in frustration.
+In an Operating System, that VIP customer is a high priority I/O bound interactive process (like your audio stack, where even the slightest delay can cause audible artifacts). If it waits in a RR queue behind a CPU-hogging background task, the system feels unresponsive and user sigkills many children in frustration.
 
 Enter..
 
@@ -32,7 +32,7 @@ Following the debacle at the bar, the offer for free drinks is now over, but the
 
 They set up 3 token dispensers, each giving out tokens at different speeds, 1, 2, and 4 tokens per second. Three queues form along these dispensers, with a bouncer assigning each customer to a row. The price for a beer has been decided as two tokens, so customer standing in queue A waits two ticks before leaving, while the customer in queue C can afford two beers in just one tick. The customer then leaves the queue and "purchases" the beer!
 
-The problem for VIP's is solved! As soon as a VIP arrives, the bouncer directs him to queue C, and everybody in the other two queues is put on the backburner.
+The problem for VIPs is solved! As soon as a VIP arrives, the bouncer directs him to queue C, and everybody in the other two queues is put on the back burner.
 
 Unfortunately though, we now have a problem with starvation, as queue C is closer to the exit than B, which is closer than A. If people from all queues have accumulated their balance and want to leave, the customer in C will always be the one to go first. This is a problem! If there are many customers in queue C, the customers from queue A and B will get no chance to purchase beer and will die of starvation!
 
@@ -49,7 +49,7 @@ Think of it as the bartenders serving one round to the VIP queue, then immediate
 
 This results in a slight increase in context-switch overhead, but the latency benefits are undeniable.
 
-Read more about this comparision [here](https://en.wikipedia.org/wiki/Weighted_round_robin#Interleaved_WR).
+Read more about this comparison [on Wikipedia](https://en.wikipedia.org/wiki/Weighted_round_robin#Interleaved_WR).
 
 
 # How to set it up?
@@ -473,7 +473,7 @@ for _ in 0..self.cores.len() {
     
     On the other hand, the new scheduler with 0 prio for all, gives ~1000 fps too with some margin of error.
     
-    If we increase the priority (decrease niceness) of pixelcannon and decrease priority of the two CPU hogging application, pixelcannon now given ~1150 fps!
+    If we increase the priority (decrease niceness) of pixelcannon and decrease the priority of the two CPU hogging applications, pixelcannon now delivers ~1150 fps!
 
 2.  Schedrs
 
