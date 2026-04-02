@@ -37,7 +37,7 @@ Thanks Wildan for moving forward this difficult and time consuming effort.
 
 ## Unicode Everywhere
 
-Wildan Mubarok updated GNU Bash and other programs to use the `ncurses` library variant with Unicode support (ncursesw).
+Wildan Mubarok updated CPython, PHP, GNU Bash, GNU Nano, Vim, ncdu, and GNU Readline to use the `ncurses` library variant with Unicode support (ncursesw).
 
 <img src="/img/screenshot/shell-unicode.png" class="img-responsive"/>
 
@@ -91,13 +91,16 @@ When making a contribution you agree to the following terms:
 - (drivers) bjorn3 reduced code duplication in graphics drivers
 - (drivers) bjorn3 did many code cleanups
 - (drivers) Wildan Mubarok disabled panic on AML failure to allow more computers to boot
+- (drivers) Landon Propes disabled the keyboard before running self test to fix test failure when pressing keys at boot
 
 ## System Improvements
 
+- (sys) bjorn3 implemented `fsize` and `ftruncate` in shared memory to help Wayland
 - (sys) bjorn3 implemented the support for scheme removal from a namespace
-- (sys) bjorn3 did some fixes in shared memory to help Wayland
 - (sys) bjorn3 moved the bootloader, kernel, and `initfs` directories to `/usr/lib/boot` to allow the bootloader to be updated from the package manager in the future
 - (sys) bjorn3 moved the `root` user directory to `/home/root`
+- (sys) bjorn3 enabled synchronous logging to the kernel debug log in `logd` to keep logging working when the graphics driver crashes
+- (sys) bjorn3 did some fixes in shared memory to help Wayland
 - (sys) bjorn3 fixed some code warnings
 - (sys) Philipp Bartsch implemented hardware-based randomness source in ARM64 random number generation
 - (sys) Wildan Mubarok updated `uutils` version to 0.7
@@ -115,17 +118,22 @@ When making a contribution you agree to the following terms:
 - (libc) Wildan Mubarok implemented `pthread_rwlock_clock[rd/rw]lock`
 - (libc) Wildan Mubarok implemented cache in dynamic linker using shared memory
 - (libc) Wildan Mubarok added more `sysconf` POSIX constants to fix `wget` compilation
+- (libc) Wildan Mubarok defined more feature macros in `unistd` to fix `boost` compilation
 - (libc) Wildan Mubarok reduced the dynamic linker initialization time
 - (libc) Wildan Mubarok fixed `pthread_rwlock` function timeout handling
 - (libc) Wildan Mubarok fixed `pthread_rwlock_timed[rd/rw]lock` by using real-time clock
 - (libc) Wildan Mubarok fixed a memory overflow bug in `fnmatch`
 - (libc) Wildan Mubarok updated the tests to build with `glibc` for comparisons
 - (libc) Landon Propes fixed a bug that caused many false test errors due to `fgetws` always returning `NULL` in `EOF`, now it only return `NULL` in errors
+- (libc) Mustafa Oz implemented integer overflow handling in the `sys_select` function
 - (libc) auronandace moved some headers to their `cbindgen` configuration
+- (libc) auronandace fixed a bug in `inet_pton` when there are too many leading zeros in an octet
+- (libc) auronandace fixed the `strncmp` checking in `getgrnam_r`
 - (libc) auronandace fixed a namespace pollution
 - (libc) auronandace reduced code duplication
 - (libc) auronandace did many header and code cleanups
 - (libc) auronandace enabled some Clippy lints
+- (libc) auronandace improved code readability
 
 ## Networking Improvements
 
@@ -149,15 +157,24 @@ When making a contribution you agree to the following terms:
 
 ## Programs
 
+- (app) Wildan Mubarok ported [Boost](https://www.boost.org/) and [ruff](https://github.com/astral-sh/ruff)
+- (app) Wildan Mubarok enabled dynamic linking in Lua and `libevent`
 - (app) Wildan Mubarok replaced RustPython with CPython 3.12 to avoid AI-generated code
+- (app) Wildan Mubarok fixed zola, miniserve, lighttpd, Valkey, and binaryen compilation
 - (app) Wildan Mubarok reduced the CPython and NodeJS compilation time
+
+## CI Improvements
+
+- (ci) Wildan Mubarok enabled the `relibc` tests in kernel CI for a massive testing enrichment
 
 ## Build System Improvements
 
 - (build) Wildan Mubarok updated the `PREFIX_BINARY` environment variable to allow the x86-64 toolchain to be used in ARM64 Linux
 - (build) Wildan Mubarok implemented the `cargopackages` (Cargo packages to be built), `cargoexamples` (Cargo examples to be built) and `cargo_path` (The path of a Cargo package not declared in the `Cargo.toml` configuration) recipe data types to improve and simplify configuration
 - (build) Wildan Mubarok implemented the automatic update of downloaded packages when `REPO_BINARY` is enabled
-- (build) Wildan Mubarok fixed a crash when fetching recipe source without the Cookbook TUI
+- (build) Wildan Mubarok expanded the recipe version detection by reading numbers from tarball URLs, Git repository tags or branches, and Cargo packages or workspaces projects
+- (build) Wildan Mubarok exported recipe source identifiers to the recipe build script
+- (build) Wildan Mubarok removed the recipe build time identifier in favor of recipe source commit hash identifier to improve bug reproduction
 - (build) bjorn3 enabled networking in all Redox variants to unify configurations
 - (build) bjorn3 removed unnecessary software-specific and CPU-specific filesystem configurations
 - (build) bjorn3 did a code deduplication and cleanup
