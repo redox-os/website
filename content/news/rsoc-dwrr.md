@@ -1,19 +1,19 @@
 +++
-title = "RSoC 26: A new Scheduler for Redox"
+title = "RSoC 2026: A new CPU scheduler for Redox"
 author = "Akshit Gaur"
 date = "2026-04-02"
 +++
 
-Hello everyone! I'm Akshit Gaur. I am currently working on modernizing the process scheduling subsystem for Redox OS, a project graciously funded through Redox Summer of Code
+Hello everyone! I'm Akshit Gaur. I am currently working on modernizing the process scheduling subsystem for Redox OS, a project graciously funded through the Redox Summer of Code program
 
 # TL;DR
 
-We have replaced the legacy Round Robin scheduler with Deficit Weighted Round Robin scheduler. Due to this, we finally have a way of assigning different priorities to our contexts. When running under light load, you may not notice any difference, but under heavy load the new scheduler outperforms the old one (eg. ~150 fps gain in pixelcannon, and ~1.5x gain in ops/sec for CPU bound tasks and a similar improvement in responsiveness too (measured through schedrs))
+We have replaced the legacy Round Robin scheduler with a Deficit Weighted Round Robin scheduler. Due to this, we finally have a way of assigning different priorities to our CPU contexts. When running under light load, you may not notice any difference, but under heavy load the new scheduler outperforms the old one (eg. ~150 FPS gain in the `pixelcannon` 3D Redox demo, and ~1.5x gain in operations/sec for CPU bound tasks and a similar improvement in responsiveness too (measured through [schedrs](https://gitlab.redox-os.org/akshitgaur2005/schedrs)))
 
 
 # Round Robin Scheduler
 
-RedoxOS currently uses a simple [Round Robin Scheduler](https://osdev.wiki/wiki/Scheduling_Algorithms#Round_Robin) (RR).
+Redox OS currently uses a simple [Round Robin Scheduler](https://osdev.wiki/wiki/Scheduling_Algorithms#Round_Robin) (RR).
 
 Imagine you are sitting at a bar with a few of your friends, the bar has all drinks free for tonight, and as a result the bar is understaffed with the number of bartenders significantly less than the customers. The bartenders start from the left, serve the customer, and move to their right.
 
@@ -21,7 +21,7 @@ Some patrons drink slowly and may still have a drink when the bartender returns.
 
 This system works well enough, customers wait for a while, but everybody waits for the same time, and everyone is happy, or at least equally unhappy.
 
-Unfortunately for these bartenders, a local politician, with quite a short temper and a very large ego, happens to be one of the customers today. If these poor batenders follow their usual protocol and treat the VIP same as the rest, he will sigterm their employment, but bound by the protocol they have no choice but move in a loop seeing the VIP boil in rage.
+Unfortunately for these bartenders, a local politician, with quite a short temper and a very large ego, happens to be one of the customers today. If these poor batenders follow their usual protocol and treat the VIP in the same way as the rest, he will sigterm their employment, but bound by the protocol they have no choice but move in a loop seeing the VIP boil in rage.
 
 In an Operating System, that VIP customer is a high priority I/O bound interactive process (like your audio stack, where even the slightest delay can cause audible artifacts). If it waits in a RR queue behind a CPU-hogging background task, the system feels unresponsive and user sigkills many children in frustration.
 
@@ -32,7 +32,7 @@ Enter..
 
 Following the debacle at the bar, the offer for free drinks is now over, but the bartenders REALLY like to give free drinks, so they come up with a solution!
 
-They set up 3 token dispensers, each giving out tokens at different speeds, 1, 2, and 4 tokens per second. Three queues form along these dispensers, with a bouncer assigning each customer to a row. The price for a beer has been decided as two tokens, so customer standing in queue A waits two ticks before leaving, while the customer in queue C can afford two beers in just one tick. The customer then leaves the queue and "purchases" the beer!
+They set up 3 token dispensers, each giving out tokens at different speeds, 1, 2, and 4 tokens per second. 3 queues (A, B, C) form along these dispensers, with a bouncer assigning each customer to a row. The price for a beer has been decided as two tokens, so customer standing in queue A waits two ticks before leaving, while the customer in queue C can afford two beers in just one tick. The customer then leaves the queue and "purchases" the beer!
 
 The problem for VIPs is solved! As soon as a VIP arrives, the bouncer directs him to queue C, and everybody in the other two queues is put on the back burner.
 
@@ -61,9 +61,9 @@ Read more about this comparison [on Wikipedia](https://en.wikipedia.org/wiki/Wei
 
 After setting up RedoxOS and ensuring it builds, check out this kernel [MR](https://gitlab.redox-os.org/redox-os/kernel/-/merge_requests/539), and the all the related MR's mentioned in the first comment.
 
-For anyone trying to test it, you have to clone the repos of redox<sub>syscall</sub> and libredox (given in the related MRs) into recipes/core/
+For anyone trying to test it, you have to clone the repositories of `redox_syscall` and `libredox` libraries (given in the related MRs) into `recipes/core`
 
-Your directory should look like this-
+Your directory should look like this:
 
 ```
 akshit@laptop ~/w/r/r/r/core> ls
@@ -80,9 +80,9 @@ I have added the patches for Cargo.toml for all the MRs temporarily which will b
 
 Checkout this [MR](https://gitlab.redox-os.org/redox-os/redox/-/merge_requests/2034/diffs), and add `renice = {}` to your desktop.toml.
 
-You are now setup to try the goodness of the new scheduler!
+Your setup is now ready to try the goodness of the new scheduler!
 
-Usage of nice and renice is quite self-evident.
+Usage of `nice` and `renice` is quite self-evident.
 
 ```
 nice -n -10 pixelcannon
@@ -95,12 +95,12 @@ renice -n -5 -p 1234
 
 # Numbers
 
-For comparing the different schedulers, I built an [isolated testing harness](https://gitlab.redox-os.org/akshitgaur2005/sched-sim). Let's see their results!
+For comparison with different schedulers, I built an [isolated testing harness](https://gitlab.redox-os.org/akshitgaur2005/sched-sim). Let's see their results!
 
 
 ## Idealised Workflow
 
-40000 tasks are initialised at t=0, these tasks are CPU-hogging and never block, their runtime is large enough that they will not finish in our simulation timeframe of 100000 ticks, and our simulated CPU has 16 cores
+40,000 tasks are initialized at `t=0`, these tasks are CPU-hogging and never block, their execution time is long enough that they will not finish in our simulation timeframe of 100,000 ticks, and our simulated CPU has 16 cores
 
 1.  Round Robin
 
@@ -480,17 +480,17 @@ for _ in 0..self.cores.len() {
 
 ## Real World Workflow
 
-1.  PixelCannon
+1.  pixelcannon
 
-    The current simple Round Robin gives ~1000 fps with two CPU hogging (`while true; do :; done` in bash, or `while (1) printf("Hello!\n");` in C) programs running in the background.
+    The current simple Round Robin gives ~1000 FPS with two CPU hogging (`while true; do :; done` in GNU Bash, or `while (1) printf("Hello!\n");` in C) programs running in the background.
     
-    On the other hand, the new scheduler with 0 prio for all, gives ~1000 fps too with some margin of error.
+    On the other hand, the new scheduler with 0 `prio` for all, gives ~1000 FPS too with some margin of error.
     
-    If we increase the priority (decrease niceness) of pixelcannon and decrease the priority of the two CPU hogging applications, pixelcannon now delivers ~1150 fps!
+    If we increase the priority (decrease niceness) of pixelcannon and decrease the priority of the two CPU hogging applications, pixelcannon now delivers ~1150 FPS!
 
-2.  Schedrs
+2.  schedrs
 
-    This is my rust [rewrite](https://gitlab.redox-os.org/akshitgaur2005/schedrs) of [schbench](https://openbenchmarking.org/test/pts/schbench). As expected this is the area the new scheduler particularly shines in. To replicate my results, just run two CPU hogging programs, and then run schedrs
+    This is my [Rust rewrite](https://gitlab.redox-os.org/akshitgaur2005/schedrs) of [schbench](https://openbenchmarking.org/test/pts/schbench). As expected this is the area where the new scheduler particularly shines in. To replicate my results, just run two CPU hogging programs, and then run schedrs
     
     1.  RR
     
@@ -503,12 +503,12 @@ for _ in 0..self.cores.len() {
 
 # Verdict
 
-While the simulator showed us the theoretical limits, the bare-metal tests prove the architecture works as intended under contention.
+While the simulator showed us the theoretical limits, the real-world tests proved that the architecture works as intended under contention.
 
-By running two aggressive background \`while(true)\` CPU hogs, we forced the system into a high-contention state, allowing us to compare behaviour under load:
+By running two aggressive background `while(true)` CPU hogs, we forced the system into a high-contention state, allowing us to compare behaviour under load:
 
-1.  ****Interactive Workloads (Pixelcannon):**** By \`renice\`-ing pixelcannon to a higher priority, boosting framerates from ~1000 FPS to ~1150 FPS (a 15% gain in interactive responsiveness).
-2.  ****Context-Switch Latency (Schedrs):**** The most dramatic improvement was in pure scheduling overhead. Ops/sec jumped from 243 to 360 (a 48% increase), and median wakeup latencies dropped massively.
+1.  ****Interactive Workloads (pixelcannon):**** By using `renice` to set pixelcannon to a higher priority, boosting framerates from ~1000 FPS to ~1150 FPS (a 15% gain in interactive responsiveness).
+2.  ****Context-Switch Latency (schedrs):**** The most dramatic improvement was in pure scheduling overhead. Operations/sec jumped from 243 to 360 (a 48% increase), and median wakeup latencies dropped massively.
 
 The DWRR scheduler successfully protects high-priority and latency-sensitive tasks from being starved by background noise.
 
