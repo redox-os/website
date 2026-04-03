@@ -8,7 +8,7 @@ Hello everyone! I'm Akshit Gaur. I am currently working on modernizing the proce
 
 # TL;DR
 
-We have replaced the legacy Round Robin scheduler with a Deficit Weighted Round Robin scheduler. Due to this, we finally have a way of assigning different priorities to our CPU contexts. When running under light load, you may not notice any difference, but under heavy load the new scheduler outperforms the old one (eg. ~150 FPS gain in the `pixelcannon` 3D Redox demo, and ~1.5x gain in operations/sec for CPU bound tasks and a similar improvement in responsiveness too (measured through [schedrs](https://gitlab.redox-os.org/akshitgaur2005/schedrs)))
+We have replaced the legacy Round Robin scheduler with a Deficit Weighted Round Robin scheduler. Due to this, we finally have a way of assigning different priorities to our Process contexts. When running under light load, you may not notice any difference, but under heavy load the new scheduler outperforms the old one (eg. ~150 FPS gain in the `pixelcannon` 3D Redox demo, and ~1.5x gain in operations/sec for CPU bound tasks and a similar improvement in responsiveness too (measured through [schedrs](https://gitlab.redox-os.org/akshitgaur2005/schedrs)))
 
 
 # Round Robin Scheduler
@@ -59,7 +59,7 @@ Read more about this comparison [on Wikipedia](https://en.wikipedia.org/wiki/Wei
 
 ## Scheduler
 
-After setting up RedoxOS and ensuring it builds, check out this kernel [MR](https://gitlab.redox-os.org/redox-os/kernel/-/merge_requests/539), and the all the related MR's mentioned in the first comment.
+After setting up RedoxOS and ensuring it builds, check out [this kernel MR](https://gitlab.redox-os.org/redox-os/kernel/-/merge_requests/539), and all the related MR's mentioned in the first comment.
 
 For anyone trying to test it, you have to clone the repositories of `redox_syscall` and `libredox` libraries (given in the related MRs) into `recipes/core`
 
@@ -73,12 +73,12 @@ akshit@laptop ~/w/r/r/r/core> pwd
 /home/akshit/workspace/rust/redox/recipes/core
 ```
 
-I have added the patches for Cargo.toml for all the MRs temporarily which will be removed before merging.
+I have added the patches for `Cargo.toml` for all the MRs temporarily which will be removed before merging.
 
 
 ## Nice & Renice
 
-Checkout this [MR](https://gitlab.redox-os.org/redox-os/redox/-/merge_requests/2034/diffs), and add `renice = {}` to your desktop.toml.
+Checkout [this MR](https://gitlab.redox-os.org/redox-os/redox/-/merge_requests/2034/diffs), and either run `make rp.renice`, or add `renice = {}` to your `desktop.toml` before you rebuild the image.
 
 Your setup is now ready to try the goodness of the new scheduler!
 
@@ -290,7 +290,7 @@ For comparison with different schedulers, I built an [isolated testing harness](
 
 ## Randomised Tasks
 
-This time, at each time step, we have a chance to generate upto 1 new task for each core. This new task has a random total runtime (range 2..100000) and they have a attribute called blocking chance (range 0..0.001) which dictates how likely the task is to block at each time step it is run.
+This time, at each time step, we have a chance to generate up to 1 new task for each CPU core. This new task has a random total runtime (range 2..100000) and they have a attribute called blocking chance (range 0..0.001) which dictates how likely the task is to block at each time step it is executed.
 
 ```rust
 for _ in 0..self.cores.len() {
@@ -484,13 +484,13 @@ for _ in 0..self.cores.len() {
 
     The current simple Round Robin gives ~1000 FPS with two CPU hogging (`while true; do :; done` in GNU Bash, or `while (1) printf("Hello!\n");` in C) programs running in the background.
     
-    On the other hand, the new scheduler with 0 `prio` for all, gives ~1000 FPS too with some margin of error.
+    On the other hand, the new scheduler with 0 `prio` (priority) for all, gives ~1000 FPS too with some margin of error.
     
     If we increase the priority (decrease niceness) of pixelcannon and decrease the priority of the two CPU hogging applications, pixelcannon now delivers ~1150 FPS!
 
 2.  schedrs
 
-    This is my [Rust rewrite](https://gitlab.redox-os.org/akshitgaur2005/schedrs) of [schbench](https://openbenchmarking.org/test/pts/schbench). As expected this is the area where the new scheduler particularly shines in. To replicate my results, just run two CPU hogging programs, and then run schedrs
+    This is my [Rust rewrite](https://gitlab.redox-os.org/akshitgaur2005/schedrs) of [schbench](https://openbenchmarking.org/test/pts/schbench). As expected this is the area where the new scheduler particularly shines. To replicate my results, just run two CPU hogging programs, and then run schedrs
     
     1.  RR
     
