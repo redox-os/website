@@ -27,7 +27,7 @@ This is the first advanced window content to be drawn in the compositor.
 
 Akshit Gaur implemented a new CPU scheduler to fix idle processes stealing most of the CPU time from active processes and improving system performance with better CPU time distribution.
 
-He wrote a article about his work, you can read on [this] page.
+He wrote a article about his work, you can read on [this](https://www.redox-os.org/news/rsoc-dwrr/) page.
 
 ## Namespace and Process CWD As Capabilities
 
@@ -110,7 +110,9 @@ When making a contribution you agree to the following terms:
 
 - (sys) bjorn3 implemented `fsize` and `ftruncate` in shared memory to help Wayland
 - (sys) bjorn3 completed the `mmap` implementation to fix a crash in Wayland applications when they resize the shared memory pool
-- (sys) bjorn3 moved the bootloader, kernel, and `initfs` directories to `/usr/lib/boot` to allow the bootloader to be updated from the package manager in the future
+- (sys) bjorn3 fixed the support for scheme removal from a namespace with a new implementation
+- (sys) bjorn3 updated `sudo` to switch to the root namespace before the target process execution
+- (sys) bjorn3 moved the bootloader, kernel, and `initfs` directories to `/usr/lib/boot` to allow atomic system updates in the future
 - (sys) bjorn3 moved the `root` user directory to `/home/root`
 - (sys) bjorn3 enabled synchronous logging to the kernel debug log in `logd` to keep logging working when the graphics driver crashes
 - (sys) bjorn3 did some fixes in shared memory to help Wayland
@@ -166,12 +168,11 @@ When making a contribution you agree to the following terms:
 - (safe) bjorn3 closed all unnecessary file descriptors in userspace bootstrap
 - (safe) bjorn3 reduced the userspace bootstrap memory mappings and permissions to minimum
 - (safe) bjorn3 changed the user directories permission in `/home` to fix the issue of users being allowed to read and write the directory of other users
-- (safe) bjorn3 fixed the support for scheme removal from a namespace with a new implementation
-- (safe) bjorn3 updated `sudo` to switch to the root namespace before the target process execution
 - (safe) Philipp Bartsch implemented hardware-based randomness source in ARM64 random number generation
 
 ## Desktop Improvements
 
+- (gui) bjorn3 implemented VirtIO-GPU display resize handling in Orbital
 - (gui) bjorn3 fixed a crash in the Orbital launcher (dock bar) when no child processes are running
 - (gui) bjorn3 unified all `orbutils` recipes
 - (gui) bjorn3 removed the abandoned `calculator`, `calendar`, and `character_map` programs from the `orbutils` suite
