@@ -31,7 +31,7 @@ He wrote a article about his work, you can read on [this] page.
 
 ## Namespace and Process CWD As Capabilities
 
-Ibuki Omatsu migrated the namespace and process CWD to capabilities which improved their security strength, you can read his report on [this](https://www.redox-os.org/news/nlnet-cap-nsmgr-cwd/) page.
+Ibuki Omatsu migrated the namespace and process CWD to capabilities which improved their security strength. You can read his report on [this](https://www.redox-os.org/news/nlnet-cap-nsmgr-cwd/) page.
 
 ## Kernel Deadlock Detection
 
@@ -49,7 +49,7 @@ Wildan Mubarok updated CPython, PHP, GNU Bash, GNU Nano, Vim, ncdu, and GNU Read
 
 ## pkgar Compression!
 
-Wildan Mubarok implemented compression in `pkgar` packages and enabled in the package server, it will help to download and install packages faster by reducing the network stack slowness impact.
+Wildan Mubarok implemented compression in `pkgar` packages and enabled in the package server. It will help to download and install packages faster by reducing the network stack slowness impact.
 
 ## Checksum-based Package Updates and Faster Recipe Push
 
@@ -59,7 +59,7 @@ Package updates based on package file checksum changes (like in Fedora DNF and F
 
 ## AI Policy and Contribution Terms
 
-We adopted a [AI policy](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md#ai-policy) and [Contribution Terms](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md#contribution-terms) :
+We adopted an [AI policy](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md#ai-policy) and [Contribution Terms](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md#contribution-terms) :
 
 ### AI Policy
 
@@ -81,7 +81,7 @@ When making a contribution you agree to the following terms:
 ## Kernel Improvements
 
 - (kernel) bjorn3 fixed granted flags in the debugger
-- (kernel) bjorn3 unified the memory manager submodule in the kernel
+- (kernel) bjorn3 changed the memory manager submodule to a regular directory in the kernel
 - (kernel) bjorn3 fixed many code warnings
 - (kernel) bjorn3 did many code cleanups
 - (kernel) Wildan Mubarok enabled CPU context spawn and destruction on multiple threads to fix context switch freezes
@@ -99,11 +99,9 @@ When making a contribution you agree to the following terms:
 ## Driver Improvements
 
 - (drivers) Jeremy Soller fixed a infinite mouse reset loop in the PS/2 driver when a mouse is not connected
-- (drivers) bjorn3 implemented GPU memory mapping support in the Intel graphics driver
-- (drivers) bjorn3 implemented page flipping in the Intel graphics driver
-- (drivers) bjorn3 implemented VirtIO-GPU display resize after boot
 - (drivers) bjorn3 implemented more Linux DRM APIs, custom ioctls aren't needed anymore
-- (drivers) bjorn3 implemented shadow buffer for dumb buffers to improve write-combining memory performance
+- (drivers) bjorn3 implemented GPU memory mapping support in the Intel graphics driver
+- (drivers) bjorn3 introduced shadow buffers in front of framebuffers where necessary for acceptable performance when write-combining memory is used
 - (drivers) bjorn3 reduced code duplication in graphics drivers
 - (drivers) bjorn3 did many code cleanups
 - (drivers) Landon Propes disabled the keyboard before running self test to fix test failure when pressing keys at boot
@@ -122,13 +120,13 @@ When making a contribution you agree to the following terms:
 - (sys) auronandace unified the version management of more libraries
 - (sys) auronandace enabled some Clippy lints
 - (sys) auronandace documented the `daemon` library code
-- (sys) auronandace documented the public functions in shared library code
+- (sys) auronandace documented some public functions in shared library code
 
 ## Relibc Improvements
 
 - (libc) Ibuki Omatsu reimplemented the `fstat*`, `fchmod`, `getdents`, `ftruncate`, and `futimens` functions using the `stdfscall` system call to unify code
 - (libc) Ibuki Omatsu fixed a possible deadlock in `chdir`
-- (libc) bjorn3 fixed the `setjmp` and `sigsetjmp` functions in ARM64
+- (libc) bjorn3 fixed a linker issue related to the `setjmp` and `sigsetjmp` functions in ARM64
 - (libc) Wildan Mubarok implemented the `getgroups()` function
 - (libc) Wildan Mubarok implemented long double support in the `printf()` function
 - (libc) Wildan Mubarok implemented `pthread_rwlock_clock[rd/rw]lock`
@@ -223,7 +221,7 @@ When making a contribution you agree to the following terms:
 - (build) bjorn3 enabled networking in all Redox variants to unify configurations
 - (build) bjorn3 replaced SATA with NVMe in QEMU where possible
 - (build) bjorn3 enabled xHCI by default in QEMU x86-64 USB
-- (build) bjorn3 removed unnecessary software-specific and CPU-specific filesystem configurations
+- (build) bjorn3 replaced CPU architecture and SoC-specific filesystem configurations with runtime checks by the `init` system
 - (build) bjorn3 did a code deduplication and cleanup
 - (build) Philipp Bartsch added the QEMU UEFI firmware locations for NixOS
 - (build) Zhiwei Liang removed duplicated dependencies from Podman Build
