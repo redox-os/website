@@ -88,7 +88,6 @@ When making a contribution you agree to the following terms:
 
 ## Kernel Improvements
 
-- (kernel) bjorn3 fixed granted flags in the debugger
 - (kernel) bjorn3 changed the memory manager submodule to a regular directory in the kernel
 - (kernel) bjorn3 fixed many code warnings
 - (kernel) bjorn3 did many code cleanups
@@ -106,7 +105,7 @@ When making a contribution you agree to the following terms:
 
 ## Driver Improvements
 
-- (drivers) Jeremy Soller fixed a infinite mouse reset loop in the PS/2 driver when a mouse is not connected
+- (drivers) Jeremy Soller fixed a infinite mouse reset loop bug in the PS/2 driver when a mouse is not connected
 - (drivers) bjorn3 implemented more Linux DRM APIs, custom ioctls aren't needed anymore
 - (drivers) bjorn3 implemented GPU memory mapping support in the Intel graphics driver
 - (drivers) bjorn3 introduced shadow buffers in front of framebuffers where necessary for acceptable performance when write-combining memory is used
@@ -141,8 +140,6 @@ When making a contribution you agree to the following terms:
 - (libc) Wildan Mubarok implemented the `getgroups()` function
 - (libc) Wildan Mubarok implemented long double support in the `printf()` function
 - (libc) Wildan Mubarok implemented `pthread_rwlock_clock[rd/rw]lock`
-- (libc) Wildan Mubarok implemented cache in dynamic linker using shared memory
-- (libc) Wildan Mubarok implemented cache on `exec` reusing the dynamic linker cache
 - (libc) Wildan Mubarok added more `sysconf` POSIX constants to fix `wget` compilation
 - (libc) Wildan Mubarok defined more feature macros in `unistd` to fix `boost` compilation
 - (libc) Wildan Mubarok reduced the dynamic linker initialization time
