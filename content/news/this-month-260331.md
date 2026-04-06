@@ -25,13 +25,15 @@ This is the first advanced window content to be drawn in the compositor.
 
 ## Deficit Weighted Round Robin Scheduler
 
-Akshit Gaur implemented a new CPU scheduler to fix idle processes stealing most of the CPU time from active processes and improving system performance with better CPU time distribution.
+Akshit Gaur implemented a new CPU scheduler to fix idle processes stealing most of the CPU time from active processes and improving system performance with better CPU time distribution. He also implemented the `nice` and `renice` tools to allow process priority change.
 
 He wrote a article about his work, you can read on [this](https://www.redox-os.org/news/rsoc-dwrr/) page.
 
 ## Namespace and Process CWD As Capabilities
 
 Ibuki Omatsu migrated the namespace and process CWD to capabilities which improved their security strength. You can read his report on [this](https://www.redox-os.org/news/nlnet-cap-nsmgr-cwd/) page.
+
+The sandbox tooling based on CWD as Capabilities is planned for the future.
 
 ## Kernel Deadlock Detection
 
@@ -43,19 +45,26 @@ Thanks Wildan for moving forward this difficult and time consuming effort.
 
 ## Unicode Everywhere
 
-Wildan Mubarok updated CPython, PHP, GNU Bash, GNU Nano, Vim, ncdu, and GNU Readline to use the `ncurses` library variant with Unicode support (ncursesw).
+Wildan Mubarok updated CPython, PHP, GNU Nano, Vim, ncdu, and GNU Readline to use the `ncurses` library variant with Unicode support (ncursesw). With this change, Vim gained support with Unicode characters. Other software will follow as more fixes arrive in the future.
+
+We verified that Rust-based programs such as Ion and `kibi` supported Unicode already, as seen from the screenshot below which is taken from a QEMU serial terminal.
 
 <img src="/img/screenshot/shell-unicode.png" class="img-responsive"/>
 
 ## pkgar Compression!
 
-Wildan Mubarok implemented compression in `pkgar` packages and enabled in the package server. It will help to download and install packages faster by reducing the network stack slowness impact.
+Wildan Mubarok implemented [LZMA2](https://en.wikipedia.org/wiki/LZMA) compression in `pkgar` packages and have been enabled in the package server. This compression algorithm was chosen for compact size resulting in about ~3-5x smaller package size with relatively small decompression time. It will help to download and install packages faster by reducing the network stack slowness impact.
+## Dynamic Linker Storage Cache
+
+Wildan Mubarok implemented storage caching in the dynamic linker to reduce storage latency caused by program initialization. It works by caching the executables into a shared memory when loaded for the second time. In controlled setting this reduces GCC initialization time by 50%.
+
+The feature is planned to be moved into RedoxFS as a inode cache for much better performance and security.
 
 ## Checksum-based Package Updates and Faster Recipe Push
 
-Wildan Mubarok implemented the support for package updates based on package checksum changes which reduced package update time and recipe push/testing time in development.
+Wildan Mubarok implemented the support for package updates from the build system using the `make push` command. The package update is done by comparing package checksum changes which reduced package update time and recipe testing time in development.
 
-Package updates based on package file checksum changes (like in Fedora DNF and Flatpak) will be implemented soon.
+Checksum-based package updates was implemented in the `pkg update` command as well. Package updates based on package file checksum changes (like in Fedora DNF and Flatpak) is planned for the future.
 
 ## AI Policy and Contribution Terms
 
@@ -74,8 +83,7 @@ When making a contribution you agree to the following terms:
 
 ## Boot Improvements
 
-- (boot) Wildan Mubarok disabled panic on AML failure to allow more computers to boot
-- (boot) Wildan Mubarok fixed `INIT_SKIP`
+- (boot) Wildan Mubarok fixed a `INIT_SKIP` regression
 - (boot) bjorn3 reduced the `initfs` size
 
 ## Kernel Improvements
@@ -85,8 +93,8 @@ When making a contribution you agree to the following terms:
 - (kernel) bjorn3 fixed many code warnings
 - (kernel) bjorn3 did many code cleanups
 - (kernel) Wildan Mubarok enabled CPU context spawn and destruction on multiple threads to fix context switch freezes
-- (kernel) Wildan Mubarok added more ordered locks
-- (kernel) Wildan Mubarok improved performance by removing a unnecessary `Vec` memory allocation and a heap memory allocation
+- (kernel) Wildan Mubarok added more ordered locks to most code using the `RwLock` and `Mutex` types
+- (kernel) Wildan Mubarok improved performance by removing a unnecessary `Vec` heap memory allocation in event queues
 - (kernel) Wildan Mubarok improved the system stats performance
 - (kernel) Wildan Mubarok added more information context in deadlock debugging messages
 - (kernel) Wildan Mubarok reduced the thread lock contention in CPU context spawn
@@ -129,6 +137,7 @@ When making a contribution you agree to the following terms:
 - (libc) Ibuki Omatsu reimplemented the `fstat*`, `fchmod`, `getdents`, `ftruncate`, and `futimens` functions using the `stdfscall` system call to unify code
 - (libc) Ibuki Omatsu fixed a possible deadlock in `chdir`
 - (libc) bjorn3 fixed a linker issue related to the `setjmp` and `sigsetjmp` functions in ARM64
+- (libc) bjorn3 implemented more Linux DRM mode-setting APIs
 - (libc) Wildan Mubarok implemented the `getgroups()` function
 - (libc) Wildan Mubarok implemented long double support in the `printf()` function
 - (libc) Wildan Mubarok implemented `pthread_rwlock_clock[rd/rw]lock`
@@ -142,12 +151,15 @@ When making a contribution you agree to the following terms:
 - (libc) Wildan Mubarok fixed `pthread_rwlock` function timeout handling
 - (libc) Wildan Mubarok fixed `pthread_rwlock_timed[rd/rw]lock` by using real-time clock
 - (libc) Wildan Mubarok fixed a memory overflow bug in `fnmatch`
+- (libc) Wildan Mubarok fixed a regression in `AT_EMPTY_PATH`
 - (libc) Wildan Mubarok updated the tests to build with `glibc` for comparisons
 - (libc) Landon Propes fixed a bug that caused many false test errors due to `fgetws` always returning `NULL` in `EOF`, now it only return `NULL` in errors
 - (libc) Mustafa Oz implemented integer overflow handling in the `select()` function
+- (libc) Benton60 improved and fixed hang in `recvfrom` by routing through the new `recvmsg` handler
 - (libc) auronandace migrated some header files to their `cbindgen` configuration
 - (libc) auronandace fixed a bug in `inet_pton` when there are too many leading zeros in an octet
 - (libc) auronandace fixed the `strncmp` checking in `getgrnam_r`
+- (libc) auronandace started a Rust-based math header
 - (libc) auronandace fixed a namespace pollution
 - (libc) auronandace reduced code duplication
 - (libc) auronandace did many header and code cleanups
@@ -183,6 +195,8 @@ When making a contribution you agree to the following terms:
 ## Packaging Improvements
 
 - (pkg) Mustafa Oz replaced some package manager panics with exit codes
+- (pkg) Mustafa Oz added colored output to the `pkg search` and `pkg list` commands
+- (pkg) Wildan Mubarok added a backend based on `curl` and improved plain callback to `pkgutils` for use in the build system
 - (pkg) Wildan Mubarok extended the `pkgar` API to allow customized installation and handle extraction file conflicts better
 - (pkg) Wildan Mubarok fixed the temporary file clash detection in `pkgar` extraction
 - (pkg) Wildan Mubarok improved the package manager error messages
@@ -193,10 +207,11 @@ When making a contribution you agree to the following terms:
 - (app) Wildan Mubarok ported [Boost](https://www.boost.org/) and [ruff](https://github.com/astral-sh/ruff)
 - (app) Wildan Mubarok enabled dynamic linking in Lua and `libevent`
 - (app) Wildan Mubarok replaced RustPython with CPython 3.12 in the `desktop` variant to avoid AI-generated code
-- (app) Wildan Mubarok improved the GCC performance
+- (app) Wildan Mubarok improved the GCC initialization performance
 - (app) Wildan Mubarok fixed zola, miniserve, lighttpd, Valkey, and binaryen compilation
 - (app) Wildan Mubarok reduced the GCC and G++ package size from 587MB and 306MB to 127MB and 63MB
 - (app) Wildan Mubarok reduced the CPython and NodeJS compilation time
+- (app) Wildan Mubarok reduced the GNU Bash compilation time by linking it to `termcap`
 
 ## CI Improvements
 
