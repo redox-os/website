@@ -25,9 +25,8 @@ This is the first advanced window content to be drawn in the compositor.
 
 ## Deficit Weighted Round Robin Scheduler
 
-Akshit Gaur implemented a new CPU scheduler to fix idle processes stealing most of the CPU time from active processes and improving system performance with better CPU time distribution. He also implemented the `nice` and `renice` tools to allow process priority change.
-
-He wrote a article about his work, you can read on [this](https://www.redox-os.org/news/rsoc-dwrr/) page.
+Akshit Gaur implemented a new CPU scheduler to reduce idle processes stealing CPU time from active processes, and to improve system performance with better CPU time distribution. He enabled `nice` from `uutils`, and implemented a Redox version of `renice` to allow changes to process priority.
+[Here's an article about his work](https://www.redox-os.org/news/rsoc-dwrr/).
 
 ## Namespace and Process CWD As Capabilities
 
@@ -41,7 +40,7 @@ Wildan Mubarok implemented a method to tune the spinning mutex/rwlock counters t
 
 This and ordered locks being added in more parts of the kernel are helping us to be almost deadlock-free in the kernel, which will eliminate userspace hangs and ease testing/debugging.
 
-Thanks Wildan for moving forward this difficult and time consuming effort.
+Thanks Wildan for moving forward with this difficult and time consuming effort.
 
 ## Unicode Everywhere
 
@@ -53,18 +52,18 @@ We verified that Rust-based programs such as Ion and `kibi` supported Unicode al
 
 ## pkgar Compression!
 
-Wildan Mubarok implemented [LZMA2](https://en.wikipedia.org/wiki/LZMA) compression in `pkgar` packages and have been enabled in the package server. This compression algorithm was chosen for compact size resulting in about ~3-5x smaller package size with relatively small decompression time. It will help to download and install packages faster by reducing the network stack slowness impact.
+Wildan Mubarok implemented [LZMA2](https://en.wikipedia.org/wiki/LZMA) compression in `pkgar` packages and it has been enabled in the package server. This compression algorithm results in about ~3-5x smaller package size with relatively low decompression time. It will help reduce download and installation time of packages, helping counteract any slowness in our network stack.
 ## Dynamic Linker Storage Cache
 
-Wildan Mubarok implemented storage caching in the dynamic linker to reduce storage latency caused by program initialization. It works by caching the executables into a shared memory when loaded for the second time. In controlled setting this reduces GCC initialization time by 50%.
+Wildan Mubarok implemented storage caching in the dynamic linker to reduce latency during program initialization. It works by caching the executables in a shared memory segment when loaded for the second time. In controlled setting this reduces GCC initialization time by 50%.
 
-The feature is planned to be moved into RedoxFS as a inode cache for much better performance and security.
+The feature is planned to be moved into the RedoxFS file system service for much better performance and security.
 
 ## Checksum-based Package Updates and Faster Recipe Push
 
 Wildan Mubarok implemented the support for package updates from the build system using the `make push` command. The package update is done by comparing package checksum changes which reduced package update time and recipe testing time in development.
 
-Checksum-based package updates was implemented in the `pkg update` command as well. Package updates based on package file checksum changes (like in Fedora DNF and Flatpak) is planned for the future.
+Checksum-based package updates were implemented in the `pkg update` command as well. Package updates based on package file checksum changes (like in Fedora DNF and Flatpak) is planned for the future.
 
 ## AI Policy and Contribution Terms
 
@@ -88,9 +87,9 @@ When making a contribution you agree to the following terms:
 
 ## Kernel Improvements
 
-- (kernel) bjorn3 changed the memory manager submodule to a regular directory in the kernel
+- (kernel) bjorn3 changed the memory manager, which was a Git submodule, to a regular directory in the kernel tree
 - (kernel) bjorn3 fixed many code warnings
-- (kernel) bjorn3 did many code cleanups
+- (kernel) bjorn3 made many code cleanup changes
 - (kernel) Wildan Mubarok enabled CPU context spawn and destruction on multiple threads to fix context switch freezes
 - (kernel) Wildan Mubarok added more ordered locks to most code using the `RwLock` and `Mutex` types
 - (kernel) Wildan Mubarok improved performance by removing a unnecessary `Vec` heap memory allocation in event queues
@@ -106,7 +105,7 @@ When making a contribution you agree to the following terms:
 ## Driver Improvements
 
 - (drivers) Jeremy Soller fixed a infinite mouse reset loop bug in the PS/2 driver when a mouse is not connected
-- (drivers) bjorn3 implemented more Linux DRM APIs, custom ioctls aren't needed anymore
+- (drivers) bjorn3 implemented more Linux DRM APIs, removing the need for Redox-specific ioctls
 - (drivers) bjorn3 implemented GPU memory mapping support in the Intel graphics driver
 - (drivers) bjorn3 introduced shadow buffers in front of framebuffers where necessary for acceptable performance when write-combining memory is used
 - (drivers) bjorn3 reduced code duplication in graphics drivers
@@ -121,7 +120,7 @@ When making a contribution you agree to the following terms:
 - (sys) bjorn3 updated `sudo` to switch to the root namespace before the target process execution
 - (sys) bjorn3 moved the bootloader, kernel, and `initfs` directories to `/usr/lib/boot` to allow atomic system updates in the future
 - (sys) bjorn3 moved the `root` user directory to `/home/root`
-- (sys) bjorn3 enabled synchronous logging to the kernel debug log in `logd` to keep logging working when the graphics driver crashes
+- (sys) bjorn3 enabled synchronous logging to the kernel debug log in `logd`, to keep logging working when the graphics driver crashes
 - (sys) bjorn3 did some fixes in shared memory to help Wayland
 - (sys) bjorn3 fixed some code warnings
 - (sys) Wildan Mubarok updated `uutils` version to 0.7
@@ -150,16 +149,16 @@ When making a contribution you agree to the following terms:
 - (libc) Wildan Mubarok fixed a memory overflow bug in `fnmatch`
 - (libc) Wildan Mubarok fixed a regression in `AT_EMPTY_PATH`
 - (libc) Wildan Mubarok updated the tests to build with `glibc` for comparisons
-- (libc) Landon Propes fixed a bug that caused many false test errors due to `fgetws` always returning `NULL` in `EOF`, now it only return `NULL` in errors
+- (libc) Landon Propes fixed a bug in `fgetws` where it was returning `NULL` when first reaching `EOF`. Now it only returns `NULL` on error. This was causing many failures on tests that should have otherwise passed.
 - (libc) Mustafa Oz implemented integer overflow handling in the `select()` function
 - (libc) Benton60 improved and fixed hang in `recvfrom` by routing through the new `recvmsg` handler
 - (libc) auronandace migrated some header files to their `cbindgen` configuration
 - (libc) auronandace fixed a bug in `inet_pton` when there are too many leading zeros in an octet
 - (libc) auronandace fixed the `strncmp` checking in `getgrnam_r`
 - (libc) auronandace started a Rust-based math header
-- (libc) auronandace fixed a namespace pollution
+- (libc) auronandace fixed a namespace pollution problem
 - (libc) auronandace reduced code duplication
-- (libc) auronandace did many header and code cleanups
+- (libc) auronandace cleaned up lots of headers and code 
 - (libc) auronandace enabled some Clippy lints
 - (libc) auronandace improved code readability
 
@@ -185,7 +184,7 @@ When making a contribution you agree to the following terms:
 - (gui) bjorn3 fixed a crash in the Orbital launcher (dock bar) when no child processes are running
 - (gui) bjorn3 unified all `orbutils` recipes
 - (gui) bjorn3 removed the abandoned `calculator`, `calendar`, and `character_map` programs from the `orbutils` suite
-- (gui) bjorn3 did some Orbital code cleanups
+- (gui) bjorn3 did some Orbital code cleanup
 - (gui) Wildan Mubarok fixed the SVG support in MATE Desktop
 - (gui) Wildan Mubarok fixed the MATE Marco icon loading
 
@@ -197,7 +196,7 @@ When making a contribution you agree to the following terms:
 - (pkg) Wildan Mubarok extended the `pkgar` API to allow customized installation and handle extraction file conflicts better
 - (pkg) Wildan Mubarok fixed the temporary file clash detection in `pkgar` extraction
 - (pkg) Wildan Mubarok improved the package manager error messages
-- (pkg) Wildan Mubarok did a code simplification
+- (pkg) Wildan Mubarok simplified some code
 
 ## Programs
 
@@ -223,7 +222,7 @@ When making a contribution you agree to the following terms:
 - (build) Wildan Mubarok implemented the automatic update of downloaded packages when `REPO_BINARY` is enabled
 - (build) Wildan Mubarok updated the `make prefix_clean` command to remove outdated toolchain tarballs and avoid confusion
 - (build) Wildan Mubarok updated the `auto_deps` cache to use the recipe build cache for invalidation to fix cache conflicts
-- (build) Wildan Mubarok disabled the Cookbook offline mode when Cargo is used in the `build.script` data type to fix a error
+- (build) Wildan Mubarok disabled the Cookbook "offline" mode when Cargo is used in the `build.script` data type, to fix an error
 - (build) Wildan Mubarok enabled the cached recipe build hint color (sea blue) in the `fetch`, `repo`, and `push` steps of the Cookbook TUI
 - (build) Wildan Mubarok extended the recipe version detection by reading numbers from tarball URLs, Git repository tags or branches, and Cargo packages or workspaces projects
 - (build) Wildan Mubarok exported recipe source identifiers to the recipe build script
@@ -235,7 +234,7 @@ When making a contribution you agree to the following terms:
 - (build) bjorn3 replaced SATA with NVMe in QEMU where possible
 - (build) bjorn3 enabled xHCI by default in QEMU x86-64 USB
 - (build) bjorn3 replaced CPU architecture and SoC-specific filesystem configurations with runtime checks by the `init` system
-- (build) bjorn3 did a code deduplication and cleanup
+- (build) bjorn3 did some code deduplication and cleanup
 - (build) Philipp Bartsch added the QEMU UEFI firmware locations for NixOS
 - (build) Zhiwei Liang removed duplicated dependencies from Podman Build
 
@@ -246,12 +245,12 @@ When making a contribution you agree to the following terms:
 - (doc) Ribbon documented [how to only update the system in the build system](https://doc.redox-os.org/book/build-system-reference.html#update-redox)
 - (doc) Ribbon improved the [build system and system breaking change prevention and fixing](https://doc.redox-os.org/book/troubleshooting.html#prevent-and-fix-breaking-changes)
 - (doc) Ribbon used the `sys` (system recipes group) and `sys-gui` (Orbital recipes group) meta-packages to simplify the system update and troubleshooting commands in the book
-- (doc) Ribbon splitted the [test suites documentation](https://doc.redox-os.org/book/testing-practices.html) in automatic and manual execution
+- (doc) Ribbon split the [test suites documentation](https://doc.redox-os.org/book/testing-practices.html) into automatic and manual execution
 - (doc) Ribbon updated and improved the Quick Workflow page
 - (doc) Ribbon added the "Copy-paste prevent and reduce typos" tip in the [Development Tips](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md#development-recommendations-and-tips) section
 - (doc) Ribbon added the "Comment out configuration or code while testing is better than removal, to remember the testing conditions and prevent mistakes from forgotten logic" tip in the "Development Tips" section
 - (doc) Ribbon documented the "Sometimes you need to rebase your MR to fix the CI testing" rule
-- (doc) Ribbon created the [Notes](https://doc.redox-os.org/book/porting-applications.html#notes) section for quick attention of the most important details in Application Porting page
+- (doc) Ribbon created the [Notes](https://doc.redox-os.org/book/porting-applications.html#notes) section to bring attention to the most important details in Application Porting page
 - (doc) Ribbon improved and moved the [Packaging Policy](https://doc.redox-os.org/book/porting-applications.html#packaging-policy) section to the beginning of the Application Porting page
 - (doc) Ribbon documented the command to push meta-package recipes: `make r.meta-package,--with-package-deps`
 - (doc) Ribbon documented the `SCCACHE_BUILD` (disable/enable `sccache`) environment variable
