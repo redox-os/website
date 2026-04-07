@@ -54,10 +54,6 @@ Thanks Wildan for moving forward with this difficult and time consuming effort.
 
 Wildan Mubarok updated CPython, PHP, GNU Nano, Vim, ncdu, and GNU Readline to use the `ncurses` library variant with Unicode support (ncursesw). With this change, Vim gained support with Unicode characters. Other software will follow as more fixes arrive in the future.
 
-We verified that Rust-based programs such as Ion and `kibi` supported Unicode already, as seen from the screenshot below which is taken from a QEMU serial terminal.
-
-<img src="/img/screenshot/shell-unicode.png" class="img-responsive"/>
-
 ## pkgar Compression!
 
 Wildan Mubarok implemented [LZMA2](https://en.wikipedia.org/wiki/LZMA) compression in `pkgar` packages and it has been enabled in the package server. This compression algorithm results in about ~3-5x smaller package size with relatively low decompression time. It will help reduce download and installation time of packages, helping counteract any slowness in our network stack.
@@ -97,11 +93,11 @@ When making a contribution you agree to the following terms:
 
 - (kernel) bjorn3 changed the memory manager, which was a Git submodule, to a regular directory in the kernel tree
 - (kernel) bjorn3 fixed many code warnings
-- (kernel) bjorn3 made many code cleanup changes
+- (kernel) bjorn3 cleaned up lots of code
 - (kernel) Wildan Mubarok enabled CPU context spawn and destruction on multiple threads to fix context switch freezes
 - (kernel) Wildan Mubarok added more ordered locks to most code using the `RwLock` and `Mutex` types
 - (kernel) Wildan Mubarok improved performance by removing a unnecessary `Vec` heap memory allocation in event queues
-- (kernel) Wildan Mubarok improved the system stats performance
+- (kernel) Wildan Mubarok improved the performance of fetching system stats
 - (kernel) Wildan Mubarok added more information context in deadlock debugging messages
 - (kernel) Wildan Mubarok reduced the thread lock contention in CPU context spawn
 - (kernel) Philipp Bartsch implemented ARM64 CPU feature detection
@@ -117,7 +113,7 @@ When making a contribution you agree to the following terms:
 - (drivers) bjorn3 implemented GPU memory mapping support in the Intel graphics driver
 - (drivers) bjorn3 introduced shadow buffers in front of framebuffers where necessary for acceptable performance when write-combining memory is used
 - (drivers) bjorn3 reduced code duplication in graphics drivers
-- (drivers) bjorn3 did many code cleanups
+- (drivers) bjorn3 cleaned up lots of code
 - (drivers) Landon Propes disabled the keyboard before running self test to fix test failure when pressing keys at boot
 
 ## System Improvements
@@ -160,7 +156,7 @@ When making a contribution you agree to the following terms:
 - (libc) Landon Propes fixed a bug in `fgetws` where it was returning `NULL` when first reaching `EOF`. Now it only returns `NULL` on error. This was causing many failures on tests that should have otherwise passed.
 - (libc) Mustafa Oz implemented integer overflow handling in the `select()` function
 - (libc) Benton60 improved and fixed hang in `recvfrom` by routing through the new `recvmsg` handler
-- (libc) auronandace migrated some header files to their `cbindgen` configuration
+- (libc) auronandace eliminated some C header file fragments by including definitions in the `cbindgen` configuration file
 - (libc) auronandace fixed a bug in `inet_pton` when there are too many leading zeros in an octet
 - (libc) auronandace fixed the `strncmp` checking in `getgrnam_r`
 - (libc) auronandace started a Rust-based math header
@@ -172,7 +168,9 @@ When making a contribution you agree to the following terms:
 
 ## Networking Improvements
 
-- (net) Benton60 fixed the IP retrieve from a UDP socket
+- (net) Benton60 implemented the `recvmsg()` function
+- (net) Benton60 improved the POSIX compliance of the `recvfrom()` function
+- (net) Benton60 implemented the support for reading the IP address from UDP messages
 
 ## RedoxFS Improvements
 
@@ -210,7 +208,7 @@ When making a contribution you agree to the following terms:
 
 - (app) Wildan Mubarok ported [Boost](https://www.boost.org/) and [ruff](https://github.com/astral-sh/ruff)
 - (app) Wildan Mubarok enabled dynamic linking in Lua and `libevent`
-- (app) Wildan Mubarok removed RustPython from the `desktop` variant to avoid AI-generated code
+- (app) Wildan Mubarok removed RustPython from the `desktop` variant to avoid AI-generated code by default
 - (app) Wildan Mubarok improved the GCC initialization performance
 - (app) Wildan Mubarok fixed zola, miniserve, lighttpd, Valkey, and binaryen compilation
 - (app) Wildan Mubarok reduced the GCC and G++ package size from 587MB and 306MB to 127MB and 63MB
@@ -237,7 +235,7 @@ When making a contribution you agree to the following terms:
 - (build) Wildan Mubarok removed the recipe build time identifier in favor of recipe source commit hash identifier to improve bug reproduction
 - (build) Wildan Mubarok reduced the local package installation time
 - (build) Wildan Mubarok reduced the Podman container setup time by moving more build tools to Cookbook
-- (build) Wildan Mubarok fixed a error when a recipe is using a Git repository with patch files, changes its `rev` data type
+- (build) Wildan Mubarok fixed an error when a recipe that uses a patch file to a Git repository, changes the pinned tag or commit hash
 - (build) bjorn3 enabled networking in all Redox variants to unify configurations
 - (build) bjorn3 replaced SATA with NVMe in QEMU where possible
 - (build) bjorn3 enabled xHCI by default in QEMU x86-64 USB
@@ -256,7 +254,7 @@ When making a contribution you agree to the following terms:
 - (doc) Ribbon split the [test suites documentation](https://doc.redox-os.org/book/testing-practices.html) into automatic and manual execution
 - (doc) Ribbon updated and improved the Quick Workflow page
 - (doc) Ribbon added the "Copy-paste prevent and reduce typos" tip in the [Development Tips](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md#development-recommendations-and-tips) section
-- (doc) Ribbon added the "Comment out configuration or code while testing is better than removal, to remember the testing conditions and prevent mistakes from forgotten logic" tip in the "Development Tips" section
+- (doc) Ribbon added the "Commenting out configuration or code while testing is better than removal, to keep in mind the testing conditions and prevent mistakes from forgotten logic" tip in the "Development Tips" section
 - (doc) Ribbon documented the "Sometimes you need to rebase your MR to fix the CI testing" rule
 - (doc) Ribbon created the [Notes](https://doc.redox-os.org/book/porting-applications.html#notes) section to bring attention to the most important details in Application Porting page
 - (doc) Ribbon improved and moved the [Packaging Policy](https://doc.redox-os.org/book/porting-applications.html#packaging-policy) section to the beginning of the Application Porting page
