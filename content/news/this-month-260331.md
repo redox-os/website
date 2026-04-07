@@ -210,7 +210,7 @@ When making a contribution you agree to the following terms:
 
 - (app) Wildan Mubarok ported [Boost](https://www.boost.org/) and [ruff](https://github.com/astral-sh/ruff)
 - (app) Wildan Mubarok enabled dynamic linking in Lua and `libevent`
-- (app) Wildan Mubarok replaced RustPython with CPython 3.12 in the `desktop` variant to avoid AI-generated code
+- (app) Wildan Mubarok removed RustPython from the `desktop` variant to avoid AI-generated code
 - (app) Wildan Mubarok improved the GCC initialization performance
 - (app) Wildan Mubarok fixed zola, miniserve, lighttpd, Valkey, and binaryen compilation
 - (app) Wildan Mubarok reduced the GCC and G++ package size from 587MB and 306MB to 127MB and 63MB
