@@ -15,13 +15,21 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
-## libcosmic Demo in COSMIC Compositor
+## Graphics Improvements
+
+The work on graphics continues.
+A lot of work remains, and most of the improvements right now are small things,
+but they are steps towards bigger things.
 
 Jeremy Soller successfully executed the [libcosmic](https://github.com/pop-os/libcosmic) demo in the COSMIC compositor!
-
 This is the first advanced window content to be drawn in the compositor.
 
 <img src="/img/screenshot/cosmic-comp-libcosmic.png" class="img-responsive"/>
+
+bjorn3 has made some progress on the DRM API and GPU memory mapping, along with other graphics driver improvements.
+And we have a new contributor, Alexander Usenko, who has helped with eliminating the temporary Redox-specific `ioctl`s and has started work on support for planes.
+
+Still baby steps, but it is exciting to see the work moving forward.
 
 ## Deficit Weighted Round Robin Scheduler
 
@@ -38,7 +46,7 @@ The sandbox tooling based on CWD as Capabilities is planned for the future.
 
 Wildan Mubarok implemented a method to tune the spinning mutex/rwlock counters to trigger deadlocks and detect them more easily.
 
-This and ordered locks being added in more parts of the kernel are helping us to be almost deadlock-free in the kernel, which will eliminate userspace hangs and ease testing/debugging.
+This and ordered locks being added in more parts of the kernel are helping us to eliminate most of deadlocks in the kernel, which will eliminate userspace hangs and ease testing/debugging.
 
 Thanks Wildan for moving forward with this difficult and time consuming effort.
 
@@ -61,7 +69,7 @@ The feature is planned to be moved into the RedoxFS file system service for much
 
 ## Checksum-based Package Updates and Faster Recipe Push
 
-Wildan Mubarok implemented the support for package updates from the build system using the `make push` command. The package update is done by comparing package checksum changes which reduced package update time and recipe testing time in development.
+Wildan Mubarok implemented support for package updates from the build system using the `make push` command. Package updates are installed when the package checksum changes. This reduces update time and significantly improves the speed of the developer workflow when applying changes.
 
 Checksum-based package updates were implemented in the `pkg update` command as well. Package updates based on package file checksum changes (like in Fedora DNF and Flatpak) is planned for the future.
 
