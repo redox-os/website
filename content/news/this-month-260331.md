@@ -136,6 +136,7 @@ When making a contribution you agree to the following terms:
 
 ## Relibc Improvements
 
+- (libc) Anhad Singh fixed the dynamic loader interpreter relocation in ARM64, which allows `/lib/ld64.so.1 true` to work
 - (libc) Ibuki Omatsu reimplemented the `fstat*`, `fchmod`, `getdents`, `ftruncate`, and `futimens` functions using the `stdfscall` system call to unify code
 - (libc) Ibuki Omatsu fixed a possible deadlock in `chdir`
 - (libc) bjorn3 fixed a linker issue related to the `setjmp` and `sigsetjmp` functions in ARM64
