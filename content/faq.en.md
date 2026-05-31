@@ -193,7 +193,7 @@ This Unix [family](https://en.wikipedia.org/wiki/Research_Unix) included several
 
 ### [Linux](https://www.kernel.org/)
 
-The most advanced monolithic kernel and biggest open-source project of the world. It brought several improvements and optimizations to the Unix-like world.
+The most advanced monolithic kernel and biggest open-source project in the world. It brought several improvements and optimizations to Unix-like operating systems.
 
 Redox tries to implement the Linux performance improvements in a microkernel design.
 
