@@ -2,7 +2,7 @@
 title = "General FAQ"
 +++
 
-This page covers questions and answers for newcomers and end-users.
+This page has common questions and answers for newcomers and end-users.
 
 - [What is Redox?](#what-is-redox)
 - [What does Redox mean?](#what-does-redox-mean)
@@ -17,8 +17,8 @@ This page covers questions and answers for newcomers and end-users.
 - [What I can do with Redox?](#what-i-can-do-with-redox)
 - [What is an Unix-like OS?](#what-is-an-unix-like-os)
 - [How Redox was influenced by other systems?](#how-redox-was-influenced-by-other-systems)
-- [What programs can Redox run?](#what-programs-can-redox-run)
-- [How to install programs on Redox?](#how-to-install-programs-on-redox)
+- [What applications can Redox run?](#what-applications-can-redox-run)
+- [How to install applications on Redox?](#how-to-install-applications-on-redox)
 - [Which are the Redox variants?](#which-are-the-redox-variants)
 - [Which devices does Redox support?](#which-devices-does-redox-support)
 - [I have a low-end computer, would Redox work on it?](#i-have-a-low-end-computer-would-redox-work-on-it)
@@ -89,11 +89,11 @@ The restrictive syntax and compiler requirements to build the code reduce the pr
 
 - **Less vulnerable to data corruption**
 
-The Rust compiler helps the programmer to avoid memory errors and race conditions, which reduces the probability of data corruption bugs due to implementation errors.
+The Rust compiler helps the applicationmer to avoid memory errors and race conditions, which reduces the probability of data corruption bugs due to implementation errors.
 
 - **No need for C/C++ exploit mitigations on system components**
 
-As Redox is written in Rust we don't need C/C++ exploit mitigations for the system components, reducing the system complexity and increasing the program compatibility.
+As Redox is written in Rust we don't need C/C++ exploit mitigations for the system components, reducing the system complexity and increasing the application compatibility.
 
 The microkernel design written in Rust protects against memory defects that one might see in operating systems written in C/C++.
 
@@ -107,7 +107,7 @@ Rust's safe and fast language design, combined with the small kernel code size, 
 
 - **Thread-safety**
 
-The C/C++ support for thread-safety is quite fragile. As such, it is very easy to write a program that looks safe to run across multiple threads, but which introduces subtle bugs or security holes. If one thread accesses a piece of state at the same time that another thread is changing it, the whole program can exhibit some truly confusing and bizarre bugs.
+The C/C++ support for thread-safety is quite fragile. As such, it is very easy to write a application that looks safe to run across multiple threads, but which introduces subtle bugs or security holes. If one thread accesses a piece of state at the same time that another thread is changing it, the whole application can exhibit some truly confusing and bizarre bugs.
 
 You can see [this Wikipedia example](https://en.wikipedia.org/wiki/Time_of_check_to_time_of_use) of a serious class of security bugs that thread-safety fixes.
 
@@ -134,13 +134,13 @@ You can see how Redox is compared to Linux, FreeBSD and Plan 9 on these pages:
 
 ### Comparison with other microkernel projects
 
-The main difference is that Redox is a **complete Unix-like operating system** like Linux and BSD distributions with pre-configured system components, drivers ,and applications, thus you don't need to implement most system components, most/all drivers or need a high effort to port programs (most microkernel projects were hobbies created for learning, research and experimentation).
+The main difference is that Redox is a **complete Unix-like operating system** like Linux and BSD distributions with pre-configured system components, drivers ,and applications, thus you don't need to implement most system components, most/all drivers or need a high effort to port applications (most microkernel projects were hobbies created for research, experimentation, and learning).
 
 ## What is the purpose of Redox?
 
-The main goal of Redox is to be a general-purpose OS, while maintaining security, stability and correctness.
+The main goal of Redox is to be a general-purpose operating system, while maintaining security, stability and correctness.
 
-Redox aims to be an alternative to existing Unix systems (Linux/BSD), with the ability to run most Unix programs with only recompilation or minimal modifications.
+Redox aims to be an alternative to existing Unix systems (Linux/BSD), with the ability to run most Unix applications with only recompilation or minimal modifications.
 
 - [Our Goals](https://doc.redox-os.org/book/our-goals.html)
 
@@ -187,7 +187,7 @@ Redox follow the same principle, trying to make the kernel-space small as possib
 
 This Unix [family](https://en.wikipedia.org/wiki/Research_Unix) included several improvements on Unix systems and the open-source variants of BSD added many improvements to the original system (like Linux did).
 
-- [FreeBSD](https://www.freebsd.org/) - The [Capsicum](https://man.freebsd.org/cgi/man.cgi?capsicum(4)) (a capability-based system) and [jails](https://en.wikipedia.org/wiki/Freebsd_jail) (a sandbox technology) influenced the Redox namespaces implementation.
+- [FreeBSD](https://www.freebsd.org/) - The [Capsicum](https://man.freebsd.org/cgi/man.cgi?capsicum(4)) (a capability-based system) and [jails](https://en.wikipedia.org/wiki/Freebsd_jail) (a sandbox technology) influenced the Redox namespace implementation.
 
 - [OpenBSD](https://www.openbsd.org/) - The [system call](https://man.openbsd.org/pledge.2), [filesystem](https://man.openbsd.org/unveil.2), [display server](https://www.xenocara.org/) and [audio server](https://man.openbsd.org/sndiod.8) sandbox and [others](https://www.openbsd.org/innovations.html) influenced the Redox security.
 
@@ -197,42 +197,54 @@ The most advanced monolithic kernel and biggest open-source project of the world
 
 Redox tries to implement the Linux performance improvements in a microkernel design.
 
-## What programs can Redox run?
+## What applications can Redox run?
 
 Redox is designed to be source-compatible with most Unix, Linux and POSIX-compliant applications, only requiring compilation.
 
-(Wayland will be supported soon)
-
 Some important software that Redox supports:
 
-- GNU Bash
-- FFMPEG
-- Git
-- RustPython
-- SDL2
+- GCC
+- LLVM
+- Rust
 - OpenSSL
 - Mesa3D
 - X11
-- GCC
-- LLVM
+- OpenSSH
+- FFMPEG
+- Git
+- CPython
+- SDL2
+- GNU Bash
 
-You can see all Redox components and ported programs on the [build server list](https://static.redox-os.org/pkg/x86_64-unknown-redox/).
+You can see all ported applications and libraries in the following links:
 
-## How to install programs on Redox?
+- [x86-64 packages](https://static.redox-os.org/pkg/x86_64-unknown-redox/)
+- [ARM64 packages](https://static.redox-os.org/pkg/aarch64-unknown-redox/)
+- [RISC-V packages](https://static.redox-os.org/pkg/riscv64gc-unknown-redox/)
+- [i586 packages](https://static.redox-os.org/pkg/i586-unknown-redox/)
 
-Redox has a package manager similar to `apt` (Debian) and `pkg` (FreeBSD), you can see how to use it on the [Downloading packages with pkg](https://doc.redox-os.org/book/pkg.html) page.
+There's also a package web interface if you want detailed package information:
+
+- [x86-64 packages](https://static.redox-os.org/web/x86_64-unknown-redox/)
+- [ARM64 packages](https://static.redox-os.org/web/aarch64-unknown-redox/)
+- [RISC-V packages](https://static.redox-os.org/web/riscv64gc-unknown-redox/)
+- [i586 packages](https://static.redox-os.org/web/i586-unknown-redox/)
+
+## How to install applications on Redox?
+
+You can install them by running the `sudo pkg install package-name`, similar to `apt` (Debian) and `pkg` (FreeBSD).
+
+You can learn how to fully use it in the [Package Manager](https://doc.redox-os.org/book/pkg.html) page.
 
 ## Which are the Redox variants?
 
 Redox has some variants for a group of tasks, take a look at them below:
 
-- `minimal` - The most minimal variant with a basic system without network support. Aimed for embedded devices, very old computers, testers and developers.
-
-- `minimal-net` - The most minimal variant with a basic system and network support. Aimed for embedded devices, very old computers, testers and developers.
-
-- `desktop-minimal` - The most minimal variant with the Orbital desktop environment included. Aimed for embedded devices, very old computers, testers and developers.
+- `minimal` - The most minimal variant with a basic system and network support. Aimed for embedded devices, very old computers, testers and developers.
 
 - `server` - The server variant with a complete system and network tools. Aimed for servers, embedded devices, low-end computers, testers and developers.
+
+- `desktop-minimal` - The most minimal variant with the Orbital desktop environment included. Aimed for embedded devices, very old computers, testers and developers.
 
 - `desktop` - The standard variant with a complete system, Orbital desktop environment and useful tools. Aimed for end-users, producers, gamers, testers and developers.
 
@@ -248,39 +260,32 @@ Have a look at [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/m
 
 ### Compatibility Table
 
-| **Category**        | **Items**                                                                                                                                            |
-|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| CPU                 | - Intel 64-bit (x86_64) <br>- Intel 32-bit (i686) from Pentium II and after with limitations <br>- AMD 32/64-bit <br>- ARM 64-bit (Aarch64) with limitations |
-| Hardware Interfaces | - ACPI, PCI, USB                                                                                                                                       |
-| Storage             | - IDE (PATA), SATA (AHCI), NVMe                                                                                                                        |
-| Video               | - BIOS VESA, UEFI GOP                                                                                                                                  |
-| Sound               | - Intel, Realtek chipsets                                                                                                                              |
-| Input               | - PS/2 keyboards, mouse and touchpad <br> - USB keyboards, mouse and touchpad                                                                          |
-| Ethernet            | - Intel Gigabit and 10 Gigabit ethernet <br>- Realtek ethernet                                                                                        |
+| **Category** | **Items** |
+|--------------|-----------|
+| CPU | - Intel 64-bit (x86_64) <br>- Intel 32-bit (i586) from Pentium II and after with limitations <br>- AMD 32/64-bit <br>- ARM 64-bit (Aarch64) with limitations |
+| Hardware Interfaces | - ACPI, PCI, USB |
+| Storage | - IDE (PATA), SATA (AHCI), NVMe |
+| Video | - Intel GPUs, BIOS VESA, UEFI GOP |
+| Sound | - Intel, Realtek chipsets |
+| Input | - PS/2 keyboards, mouse and touchpad <br> - USB keyboards, mouse and touchpad |
+| Ethernet | - Intel Gigabit and 10 Gigabit ethernet <br>- Realtek ethernet |
 
 ## I have a low-end computer, would Redox work on it?
 
-A CPU is the most complex machine of the world: even the oldest processors are powerful for some tasks but not for others.
+A CPU is the most complex machine of the world: even the oldest processors are capable for some tasks but not for others.
 
-The main problem with old computers is the amount of RAM available (they were sold in a era where RAM chips were expensive) and the lack of SSE/AVX extensions (programs use them to speed up the algorithms). Because of this some modern programs may not work or require a lot of RAM to perform complex tasks.
+The main problem with old computers is the amount of RAM available (they were sold in a era where RAM chips were expensive) and the lack of SSE/AVX extensions (applications use them to speed up the algorithms). Because of this some modern applications may not work or require a lot of RAM to perform complex tasks.
 
-Redox itself will work normally if the processor architecture is supported by the system, but the performance and stability may vary per program.
+Redox itself will work normally if the processor architecture is supported by the system, but the performance and stability may vary per application.
 
 ## Which virtual machines does Redox have integration with?
 
 - QEMU
 - VirtualBox
 
-We can also have a hypervisor variant in the future, similar to [Xen](https://xenproject.org/).
-
-A [hypervisor](https://en.wikipedia.org/wiki/Hypervisor) is a program providing the ability to run multiple isolated operating systems instances simultaneously.
-
 ## How do I build Redox?
 
-Read the following pages:
-
-- [Podman Build](https://doc.redox-os.org/book/podman-build.html)
-- [Native Build](https://doc.redox-os.org/book/building-redox.html)
+Read the [Building Redox](https://doc.redox-os.org/book/podman-build.html) page.
 
 ## How to troubleshoot your build in case of errors
 

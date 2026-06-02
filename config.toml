@@ -54,6 +54,7 @@ url = "/donate/"
 weight = 6
 
 [languages.zh]
+disabled = true
 weight = 2
 languageName = "中文"
 languageCode = "zh-cn"
@@ -87,6 +88,7 @@ name = "RSoC"
 url = "/rsoc/"
 
 [languages.es]
+disabled = true
 weight = 3
 languageName = "Español"
 languageCode = "es-es"
@@ -120,6 +122,7 @@ name = "RSoC"
 url = "/rsoc/"
 
 [languages.ru]
+disabled = true
 weight = 4
 languageName = "Русский"
 languageCode = "ru-ru"
@@ -153,6 +156,7 @@ name = "RSoC"
 url = "/rsoc/"
 
 [languages.fr]
+disabled = true
 weight = 5
 languageName = "Français"
 languageCode = "fr-fr"
@@ -181,6 +185,7 @@ weight = 6
 
 
 [languages.de]
+disabled = true
 weight = 6
 languageName = "Deutsch"
 languageCode = "de-de"
@@ -214,6 +219,7 @@ name = "RSoC"
 url = "/rsoc/"
 
 [languages.it]
+disabled = true
 weight = 7
 languageName = "Italiano"
 languageCode = "it-it"
@@ -247,6 +253,7 @@ name = "RSoC"
 url = "/rsoc/"
 
 [languages.tr]
+disabled = true
 weight = 8
 languageName = "Türkçe"
 languageCode = "tr-tr"
@@ -280,6 +287,7 @@ name = "RSoC"
 url = "/rsoc/"
 
 [languages.sv]
+disabled = true
 weight = 9
 languageName = "Svenska"
 languageCode = "sv-se"
@@ -313,6 +321,7 @@ name = "RSoC"
 url = "/rsoc/"
 
 [languages.nl]
+disabled = true
 weight = 10
 languageName = "Nederlands"
 languageCode = "nl-NL"
@@ -346,6 +355,7 @@ name = "RSoC"
 url = "/rsoc/"
 
 [languages.da]
+disabled = true
 weight = 11
 languageName = "Dansk"
 languageCode = "da-dk"
@@ -379,6 +389,7 @@ name = "RSoC"
 url = "/rsoc/"
 
 [languages.no]
+disabled = true
 weight = 12
 languageName = "Norsk"
 languageCode = "nb-no"
@@ -412,6 +423,7 @@ name = "RSoC"
 url = "/rsoc/"
 
 [languages.cz]
+disabled = true
 weight = 13
 languageName = "Čeština"
 languageCode = "cz"
@@ -445,6 +457,7 @@ name = "RSoC"
 url = "/rsoc/"
 
 [languages.eo]
+disabled = true
 weight = 14
 languageName = "Esperanto"
 languageCode = "eo"
@@ -478,6 +491,7 @@ name = "RSoC"
 url = "/rsoc/"
 
 [languages.pt]
+disabled = true
 weight = 15
 languageName = "Português"
 languageCode = "pt-br"
@@ -505,6 +519,7 @@ url = "/donate/"
 weight = 6
 
 [languages.jp]
+disabled = true
 weight = 16
 languageName = "日本語"
 languageCode = "jp-JP"
@@ -538,6 +553,7 @@ name = "RSoC"
 url = "/rsoc/"
 
 [languages.ko]
+disabled = true
 weight = 17
 languageName = "한국어"
 languageCode = "ko"
@@ -571,6 +587,7 @@ name = "RSoC"
 url = "/rsoc/"
 
 [languages.hu]
+disabled = true
 weight = 18
 languageName = "Magyar"
 languageCode = "hu-hu"
@@ -604,6 +621,7 @@ name = "RSoC"
 url = "/rsoc/"
 
 [languages.pl]
+disabled = true
 weight = 19
 languageName = "Polski"
 languageCode = "pl"
@@ -641,6 +659,7 @@ name = "RSoC"
 url = "/rsoc/"
 
 [languages.uk]
+disabled = true
 weight = 20
 languageName = "Українська"
 languageCode = "uk-UA"
@@ -675,6 +694,7 @@ url = "/rsoc/"
 
 
 [languages.ar]
+disabled = true
 weight = 21
 languageName = "العربية"
 languageCode = "ar"
