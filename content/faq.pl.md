@@ -236,14 +236,14 @@ Zajrzyj do [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/maste
 
 ### Hardware Interfaces
 
-- [ACPI](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/acpid)
-- [PCI](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/pcid)
+- [ACPI](https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers/acpid)
+- [PCI](https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers/pcid)
 
 (USB wkrótce)
 
 ### Video
 
-- [VGA](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/vesad) - (BIOS)
+- [VGA](https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers/graphics/vesad) - (BIOS)
 - GOP (UEFI)
 - [LLVMpipe](https://docs.mesa3d.org/drivers/llvmpipe.html) - Software Rendering
 
@@ -251,35 +251,33 @@ Zajrzyj do [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/maste
 
 ### Dzwięk
 
-- [Intel chipsets](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ihdad)
-- [Realtek chipsets](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ac97d)
-- [PC speaker](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/pcspkrd)
+- [Intel chipsets](https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers/audio/ihdad)
+- [Realtek chipsets](https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers/audio/ac97d)
+- PC speaker
 
-([Sound Blaster](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/sb16d) wkrótce)
+([Sound Blaster](https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers/audio/sb16d) wkrótce)
 
 ### Storage
 
-- [IDE](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ided) - (PATA)
-- [AHCI](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ahcid) - (SATA)
-- [NVMe](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/nvmed)
+- [IDE](https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers/storage/ided) - (PATA)
+- [AHCI](https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers/storage/ahcid) - (SATA)
+- [NVMe](https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers/storage/nvmed)
 
 (USB wkrótce)
 
 ### Wejście
 
-- [PS/2 keyboards](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d)
-- [PS/2 mouse](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d)
-- [PS/2 touchpad](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ps2d)
+- [PS/2 keyboards](https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers/input/ps2d)
+- [PS/2 mouse](https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers/input/ps2d)
+- [PS/2 touchpad](https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers/input/ps2d)
 
 (USB wkrótce)
 
 ### Internet
 
-- [Intel Gigabit ethernet](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/e1000d)
-- [Intel 10 Gigabit ethernet](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/ixgbed)
-- [Realtek ethernet](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/rtl8168d)
-
-(Wi-Fi/[Atheros ethernet](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/alxd) wkrótce)
+- [Intel Gigabit ethernet](https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers/net/e1000d)
+- [Intel 10 Gigabit ethernet](https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers/net/ixgbed)
+- [Realtek ethernet](https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers/net/rtl8168d)
 
 ## Mam komputer z niższej półki czy Redox będzie na nim działał?
 
@@ -292,7 +290,7 @@ Redox będzie działał normalnie (jeśli system obsługuje architekturę proces
 ## Z jakimi maszynami wirtualnymi Redox ma integrację?
 
 - [QEMU](https://www.qemu.org/)
-- [VirtualBox](https://gitlab.redox-os.org/redox-os/drivers/-/tree/master/vboxd)
+- [VirtualBox](https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers/vboxd)
 
 W przyszłości mikrokernel mógłby pełnić funkcję hypervisora, podobnie jak [Xen](https://xenproject.org/).
 
@@ -332,4 +330,3 @@ Możesz przyczynić się na wiele sposobów do rozwoju Redox OS, wiecej informac
 - Spójrz na stronę [Dokumentacja](/docs/), aby uzyskać więcej szczegółów na temat elementów wewnętrznych Redox.
 - Spójrz na [Redox Book](https://doc.redox-os.org/book/) aby sprawdzić, czy odpowiada na Twoje pytania/rozwiązuje problem.
 - Jeśli książka nie zawiera odpowiedzi na Twoje pytanie, zadaj pytanie/przedstaw swój problem na stronie [Chat](https://doc.redox-os.org/book/chat.html).
-

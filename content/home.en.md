@@ -51,7 +51,7 @@ url = "home"
               </li>
               <li><a href="/faq/#rust-benefits">Rust-written</a> <a
                   href="https://gitlab.redox-os.org/redox-os/kernel">kernel</a> and <a
-                  href="https://gitlab.redox-os.org/redox-os/drivers">drivers</a></li>
+                  href="https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers">drivers</a></li>
               <li><a href="/faq/#how-redox-was-influenced-by-other-systems">Inspired by Plan 9, Minix, seL4, BSD and
                   Linux</a></li>
               <li>Much smaller <a href="https://en.wikipedia.org/wiki/Attack_surface" target="_blank">attack
@@ -110,7 +110,7 @@ url = "home"
               <li>Boot from NVMe, SATA, IDE, and USB</li>
               <li>Boot with <a href="https://doc.redox-os.org/book/installing.html">full disk encryption</a></li>
               <li>See list of <a
-                  href="https://gitlab.redox-os.org/redox-os/drivers#hardware-interfaces-and-devices">supported
+                  href="https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers#devices">supported
                   drivers</a></li>
             </ul>
           </div>

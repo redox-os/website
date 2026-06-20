@@ -92,6 +92,6 @@ A non-exaustive list of my improvements:
 
 - [CONTRIBUTING was cleaned/improved a lot](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md) - it was very old.
 - [redox README was cleaned/improved a lot](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/README.md)
-- [All drivers were documented](https://gitlab.redox-os.org/redox-os/drivers/-/blob/master/README.md)
+- [All drivers were documented](https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers)
 - [`redoxer` README was improved](https://gitlab.redox-os.org/redox-os/redoxer/-/blob/master/README.md)
 - [Added a command to kill all QEMU processes after a kernel panic](https://gitlab.redox-os.org/redox-os/kernel/-/blob/master/README.md#notes)
