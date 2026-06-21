@@ -448,7 +448,7 @@ As many changes happened it's not possible to write everything on this post, thi
 - [cosmic-icons](https://github.com/pop-os/cosmic-icons) - New project
 - [cosmic-term](https://github.com/pop-os/cosmic-term) - New project
 - [curl](https://gitlab.redox-os.org/redox-os/curl/-/compare/8b9c5bef9...f50c28394)
-- [drivers](https://gitlab.redox-os.org/redox-os/drivers/-/compare/fc4a69c...897866d)
+- [drivers](https://gitlab.redox-os.org/redox-os/base/-/compare/fc4a69c...897866d)
 - [escalated](https://gitlab.redox-os.org/redox-os/escalated/-/compare/7e02fe4...06fe299)
 - [extrautils](https://gitlab.redox-os.org/redox-os/extrautils/-/compare/1f9cf9c...2218a14)
 - [findutils](https://gitlab.redox-os.org/redox-os/findutils/-/compare/2b3a88f...116c044)
