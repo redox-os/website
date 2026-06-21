@@ -18,7 +18,7 @@ We highly recommend that you start with the [Book](https://doc.redox-os.org/book
 
 - [Gitlab](https://gitlab.redox-os.org/) - Redox OS Gitlab repository where you can find all source code.
 
-- [Drivers](https://gitlab.redox-os.org/redox-os/drivers/-/blob/master/README.md) - High-level documentation of the drivers.
+- [Drivers](https://gitlab.redox-os.org/redox-os/base/-/blob/main/drivers/README.md) - High-level documentation of the drivers.
 
 - [RFCs](https://gitlab.redox-os.org/redox-os/rfcs) - Request for Changes to Redox.
 

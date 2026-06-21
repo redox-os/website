@@ -10,7 +10,7 @@ System76 Galago Pro (galp3-c) running Redox OS.
 ---
 
 After the addition of the
-[NVMe driver a couple months ago](https://gitlab.redox-os.org/redox-os/drivers/tree/master/nvmed),
+[NVMe driver a couple months ago](https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers/storage/nvmed),
 I have been running Redox OS permanently (from an install to disk) on a
 [System76 Galago Pro (galp3-c)](https://system76.com/laptops/galago),
 with
@@ -18,11 +18,11 @@ with
 as well as the un-announced, in-development, GPLv3
 [System76 EC firmware](https://github.com/system76/ec)
 . This particular hardware has full support for the
-[keyboard](https://gitlab.redox-os.org/redox-os/drivers/tree/master/ps2d),
-[touchpad](https://gitlab.redox-os.org/redox-os/drivers/tree/master/ps2d),
-[storage](https://gitlab.redox-os.org/redox-os/drivers/tree/master/nvmed),
+[keyboard](https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers/input/ps2d),
+[touchpad](https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers/input/ps2d),
+[storage](https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers/storage/nvmed),
 and
-[ethernet](https://gitlab.redox-os.org/redox-os/drivers/tree/master/rtl8168d),
+[ethernet](https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers/net/rtl8168d),
 making it easy to use with Redox.
 
 This particular machine has had a
@@ -38,7 +38,7 @@ This has allowed for easier debugging of the kernel and drivers.
 I am fairly satisfied with how things are going, and will continue to focus on
 running a permanently installed Redox system. My work on real hardware has
 improved
-[drivers](https://gitlab.redox-os.org/redox-os/drivers/commit/c7f02e5e2141c0dbf07bc82fd40ee7d6cad95229)
+[drivers](https://gitlab.redox-os.org/redox-os/base/-/commit/c7f02e5e2141c0dbf07bc82fd40ee7d6cad95229)
 and
 [services](https://gitlab.redox-os.org/redox-os/redoxfs/commit/3191d7d18202d77b67fca6c437abe6d89d249a61),
 added
