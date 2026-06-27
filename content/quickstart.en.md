@@ -1,10 +1,10 @@
 +++
-title = "Quickstart"
+title = "Download"
 +++
 
-- [Latest Release](https://www.redox-os.org/news/release-0.9.0/)
-- [Daily Images](https://static.redox-os.org/img/)
-- [Previous Releases](https://gitlab.redox-os.org/redox-os/redox/-/releases)
+- [Latest Release](https://www.redox-os.org/news/release-0.9.0/) - If you can't boot it may be workarounded in some cases by pressing the L key (enable/disable live disk mode) in the screen resolution selection screen. If you have some problem after boot or can't install packages, try the latest daily image below to see if the problem still happen
+- [Daily Images](https://static.redox-os.org/img/) - If you can't boot it may be workarounded in some cases by pressing the L key (enable/disable live disk mode) in the screen resolution selection screen
+- [Previous Releases](https://gitlab.redox-os.org/redox-os/redox/-/releases) - For historical purposes
 
 ## Getting Started
 

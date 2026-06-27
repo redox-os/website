@@ -11,7 +11,7 @@ url = "home"
           <b>Redox OS 0.9.0</b>
         </p>
         <div class="subtitle mt-5">
-          <a class="btn btn-primary my-1" href="/quickstart/">Quickstart</a>
+          <a class="btn btn-primary my-1" href="/quickstart/">Download</a>
           <a class="btn btn-default my-1" href="https://gitlab.redox-os.org/redox-os/redox/">GitLab</a>
           <a class="btn btn-default my-1" href="/news/release-0.9.0/">Release Notes</a>
         </div>
