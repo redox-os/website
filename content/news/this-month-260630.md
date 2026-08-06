@@ -35,7 +35,7 @@ This grant of €50000 will cover four developers working part-time over the nex
 - Support for microservices using [WASM](https://webassembly.org/)/[WASI](https://wasi.dev/) and wasmtime.
 - Further improvements to our POSIX compliance, to allow porting and management of more server-side applications.
 
-The team will include Anhad Singh, auronandace, MJ, and Ron Williams, with kernel support from 4lDO2.
+The team will include Anhad Singh, auronandace, MJ Pooladkhay, and Ron Williams, with kernel support from 4lDO2.
 
 As well, we have received an additional €11,500, for work on Capability-based security.
 That continuing work is being done by Ibuki and 4lDO2.
