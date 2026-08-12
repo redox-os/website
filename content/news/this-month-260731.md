@@ -25,7 +25,7 @@ He also implemented the following optimizations:
 
 - Eliminated a linear scan for blocked CPU contexts that ran on every context switch, the scan was broken into two parts and their time complexity brought down to O(log N) and O(1) from O(N).
 
-- Moved the data structure holding all the runnable contexts to per-CPU core, significantly reducing lock contention and ensuring better scaling for multi-core systems. He also implemented work-stealing to go with it.
+- Moved the data structure holding all the runnable contexts to per-CPU hardware thread, significantly reducing lock contention and ensuring better scaling for multi-core systems. He also implemented work-stealing to go with it.
 
 ## ARM64 Real Hardware Fixes and Amlogic Meson UART ARM64 Support 
 
@@ -121,11 +121,15 @@ Wildan Mubarok fixed and Ribbon tested the Iced Markdown editor/viewer demo, whi
 
 ## Matrix on Redox!
 
-Ribbon successfully built and tested [rusty-rain](https://github.com/cowboy8625/rusty-rain) to show the classic Matrix ASCII text rain.
+Ribbon successfully built and tested [rusty-rain](https://github.com/cowboy8625/rusty-rain) to show the classic Matrix text rain.
 
 Wildan Mubarok fixed and Ribbon also tested the Iced Matrix rain demo.
 
+- rusty-rain demo
+
 <img src="/img/screenshot/rusty-rain.png" class="img-responsive" alt="rusty-rain demo"/>
+
+- Iced Matrix demo
 
 <img src="/img/screenshot/iced-matrix.png" class="img-responsive" alt="Iced Matrix demo"/>
 
