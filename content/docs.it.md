@@ -1,5 +1,5 @@
 +++
-title = "Documentation"
+title = "Documentazione"
 +++
 
 ## Iniziamo
@@ -8,39 +8,26 @@ Noi ti consigliamo di iniziare con [Book](https://doc.redox-os.org/book/), che d
 
 ## Riferimenti
 
-[Book](https://doc.redox-os.org/book/). Un manuale che descrive il funzionamento di Redox.
+### Cargo Docs
 
-[Talks](/talks/). Redox talks given at various events and conferences.
+- [libredox](https://docs.rs/libredox/latest/libredox/) - Documentazione della liberia di sistema di Redox.
 
-[redox_syscall](https://docs.rs/redox_syscall/latest/syscall/). Documentation for the Redox system calls.
+- [libstd](https://doc.rust-lang.org/stable/std/) - Documentazione della libreria standard di Rust.
 
-[libstd](https://doc.rust-lang.org/stable/std/). Documentation for the Rust standard library.
+### Gitlab
 
-[Ion Manual](https://doc.redox-os.org/ion-manual/). Documentation for the Ion shell.
+- [Gitlab](https://gitlab.redox-os.org/) - Repository GitLab di Redox OS dove puoi trovare tutto il codice sorgente.
 
-## Contribuisci a Redox
+- [Drivers](https://gitlab.redox-os.org/redox-os/drivers/-/blob/master/README.md) - Documentazione di alto livello dei driver.
 
-Grazie per il tuo interesse a contriuire a Redox!
-Ci sono molti modi per contribuire e noi li apprezzeremo tutti.
+- [RFCs](https://gitlab.redox-os.org/redox-os/rfcs) - Richiesta di cambiamenti in Redox.
 
-Redox è un grande progetto splamato su molte repo che possoo essere trovate su
-[Organizzazione Redox su GitLab](https://gitlab.redox-os.org/redox-os). Questo documento,
-[CONTRIBUTING.md](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md)
-è una guida per i nuovi utenti, mirata ad aiutarli a contribuire!
+- [Ion Manual](https://doc.redox-os.org/ion-manual/) - Documentazione della shell Ion.
 
-## Comunicazione e Chat
+### Talks
 
-Il modo più veloce per comunicare con il Team di Redox è usare il nostro chat
-server. Attualmente, l'unico modo per entrarvi è inviando una mail a
-[info@redox-os.org](mailto:info@redox-os.org),ci potrebbe volere un po' di tempo,
-dato che it&rsquo;s non è automatico. Noi stiamo lavorando ad un
-modo più semplice e veloce per farlo, ma per adesso questo è il modo più conveniente.
+- [Talks](/talks/) - Talk su Redox effettuate in podcast e conferenze.
 
-Puoi trovare Redox anche su Reddit a
-[/r/rust/](https://www.reddit.com/r/rust) e
-[/r/redox/](https://www.reddit.com/r/redox). Le news settimanali sono postate
-sulla prima pagina.
+## Contribuire a Redox
 
-## Condotta
-
-Noi seguiamo il [Codice di Condotta di Rust](https://www.rust-lang.org/policies/code-of-conduct)
+- Leggi il [CONTRIBUTING.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/CONTRIBUTING.md)
