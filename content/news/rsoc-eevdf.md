@@ -2,6 +2,8 @@
 title = "RSoC 2026: EEVDF for Redox"
 author = "Akshit Gaur"
 date = "2026-08-22"
+[params]
+  math = true
 +++
 
 First of all, read [this post](https://www.redox-os.org/news/rsoc-dwrr/) to get the background (Redox OS, basic scheduling, Round Robin and Deficit Weighted Round Robin Schedulers).
