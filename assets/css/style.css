@@ -34,7 +34,7 @@ code {
 		background-color: #202020;
 	}
 
-	footer {
+	footer, pre, .table {
 		background-color: #101010;
 	}
 
@@ -42,15 +42,19 @@ code {
 	center,
 	code,
 	p,
+	pre,
 	strong,
 	table,
+	.table,
 	li,
 	.content h1,
 	.content h2,
 	.content h3,
 	.content h4,
 	.content h5,
-	.content h6 {
+	.content h6,
+	.MathJax
+	{
 		color: #ffffff;
 	}
 
@@ -381,6 +385,10 @@ ul.laundry-list {
 }
 
 @media (prefers-color-scheme: dark) {
+	.content h2 {
+		border-top: 2px solid #444;
+	}
+
 	.hero-3 p {
 		color: #ffffff;
 	}
