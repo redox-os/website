@@ -17,7 +17,7 @@ url = "home"
         </div>
       </div>
       <div class="column hero-image">
-        <img src="/img/home/programs1-opt.png" alt="" height="480" loading="lazy">
+        <img src="/img/home/programs1-opt.png" alt="" height="1080" width="1920" loading="lazy">
       </div>
     </div>
   </div>
@@ -62,7 +62,7 @@ url = "home"
           </div>
         </div>
         <div class="column hero-image" title="Redox with Orbital run on RISC-V">
-          <img src="/img/home/orbital-riscv64gc-opt.png" alt="" height="480" loading="lazy">
+          <img src="/img/home/orbital-riscv64gc-opt.png" alt="" width="800" height="600" loading="lazy">
         </div>
       </div>
     </div>
@@ -86,7 +86,7 @@ url = "home"
           </div>
         </div>
         <div class="column hero-image" title="Redox runs on old Panasonic Toughbook hardware">
-          <img src="/img/home/panasonic-toughbook-cf18-opt.png" alt="" height="480" loading="lazy">
+          <img src="/img/home/panasonic-toughbook-cf18-opt.png" alt="" width="1024" height="768" loading="lazy">
         </div>
       </div>
     </div>
@@ -116,7 +116,7 @@ url = "home"
           </div>
         </div>
         <div class="column hero-image" title="Redox runs on many laptops">
-          <img src="/img/home/many-laptops-opt.jpg" alt="" height="480" loading="lazy">
+          <img src="/img/home/many-laptops-opt.jpg" alt="" width="2016" height="845" loading="lazy">
         </div>
       </div>
     </div>
@@ -142,7 +142,7 @@ url = "home"
           </div>
         </div>
         <div class="column hero-image" title="Redox runs with COSMIC programs">
-          <img src="/img/home/cosmic-programs-opt.png" alt="" height="480" loading="lazy">
+          <img src="/img/home/cosmic-programs-opt.png" alt="" width="1929" height="1080" loading="lazy">
         </div>
       </div>
     </div>
@@ -172,7 +172,7 @@ url = "home"
           </div>
         </div>
         <div class="column hero-image" title="Bochs emulator running on Redox">
-          <img src="/img/screenshot/bochs_redox_demo_1.png" alt="" height="480" loading="lazy">
+          <img src="/img/screenshot/bochs_redox_demo_1.png" alt="" width="1320" height="821" loading="lazy">
         </div>
       </div>
     </div>
@@ -200,7 +200,7 @@ url = "home"
           </div>
         </div>
         <div class="column hero-image" title="Balatro (game) running on Redox">
-          <img src="/img/home/balatro-redox-opt.png" alt="" height="480" loading="lazy">
+          <img src="/img/home/balatro-redox-opt.png" alt="" width="1280" height="864" loading="lazy">
         </div>
       </div>
     </div>
@@ -237,7 +237,7 @@ url = "home"
           </div>
         </div>
         <div class="column hero-image" title="Redox's Coffee mug swag">
-          <img src="/img/home/jason-bowen-coffee-mug-opt.jpg" alt="" height="480" loading="lazy">
+          <img src="/img/home/jason-bowen-coffee-mug-opt.jpg" alt="" width="1075" height="1427" loading="lazy">
         </div>
       </div>
     </div>
@@ -256,7 +256,7 @@ url = "home"
       </p>
       <div class="columns">
         <div class="column">
-          <img src="https://nlnet.nl/logo/banner.svg" alt="NGI Zero Commons Fund">
+          <img src="https://nlnet.nl/logo/banner.svg" width="1086" height="415" alt="NGI Zero Commons Fund">
           <p>NGI Zero Commons Fund on
             <a href="https://nlnet.nl/project/RedoxOS-Signals/">Unix-style Signals</a>,
             <a href="https://nlnet.nl/project/Capability-based-RedoxOS/">Capability-based
