@@ -77,10 +77,10 @@ url = "home"
           </p>
           <div class="subtitle mt-2">
             <ul class="laundry-list features mb-0">
-              <li>Fast <a href="https://gitlab.redox-os.org/redox-os/benchmarks#tests">I/O performance</a></li>
-              <li>Fast <a href="https://doc.redox-os.org/book/boot-process.html">system boot</a></li>
+              <li>Fast I/O performance</a></li>
+              <li>Fast system boot</a></li>
               <li>Desktop variant using less than 512 MB of RAM</li>
-              <li>The <a href="https://static.redox-os.org/img/x86_64/">minimal image</a> occupies less than 50 MB</li>
+              <li>The <a href="https://gitlab.redox-os.org/redox-os/redox/-/blob/master/config/minimal.toml">minimal image</a> occupies less than 50 MB of storage space</li>
               <li>Easy customization to save space, using a TOML-format configuration file</li>
             </ul>
           </div>
@@ -101,7 +101,7 @@ url = "home"
           </p>
           <div class="subtitle mt-2">
             <ul class="laundry-list features mb-0">
-              <li>Intel/AMD, ARM and RISC-V CPU support</li>
+              <li>Intel/AMD (32 and 64 bits), ARM (64-bit) and RISC-V CPU support</li>
               <li>Good <a href="/faq/#which-virtual-machines-does-redox-have-integration-with">virtualization
                   support</a></li>
               <li>Common <a href="/faq/#which-devices-does-redox-support">hardware support</a></li>
@@ -153,19 +153,18 @@ url = "home"
       <div class="columns is-flex-direction-row-reverse">
         <div class="column hero-center">
           <p class="title is-size-3 mt-0">
-            UNIX Compatibility
+            Unix Compatibility
           </p>
           <div class="subtitle mt-2">
             <ul class="laundry-list features mb-0">
               <li><a href="https://doc.redox-os.org/book/programs-libraries.html">Source compatibility</a> with
-                Linux/BSD
-                programs</li>
-              <li>Integration with <a href="https://gitlab.redox-os.org/redox-os/gcc">forked GCC Compiler</a></li>
+                POSIX, Linux, and BSD programs</li>
+              <li>Support GCC and LLVM compilers</a></li>
               <li>Many Linux <a href="/faq/#what-programs-can-redox-run">programs ported</a></li>
               <li>Partial <a href="https://en.wikipedia.org/wiki/POSIX">POSIX</a> compatibility</li>
-              <li>Custom C Standard Library is <a href="https://gitlab.redox-os.org/redox-os/relibc">written in Rust</a>
+              <li>Custom POSIX and C Standard Library is <a href="https://gitlab.redox-os.org/redox-os/relibc">written in Rust</a>
               </li>
-              <li>POSIX Signals/Threads and Unix Domain Sockets support</li>
+              <li>Support POSIX Signals/Threads and Unix Domain Sockets</li>
               <li>See <a href="https://doc.redox-os.org/book/features.html">feature comparison </a> between Unix-like
                 systems</li>
             </ul>
@@ -187,12 +186,12 @@ url = "home"
           </p>
           <div class="subtitle mt-2">
             <ul class="laundry-list features mb-0">
-              <li>Rust-written <a href="https://gitlab.redox-os.org/redox-os/orbital/">windowing system and window
-                  manager</a> </li>
-              <li>Support for X11, GTK3, Iced, Slint, egui, winit, softbuffer, SDL2, SDL1 and Mesa3D OSMesa</li>
-              <li>Support for OpenGL CPU emulation via Mesa3D LLVMPipe</li>
+              <li>Rust-written <a href="https://gitlab.redox-os.org/redox-os/orbital/">windowing system, window
+                  manager, and compositing</a> </li>
+              <li>Support for X11, GTK3, Iced, Slint, egui, winit, softbuffer, SDL2, and SDL1</li>
+              <li>Support for OpenGL and Vulkan software rendering via Mesa3D LLVMPipe/Lavapipe</li>
               <li>Working media playback with ffplay and SDL Player</li>
-              <li>Working basic web browser with NetSurf</li>
+              <li>Working basic and advanced web browsers with NetSurf and WebKitGTK3 demo</li>
               <li>Many <a href="https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/games">games</a> and
                 <a href="https://gitlab.redox-os.org/redox-os/cookbook/-/tree/master/recipes/demos">demos</a> are ported
               </li>
@@ -223,8 +222,8 @@ url = "home"
               <li>Backed via
                 <a href="https://donorbox.org/redox-os">Donorbox</a>,
                 <a href="https://www.patreon.com/redox_os">Patreon</a>,
-                <a href="https://bitcoin.org">Bitcoin</a>,
-                <a href="https://ethereum.org">Ethereum</a>,
+                Bitcoin,
+                Ethereum,
                 <a href="https://redox-os.creator-spring.com/">merch</a>, <a href="/donate/">and many more</a>
               </li>
               <li>Many ways to <a
@@ -281,15 +280,14 @@ url = "home"
       </p>
       <div class="subtitle mt-2">
         <ul class="laundry-list features mb-0">
-          <li><a href="https://gitlab.redox-os.org/redox-os/redox/-/issues/1427">Wayland</a>, <a
+          <li>Wayland, <a
               href="https://gitlab.redox-os.org/redox-os/redox/-/issues/1429">GTK4, Qt5, and Qt6+</a></li>
           <li><a href="https://nlnet.nl/project/Capability-based-RedoxOS/">Capability-based Security</a></li>
           <li><a href="https://gitlab.redox-os.org/redox-os/redox/-/issues/1412">Smaller kernel code</a> </li>
           <li><a href="https://gitlab.redox-os.org/redox-os/redox/-/issues/1390">Self-Hosting OS</a></li>
-          <li><a href="https://gitlab.redox-os.org/redox-os/redox/-/issues/1553">Native Linux VM</a> </li>
-          <li><a href="https://gitlab.redox-os.org/redox-os/redoxfs/-/merge_requests/95">File system compression</a></li>
+          <li><a href="https://gitlab.redox-os.org/redox-os/redox/-/issues/1553">Virtualized Linux drivers</a> </li>
           <li><a href="https://gitlab.redox-os.org/redox-os/redox/-/issues/1710">Accessibility Improvements</a> </li>
-          <li>and <a href="https://gitlab.redox-os.org/groups/redox-os/-/issues/?label_name[]=tracking%20issue">more</a> </li>
+          <li>and more </li>
         </ul>
       </div>
       <p class="mt-2  has-text-centered">

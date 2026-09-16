@@ -17,7 +17,7 @@ This page has common questions and answers for newcomers and end-users.
 - [What I can do with Redox?](#what-i-can-do-with-redox)
 - [What is an Unix-like OS?](#what-is-an-unix-like-os)
 - [How Redox was influenced by other systems?](#how-redox-was-influenced-by-other-systems)
-- [What applications can Redox run?](#what-applications-can-redox-run)
+- [What programs can Redox run?](#what-programs-can-redox-run)
 - [How to install applications on Redox?](#how-to-install-applications-on-redox)
 - [Which are the Redox variants?](#which-are-the-redox-variants)
 - [Which devices does Redox support?](#which-devices-does-redox-support)
@@ -197,9 +197,9 @@ The most advanced monolithic kernel and biggest open-source project of the world
 
 Redox tries to implement the Linux performance improvements in a microkernel design.
 
-## What applications can Redox run?
+## What programs can Redox run?
 
-Redox is designed to be source-compatible with most Unix, Linux and POSIX-compliant applications, only requiring compilation.
+Redox is designed to be source-compatible with most Unix, Linux and POSIX-compliant programs (applications and libraries), only requiring compilation.
 
 Some important software that Redox supports:
 
@@ -280,7 +280,7 @@ Redox itself will work normally if the processor architecture is supported by th
 
 ## Which virtual machines does Redox have integration with?
 
-- QEMU
+- QEMU with VirtIO drivers
 - VirtualBox
 
 ## How do I build Redox?
