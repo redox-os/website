@@ -7,6 +7,8 @@ date = "2026-08-31"
 Redox OS is a complete Unix-like general-purpose microkernel-based operating system
 written in Rust. August was a very exciting month for Redox! Here's all the latest news.
 
+Sorry for the delayed report, we are very busy.
+
 ## Donate to Redox
 
 If you would like to support Redox, please consider donating or buying some merch!
@@ -14,6 +16,10 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Donate](https://www.redox-os.org/donate/)
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
+
+## ARM64 Multi-core Support
+
+lbecher implemented it and did some fixes, more testing need to be done to determine the performance improvements.
 
 ## Ring Buffer Communication For More Parallelism
 
@@ -32,6 +38,20 @@ This work improve the general system performance and I/O performance by 10x!!
 - redox-ring-dyn benchmark
 
 <img src="/img/screenshot/ring-dyn-bench.png" class="img-responsive" alt=""/>
+
+## Significant Native Compilation Performance Improvement and OOM Fixes
+
+After months of Wildan Mubarok investigation on gradual GCC compilation performance degradation, he fixed a kernel memory leak that caused the `os-test` test suite compilation time in GCC (on QEMU) take from 2 hours up to 10 hours and OOM errors during months, once fixed the compilation time was reduced from 10 hours to around 30 minutes.
+
+The leak was worsened by the lack of page fault-based memory allocation.
+
+## NUMA Support
+
+Aadarsh (aka EuclidDivisionLemma) implemented the initial support for [NUMA](https://en.wikipedia.org/wiki/Non-uniform_memory_access)-based memory management, as he can only use the QEMU emulation, we need help from people with hardware supporting NUMA to know the size of performance improvement.
+
+## Conclusion of the Scheduler Improvements RSoC project
+
+Akshit Gaur wrote the [last EEVDF article](https://www.redox-os.org/news/rsoc-eevdf/) giving the complete explanation after optimizations, thanks a lot Akshit for the great work and effort.
 
 ## QEMU on Redox!
 
@@ -59,21 +79,33 @@ Mednafen was ported by never showcased, see a screenshot below:
 
 <img src="/img/screenshot/castle-sotn.jpg" class="img-responsive" alt=""/>
 
+## Better relibc Contribution Philosophy and Goals
+
+4lDO2 documented the `relibc` (our POSIX/C Standard Library) safety philosophy and goals to reduce the probability of undefined behavior and logic bugs being introduced, by concentrating unsafe code in wrapper functions for better oversight/review and using more Rust-like error handling to give more information than POSIX errors (easing the investigation of certain classes of bugs).
+
+- [relibc CONTRIBUTING.md document](https://gitlab.redox-os.org/redox-os/relibc/-/blob/master/CONTRIBUTING.md)
+- [4lDO2 MR to improve safety documentation](https://gitlab.redox-os.org/redox-os/relibc/-/merge_requests/1622)
+
 ## Kernel Improvements
 
-- (kernel) 
+- (kernel) 4lDO2 merged the `redox_syscall` library code into the `kernel` repository to ease changes
+- (kernel) Akshit Gaur did more improvements and fixes to EEVDF scheduler work stealing and Wildan Mubarok did some fixes
 
 ## Driver Improvements
 
-- (drivers) 
+- (drivers) bjorn3 did some code cleanup
 
 ## System Improvements
 
-- (sys) 
+- (sys) bjorn3 did a code deduplication on IPC daemon
 
 ## Relibc Improvements
 
-- (libc) 
+- (libc) 4lDO2 moved most of unsafe socket code to [leaf functions](https://en.wikipedia.org/wiki/Leaf_routine) to reduce bugs by using concentration for much better readability
+- (libc) bjorn3 fixed the `getsockname` and `getpeername` functions address length computation
+- (libc) Wildan Mubarok improved the `LD_DEBUG` environment variable to show the `relibc` shared object memory location range to greatly improve crash debugging on dynamic linking
+- (libc) Wildan Mubarok fixed a double close bug in `fstatat` function
+- (libc) auronandace implemented `TIOCGSID`
 
 ## Networking Improvements
 
@@ -83,17 +115,32 @@ Mednafen was ported by never showcased, see a screenshot below:
 
 - (redoxfs) 
 
+## Security Improvements
+
+- (safe) Ibuki Omatsu reimplemented the `contain` sandbox management tool to use the new namespace management
+
 ## Programs
 
 - (app) 
 
+## Testing Improvements
+
+- (test) 4lDO2 implemented benchmark metrics on `acid` test suite to detect performance regressions
+- (test) Wildan Mubarok started to use and enable Clippy on CI
+
 ## Build System Improvements
 
-- (build) 
+- (build) Wildan Mubarok implemented the `COOKBOOK_TREELESS_CLONE` environment variable to enable treeless clone in all recipes to greatly save storage space
+- (build) Wildan Mubarok reimplemented most of script logic in Cookbook to reduce script maintenance cost and Ribbon fixed some regressions
+- (build) Wildan Mubarok fixed the `make rebuild-push` command (verify recipe source or package changes, incrementally rebuild or download and push new changes) not updating the filesystem configuration recipes, now the system can be properly and quickly updated in a existing Redox filesystem image
 
 ## Documentation Improvements
 
-- (doc) 
+- (doc) Wildan Mubarok updated and improved the [Installing Redox](https://doc.redox-os.org/book/installing.html) page with information for the new GUI installer options
+
+## Website Improvements
+
+- (web) Wildan Mubarok added LaTeX math support and improved the website dark mode to clearly show LaTeX formulas to fix the formulas in the [last EEVDF article](https://www.redox-os.org/news/rsoc-eevdf/)
 
 ## How To Test The Changes
 
