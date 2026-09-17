@@ -17,6 +17,12 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## More Boot Fixes
+
+Wildan Mubarok improved UEFI compatibility, which allowed the MSI Modern 14 C7M laptop to boot!
+
+He also fixed a bug that expanded the PS/2 mouse compatibility.
+
 ## ARM64 Multi-core Support
 
 lbecher implemented it and did some fixes, more testing need to be done to determine the performance improvements.
@@ -47,11 +53,15 @@ The leak was worsened by the lack of page fault-based memory allocation.
 
 ## NUMA Support
 
-Aadarsh (aka EuclidDivisionLemma) implemented the initial support for [NUMA](https://en.wikipedia.org/wiki/Non-uniform_memory_access)-based memory management, as he can only use the QEMU emulation, we need help from people with hardware supporting NUMA to know the size of performance improvement.
+Aadarsh (aka EuclidDivisionLemma) implemented the initial support for [NUMA](https://en.wikipedia.org/wiki/Non-uniform_memory_access)-based memory management, as he can only use the QEMU emulation, we need help from people with hardware supporting NUMA to know the size of performance improvement. Cloud services such as AWS, Google Cloud and Azure also have support for it.
 
-## Conclusion of the Scheduler Improvements RSoC project
+He also implemented local node allocation (locality of data) by default and a API to modify NUMA allocation policies.
 
-Akshit Gaur wrote the [last EEVDF article](https://www.redox-os.org/news/rsoc-eevdf/) giving the complete explanation after optimizations, thanks a lot Akshit for the great work and effort.
+## Process Priority Support Conclusion of the Scheduler Improvements RSoC project
+
+Akshit Gaur implemented the support for process priorities and system priority tuning, which improved general performance.
+
+He also wrote the [last EEVDF article](https://www.redox-os.org/news/rsoc-eevdf/) giving the complete explanation after optimizations, thanks a lot Akshit for the great work and effort.
 
 ## QEMU on Redox!
 
@@ -90,49 +100,69 @@ Mednafen was ported by never showcased, see a screenshot below:
 
 - (kernel) 4lDO2 merged the `redox_syscall` library code into the `kernel` repository to ease changes
 - (kernel) Akshit Gaur did more improvements and fixes to EEVDF scheduler work stealing and Wildan Mubarok did some fixes
+- (kernel) Aadarsh (aka EuclidDivisionLemma) improved memory deallocation performance by reducing thread locking
+- (kernel) Aadarsh (aka EuclidDivisionLemma) fixed a panic in NUMA code
 
 ## Driver Improvements
 
-- (drivers) bjorn3 did some code cleanup
+- (driver) Wildan Mubarok fixed a `pcid` bug that Clippy detected
+- (driver) bjorn3 did some code cleanup
 
 ## System Improvements
 
+- (sys) Wildan Mubarok ported [rldd](https://github.com/zatrazz/rldd) to be our `ldd` tool implementation
+- (sys) Wildan Mubarok fixed some off-by-one file locking bugs, which helped SQLite and `libsoup`
+- (sys) Wildan Mubarok removed the a `inputd` non-fatal panic when no display is available
 - (sys) bjorn3 did a code deduplication on IPC daemon
 
 ## Relibc Improvements
 
-- (libc) 4lDO2 moved most of unsafe socket code to [leaf functions](https://en.wikipedia.org/wiki/Leaf_routine) to reduce bugs by using concentration for much better readability
+- (libc) 4lDO2 moved most of unsafe socket and `getaddrinfo` function code to [leaf functions](https://en.wikipedia.org/wiki/Leaf_routine) to reduce bugs by using concentration for much better readability
+- (libc) 4lDO2 implemented the `RELIBC_COMMIT_HASH` environment variable to show the `relibc` commit hash to fully confirm if static objects were updated with local changes or up-to-date
 - (libc) bjorn3 fixed the `getsockname` and `getpeername` functions address length computation
 - (libc) Wildan Mubarok improved the `LD_DEBUG` environment variable to show the `relibc` shared object memory location range to greatly improve crash debugging on dynamic linking
+- (libc) Wildan Mubarok improved `epoll` performance
+- (libc) Wildan Mubarok fixed the `clock_getres` function behavior
 - (libc) Wildan Mubarok fixed a double close bug in `fstatat` function
 - (libc) auronandace implemented `TIOCGSID`
+- (libc) Ben McCann implemented POSIX base in `tzset()` and POSIX handling in `mktime()` functions
 
 ## Networking Improvements
 
-- (net) 
+- (net) Wildan Mubarok improved DHCP missing DNS error handling messages
 
 ## RedoxFS Improvements
 
-- (redoxfs) 
+- (rfs) Wildan Mubarok implemented `O_SYMLINK` to allow symlink mid-path 
+- (rfs) Wildan Mubarok improved partition mount error handling to show error codes
 
 ## Security Improvements
 
 - (safe) Ibuki Omatsu reimplemented the `contain` sandbox management tool to use the new namespace management
 
+## Installer Improvements
+
+- (install) Wildan Mubarok fixed the input data handling of new GUI installer options
+
 ## Programs
 
-- (app) 
+- (app) Wildan Mubarok updated GNU nano from version 7.2 to 9.2
+- (app) Wildan Mubarok updated the Kibi from version 0.3.2 to 0.3.3
 
 ## Testing Improvements
 
 - (test) 4lDO2 implemented benchmark metrics on `acid` test suite to detect performance regressions
 - (test) Wildan Mubarok started to use and enable Clippy on CI
+- (test) Wildan Mubarok reduced the Redox image CI verification time from around 25 minutes to 7 minutes
 
 ## Build System Improvements
 
+- (build) Wildan Mubarok updated the Cookbook recipe target list item combination to allow `--all-*` options usage, for example: `make r.base,--all-binaries`
 - (build) Wildan Mubarok implemented the `COOKBOOK_TREELESS_CLONE` environment variable to enable treeless clone in all recipes to greatly save storage space
 - (build) Wildan Mubarok reimplemented most of script logic in Cookbook to reduce script maintenance cost and Ribbon fixed some regressions
 - (build) Wildan Mubarok fixed the `make rebuild-push` command (verify recipe source or package changes, incrementally rebuild or download and push new changes) not updating the filesystem configuration recipes, now the system can be properly and quickly updated in a existing Redox filesystem image
+- (build) Konstantin Shabanov fixed the Nix flake on Podman and Native builds
+- (build) Konstantin Shabanov applied `cargo fix` on code
 
 ## Documentation Improvements
 
