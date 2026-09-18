@@ -98,34 +98,56 @@ Mednafen was ported by never showcased, see a screenshot below:
 
 ## Kernel Improvements
 
+- (kernel) 4lDO2 reduced binary size by 2.2% by removing DTB code when not reached (x86-64 image, for example)
 - (kernel) 4lDO2 merged the `redox_syscall` library code into the `kernel` repository to ease changes
-- (kernel) Akshit Gaur did more improvements and fixes to EEVDF scheduler work stealing and Wildan Mubarok did some fixes
+- (kernel) Akshit Gaur did more improvements and fixes to EEVDF scheduler work stealing and Wildan Mubarok did some fixes, which improved performance
 - (kernel) Aadarsh (aka EuclidDivisionLemma) improved memory deallocation performance by reducing thread locking
 - (kernel) Aadarsh (aka EuclidDivisionLemma) fixed a panic in NUMA code
+- (kernel) Wildan Mubarok moved all scheme path handling to user-space
+- (kernel) Wildan Mubarok fixed a potential bug where process killing could create zombie processes
 
 ## Driver Improvements
 
+- (driver) MJ Pooladkhay implemented PCI multi-vector MSI-X support, which allow more driver performance features
+- (driver) MJ Pooladkhay fixed VirtIO device completions being lost
 - (driver) Wildan Mubarok fixed a `pcid` bug that Clippy detected
-- (driver) bjorn3 did some code cleanup
+- (driver) bjorn3 did some code deduplication and cleanup
 
 ## System Improvements
 
+- (sys) Ibuki Omatsu implemented multi-threading support for schemes
 - (sys) Wildan Mubarok ported [rldd](https://github.com/zatrazz/rldd) to be our `ldd` tool implementation
 - (sys) Wildan Mubarok fixed some off-by-one file locking bugs, which helped SQLite and `libsoup`
 - (sys) Wildan Mubarok removed the a `inputd` non-fatal panic when no display is available
-- (sys) bjorn3 did a code deduplication on IPC daemon
+- (sys) bjorn3 fixed potential `inputd` deadlocks
+- (sys) bjorn3 did some code deduplication
 
 ## Relibc Improvements
 
 - (libc) 4lDO2 moved most of unsafe socket and `getaddrinfo` function code to [leaf functions](https://en.wikipedia.org/wiki/Leaf_routine) to reduce bugs by using concentration for much better readability
 - (libc) 4lDO2 implemented the `RELIBC_COMMIT_HASH` environment variable to show the `relibc` commit hash to fully confirm if static objects were updated with local changes or up-to-date
-- (libc) bjorn3 fixed the `getsockname` and `getpeername` functions address length computation
+- (libc) Ibuki Omatsu fixed broken `SCM_RIGHTS` on `recvmsg` function, a bug that was revealed after file descriptor allocation migration to user-space
+- (libc) bjorn3 fixed the `getsockname` and `getpeername` functions address length computation, which fixed some `mio` library tests
+- (libc) Wildan Mubarok implemented the `rlct_clone` function for Linux to fix `pthread` tests on Linux ARM64
+- (libc) Wildan Mubarok implemented mode read (except line buffering) and write (except borrowing) support and handling in `setvbuf` function
 - (libc) Wildan Mubarok improved the `LD_DEBUG` environment variable to show the `relibc` shared object memory location range to greatly improve crash debugging on dynamic linking
-- (libc) Wildan Mubarok improved `epoll` performance
+- (libc) Wildan Mubarok improved `epoll` performance by calling the `open` function directly
+- (libc) Wildan Mubarok reduced application and library launch time by using constant functions in `stdio` initialization
+- (libc) Wildan Mubarok reduced unsafe Rust code in `timer_t`
+- (libc) Wildan Mubarok added more Unix socket tests
 - (libc) Wildan Mubarok fixed the `clock_getres` function behavior
 - (libc) Wildan Mubarok fixed a double close bug in `fstatat` function
-- (libc) auronandace implemented `TIOCGSID`
-- (libc) Ben McCann implemented POSIX base in `tzset()` and POSIX handling in `mktime()` functions
+- (libc) Wildan Mubarok fixed TLS load offset on ARM64, which fixed a `tokio` library panic on package manager
+- (libc) Wildan Mubarok fixed 64KiB-paged ELF loading on Linux ARM64
+- (libc) Wildan Mubarok fixed the `pthread_kill-self` test
+- (libc) Wildan Mubarok fixed a time/timer test
+- (libc) auronandace implemented `tcgetsid` function
+- (libc) auronandace replaced `SYS_DUP_INTO`, `SYS_READ`, and `SYS_WRITE` system calls with `SYS_CALL` system call to reduce system calls
+- (libc) auronandace did some code cleanup
+- (libc) auronandace, Wildan Mubarok, and Ibuki Omatsu fixed all Clippy tests and enabled on CI
+- (libc) Ben McCann implemented POSIX base in `tzset` and POSIX handling in `mktime` functions
+- (libc) Ben McCann added more tests to `tzset` function
+- (libc) Sunam Kang implemented `MSG_NOSIGNAL` in `sendto` function
 
 ## Networking Improvements
 
@@ -138,7 +160,19 @@ Mednafen was ported by never showcased, see a screenshot below:
 
 ## Security Improvements
 
-- (safe) Ibuki Omatsu reimplemented the `contain` sandbox management tool to use the new namespace management
+- (safe) bjorn3 implemented rootless display opening on `inputd`
+- (safe) Ibuki Omatsu reimplemented the `contain` sandbox management tool to use the new namespace management, which now creates a per-process filter scheme that holds an actual namespace file descriptor, mediating all `openat` function calls by providing a file descriptor filter to programs (full `chroot` implementation is still WIP)
+- (safe) Wildan Mubarok updated the CA certificates to be up-to-date, which also fixed GnuTLS
+
+## Packaging Improvements
+
+- (pkg) Wildan Mubarok fixed a double counting bug in package extraction progress bar
+
+## Desktop Improvements
+
+- (desk) bjorn3 ported the Orbital login manager to `winit` and `softbuffer` libraries to allow Wayland testing in the future
+- (desk) bjorn3 disabled window decorations in fullscreen Orbital windows
+- (desk) bjorn3 fixed fullscreen or maximized Orbital window resize on display resize
 
 ## Installer Improvements
 
@@ -148,12 +182,15 @@ Mednafen was ported by never showcased, see a screenshot below:
 
 - (app) Wildan Mubarok updated GNU nano from version 7.2 to 9.2
 - (app) Wildan Mubarok updated the Kibi from version 0.3.2 to 0.3.3
+- (app) Wildan Mubarok fixed WebKit TLS bugs
+- (app) Wildan Mubarok fixed the EGL support on GTK3 port
+- (app) Wildan Mubarok fixed EGL partial rendering on Mesa3D
 
 ## Testing Improvements
 
 - (test) 4lDO2 implemented benchmark metrics on `acid` test suite to detect performance regressions
 - (test) Wildan Mubarok started to use and enable Clippy on CI
-- (test) Wildan Mubarok reduced the Redox image CI verification time from around 25 minutes to 7 minutes
+- (test) Wildan Mubarok reduced the Redox image CI verification time from around 25 minutes to around 7 minutes
 
 ## Build System Improvements
 
@@ -163,10 +200,13 @@ Mednafen was ported by never showcased, see a screenshot below:
 - (build) Wildan Mubarok fixed the `make rebuild-push` command (verify recipe source or package changes, incrementally rebuild or download and push new changes) not updating the filesystem configuration recipes, now the system can be properly and quickly updated in a existing Redox filesystem image
 - (build) Konstantin Shabanov fixed the Nix flake on Podman and Native builds
 - (build) Konstantin Shabanov applied `cargo fix` on code
+- (build) Ribbon replaced the `ls` tool by `tree` in `show-package.sh` script to make it much more useful by showing all recipe package directories and files
 
 ## Documentation Improvements
 
 - (doc) Wildan Mubarok updated and improved the [Installing Redox](https://doc.redox-os.org/book/installing.html) page with information for the new GUI installer options
+- (doc) Ribbon properly documented with more detail [why we prefer POSIX/Linux source compatibility over binary compatibility](https://doc.redox-os.org/book/developer-faq.html#why-redox-prefer-to-port-software-from-source-instead-of-binary-compatibility) on Developer FAQ
+- (doc) Ribbon documented the debugging tip that [Linux KVM usage change bug behavior](https://doc.redox-os.org/book/troubleshooting.html#virtual-machine)
 
 ## Website Improvements
 
@@ -200,13 +240,13 @@ join us on [Matrix Chat](https://matrix.to/#/#redox-join:matrix.org).
 
 Here are some links to discussion about this news post:
 
-- [floss.social @redox]()
-- [floss.social @soller]()
-- [Patreon]()
-- [Phoronix]()
-- [Reddit /r/redox]()
-- [Reddit /r/rust]()
-- [X/Twitter @redox_os]()
+- [floss.social @redox]
+- [floss.social @soller]
+- [Patreon]
+- [Phoronix]
+- [Reddit /r/redox]
+- [Reddit /r/rust]
+- [X/Twitter @redox_os]
 
 -->
 
