@@ -89,6 +89,20 @@ Mednafen was ported by never showcased, see a screenshot below:
 
 <img src="/img/screenshot/castle-sotn.jpg" class="img-responsive" alt=""/>
 
+## Kernel Binary Size Profiling
+
+4lDO2 implemented the support for kernel binary size profiling to measure where it can be reduced, also reducing memory usage.
+
+<img src="/img/flamegraph/kernel-binary-size.svg" class="img-responsive" alt=""/>
+
+## Current File Access Design using Namespaces and Capability-based Security
+
+Ibuki Omatsu created a diagram with the current design, see below:
+
+<img src="/img/diagrams/file-access-design.svg" class="img-responsive" alt=""/>
+
+Read [this](https://doc.redox-os.org/book/communication.html#file-access-design-example) for more details.
+
 ## Better relibc Contribution Philosophy and Goals
 
 4lDO2 documented the `relibc` (our POSIX/C Standard Library) safety philosophy and goals to reduce the probability of undefined behavior and logic bugs being introduced, by concentrating unsafe code in wrapper functions for better oversight/review and using more Rust-like error handling to give more information than POSIX errors (easing the investigation of certain classes of bugs).
@@ -105,6 +119,7 @@ Mednafen was ported by never showcased, see a screenshot below:
 - (kernel) Aadarsh (aka EuclidDivisionLemma) fixed a panic in NUMA code
 - (kernel) Wildan Mubarok moved all scheme path handling to user-space
 - (kernel) Wildan Mubarok fixed a potential bug where process killing could create zombie processes
+- (kernel) Wildan Mubarok fixed a panic in `FUTEX_WAIT64` system call
 
 ## Driver Improvements
 
@@ -117,6 +132,7 @@ Mednafen was ported by never showcased, see a screenshot below:
 
 - (sys) Ibuki Omatsu implemented multi-threading support for schemes
 - (sys) Wildan Mubarok ported [rldd](https://github.com/zatrazz/rldd) to be our `ldd` tool implementation
+- (sys) Wildan Mubarok improved the scheme path parent gathering performance
 - (sys) Wildan Mubarok fixed some off-by-one file locking bugs, which helped SQLite and `libsoup`
 - (sys) Wildan Mubarok removed the a `inputd` non-fatal panic when no display is available
 - (sys) bjorn3 fixed potential `inputd` deadlocks
@@ -143,6 +159,7 @@ Mednafen was ported by never showcased, see a screenshot below:
 - (libc) Wildan Mubarok fixed a time/timer test
 - (libc) auronandace implemented `tcgetsid` function
 - (libc) auronandace replaced `SYS_DUP_INTO`, `SYS_READ`, and `SYS_WRITE` system calls with `SYS_CALL` system call to reduce system calls
+- (libc) auronandace reduced more `as` casting usage to prevent problems in code refactorings
 - (libc) auronandace did some code cleanup
 - (libc) auronandace, Wildan Mubarok, and Ibuki Omatsu fixed all Clippy tests and enabled on CI
 - (libc) Ben McCann implemented POSIX base in `tzset` and POSIX handling in `mktime` functions
