@@ -29,7 +29,7 @@ lbecher implemented it and did some fixes, more testing need to be done to deter
 
 ## Ring Buffer Communication For More Parallelism
 
-After some months of work Ibuki Omatsu and Anhad Singh implemented a ring buffer communication API equivalent to io_uring on Linux to improve performance, with guidance from 4lDO2 and help from Wildan Mubarok to fix bugs.
+After some months of work Ibuki Omatsu and Anhad Singh implemented a ring buffer communication API equivalent to io_uring on Linux to improve performance on supported drivers, with guidance from 4lDO2 and help from Wildan Mubarok to fix bugs.
 
 This work improve the general system performance and I/O performance by 10x!!
 
@@ -55,7 +55,7 @@ The leak was worsened by the lack of page fault-based memory allocation.
 
 Aadarsh (aka EuclidDivisionLemma) implemented the initial support for [NUMA](https://en.wikipedia.org/wiki/Non-uniform_memory_access)-based memory management, as he can only use the QEMU emulation, we need help from people with hardware supporting NUMA to know the size of performance improvement. Cloud services such as AWS, Google Cloud and Azure also have support for it.
 
-He also implemented local node allocation (locality of data) by default and a API to modify NUMA allocation policies.
+He also implemented local node allocation (locality of data) by default and a libredox API to modify NUMA allocation policies.
 
 ## Process Priority Support Conclusion of the Scheduler Improvements RSoC project
 
@@ -65,7 +65,7 @@ He also wrote the [last EEVDF article](https://www.redox-os.org/news/rsoc-eevdf/
 
 ## QEMU on Redox!
 
-Ribbon and Wildan Mubarok confirmed/tested the QEMU is working on Redox, Ribbon tested the server variant of Redox in QEMU terminal mode.
+Ribbon and Wildan Mubarok confirmed/tested the QEMU is working on Redox, Ribbon tested the server variant of Redox in QEMU terminal mode and Wildan tested the desktop variant the GTK frontend.
 
 Currently the performance is not good because we lack CPU hardware acceleration (like Linux KVM) from Redox.
 
@@ -83,7 +83,7 @@ Wildan Mubarok improved the Linux support of Redox installer to allow a dual-boo
 
 ## Mednafen Showcase
 
-Mednafen was ported by never showcased, see a screenshot below:
+Mednafen was ported but never showcased, see a screenshot below:
 
 - Castlevania Symphony Of The Night running on Redox
 
@@ -105,7 +105,7 @@ Read [this](https://doc.redox-os.org/book/communication.html#file-access-design-
 
 ## Better relibc Contribution Philosophy and Goals
 
-4lDO2 documented the `relibc` (our POSIX/C Standard Library) safety philosophy and goals to reduce the probability of undefined behavior and logic bugs being introduced, by concentrating unsafe code in wrapper functions for better oversight/review and using more Rust-like error handling to give more information than POSIX errors (easing the investigation of certain classes of bugs).
+4lDO2 documented the `relibc` (our POSIX/C Standard Library) safety philosophy and goals to reduce the probability of undefined behavior and logic bugs being introduced, by moving unsafe code in leaf functions for better oversight/review, less unsafe operation in unexpected places and using more Rust-like error handling to give more information than POSIX errors (easing the investigation of certain classes of bugs).
 
 - [relibc CONTRIBUTING.md document](https://gitlab.redox-os.org/redox-os/relibc/-/blob/master/CONTRIBUTING.md)
 - [4lDO2 MR to improve safety documentation](https://gitlab.redox-os.org/redox-os/relibc/-/merge_requests/1622)
@@ -161,7 +161,7 @@ Read [this](https://doc.redox-os.org/book/communication.html#file-access-design-
 - (libc) auronandace replaced `SYS_DUP_INTO`, `SYS_READ`, and `SYS_WRITE` system calls with `SYS_CALL` system call to reduce system calls
 - (libc) auronandace reduced more `as` casting usage to prevent problems in code refactorings
 - (libc) auronandace did some code cleanup
-- (libc) auronandace, Wildan Mubarok, and Ibuki Omatsu fixed all Clippy tests and enabled on CI
+- (libc) auronandace, Wildan Mubarok, and Ibuki Omatsu fixed and enforced many Clippy lints and enabled tracking them on CI
 - (libc) Ben McCann implemented POSIX base in `tzset` and POSIX handling in `mktime` functions
 - (libc) Ben McCann added more tests to `tzset` function
 - (libc) Sunam Kang implemented `MSG_NOSIGNAL` in `sendto` function
@@ -172,7 +172,7 @@ Read [this](https://doc.redox-os.org/book/communication.html#file-access-design-
 
 ## RedoxFS Improvements
 
-- (rfs) Wildan Mubarok implemented `O_SYMLINK` to allow symlink mid-path 
+- (rfs) Wildan Mubarok implemented `O_SYMLINK` to allow symlink traversal across schemes
 - (rfs) Wildan Mubarok improved partition mount error handling to show error codes
 
 ## Security Improvements
@@ -194,10 +194,12 @@ Read [this](https://doc.redox-os.org/book/communication.html#file-access-design-
 ## Installer Improvements
 
 - (install) Wildan Mubarok fixed the input data handling of new GUI installer options
+- (install) Wildan Mubarok added a progress status when extracting packages
 
 ## Programs
 
 - (app) Wildan Mubarok updated GNU nano from version 7.2 to 9.2
+- (app) Aadarsh fixed the GNU Binutils GDB variant compilation
 - (app) Wildan Mubarok updated the Kibi from version 0.3.2 to 0.3.3
 - (app) Wildan Mubarok fixed WebKit TLS bugs
 - (app) Wildan Mubarok fixed the EGL support on GTK3 port
@@ -212,7 +214,7 @@ Read [this](https://doc.redox-os.org/book/communication.html#file-access-design-
 ## Build System Improvements
 
 - (build) Wildan Mubarok updated the Cookbook recipe target list item combination to allow `--all-*` options usage, for example: `make r.base,--all-binaries`
-- (build) Wildan Mubarok implemented the `COOKBOOK_TREELESS_CLONE` environment variable to enable treeless clone in all recipes to greatly save storage space
+- (build) Wildan Mubarok implemented the `COOKBOOK_TREELESS_CLONE` environment variable to enable treeless clone in all recipes to greatly save storage space and and reduce download time
 - (build) Wildan Mubarok reimplemented most of script logic in Cookbook to reduce script maintenance cost and Ribbon fixed some regressions
 - (build) Wildan Mubarok fixed the `make rebuild-push` command (verify recipe source or package changes, incrementally rebuild or download and push new changes) not updating the filesystem configuration recipes, now the system can be properly and quickly updated in a existing Redox filesystem image
 - (build) Konstantin Shabanov fixed the Nix flake on Podman and Native builds
