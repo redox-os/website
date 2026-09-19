@@ -6,7 +6,7 @@ date = "2026-09-08"
 
 This article answer common questions/doubt from community about Redox, microkernel architecture, POSIX and Linux source compatibility.
 
-### What are all applications, games, emulators, and C/C++ libraries that Redox can run?
+## What are all applications, games, emulators, and C/C++ libraries that Redox can run?
 
 See [this](https://static.redox-os.org/pkg/x86_64-unknown-redox/) package list.
 
@@ -14,7 +14,7 @@ You can install them using the command: `sudo pkg install package-name`
 
 If you want a smaller/simpler list of important programs, see [this](https://doc.redox-os.org/book/important-programs.html) page.
 
-### Current Hardware Support
+## Current Hardware Support
 
 | **Category** | **Items** |
 |--------------|-----------|
@@ -26,7 +26,7 @@ If you want a smaller/simpler list of important programs, see [this](https://doc
 | Input | - PS/2 keyboards, mouse, and touchpad <br> - USB keyboards, mouse and touchpad |
 | Ethernet | - Intel Gigabit and 10 Gigabit ethernet <br>- Realtek ethernet |
 
-### What are the Redox CPU requirements?
+## What are the Redox CPU requirements?
 
 The following requirements are mandatory to make Redox work, the most popular non-x86 CPUs have equivalents for them.
 
@@ -36,7 +36,7 @@ The following requirements are mandatory to make Redox work, the most popular no
 - [Page Size Extension](https://en.wikipedia.org/wiki/Page_Size_Extension) or non-x86 CPU equivalent
 - Paging global extension or non-x86 CPU equivalent
 
-### I have a low-end computer, would Redox work on it?
+## I have a low-end computer, would Redox work on it?
 
 A CPU is the most complex machine of the world: even the oldest processors are powerful for some tasks but not for others.
 
@@ -44,14 +44,14 @@ The main problem with old computers is the amount of DRAM memory available (they
 
 Redox itself will work normally if the CPU architecture is supported by the system, but the performance and stability may vary per application.
 
-### Why choosing i586 as the minimal supported x86 CPU?
+## Why choosing i586 as the minimal supported x86 CPU?
 
 - i686 ([Pentium Pro](https://en.wikipedia.org/wiki/Pentium_Pro)) introduced MMX, SSE, and SSE2 [extensions](https://en.wikipedia.org/wiki/P6_(microarchitecture)). Fortunately the kernel and other critical system components don't use them.
 - i586 ([Original Pentium](https://en.wikipedia.org/wiki/Pentium_(original))) introduced a more efficient FPU and MMX extension which are critical for programs, also the most minimal CPU architecture supported by [Rust](https://doc.rust-lang.org/beta/rustc/platform-support.html) and perhaps most Rust packages.
 - [i486](https://en.wikipedia.org/wiki/I486) introduced FPU and atomic operations, which are used by the kernel and other critical system components. It would be possible to go all the way back to i486, but Redox will run with much less programs.
 - [i386](https://en.wikipedia.org/wiki/I386) has no atomics and floating instructions (at all), which makes it not a target for both the kernel and other critical system components.
 
-### Why does Redox do cross-compilation?
+## Why does Redox do cross-compilation?
 
 [Cross-compilation](https://en.wikipedia.org/wiki/Cross_compiler) is when you build a program or library from one CPU architecture to another CPU architecture or one operating system to another operating system, but it requires more configuration than native compilation.
 
@@ -62,6 +62,8 @@ Read some of the reasons below:
 - Some developers prefer to develop from other operating systems like Linux, MacOS, FreeBSD or Windows, the same applies for Linux where some developers write code on MacOS and test their kernel builds in a virtual machine (mostly QEMU) or real hardware.
 
 (Interpreted applications and scripts don't need cross-compilation but the programming language's interpreter or possible compiled dependencies needs to be ported and cross-compiled to Redox)
+
+## General Notes on Design Decisions
 
 ### Why you do X instead of Y?
 
@@ -77,7 +79,7 @@ Due to our current limitations we may need to prefer X with less compatibility, 
 
 The most asked example is to prefer Orbital over Wayland or create Orbital instead of supporting X11 or Wayland in the beginning of Redox development, Orbital was and is much simpler to support than the APIs needed to make X11 and Wayland work, these APIs require a certain system maturity level and many dependencies.
 
-Our current example is the limitation of Wayland forcing EGL to avoid X11 dependencies, but EGL also force OpenGL usage in the entire screen framebuffer while we don't have GPU drivers with hardware acceleration to reduce resource usage.
+Our current example is the limitation of [Wayland forcing EGL to avoid X11 dependencies](https://wayland.freedesktop.org/faq.html#heading_toc_j_11), but EGL also force OpenGL usage in the entire screen framebuffer while we don't have GPU drivers with hardware acceleration to reduce resource usage.
 
 By translating OpenGL code on CPU (LLVMPipe) we get less performance than Orbital's native software rendering, thus our plan is to make Orbital support Wayland to reduce the OpenGL usage and greatly improve performance without the giant complexity of GPU drivers.
 
@@ -87,7 +89,7 @@ We balance stability, security and performance, prefering better stability and s
 
 But some decisions will not change, like separated system component memory address spaces for highest stability and security due to the absurd complexity level of modern operating systems and drivers.
 
-### How Redox ABI compares to Linux/BSD?
+## How Redox ABI compares to Linux/BSD?
 
 The microkernel architecture allows us to break the system ABI (monolithic kernel ABI equivalent in microkernel ABI) without breaking the applications ABI (user-space ABI equivalent on Linux), our POSIX and C Standard Library (relibc) ABI also define the user-space system component ABIs and kernel ABI.
 
@@ -95,7 +97,7 @@ Thus when the system ABI breaks, only `relibc` need to be updated, not user-spac
 
 By doing this we can improve the system faster than monolithic kernels.
 
-### When relibc ABI breaks?
+## When relibc ABI breaks?
 
 When dynamically linked (most cases) it breaks when:
 
@@ -108,7 +110,7 @@ New functions don't break ABI but are backwards-incompatible (programs compiled 
 
 When statically linked, the kernel ABI can't break.
 
-### Why Redox prefer to port software from source instead of binary compatibility?
+## Why Redox prefer to port software from source instead of binary compatibility?
 
 Ports using POSIX/Linux source compatibility require much less effort, are easier and have less maintenace cost than supporting BSD (BSD libc and kernel ABIs) or Linux (glibc/musl and kernel ABIs) binary compatibility (which would increase API complexity and feature sets and make them mandatory).
 
@@ -128,7 +130,7 @@ This decision allow us to:
 
 We plan to port (when possible) the best and widely-used FOSS programs present in Linux and BSD distributions or use virtualization to not need binary compatibility.
 
-### Why does Redox have unsafe Rust code?
+## Why does Redox have unsafe Rust code?
 
 In some cases we must use `unsafe` declarations to allow some low-level tasks, for example at certain parts in the kernel and drivers, these unsafe parts are generally wrapped with a safe interface.
 
@@ -136,11 +138,10 @@ These are the cases where unsafe Rust is mandatory:
 
 - Implementing a foreign function interface (FFI) (for example the relibc API)
 - Working with system calls directly (you should use `libredox`, `relibc` or Rust `libstd` library instead of `redox_syscall`)
-- Creating or managing processes and threads
 - Working with memory mapping and stack allocation
 - Working with hardware devices
 
-It is an important goal for Redox to minimize the amount of `unsafe` declared Rust code. If you want to use unsafe Rust code on Redox anywhere other than interfacing with system calls, ask for Jeremy Soller's approval before.
+It is an important goal for Redox to minimize the amount of `unsafe` declared Rust code.
 
 Unsafe Rust still has most of the compiler verification and allows some safe Rust syntax usage, thus it is still more safe than C and C++.
 
@@ -149,21 +150,21 @@ Read the following pages to learn more about Unsafe Rust:
 - https://doc.rust-lang.org/book/ch20-01-unsafe-rust.html
 - https://doc.rust-lang.org/nomicon/meet-safe-and-unsafe.html
 
-### Why does Redox have C code?
+## Why does Redox have C code?
 
 Sometimes C is simpler (for POSIX/C compatibility tests) or the compiler behavior is better for certain things that are still under discussion in Rust upstream.
 
-### Why does Redox have Assembly code?
+## Why does Redox have Assembly code?
 
-[Assembly](https://en.wikipedia.org/wiki/Assembly_language) is the core of low-level because it's a CPU-specific programming language and deals with things that aren't possible or feasible to do in high-level languages like Rust.
+[Assembly](https://en.wikipedia.org/wiki/Assembly_language) is the core of low-level because it's a CPU-specific programming language and deals with things that aren't possible or feasible to do in higher level languages like Rust.
 
 Sometimes required or preferred for accessing hardware, or for carefully optimized hot spots.
 
-Reasons to use Assembly instead of Rust:
+Reasons to use Assembly instead of a higher level programming language:
 
 - Deal with low-level things (those that can't be handled by Rust)
-- Writing constant time algorithms for cryptography
 - Optimizations
+- Writing constant time algorithms for cryptography
 
 Places where Assembly is used:
 
