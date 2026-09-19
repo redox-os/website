@@ -21,9 +21,9 @@ You can see the first Redox screenshot from the [This Week in Redox 1](https://w
 - PS/2 and USB support
 - SMP support
 - Efficient memory management
-- Partial POSIX support
+- Partial POSIX and Linux support
 - Dozens of ported tools, games and libraries
-- Advanced GUI support (SDL2, winit, Mesa3D OSMesa)
+- Advanced GUI support (SDL, winit, and softbuffer libraries)
 - XDG compliance
 
 ## "Why Redox don't support X feature even after 10 years?"
@@ -33,7 +33,3 @@ Redox was created and evolved together with Rust compiler and ecosystem (it was 
 C reigned for over 50 years and Rust for 10 years, thus it's a huge difference in ways to save time in development.
 
 Another reason is because low-level development is very hard and time consuming, but the microkernel architecture helped us a lot with the size of API changes and debugging.
-
-## Opinions
-
-- (Ribbon): I was doing a research in 2016 to discover the best operating systems technically. Once I discovered Redox OS, I was amazed, it had all technical decisions that I wanted which other operating systems lacked. It restored my excitement with a microkernel-based operating system because Redox could run advanced FOSS programs with recent versions (which is a struggle in most new operating systems), Minix could do that using the NetBSD packages but it became unmaintained and lacked system APIs to run programs and drivers with more complexity, thus couldn't be used as a daily driver operating system. Redox also had more advanced system APIs and modern CPU architecture support than GNU Hurd with much less development time, thus it became my focus as the most advanced and practical open-source microkernel-based operating system available.
