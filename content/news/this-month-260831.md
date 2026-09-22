@@ -31,7 +31,7 @@ lbecher implemented it and did some fixes, more testing need to be done to deter
 
 After some months of work Ibuki Omatsu and Anhad Singh implemented a ring buffer communication API equivalent to io_uring on Linux to improve performance on supported drivers, with guidance from 4lDO2 and help from Wildan Mubarok to fix bugs.
 
-This work improve the general system performance and I/O performance by 10x!!
+This work improves the I/O performance for NVMe driver, RedoxFS and RAMFS by a significant factor. In benchmark below it's measured to improve I/O performance by 10x!!
 
 - redox-ring benchmark
 
