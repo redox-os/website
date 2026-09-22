@@ -21,8 +21,6 @@ If you would like to support Redox, please consider donating or buying some merc
 
 Wildan Mubarok improved UEFI compatibility, which allowed the MSI Modern 14 C7M laptop to boot!
 
-He also fixed a bug that expanded the PS/2 mouse compatibility.
-
 ## ARM64 Multi-core Support
 
 lbecher implemented it and did some fixes, more testing need to be done to determine the performance improvements.
@@ -33,17 +31,13 @@ After some months of work Ibuki Omatsu and Anhad Singh implemented a ring buffer
 
 This work improves the I/O performance for NVMe driver, RedoxFS and RAMFS by a significant factor. In benchmark below it's measured to improve I/O performance by 10x!!
 
-- redox-ring benchmark
+- `redox_syscall` and `redox_ring` benchmark comparison
 
-<img src="/img/screenshot/ring-bench.png" class="img-responsive" alt=""/>
+<img src="/img/bench/ring-comparison.png" class="img-responsive" alt=""/>
 
 - In-memory filesystem (ramfs) benchmark
 
-<img src="/img/screenshot/ring-ramfs-bench.png" class="img-responsive" alt=""/>
-
-- redox-ring-dyn benchmark
-
-<img src="/img/screenshot/ring-dyn-bench.png" class="img-responsive" alt=""/>
+<img src="/img/bench/ramfs-ring-bench.png" class="img-responsive" alt=""/>
 
 ## Significant Native Compilation Performance Improvement and OOM Fixes
 
@@ -69,9 +63,17 @@ Ribbon and Wildan Mubarok confirmed/tested the QEMU is working on Redox, Ribbon 
 
 Currently the performance is not good because we lack CPU hardware acceleration (like Linux KVM) from Redox.
 
-- Redox server on QEMU above Redox desktop
+- Redox server variant on QEMU terminal mode above Redox desktop
 
 <img src="/img/screenshot/qemu-on-redox.jpg" class="img-responsive" alt=""/>
+
+- Redox server variant on both QEMU terminal and GTK GUI
+
+<img src="/img/screenshot/qemu2.png" class="img-responsive" alt="Redox server variant on both QEMU terminal and GTK GUI"/>
+
+- Redox desktop variant on QEMU GTK GUI
+
+<img src="/img/screenshot/qemu3.jpg" class="img-responsive" alt="Redox desktop variant on QEMU GTK GUI"/>
 
 ## Dual-boot Installation from Linux!
 
@@ -79,27 +81,19 @@ Wildan Mubarok improved the Linux support of Redox installer to allow a dual-boo
 
 - Redox running on triple-boot
 
-<img src="/img/screenshot/triple-boot.jpg" class="img-responsive" alt=""/>
-
-## Mednafen Showcase
-
-Mednafen was ported but never showcased, see a screenshot below:
-
-- Castlevania Symphony Of The Night running on Redox
-
-<img src="/img/screenshot/castle-sotn.jpg" class="img-responsive" alt=""/>
+<img src="/img/screenshot/triple-boot.jpg" class="img-responsive" alt="Redox running on triple-boot"/>
 
 ## Kernel Binary Size Profiling
 
 4lDO2 implemented the support for kernel binary size profiling to measure where it can be reduced, also reducing memory usage.
 
-<img src="/img/flamegraph/kernel-binary-size.svg" class="img-responsive" alt=""/>
+<img src="/img/flamegraph/kernel-binary-size.svg" class="img-responsive" alt="Kernel binary size flamegraph"/>
 
 ## Current File Access Design using Namespaces and Capability-based Security
 
 Ibuki Omatsu created a diagram with the current design, see below:
 
-<img src="/img/diagrams/file-access-design.svg" class="img-responsive" alt=""/>
+<img src="/img/diagrams/file-access-design.svg" class="img-responsive" alt="File access design diagram using namespaces and capability-based security"/>
 
 Read [this](https://doc.redox-os.org/book/communication.html#file-access-design-example) for more details.
 
@@ -112,6 +106,7 @@ Read [this](https://doc.redox-os.org/book/communication.html#file-access-design-
 
 ## Kernel Improvements
 
+- (kernel) 4lDO2 reduced IPC overhead by 5%
 - (kernel) 4lDO2 reduced binary size by 2.2% by removing DTB code when not reached (x86-64 image, for example)
 - (kernel) 4lDO2 merged the `redox_syscall` library code into the `kernel` repository to ease changes
 - (kernel) Akshit Gaur did more improvements and fixes to EEVDF scheduler work stealing and Wildan Mubarok did some fixes, which improved performance
@@ -151,10 +146,11 @@ Read [this](https://doc.redox-os.org/book/communication.html#file-access-design-
 - (libc) Wildan Mubarok reduced application and library launch time by using constant functions in `stdio` initialization
 - (libc) Wildan Mubarok reduced unsafe Rust code in `timer_t`
 - (libc) Wildan Mubarok added more Unix socket tests
-- (libc) Wildan Mubarok fixed the `clock_getres` function behavior
-- (libc) Wildan Mubarok fixed a double close bug in `fstatat` function
 - (libc) Wildan Mubarok fixed TLS load offset on ARM64, which fixed a `tokio` library panic on package manager
 - (libc) Wildan Mubarok fixed 64KiB-paged ELF loading on Linux ARM64
+- (libc) Wildan Mubarok fixed the `clock_getres` function behavior
+- (libc) Wildan Mubarok fixed a double close bug in `fstatat` function
+- (libc) Wildan Mubarok fixed NUL offset in `ptsname_r`
 - (libc) Wildan Mubarok fixed the `pthread_kill-self` test
 - (libc) Wildan Mubarok fixed a time/timer test
 - (libc) auronandace implemented `tcgetsid` function
