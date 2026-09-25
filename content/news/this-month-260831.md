@@ -27,15 +27,15 @@ lbecher implemented multi-core support for AArch64/ARM64, and made some fixes. M
 
 ## Ring Buffer Communication For More Parallelism
 
-After some months of work Ibuki Omatsu and Anhad Singh implemented a ring buffer communication API equivalent to io_uring on Linux to improve performance on supported drivers, with guidance from 4lDO2 and help from Wildan Mubarok to fix bugs.
+After some months of work Ibuki Omatsu and Anhad Singh implemented a ring buffer communication API (Redox Rings) equivalent to Linux [io_uring](https://en.wikipedia.org/wiki/Io_uring) system call API to improve performance on supported drivers, with guidance from 4lDO2 and help from Wildan Mubarok to fix bugs.
 
-This work improves the I/O performance for the NVMe driver, RedoxFS and RAMFS by a significant factor. In the benchmark below (bypassing the RedoxFS file system) it's measured to improve I/O performance by 10x!!
+This work improves the I/O performance for the NVMe driver, RedoxFS and RAMFS by a significant factor. In the benchmark below (bypassing the RedoxFS file system) it's measured to improve I/O performance by 14-15x!!
 
-- `redox_syscall` and `redox_ring` benchmark comparison
+- `redox_syscall` (using synchronous system calls to measure NVMe read/write performance) and `redox_ring` (using ring buffers to measure NVMe read/write performance) benchmark comparison
 
 <img src="/img/bench/ring-comparison.png" class="img-responsive" alt=""/>
 
-- In-memory filesystem (ramfs) benchmark
+- In-memory filesystem (ramfs) benchmark using ring buffers
 
 <img src="/img/bench/ramfs-ring-bench.png" class="img-responsive" alt=""/>
 
@@ -43,12 +43,11 @@ This work improves the I/O performance for the NVMe driver, RedoxFS and RAMFS by
 
 After months of investigation by Wildan Mubarok on gradual GCC compilation performance degradation, he found and fixed a kernel memory leak that was causing the `os-test` test suite compilation time in GCC (on QEMU) to increase from 2 hours up to 10 hours, and causing out of memory (OOM) errors. Once fixed, the compilation time was reduced from 10 hours to around 30 minutes.
 
-
 ## NUMA Support
 
 Aadarsh (aka EuclidDivisionLemma) implemented the initial support for [NUMA](https://en.wikipedia.org/wiki/Non-uniform_memory_access)-based memory management. As we currently use QEMU to test NUMA behaviour, any help to test on real hardware would be much appreciated.
 
-He also implemented local node allocation (locality of data) by default and a libredox API to modify NUMA allocation policies.
+He also implemented local node allocation (locality of data) by default and a `libredox` API to modify NUMA allocation policies.
 
 ## Process Priority Support Conclusion of the Scheduler Improvements RSoC project
 
@@ -76,7 +75,7 @@ Redox does not yet have support for KVM-like virtual machine acceleration, so pe
 
 ## Dual-boot Installation from Linux!
 
-Wildan Mubarok improved the Linux support of Redox installer to allow a dual-boot installation of Redox.
+Wildan Mubarok improved the Linux support of Redox installer to allow a dual-boot installation of Redox, you can see [this](https://doc.redox-os.org/book/installing.html) page to learn how to use it and the new GUI installer options.
 
 - Redox running on triple-boot
 
@@ -242,6 +241,22 @@ Read the following pages to learn how to use the images in a virtual machine or 
 
 Sometimes the daily images are outdated and you need to build Redox from source.
 For instructions on how to do this, read the [Building Redox](https://doc.redox-os.org/book/podman-build.html) page.
+
+### Programs
+
+To test the changes on applications and libraries, see if the wanted program is available in the following lists and run the following command to install them: `sudo pkg install package-name`
+
+- [x86-64 packages](https://static.redox-os.org/pkg/x86_64-unknown-redox/)
+- [ARM64 packages](https://static.redox-os.org/pkg/aarch64-unknown-redox/)
+- [RISC-V packages](https://static.redox-os.org/pkg/riscv64gc-unknown-redox/)
+- [i586 packages](https://static.redox-os.org/pkg/i586-unknown-redox/)
+
+There's also a package web interface if you want detailed package information:
+
+- [x86-64 packages](https://static.redox-os.org/web/x86_64-unknown-redox/)
+- [ARM64 packages](https://static.redox-os.org/web/aarch64-unknown-redox/)
+- [RISC-V packages](https://static.redox-os.org/web/riscv64gc-unknown-redox/)
+- [i586 packages](https://static.redox-os.org/web/i586-unknown-redox/)
 
 ## Join us on Matrix Chat
 
