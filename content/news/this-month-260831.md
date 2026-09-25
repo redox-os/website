@@ -85,15 +85,13 @@ Wildan Mubarok improved the Linux support of Redox installer to allow a dual-boo
 
 4lDO2 implemented support for kernel binary size profiling to measure where it can be reduced, also reducing memory usage.
 
-<img src="/img/flamegraph/kernel-binary-size.svg" class="img-responsive" alt="Kernel binary size flamegraph"/>
+<img src="/img/flamegraphs/kernel-binary-size.svg" class="img-responsive" alt="Kernel binary size flamegraph"/>
 
 ## Current File Access Design using Namespaces and Capability-based Security
 
-Ibuki Omatsu created a diagram that summarizes how the `openat` function is used to resolve paths, using the namespace manager, as part of capability-based security.
+Ibuki Omatsu created a diagram that summarizes how the `openat` function is used to resolve paths, using the namespace manager, as part of capability-based security. Read [this](https://doc.redox-os.org/book/communication.html#file-access-design-example) for more details.
 
 <img src="/img/diagrams/file-access-design.svg" class="img-responsive" alt="File access design diagram using namespaces and capability-based security"/>
-
-Read [this](https://doc.redox-os.org/book/communication.html#file-access-design-example) for more details.
 
 ## Better relibc Contribution Philosophy and Goals
 
