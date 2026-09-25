@@ -33,11 +33,11 @@ This work improves the I/O performance for the NVMe driver, RedoxFS and RAMFS by
 
 - `redox_syscall` (using synchronous system calls to measure NVMe read/write performance) and `redox_ring` (using ring buffers to measure NVMe read/write performance) benchmark comparison
 
-<img src="/img/bench/ring-comparison.png" class="img-responsive" alt=""/>
+<img src="/img/bench/ring-comparison.png" class="img-responsive" alt="redox_syscall (synchronous system call NVMe read/write performance) and redox_ring (ring buffer NVMe read/write performance) benchmark comparison"/>
 
 - In-memory filesystem (ramfs) benchmark using ring buffers
 
-<img src="/img/bench/ramfs-ring-bench.png" class="img-responsive" alt=""/>
+<img src="/img/bench/ramfs-ring-bench.png" class="img-responsive" alt="In-memory filesystem (ramfs) benchmark using ring buffers"/>
 
 ## Significant Native Compilation Performance Improvement and OOM Fixes
 
@@ -63,7 +63,7 @@ Redox does not yet have support for KVM-like virtual machine acceleration, so pe
 
 - Redox server variant on QEMU terminal mode above Redox desktop
 
-<img src="/img/screenshot/qemu-on-redox.jpg" class="img-responsive" alt=""/>
+<img src="/img/screenshot/qemu-on-redox.jpg" class="img-responsive" alt="Redox server variant on QEMU terminal mode above Redox desktop"/>
 
 - Redox server variant on both QEMU terminal and GTK GUI
 
