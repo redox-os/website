@@ -7,7 +7,7 @@ date = "2026-08-31"
 Redox OS is a complete Unix-like general-purpose microkernel-based operating system
 written in Rust. August was a very exciting month for Redox! Here's all the latest news.
 
-Sorry for the delayed report, we are very busy.
+Sorry for the delayed report, a combination of busy development, time off, conference attendance, other work, and various random factors got in the way.
 
 ## Donate to Redox
 
@@ -15,7 +15,7 @@ If you would like to support Redox, please consider donating or buying some merc
 
 - [Donate](https://www.redox-os.org/donate/)
 - [Patreon](https://www.patreon.com/redox_os)
-- [Merch](https://redox-os.creator-spring.com/)
+- Merch has moved from Teespring to Amaze Commerce: https://app.amazecommerce.com/shop/redox-os
 
 ## More Boot Fixes
 
@@ -23,13 +23,13 @@ Wildan Mubarok improved UEFI compatibility, which allowed the MSI Modern 14 C7M 
 
 ## ARM64 Multi-core Support
 
-lbecher implemented it and did some fixes, more testing need to be done to determine the performance improvements.
+lbecher implemented multi-core support for AArch64/ARM64, and made some fixes. More testing need to done to determine the extent of the performance improvements.
 
 ## Ring Buffer Communication For More Parallelism
 
 After some months of work Ibuki Omatsu and Anhad Singh implemented a ring buffer communication API equivalent to io_uring on Linux to improve performance on supported drivers, with guidance from 4lDO2 and help from Wildan Mubarok to fix bugs.
 
-This work improves the I/O performance for NVMe driver, RedoxFS and RAMFS by a significant factor. In benchmark below it's measured to improve I/O performance by 10x!!
+This work improves the I/O performance for the NVMe driver, RedoxFS and RAMFS by a significant factor. In the benchmark below (bypassing the RedoxFS file system) it's measured to improve I/O performance by 10x!!
 
 - `redox_syscall` and `redox_ring` benchmark comparison
 
@@ -41,27 +41,26 @@ This work improves the I/O performance for NVMe driver, RedoxFS and RAMFS by a s
 
 ## Significant Native Compilation Performance Improvement and OOM Fixes
 
-After months of Wildan Mubarok investigation on gradual GCC compilation performance degradation, he fixed a kernel memory leak that caused the `os-test` test suite compilation time in GCC (on QEMU) take from 2 hours up to 10 hours and OOM errors during months, once fixed the compilation time was reduced from 10 hours to around 30 minutes.
+After months of investigation by Wildan Mubarok on gradual GCC compilation performance degradation, he found and fixed a kernel memory leak that was causing the `os-test` test suite compilation time in GCC (on QEMU) to increase from 2 hours up to 10 hours, and causing out of memory (OOM) errors. Once fixed, the compilation time was reduced from 10 hours to around 30 minutes.
 
-The leak was worsened by the lack of page fault-based memory allocation.
 
 ## NUMA Support
 
-Aadarsh (aka EuclidDivisionLemma) implemented the initial support for [NUMA](https://en.wikipedia.org/wiki/Non-uniform_memory_access)-based memory management, as he can only use the QEMU emulation, we need help from people with hardware supporting NUMA to know the size of performance improvement. Cloud services such as AWS, Google Cloud and Azure also have support for it.
+Aadarsh (aka EuclidDivisionLemma) implemented the initial support for [NUMA](https://en.wikipedia.org/wiki/Non-uniform_memory_access)-based memory management. As we currently use QEMU to test NUMA behaviour, any help to test on real hardware would be much appreciated.
 
 He also implemented local node allocation (locality of data) by default and a libredox API to modify NUMA allocation policies.
 
 ## Process Priority Support Conclusion of the Scheduler Improvements RSoC project
 
-Akshit Gaur implemented the support for process priorities and system priority tuning, which improved general performance.
+Akshit Gaur implemented support for process priorities and system priority tuning, which improved general performance.
 
-He also wrote the [last EEVDF article](https://www.redox-os.org/news/rsoc-eevdf/) giving the complete explanation after optimizations, thanks a lot Akshit for the great work and effort.
+He also wrote the [last EEVDF article](https://www.redox-os.org/news/rsoc-eevdf/) giving the complete explanation after optimizations. Thanks a lot Akshit for the great work!
 
 ## QEMU on Redox!
 
-Ribbon and Wildan Mubarok confirmed/tested the QEMU is working on Redox, Ribbon tested the server variant of Redox in QEMU terminal mode and Wildan tested the desktop variant the GTK frontend.
+Ribbon and Wildan Mubarok confirmed/tested that QEMU is working on Redox. Ribbon tested the server variant of Redox in QEMU terminal mode and Wildan tested the desktop variant including the GTK frontend.
 
-Currently the performance is not good because we lack CPU hardware acceleration (like Linux KVM) from Redox.
+Redox does not yet have support for KVM-like virtual machine acceleration, so performance can be significantly slow.
 
 - Redox server variant on QEMU terminal mode above Redox desktop
 
@@ -85,13 +84,13 @@ Wildan Mubarok improved the Linux support of Redox installer to allow a dual-boo
 
 ## Kernel Binary Size Profiling
 
-4lDO2 implemented the support for kernel binary size profiling to measure where it can be reduced, also reducing memory usage.
+4lDO2 implemented support for kernel binary size profiling to measure where it can be reduced, also reducing memory usage.
 
 <img src="/img/flamegraph/kernel-binary-size.svg" class="img-responsive" alt="Kernel binary size flamegraph"/>
 
 ## Current File Access Design using Namespaces and Capability-based Security
 
-Ibuki Omatsu created a diagram with the current design, see below:
+Ibuki Omatsu created a diagram that summarizes how the `openat` function is used to resolve paths, using the namespace manager, as part of capability-based security.
 
 <img src="/img/diagrams/file-access-design.svg" class="img-responsive" alt="File access design diagram using namespaces and capability-based security"/>
 
@@ -99,7 +98,7 @@ Read [this](https://doc.redox-os.org/book/communication.html#file-access-design-
 
 ## Better relibc Contribution Philosophy and Goals
 
-4lDO2 documented the `relibc` (our POSIX/C Standard Library) safety philosophy and goals to reduce the probability of undefined behavior and logic bugs being introduced, by moving unsafe code in leaf functions for better oversight/review, less unsafe operation in unexpected places and using more Rust-like error handling to give more information than POSIX errors (easing the investigation of certain classes of bugs).
+4lDO2 documented the `relibc` safety philosophy and goals (for our POSIX/C Standard Library) to reduce the probability of undefined behavior and logic bugs being introduced. This primarily focuses on restricting unsafe code to the "leaf functions" of `relibc` for better oversight/review and less unsafe code in unexpected places. It also includes using more Rust-like error handling internally, to give more information than POSIX errors (easing the investigation of certain classes of bugs).
 
 - [relibc CONTRIBUTING.md document](https://gitlab.redox-os.org/redox-os/relibc/-/blob/master/CONTRIBUTING.md)
 - [4lDO2 MR to improve safety documentation](https://gitlab.redox-os.org/redox-os/relibc/-/merge_requests/1622)
@@ -118,7 +117,7 @@ Read [this](https://doc.redox-os.org/book/communication.html#file-access-design-
 
 ## Driver Improvements
 
-- (driver) MJ Pooladkhay implemented PCI multi-vector MSI-X support, which allow more driver performance features
+- (driver) MJ Pooladkhay implemented PCI multi-vector MSI-X support, which will allow more driver performance features
 - (driver) MJ Pooladkhay fixed VirtIO device completions being lost
 - (driver) Wildan Mubarok fixed a `pcid` bug that Clippy detected
 - (driver) bjorn3 did some code deduplication and cleanup
