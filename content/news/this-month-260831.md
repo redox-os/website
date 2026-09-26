@@ -27,7 +27,7 @@ lbecher implemented multi-core support for AArch64/ARM64, and made some fixes. M
 
 ## Ring Buffer Communication For More Parallelism
 
-After some months of work Ibuki Omatsu and Anhad Singh implemented a ring buffer communication API (Redox Rings) equivalent to Linux [io_uring](https://en.wikipedia.org/wiki/Io_uring) system call API to improve performance on supported drivers, with guidance from 4lDO2 and help from Wildan Mubarok to fix bugs.
+After some months of work Ibuki Omatsu and Anhad Singh implemented a userspace-based ring buffer communication API (Redox Rings) equivalent to Linux [io_uring](https://en.wikipedia.org/wiki/Io_uring) system call API to improve performance on supported drivers, with guidance from 4lDO2 and help from Wildan Mubarok to fix bugs. Which is better than the previous attempt from years ago to implement a kernel-based ring buffer communication API.
 
 This work improves the I/O performance for the NVMe driver, RedoxFS and RAMFS by a significant factor. In the benchmark below (bypassing the RedoxFS file system) it's measured to improve I/O performance by 14-15x!!
 
@@ -49,9 +49,9 @@ Aadarsh (aka EuclidDivisionLemma) implemented the initial support for [NUMA](htt
 
 He also implemented local node allocation (locality of data) by default and a `libredox` API to modify NUMA allocation policies.
 
-## Process Priority Support Conclusion of the Scheduler Improvements RSoC project
+## Process Priority Support and The Conclusion of the Scheduler Improvements RSoC project
 
-Akshit Gaur implemented support for process priorities and system priority tuning, which improved general performance.
+Akshit Gaur implemented support for process priorities and did system priority tuning, which improved general performance.
 
 He also wrote the [last EEVDF article](https://www.redox-os.org/news/rsoc-eevdf/) giving the complete explanation after optimizations. Thanks a lot Akshit for the great work!
 
@@ -89,7 +89,7 @@ Wildan Mubarok improved the Linux support of Redox installer to allow a dual-boo
 
 ## Current File Access Design using Namespaces and Capability-based Security
 
-Ibuki Omatsu created a diagram that summarizes how the `openat` function is used to resolve paths, using the namespace manager, as part of capability-based security. Read [this](https://doc.redox-os.org/book/communication.html#file-access-design-example) for more details.
+Ibuki Omatsu created a diagram that summarizes how the `openat` function is used to resolve paths, using the namespace manager, as part of capability-based security. Read [this](https://doc.redox-os.org/book/communication.html#file-access-design-example) section for more details.
 
 <img src="/img/diagrams/file-access-design.svg" class="img-responsive" alt="File access design diagram using namespaces and capability-based security"/>
 
@@ -125,7 +125,7 @@ Ibuki Omatsu created a diagram that summarizes how the `openat` function is used
 - (sys) Wildan Mubarok ported [rldd](https://github.com/zatrazz/rldd) to be our `ldd` tool implementation
 - (sys) Wildan Mubarok improved the scheme path parent gathering performance
 - (sys) Wildan Mubarok fixed some off-by-one file locking bugs, which helped SQLite and `libsoup`
-- (sys) Wildan Mubarok removed the a `inputd` non-fatal panic when no display is available
+- (sys) Wildan Mubarok removed a `inputd` non-fatal panic when no display is available
 - (sys) bjorn3 fixed potential `inputd` deadlocks
 - (sys) bjorn3 did some code deduplication
 
