@@ -4,7 +4,7 @@ author = "Ibuki Omatsu, Anhad Singh, Jacob Lorentzon, Ron Williams"
 date = "2099-10-17"
 +++
 
-Last year, the Redox team [received a grant](https://nlnet.nl/project/RedoxOS-ringbuffer/) to develop io_uring-like Ring Buffer support at the task level,
+Last year, the Redox team [received a grant](https://nlnet.nl/project/RedoxOS-ringbuffer/) to develop io_uring-like Ring Buffer support at the system task level,
 as a first step towards ring buffer communications between tasks.
 The work finished up in September, as the last pieces were put in place.
 
@@ -16,7 +16,7 @@ as well as some [smaller theme funds](https://nlnet.nl/themes/).
 
 The team has done a fantastic job, and I want to congratulate Ibuki, Anhad and Jacob, and thank them for their time and effort.
 
-In addition to implementing the Ring Buffer machinery for our services and drivers that can support it,
+In addition to implementing the Ring Buffer machinery for our system services and drivers that can support it,
 an `io_uring` and `liburing`-like API for applications was completed and demonstrated.
 There was also substantial work done on support crates, including an async executor for drivers.
 
