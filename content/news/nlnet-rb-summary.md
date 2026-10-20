@@ -1,11 +1,11 @@
 +++
 title = "Ring Buffers Project Summary"
 author = "Ibuki Omatsu, Anhad Singh, Jacob Lorentzon, Ron Williams"
-date = "2099-10-17"
+date = "2026-10-17"
 +++
 
 Last year, the Redox team [received a grant](https://nlnet.nl/project/RedoxOS-ringbuffer/) to develop io_uring-like Ring Buffer support at the system task level,
-as a first step towards ring buffer communications between tasks.
+as a first step towards ring buffer communications between the application and the majority of system services.
 The work finished up in September, as the last pieces were put in place.
 
 We want to thank the [NLnet Foundation](https://nlnet.nl/), the NGI Zero Commons Fund, and Horizon Europe for their generous support.
@@ -26,7 +26,7 @@ But I will let the team tell you all the technical details.
 
 -- Ron Williams
 
-## The "redox-ring API"
+## The "redox-ring API" - Ibuki Omatsu
 
 We've introduced the first ring buffer implementation to Redox OS. Unlike Linux's io_uring, the submission queue (SQ) and completion queue (CQ) are shared exclusively between userspace processes and are never accessed by the kernel.
 
@@ -62,7 +62,7 @@ During initialization, the SQ, CQ, and data buffer pool are mapped into the appl
 The redox-ring API supports two buffer allocation strategies:
 
 - Fixed-size allocation: Uses a simple allocator that divides the shared memory pool into fixed-size chunks and maintains a list of available offsets.
-- Dynamic allocation: Uses the `redox-buffer-pool` crate to allocate buffers of varying sizes and alignments. The allocator uses B-trees to manage free and occupied memory regions.
+- Dynamic allocation: Uses the [redox-buffer-pool](https://gitlab.redox-os.org/redox-os/redox-buffer-pool) crate to allocate buffers of varying sizes and alignments. The allocator uses B-trees to manage free and occupied memory regions.
 
 Both allocation strategies return a pointer to the allocated buffer and its offset within the shared memory pool.
 
@@ -85,13 +85,13 @@ Once all operations have completed, the application tears down the ring buffer c
 
 -- Ibuki Omatsu
 
-## Kernel and IPC optimizations
+## Kernel and IPC optimizations - Jacob Lorentzon
 
 While it has substantially improved over the years, IPC is still very slow on Redox, and this is important to optimize as ring buffers can only offset this overhead to a certain extent.
 
 ### Infrastructure
 
-The acid test suite was expanded to include more targeted benchmarks that measure IPC latency, in particular `acid ipc_latency_simultaneous`, and also `acid heavy_forking`.
+The `acid` test suite was expanded to include more targeted benchmarks that measure IPC latency, in particular `acid ipc_latency_simultaneous`, and also `acid heavy_forking`.
 Support was also added for repeating measurements and collecting more proper statistics (although still less feature-complete than e.g. `hyperfine`), making it easier to know whether changes in metrics are statistically significant and by how much.
 
 ### Misc refactors
@@ -100,7 +100,7 @@ Various single-digit speedups were attained from kernel refactors, such as elimi
 
 ### Fast path switching without vector registers
 
-Another source of overhead from the flamegraphs, was found to be `XSAVE` and `XRSTOR`, a few hundred cycles combined (tested on a 5950x).
+Another source of overhead from the flamegraphs, was found to be `XSAVE` and `XRSTOR`, a few hundred cycles combined (tested on a AMD Ryzen 9 5950X).
 These instructions save/restore vector registers, which is ~600 bytes on CPUs with AVX2 (and which only userspace uses).
 
 The optimization made here is that the kernel zeroes the vector registers _if the caller and callee entered the kernel through syscalls_, rather than saving/restoring (using `vzeroall`, `ldmxcsr` etc. as required for correctness).
