@@ -34,7 +34,7 @@ The Linux io_uring interface allows the user to submit one or more I/O operation
 
 For portability the Redox Rings API is designed to be similar to that of [liburing](https://github.com/axboe/liburing) and can also be used for general inter-process communication. For example it is used for communication RedoxFS filesystem service and NVMed which is the storage driver. The addition of this API has allowed several parts of Redox to reap significant performance improvements!
 
-## Ring Buffers
+### Ring Buffers Terminology
 
 A ring buffer is a circular queue backed by an array. The interface makes use of two ring buffers which are shared between the application and the scheme:
 
@@ -44,24 +44,6 @@ A ring buffer is a circular queue backed by an array. The interface makes use of
 
 Since each buffer has exactly one producer and consumer, each index is only ever modified by one side. This eliminates the cost of having a shared locking mechanism.
 
-## Async Executor
-
-We developed an async executor for device drivers, with a single interrupt vector and an SQ/CQ pair per core architecture. A single core is used at the moment, and multi-thread-per-core support is in progress. Furthermore, we updated NVMe driver to use the async executor, and more devices such as virtio are expected to follow.
-
-With the executor, schemes that support Redox Rings can handle each I/O request in its own async task, with a worker thread spawned for each session between the application and the scheme. On teardown, the worker task is stopped, pending I/O operations are cancelled and shared resources are cleaned up.
-
-<img width="1696" height="1012" alt="image" src="https://gist.github.com/user-attachments/assets/858b014c-169f-462c-926a-64a45ba7a74a" />
-
-**Figure 1:** Comparison between the `redox_syscall` and `redox_ring` benchmarks, showing that `redox_ring` is 14-15x faster. The `redox_syscall` benchmark performs I/O via synchronous system calls, while the `redox_ring` benchmark uses the new Redox Ring interface.
-
-## Session Creation and Management
-The `redox_ring_queue_init_with_path` function opens the scheme ring handle and uses the `SYS_CALL` system call on it to set up the ring buffer session with the given parameters. This returns file descriptors for the SQ, CQ, and shared buffer pool, which are mapped into the application's address space. The application can then use the queues directly to submit requests and receive completions. On the scheme side, the worker task waits for entries in the SQ, processes them asynchronously and notifies the application on completion.
-
-[^1]: https://kernel.dk/io_uring.pdf
-[^2]: https://lwn.net/Articles/671649/
-[^3]: https://github.com/axboe/liburing/discussions/1047#discussioncomment-8374809
-
--- Anhad Singh
 ## The "redox-ring API" - Ibuki Omatsu
 
 We've introduced the first ring buffer implementation to Redox OS. Unlike Linux's io_uring, the submission queue (SQ) and completion queue (CQ) are shared exclusively between userspace processes and are never accessed by the kernel.
@@ -87,7 +69,7 @@ The API provides functions for managing ring buffers, shared memory, and request
 
 The API also provides functions for registering file descriptors, freeing allocated buffers, and tearing down ring buffer instances.
 
-## Memory Management and Shared Buffers
+## Memory Management and Shared Buffers - Ibuki Omatsu
 
 The `redox-rings` implementation uses shared memory to exchange SQEs, CQEs, and I/O data between applications and daemons.
 
@@ -104,7 +86,11 @@ Both allocation strategies return a pointer to the allocated buffer and its offs
 
 Once an operation has completed, the application can release its buffer, allowing the memory to be reused.
 
-## Example: Writing to RamFS
+## Session Creation and Management - Anhad Singh
+
+The `redox_ring_queue_init_with_path` function opens the scheme ring handle and uses the `SYS_CALL` system call on it to set up the ring buffer session with the given parameters. This returns file descriptors for the SQ, CQ, and shared buffer pool, which are mapped into the application's address space. The application can then use the queues directly to submit requests and receive completions. On the scheme side, the worker task waits for entries in the SQ, processes them asynchronously and notifies the application on completion.
+
+## Example: Writing to RamFS - Ibuki Omatsu
 
 Ring buffer support was added to RamFS and NVMed. We also added tests that communicate with these storage daemons through the redox-ring API.
 
@@ -119,7 +105,15 @@ For example, writing data to RamFS involves the following steps:
 
 Once all operations have completed, the application tears down the ring buffer connection.
 
--- Ibuki Omatsu
+## Async Executor - Anhad Singh
+
+We developed an async executor for device drivers, with a single interrupt vector and an SQ/CQ pair per core architecture. A single core is used at the moment, and multi-thread-per-core support is in progress. Furthermore, we updated NVMe driver to use the async executor, and more devices such as virtio are expected to follow.
+
+With the executor, schemes that support Redox Rings can handle each I/O request in its own async task, with a worker thread spawned for each session between the application and the scheme. On teardown, the worker task is stopped, pending I/O operations are cancelled and shared resources are cleaned up.
+
+<img class="img-responsive" alt="Ring Buffers Benchmark" src="/img/ring-buffers-benchmark.img" width="50%" height="50%"><br>
+
+**Figure 1:** Comparison between the `redox_syscall` and `redox_ring` benchmarks, showing that `redox_ring` is 14-15x faster. The `redox_syscall` benchmark performs I/O via synchronous system calls, while the `redox_ring` benchmark uses the new Redox Ring interface.
 
 ## Kernel and IPC optimizations - Jacob Lorentzon
 
@@ -163,11 +157,13 @@ The kernel previously only supported 4k pages.
 This is still the case on non-x86, and for all userspace cases, but now the kernel physmap will be mapped as 2M when possible.
 TLB usage is thus reduced by up to 512x for heavy CoW, whereas the artificially highest speedup obtained from `acid heavy_forking` was TODO.
 
-## Future improvements
+## Future improvements - Jacob Lorentzon
 
 IPC roundtrip latency has been reduced from ~5800 cycles to ~2700 cycles, but this is still high compared to fast µkernels like seL4.
 Additional optimizations could be to reduce locking, and reduce the syscall entry overhead, but primarily to simplify the IPC primitive and remove possibly unnecessary parts such as request buffers.
 While not as applicable for nonlegacy applications, automatic page-borrowing of clients' buffers (in `UserScheme`) is also a major source of overhead and a benchmark similar to `dd bs=4k if=/dev/zero of=/dev/null` is at least ~32k cycles per call.
 However, while the existing benchmarks are useful as an approximate lower bound on latency, more investigation will be required to determine the distribution of overheads for more realistic workloads, and when combined with userspace ring buffers.
 
--- Jacob Lorentzon
+[^1]: https://kernel.dk/io_uring.pdf
+[^2]: https://lwn.net/Articles/671649/
+[^3]: https://github.com/axboe/liburing/discussions/1047#discussioncomment-8374809
