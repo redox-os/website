@@ -26,6 +26,42 @@ But I will let the team tell you all the technical details.
 
 -- Ron Williams
 
+## Overview - Anhad Singh
+
+Historically asynchronous I/O on Linux was done through the kernel's native AIO interface. AIO is mainly useful for unbuffered (`O_DIRECT`) *file* I/O, and buffered requests silently block[^1]. Developers also raised concerns about its complexity and performance[^1] [^2]. There is also POSIX AIO, but developers often consider its implementation lackluster and slow[^1]. To address these problems, several alternative asynchronous mechanisms such as [fibrils](https://lwn.net/Articles/219954/) and [syslets/threadlets](https://lwn.net/Articles/223899/) were proposed but were never merged into the mainline Linux kernel. In early 2019, [Jens Axboe](https://github.com/axboe) proposed and developed the io_uring interface, designed to be an efficient, extensible and "easy to use, hard to misuse." In its early days, io_uring did have a few security issues and memory leaks, but these have since been addressed[^3]. It was merged in Linux 5.1 and is widely used today.
+
+The Linux io_uring interface allows the user to submit one or more I/O operations to the kernel, which are then processed in an asynchronous fashion without blocking the userspace process. Redox, being a microkernel, handles I/O in userspace _scheme_ processes rather than in the kernel. Each *file description* stores a handle to its scheme, so an I/O system call on that file can forward the request to the scheme. The async I/O interface developed in this project, called Redox Rings, uses a mechanism similar to io_uring. However, unlike io_uring which is used to submit operations to the kernel, the Redox Rings interface is used by the application to directly submit requests to the appropriate scheme asynchronously without blocking the application. Additionally, the interface allows I/O requests to be issued without any memory copies by having a separate shared memory region between the scheme and the application which can be requested as DMA-capable memory.
+
+For portability the Redox Rings API is designed to be similar to that of [liburing](https://github.com/axboe/liburing) and can also be used for general inter-process communication. For example it is used for communication RedoxFS filesystem service and NVMed which is the storage driver. The addition of this API has allowed several parts of Redox to reap significant performance improvements!
+
+## Ring Buffers
+
+A ring buffer is a circular queue backed by an array. The interface makes use of two ring buffers which are shared between the application and the scheme:
+
+* SQ: *submission queue*, where the application writes requests and the scheme reads them
+* CQ: *completion queue*, where the scheme writes responses and the application reads them
+* SQE / CQE: _submission queue entry_ / _completion queue entry_, entries in the SQ and CQ, respectively
+
+Since each buffer has exactly one producer and consumer, each index is only ever modified by one side. This eliminates the cost of having a shared locking mechanism.
+
+## Async Executor
+
+We developed an async executor for device drivers, with a single interrupt vector and an SQ/CQ pair per core architecture. A single core is used at the moment, and multi-thread-per-core support is in progress. Furthermore, we updated NVMe driver to use the async executor, and more devices such as virtio are expected to follow.
+
+With the executor, schemes that support Redox Rings can handle each I/O request in its own async task, with a worker thread spawned for each session between the application and the scheme. On teardown, the worker task is stopped, pending I/O operations are cancelled and shared resources are cleaned up.
+
+<img width="1696" height="1012" alt="image" src="https://gist.github.com/user-attachments/assets/858b014c-169f-462c-926a-64a45ba7a74a" />
+
+**Figure 1:** Comparison between the `redox_syscall` and `redox_ring` benchmarks, showing that `redox_ring` is 14-15x faster. The `redox_syscall` benchmark performs I/O via synchronous system calls, while the `redox_ring` benchmark uses the new Redox Ring interface.
+
+## Session Creation and Management
+The `redox_ring_queue_init_with_path` function opens the scheme ring handle and uses the `SYS_CALL` system call on it to set up the ring buffer session with the given parameters. This returns file descriptors for the SQ, CQ, and shared buffer pool, which are mapped into the application's address space. The application can then use the queues directly to submit requests and receive completions. On the scheme side, the worker task waits for entries in the SQ, processes them asynchronously and notifies the application on completion.
+
+[^1]: https://kernel.dk/io_uring.pdf
+[^2]: https://lwn.net/Articles/671649/
+[^3]: https://github.com/axboe/liburing/discussions/1047#discussioncomment-8374809
+
+-- Anhad Singh
 ## The "redox-ring API" - Ibuki Omatsu
 
 We've introduced the first ring buffer implementation to Redox OS. Unlike Linux's io_uring, the submission queue (SQ) and completion queue (CQ) are shared exclusively between userspace processes and are never accessed by the kernel.
