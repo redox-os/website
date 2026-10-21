@@ -81,9 +81,19 @@ Wildan Mubarok fixed broken HTML layout, he also added a shortcut for the browse
 
 <img src="/img/screenshot/webkitgtk3-correct-layout.jpg" class="img-responsive" alt=""/>
 
+## GLVND Port
+
+Wildan Mubarok ported the [GLVND](https://gitlab.freedesktop.org/glvnd/libglvnd) library to allow some GLX programs to work in Orbital.
+
 ## Clang Support in Redox Build System
 
 Wildan Mubarok implemented the support for Clang cross-compilation, which allow better compiler optimizations and tooling.
+
+## i586 Dynamic Linking
+
+Wildan Mubarok fixed the i586 dynamic linking, which greatly helps old x86-32 computers with small memory capacity and easily scale tested programs.
+
+Currently he enabled for basic applications.
 
 ## Kernel Improvements
 
@@ -92,15 +102,18 @@ Wildan Mubarok implemented the support for Clang cross-compilation, which allow 
 
 ## Driver Improvements
 
+- (driver) Jeremy Soller fixed a Intel HD Audio driver panic when path to DAC is not found
 - (driver) bjorn3 implemented the support for Linux DRM events
 - (driver) bjorn3 fixed multi-display support in VirtIO-GPU driver
 - (driver) bjorn3 implemented a macro to simplify Intel GPU driver register access code
 
 ## System Improvements
 
+- (sys) bjorn3 fixed a panic in Redox terminal scrolling when using shadow buffer
 - (sys) bjorn3 moved the `getty` tool from `userutils` repository to `base` repository to ease changes
 - (sys) bjorn3 ported `getty` tool to Linux for faster testing
 - (sys) bjorn3 did some code refactoring
+- (sys) Yoh Deadfall implemented `SO_SNDBUF` in Unix datagram socket
 
 ## Relibc Improvements
 
@@ -115,7 +128,7 @@ Wildan Mubarok implemented the support for Clang cross-compilation, which allow 
 
 ## Networking Improvements
 
-- (net) 
+- (net) Konstantin Shabanov fixed the `ping` tool not showing the website domain before IP address
 
 ## RedoxFS Improvements
 
@@ -132,8 +145,8 @@ Wildan Mubarok implemented the support for Clang cross-compilation, which allow 
 
 ## Programs
 
-- (app) Wildan Mubarok enabled i586 dynamic linking for basic applications
 - (app) Wildan Mubarok enabled cross-compilation in Lua 5.3 compatibility layer
+- (app) Wildan Mubarok updated OpenTyrian to version 2.1.20260913
 - (app) Wildan Mubarok fixed a crash in keyboard capture handling in GTK's Orbital backend
 - (app) Stephen Seo fixed the puzzle obfuscation logic of Redox's Redoku game
 
