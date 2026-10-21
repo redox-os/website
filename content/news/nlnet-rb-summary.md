@@ -45,7 +45,7 @@ A ring buffer is a circular queue backed by an array. The interface makes use of
 * Buffer pool: A contiguous block of memory, shared between the application and the scheme, from which data buffers are allocated
 * Data buffer: For a request, we currently support a single data buffer, which is a slice of the contiguous buffer pool, defined by an offset and length
 
-Since each buffer has exactly one producer and consumer, each index is only ever modified by one side. This eliminates the cost of having a shared locking mechanism.
+Since each queue has exactly one producer and consumer, each index is only ever modified by one side. This eliminates the cost of having a shared locking mechanism.
 
 
 ## The "redox-ring API"
