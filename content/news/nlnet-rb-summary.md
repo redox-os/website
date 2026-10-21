@@ -42,10 +42,11 @@ A ring buffer is a circular queue backed by an array. The interface makes use of
 * SQ: *submission queue*, where the application writes requests and the scheme reads them
 * CQ: *completion queue*, where the scheme writes responses and the application reads them
 * SQE / CQE: _submission queue entry_ / _completion queue entry_, entries in the SQ and CQ, respectively
+* Buffer pool: A contiguous block of memory, shared between the application and the scheme, from which data buffers are allocated
+* Data buffer: For a request, we currently support a single data buffer, which is a slice of the contiguous buffer pool, defined by an offset and length
 
 Since each buffer has exactly one producer and consumer, each index is only ever modified by one side. This eliminates the cost of having a shared locking mechanism.
 
-Each request points to data in a separate set of memory mapped buffers, shared between the application and the scheme.
 
 ## The "redox-ring API"
 -- Ibuki Omatsu
