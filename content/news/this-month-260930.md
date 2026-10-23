@@ -225,7 +225,10 @@ It also greatly simplified terminal code.
 
 ## Documentation Improvements
 
-- (doc) 
+- (doc) Ribbon improved the [Windowing and Graphics](https://doc.redox-os.org/book/graphics-windowing.html) page with better explanations
+- (doc) Ribbon [documented how to launch a Redox image from Redox QEMU port](https://doc.redox-os.org/book/running-vm.html#redox) (experimental)
+- (doc) Ribbon [documented more application debugging methods](https://doc.redox-os.org/book/troubleshooting.html#applications)
+- (doc) Ribbon [documented FLOSS desktop and web browser 2FA applications](https://doc.redox-os.org/book/signing-in-to-gitlab.html#2fa-apps) on GitLab sign-in page
 
 ## How To Test The Changes
 
