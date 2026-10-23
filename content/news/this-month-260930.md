@@ -55,6 +55,14 @@ Jeremy Soller and bjorn3 implemented the support for external display hot-pluggi
 
 bjorn3 also used display mirroring as the default external display handling behavior.
 
+## Significant Kernel TLB Misses Reduction
+
+4lDO2 reduced kernel TLB misses by 99.8% !! which greatly improved memory management performance.
+
+## Direct Context Switching
+
+4lDO2 implemented the "direct context switching" technique to bypass the scheduler's expensive `BTreeMap` Rust data structure access on context switching, which reduced IPC latency by 24% and improved I/O performance by 5% !
+
 ## More JIT Support!
 
 Wildan Mubarok implemented page fault handling, which fixed LLVM JIT and others.
@@ -81,13 +89,19 @@ Wildan Mubarok fixed broken HTML layout, he also added a shortcut for the browse
 
 <img src="/img/screenshot/webkitgtk3-correct-layout.jpg" class="img-responsive" alt=""/>
 
+## Better SDL2 Performance
+
+Wildan Mubarok implemented a way for the SDL2 OpenGL buffer to reuse the Orbital OpenGL buffer and skip buffer copy in OpenGL synchronization, which probably doubled performance in his non-JIT non-KVM test.
+
+Higher performance gains are expected in QEMU KVM and real hardware.
+
 ## GLVND Port
 
 Wildan Mubarok ported the [GLVND](https://gitlab.freedesktop.org/glvnd/libglvnd) library to allow some GLX programs to work in Orbital.
 
 ## Clang Support in Redox Build System
 
-Wildan Mubarok implemented the support for Clang cross-compilation, which allow better compiler optimizations and tooling.
+Wildan Mubarok implemented the support for Clang cross-compilation and fixed bugs in programs, which allow better compiler optimizations/tooling and more testing.
 
 ## i586 Dynamic Linking
 
@@ -97,13 +111,21 @@ Currently he enabled for basic applications.
 
 ## Kernel Improvements
 
+- (kernel) 4lDO2 reduced by 5% the page fault overhead from randomized writes after forking
+- (kernel) 4lDO2 fixed the `XSAVE` instruction area size calculation
+- (kernel) 4lDO2 fixed AVX detection
+- (kernel) 4lDO2 did some code simplification
+- (kernel) MJ Pooladkhay fixed a panic in SRAT iterator due to over-read past a table
+- (kernel) Wildan Mubarok enabled RISC-V boot testing on CI
 - (kernel) Aadarsh simplified NUMA code
 - (kernel) Val Lorentz fixed some Clippy warnings
 
 ## Driver Improvements
 
 - (driver) Jeremy Soller fixed a Intel HD Audio driver panic when path to DAC is not found
+- (driver) bjorn3 finished the migration of video/graphics drivers and daemons API to Linux DRM to unify code and reduce application porting effort
 - (driver) bjorn3 implemented the support for Linux DRM events
+- (driver) bjorn3 implemented a basic [network block device](https://en.wikipedia.org/wiki/Network_block_device) driver to speedup network boot in the future
 - (driver) bjorn3 fixed multi-display support in VirtIO-GPU driver
 - (driver) bjorn3 implemented a macro to simplify Intel GPU driver register access code
 
@@ -112,19 +134,24 @@ Currently he enabled for basic applications.
 - (sys) bjorn3 fixed a panic in Redox terminal scrolling when using shadow buffer
 - (sys) bjorn3 moved the `getty` tool from `userutils` repository to `base` repository to ease changes
 - (sys) bjorn3 ported `getty` tool to Linux for faster testing
-- (sys) bjorn3 did some code refactoring
+- (sys) bjorn3 did a big code simplification of the boot log daemon
+- (sys) bjorn3 did some code refactoring and cleanups
 - (sys) Yoh Deadfall implemented `SO_SNDBUF` in Unix datagram socket
 
 ## Relibc Improvements
 
 - (libc) Wildan Mubarok implemented the `getentropy` and `gethostbyname2` (currently only support `AF_INET`) functions
+- (libc) Wildan Mubarok reduced unsafe Rust in timer code
+- (libc) Wildan Mubarok fixed a double close bug on `posix_spawn` function
 - (libc) Wildan Mubarok fixed ARM64 weak symbol loading and TLS relocation
 - (libc) Wildan Mubarok fixed `dlclose` function underflow in ARM64
-- (libc) Wildan Mubarok fixed i586 TLS relocation
+- (libc) Wildan Mubarok fixed TLS relocation and `printf` long double in i586
 - (libc) Wildan Mubarok fixed a dynamic linker bug where some applications in `PATH` environment variable were being treated as executables in current directory
 - (libc) Rostyslav Toch implemented the `posix_madvise` function for Linux
+- (libc) auronandace reduced unsafe Rust code from strto* functions
 - (libc) auronandace applied more Clippy lints
 - (libc) auronandace reduced more `as` casting usage to prevent problems in code refactorings
+- (libc) auronandace documented the `strncasecmp` and `strcasecmp` functions
 
 ## Networking Improvements
 
@@ -145,14 +172,21 @@ Currently he enabled for basic applications.
 
 ## Programs
 
+- (app) Wildan Mubarok ported the [BIND9](https://www.isc.org/bind/) DNS server
 - (app) Wildan Mubarok enabled cross-compilation in Lua 5.3 compatibility layer
 - (app) Wildan Mubarok updated OpenTyrian to version 2.1.20260913
 - (app) Wildan Mubarok fixed a crash in keyboard capture handling in GTK's Orbital backend
 - (app) Stephen Seo fixed the puzzle obfuscation logic of Redox's Redoku game
 
+## Testing
+
+- (test) thesupertechie contributor added a report for HP ENVY Laptop 16 h1055cl laptop (status: Booting)
+
 ## Build System Improvements
 
+- (build) Wildan Mubarok implemented the `build.compiler` recipe data type to choose the cross-compiler (GCC or Clang) and disable LTO when needed
 - (build) Wildan Mubarok fixed the `binary` recipe rule unnecessarily building host dependencies from `source` rule
+- (build) Wildan Mubarok fixed unnecessary updates on recipe Git sources when not using default branch
 - (build) Mohammed Naser improved Cookbook error report to clearly show the failure reason when a ignored recipe build dependency is used
 
 ## Documentation Improvements
