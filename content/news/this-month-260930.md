@@ -53,15 +53,13 @@ I plan to be there, and I hope to see you there.
 
 Jeremy Soller and bjorn3 implemented the support for external display hot-plugging on Intel GPU driver for Tiger Lake generation, now external displays can be used without a system reboot.
 
-bjorn3 also used display mirroring as the default external display handling behavior.
-
 ## More Boot Fixes
 
 Jeremy Soller reduced panics on PS/2 driver to fix more boot hangs due to PS/2 errors.
 
 ## Significant Kernel TLB Misses Reduction
 
-4lDO2 reduced kernel TLB misses by 99.8% !! which greatly improved memory management performance.
+4lDO2 reduced kernel TLB misses by around 75% !! which improved copy-on-write memory management performance.
 
 ## Direct Context Switching
 
@@ -87,20 +85,19 @@ Landon Propes implemented the `getrlimit` and `setrlimit` functions to allow pro
 
 Aadarsh (aka EuclidDivisionLemma) configured Google Cloud (GCP) to make Redox boot successfully.
 
-<img src="/img/screenshot/gcp.png" class="img-responsive" alt=""/>
+<img src="/img/screenshot/gcp.png" class="img-responsive" alt="Redox running on Google Cloud"/>
 
 ## WebKitGTK3 Correct HTML Layout Rendering
 
 Wildan Mubarok fixed broken HTML layout, he also added a shortcut for the browser demo in Orbital launcher bar.
 
-<img src="/img/screenshot/webkitgtk3-correct-layout.jpg" class="img-responsive" alt=""/>
+<img src="/img/screenshot/webkitgtk3-correct-layout.jpg" class="img-responsive" alt="Correct WebKitGTK website HTML layout"/>
 
 ## Better SDL2 Performance
 
 Wildan Mubarok implemented a way for the SDL2 OpenGL buffer to reuse the Orbital OpenGL buffer and skip buffer copy in OpenGL synchronization, which probably doubled performance in his non-JIT non-KVM test.
 
 Higher performance gains are expected in QEMU KVM and real hardware.
-
 
 ## Clang Support in Redox Build System
 
@@ -142,6 +139,7 @@ It also greatly simplified terminal code.
 - (kernel) MJ Pooladkhay fixed a panic in SRAT iterator due to over-read past a table
 - (kernel) MJ Pooladkhay implemented unused contiguous physical memory transfer to the buddy memory allocator
 - (kernel) AArch Angel fixed other CPU cores not stealing work from CPU core 0 in work stealing
+- (kernel) Wildan Mubarok fixed signals not being handled inside futexes
 - (kernel) Wildan Mubarok enabled RISC-V boot testing on CI
 - (kernel) Aadarsh simplified NUMA code
 - (kernel) Val Lorentz fixed some Clippy warnings
@@ -155,6 +153,7 @@ It also greatly simplified terminal code.
 - (driver) bjorn3 implemented a basic [network block device](https://en.wikipedia.org/wiki/Network_block_device) driver to speedup network boot in the future
 - (driver) bjorn3 fixed multi-display support in VirtIO-GPU driver
 - (driver) bjorn3 implemented a macro to simplify Intel GPU driver register access code
+- (driver) bjorn3 improved graphics code readability by moving many code to separated modules
 
 ## System Improvements
 
@@ -178,8 +177,10 @@ It also greatly simplified terminal code.
 - (libc) Wildan Mubarok fixed a dynamic linker bug where some applications in `PATH` environment variable were being treated as executables in current directory
 - (libc) Wildan Mubarok fixed a incorrect `symlinkat` error code when a symbolic link exists
 - (libc) Wildan Mubarok fixed timeout reset in `setsockopt` function
+- (libc) Rostyslav Toch implemented the `readv` and `writev` functions
 - (libc) Rostyslav Toch implemented the `posix_madvise` function for Linux
-- (libc) auronandace reduced unsafe Rust code from strto* and wcsto* functions
+- (libc) auronandace implemented `ENOMEM` error handling in `vasprintf` function
+- (libc) auronandace reduced unsafe Rust code from strto\* and wcsto\* functions
 - (libc) auronandace applied more Clippy lints
 - (libc) auronandace reduced more `as` casting usage to prevent problems in code refactorings
 - (libc) auronandace documented the `strncasecmp` and `strcasecmp` functions
@@ -199,6 +200,7 @@ It also greatly simplified terminal code.
 - (pkg) Wildan Mubarok implemented more options for package analysis and partial extraction in `pkgar` CLI
 - (pkg) Wildan Mubarok implemented description in packages, initially to differentiate meta-packages from common packages
 - (pkg) Wildan Mubarok fixed a symbolic link error on package reinstallation, which fixes it and incomplete installation restart in some packages
+- (pkg) Wildan Mubarok fixed a overcount bug in package extraction plain progress (no progress bar) counter
 - (pkg) Wildan Mubarok changed the network module to use the `ureq` library and updated `ring` library version
 
 ## Programs
@@ -208,6 +210,7 @@ It also greatly simplified terminal code.
 - (app) Wildan Mubarok expanded dynamic linking in COSMIC applications and reduced compilation time by using our recipes on its `-sys` crates
 - (app) Wildan Mubarok enabled dynamic linking in SDL2_image, SDL2_ttf, and SDL2_mixer. Reducing the size of multiple packages
 - (app) Wildan Mubarok expanded SDL2_mixer format support
+- (app) Wildan Mubarok updated OpenSSH from version 9.8p1 to 10.5p1
 - (app) Wildan Mubarok updated SDL2_image from version 2.0.4 to 2.8.12
 - (app) Wildan Mubarok updated SDL2_ttf from version 2.0.15 to 2.24.0
 - (app) Wildan Mubarok updated SDL2_mixer from version 2.8.1 to 2.8.2
@@ -218,7 +221,7 @@ It also greatly simplified terminal code.
 
 ## Testing Improvements
 
-- (test) 4lDO2 implemented on `acid` test suite the support for CPU metrics such as L1-L3 cache, TLB, and op cache misses, retired instructions, unaligned fetches, etc. Depending on CPU model
+- (test) 4lDO2 implemented on `acid` test suite the support for CPU metrics such as data L2 cache hits/misses and unaligned fetches, depending on CPU model
 - (test) 4lDO2 implemented basic AMD performance counters support in `acid` test suite
 - (test) thesupertechie contributor added a report for HP ENVY Laptop 16 h1055cl laptop (status: Booting)
 
@@ -228,6 +231,7 @@ It also greatly simplified terminal code.
 - (build) Wildan Mubarok updated the "Package Files" section of Cookbook web mode to say the package type as meta-package when the section is empty
 - (build) Wildan Mubarok disabled automatic recipe source fetch on recipe rule change to `local`, to fix accidental existing source overwrite and sometimes wrong behavior by downloading pre-built packages instead of source
 - (build) Wildan Mubarok fixed the `binary` recipe rule unnecessarily building host dependencies from `source` rule
+- (build) Wildan Mubarok fixed Cookbook not installing recipe package dependencies by default
 - (build) Wildan Mubarok fixed unnecessary updates on recipe Git sources when not using default branch
 - (build) Wildan Mubarok fixed incorrect environment variable parsing in `.config` file due to invisible whitespaces
 - (build) Wildan Mubarok enabled RISC-V and i586 testing in Redoxer
