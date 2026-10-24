@@ -1,7 +1,7 @@
 +++
 title = "Ring Buffers Project Summary"
 author = "Ibuki Omatsu, Anhad Singh, Jacob Lorentzon, Ron Williams"
-date = "2026-10-17"
+date = "2026-10-24"
 +++
 
 Last year, the Redox team [received a grant](https://nlnet.nl/project/RedoxOS-ringbuffer/) to develop io_uring-like Ring Buffer support at the system task level,
@@ -127,21 +127,21 @@ With the executor, schemes that support Redox Rings can handle each I/O request 
 ## Kernel and IPC optimizations
 -- Jacob Lorentzon
 
-While it has substantially improved over the years, IPC is still quite slow on Redox, and this is important to optimize as ring buffers can only offset this overhead to a certain extent.
+While it has substantially improved over the years, IPC is still quite slow on Redox, and this is important to optimize as ring buffers can only offset this overhead to a certain extent. This has been a focus of our work to improve system performance.
 
 ### Infrastructure
 
 The `acid` test suite for Redox was expanded to include more targeted benchmarks that measure IPC latency, in particular `acid ipc_latency_simultaneous`, and also `acid heavy_forking`.
 Support was also added for repeating measurements and collecting more proper statistics (although still less feature-complete than e.g. `hyperfine`), making it easier to know whether changes in metrics are statistically significant and by how much.
 
-### Misc refactors
+### Miscellaneous refactors
 
 Various single-digit speedups were attained from kernel refactors, such as eliminating redundant locking, hashmap lookups, and by adding a lower-overhead call for IPC, similar to seL4's "reply-wait".
 
 ### Fast path switching without vector registers
 
-Another source of overhead from the flamegraphs, was found to be `XSAVE` and `XRSTOR`, a few hundred cycles combined (tested on a AMD Ryzen 9 5950X).
-These instructions save/restore vector registers, which is ~600 bytes on CPUs with AVX2 (and which only userspace uses).
+Another source of overhead, from the flamegraphs, was found to be `XSAVE` and `XRSTOR`, a few hundred cycles combined (tested on an AMD Ryzen 9 5950X).
+These instructions save/restore vector registers, which is ~600 bytes on the CPU tested, and likely similar on other CPUs with AVX2 (which only userspace uses).
 
 The optimization made here is that the kernel zeroes the vector registers _if the caller and callee entered the kernel through syscalls_, rather than saving/restoring (using `vzeroall`, `ldmxcsr` etc. as required for correctness).
 
@@ -152,28 +152,28 @@ Luckily, the generated assembly code for `relibc` was almost identical.
 
 ### Direct switching
 
-A major bottleneck during IPC is invoking the scheduler, as can be seen e.g. in flamegraph TODO.
+A major bottleneck during IPC is invoking the scheduler, as can be seen from various flamegraphs.
 The scheduler needs to access multiple data structures, primarily `BTreeMap` that takes up a large fraction of the overhead, and it also needs to acquire lots of locks, often blocking.
 
-Direct context switching was implemented in TODO, resulting in a TODO% IPC latency reduction.
+Direct context switching was implemented in [kernel MR 694](https://gitlab.redox-os.org/redox-os/kernel/-/merge_requests/694), resulting in a 15-20% IPC latency reduction.
 It separates the _current context_ (reference) into the _scheduled context_ and the _running context_, where the former is the context owning the current timeslice, and the latter is the context whose registers/memory/file table is currently active.
 When direct switching has not occurred, these always coincide.
 Consequently, a client process calling a scheme (typically using our `SYS_CALL` syscall) can completely bypass the scheduler and switch directly to the scheme, if ready, where the kernel will then prioritize returning to the _scheduled context_ the next time the scheme yields.
-This mimics the behavior of monolithic kernels, and should also be more cache-efficient etc.
+This mimics the behavior of how complex syscalls are handled in monolithic kernels, and should also be more cache-efficient, among other efficiencies.
 
 ### Huge pages
 
 The kernel previously only supported 4k pages.
 This is still the case on non-x86, and for all userspace cases, but now the kernel physmap will be mapped as 2M when possible.
-TLB usage is thus reduced by up to 512x for heavy CoW, whereas the artificially highest speedup obtained from `acid heavy_forking` was TODO.
+TLB usage can thus theoretically be reduced by up to 512x for heavy CoW, and in practice, the highest obtained L1DTLB-miss rate from `acid heavy_forking` [was -75%](https://gitlab.redox-os.org/redox-os/kernel/-/merge_requests/711).
 
 ## Future improvements
 -- Jacob Lorentzon
 
 IPC roundtrip latency has been reduced from ~5800 cycles to ~2700 cycles, but this is still high compared to fast µkernels like seL4.
 Additional optimizations could be to reduce locking, and reduce the syscall entry overhead, but primarily to simplify the IPC primitive and remove possibly unnecessary parts such as request buffers.
-While not as applicable for nonlegacy applications, automatic page-borrowing of clients' buffers (in `UserScheme`) is also a major source of overhead and a benchmark similar to `dd bs=4k if=/dev/zero of=/dev/null` is at least ~32k cycles per call.
-However, while the existing benchmarks are useful as an approximate lower bound on latency, more investigation will be required to determine the distribution of overheads for more realistic workloads, with and without with userspace ring buffers.
+While not as applicable for nonlegacy applications, automatic page-borrowing of clients' buffers (in `UserScheme`) is also a major source of overhead and in a benchmark similar to `dd bs=4k if=/dev/zero of=/dev/null`, the overhead is at least ~32k cycles per call.
+However, while the existing benchmarks are useful as an approximate lower bound on latency, more investigation will be required to determine the distribution of overheads for more realistic workloads, both with and without userspace ring buffers.
 
 [^1]: https://kernel.dk/io_uring.pdf
 [^2]: https://lwn.net/Articles/671649/
