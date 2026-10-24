@@ -121,6 +121,10 @@ bjorn3 migrated the Redox terminal from `ransid` library to `alacritty_terminal`
 
 It also greatly simplified terminal code.
 
+## Better Application Debugging
+
+Wildan Mubarok expanded the `relibc` function/system call tracing to support the `close`, `fork`, `poll`, `pipe`, and `fcntl` functions. Which greatly expanded the capacity to find more bugs causing hangs and makes it similar to `strace` tool.
+
 ## Boot Improvements
 
 - (boot) 4lDO2 updated kernel debug names in userspace bootstrapping to show `initfs`, `initnsmgr`, and `procmgr` daemon names for more clarity on debugging
