@@ -26,7 +26,7 @@ You can watch on [the Rust Foundation's YouTube channel](https://www.youtube.com
 
 [Lightning Talk "Redox OS Update" | RustConf 2026](https://www.youtube.com/watch?v=OJk75nPnZng)
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/OJk75nPnZng?si=jHXS6m-DDALNMdV7" title="Lightning Talk "Redox OS Update" | RustConf 2026" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/OJk75nPnZng?si=jHXS6m-DDALNMdV7" title="Lightning Talk &quot;Redox OS Update&quot; | RustConf 2026" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 There were lots of other great topics, so browse the full list of videos.
 A couple of highlights: Rust for GPU was a key topic this year, with 4 presentations, and there was an interesting presentation on [important considerations
@@ -65,17 +65,19 @@ Jeremy Soller reduced panics on PS/2 driver to fix more boot hangs due to PS/2 e
 
 ## Direct Context Switching
 
-4lDO2 implemented the "direct context switching" technique to bypass the scheduler's expensive `BTreeMap` Rust data structure access on context switching, which reduced IPC latency by 24% and improved I/O performance by 5% !
+4lDO2 implemented the "direct context switching" technique to bypass the scheduler and hence its expensive `BTreeMap` Rust data structure access on context switching, which reduced IPC latency by 24% and improved I/O performance by 5% when using small buffers !
 
 ## More JIT Support!
 
-Wildan Mubarok implemented page fault handling, which fixed LLVM JIT and others.
+Wildan Mubarok implemented page fault handling, which allows program crashes to be handled correctly using POSIX signals.
 
-Currently only implemented for x86.
+Shortly after being implemented, the feature was used to identify and fix LLVM JIT and others, caused by incorrect calculation in TLS initialization.
+
+The page fault handling is currently only implemented for x86-64 and i586.
 
 ## uutils 0.11.0 Upgrade
 
-Wildan Mubarok updated `uutils` from version 0.6.0/0.7.0 to 0.11.0 !!, which should fix many bugs.
+Wildan Mubarok updated `uutils` from version 0.6.0/0.7.0 to 0.11.0 !! it was possible after a TLS bug has been fixed.
 
 ## Initial `rlimit` Implementation
 
@@ -99,19 +101,22 @@ Wildan Mubarok implemented a way for the SDL2 OpenGL buffer to reuse the Orbital
 
 Higher performance gains are expected in QEMU KVM and real hardware.
 
-## GLVND Port
-
-Wildan Mubarok ported the [GLVND](https://gitlab.freedesktop.org/glvnd/libglvnd) library to allow some GLX programs to work in Orbital.
 
 ## Clang Support in Redox Build System
 
-Wildan Mubarok implemented the support for Clang cross-compilation and fixed bugs in programs, which allow better compiler optimizations/tooling and more testing.
+Wildan Mubarok implemented the support for Clang cross-compilation, which allow more strict compilation and fixing to reduce UB of many programs written in C/C++.
+
+Compilation with Clang can be enabled by writing a new option in the `.config` file:
+
+```
+export REDOXER_USE_CLANG=true
+```
 
 ## i586 Dynamic Linking
 
 Wildan Mubarok fixed the i586 dynamic linking, which greatly helps old x86-32 computers with small memory capacity and easily scale tested programs.
 
-Currently he enabled for basic applications.
+Dynamic linking for i586 programs has been enabled for all recipes but the amount of available compiled programs is still small.
 
 ## Redox Terminal Migration To `alacritty_terminal` Library
 
@@ -126,15 +131,16 @@ It also greatly simplified terminal code.
 ## Kernel Improvements
 
 - (kernel) 4lDO2 removed unnecessary AVX registers save/restore operations to reduce IPC latency by 14%
-- (kernel) 4lDO2 reduced by 5% the page fault overhead from randomized writes after forking
+- (kernel) 4lDO2 reduced by 5% the page fault overhead in a test making randomized writes while frequently forking
 - (kernel) 4lDO2 implemented a wrapper to get references of other hardware threads blocks in safe code
-- (kernel) 4lDO2 fixed many bugs in real-time sig-related `sigentry` Assembly to fix possible incorrect "disable signals" state
-- (kernel) 4lDO2 fixed the `XSAVE` instruction area size calculation, which fixed unused `FXSAVE` instruction space and reduced memory usage, which reduced cache misses and did a small performance improvement
+- (kernel) 4lDO2 fixed some bugs in real-time sig-related `sigentry` assembly and partially fixed incorrect "disable signals" state
+- (kernel) 4lDO2 fixed the `XSAVE` instruction area size calculation, which fixed unused `FXSAVE` instruction space and reduced memory usage
 - (kernel) 4lDO2 fixed AVX detection
 - (kernel) 4lDO2 did some code simplification
 - (kernel) Ibuki Omatsu reimplemented `fdtbl` using Radix trees to avoid expensive reallocations when growing a vector-based file table, which reduced latency during table growth
 - (kernel) Ibuki Omatsu fixed a `EFAULT` error on read-only payload in call/stdfscall system calls
 - (kernel) MJ Pooladkhay fixed a panic in SRAT iterator due to over-read past a table
+- (kernel) MJ Pooladkhay implemented unused contiguous physical memory transfer to the buddy memory allocator
 - (kernel) AArch Angel fixed other CPU cores not stealing work from CPU core 0 in work stealing
 - (kernel) Wildan Mubarok enabled RISC-V boot testing on CI
 - (kernel) Aadarsh simplified NUMA code
@@ -162,7 +168,7 @@ It also greatly simplified terminal code.
 
 ## Relibc Improvements
 
-- (libc) 4lDO2 added safety wrappers to strto* functions for input sanitization on integer parsing
+- (libc) 4lDO2 added safety wrappers to strto\* functions for input sanitization on integer parsing
 - (libc) Wildan Mubarok implemented the `getentropy` and `gethostbyname2` (currently only support `AF_INET`) functions
 - (libc) Wildan Mubarok reduced unsafe Rust in timer code
 - (libc) Wildan Mubarok fixed a double close bug on `posix_spawn` function
@@ -171,11 +177,13 @@ It also greatly simplified terminal code.
 - (libc) Wildan Mubarok fixed TLS relocation and `printf` long double in i586
 - (libc) Wildan Mubarok fixed a dynamic linker bug where some applications in `PATH` environment variable were being treated as executables in current directory
 - (libc) Wildan Mubarok fixed a incorrect `symlinkat` error code when a symbolic link exists
+- (libc) Wildan Mubarok fixed timeout reset in `setsockopt` function
 - (libc) Rostyslav Toch implemented the `posix_madvise` function for Linux
 - (libc) auronandace reduced unsafe Rust code from strto* and wcsto* functions
 - (libc) auronandace applied more Clippy lints
 - (libc) auronandace reduced more `as` casting usage to prevent problems in code refactorings
 - (libc) auronandace documented the `strncasecmp` and `strcasecmp` functions
+- (libc) Elora Burns fixed bugs related to POSIX regex matching
 
 ## Networking Improvements
 
@@ -191,6 +199,7 @@ It also greatly simplified terminal code.
 - (pkg) Wildan Mubarok implemented more options for package analysis and partial extraction in `pkgar` CLI
 - (pkg) Wildan Mubarok implemented description in packages, initially to differentiate meta-packages from common packages
 - (pkg) Wildan Mubarok fixed a symbolic link error on package reinstallation, which fixes it and incomplete installation restart in some packages
+- (pkg) Wildan Mubarok changed the network module to use the `ureq` library and updated `ring` library version
 
 ## Programs
 
@@ -221,6 +230,7 @@ It also greatly simplified terminal code.
 - (build) Wildan Mubarok fixed the `binary` recipe rule unnecessarily building host dependencies from `source` rule
 - (build) Wildan Mubarok fixed unnecessary updates on recipe Git sources when not using default branch
 - (build) Wildan Mubarok fixed incorrect environment variable parsing in `.config` file due to invisible whitespaces
+- (build) Wildan Mubarok enabled RISC-V and i586 testing in Redoxer
 - (build) Mohammed Naser improved Cookbook error report to clearly show the failure reason when a ignored recipe build dependency is used
 
 ## Documentation Improvements
