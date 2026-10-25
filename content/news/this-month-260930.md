@@ -111,7 +111,7 @@ Higher performance gains are expected in QEMU KVM and real hardware.
 
 ## Clang Support in Redox Build System
 
-Wildan Mubarok implemented the support for Clang cross-compilation, which allow more strict compilation and fixing to reduce UB of many programs written in C/C++.
+Wildan Mubarok implemented the support for Clang cross-compilation, which allows us to benefit from Clang's better diagnostics and detection of undefined behavior in programs written in C/C++.
 
 Compilation with Clang can be enabled by writing a new option in the `.config` file:
 
