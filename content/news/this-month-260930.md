@@ -57,7 +57,7 @@ I plan to be there, and I hope to see you there.
 
 The scheduler uses the `BTreeMap` Rust data structure to prioritize processes for context switching, which is relatively expensive. Avoiding this when possible reduced IPC latency by 24% and improved I/O performance by 5% when using small buffers.
 
-- Reduced kernel TLB misses by around 75% !! which improved copy-on-write memory management performance.
+- Reduced kernel TLB usage by mapping the physical memory mapping with 2MiB pages. This should slightly improve fork/CoW performance, and in a very synthetic benchmark, it reduced TLB misses by 75%.
 
 - Removed unnecessary AVX registers save/restore operations to reduce IPC latency by 14%.
 
@@ -66,7 +66,7 @@ The scheduler uses the `BTreeMap` Rust data structure to prioritize processes fo
 ## External Display Hot-plugging Support on Intel Tiger Lake GPUs
 
 Jeremy Soller and bjorn3 implemented the support for external display hot-plugging on Intel GPU driver for Tiger Lake generation.
-Now many Intel-based laptops and desktop (using Intel GPUs) can use external displays without a system reboot.
+Now many Intel-based laptops and desktops (using Intel GPUs) can use external displays without a system reboot, the default external display mode handling in Orbital is to expand across displays.
 
 bjorn3 also made lots of incremental progress towards better Linux DRM and GPU support, described in the "Drivers" section below.
 
@@ -74,8 +74,7 @@ bjorn3 also made lots of incremental progress towards better Linux DRM and GPU s
 
 Jeremy Soller addressed some panics on our PS/2 driver. Boot was sometimes hanging due to PS/2 errors, but this is now much improved.
 
-
-## Page Fault Handling and JIT Improvements!
+## Page Fault Handling Support and JIT Improvements!
 
 Wildan Mubarok implemented page fault handling, which allows program crashes to be handled correctly using POSIX signals.
 
@@ -134,7 +133,7 @@ It also greatly simplified terminal code.
 
 ## Better Application Debugging
 
-Wildan Mubarok expanded the `relibc` function/system call tracing to support the `close`, `fork`, `poll`, `pipe`, and `fcntl` functions. Which greatly expanded the capacity to find more bugs causing hangs and makes it similar to `strace` tool.
+Wildan Mubarok expanded the `relibc` function/system call tracing to support the `close`, `fork`, `poll`, `pipe`, and `fcntl` functions. Which greatly expanded the capacity to find more bugs causing hangs and crashes (depending on type), which makes it similar to `strace` tool.
 
 ## Boot Improvements
 
@@ -152,7 +151,7 @@ Wildan Mubarok expanded the `relibc` function/system call tracing to support the
 - (kernel) MJ Pooladkhay fixed a panic in SRAT iterator due to over-read past a table
 - (kernel) MJ Pooladkhay implemented unused contiguous physical memory transfer to the buddy memory allocator
 - (kernel) AArch Angel fixed other CPU cores not stealing work from CPU core 0 in work stealing
-- (kernel) Wildan Mubarok fixed signals not being handled inside futexes
+- (kernel) Wildan Mubarok fixed signals inside futexes not being handled
 - (kernel) Wildan Mubarok enabled RISC-V boot testing on CI
 - (kernel) Aadarsh simplified NUMA code
 - (kernel) Val Lorentz fixed some Clippy warnings
@@ -198,6 +197,10 @@ Wildan Mubarok expanded the `relibc` function/system call tracing to support the
 - (libc) auronandace reduced more `as` casting usage to prevent problems in code refactorings
 - (libc) auronandace documented the `strncasecmp` and `strcasecmp` functions
 - (libc) Elora Burns fixed bugs related to POSIX regex matching
+
+## RedoxFS Improvements
+
+- (rfs) Wildan Mubarok fixed the Linux FUSE mount test by adding a missed timeout
 
 ## Networking Improvements
 
