@@ -15,7 +15,7 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
-## Redox at RustConf
+## Redox at RustConf 2026
 
 RustConf was in Montreal this year, September 8-11.
 I gave a quick update on Redox's recent progress.
