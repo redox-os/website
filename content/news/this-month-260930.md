@@ -49,27 +49,37 @@ I plan to be there, and I hope to see you there.
 
 - Ron Williams
 
+## Significant Performance Improvements
+
+4lDO2 did the following improvements:
+
+- Implemented the "direct context switching" technique to bypass the scheduler when an application invokes a system service.
+
+The scheduler uses the `BTreeMap` Rust data structure to prioritize processes for context switching, which is relatively expensive. Avoiding this when possible reduced IPC latency by 24% and improved I/O performance by 5% when using small buffers.
+
+- Reduced kernel TLB misses by around 75% !! which improved copy-on-write memory management performance.
+
+- Removed unnecessary AVX registers save/restore operations to reduce IPC latency by 14%.
+
+- Reduced the page fault overhead by 5% in a test making randomized writes while frequently forking.
+
 ## External Display Hot-plugging Support on Intel Tiger Lake GPUs
 
-Jeremy Soller and bjorn3 implemented the support for external display hot-plugging on Intel GPU driver for Tiger Lake generation, now external displays can be used without a system reboot.
+Jeremy Soller and bjorn3 implemented the support for external display hot-plugging on Intel GPU driver for Tiger Lake generation.
+Now many Intel-based laptops and desktop (using Intel GPUs) can use external displays without a system reboot.
+
+bjorn3 also made lots of incremental progress towards better Linux DRM and GPU support, described in the "Drivers" section below.
 
 ## More Boot Fixes
 
-Jeremy Soller reduced panics on PS/2 driver to fix more boot hangs due to PS/2 errors.
+Jeremy Soller addressed some panics on our PS/2 driver. Boot was sometimes hanging due to PS/2 errors, but this is now much improved.
 
-## Significant Kernel TLB Misses Reduction
 
-4lDO2 reduced kernel TLB misses by around 75% !! which improved copy-on-write memory management performance.
-
-## Direct Context Switching
-
-4lDO2 implemented the "direct context switching" technique to bypass the scheduler and hence its expensive `BTreeMap` Rust data structure access on context switching, which reduced IPC latency by 24% and improved I/O performance by 5% when using small buffers !
-
-## More JIT Support!
+## Page Fault Handling and JIT Improvements!
 
 Wildan Mubarok implemented page fault handling, which allows program crashes to be handled correctly using POSIX signals.
 
-Shortly after being implemented, the feature was used to identify and fix LLVM JIT and others, caused by incorrect calculation in TLS initialization.
+Shortly after being implemented, the feature was used to identify and fix Just-in-Time support in LLVM and other compilers, caused by an incorrect calculation in TLS initialization.
 
 The page fault handling is currently only implemented for x86-64 and i586.
 
@@ -79,7 +89,8 @@ Wildan Mubarok updated `uutils` from version 0.6.0/0.7.0 to 0.11.0 !! it was pos
 
 ## Initial `rlimit` Implementation
 
-Landon Propes implemented the `getrlimit` and `setrlimit` functions to allow programs to use system resource limits.
+Landon Propes implemented the `getrlimit` and `setrlimit` functions to allow programs to manage system resource limits.
+There is still work to be done to make system resource limits effective, but this is the first step.
 
 ## Redox on Google Cloud!
 
@@ -89,7 +100,7 @@ Aadarsh (aka EuclidDivisionLemma) configured Google Cloud (GCP) to make Redox bo
 
 ## WebKitGTK3 Correct HTML Layout Rendering
 
-Wildan Mubarok fixed broken HTML layout, he also added a shortcut for the browser demo in Orbital launcher bar.
+Wildan Mubarok fixed broken HTML layout in WebKitGTK3. He also added a shortcut for the browser demo in the Orbital Launcher bar.
 
 <img src="/img/screenshot/webkitgtk3-correct-layout.jpg" class="img-responsive" alt="Correct WebKitGTK website HTML layout"/>
 
@@ -111,9 +122,9 @@ export REDOXER_USE_CLANG=true
 
 ## i586 Dynamic Linking
 
-Wildan Mubarok fixed the i586 dynamic linking, which greatly helps old x86-32 computers with small memory capacity and easily scale tested programs.
+Wildan Mubarok fixed the i586 dynamic linking, which greatly helps old x86-32 computers with small memory capacity to run applications which would otherwise take too much memory.
 
-Dynamic linking for i586 programs has been enabled for all recipes but the amount of available compiled programs is still small.
+Dynamic linking for i586 programs has been enabled for all recipes but the number of available compiled programs is still relatively small.
 
 ## Redox Terminal Migration To `alacritty_terminal` Library
 
@@ -131,15 +142,13 @@ Wildan Mubarok expanded the `relibc` function/system call tracing to support the
 
 ## Kernel Improvements
 
-- (kernel) 4lDO2 removed unnecessary AVX registers save/restore operations to reduce IPC latency by 14%
-- (kernel) 4lDO2 reduced by 5% the page fault overhead in a test making randomized writes while frequently forking
 - (kernel) 4lDO2 implemented a wrapper to get references of other hardware threads blocks in safe code
-- (kernel) 4lDO2 fixed some bugs in real-time sig-related `sigentry` assembly and partially fixed incorrect "disable signals" state
+- (kernel) 4lDO2 fixed some bugs in the `sigentry` assembly (part of real-time signal support) and partially fixed incorrect "disable signals" state
 - (kernel) 4lDO2 fixed the `XSAVE` instruction area size calculation, which fixed unused `FXSAVE` instruction space and reduced memory usage
 - (kernel) 4lDO2 fixed AVX detection
 - (kernel) 4lDO2 did some code simplification
 - (kernel) Ibuki Omatsu reimplemented `fdtbl` using Radix trees to avoid expensive reallocations when growing a vector-based file table, which reduced latency during table growth
-- (kernel) Ibuki Omatsu fixed a `EFAULT` error on read-only payload in call/stdfscall system calls
+- (kernel) Ibuki Omatsu fixed an `EFAULT` error on read-only payload in call/stdfscall system calls
 - (kernel) MJ Pooladkhay fixed a panic in SRAT iterator due to over-read past a table
 - (kernel) MJ Pooladkhay implemented unused contiguous physical memory transfer to the buddy memory allocator
 - (kernel) AArch Angel fixed other CPU cores not stealing work from CPU core 0 in work stealing
@@ -150,14 +159,14 @@ Wildan Mubarok expanded the `relibc` function/system call tracing to support the
 
 ## Driver Improvements
 
-- (driver) Jeremy Soller fixed a Intel HD Audio driver panic when path to DAC is not found
+- (driver) Jeremy Soller fixed an Intel HD Audio driver panic when path to DAC is not found
 - (driver) bjorn3 finished the migration of video/graphics drivers and daemons API to Linux DRM to unify code and reduce application porting effort
 - (driver) bjorn3 implemented the support for Linux DRM events
 - (driver) bjorn3 improved Linux DRM compliance
 - (driver) bjorn3 implemented a basic [network block device](https://en.wikipedia.org/wiki/Network_block_device) driver to speedup network boot in the future
 - (driver) bjorn3 fixed multi-display support in VirtIO-GPU driver
 - (driver) bjorn3 implemented a macro to simplify Intel GPU driver register access code
-- (driver) bjorn3 improved graphics code readability by moving many code to separated modules
+- (driver) bjorn3 improved graphics code readability by refactoring into separated modules
 
 ## System Improvements
 
@@ -225,7 +234,7 @@ Wildan Mubarok expanded the `relibc` function/system call tracing to support the
 
 ## Testing Improvements
 
-- (test) 4lDO2 implemented on `acid` test suite the support for CPU metrics such as data L2 cache hits/misses and unaligned fetches, depending on CPU model
+- (test) 4lDO2 implemented CPU metrics such as L2 data TLB hits/misses and unaligned fetches, for use in the `acid` test suite (depending on CPU model)
 - (test) 4lDO2 implemented basic AMD performance counters support in `acid` test suite
 - (test) thesupertechie contributor added a report for HP ENVY Laptop 16 h1055cl laptop (status: Booting)
 
