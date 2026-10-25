@@ -1,7 +1,7 @@
 +++
 title = "Ring Buffers Project Summary"
 author = "Ibuki Omatsu, Anhad Singh, Jacob Lorentzon, Ron Williams"
-date = "2026-10-24"
+date = "2026-10-25"
 +++
 
 Last year, the Redox team [received a grant](https://nlnet.nl/project/RedoxOS-ringbuffer/) to develop io_uring-like Ring Buffer support at the system task level,
