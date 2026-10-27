@@ -21,7 +21,7 @@ an `io_uring` and `liburing`-like API for applications was completed and demonst
 There was also substantial work done on support crates, including an async executor for drivers.
 
 And there was some very exciting work on various performance improvements,
-to allow much faster switching between tasks.
+to allow much faster switching between applications and their system services.
 But I will let the team tell you all the technical details.
 
 -- Ron Williams
