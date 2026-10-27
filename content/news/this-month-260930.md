@@ -57,7 +57,7 @@ I plan to be there, and I hope to see you there.
 
 The scheduler uses the `BTreeMap` Rust data structure to prioritize processes for context switching, which is relatively expensive. Avoiding this when possible reduced IPC latency by 24% and improved I/O performance by 5% when using small buffers.
 
-- Reduced kernel TLB usage by mapping the physical memory mapping with 2MiB pages. This should slightly improve fork/CoW performance, and in a very synthetic benchmark, it reduced TLB misses by 75%.
+- Reduced kernel TLB usage by mapping the virtual-to-physical address translation map with 2MiB pages. This should slightly improve fork/CoW performance, and in a very synthetic benchmark, it reduced TLB misses by 75%.
 
 - Removed unnecessary AVX registers save/restore operations to reduce IPC latency by 14%.
 
