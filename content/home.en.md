@@ -41,22 +41,23 @@ url = "home"
       <div class="columns is-flex-direction-row-reverse">
         <div class="column hero-center">
           <p class="title is-size-3 mt-0">
-            Stability and Security
+            Security and Reliability
           </p>
           <div class="subtitle mt-2">
             <ul class="laundry-list features mb-0">
               <li><a href="https://doc.redox-os.org/book/microkernels.html">Microkernel</a> design</li>
-              <li><a href="https://doc.redox-os.org/book/drivers.html">Drivers</a> run in userspace</li>
-              <li>OS Services provided via <a href="https://doc.redox-os.org/book/schemes-resources.html">Schemes</a>
-              </li>
-              <li><a href="/faq/#rust-benefits">Rust-written</a> <a
-                  href="https://gitlab.redox-os.org/redox-os/kernel">kernel</a> and <a
-                  href="https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers">drivers</a></li>
-              <li><a href="/faq/#how-redox-was-influenced-by-other-systems">Inspired by Plan 9, Minix, seL4, BSD and
-                  Linux</a></li>
               <li>Much smaller <a href="https://en.wikipedia.org/wiki/Attack_surface" target="_blank">attack
                   surface</a>
-                compared to Linux</li>
+                compared to a monolithic kernel</li>
+              <li><a href="https://doc.redox-os.org/book/drivers.html">Drivers</a> run in memory-protected userspace</li>
+              <li><a href="https://en.wikipedia.org/wiki/Capability-based_security">Capability-based security</a> as a core system feature</li>
+              <li><a href="/faq/#rust-benefits">Written-in-Rust</a> <a
+                  href="https://gitlab.redox-os.org/redox-os/kernel">kernel</a> and <a
+                  href="https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers">drivers</a></li>
+                  <li>OS Services provided via <a href="https://doc.redox-os.org/book/schemes-resources.html">Schemes</a>
+              </li>
+              <li><a href="/faq/#how-redox-was-influenced-by-other-systems">Inspired by Plan 9, Minix, seL4, BSD and
+                  Linux</a></li>
               <li>See our <a href="https://doc.redox-os.org/book/security.html">security features</a></li>
             </ul>
           </div>
@@ -68,30 +69,30 @@ url = "home"
     </div>
   </div>
 
-  <div class="hero">
+ <div class="hero">
     <div class="hero-body">
       <div class="columns">
         <div class="column hero-center">
           <p class="title is-size-3 mt-0">
-            Performance
+            Goals
           </p>
           <div class="subtitle mt-2">
             <ul class="laundry-list features mb-0">
-              <li>Fast I/O performance</a></li>
-              <li>Fast system boot</a></li>
-              <li>Desktop variant using less than 512 MB of RAM</li>
-              <li>The <a href="https://gitlab.redox-os.org/redox-os/redox/-/blob/master/config/minimal.toml">minimal image</a> occupies less than 50 MB of storage space</li>
-              <li>Easy customization to save space, using a TOML-format configuration file</li>
+              <li>A safe, reliable operating system for the next generation of the Internet</li>
+              <li>Free forever - <a href="https://en.wikipedia.org/wiki/MIT_License">MIT licensed</a>, community developed</li>
+              <li>System API provided by a library - <b>relibc</b> - allowing system evolution and other APIs in future</li>
+              <li>Substantial <a href="https://en.wikipedia.org/wiki/POSIX">POSIX compliance</a> to ensure easy porting of programs <a href="https://sortix.org/os-test/#results">(check our current score)</a></li>
+              <li>Clear and modular architecture - Easy to customize, easy to extend, easy to implement new concepts</li>
             </ul>
           </div>
         </div>
-        <div class="column hero-image" title="Redox runs on old Panasonic Toughbook hardware">
-          <img src="/img/home/panasonic-toughbook-cf18-opt.png" alt="" height="480" loading="lazy">
+        <div class="column hero-image" title="Cosmic Store for Redox">
+          <img src="/img/screenshot/cosmic-store.png" alt="" height="480" loading="lazy">
         </div>
       </div>
     </div>
   </div>
-
+  
   <div class="hero">
     <div class="hero-body">
       <div class="columns is-flex-direction-row-reverse">
@@ -101,11 +102,10 @@ url = "home"
           </p>
           <div class="subtitle mt-2">
             <ul class="laundry-list features mb-0">
-              <li>Intel/AMD (32 and 64 bits), ARM (64-bit) and RISC-V CPU support</li>
-              <li>Good <a href="/faq/#which-virtual-machines-does-redox-have-integration-with">virtualization
-                  support</a></li>
-              <li>Common <a href="/faq/#which-devices-does-redox-support">hardware support</a></li>
+              <li>Intel/AMD (32- and 64-bit), ARM (64-bit) and RISC-V (64-bit) CPU support</li>
+              <li>Support for <a href="/faq/#which-devices-does-redox-support">many common systems</a></li>
               <li>Support for PS/2 and USB keyboards, mouse and touchpads</li>
+              <li>Runs in your <a href="/faq/#which-virtual-machines-does-redox-have-integration-with">favorite virtual machine</a></li>
               <li><a href="https://doc.redox-os.org/book/redoxfs.html">ZFS-Inspired</a> file system</li>
               <li>Boot from NVMe, SATA, IDE, and USB</li>
               <li>Boot with <a href="https://doc.redox-os.org/book/installing.html">full disk encryption</a></li>
@@ -121,7 +121,7 @@ url = "home"
       </div>
     </div>
   </div>
-
+  
   <div class="hero">
     <div class="hero-body">
       <div class="columns">
