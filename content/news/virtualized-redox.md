@@ -49,7 +49,7 @@ Under the hood, the driver keeps its own cache of inodes and directory entries, 
 
 ### Booting on Cloud Hypervisor
 
-Getting Redox to a working shell on Cloud Hypervisor was mostly a matter of finding every place where it assumed it was running on a PC, as well as a few other gotchas:
+Getting Redox to a working shell on Cloud Hypervisor was mostly a matter of finding every place where it assumed it was running natively on a PC, as well as a few other gotchas:
 
 - The bootloader failed to leave UEFI because it passed a stale memory-map key to `ExitBootServices` ([bootloader!61](https://gitlab.redox-os.org/redox-os/bootloader/-/merge_requests/61)).
 - `virtio-blk` was matched as a [transitional](https://docs.oasis-open.org/virtio/virtio/v1.2/csd01/virtio-v1.2-csd01.html#x1-60001) virtio device, while Cloud Hypervisor only offers modern (non-transitional) ones, so the root disk never showed up ([base!422](https://gitlab.redox-os.org/redox-os/base/-/merge_requests/422)).
