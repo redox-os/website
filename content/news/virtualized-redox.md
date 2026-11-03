@@ -139,8 +139,7 @@ A minimal image and Virtio-FS fit together nicely, because they split a system i
 
 The image holds the kernel, the drivers and the service, and nothing writes to it. Every instance boots from exactly the same bytes, an upgrade becomes just booting a new image, and a rollback is booting the old one. Redox can already run a live image entirely from memory, and the system could eventually live in [InitFS](https://doc.redox-os.org/book/boot-process.html#ramdisk-init), the in-memory filesystem Redox boots from, with no RedoxFS image at all.
 
-Everything that has to outlive the VM, such as databases, uploads and logs, lives on the host and reaches the guest through Virtio-FS. Each share is just a scheme, so the service only gets the shares it needs, and its configuration can come in as a [read-only share](). Throw the VM away, boot a new image, point it at the same shares, and the data is still there.
-<!-- link to book for readonly virtio-fs shares -->
+Everything that has to outlive the VM, such as databases, uploads and logs, lives on the host and reaches the guest through Virtio-FS. Each share is just a scheme, so the service only gets the shares it needs, and its configuration can come in as a [read-only share](https://doc.redox-os.org/book/virtio-fs.html#read-only-shares). Throw the VM away, boot a new image, point it at the same shares, and the data is still there.
 
 The only catch is that Virtio-FS needs the `virtiofsd` daemon running on the host, next to the hypervisor. It's the same mechanism [Kata Containers](https://katacontainers.io/) uses to give its VMs their files. On machines you run yourself (a server, an edge box, a bare-metal cloud instance, or a cloud VM with nested virtualization), setting it up is easy. Regular public cloud VMs and Firecracker don't offer Virtio-FS, so there the persistent part goes on an ordinary attached disk instead, which already works (Redox [boots on Google Cloud](/news/this-month-260930/#redox-on-google-cloud), for example).
 
@@ -174,11 +173,9 @@ And what would tie both directions together? A Redox guest booting on a Redox ho
 
 ## Try it and get involved
 
-See [how to run Redox on Cloud Hypervisor](<>).
-<!-- TODO: link to book once published -->
+See [how to run Redox on Cloud Hypervisor](https://doc.redox-os.org/book/cloud-hypervisor.html).
 
-To share a directory from your host with a Redox VM over Virtio-FS, follow [this guide](<>).
-<!-- TODO: link to book once published -->
+To share a directory from your host with a Redox VM over Virtio-FS, follow [this guide](https://doc.redox-os.org/book/virtio-fs.html).
 
 If you want to help, or just follow along, join us on [Matrix](https://matrix.to/#/#redox-join:matrix.org) and take a look at the [issue tracker](https://gitlab.redox-os.org/redox-os/redox/-/issues).
 
