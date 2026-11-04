@@ -15,27 +15,98 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## Golang On Redox!
+
+Wildan Mubarok ported the official Go programming language compiler after months of relibc improvements and system fixes.
+
+<img src="/img/screenshot/file-name.type" class="img-responsive" alt=""/>
+
+## Cloud Hypervisor On Redox!
+
+MJ Pooladkhay finished the port of Cloud Hypervisor after some fixes and added integration to Redox build system, which makes testing more rich by using a modern virtualization environment used in production beyond development (QEMU is mostly used on development).
+
+Read [this]() page to learn how to use it.
+
 ## WebKitGTK3 Video Support
 
 Wildan Mubarok fixed the missing codecs in GStreamer for video playback.
 
 <img src="/img/screenshot/file-name.type" class="img-responsive" alt=""/>
 
+## GIMP On Redox!
+
+Wildan Mubarok ported GIMP after some months of work.
+
+<img src="/img/screenshot/file-name.type" class="img-responsive" alt=""/>
+
+## Lazygit on Redox!
+
+Wildan Mubarok ported Lazygit after the Golang port fix, which is the first tool written in Go to work on Redox.
+
+<img src="/img/screenshot/file-name.type" class="img-responsive" alt=""/>
+
+## Servo 0.7 Update
+
+Wildan Mubarok updated our Servo fork to version 0.7 after months of work to fix regressions and new bugs.
+
+<img src="/img/screenshot/file-name.type" class="img-responsive" alt=""/>
+
+## Fixed RISC-V Dynamic Linking
+
+lbecher fixed RISC-V dynamic linking, which is the last CPU architecture using static linking in our build system.
+
+It will allow our application testing in RISC-V to scale.
+
+## Initial Rootless Package Installation
+
+Wildan Mubarok finished the first part of rootless package installation code, which create symbolic links of system-wide directories to user equivalent directories.
+
+## virtiofs On Redox!
+
+MJ Pooladkhay finished the virtiofs integration in Redox build system to speedup and ease testing of changes, it allow any Linux to be shared to the Redox QEMU or Cloud Hypervisor VM.
+
+For example, the `make qemu share=redox` command share the Redox build system directory on Linux to Redox.
+
+Read [this]() page to learn how to use it.
+
+## Simplified AI Policy
+
+
+
+## Ring Buffers Project Summary
+
+Anhad Singh, Ibuki Omatsu, 4lDO2 and Ron Williams wrote a technical report of the conclusion of the Redox Ring Buffers project.
+
 ## Kernel Improvements
 
-- (kernel) 
+- (kernel) Wildan Mubarok fixed a CPU context-wide deadlock in futex code
+- (kernel) Wildan Mubarok fixed thread lock ordering in futex code
+- (kernel) 4lDO2 did a code cleanup
+- (kernel) 4lDO2 fixed many code warnings
+- (kernel) bjorn3 fixed some code warnings
+- (kernel) Aadarsh fixed some code warnings
+- (kernel) Aadarsh did a cleanup in NUMA code
+- (kernel) Val Lorentz fixed some code warnings
 
 ## Driver Improvements
 
-- (driver) 
+- (driver) bjorn3 did some code cleanup
 
 ## System Improvements
 
-- (sys) 
+- (sys) bjorn3 moved the Unix domain socket code from the `ipcd` daemon to a new daemon called` udsd` because this code was not related to Redox IPC, simplifying the system
+- (sys) Ibuki Omatsu replaced/unified the `fstat`, `unlinkat`, `flink`, and `frename` functions with `std_fs_call`
+- (sys) Ibuki Omatsu replaced `dup2` with `FileTableVerb` type
+- (sys) Wildan Mubarok fixed a panic in `getty` when writing to TTY
 
 ## Relibc Improvements
 
-- (libc) 
+- (libc) Wildan Mubarok implemented EPOLLHUP and EPOLLER
+- (libc) Wildan Mubarok fixed `EINTR` error handling behavior in futex and kill
+- (libc) Wildan Mubarok reduced unsafe Rust code in poll, epoll, utimensat, futimens, nanosleep, fstat, fstatvfs, and inet_aton functions
+- (libc) auronandace implemented `__fseterr` from Gnulib
+- (libc) auronandace reduced more `as` casting usage to prevent problems in code refactorings
+- (libc) auronandace enabled some Clippy lints
 
 ## Networking Improvements
 
@@ -47,7 +118,8 @@ Wildan Mubarok fixed the missing codecs in GStreamer for video playback.
 
 ## Programs
 
-- (app) 
+- (app) Wildan Mubarok enabled FFMPEG and AAC codec support in GStreamer
+- (app) Wildan Mubarok enabled multi-threading on XZ
 
 ## Build System Improvements
 
