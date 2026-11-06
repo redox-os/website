@@ -15,6 +15,10 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
+## CPU Affinity Support
+
+Aadarsh implemented CPU affinity support on scheduler, improving efficiency.
+
 ## Golang On Redox!
 
 Wildan Mubarok ported the official Go programming language compiler after months of relibc improvements and system fixes.
@@ -79,11 +83,13 @@ Anhad Singh, Ibuki Omatsu, 4lDO2 and Ron Williams wrote a [technical report](htt
 
 - (kernel) Wildan Mubarok fixed a CPU context-wide deadlock in futex code
 - (kernel) Wildan Mubarok fixed thread lock ordering in futex code
+- (kernel) Aadarsh fixed incorrect APIC ID reading
+- (kernel) Aadarsh fixed more NUMA bugs
+- (kernel) Aadarsh fixed some code warnings
+- (kernel) Aadarsh did some refactoring and cleanup in NUMA code
 - (kernel) 4lDO2 did a code cleanup
 - (kernel) 4lDO2 fixed many code warnings
 - (kernel) bjorn3 fixed some code warnings
-- (kernel) Aadarsh fixed some code warnings
-- (kernel) Aadarsh did a cleanup in NUMA code
 - (kernel) Val Lorentz fixed some code warnings
 
 ## Driver Improvements
@@ -100,17 +106,21 @@ Anhad Singh, Ibuki Omatsu, 4lDO2 and Ron Williams wrote a [technical report](htt
 
 ## Relibc Improvements
 
-- (libc) Wildan Mubarok implemented EPOLLHUP and EPOLLER
+- (libc) Wildan Mubarok implemented `dladdr` and `dl_iterate_phdr` functions
+- (libc) Wildan Mubarok implemented POLLHUP, POLLERR, EPOLLHUP, and EPOLLER event codes
 - (libc) Wildan Mubarok fixed `EINTR` error handling behavior in futex and kill
-- (libc) Wildan Mubarok fixed `sigaltstack` stack information on i586
+- (libc) Wildan Mubarok fixed `sigaltstack` stack information, `SSIZE_MAX` type, and `stpcpy` test on i586
 - (libc) Wildan Mubarok fixed the `dl_phdr_info::dlpi_tls_data` type
+- (libc) Wildan Mubarok fixed `limits.h` constant suffixes
 - (libc) Wildan Mubarok fixed `futimens` test
 - (libc) Wildan Mubarok reduced unsafe Rust code in poll, epoll, utimensat, futimens, nanosleep, fstat, fstatvfs, and inet_aton functions
 - (libc) Niel D fixed `mkdirat` function directory permission handling
+- (libc) Elora Burns did more POSIX regex fixes
 - (libc) auronandace implemented `__fseterr` from Gnulib
 - (libc) auronandace fixed a typo in `POSIX_MADV_DONTNEED` constant
 - (libc) auronandace reduced more `as` casting usage to prevent problems in code refactorings
 - (libc) auronandace enabled some Clippy lints
+- (libc) Val Lorentz fixed some Clippy warnings
 
 ## Networking Improvements
 
@@ -120,15 +130,20 @@ Anhad Singh, Ibuki Omatsu, 4lDO2 and Ron Williams wrote a [technical report](htt
 
 - (rfs) 
 
+## Packaging Improvements
+
+= (pkg) Wildan Mubarok greatly reduced compressed packaged size when ThinLTO is used
+
 ## Programs
 
 - (app) Wildan Mubarok enabled FFMPEG and AAC codec support in GStreamer
 - (app) Wildan Mubarok enabled multi-threading on XZ
 - (app) Wildan Mubarok updated Git version from 2.13.1 to 2.56.0
+- (app) auronandace updated rsync from version 3.4.1 to 3.5.1
 
 ## Build System Improvements
 
-- (build) 
+- (build) Wildan Mubarok fixed Redox toolchain fetch checksum mismatches
 
 ## Documentation Improvements
 
