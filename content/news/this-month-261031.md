@@ -19,13 +19,13 @@ If you would like to support Redox, please consider donating or buying some merc
 
 Wildan Mubarok ported the official Go programming language compiler after months of relibc improvements and system fixes.
 
-<img src="/img/screenshot/file-name.type" class="img-responsive" alt=""/>
+<img src="/img/screenshot/go-hello-redox.png" class="img-responsive" alt=""/>
 
 ## Cloud Hypervisor On Redox!
 
 MJ Pooladkhay finished the port of Cloud Hypervisor after some fixes and added integration to Redox build system, which makes testing more rich by using a modern virtualization environment used in production beyond development (QEMU is mostly used on development).
 
-Read [this]() page to learn how to use it.
+Read [this](https://doc.redox-os.org/book/cloud-hypervisor.html) page to learn how to use it.
 
 ## WebKitGTK3 Video Support
 
@@ -37,19 +37,17 @@ Wildan Mubarok fixed the missing codecs in GStreamer for video playback.
 
 Wildan Mubarok ported GIMP after some months of work.
 
-<img src="/img/screenshot/file-name.type" class="img-responsive" alt=""/>
+<img src="/img/screenshot/gimp.png" class="img-responsive" alt=""/>
 
 ## Lazygit on Redox!
 
 Wildan Mubarok ported Lazygit after the Golang port fix, which is the first tool written in Go to work on Redox.
 
-<img src="/img/screenshot/file-name.type" class="img-responsive" alt=""/>
-
 ## Servo 0.7 Update
 
 Wildan Mubarok updated our Servo fork to version 0.7 after months of work to fix regressions and new bugs.
 
-<img src="/img/screenshot/file-name.type" class="img-responsive" alt=""/>
+<img src="/img/screenshot/servo-0.7.0.png" class="img-responsive" alt=""/>
 
 ## Fixed RISC-V Dynamic Linking
 
@@ -59,7 +57,7 @@ It will allow our application testing in RISC-V to scale.
 
 ## Initial Rootless Package Installation
 
-Wildan Mubarok finished the first part of rootless package installation code, which create symbolic links of system-wide directories to user equivalent directories.
+Wildan Mubarok finished the first part of rootless package installation code, which allow the creation of system-wide paths mappings to user equivalent paths.
 
 ## virtiofs On Redox!
 
@@ -67,7 +65,7 @@ MJ Pooladkhay finished the virtiofs integration in Redox build system to speedup
 
 For example, the `make qemu share=redox` command share the Redox build system directory on Linux to Redox.
 
-Read [this]() page to learn how to use it.
+Read [this](https://doc.redox-os.org/book/virtio-fs.html) page to learn how to use it.
 
 ## Simplified AI Policy
 
@@ -75,7 +73,7 @@ Read [this]() page to learn how to use it.
 
 ## Ring Buffers Project Summary
 
-Anhad Singh, Ibuki Omatsu, 4lDO2 and Ron Williams wrote a technical report of the conclusion of the Redox Ring Buffers project.
+Anhad Singh, Ibuki Omatsu, 4lDO2 and Ron Williams wrote a [technical report](https://www.redox-os.org/news/nlnet-rb-summary/) of the conclusion of the Redox Ring Buffers project.
 
 ## Kernel Improvements
 
@@ -95,6 +93,7 @@ Anhad Singh, Ibuki Omatsu, 4lDO2 and Ron Williams wrote a technical report of th
 ## System Improvements
 
 - (sys) bjorn3 moved the Unix domain socket code from the `ipcd` daemon to a new daemon called` udsd` because this code was not related to Redox IPC, simplifying the system
+- (sys) bjorn3 did some code deduplication
 - (sys) Ibuki Omatsu replaced/unified the `fstat`, `unlinkat`, `flink`, and `frename` functions with `std_fs_call`
 - (sys) Ibuki Omatsu replaced `dup2` with `FileTableVerb` type
 - (sys) Wildan Mubarok fixed a panic in `getty` when writing to TTY
@@ -103,8 +102,13 @@ Anhad Singh, Ibuki Omatsu, 4lDO2 and Ron Williams wrote a technical report of th
 
 - (libc) Wildan Mubarok implemented EPOLLHUP and EPOLLER
 - (libc) Wildan Mubarok fixed `EINTR` error handling behavior in futex and kill
+- (libc) Wildan Mubarok fixed `sigaltstack` stack information on i586
+- (libc) Wildan Mubarok fixed the `dl_phdr_info::dlpi_tls_data` type
+- (libc) Wildan Mubarok fixed `futimens` test
 - (libc) Wildan Mubarok reduced unsafe Rust code in poll, epoll, utimensat, futimens, nanosleep, fstat, fstatvfs, and inet_aton functions
+- (libc) Niel D fixed `mkdirat` function directory permission handling
 - (libc) auronandace implemented `__fseterr` from Gnulib
+- (libc) auronandace fixed a typo in `POSIX_MADV_DONTNEED` constant
 - (libc) auronandace reduced more `as` casting usage to prevent problems in code refactorings
 - (libc) auronandace enabled some Clippy lints
 
@@ -120,6 +124,7 @@ Anhad Singh, Ibuki Omatsu, 4lDO2 and Ron Williams wrote a technical report of th
 
 - (app) Wildan Mubarok enabled FFMPEG and AAC codec support in GStreamer
 - (app) Wildan Mubarok enabled multi-threading on XZ
+- (app) Wildan Mubarok updated Git version from 2.13.1 to 2.56.0
 
 ## Build System Improvements
 
