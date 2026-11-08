@@ -1,7 +1,7 @@
 +++
 title = "Virtualized Redox: from Virtio-FS to Cloud Hypervisor, and beyond"
 author = "MJ Pooladkhay"
-date = "2026-11-01"
+date = "2026-11-08"
 +++
 
 Hello, Reader!
