@@ -39,6 +39,8 @@ Read [this](https://doc.redox-os.org/book/cloud-hypervisor.html) page to learn h
 
 Wildan Mubarok fixed the missing codecs in GStreamer for video playback.
 
+TODO: add images
+
 <img src="/img/screenshot/file-name.type" class="img-responsive" alt=""/>
 
 ## GIMP On Redox!
