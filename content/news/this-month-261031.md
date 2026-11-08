@@ -19,11 +19,15 @@ If you would like to support Redox, please consider donating or buying some merc
 
 Aadarsh implemented CPU affinity support on scheduler, improving efficiency.
 
+## First Real Hardware NUMA Test and NUMA Support Confirmation
+
+Aadarsh did the first real hardware NUMA test in a Dell Poweredge R420 server, which confirms that our NUMA support is complete enough to work.
+
 ## Golang On Redox!
 
 Wildan Mubarok ported the official Go programming language compiler after months of relibc improvements and system fixes.
 
-<img src="/img/screenshot/go-hello-redox.png" class="img-responsive" alt=""/>
+<img src="/img/screenshot/go-hello-redox.png" class="img-responsive" alt="Golang Hello World program running on Redox"/>
 
 ## Cloud Hypervisor On Redox!
 
@@ -41,7 +45,7 @@ Wildan Mubarok fixed the missing codecs in GStreamer for video playback.
 
 Wildan Mubarok ported GIMP after some months of work.
 
-<img src="/img/screenshot/gimp.png" class="img-responsive" alt=""/>
+<img src="/img/screenshot/gimp.png" class="img-responsive" alt="GIMP running on Redox"/>
 
 ## Lazygit on Redox!
 
@@ -51,7 +55,7 @@ Wildan Mubarok ported Lazygit after the Golang port fix, which is the first tool
 
 Wildan Mubarok updated our Servo fork to version 0.7 after months of work to fix regressions and new bugs.
 
-<img src="/img/screenshot/servo-0.7.0.png" class="img-responsive" alt=""/>
+<img src="/img/screenshot/servo-0.7.0.png" class="img-responsive" alt="Servo 0.7.0 running on Redox"/>
 
 ## Fixed RISC-V Dynamic Linking
 
@@ -71,6 +75,26 @@ For example, the `make qemu share=redox` command share the Redox build system di
 
 Read [this](https://doc.redox-os.org/book/virtio-fs.html) page to learn how to use it.
 
+## NUMA Information Reporting
+
+Aadarsh implemented NUMA hardware information reporting, exposed in `/scheme/sys/numa` resource.
+
+```
+NUMA nodes: 4
+Node 0:
+	CPUs: 0 1 2 3 4 5 6 7 
+	Memory: 8.00 GiB
+Node 1:
+	CPUs: 8 9 10 11 12 13 14 15 
+	Memory: 4.00 GiB
+Node 2:
+	CPUs: 
+	Memory: 8.00 GiB
+Node 3:
+	CPUs: 
+	Memory: 12.00 GiB
+```
+
 ## Simplified AI Policy
 
 Jeremy Soller simplified the AI policy, now it is:
@@ -80,6 +104,10 @@ Jeremy Soller simplified the AI policy, now it is:
 ## Ring Buffers Project Summary
 
 Anhad Singh, Ibuki Omatsu, 4lDO2 and Ron Williams wrote a [technical report](https://www.redox-os.org/news/nlnet-rb-summary/) of the conclusion of the Redox Ring Buffers project.
+
+## Boot Improvements
+
+- (boot) MJ Pooladkhay fixed the UEFI `ExitBootServices` MemoryMap key handling
 
 ## Kernel Improvements
 
@@ -92,6 +120,7 @@ Anhad Singh, Ibuki Omatsu, 4lDO2 and Ron Williams wrote a [technical report](htt
 - (kernel) Aadarsh fixed more NUMA bugs
 - (kernel) Aadarsh fixed some code warnings
 - (kernel) Aadarsh did some refactoring and cleanup in NUMA code
+- (kernel) Radek Pietruszewski implemented RISC-V CPU information reporting
 - (kernel) bjorn3 fixed some code warnings
 - (kernel) Val Lorentz fixed some code warnings
 
@@ -108,22 +137,27 @@ Anhad Singh, Ibuki Omatsu, 4lDO2 and Ron Williams wrote a [technical report](htt
 - (sys) bjorn3 moved the Unix domain socket code from the `ipcd` daemon to a new daemon called` udsd` because this code was not related to Redox IPC, simplifying the system
 - (sys) bjorn3 did some code deduplication
 - (sys) Ibuki Omatsu replaced/unified the `fstat`, `unlinkat`, `flink`, and `frename` functions with `std_fs_call`
+- (sys) Ibuki Omatsu moved the `F_SETFD` and `F_GETFD` fcntl flags from `redox_syscall` to `libredox`
 - (sys) Ibuki Omatsu replaced `dup2` with `FileTableVerb` type
-- (sys) Wildan Mubarok fixed a panic in `getty` when writing to TTY
+- (sys) Wildan Mubarok fixed a TTY write panic in `getty` when a CLI application hangs
 
 ## Relibc Improvements
 
 - (libc) Wildan Mubarok implemented `dladdr` and `dl_iterate_phdr` functions
 - (libc) Wildan Mubarok implemented POLLHUP, POLLERR, EPOLLHUP, and EPOLLER event codes
+- (libc) Wildan Mubarok added a initial `link.h` function group implementation
+- (libc) Wildan Mubarok added initial locale support: implemented decimal locale support in `strtod` function, implemented `setlocate` function and `LOCPATH`
 - (libc) Wildan Mubarok fixed TLS relocation alignment in LTO compilation
 - (libc) Wildan Mubarok fixed `EINTR` error handling behavior in futex and kill
 - (libc) Wildan Mubarok fixed the `scanf` function parsing invalid `%d`
 - (libc) Wildan Mubarok fixed `sigaltstack` stack information, `SSIZE_MAX` type, and `stpcpy` test on i586
 - (libc) Wildan Mubarok fixed the `dl_phdr_info::dlpi_tls_data` type
+- (libc) Wildan Mubarok fixed a `float_t` redefinition error when the same header is used in multiple places
 - (libc) Wildan Mubarok fixed `limits.h` constant suffixes
 - (libc) Wildan Mubarok fixed the `futimens` function test
 - (libc) Wildan Mubarok fixed false-positives when running a single test, due to wrong paths in expected output
-- (libc) Wildan Mubarok moved most of unsafe Rust code of poll, epoll, utimensat, futimens, nanosleep, fstat, fstatvfs, and inet_aton functions to leaf functions
+- (libc) Wildan Mubarok implemented input sanitization in `inet_aton` function
+- (libc) Wildan Mubarok moved most of unsafe Rust code of `poll`, `epoll`, `utimensat`, `futimens`, `nanosleep`, `fstat`, `fstatvfs`, and `inet_aton` functions to leaf functions
 - (libc) Niel D fixed `mkdirat` function directory permission handling
 - (libc) Elora Burns did more POSIX regex fixes, which fixed more tests
 - (libc) auronandace implemented `__fseterr` from Gnulib
@@ -134,13 +168,9 @@ Anhad Singh, Ibuki Omatsu, 4lDO2 and Ron Williams wrote a [technical report](htt
 - (libc) Konstantin Shabanov fixed and added a `getsockopt` test
 - (libc) Val Lorentz fixed some Clippy warnings
 
-## Networking Improvements
-
-- (net) 
-
 ## RedoxFS Improvements
 
-- (rfs) 
+- (rfs) Wildan Mubarok fixed bug in `range-tree` library that caused a underflow in `fmap` implementation
 
 ## Packaging Improvements
 
@@ -162,16 +192,16 @@ Anhad Singh, Ibuki Omatsu, 4lDO2 and Ron Williams wrote a [technical report](htt
 
 ## Documentation Improvements
 
-- (doc) Wildan Mubarok documented [how to do RedoxFS partition manipulation from Linux]
-- (doc) Wildan Mubarok documented [Clang support]
-- (doc) Wildan Mubarok improved the [self-hosted development] documentation
-- (doc) Radek Pietruszewski documented MacOS QEMU instructions
+- (doc) Wildan Mubarok documented [how to do RedoxFS partition manipulation from Linux in dual-boot installation](https://doc.redox-os.org/book/redoxfs.html#working-with-linux-partition)
+- (doc) Wildan Mubarok documented [Clang support](https://doc.redox-os.org/book/advanced-build.html#prefix-clang)
+- (doc) Wildan Mubarok improved the [self-hosted development](https://doc.redox-os.org/book/self-hosted.html) documentation
+- (doc) Radek Pietruszewski documented [MacOS QEMU instructions](https://doc.redox-os.org/book/running-vm.html#macos)
 - (doc) Radek Pietruszewski documented NixOS QEMU instructions
 - (doc) Radek Pietruszewski recommended the `livedisk` image instead of `harddrive` image to fix ARM64 and RISC-V boot in QEMU, due to lack of MSI-X support on them
 - (doc) Ribbon documented the driver graphics API migration to Linux DRM API
-- (doc) Ribbon added a [introduction to `relibc` function tracing]() and updated the kernel system call tracing to also mention userspace tracing
+- (doc) Ribbon added a [introduction to `relibc` function tracing](https://doc.redox-os.org/book/syscall-debug.html#relibc) and updated the kernel system call tracing to also mention userspace tracing
 - (doc) Ribbon documented that Orbital hangs don't stop the mouse cursor when VirtIO-GPU is used, because the cursor is processed on host
-- (doc) Ribbon documented the [Redox build system and Redoxer purposes]() on Developer FAQ
+- (doc) Ribbon documented the [Redox build system and Redoxer purposes](https://doc.redox-os.org/book/developer-faq.html#why-redox-have-its-own-build-system) on Developer FAQ
 
 ## How To Test The Changes
 
