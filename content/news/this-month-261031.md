@@ -81,19 +81,22 @@ Anhad Singh, Ibuki Omatsu, 4lDO2 and Ron Williams wrote a [technical report](htt
 
 ## Kernel Improvements
 
+- (kernel) 4lDO2 reduced IPC latency by 7% and reduced kernel binary size in ~200 KiB by using naturally aligned kernel stacks on x86
+- (kernel) 4lDO2 did a code cleanup
+- (kernel) 4lDO2 fixed many code warnings
 - (kernel) Wildan Mubarok fixed a CPU context-wide deadlock in futex code
 - (kernel) Wildan Mubarok fixed thread lock ordering in futex code
 - (kernel) Aadarsh fixed incorrect APIC ID reading
 - (kernel) Aadarsh fixed more NUMA bugs
 - (kernel) Aadarsh fixed some code warnings
 - (kernel) Aadarsh did some refactoring and cleanup in NUMA code
-- (kernel) 4lDO2 did a code cleanup
-- (kernel) 4lDO2 fixed many code warnings
 - (kernel) bjorn3 fixed some code warnings
 - (kernel) Val Lorentz fixed some code warnings
 
 ## Driver Improvements
 
+- (driver) MJ Pooladkhay fixed a bug where the device DMA memory lifetime being ended while the device was using it
+- (driver) The "beef" contributor fixed the Intel HD Audio driver's Function Group Type parameter ID
 - (driver) bjorn3 did some code cleanup
 
 ## System Improvements
@@ -108,18 +111,22 @@ Anhad Singh, Ibuki Omatsu, 4lDO2 and Ron Williams wrote a [technical report](htt
 
 - (libc) Wildan Mubarok implemented `dladdr` and `dl_iterate_phdr` functions
 - (libc) Wildan Mubarok implemented POLLHUP, POLLERR, EPOLLHUP, and EPOLLER event codes
+- (libc) Wildan Mubarok fixed TLS relocation alignment in LTO compilation
 - (libc) Wildan Mubarok fixed `EINTR` error handling behavior in futex and kill
+- (libc) Wildan Mubarok fixed the `scanf` function parsing invalid `%d`
 - (libc) Wildan Mubarok fixed `sigaltstack` stack information, `SSIZE_MAX` type, and `stpcpy` test on i586
 - (libc) Wildan Mubarok fixed the `dl_phdr_info::dlpi_tls_data` type
 - (libc) Wildan Mubarok fixed `limits.h` constant suffixes
 - (libc) Wildan Mubarok fixed `futimens` test
-- (libc) Wildan Mubarok reduced unsafe Rust code in poll, epoll, utimensat, futimens, nanosleep, fstat, fstatvfs, and inet_aton functions
+- (libc) Wildan Mubarok fixed false-positives when running a single test, due to wrong paths in expected output
+- (libc) Wildan Mubarok moved most of unsafe Rust code of poll, epoll, utimensat, futimens, nanosleep, fstat, fstatvfs, and inet_aton functions to leaf functions
 - (libc) Niel D fixed `mkdirat` function directory permission handling
-- (libc) Elora Burns did more POSIX regex fixes
+- (libc) Elora Burns did more POSIX regex fixes, which fixed more tests
 - (libc) auronandace implemented `__fseterr` from Gnulib
 - (libc) auronandace fixed a typo in `POSIX_MADV_DONTNEED` constant
 - (libc) auronandace reduced more `as` casting usage to prevent problems in code refactorings
 - (libc) auronandace enabled some Clippy lints
+- (libc) Konstantin Shabanov fixed and added a `getsockopt` test
 - (libc) Val Lorentz fixed some Clippy warnings
 
 ## Networking Improvements
@@ -132,22 +139,30 @@ Anhad Singh, Ibuki Omatsu, 4lDO2 and Ron Williams wrote a [technical report](htt
 
 ## Packaging Improvements
 
-= (pkg) Wildan Mubarok greatly reduced compressed packaged size when ThinLTO is used
+- (pkg) Wildan Mubarok greatly reduced compressed packaged size when ThinLTO is used
 
 ## Programs
 
 - (app) Wildan Mubarok enabled FFMPEG and AAC codec support in GStreamer
 - (app) Wildan Mubarok enabled multi-threading on XZ
 - (app) Wildan Mubarok updated Git version from 2.13.1 to 2.56.0
+- (app) Wildan Mubarok fixed gettext compilation with Clang
 - (app) auronandace updated rsync from version 3.4.1 to 3.5.1
 
 ## Build System Improvements
 
 - (build) Wildan Mubarok fixed Redox toolchain fetch checksum mismatches
+- (build) Wildan Mubarok fixed the `build.dev-dependencies` recipe data type rule handling difference between `cookbook.lock` and filesystem configuration
+- (build) Radek Pietruszewski improved QEMU configuration for NixOS
 
 ## Documentation Improvements
 
-- (doc) 
+- (doc) Wildan Mubarok documented [how to do RedoxFS partition manipulation from Linux]
+- (doc) Wildan Mubarok documented [Clang support]
+- (doc) Wildan Mubarok improved the [self-hosted development] documentation
+- (doc) Radek Pietruszewski documented MacOS QEMU instructions
+- (doc) Radek Pietruszewski documented NixOS QEMU instructions
+- (doc) Radek Pietruszewski recommended the `livedisk` image instead of `harddrive` image to fix ARM64 and RISC-V boot in QEMU, due to lack of MSI-X support on them
 
 ## How To Test The Changes
 
