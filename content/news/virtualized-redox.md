@@ -6,30 +6,30 @@ date = "2026-11-01"
 
 Hello, Reader!
 
-I'm [MJ Pooladkhay](https://pooladkhay.com), and for the past couple of months I have been building a [Virtio-FS](https://virtio-fs.gitlab.io/) driver for Redox OS and, more recently, getting Redox to run on [Cloud Hypervisor](https://www.cloudhypervisor.org/). The driver is merged into the [base repo](https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers/storage/virtio-fsd), where most Redox drivers and system daemons live. The kernel, bootloader and driver changes that let Redox boot to a shell on Cloud Hypervisor are merged too ([details below](#booting-on-cloud-hypervisor)).
+I'm [MJ Pooladkhay](https://pooladkhay.com), and for the past couple of months I have been building a [Virtio-FS](https://virtio-fs.gitlab.io/) driver for Redox OS and, more recently, getting Redox to run on [Cloud Hypervisor](https://www.cloudhypervisor.org/). The driver is merged into the [base repository](https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers/storage/virtio-fsd), where most Redox drivers and system components live. The kernel, bootloader and driver changes that let Redox boot to a shell on Cloud Hypervisor are merged too ([details below](#booting-on-cloud-hypervisor)).
 
 Both are fun pieces of work on their own, but they are really the first steps of a bigger effort with two directions:
 
-- **Redox as a guest**: Redox runs as a cloud server, starting with Cloud Hypervisor, without the legacy PC hardware it used to depend on. Most of this post is about this one.
+- **Redox as a guest**: Redox runs as a cloud server, starting with Cloud Hypervisor, without the legacy PC hardware it used to depend on in QEMU. Most of this post is about this one.
 - **Redox as a host**: Redox runs virtual machines itself. This one is still a proposal, and I'll go over it [at the end of this post](#looking-further-redox-as-a-host).
 
 The guest work is generously funded by [NGI Zero Commons](https://nlnet.nl/commonsfund/) and [NLnet](https://nlnet.nl/) as part of the [Virtualized Redox](https://nlnet.nl/project/Redox-virtualised-microservices/) grant.
 
 ## Why run Redox as a guest?
 
-Most internet-facing software today runs in virtual machines, either in the cloud or on edge servers close to its users. Web servers, databases, API backends and microservices spend all day handling input from strangers, and that is where a memory-safe microkernel has the most to offer:
+Most Internet-facing software today runs in virtual machines, either in the cloud or on edge servers close to its users. Web servers, databases, API backends and microservices spend all day handling input from strangers, and that is where a memory-safe microkernel-based operating system has the most to offer:
 
-- **A smaller, safer base.** Redox is written in Rust, and its drivers, filesystems and network stack run as separate userspace processes instead of inside the kernel ([microkernel architecture](https://doc.redox-os.org/book/microkernels.html)). A bug in one of them takes down that process, not the whole system, and the code running with full kernel privileges stays small.
+- **A smaller, safer base.** Redox is written in Rust, and its drivers, filesystems and network stack run as separate userspace processes instead of inside the kernel ([microkernel architecture](https://doc.redox-os.org/book/microkernels.html)). A bug may hang or crash only that process, not the whole system, and the code running with highest system privileges stays small.
 - **Sandboxing built in.** With [capability-based security](/news/nlnet-cap-nsmgr-cwd/), each service can be limited to the files, sockets and devices it actually needs ([more on that below](#putting-the-pieces-together)).
-- **Hardware becomes the host's problem.** On bare metal, Redox needs a driver for every disk controller, network card and chipset it meets. Inside a VM, the host deals with the hardware, and Redox only needs a handful of virtio drivers. That makes a VM one of the quickest paths to running Redox in the real world, and real-world use is the best way to prove it as a secure platform.
+- **Hardware becomes the host's problem.** On bare metal, Redox needs a driver for every disk controller, network card and chipset it meets. Inside a VM, the host deals with the hardware, and Redox only needs a handful of VirtIO drivers. That makes a VM one of the quickest paths to running Redox in the real world, and real-world use is the best way to prove it as a secure platform.
 
 This is the direction the project set in its [development priorities](/news/development-priorities-2025-09/): Redox as a secure host for web services, first as a private or edge server, and eventually as a multi-tenant cloud server where each tenant is isolated from others.
 
-## How virtualization works
+## How Virtualization Works
 
-The easiest way I know to think about a hypervisor is as an operating system whose processes are operating systems. A process runs directly on the CPU until it needs the kernel, for a system call, a page fault or a timer tick, and then the kernel takes over for a moment. A guest OS runs directly on the CPU in the same way, until it does something only the hypervisor is allowed to handle. That moment a "VM exit" happens where the control is transfered to the hypervisor (similar to how a syscall transferes control to the OS kernel). On Linux, [KVM](https://linux-kvm.org/page/Main_Page) in the host kernel handles it, either by itself or by passing it to the virtual machine monitor (VMM), an ordinary process such as Cloud Hypervisor or QEMU. I went through the theory behind this, and why x86 needed new hardware ([VT-x](https://en.wikipedia.org/wiki/X86_virtualization#Intel_virtualization_%28VT-x%29) and [AMD-V](https://en.wikipedia.org/wiki/X86_virtualization#AMD_virtualization_%28AMD-V%29)) to make it work, in [an earlier post](https://pooladkhay.com/posts/virt-theory-silicon/) on my personal blog.
+The easiest way I know to think about a hypervisor is as an operating system whose processes are operating systems. A process runs directly on the CPU until it needs the kernel, for a system call, a page fault or a timer tick, and then the kernel takes over for a moment. A guest OS runs directly on the CPU in the same way, until it does something that only the hypervisor is allowed to handle. That moment a "VM exit" happens where the control is transferred to the hypervisor (similar to how a system call transfers control to the OS kernel). On Linux, [KVM](https://linux-kvm.org/page/Main_Page) in the host kernel handles it, either by itself or by passing it to the virtual machine monitor (VMM), an ordinary process such as Cloud Hypervisor or QEMU. I went through the theory behind this, and why x86 needed new hardware ([VT-x](https://en.wikipedia.org/wiki/X86_virtualization#Intel_virtualization_%28VT-x%29) and [AMD-V](https://en.wikipedia.org/wiki/X86_virtualization#AMD_virtualization_%28AMD-V%29)) to make it work, in [an earlier post](https://pooladkhay.com/posts/virt-theory-silicon/) on my personal blog.
 
-From Redox's side, a VM boots much like a laptop does. The virtual CPU starts in firmware, the firmware loads the bootloader from a disk, and the bootloader hands over to the kernel. It's the same code that runs on real hardware, running natively, with the kernel in ring 0 as usual.
+From Redox's side, a VM boots much like a laptop does. The virtual CPU starts in firmware, the firmware loads the bootloader from a disk, and the bootloader hands over to the kernel. It's the same code that runs on real hardware, running natively, with the kernel in supervisor mode (ring 0 on x86) as usual.
 
 Most of what Redox does never leaves the guest. System calls, context switches and page faults are handled by the Redox kernel itself, and the hypervisor doesn't even see them.
 
@@ -43,17 +43,17 @@ Going through all of that on every memory access would be painfully slow, so KVM
 
 The HVA step has a nice side effect: since guest RAM is an ordinary mapping in the VMM, it can be shared with other host processes. That's how [`virtiofsd`](https://gitlab.com/virtio-fs/virtiofsd) reads Virtio-FS requests straight out of the guest's memory, and why sharing a directory requires the guest's memory to be shared.
 
-Devices are where the hypervisor earns its keep, because every device the guest sees is made up. Some are emulations of real hardware, such as an [8259 interrupt controller](https://wiki.osdev.org/8259_PIC), a [programmable interval timer (PIT)](https://wiki.osdev.org/Programmable_Interval_Timer), a serial port or each CPU's [local APIC](https://wiki.osdev.org/APIC), and every register access to them is a VM exit that the hypervisor turns into behavior. Others are virtio devices, which don't pretend to be hardware at all and talk to the host through queues in shared memory. Interrupts are made up too. The host keeps the real ones, and the guest only gets the ones the hypervisor injects on behalf of its virtual devices and timers. If the hypervisor doesn't emulate a device, nobody raises its interrupt (keep that in mind for the ping story below).
+Devices are where the hypervisor earns its keep, because every device the guest sees is made up. Some are emulations of real hardware, such as an [8259 interrupt controller](https://en.wikipedia.org/wiki/Intel_8259), a [programmable interval timer (PIT)](https://en.wikipedia.org/wiki/Programmable_interval_timer), a serial port or each CPU's [local APIC](https://en.wikipedia.org/wiki/Advanced_Programmable_Interrupt_Controller#Integrated_local_APICs), and every register access to them is a VM exit that the hypervisor turns into behavior. Others are VirtIO devices, which don't pretend to be hardware at all and talk to the host through queues in shared memory. Interrupts are made up too. The host keeps the real ones, and the guest only gets the ones the hypervisor injects on behalf of its virtual devices and timers. If the hypervisor doesn't emulate a device, nobody raises its interrupt (keep that in mind for the ping story below).
 
 In short, the CPU, its [timestamp counter (TSC)](https://en.wikipedia.org/wiki/Time_Stamp_Counter) and the memory are real, and everything else is virtual. The interesting question is which virtual devices you get, and that's where cloud hypervisors and QEMU part ways.
 
 ## Leaving the legacy PC behind
 
-So far, Redox has been run either on QEMU or on physical hardware. On both, it has leaned on devices that date back to the original IBM PC/AT: a pair of 8259 interrupt controllers, the PIT, a [PS/2 keyboard controller](https://wiki.osdev.org/I8042_PS/2_Controller), and so on. These are legacy even on real hardware. Modern machines, and OSes such as Linux, route interrupts through the [I/O APIC](https://wiki.osdev.org/IOAPIC) and keep time with each CPU's [local APIC timer](https://wiki.osdev.org/APIC_Timer). Redox kept using the old devices mainly because it didn't support the [ACPI](https://wiki.osdev.org/ACPI) pieces needed to set up their replacements.
+So far, Redox has been run either on QEMU or on physical hardware. On both, it has leaned on devices that date back to the original IBM PC/AT: a pair of 8259 interrupt controllers, the PIT, a [PS/2 keyboard controller](https://en.wikipedia.org/wiki/PS/2_port), and so on. These are legacy even on real hardware. Modern machines, and OSes such as Linux, route interrupts through the [I/O APIC](https://en.wikipedia.org/wiki/Advanced_Programmable_Interrupt_Controller#I/O_APICs) and keep time with each CPU's [local APIC timer](https://en.wikipedia.org/wiki/Advanced_Programmable_Interrupt_Controller#APIC_timer). Redox kept using the old devices mainly because it didn't support the [ACPI](https://en.wikipedia.org/wiki/ACPI) pieces needed to set up their replacements.
 
-Hypervisors built for the cloud, such as Cloud Hypervisor and [Firecracker](https://firecracker-microvm.github.io), drop most of the legacy devices. Cloud Hypervisor gives a guest its CPUs (each with a local APIC), memory, an I/O APIC, a serial port, a [real-time clock (RTC)](https://wiki.osdev.org/RTC), a minimal ACPI platform and a handful of virtio devices. Not much else. Fewer emulated devices means less code in the hypervisor for a guest to poke at, and less for the guest OS to probe and set up at boot.
+Hypervisors built for the cloud, such as Cloud Hypervisor and [Firecracker](https://firecracker-microvm.github.io), drop most of the legacy devices. Cloud Hypervisor gives a guest its CPUs (each with a local APIC), memory, an I/O APIC, a serial port, a [real-time clock (RTC)](https://en.wikipedia.org/wiki/Real-time_clock), a minimal ACPI platform and a handful of VirtIO devices. Not much else. Fewer emulated devices means less code in the hypervisor for a guest to poke at, and less for the guest OS to probe and set up at boot.
 
-These hypervisors can also skip firmware entirely and jump straight into the kernel ([PVH](https://xenbits.xen.org/docs/unstable/misc/pvh.html) direct boot). Redox doesn't do that yet and still boots through [UEFI](https://wiki.osdev.org/UEFI) firmware.
+These hypervisors can also skip firmware entirely and jump straight into the kernel ([PVH](https://xenbits.xen.org/docs/unstable/misc/pvh.html) direct boot). Redox doesn't do that yet and still boots through [UEFI](https://en.wikipedia.org/wiki/UEFI) firmware.
 
 I would say Redox is a very good fit for minimal VMs like these. A VM that runs a single service doesn't need a USB stack, a sound daemon or a desktop, and since those are all ordinary userspace daemons on Redox, leaving them out is a matter of not putting them in the image.
 
@@ -61,25 +61,25 @@ What goes into the image, and what runs once it boots, is a short TOML file in t
 
 The [server demo config](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/config/x86_64/server-demo.toml) is an example of this, with SSH, PHP and the nginx configuration.
 
-## What works today
+## What Works Today
 
 ### Virtio-FS
 
-Virtio-FS lets a VM use a directory that lives on the host. The `virtio-fsd` daemon talks to `virtiofsd` on the host using the [FUSE](https://en.wikipedia.org/wiki/Filesystem_in_Userspace) protocol, carried over [virtqueues](https://docs.oasis-open.org/virtio/virtio/v1.2/csd01/virtio-v1.2-csd01.html#x1-270006). Each shared directory appears as its own scheme, `/scheme/virtio-fs.<tag>`, named after the tag the host gives it, so a share can be put in or left out of a process's namespace like any other scheme. You can share more than one directory at a time.
+Virtio-FS lets a VM use a directory that lives on the host. The `virtio-fsd` Redox daemon talks to the `virtiofsd` Linux daemon on the host using the [FUSE](https://en.wikipedia.org/wiki/Filesystem_in_Userspace) protocol, carried over [virtqueues](https://docs.oasis-open.org/virtio/virtio/v1.2/csd01/virtio-v1.2-csd01.html#x1-270006). Each shared directory appears as its own scheme, `/scheme/virtio-fs.<tag>`, named after the tag the host gives it, so a share can be put in or left out of a process's namespace like any other scheme. You can share more than one directory at a time.
 
-Under the hood, the driver keeps its own cache of inodes and directory entries, and tells the host to forget the ones it hasn't used in a while (`FUSE_FORGET`, driven by an [LRU cache](https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_Recently_Used_%28LRU%29)). The driver works on both QEMU and Cloud Hypervisor, and comes with a [selftest suite](https://gitlab.redox-os.org/redox-os/base/-/tree/main/selftests/virtio-fsd).
+Under the hood, the driver keeps its own cache of inodes and directory entries, and tells the host to forget the ones it hasn't used in a while (`FUSE_FORGET`, driven by an [LRU cache](https://en.wikipedia.org/wiki/Cache_replacement_policies#Least_Recently_Used_%28LRU%29)). The driver works on both QEMU and Cloud Hypervisor, and comes with a [test suite](https://gitlab.redox-os.org/redox-os/base/-/tree/main/selftests/virtio-fsd).
 
 ### Booting on Cloud Hypervisor
 
 Getting Redox to a working shell on Cloud Hypervisor was mostly a matter of finding every place where it assumed it was running natively on a PC, as well as a few other gotchas:
 
 - The bootloader failed to leave UEFI because it passed a stale memory-map key to `ExitBootServices` ([bootloader!61](https://gitlab.redox-os.org/redox-os/bootloader/-/merge_requests/61)).
-- `virtio-blk` was matched as a [transitional](https://docs.oasis-open.org/virtio/virtio/v1.2/csd01/virtio-v1.2-csd01.html#x1-60001) virtio device, while Cloud Hypervisor only offers modern (non-transitional) ones, so the root disk never showed up ([base!422](https://gitlab.redox-os.org/redox-os/base/-/merge_requests/422)).
+- `virtio-blk` was matched as a [transitional VirtIO device](https://docs.oasis-open.org/virtio/virtio/v1.2/csd01/virtio-v1.2-csd01.html#x1-60001), while Cloud Hypervisor only offers modern (non-transitional) ones, so the root disk never showed up ([base!422](https://gitlab.redox-os.org/redox-os/base/-/merge_requests/422)).
 - The login prompt appeared but wouldn't accept a single key. Serial output is polled, but input arrives as an interrupt, and that interrupt was aimed at an 8259 that doesn't exist. Legacy interrupts are now routed through the I/O APIC ([kernel!762](https://gitlab.redox-os.org/redox-os/kernel/-/merge_requests/762)).
-- Timed waits never woke up, because there is no PIT or [HPET](https://wiki.osdev.org/HPET). More on this one below.
+- Timed waits never woke up, because there is no PIT or [HPET](https://en.wikipedia.org/wiki/High_Precision_Event_Timer). More on this one below.
 - Telling the time needed no changes. Monotonic time already came from [`kvmclock`](https://docs.kernel.org/virt/kvm/x86/msr.html), and [`rtcd`](https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers/rtcd) sets the wall clock once at boot from the emulated CMOS RTC, after which it advances with the monotonic clock.
 
-QEMU's q35 machine does have an 8259 and an HPET, so Redox keeps using them there exactly as before.
+QEMU's q35 machine does have an 8259 interrupt controller and an HPET, so Redox keeps using them there exactly as before.
 
 #### A ping that only pinged once
 
@@ -110,9 +110,9 @@ Booting to a shell is a good start, but it's not yet something you would deploy.
 - **Power off.** Today Redox can't shut down Cloud Hypervisor by itself. Rebooting already works, through the keyboard controller's reset line, which Cloud Hypervisor emulates just for that. [`acpid`](https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers/acpid) already has a path to S5 (soft-off), but it writes the classic PM1 control register, and Cloud Hypervisor doesn't power off on that. Cloud Hypervisor is a [hardware-reduced ACPI](https://uefi.org/specs/ACPI/6.5/04_ACPI_Hardware_Specification.html#hardware-reduced-acpi) platform, where shutdown is a write to the sleep control register and the power button is a Generic Event Device (GED) interrupt that nobody handles yet. The goal is for shutdown to work both from the host and from inside the guest.
 - **First-boot configuration.** A modular, [cloud-init](https://docs.cloud-init.io/en/latest/)-compatible service that sets the hostname and installs an SSH key, read from a [NoCloud](https://docs.cloud-init.io/en/latest/reference/datasources/nocloud.html) drive or the HTTP metadata service, so credentials stay out of the image.
 - **PVH direct boot.** An entry point that lets the hypervisor load the kernel directly, with no firmware at all, next to the existing UEFI path. This is also what opens the door to Firecracker, which has no UEFI firmware to boot through.
-- **More virtio drivers.** [`virtio-vsock`](https://man7.org/linux/man-pages/man7/vsock.7.html) for talking to the host without a network, `virtio-balloon` for returning memory to the host, and `virtio-rng` for drawing entropy from it. These join the existing `virtio-{blk, net, fs, gpu}` fleet.
+- **More VirtIO drivers.** [`virtio-vsock`](https://man7.org/linux/man-pages/man7/vsock.7.html) for talking to the host without a network, `virtio-balloon` for returning memory to the host, and `virtio-rng` for drawing entropy from it. These join the existing `virtio-{blk, net, fs, gpu}` fleet.
 - **[Snapshot and restore](https://github.com/cloud-hypervisor/cloud-hypervisor/blob/main/docs/snapshot_restore.md)**, resuming the disk, network and clock, so an instance can start from a snapshot instead of booting from scratch.
-- **A regression test and a deployment guide.** A CI boot test that takes both Cloud Hypervisor and QEMU through a shell, DHCP, a four-packet ping (of course) and an HTTPS download, plus a guide that covers firmware, disks, host networking (tap, DHCP and NAT) and the first-boot config source.
+- **A regression test and a deployment guide.** A CI boot test that takes both Cloud Hypervisor and QEMU through a shell, DHCP, a four-packet ping (of course) and an HTTPS download, plus a guide that covers firmware, disks, host networking (tap, DHCP and NAT) and the first-boot configuration source.
 
 ## Putting the pieces together
 
@@ -151,7 +151,7 @@ One potentially interesting use case is sandboxing AI agents, which needs every 
 
 The second direction flips the picture. As a guest, Redox runs on top of Linux, and Linux's drivers deal with the real hardware.
 
-As a host, it would be the other way around. Redox runs on the hardware and uses its own drivers for the devices it supports, and a small Linux guest takes care of the ones it doesn't (say, a network card with no Redox driver yet). The device is handed to the guest through PCI passthrough ([VFIO](https://docs.kernel.org/driver-api/vfio.html) on the Linux side), and Linux offers it back to Redox through virtio. Instead of all of Linux's drivers or none of them, Redox gets to choose, and each borrowed driver can be replaced by a native one when it's ready. This is the "hosted Linux for driver support" idea from the [development priorities](/news/development-priorities-2025-09/#hosted-linux-for-driver-support), and FreeBSD already does something similar with [bhyve](https://bhyve.org/) and [wifibox](https://github.com/pgj/freebsd-wifibox), where a small Linux VM drives the Wi-Fi card.
+As a host, it would be the other way around. Redox runs on the hardware and uses its own drivers for the devices it supports, and a small Linux guest takes care of the ones it doesn't (say, a network card with no Redox driver yet). The device is handed to the guest through PCI passthrough ([VFIO](https://docs.kernel.org/driver-api/vfio.html) on the Linux side), and Linux offers it back to Redox through VirtIO. Instead of all of Linux's drivers or none of them, Redox gets to choose, and each borrowed driver can be replaced by a native one when it's ready. This is the "hosted Linux for driver support" idea from the [development priorities](/news/development-priorities-2025-09/#hosted-linux-for-driver-support), and FreeBSD already does something similar with [bhyve](https://bhyve.org/) and [wifibox](https://github.com/pgj/freebsd-wifibox), where a small Linux VM drives the Wi-Fi card.
 
 Redox has explored hosting VMs before, with [Revirt](/news/revirt-1/) during RSoC 2022, and now we have a solid plan for it:
 
@@ -177,6 +177,6 @@ See [how to run Redox on Cloud Hypervisor](https://doc.redox-os.org/book/cloud-h
 
 To share a directory from your host with a Redox VM over Virtio-FS, follow [this guide](https://doc.redox-os.org/book/virtio-fs.html).
 
-If you want to help, or just follow along, join us on [Matrix](https://matrix.to/#/#redox-join:matrix.org) and take a look at the [issue tracker](https://gitlab.redox-os.org/redox-os/redox/-/issues).
+If you want to help, or just follow along, join us on [Matrix](https://matrix.to/#/#redox-join:matrix.org) and take a look at the [global issue tracker](https://gitlab.redox-os.org/groups/redox-os/-/work_items?sort=updated_desc&state=opened&first_page_size=20).
 
 [^1]: The period is computed once, from the `kvmclock` scale at boot. If the VM is migrated to a host with a different TSC frequency, the tick rate changes with it. That one is on my TODO list.
