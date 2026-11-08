@@ -75,7 +75,7 @@ Getting Redox to a working shell on Cloud Hypervisor was mostly a matter of find
 
 - The bootloader failed to leave UEFI because it passed a stale memory-map key to `ExitBootServices` ([bootloader!61](https://gitlab.redox-os.org/redox-os/bootloader/-/merge_requests/61)).
 - `virtio-blk` was matched as a [transitional VirtIO device](https://docs.oasis-open.org/virtio/virtio/v1.2/csd01/virtio-v1.2-csd01.html#x1-60001), while Cloud Hypervisor only offers modern (non-transitional) ones, so the root disk never showed up ([base!422](https://gitlab.redox-os.org/redox-os/base/-/merge_requests/422)).
-- The login prompt appeared but wouldn't accept a single key. Serial output is polled, but input arrives as an interrupt, and that interrupt was aimed at an 8259 that doesn't exist. Legacy interrupts are now routed through the I/O APIC ([kernel!762](https://gitlab.redox-os.org/redox-os/kernel/-/merge_requests/762)).
+- The login prompt appeared but wouldn't accept a single key. Serial output is polled, but input arrives as an interrupt, and that interrupt was aimed at an 8259 interrupt controller that doesn't exist. Legacy interrupts are now routed through the I/O APIC ([kernel!762](https://gitlab.redox-os.org/redox-os/kernel/-/merge_requests/762)).
 - Timed waits never woke up, because there is no PIT or [HPET](https://en.wikipedia.org/wiki/High_Precision_Event_Timer). More on this one below.
 - Telling the time needed no changes. Monotonic time already came from [`kvmclock`](https://docs.kernel.org/virt/kvm/x86/msr.html), and [`rtcd`](https://gitlab.redox-os.org/redox-os/base/-/tree/main/drivers/rtcd) sets the wall clock once at boot from the emulated CMOS RTC, after which it advances with the monotonic clock.
 
