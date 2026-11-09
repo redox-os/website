@@ -17,27 +17,31 @@ If you would like to support Redox, please consider donating or buying some merc
 
 ## CPU Affinity Support
 
-Aadarsh implemented CPU affinity support on scheduler, improving efficiency.
+EuclidDivisionLemma implemented wrappers to `libredox` to allow the manipulation of scheduler CPU affinity.
 
-## First Real Hardware NUMA Test and NUMA Support Confirmation
+## First Real Hardware NUMA Test, NUMA Support Confirmation, and Significant Performance Improvement Due to NUMA Awareness
 
-Aadarsh did the first real hardware NUMA test in a Dell Poweredge R420 server, which confirms that our NUMA support is complete enough to work.
+EuclidDivisionLemma did the first real hardware NUMA test on a Dell Poweredge R420 server, which confirms that our NUMA support is complete enough to work.
 
 ## Golang On Redox!
 
-Wildan Mubarok ported the official Go programming language compiler after months of relibc improvements and system fixes.
+Wildan Mubarok ported the official Go programming language compiler after months of porting iterations. It supports both cross-compilation and self-hosted compilation of Go programs.
+
+The Go compiler uses `relibc` and does not require an external compiler (GCC). During porting this compiler, it revealed issues in many parts of the system, such as the `range-tree` library fix mentioned below.
+
+The Go compiler port is currently a fork, as upstreaming will be another great effort. However, it has been checked that it can compile other programs such as Lazygit (still don't work).
 
 <img src="/img/screenshot/go-hello-redox.png" class="img-responsive" alt="Golang Hello World program running on Redox"/>
 
-## Cloud Hypervisor On Redox!
+## Redox on Cloud Hypervisor!
 
-MJ Pooladkhay finished the port of Cloud Hypervisor after some fixes and added integration to Redox build system, which makes testing more rich by using a modern virtualization environment used in production beyond development (QEMU is mostly used on development).
+MJ Pooladkhay was able to boot Redox on Cloud Hypervisor after some fixes to its libraries and added integration to Redox build system, which makes testing more rich by using a modern virtualization environment used in production beyond development (QEMU is mostly used on development).
 
 Read [this](https://doc.redox-os.org/book/cloud-hypervisor.html) page to learn how to use it.
 
 ## WebKitGTK3 Video Support
 
-Wildan Mubarok fixed the missing codecs in GStreamer for video playback.
+Wildan Mubarok fixed the missing codecs in GStreamer using FFmpeg libraries for video playback in WebKit.
 
 TODO: add images
 
@@ -45,7 +49,7 @@ TODO: add images
 
 ## GIMP On Redox!
 
-Wildan Mubarok ported GIMP after some months of work.
+Wildan Mubarok ported GIMP after some months of work. As GIMP uses the recent Orbital backend of the GTK port, the experience may not be smooth in this initial port.
 
 <img src="/img/screenshot/gimp.png" class="img-responsive" alt="GIMP running on Redox"/>
 
@@ -71,7 +75,7 @@ Wildan Mubarok finished the first part of rootless package installation code, wh
 
 ## virtiofs On Redox!
 
-MJ Pooladkhay finished the virtiofs integration in Redox build system to speedup and ease testing of changes, it allow any Linux to be shared to the Redox QEMU or Cloud Hypervisor VM.
+MJ Pooladkhay has completed the `virtiofs` driver and integrated it into the Redox build system. It’s now possible to share any directory on a Linux host with a Redox VM running under QEMU or Cloud Hypervisor.
 
 For example, the `make qemu share=redox` command share the Redox build system directory on Linux to Redox.
 
@@ -176,7 +180,7 @@ Anhad Singh, Ibuki Omatsu, 4lDO2 and Ron Williams wrote a [technical report](htt
 
 ## Packaging Improvements
 
-- (pkg) Wildan Mubarok greatly reduced compressed packaged size when ThinLTO is used
+- (pkg) Wildan Mubarok greatly reduced compressed packaged size when Clang ThinLTO is used
 
 ## Programs
 
@@ -184,12 +188,18 @@ Anhad Singh, Ibuki Omatsu, 4lDO2 and Ron Williams wrote a [technical report](htt
 - (app) Wildan Mubarok enabled multi-threading on XZ
 - (app) Wildan Mubarok updated Git version from 2.13.1 to 2.56.0
 - (app) Wildan Mubarok fixed gettext compilation with Clang
+- (app) bjorn3 updated the `periodictable` and `sodium` installation paths to comply with Linux FHS
 - (app) auronandace updated rsync from version 3.4.1 to 3.5.1
 
 ## Build System Improvements
 
 - (build) Wildan Mubarok fixed Redox toolchain fetch checksum mismatches
 - (build) Wildan Mubarok fixed the `build.dev-dependencies` recipe data type rule handling difference between `cookbook.lock` and filesystem configuration
+- (build) Wildan Mubarok added `cbindgen` to Redoxer image
+- (build) Wildan Mubarok added `libunwind` to the toolchain 
+- (build) Wildan Mubarok changed Clang to use `libgcc` for runtime consistency
+- (build) Wildan Mubarok implemented `dl_iterate_phdr` support to `libgcc` to workaround hangs in recipes compiled with Clang
+- (build) Wildan Mubarok changed toolchain packaging archiver to be deterministic
 - (build) Radek Pietruszewski improved QEMU configuration for NixOS
 
 ## Documentation Improvements
