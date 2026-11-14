@@ -15,12 +15,6 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
-## NUMA Support Testing
-
-The first real hardware NUMA tests on a Dell Poweredge R420 server were done, which confirms that EuclidDivisionLemma's effort on NUMA support is complete enough to work.
-Tests conducted by EuclidDivisionlemma, showed, on average, a 45.2% reduction in time taken on the NPB MG Workload.
-<img src="/img/screenshot/numa-bench1.jpeg" class="img-responsive" alt="NUMA benchmark"/>
-
 ## Golang On Redox!
 
 Wildan Mubarok ported the official Go programming language compiler after months of porting iterations. It supports both cross-compilation and self-hosted compilation of Go programs.
@@ -33,7 +27,9 @@ The Go compiler port is currently a fork, as upstreaming will be another effort.
 
 ## Redox on Cloud Hypervisor!
 
-MJ Pooladkhay was able to boot Redox on Cloud Hypervisor, as part of his [NLnet](https://nlnet.nl/)-funded work on Redox virtualization. This is an important step towards Redox as a web server in the cloud. He also added integration to the Redox build system, to simplify testing.
+MJ Pooladkhay was able to boot Redox on [Cloud Hypervisor](https://www.cloudhypervisor.org/), as part of his [NLnet](https://nlnet.nl/)-funded work on Redox virtualization. This is an important step towards Redox as a web server in the cloud. He also added integration to the Redox build system, to simplify testing.
+
+He wrote [this](https://www.redox-os.org/news/virtualized-redox/) article about this initial work.
 
 Read [this](https://doc.redox-os.org/book/cloud-hypervisor.html) page to learn how to use it.
 
@@ -41,7 +37,13 @@ Read [this](https://doc.redox-os.org/book/cloud-hypervisor.html) page to learn h
 
 Wildan Mubarok fixed the missing codecs in GStreamer using FFmpeg libraries for video playback in WebKit.
 
+- Mozilla Developer Network HTML5 video example
+
 <img src="/img/screenshot/webkitgtk3-html5-video.jpg" class="img-responsive" alt="HTML5 video example on WebKitGTK3 demo web browser"/>
+
+- YouTube
+
+<img src="/img/screenshot/webkitgtk3-youtube.jpg" class="img-responsive" alt="YouTube on WebKitGTK3 demo web browser"/>
 
 ## GIMP On Redox!
 
@@ -57,15 +59,23 @@ Wildan Mubarok updated our Servo fork to version 0.7 after months of work to fix
 
 ## Ratatui 3D Showcase
 
-Ribbon tested the Ratatui 3D rendering of Cornell Box demo from [ratatui-3d](https://github.com/limlabs/ratatui-3d) project.
+Ribbon tested the Ratatui 3D rendering of [Cornell box](https://en.wikipedia.org/wiki/Cornell_box) demo from [ratatui-3d](https://github.com/limlabs/ratatui-3d) project.
 
 <img src="/img/screenshot/ratatui3d-cornell-box.jpg" class="img-responsive" alt="3D Cornell Box demo running on COSMIC Terminal"/>
+
+## NUMA Support Testing
+
+The first real hardware NUMA tests on a Dell Poweredge R420 server were done, which confirms that EuclidDivisionLemma's effort on NUMA support is complete enough to work.
+
+Tests conducted by EuclidDivisionlemma, showed, on average, a 45.2% reduction in time taken on the NPB MG Workload.
+
+<img src="/img/screenshot/numa-bench1.jpeg" class="img-responsive" alt="First NUMA benchmark"/>
 
 ## Fixed RISC-V Dynamic Linking
 
 lbecher fixed RISC-V dynamic linking, which is the last CPU architecture using static linking in our build system.
 
-It will allow our application testing in RISC-V to scale.
+It will allow our application testing in RISC-V to easily scale.
 
 ## Initial Rootless Package Installation
 
@@ -115,7 +125,7 @@ Anhad Singh, Ibuki Omatsu, 4lDO2 and Ron Williams wrote a [technical report](htt
 
 ## Kernel Improvements
 
-- (kernel) 4lDO2 reduced the x86 kernel binary size in ~200 KiB by using naturally aligned kernel stacks on x86
+- (kernel) 4lDO2 reduced the x86 kernel binary file size in ~200 KiB by using naturally aligned kernel stacks on x86
 - (kernel) 4lDO2 did a code cleanup
 - (kernel) 4lDO2 fixed some code warnings
 - (kernel) Wildan Mubarok fixed a CPU context-wide deadlock in futex code
@@ -142,8 +152,7 @@ Anhad Singh, Ibuki Omatsu, 4lDO2 and Ron Williams wrote a [technical report](htt
 - (sys) bjorn3 moved the Unix domain socket code from the `ipcd` daemon to a new daemon called` udsd` because this code was not related to Redox IPC, simplifying the system
 - (sys) bjorn3 did some code deduplication
 - (sys) Ibuki Omatsu replaced/unified the `fstat`, `unlinkat`, `flink`, and `frename` functions with `std_fs_call`
-- (sys) Ibuki Omatsu moved the `F_SETFD`, `F_GETFD`, `F_DUPFD`, and `F_DUPFD_CLOEXEC` fcntl flags from `redox_syscall` to `libredox`
-- (sys) Ibuki Omatsu replaced `dup2` with `FileTableVerb` type
+- (sys) Ibuki Omatsu moved the `F_SETFD`, `F_GETFD`, and `F_DUPFD*` fcntl flags from `redox_syscall` to `libredox`
 - (sys) Wildan Mubarok fixed a TTY write panic in `getty` when a CLI application hangs
 
 ## Relibc Improvements
