@@ -15,10 +15,10 @@ If you would like to support Redox, please consider donating or buying some merc
 - [Patreon](https://www.patreon.com/redox_os)
 - [Merch](https://redox-os.creator-spring.com/)
 
-## First Real Hardware NUMA Test, NUMA Support Confirmation, and Significant Performance Improvement Due to NUMA Awareness
+## NUMA Support Testing
 
-EuclidDivisionLemma did the first real hardware NUMA test on a Dell Poweredge R420 server, which confirms that our NUMA support is complete enough to work.
-
+The first real hardware NUMA tests on a Dell Poweredge R420 server were done, which confirms that EuclidDivisionLemma's effort on NUMA support is complete enough to work.
+Tests conducted by EuclidDivisionlemma, showed, on average, a 45.2% reduction in time taken on the NPB MG Workload.
 <img src="/img/screenshot/numa-bench1.jpeg" class="img-responsive" alt="NUMA benchmark"/>
 
 ## Golang On Redox!
@@ -27,13 +27,13 @@ Wildan Mubarok ported the official Go programming language compiler after months
 
 The Go compiler uses `relibc` and does not require an external compiler (GCC). During porting this compiler, it revealed issues in many parts of the system, such as the `range-tree` library fix mentioned below.
 
-The Go compiler port is currently a fork, as upstreaming will be another great effort. However, it has been checked that it can compile other programs such as Lazygit (still don't work).
+The Go compiler port is currently a fork, as upstreaming will be another effort.
 
 <img src="/img/screenshot/go-hello-redox.png" class="img-responsive" alt="Golang Hello World program running on Redox"/>
 
 ## Redox on Cloud Hypervisor!
 
-MJ Pooladkhay was able to boot Redox on Cloud Hypervisor after some fixes to its libraries and added integration to Redox build system, which makes testing more rich by using a modern virtualization environment used in production beyond development (QEMU is mostly used on development).
+MJ Pooladkhay was able to boot Redox on Cloud Hypervisor, as part of his [NLnet](https://nlnet.nl/)-funded work on Redox virtualization. This is an important step towards Redox as a web server in the cloud. He also added integration to the Redox build system, to simplify testing.
 
 Read [this](https://doc.redox-os.org/book/cloud-hypervisor.html) page to learn how to use it.
 
@@ -69,13 +69,13 @@ It will allow our application testing in RISC-V to scale.
 
 ## Initial Rootless Package Installation
 
-Wildan Mubarok finished the first part of rootless package installation code, which allow the creation of system-wide paths mappings to user equivalent paths.
+Wildan Mubarok finished the first part of rootless package installation code, which allows the creation of system-wide paths mappings to user equivalent paths.
 
 ## virtiofs On Redox!
 
 MJ Pooladkhay has completed the `virtiofs` driver and integrated it into the Redox build system. It’s now possible to share any directory on a Linux host with a Redox VM running under QEMU or Cloud Hypervisor.
 
-For example, the `make qemu share=redox` command share the Redox build system directory on Linux to Redox.
+For example, the `make qemu share=redox` command shares the Redox build system directory on Linux to Redox.
 
 Read [this](https://doc.redox-os.org/book/virtio-fs.html) page to learn how to use it.
 
@@ -132,7 +132,7 @@ Anhad Singh, Ibuki Omatsu, 4lDO2 and Ron Williams wrote a [technical report](htt
 ## Driver Improvements
 
 - (driver) Jeremy Soller created the `audiod` library to unify the audio buffer size handling of all sound drivers
-- (driver) MJ Pooladkhay fixed a bug where the device DMA memory lifetime being ended while the device was using it
+- (driver) MJ Pooladkhay fixed a bug with the device DMA memory lifetime being ended while the device was using it
 - (driver) The "beef" contributor fixed the Intel HD Audio driver's Function Group Type parameter ID
 - (driver) bjorn3 did some code cleanup
 
@@ -174,7 +174,7 @@ Anhad Singh, Ibuki Omatsu, 4lDO2 and Ron Williams wrote a [technical report](htt
 
 ## RedoxFS Improvements
 
-- (rfs) Wildan Mubarok fixed bug in `range-tree` library that caused a underflow in `fmap` implementation
+- (rfs) Wildan Mubarok fixed bug in the `range-tree` library that caused a underflow in `fmap` implementation
 
 ## Packaging Improvements
 
