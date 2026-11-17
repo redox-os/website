@@ -8,7 +8,7 @@ url = "home"
     <div class="columns">
       <div class="column hero-center">
         <p class="title is-size-1 mt-0">
-          <b>Redox OS 0.9.0</b>
+          <b>Redox OS 0.10.0</b>
         </p>
         <div class="subtitle mt-5">
           <a class="btn btn-primary my-1" href="/quickstart/">Download</a>
@@ -27,7 +27,7 @@ url = "home"
     <p class="pitch">
       <b>Redox OS<a href="https://gitlab.redox-os.org/redox-os/redox/-/blob/master/TRADEMARK.md"><sup>TM</sup></a></b> is a complete <a href="https://en.wikipedia.org/wiki/Unix-like"><b>Unix-like</b></a>
       microkernel-based operating system written in <a
-        href="https://www.rust-lang.org/"><b>Rust</b></a>, with a focus on security, reliability and safety.
+        href="https://www.rust-lang.org/"><b>Rust</b></a>, with a focus on security, reliability and safety.<br/>
       Offering source compatibility and a full set of programs, Redox is intended to be a complete
       alternative to Linux and BSD, in the cloud and on the desktop.
     </p>
@@ -251,17 +251,20 @@ url = "home"
         Active Sponsors
       </p>
       <p class="mt-2">
-        We are thankful for these organizations supporting our work
+        We are thankful for these organizations and individuals supporting our work
       </p>
       <div class="columns">
         <div class="column">
-          <img src="https://nlnet.nl/logo/banner.svg" alt="NGI Zero Commons Fund">
-          <p>NGI Zero Commons Fund on
-            <a href="https://nlnet.nl/project/RedoxOS-Signals/">Unix-style Signals</a>,
-            <a href="https://nlnet.nl/project/Capability-based-RedoxOS/">Capability-based
-              security</a> and
-            <a href="https://nlnet.nl/project/RedoxOS-ringbuffer/">io_uring-like IO</a>
+          <a href="https://nlnet.nl">
+            <img src="https://nlnet.nl/logo/banner.svg" alt="NLnet and the NGI Zero Commons Fund">
+          </a>
+          <p>The NGI Zero Fund, financed through the European Commission's Next Generation Internet program, and managed by NLnet.nl
           </p>
+          <a href="https://magnetitesec.com/">
+            <img src="https://magnetitesec.com/logo.png" alt="Magnetite Security">
+          </a>
+          <p>Joshua "jduck" Drake of Magnetite Security</p>
+          <p>Blaine Dodson</p>
         </div>
       </div>
       <p class="mt-2 pitch">
