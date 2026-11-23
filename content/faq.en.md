@@ -256,7 +256,7 @@ Redox has some variants for a group of tasks, take a look at them below:
 
 There are billions of devices with hundreds of models and architectures in the world. We try to write drivers for the most used devices to support more people. Support depends on the specific hardware, since some drivers are device-specific and others are architecture-specific.
 
-Have a look at [HARDWARE.md](https://gitlab.redox-os.org/redox-os/redox/-/blob/master/HARDWARE.md) to see all tested computers.
+Look [this](https://doc.redox-os.org/book/hw-reports.html) page to see all tested computers.
 
 ### Compatibility Table
 
@@ -297,7 +297,7 @@ Read the [Creating Proper Bug Reports](https://doc.redox-os.org/book/creating-pr
 
 ## How do I contribute to Redox?
 
-You can contribute to Redox in many ways, you can see them on [CONTRIBUTING](https://gitlab.redox-os.org/redox-os/redox/blob/master/CONTRIBUTING.md).
+You can contribute to Redox in many ways, you can see them on [this](https://doc.redox-os.org/book/contributing.html) page.
 
 ## I have a problem/question for Redox team
 
